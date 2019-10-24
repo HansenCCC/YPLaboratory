@@ -1,0 +1,54 @@
+
+# platform :ios, '9.0'
+inhibit_all_warnings!
+
+target 'QMKKXProduct' do
+  pod 'AFNetworking', '3.2.1'
+#  pod 'PPNetworkHelper' , '0.8.1'#af二次封装
+  pod 'SDWebImage', '4.4.2'
+  pod 'MJRefresh', '3.1.15.3'
+  pod 'MJExtension', '3.0.15.1'
+  pod 'Masonry', '1.1.0'
+  pod 'IQKeyboardManager', '6.1.1'
+  pod 'JPush', '3.1.0'
+  pod 'SDWebImage/GIF', '4.4.2'
+  pod 'TZImagePickerController' , '3.1.6'#选择图片
+  pod 'FMDB' , '2.7.2'
+  pod 'MBProgressHUD', '1.1.0'
+  
+  
+  
+  #可替换
+  pod 'AVOSCloud','11.6.3'              # 数据存储、短信、社交、云引擎调用等基础服务模块
+end
+
+target 'QMKKXProductDev' do
+  pod 'AFNetworking', '3.2.1'
+#  pod 'PPNetworkHelper' , '0.8.1'#af二次封装
+  pod 'SDWebImage', '4.4.2'
+  pod 'MJRefresh', '3.1.15.3'
+  pod 'MJExtension', '3.0.15.1'
+  pod 'Masonry', '1.1.0'
+  pod 'IQKeyboardManager', '6.1.1'
+  pod 'JPush', '3.1.0'
+  pod 'SDWebImage/GIF', '4.4.2'
+  pod 'TZImagePickerController' , '3.1.6'#选择图片
+  pod 'FMDB' , '2.7.2'
+  pod 'MBProgressHUD', '1.1.0'
+  
+  
+  
+  #可替换
+  pod 'AVOSCloud','11.6.3'              # 数据存储、短信、社交、云引擎调用等基础服务模块
+end
+
+#消除waring
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 8.0
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '8.0'
+      end
+    end
+  end
+end
