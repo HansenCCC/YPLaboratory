@@ -250,6 +250,10 @@
 		30658A5F22CF265F0072CD24 /* KKQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKQRCodeView.m; sourceTree = "<group>"; };
 		30658A7A22CF29580072CD24 /* UIImage+HVUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HVUI.h"; sourceTree = "<group>"; };
 		30658A7B22CF29580072CD24 /* UIImage+HVUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HVUI.m"; sourceTree = "<group>"; };
+		3072C2EA23726DE00036410E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		3072C2EB23726DE00036410E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		3072C2EC23726DE80036410E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		3072C2ED23726DE80036410E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		3077A32022BA45A400372F07 /* NSTimer+KExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+KExtension.m"; sourceTree = "<group>"; };
 		3077A32122BA45A400372F07 /* NSData+KExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+KExtension.h"; sourceTree = "<group>"; };
 		3077A32222BA45A400372F07 /* NSTimer+KExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+KExtension.h"; sourceTree = "<group>"; };
@@ -831,6 +835,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 30036D9B22B9D76900605DF7;
 			productRefGroup = 30036DA522B9D76900605DF7 /* Products */;
@@ -1107,6 +1113,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				30036DAE22B9D76900605DF7 /* Base */,
+				3072C2EA23726DE00036410E /* zh-Hans */,
+				3072C2EC23726DE80036410E /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1115,6 +1123,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				30036DB322B9D76B00605DF7 /* Base */,
+				3072C2EB23726DE00036410E /* zh-Hans */,
+				3072C2ED23726DE80036410E /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1126,6 +1136,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1185,6 +1196,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
