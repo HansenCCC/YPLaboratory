@@ -25,6 +25,7 @@
 #import "KKUIFlowLayoutButton.h"//laoutButton
 //基类控制器
 #import "KKBaseViewController.h"//base
+#import "KKNavigationController.h"//navigation
 //集合刷新
 #import "KKRefreshNormalHeader.h"//head
 #import "KKRefreshAutoNormalFooter.h"//footer

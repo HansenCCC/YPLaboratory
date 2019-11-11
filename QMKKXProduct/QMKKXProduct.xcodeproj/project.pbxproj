@@ -24,6 +24,10 @@
 		30036DD422B9FC0800605DF7 /* KKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 30036DD222B9FC0800605DF7 /* KKUser.m */; };
 		30036DD822B9FE0D00605DF7 /* KKNetworkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 30036DD722B9FE0D00605DF7 /* KKNetworkApi.m */; };
 		30036DD922B9FE0D00605DF7 /* KKNetworkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 30036DD722B9FE0D00605DF7 /* KKNetworkApi.m */; };
+		30202FC22379362800F1AADA /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC12379362800F1AADA /* KKNavigationController.m */; };
+		30202FC32379362800F1AADA /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC12379362800F1AADA /* KKNavigationController.m */; };
+		30202FC5237936B400F1AADA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 30202FC4237936B400F1AADA /* index.html */; };
+		30202FC6237936B400F1AADA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 30202FC4237936B400F1AADA /* index.html */; };
 		3028973B22C0C734000F2669 /* MBProgressHUD+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028973922C0C733000F2669 /* MBProgressHUD+KExtension.m */; };
 		3028973C22C0C734000F2669 /* MBProgressHUD+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028973922C0C733000F2669 /* MBProgressHUD+KExtension.m */; };
 		3028979122C46DEF000F2669 /* HVUILayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028974B22C46DED000F2669 /* HVUILayoutConstraint.m */; };
@@ -175,6 +179,9 @@
 		30036DDA22B9FF0B00605DF7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		30036DDC22BA008600605DF7 /* KKPrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPrefixHeader.h; sourceTree = "<group>"; };
 		30036DDD22BA00D800605DF7 /* KKOtherHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKOtherHeader.h; sourceTree = "<group>"; };
+		30202FC02379362800F1AADA /* KKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNavigationController.h; sourceTree = "<group>"; };
+		30202FC12379362800F1AADA /* KKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
+		30202FC4237936B400F1AADA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		3028973922C0C733000F2669 /* MBProgressHUD+KExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+KExtension.m"; sourceTree = "<group>"; };
 		3028973A22C0C733000F2669 /* MBProgressHUD+KExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+KExtension.h"; sourceTree = "<group>"; };
 		3028974B22C46DED000F2669 /* HVUILayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVUILayoutConstraint.m; sourceTree = "<group>"; };
@@ -456,6 +463,8 @@
 			children = (
 				3028975922C46DEE000F2669 /* KKBaseViewController.h */,
 				3028975822C46DEE000F2669 /* KKBaseViewController.m */,
+				30202FC02379362800F1AADA /* KKNavigationController.h */,
+				30202FC12379362800F1AADA /* KKNavigationController.m */,
 			);
 			path = "controller(基类)";
 			sourceTree = "<group>";
@@ -728,6 +737,7 @@
 		308DF7672359B1B400A503D0 /* webView(网站) */ = {
 			isa = PBXGroup;
 			children = (
+				30202FC4237936B400F1AADA /* index.html */,
 				308DF7682359B24400A503D0 /* KKUIWebViewController.h */,
 				308DF7692359B24400A503D0 /* KKUIWebViewController.m */,
 			);
@@ -863,6 +873,7 @@
 				30658A6B22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
 				302897B222C46DEF000F2669 /* city.json in Resources */,
 				30036DAF22B9D76900605DF7 /* Main.storyboard in Resources */,
+				30202FC6237936B400F1AADA /* index.html in Resources */,
 				30658A6522CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 			);
@@ -881,6 +892,7 @@
 				30658A6A22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
 				302897B122C46DEF000F2669 /* city.json in Resources */,
 				30036DC722B9DDC500605DF7 /* Main.storyboard in Resources */,
+				30202FC5237936B400F1AADA /* index.html in Resources */,
 				30658A6422CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6022CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 			);
@@ -1003,6 +1015,7 @@
 				3028979C22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				3077A33522BA45A400372F07 /* NSDate+KExtension.m in Sources */,
 				30658A7522CF265F0072CD24 /* KKQRCodeSessionView.m in Sources */,
+				30202FC32379362800F1AADA /* KKNavigationController.m in Sources */,
 				3077A35822BB344D00372F07 /* UILabel+KExtension.m in Sources */,
 				302897C622C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A622C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
@@ -1071,6 +1084,7 @@
 				3028979B22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				3077A33422BA45A400372F07 /* NSDate+KExtension.m in Sources */,
 				30658A7422CF265F0072CD24 /* KKQRCodeSessionView.m in Sources */,
+				30202FC22379362800F1AADA /* KKNavigationController.m in Sources */,
 				3077A35722BB344D00372F07 /* UILabel+KExtension.m in Sources */,
 				302897C522C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A522C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
