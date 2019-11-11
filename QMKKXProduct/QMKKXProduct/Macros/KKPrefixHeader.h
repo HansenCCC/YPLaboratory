@@ -10,6 +10,5 @@
 #define KKPrefixHeader_h
 
 #import "KKNetworkApi.h"//API
-#import "KKUser.h"//全局单例
 
 #endif /* KKPrefixHeader_h */

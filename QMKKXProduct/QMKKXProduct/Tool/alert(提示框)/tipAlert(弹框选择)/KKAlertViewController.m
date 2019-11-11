@@ -58,7 +58,7 @@
     //
     self.closeButton = [[UIButton alloc] init];
     self.closeButton.hidden = !self.isShowCloseButton;
-    [self.closeButton setImage:UIImageWithName(@"sq_icon_delete") forState:UIControlStateNormal];
+    [self.closeButton setImage:UIImageWithName(@"kk_icon_delete") forState:UIControlStateNormal];
     [self.closeButton addTarget:self action:@selector(whenCloseClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:self.closeButton];
     //

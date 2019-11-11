@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = KKColor_999999;
+    
 }
 - (IBAction)whenClick:(UIButton *)sender {
     KKDropdownBoxView *boxView = [[KKDropdownBoxView alloc] initWithTitles:@[@"1",@"2",@"3"] withComplete:^(NSInteger index) {

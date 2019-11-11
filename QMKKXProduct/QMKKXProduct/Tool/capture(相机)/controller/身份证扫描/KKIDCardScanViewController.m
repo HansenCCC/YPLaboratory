@@ -43,7 +43,7 @@
     
     self.takePhotoButton = [[UIButton alloc] init];
     self.takePhotoButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.takePhotoButton setImage:UIImageWithName(@"sq_icon_takePhoto") forState:UIControlStateNormal];
+    [self.takePhotoButton setImage:UIImageWithName(@"kk_icon_takePhoto") forState:UIControlStateNormal];
     [self.takePhotoButton addTarget:self action:@selector(__takePhotoAction) forControlEvents:UIControlEventTouchUpInside];
     [self.sessionView addSubview:self.takePhotoButton];
     
@@ -73,12 +73,12 @@
     
     self.backButtonCopy = [[UIButton alloc] init];
     self.backButtonCopy.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.backButtonCopy setImage:UIImageWithName(@"sq_icon_cancelBack") forState:UIControlStateNormal];
+    [self.backButtonCopy setImage:UIImageWithName(@"kk_icon_cancelBack") forState:UIControlStateNormal];
     [self.backButtonCopy addTarget:self action:@selector(__backButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [self.sessionView addSubview:self.backButtonCopy];
     //
     self.scanBackGroundImageView = [[UIImageView alloc] init];
-    [self.scanBackGroundImageView setImage: UIImageWithName(@"sq_icon_frame")];
+    [self.scanBackGroundImageView setImage: UIImageWithName(@"kk_icon_frame")];
     [self.sessionView addSubview:self.scanBackGroundImageView];
     //
     self.titleLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:18.f] textColor:KKColor_FFFFFF];

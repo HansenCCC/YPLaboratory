@@ -49,4 +49,6 @@
 #import "KKNotification.h"
 //webview
 #import "KKUIWebViewController.h"
+//
+#import "KKUser.h"//全局单例
 #endif /* KKToolHeader_h */

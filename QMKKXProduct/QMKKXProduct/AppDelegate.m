@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+KKThird.h"
+#import "AppDelegate+KKConfig.h"
+#import "KKRootViewController.h"//root
 
 @interface AppDelegate ()
 
@@ -18,7 +20,40 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self setupAVOSCloud];
-    
+    [self IQKeyBoradConfig];
+    [self setupConfig];//配置
+    [self setRootViewController];
+    return YES;
+}
+//设置根试图
+- (void)setRootViewController{
+    CGRect bounds = [UIScreen mainScreen].bounds;
+    self.window = [[UIWindow alloc] initWithFrame:bounds];
+    [self.window makeKeyAndVisible];
+    KKRootViewController *vc = [[KKRootViewController alloc] init];
+    self.window.rootViewController = vc;
+}
+//指定页面禁止使用第三方键盘
+- (BOOL)application:(UIApplication *)application shouldAllowExtensionPointIdentifier:(UIApplicationExtensionPointIdentifier)extensionPointIdentifier{
+    NSArray *vcClass = @[
+                         
+                         ];
+    for (Class a in vcClass) {
+        if ([self.window.topViewController isKindOfClass:a]) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+//第三方传值或登录
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    //跳转授权页面
+    NSString *urlStr = url.absoluteString;
+    if ([urlStr.lowercaseString containsString:kBeePlayAuthLogin.lowercaseString]) {
+        [[KKUser shareInstance] postNotificationToBeePlayAuthLogin:urlStr];
+        return YES;
+    }
     return YES;
 }
 @end

@@ -28,6 +28,10 @@
 		30202FC32379362800F1AADA /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC12379362800F1AADA /* KKNavigationController.m */; };
 		30202FC5237936B400F1AADA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 30202FC4237936B400F1AADA /* index.html */; };
 		30202FC6237936B400F1AADA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 30202FC4237936B400F1AADA /* index.html */; };
+		30202FCA23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC923793D9A00F1AADA /* AppDelegate+KKConfig.m */; };
+		30202FCB23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC923793D9A00F1AADA /* AppDelegate+KKConfig.m */; };
+		30202FD023793FE500F1AADA /* KKRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FCE23793FE500F1AADA /* KKRootViewController.m */; };
+		30202FD123793FE500F1AADA /* KKRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FCE23793FE500F1AADA /* KKRootViewController.m */; };
 		3028973B22C0C734000F2669 /* MBProgressHUD+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028973922C0C733000F2669 /* MBProgressHUD+KExtension.m */; };
 		3028973C22C0C734000F2669 /* MBProgressHUD+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028973922C0C733000F2669 /* MBProgressHUD+KExtension.m */; };
 		3028979122C46DEF000F2669 /* HVUILayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028974B22C46DED000F2669 /* HVUILayoutConstraint.m */; };
@@ -182,6 +186,10 @@
 		30202FC02379362800F1AADA /* KKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNavigationController.h; sourceTree = "<group>"; };
 		30202FC12379362800F1AADA /* KKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
 		30202FC4237936B400F1AADA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		30202FC823793D9A00F1AADA /* AppDelegate+KKConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+KKConfig.h"; sourceTree = "<group>"; };
+		30202FC923793D9A00F1AADA /* AppDelegate+KKConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+KKConfig.m"; sourceTree = "<group>"; };
+		30202FCE23793FE500F1AADA /* KKRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKRootViewController.m; sourceTree = "<group>"; };
+		30202FCF23793FE500F1AADA /* KKRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKRootViewController.h; sourceTree = "<group>"; };
 		3028973922C0C733000F2669 /* MBProgressHUD+KExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+KExtension.m"; sourceTree = "<group>"; };
 		3028973A22C0C733000F2669 /* MBProgressHUD+KExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+KExtension.h"; sourceTree = "<group>"; };
 		3028974B22C46DED000F2669 /* HVUILayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVUILayoutConstraint.m; sourceTree = "<group>"; };
@@ -363,9 +371,12 @@
 				30036DA822B9D76900605DF7 /* AppDelegate.m */,
 				3029A08C22C4A49B002E7937 /* AppDelegate+KKThird.h */,
 				3029A08D22C4A49B002E7937 /* AppDelegate+KKThird.m */,
+				30202FC823793D9A00F1AADA /* AppDelegate+KKConfig.h */,
+				30202FC923793D9A00F1AADA /* AppDelegate+KKConfig.m */,
 				30036DAA22B9D76900605DF7 /* ViewController.h */,
 				30036DAB22B9D76900605DF7 /* ViewController.m */,
-				30036DD022B9FBB400605DF7 /* Main */,
+				30202FCC23793FBD00F1AADA /* Main */,
+				30202FC723793C0000F1AADA /* Network */,
 				3077A30222BA423600372F07 /* Tool */,
 				30036DDB22B9FFC600605DF7 /* Macros */,
 				30036DBD22B9DB4100605DF7 /* Supporting Files */,
@@ -386,25 +397,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		30036DD022B9FBB400605DF7 /* Main */ = {
+		30036DD022B9FBB400605DF7 /* single(单例管理) */ = {
 			isa = PBXGroup;
 			children = (
 				30036DD122B9FC0800605DF7 /* KKUser.h */,
 				30036DD222B9FC0800605DF7 /* KKUser.m */,
 				307C27EA23587A6000DB3ED6 /* KKUserInfoModel.h */,
 				307C27E923587A6000DB3ED6 /* KKUserInfoModel.m */,
-				30036DD522B9FDF000605DF7 /* api */,
 			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		30036DD522B9FDF000605DF7 /* api */ = {
-			isa = PBXGroup;
-			children = (
-				30036DD622B9FE0D00605DF7 /* KKNetworkApi.h */,
-				30036DD722B9FE0D00605DF7 /* KKNetworkApi.m */,
-			);
-			path = api;
+			path = "single(单例管理)";
 			sourceTree = "<group>";
 		};
 		30036DDB22B9FFC600605DF7 /* Macros */ = {
@@ -416,6 +417,32 @@
 				30036DDA22B9FF0B00605DF7 /* PrefixHeader.pch */,
 			);
 			path = Macros;
+			sourceTree = "<group>";
+		};
+		30202FC723793C0000F1AADA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				30036DD622B9FE0D00605DF7 /* KKNetworkApi.h */,
+				30036DD722B9FE0D00605DF7 /* KKNetworkApi.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		30202FCC23793FBD00F1AADA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				30202FCD23793FC600F1AADA /* Root */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		30202FCD23793FC600F1AADA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				30202FCF23793FE500F1AADA /* KKRootViewController.h */,
+				30202FCE23793FE500F1AADA /* KKRootViewController.m */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		3028973822C0C2EA000F2669 /* mute(监听静音键) */ = {
@@ -649,6 +676,7 @@
 			isa = PBXGroup;
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
+				30036DD022B9FBB400605DF7 /* single(单例管理) */,
 				308DF7672359B1B400A503D0 /* webView(网站) */,
 				307C27ED23587AAD00DB3ED6 /* notification(通知) */,
 				30CEE7AC2334E8F6006CF794 /* countdown */,
@@ -1010,6 +1038,7 @@
 				30036DB722B9D76B00605DF7 /* main.m in Sources */,
 				3077A34422BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				3077A34C22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
+				30202FCB23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
 				30658A6F22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
 				3077A39622BCDA4D00372F07 /* KKMuteDetector.m in Sources */,
 				3028979C22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
@@ -1027,6 +1056,7 @@
 				302897AE22C46DEF000F2669 /* KKPickerAlert.m in Sources */,
 				3028979E22C46DEF000F2669 /* KKNetworkBase.m in Sources */,
 				30036DD922B9FE0D00605DF7 /* KKNetworkApi.m in Sources */,
+				30202FD123793FE500F1AADA /* KKRootViewController.m in Sources */,
 				302897A222C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33122BA45A400372F07 /* NSObject+KExtension.m in Sources */,
 				302897AA22C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
@@ -1079,6 +1109,7 @@
 				30036DC122B9DDC500605DF7 /* main.m in Sources */,
 				3077A34322BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				3077A34B22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
+				30202FCA23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
 				30658A6E22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
 				3077A39522BCDA4D00372F07 /* KKMuteDetector.m in Sources */,
 				3028979B22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
@@ -1096,6 +1127,7 @@
 				302897AD22C46DEF000F2669 /* KKPickerAlert.m in Sources */,
 				3028979D22C46DEF000F2669 /* KKNetworkBase.m in Sources */,
 				30036DD822B9FE0D00605DF7 /* KKNetworkApi.m in Sources */,
+				30202FD023793FE500F1AADA /* KKRootViewController.m in Sources */,
 				302897A122C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33022BA45A400372F07 /* NSObject+KExtension.m in Sources */,
 				302897A922C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,

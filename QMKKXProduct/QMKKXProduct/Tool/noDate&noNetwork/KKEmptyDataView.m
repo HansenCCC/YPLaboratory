@@ -35,7 +35,7 @@
  创建空数据显示view
  */
 + (id)createEmptyDateView{
-    return [[KKEmptyDataView alloc] initWithImage:UIImageWithName(@"sq_icon_empty")];
+    return [[KKEmptyDataView alloc] initWithImage:UIImageWithName(@"kk_icon_empty")];
 }
 
 
@@ -43,6 +43,6 @@
  创建网络异常view
  */
 + (id)createNetworkFailDateView{
-        return [[KKEmptyDataView alloc] initWithImage:UIImageWithName(@"sq_icon_fail")];
+        return [[KKEmptyDataView alloc] initWithImage:UIImageWithName(@"kk_icon_fail")];
 }
 @end
