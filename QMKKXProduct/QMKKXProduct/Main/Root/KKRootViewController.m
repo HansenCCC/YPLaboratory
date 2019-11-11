@@ -7,11 +7,15 @@
 //
 
 #import "KKRootViewController.h"
+#import "KKUserViewController.h"//用户
+#import "KKWorldViewController.h"//世界
+#import "KKHomeViewController.h"//实验室
+
 
 @interface KKRootViewController ()<UINavigationControllerDelegate,UITabBarControllerDelegate>
-@property (strong, nonatomic) UIViewController *homeViewController;//首页
-@property (strong, nonatomic) UIViewController *worldViewController;//世界
-@property (strong, nonatomic) UIViewController *userViewController;//用户
+@property (strong, nonatomic) KKHomeViewController *homeViewController;//实验室
+@property (strong, nonatomic) KKWorldViewController *worldViewController;//世界
+@property (strong, nonatomic) KKUserViewController *userViewController;//用户
 @property (strong, nonatomic) UIImageView *startImageView;//启动图片
 
 @end
@@ -26,7 +30,7 @@
     [self addObserverNotification];
 }
 - (void)setupSubview{
-    self.tabBar.translucent = NO;
+//    self.tabBar.translucent = NO;
     self.tabBar.barTintColor = KKColor_F0F0F0;
     //
     KKNavigationController *navHomeVC = [self createNavigation:self.homeViewController title:@"实验室" image:UIImageWithName(@"kk_icon_tabbarHome") selectImage:UIImageWithName(@"kk_icon_tabbarHome")];
@@ -72,8 +76,8 @@
     image = [image imageWithTintColor:KKColor_2C2C2C];
     selectImage = [selectImage imageWithTintColor:KKColor_1296DB];
     UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:title image:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:KKColor_2C2C2C, NSFontAttributeName:AdaptedFontSize(8.f)} forState:UIControlStateNormal];
-    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:KKColor_1296DB, NSFontAttributeName:AdaptedFontSize(8.f)} forState:UIControlStateSelected];
+    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:KKColor_2C2C2C, NSFontAttributeName:AdaptedFontSize(10.f)} forState:UIControlStateNormal];
+    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:KKColor_1296DB, NSFontAttributeName:AdaptedFontSize(10.f)} forState:UIControlStateSelected];
     nav.tabBarItem = item;
     return nav;
 }
@@ -107,23 +111,23 @@
 }
 #pragma mark - lazy load
 //home
-- (UIViewController *)homeViewController{
+- (KKHomeViewController *)homeViewController{
     if (!_homeViewController) {
-        _homeViewController = [[UIViewController alloc] init];
+        _homeViewController = [[KKHomeViewController alloc] init];
     }
     return _homeViewController;
 }
 //世界
-- (UIViewController *)worldViewController{
+- (KKWorldViewController *)worldViewController{
     if (!_worldViewController) {
-        _worldViewController = [[UIViewController alloc] init];
+        _worldViewController = [[KKWorldViewController alloc] init];
     }
     return _worldViewController;
 }
 //用户
-- (UIViewController *)userViewController{
+- (KKUserViewController *)userViewController{
     if (!_userViewController) {
-        _userViewController = [[UIViewController alloc] init];
+        _userViewController = [[KKUserViewController alloc] init];
     }
     return _userViewController;
 }
