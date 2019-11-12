@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KKAppIconMakerViewController">
             <connections>
+                <outlet property="tableView" destination="Y4r-Cc-Dr5" id="Qzs-9l-XDU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

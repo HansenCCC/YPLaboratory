@@ -27,6 +27,18 @@
     // Do any additional setup after loading the view.
     [self setupConfirmBar];
     [self setupPickerView];
+    //傻屌动画
+    self.contentView.alpha = 0;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        CGFloat presentedHeight = kPickViewHeight;
+        self.contentView.transform = CGAffineTransformMakeTranslation(0, presentedHeight);
+        [UIView animateWithDuration:0.3 animations:^{
+            self.contentView.alpha = 1.0f;
+            self.contentView.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            //todo
+        }];
+    });
 }
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];

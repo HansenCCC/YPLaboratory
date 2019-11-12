@@ -74,10 +74,10 @@
     nav.delegate = self;
     viewController.title = title;
     image = [image imageWithTintColor:KKColor_2C2C2C];
-    selectImage = [selectImage imageWithTintColor:KKColor_1296DB];
+    selectImage = [selectImage imageWithTintColor:KKColor_0000FF];
     UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:title image:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [item setTitleTextAttributes:@{NSForegroundColorAttributeName:KKColor_2C2C2C, NSFontAttributeName:AdaptedFontSize(10.f)} forState:UIControlStateNormal];
-    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:KKColor_1296DB, NSFontAttributeName:AdaptedFontSize(10.f)} forState:UIControlStateSelected];
+    [item setTitleTextAttributes:@{NSForegroundColorAttributeName:KKColor_0000FF, NSFontAttributeName:AdaptedFontSize(10.f)} forState:UIControlStateSelected];
     nav.tabBarItem = item;
     return nav;
 }

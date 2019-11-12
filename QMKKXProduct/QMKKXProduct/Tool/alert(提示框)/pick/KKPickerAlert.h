@@ -11,7 +11,9 @@
 
 typedef void(^KKPickerAlertConfirmBlock)(NSInteger index);
 
-@interface KKPickerAlert : KKUIBasePresentController
+@interface KKPickerAlert : KKUIBasePresentController<UIPickerViewDelegate,UIPickerViewDataSource>
+@property (nonatomic, strong) UIPickerView *pickerView;
+@property (nonatomic,   copy) NSArray <NSString *> *titles;
 @property (nonatomic, assign) NSInteger index;//当前选中index
 @property (nonatomic,   copy) KKPickerAlertConfirmBlock confirmBlock;
 @property (nonatomic, strong) KKInputToolBar *inputToolBar;//输入框

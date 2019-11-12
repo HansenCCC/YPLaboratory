@@ -19,7 +19,7 @@
 #define KKColor_999999 CMCustomColor(@"999999")//灰色
 #define KKColor_F0F0F0 CMCustomColor(@"F0F0F0")//默认背景白
 #define KKColor_2C2C2C CMCustomColor(@"2C2C2C")//默认背景黑
-#define KKColor_1296DB CMCustomColor(@"1296DB")//默认背景蓝
+#define KKColor_0000FF CMCustomColor(@"0000FF")//默认背景蓝
 #define KKColor_000000 CMCustomColor(@"000000")//黑色
 
 

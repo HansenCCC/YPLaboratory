@@ -15,6 +15,7 @@
 #import "KKPresentAnimation.h"//present转场动画
 #import "KKUIBasePresentController.h"//present试图
 #import "KKPickerAlert.h"//普通pick
+#import "KKColorPickAlert.h"//颜色pick
 #import "KKDatePickerAlert.h"//时间pick
 #import "KKAddressPickAlert.h"//地址pick
 #import "KKAlertViewController.h"//标准alert
@@ -49,6 +50,12 @@
 #import "KKNotification.h"
 //webview
 #import "KKUIWebViewController.h"
-//
-#import "KKUser.h"//全局单例
+//全局单例
+#import "KKUser.h"
+//cell通用
+#import "KKLabelModel.h"
+#import "KKLabelTableViewCell.h"
+#import "KKButtonTableViewCell.h"
+
+
 #endif /* KKToolHeader_h */

@@ -176,6 +176,22 @@
 		307C27F123587AAD00DB3ED6 /* KKNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 307C27EF23587AAD00DB3ED6 /* KKNotification.m */; };
 		308DF76A2359B24400A503D0 /* KKUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DF7692359B24400A503D0 /* KKUIWebViewController.m */; };
 		308DF76B2359B24400A503D0 /* KKUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DF7692359B24400A503D0 /* KKUIWebViewController.m */; };
+		309173F8237AA9BB00010E99 /* KKButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 309173F6237AA9BB00010E99 /* KKButtonTableViewCell.m */; };
+		309173F9237AA9BB00010E99 /* KKButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 309173F6237AA9BB00010E99 /* KKButtonTableViewCell.m */; };
+		309173FA237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309173F7237AA9BB00010E99 /* KKButtonTableViewCell.xib */; };
+		309173FB237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309173F7237AA9BB00010E99 /* KKButtonTableViewCell.xib */; };
+		30917400237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 309173FE237AAFDD00010E99 /* KKAppIconTableViewCell.m */; };
+		30917401237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 309173FE237AAFDD00010E99 /* KKAppIconTableViewCell.m */; };
+		30917402237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309173FF237AAFDD00010E99 /* KKAppIconTableViewCell.xib */; };
+		30917403237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309173FF237AAFDD00010E99 /* KKAppIconTableViewCell.xib */; };
+		30917406237AB37500010E99 /* KKAppIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917405237AB37400010E99 /* KKAppIcon.m */; };
+		30917407237AB37500010E99 /* KKAppIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917405237AB37400010E99 /* KKAppIcon.m */; };
+		3091740A237AB8B400010E99 /* KKAppIconImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917408237AB8B300010E99 /* KKAppIconImageView.m */; };
+		3091740B237AB8B400010E99 /* KKAppIconImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917408237AB8B300010E99 /* KKAppIconImageView.m */; };
+		3091740E237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091740D237ABB4B00010E99 /* KKAppIconLabelModel.m */; };
+		3091740F237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091740D237ABB4B00010E99 /* KKAppIconLabelModel.m */; };
+		30917412237AD79900010E99 /* KKColorPickAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917411237AD79900010E99 /* KKColorPickAlert.m */; };
+		30917413237AD79900010E99 /* KKColorPickAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917411237AD79900010E99 /* KKColorPickAlert.m */; };
 		30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */; };
 		30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */; };
 		30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E20780237975AA00EE3E8E /* KKLabStudioViewController.m */; };
@@ -352,6 +368,20 @@
 		307C27EF23587AAD00DB3ED6 /* KKNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNotification.m; sourceTree = "<group>"; };
 		308DF7682359B24400A503D0 /* KKUIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKUIWebViewController.h; sourceTree = "<group>"; };
 		308DF7692359B24400A503D0 /* KKUIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKUIWebViewController.m; sourceTree = "<group>"; };
+		309173F5237AA9BB00010E99 /* KKButtonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKButtonTableViewCell.h; sourceTree = "<group>"; };
+		309173F6237AA9BB00010E99 /* KKButtonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKButtonTableViewCell.m; sourceTree = "<group>"; };
+		309173F7237AA9BB00010E99 /* KKButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKButtonTableViewCell.xib; sourceTree = "<group>"; };
+		309173FD237AAFDD00010E99 /* KKAppIconTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAppIconTableViewCell.h; sourceTree = "<group>"; };
+		309173FE237AAFDD00010E99 /* KKAppIconTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAppIconTableViewCell.m; sourceTree = "<group>"; };
+		309173FF237AAFDD00010E99 /* KKAppIconTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKAppIconTableViewCell.xib; sourceTree = "<group>"; };
+		30917404237AB37400010E99 /* KKAppIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKAppIcon.h; sourceTree = "<group>"; };
+		30917405237AB37400010E99 /* KKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKAppIcon.m; sourceTree = "<group>"; };
+		30917408237AB8B300010E99 /* KKAppIconImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKAppIconImageView.m; sourceTree = "<group>"; };
+		30917409237AB8B300010E99 /* KKAppIconImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKAppIconImageView.h; sourceTree = "<group>"; };
+		3091740C237ABB4B00010E99 /* KKAppIconLabelModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAppIconLabelModel.h; sourceTree = "<group>"; };
+		3091740D237ABB4B00010E99 /* KKAppIconLabelModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAppIconLabelModel.m; sourceTree = "<group>"; };
+		30917410237AD79900010E99 /* KKColorPickAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKColorPickAlert.h; sourceTree = "<group>"; };
+		30917411237AD79900010E99 /* KKColorPickAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKColorPickAlert.m; sourceTree = "<group>"; };
 		30CEE7AD2334E8F6006CF794 /* KKCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCountdownButton.h; sourceTree = "<group>"; };
 		30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCountdownButton.m; sourceTree = "<group>"; };
 		30E2077F237975AA00EE3E8E /* KKLabStudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKLabStudioViewController.h; sourceTree = "<group>"; };
@@ -533,9 +563,9 @@
 		30202FEB23795F9E00F1AADA /* view */ = {
 			isa = PBXGroup;
 			children = (
-				300CC097237A5C5C00983BD1 /* KKLabelTableViewCell.h */,
-				300CC098237A5C5C00983BD1 /* KKLabelTableViewCell.m */,
-				300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */,
+				309173FD237AAFDD00010E99 /* KKAppIconTableViewCell.h */,
+				309173FE237AAFDD00010E99 /* KKAppIconTableViewCell.m */,
+				309173FF237AAFDD00010E99 /* KKAppIconTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -543,8 +573,8 @@
 		30202FEC23795FA300F1AADA /* model */ = {
 			isa = PBXGroup;
 			children = (
-				30202FF5237962DE00F1AADA /* KKLabelModel.h */,
-				30202FF6237962DE00F1AADA /* KKLabelModel.m */,
+				3091740C237ABB4B00010E99 /* KKAppIconLabelModel.h */,
+				3091740D237ABB4B00010E99 /* KKAppIconLabelModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -552,6 +582,10 @@
 		30202FED2379618800F1AADA /* app图片制作 */ = {
 			isa = PBXGroup;
 			children = (
+				30917404237AB37400010E99 /* KKAppIcon.h */,
+				30917405237AB37400010E99 /* KKAppIcon.m */,
+				30917409237AB8B300010E99 /* KKAppIconImageView.h */,
+				30917408237AB8B300010E99 /* KKAppIconImageView.m */,
 				30202FEE237961AB00F1AADA /* KKAppIconMakerViewController.h */,
 				30202FEF237961AB00F1AADA /* KKAppIconMakerViewController.m */,
 				30202FF0237961AB00F1AADA /* KKAppIconMakerViewController.xib */,
@@ -656,6 +690,8 @@
 			children = (
 				3028977E22C46DEE000F2669 /* KKPickerAlert.h */,
 				3028977122C46DEE000F2669 /* KKPickerAlert.m */,
+				30917410237AD79900010E99 /* KKColorPickAlert.h */,
+				30917411237AD79900010E99 /* KKColorPickAlert.m */,
 				3028977222C46DEE000F2669 /* KKDatePickerAlert.h */,
 				3028976F22C46DEE000F2669 /* KKDatePickerAlert.m */,
 				3028977022C46DEE000F2669 /* KKAddressPickAlert.h */,
@@ -790,6 +826,7 @@
 			isa = PBXGroup;
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
+				309173FC237AAF1200010E99 /* cell(通用cell) */,
 				30036DD022B9FBB400605DF7 /* single(单例管理) */,
 				308DF7672359B1B400A503D0 /* webView(网站) */,
 				307C27ED23587AAD00DB3ED6 /* notification(通知) */,
@@ -884,6 +921,21 @@
 				308DF7692359B24400A503D0 /* KKUIWebViewController.m */,
 			);
 			path = "webView(网站)";
+			sourceTree = "<group>";
+		};
+		309173FC237AAF1200010E99 /* cell(通用cell) */ = {
+			isa = PBXGroup;
+			children = (
+				30202FF5237962DE00F1AADA /* KKLabelModel.h */,
+				30202FF6237962DE00F1AADA /* KKLabelModel.m */,
+				300CC097237A5C5C00983BD1 /* KKLabelTableViewCell.h */,
+				300CC098237A5C5C00983BD1 /* KKLabelTableViewCell.m */,
+				300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */,
+				309173F5237AA9BB00010E99 /* KKButtonTableViewCell.h */,
+				309173F6237AA9BB00010E99 /* KKButtonTableViewCell.m */,
+				309173F7237AA9BB00010E99 /* KKButtonTableViewCell.xib */,
+			);
+			path = "cell(通用cell)";
 			sourceTree = "<group>";
 		};
 		30CEE7AC2334E8F6006CF794 /* countdown */ = {
@@ -1026,10 +1078,12 @@
 				30658A6322CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */,
 				30658A6B22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
 				30202FE92379593600F1AADA /* KKUserViewController.xib in Resources */,
+				30917403237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
 				30202FDF2379589D00F1AADA /* KKWorldViewController.xib in Resources */,
 				302897B222C46DEF000F2669 /* city.json in Resources */,
 				30036DAF22B9D76900605DF7 /* Main.storyboard in Resources */,
 				30202FC6237936B400F1AADA /* index.html in Resources */,
+				309173FB237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE2237958D800F1AADA /* KKHomeViewController.xib in Resources */,
 				30658A6522CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
@@ -1051,10 +1105,12 @@
 				30658A6222CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */,
 				30658A6A22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
 				30202FE82379593600F1AADA /* KKUserViewController.xib in Resources */,
+				30917402237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
 				30202FDE2379589D00F1AADA /* KKWorldViewController.xib in Resources */,
 				302897B122C46DEF000F2669 /* city.json in Resources */,
 				30036DC722B9DDC500605DF7 /* Main.storyboard in Resources */,
 				30202FC5237936B400F1AADA /* index.html in Resources */,
+				309173FA237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE1237958D800F1AADA /* KKHomeViewController.xib in Resources */,
 				30658A6422CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6022CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
@@ -1171,9 +1227,11 @@
 				3028979A22C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				30E20783237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
 				3077A34822BB303500372F07 /* UIImageView+KExtension.m in Sources */,
+				30917413237AD79900010E99 /* KKColorPickAlert.m in Sources */,
 				30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */,
 				3077A35022BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
 				30036DB722B9D76B00605DF7 /* main.m in Sources */,
+				30917407237AB37500010E99 /* KKAppIcon.m in Sources */,
 				3077A34422BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				3077A34C22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
 				30202FCB23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
@@ -1183,6 +1241,7 @@
 				300CC09B237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
 				3077A33522BA45A400372F07 /* NSDate+KExtension.m in Sources */,
 				30202FE72379593600F1AADA /* KKUserViewController.m in Sources */,
+				309173F9237AA9BB00010E99 /* KKButtonTableViewCell.m in Sources */,
 				30658A7522CF265F0072CD24 /* KKQRCodeSessionView.m in Sources */,
 				30202FC32379362800F1AADA /* KKNavigationController.m in Sources */,
 				3077A35822BB344D00372F07 /* UILabel+KExtension.m in Sources */,
@@ -1190,6 +1249,7 @@
 				302897A622C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
 				308DF76B2359B24400A503D0 /* KKUIWebViewController.m in Sources */,
 				3077A33722BA45A400372F07 /* NSString+KExtension.m in Sources */,
+				3091740B237AB8B400010E99 /* KKAppIconImageView.m in Sources */,
 				302897BA22C46DEF000F2669 /* KKAddressPickAlert.m in Sources */,
 				30036DA922B9D76900605DF7 /* AppDelegate.m in Sources */,
 				302897A422C46DEF000F2669 /* KKUIBasePresentController.m in Sources */,
@@ -1205,6 +1265,7 @@
 				302897C022C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
 				302897C422C46DEF000F2669 /* KKTextView.m in Sources */,
 				30658A7122CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
+				3091740F237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */,
 				3077A36922BB39F100372F07 /* KKBaseLoadingView.m in Sources */,
 				3077A32F22BA45A400372F07 /* NSTimer+KExtension.m in Sources */,
 				302897B022C46DEF000F2669 /* KKProvince.m in Sources */,
@@ -1219,6 +1280,7 @@
 				30658A7722CF265F0072CD24 /* KKAVCaptureBaseSessionView.m in Sources */,
 				3077A33922BA45A400372F07 /* NSArray+KExtension.m in Sources */,
 				3028979422C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
+				30917401237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
 				302897BE22C46DEF000F2669 /* KKTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1248,9 +1310,11 @@
 				3028979922C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
 				3077A34722BB303500372F07 /* UIImageView+KExtension.m in Sources */,
+				30917412237AD79900010E99 /* KKColorPickAlert.m in Sources */,
 				30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */,
 				3077A34F22BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
 				30036DC122B9DDC500605DF7 /* main.m in Sources */,
+				30917406237AB37500010E99 /* KKAppIcon.m in Sources */,
 				3077A34322BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				3077A34B22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
 				30202FCA23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
@@ -1260,6 +1324,7 @@
 				300CC09A237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
 				3077A33422BA45A400372F07 /* NSDate+KExtension.m in Sources */,
 				30202FE62379593600F1AADA /* KKUserViewController.m in Sources */,
+				309173F8237AA9BB00010E99 /* KKButtonTableViewCell.m in Sources */,
 				30658A7422CF265F0072CD24 /* KKQRCodeSessionView.m in Sources */,
 				30202FC22379362800F1AADA /* KKNavigationController.m in Sources */,
 				3077A35722BB344D00372F07 /* UILabel+KExtension.m in Sources */,
@@ -1267,6 +1332,7 @@
 				302897A522C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
 				308DF76A2359B24400A503D0 /* KKUIWebViewController.m in Sources */,
 				3077A33622BA45A400372F07 /* NSString+KExtension.m in Sources */,
+				3091740A237AB8B400010E99 /* KKAppIconImageView.m in Sources */,
 				302897B922C46DEF000F2669 /* KKAddressPickAlert.m in Sources */,
 				30036DC222B9DDC500605DF7 /* AppDelegate.m in Sources */,
 				302897A322C46DEF000F2669 /* KKUIBasePresentController.m in Sources */,
@@ -1282,6 +1348,7 @@
 				302897BF22C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
 				302897C322C46DEF000F2669 /* KKTextView.m in Sources */,
 				30658A7022CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
+				3091740E237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */,
 				3077A36822BB39F100372F07 /* KKBaseLoadingView.m in Sources */,
 				3077A32E22BA45A400372F07 /* NSTimer+KExtension.m in Sources */,
 				302897AF22C46DEF000F2669 /* KKProvince.m in Sources */,
@@ -1296,6 +1363,7 @@
 				30658A7622CF265F0072CD24 /* KKAVCaptureBaseSessionView.m in Sources */,
 				3077A33822BA45A400372F07 /* NSArray+KExtension.m in Sources */,
 				3028979322C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
+				30917400237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
 				302897BD22C46DEF000F2669 /* KKTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

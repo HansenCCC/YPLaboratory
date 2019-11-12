@@ -34,7 +34,7 @@
     [self.datas removeAllObjects];
     //构造cell
     KKLabelModel *s1m1 = [[KKLabelModel alloc] initWithTitle:@"工作台" value:nil];
-    KKLabelModel *s1m2 = [[KKLabelModel alloc] initWithTitle:@"App制作图标" value:nil];
+    KKLabelModel *s1m2 = [[KKLabelModel alloc] initWithTitle:@"App图标制作" value:nil];
     KKLabelModel *s1m3 = [[KKLabelModel alloc] initWithTitle:@"英语专业考试" value:nil];
     KKLabelModel *s1m4 = [[KKLabelModel alloc] initWithTitle:@"网络图片下载" value:nil];
     KKLabelModel *s1m5 = [[KKLabelModel alloc] initWithTitle:@"API网络层" value:nil];
@@ -68,7 +68,7 @@
     KKLabelModel *cellModel = self.datas[indexPath.row];
     if ([cellModel.title isEqualToString:@"工作台"]) {
         [self pushLabStudioViewController];
-    }else if([cellModel.title isEqualToString:@"App制作图标"]){
+    }else if([cellModel.title isEqualToString:@"App图标制作"]){
         [self pushAppIconMakerViewController];
     }else if([cellModel.title isEqualToString:@"英语专业考试"]){
         

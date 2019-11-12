@@ -1,5 +1,5 @@
 //
-//  KKLabelTableViewCell.h
+//  KKAppIconTableViewCell.h
 //  QMKKXProduct
 //
 //  Created by 程恒盛 on 2019/11/12.
@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KKLabelModel.h"
 
-@interface KKLabelTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@interface KKAppIconTableViewCell : UITableViewCell
 @property (strong, nonatomic) KKLabelModel *cellModel;
+
 @property (weak, nonatomic) IBOutlet KKTextField *textField;
-@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+
 
 @end
 

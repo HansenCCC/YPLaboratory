@@ -18,19 +18,20 @@
 @property (nonatomic, strong) NSString *avatar;//用户头像
 @property (nonatomic, strong) NSString *username;//用户姓名
 @property (nonatomic, strong) NSString *status;//用户状态 1：正常 2： 禁用
-@property (nonatomic, strong) NSString *is_promoter;//是否是推广员 0:不是推广员 1：推广员申请中 2：推广员
 @property (nonatomic, strong) NSString *created_at;
 @property (nonatomic, strong) NSString *fans;//粉丝
 @property (nonatomic, strong) NSString *focus;//关注
-@property (nonatomic, strong) NSString *is_chairman;//是否为会长  // 0 不是  1 是
 @property (nonatomic, strong) NSString *phone;//手机号
 @property (nonatomic, strong) NSString *level;//等级
-@property (nonatomic, strong) NSString *contribution;//贡献值；
-@property (nonatomic, strong) NSString *role_type;//角色的类型
-@property (nonatomic, strong) NSString *tmp_avatar;//临时的头像
-@property (nonatomic, strong) NSString *too_coin;//兔币
-@property (nonatomic, strong) NSString *turnip_coin;//萝卜
-@property (nonatomic, strong) NSString *updated_at;//更新四件
-@property (nonatomic, strong) NSString *is_receive_pet;//1为已领取，0为未领取
-@property (nonatomic, strong) NSString *is_hidden_pet;//0 - 弹出机暴龙弹窗 ， 1 - 隐藏机暴龙弹窗
+@property (nonatomic, strong) NSString *updated_at;//
+
+
+#pragma mark - 辅助字段
+//App制作icon
+@property (nonatomic, strong) NSString *iconFilePath;//icon本地路径地址
+@property (nonatomic, strong) NSString *betaString;//beta
+@property (nonatomic, strong) NSString *betaColor;//betaColor
+@property (nonatomic, strong) NSString *betaBackgroundColor;//betaBackgroundColor
+//
+
 @end
