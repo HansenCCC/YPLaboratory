@@ -9,8 +9,6 @@
 #import "KKPickerAlert.h"
 
 @interface KKPickerAlert ()<UIPickerViewDelegate,UIPickerViewDataSource>
-@property (nonatomic,   copy) NSArray <NSString *> *titles;
-@property (nonatomic, strong) UIPickerView *pickerView;
 
 @end
 
