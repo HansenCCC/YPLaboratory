@@ -14,7 +14,7 @@
         self.title = title;
         self.value = value;
         self.isShowLine = NO;
-        self.isShowArrow = NO;
+        self.isCanEdit = NO;
     }
     return self;
 }

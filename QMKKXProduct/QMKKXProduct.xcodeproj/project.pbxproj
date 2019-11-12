@@ -22,6 +22,10 @@
 		30036DD422B9FC0800605DF7 /* KKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 30036DD222B9FC0800605DF7 /* KKUser.m */; };
 		30036DD822B9FE0D00605DF7 /* KKNetworkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 30036DD722B9FE0D00605DF7 /* KKNetworkApi.m */; };
 		30036DD922B9FE0D00605DF7 /* KKNetworkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 30036DD722B9FE0D00605DF7 /* KKNetworkApi.m */; };
+		300CC09A237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 300CC098237A5C5C00983BD1 /* KKLabelTableViewCell.m */; };
+		300CC09B237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 300CC098237A5C5C00983BD1 /* KKLabelTableViewCell.m */; };
+		300CC09C237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */; };
+		300CC09D237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */; };
 		30202FC22379362800F1AADA /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC12379362800F1AADA /* KKNavigationController.m */; };
 		30202FC32379362800F1AADA /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC12379362800F1AADA /* KKNavigationController.m */; };
 		30202FC5237936B400F1AADA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 30202FC4237936B400F1AADA /* index.html */; };
@@ -174,6 +178,10 @@
 		308DF76B2359B24400A503D0 /* KKUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DF7692359B24400A503D0 /* KKUIWebViewController.m */; };
 		30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */; };
 		30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */; };
+		30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E20780237975AA00EE3E8E /* KKLabStudioViewController.m */; };
+		30E20783237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E20780237975AA00EE3E8E /* KKLabStudioViewController.m */; };
+		30E20784237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E20781237975AA00EE3E8E /* KKLabStudioViewController.xib */; };
+		30E20785237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E20781237975AA00EE3E8E /* KKLabStudioViewController.xib */; };
 		30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */; };
 		30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */; };
 		5B93B02036A012D1C70F57FD /* libPods-QMKKXProduct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */; };
@@ -197,6 +205,9 @@
 		30036DDA22B9FF0B00605DF7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		30036DDC22BA008600605DF7 /* KKPrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPrefixHeader.h; sourceTree = "<group>"; };
 		30036DDD22BA00D800605DF7 /* KKOtherHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKOtherHeader.h; sourceTree = "<group>"; };
+		300CC097237A5C5C00983BD1 /* KKLabelTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKLabelTableViewCell.h; sourceTree = "<group>"; };
+		300CC098237A5C5C00983BD1 /* KKLabelTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKLabelTableViewCell.m; sourceTree = "<group>"; };
+		300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKLabelTableViewCell.xib; sourceTree = "<group>"; };
 		30202FC02379362800F1AADA /* KKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNavigationController.h; sourceTree = "<group>"; };
 		30202FC12379362800F1AADA /* KKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
 		30202FC4237936B400F1AADA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -343,6 +354,9 @@
 		308DF7692359B24400A503D0 /* KKUIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKUIWebViewController.m; sourceTree = "<group>"; };
 		30CEE7AD2334E8F6006CF794 /* KKCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCountdownButton.h; sourceTree = "<group>"; };
 		30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCountdownButton.m; sourceTree = "<group>"; };
+		30E2077F237975AA00EE3E8E /* KKLabStudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKLabStudioViewController.h; sourceTree = "<group>"; };
+		30E20780237975AA00EE3E8E /* KKLabStudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKLabStudioViewController.m; sourceTree = "<group>"; };
+		30E20781237975AA00EE3E8E /* KKLabStudioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKLabStudioViewController.xib; sourceTree = "<group>"; };
 		30F8ADB222D5F12200382827 /* KKDropdownBoxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDropdownBoxView.h; sourceTree = "<group>"; };
 		30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKDropdownBoxView.m; sourceTree = "<group>"; };
 		5183A5B7580215A285039901 /* Pods-QMKKXProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.release.xcconfig"; sourceTree = "<group>"; };
@@ -510,6 +524,7 @@
 		30202FEA23795F8B00F1AADA /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				30E2077E2379758800EE3E8E /* 工作台 */,
 				30202FED2379618800F1AADA /* app图片制作 */,
 			);
 			path = controller;
@@ -518,6 +533,9 @@
 		30202FEB23795F9E00F1AADA /* view */ = {
 			isa = PBXGroup;
 			children = (
+				300CC097237A5C5C00983BD1 /* KKLabelTableViewCell.h */,
+				300CC098237A5C5C00983BD1 /* KKLabelTableViewCell.m */,
+				300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -877,6 +895,16 @@
 			path = countdown;
 			sourceTree = "<group>";
 		};
+		30E2077E2379758800EE3E8E /* 工作台 */ = {
+			isa = PBXGroup;
+			children = (
+				30E2077F237975AA00EE3E8E /* KKLabStudioViewController.h */,
+				30E20780237975AA00EE3E8E /* KKLabStudioViewController.m */,
+				30E20781237975AA00EE3E8E /* KKLabStudioViewController.xib */,
+			);
+			path = "工作台";
+			sourceTree = "<group>";
+		};
 		30F8ADB122D5F06A00382827 /* dropdownBox(弹框) */ = {
 			isa = PBXGroup;
 			children = (
@@ -988,6 +1016,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300CC09D237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */,
 				30202FF4237961AB00F1AADA /* KKAppIconMakerViewController.xib in Resources */,
 				30658A6D22CF265F0072CD24 /* KKCamera_img_camera.png in Resources */,
 				30036DB422B9D76B00605DF7 /* LaunchScreen.storyboard in Resources */,
@@ -1004,6 +1033,7 @@
 				30202FE2237958D800F1AADA /* KKHomeViewController.xib in Resources */,
 				30658A6522CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
+				30E20785237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,6 +1041,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300CC09C237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */,
 				30202FF3237961AB00F1AADA /* KKAppIconMakerViewController.xib in Resources */,
 				30658A6C22CF265F0072CD24 /* KKCamera_img_camera.png in Resources */,
 				30036DC522B9DDC500605DF7 /* LaunchScreen.storyboard in Resources */,
@@ -1027,6 +1058,7 @@
 				30202FE1237958D800F1AADA /* KKHomeViewController.xib in Resources */,
 				30658A6422CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6022CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
+				30E20784237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1137,6 +1169,7 @@
 				30202FD82379588200F1AADA /* KKHomeViewController.m in Sources */,
 				307C27F123587AAD00DB3ED6 /* KKNotification.m in Sources */,
 				3028979A22C46DEF000F2669 /* KKImagePickerController.m in Sources */,
+				30E20783237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
 				3077A34822BB303500372F07 /* UIImageView+KExtension.m in Sources */,
 				30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */,
 				3077A35022BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
@@ -1147,6 +1180,7 @@
 				30658A6F22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
 				3077A39622BCDA4D00372F07 /* KKMuteDetector.m in Sources */,
 				3028979C22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
+				300CC09B237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
 				3077A33522BA45A400372F07 /* NSDate+KExtension.m in Sources */,
 				30202FE72379593600F1AADA /* KKUserViewController.m in Sources */,
 				30658A7522CF265F0072CD24 /* KKQRCodeSessionView.m in Sources */,
@@ -1212,6 +1246,7 @@
 				30202FD72379588200F1AADA /* KKHomeViewController.m in Sources */,
 				307C27F023587AAD00DB3ED6 /* KKNotification.m in Sources */,
 				3028979922C46DEF000F2669 /* KKImagePickerController.m in Sources */,
+				30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
 				3077A34722BB303500372F07 /* UIImageView+KExtension.m in Sources */,
 				30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */,
 				3077A34F22BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
@@ -1222,6 +1257,7 @@
 				30658A6E22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
 				3077A39522BCDA4D00372F07 /* KKMuteDetector.m in Sources */,
 				3028979B22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
+				300CC09A237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
 				3077A33422BA45A400372F07 /* NSDate+KExtension.m in Sources */,
 				30202FE62379593600F1AADA /* KKUserViewController.m in Sources */,
 				30658A7422CF265F0072CD24 /* KKQRCodeSessionView.m in Sources */,

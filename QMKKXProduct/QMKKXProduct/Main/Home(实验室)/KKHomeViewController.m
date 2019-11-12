@@ -7,8 +7,10 @@
 //
 
 #import "KKHomeViewController.h"
+#import "KKLabStudioViewController.h"//工作台
 #import "KKAppIconMakerViewController.h"//App图标制作
 #import "KKLabelModel.h"
+#import "KKLabelTableViewCell.h"
 
 @interface KKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -26,6 +28,7 @@
 }
 - (void)setupSubviews{
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"KKLabelTableViewCell" bundle:nil] forCellReuseIdentifier:@"KKLabelTableViewCell"];
 }
 - (void)reloadDatas{
     [self.datas removeAllObjects];
@@ -49,8 +52,8 @@
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     KKLabelModel *cellModel = self.datas[indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-    cell.textLabel.text = cellModel.title?:@"--";
+    KKLabelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KKLabelTableViewCell"];
+    cell.cellModel = cellModel;
     return cell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -62,5 +65,40 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //取消选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    KKLabelModel *cellModel = self.datas[indexPath.row];
+    if ([cellModel.title isEqualToString:@"工作台"]) {
+        [self pushLabStudioViewController];
+    }else if([cellModel.title isEqualToString:@"App制作图标"]){
+        [self pushAppIconMakerViewController];
+    }else if([cellModel.title isEqualToString:@"英语专业考试"]){
+        
+    }else if([cellModel.title isEqualToString:@"网络图片下载"]){
+        
+    }else if([cellModel.title isEqualToString:@"API网络层"]){
+        
+    }else if([cellModel.title isEqualToString:@"快速开发定制试图"]){
+        
+    }else if([cellModel.title isEqualToString:@""]){
+        
+    }else if([cellModel.title isEqualToString:@""]){
+        
+    }
+}
+#pragma mark - aciton
+//通用跳转方法
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    //
+    viewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:animated];
+}
+//跳转工作台
+- (void)pushLabStudioViewController{
+    KKLabStudioViewController *vc = [[KKLabStudioViewController alloc] init];
+    [self pushViewController:vc animated:YES];
+}
+//跳转App制作图标
+- (void)pushAppIconMakerViewController{
+    KKAppIconMakerViewController *vc = [[KKAppIconMakerViewController alloc] init];
+    [self pushViewController:vc animated:YES];
 }
 @end
