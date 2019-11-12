@@ -15,7 +15,7 @@
 @implementation KKUIWebViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *itemImg = UIImageWithName(@"kk_bee_back");
+    UIImage *itemImg = UIImageWithName(@"kk_icon_back");
     self.backBtnImage = itemImg;
     //web配置
     [self webViewConfig];

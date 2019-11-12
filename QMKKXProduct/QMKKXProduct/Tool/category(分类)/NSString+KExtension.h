@@ -40,17 +40,17 @@
 #pragma mark - class methods
 /**
  判断是否是手机号码
- @param mobile 手机号字符串
+ 
  @return YES or NO
  */
-+ (BOOL)valiMobile:(NSString *)mobile;
+- (BOOL)isValidPhone;
 
 /**
  判断是不是有效url
  
  @return YES or NO
  */
-+ (BOOL)validURLString:(NSString *)URLString;
+- (BOOL)isValidURL;
 
 /**
  校验当前版本是否需要更新
@@ -84,4 +84,37 @@
  @return 手机型号
  */
 + (NSString *)getCurrentDeviceModel;
+
+#pragma mark - NSNumber
+/**
+ *  如果字符串内容为数字时,返回数字对应的NSNumber对象
+ *
+ *  @return 数字对象
+ */
+- (NSNumber *)numberValue;
+- (NSNumber *)numberOfInteger;
+- (NSNumber *)numberOfLongLong;
+- (NSNumber *)numberOfCGFloat;
+- (NSNumber *)numberOfFloat;
+- (NSNumber *)numberOfDouble;
+
+/**
+ * 判断字符字符是否是数字 （包含小数点）
+ */
+-(BOOL)isInputShouldNumber;
+
+/**
+ * 判断字符字符是否是数字 0-9 （不包含小数点）
+ */
+-(BOOL)isInputShouldNumber0_9;
+
+#pragma mark - date
+
+/**
+ 字符串转指定格式时间
+ 
+ @param format 时间格式
+ @return 返回指定格式format
+ */
+- (NSDate *)dateWithFormat:(NSString *)format;
 @end

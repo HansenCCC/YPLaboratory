@@ -104,7 +104,10 @@ return __singleton__; \
 #define KDefaultMargin  10//默认间隔
 #define KUIProgressHUDAfterDelayTimer 2.0//提示框默认显示多少秒消失
 
-
+//占位图
+#define kPlaceholderLogo UIImageWithName(@"kk_icon_logoPlaceholder")
+#define kPlaceholder1r1 UIImageWithName(@"kk_icon_1r1Placeholder")
+#define kPlaceholder2r1 UIImageWithName(@"kk_icon_2r1Placeholder")
 
 #define kBeePlayAuthLogin @"beeplay://BeeAuthLogin?"//beeplay://BeeAuthLogin
 

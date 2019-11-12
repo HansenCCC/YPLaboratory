@@ -50,10 +50,9 @@
         return nil;
     }
 }
-
-+ (BOOL)valiMobile:(NSString *)mobile{
-    if (mobile.length != 11)
-    {
+- (BOOL)isValidPhone{
+    NSString *mobile = self;
+    if (mobile.length != 11){
         return NO;
     }
     /**
@@ -89,52 +88,18 @@
     if (([regextestmobile evaluateWithObject:mobile] == YES)
         || ([regextestcm evaluateWithObject:mobile] == YES)
         || ([regextestct evaluateWithObject:mobile] == YES)
-        || ([regextestcu evaluateWithObject:mobile] == YES))
-    {
+        || ([regextestcu evaluateWithObject:mobile] == YES)){
         return YES;
-    }
-    else
-    {
+    }else{
         return NO;
     }
-    //旧的正则表达式
-    //    if (mobile.length < 11)
-    //    {
-    //        return NO;
-    //    }else{
-    //        /**
-    //         * 移动号段正则表达式
-    //         */
-    //        NSString *CM_NUM = @"^((13[4-9])|(147)|(15[0-2,7-9])|(178)|(18[2-4,7-8]))\\d{8}|(1705)\\d{7}$";
-    //        /**
-    //         * 联通号段正则表达式
-    //         */
-    //        NSString *CU_NUM = @"^((13[0-2])|(145)|(15[5-6])|(176)|(18[5,6]))\\d{8}|(1709)\\d{7}$";
-    //        /**
-    //         * 电信号段正则表达式
-    //         */
-    //        NSString *CT_NUM = @"^((133)|(153)|(177)|(18[0,1,9]))\\d{8}$";
-    //        NSPredicate *pred1 = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM_NUM];
-    //        BOOL isMatch1 = [pred1 evaluateWithObject:mobile];
-    //        NSPredicate *pred2 = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU_NUM];
-    //        BOOL isMatch2 = [pred2 evaluateWithObject:mobile];
-    //        NSPredicate *pred3 = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT_NUM];
-    //        BOOL isMatch3 = [pred3 evaluateWithObject:mobile];
-    //
-    //        if (isMatch1 || isMatch2 || isMatch3) {
-    //            return YES;
-    //        }else{
-    //            return NO;
-    //        }
-    //    }
-    //    return YES;
 }
-+ (BOOL)validURLString:(NSString *)URLString{
+- (BOOL)isValidURL{
+    NSString *URLString = self;
     NSString *regex =@"[a-zA-z]+://[^\\s]*";
     NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     return [urlTest evaluateWithObject:URLString];
 }
-
 //校验当前版本是否需要更新
 + (BOOL)compareVesionWithServerVersion:(NSString *)version locaVersion:(NSString *)locaVersion{
     NSArray *versionArray = [version componentsSeparatedByString:@"."];//服务器返回版
@@ -240,5 +205,94 @@
     if ([deviceModel isEqualToString:@"i386"])         return @"Simulator";
     if ([deviceModel isEqualToString:@"x86_64"])       return @"Simulator";
     return deviceModel;
+}
+
+#pragma mark - NSNumber
+/**
+ *  如果字符串内容为数字时,返回数字对应的NSNumber对象
+ *
+ *  @return 数字对象
+ */
+- (NSNumber *)numberValue{
+    NSNumber *number;
+    number = [self numberOfInteger];
+    if(!number){
+        number = [self numberOfLongLong];
+    }
+    if(!number){
+        number = [self numberOfCGFloat];
+    }
+    return number;
+}
+- (NSNumber *)numberOfInteger{
+    NSScanner *scanner = [[NSScanner alloc] initWithString:self];
+    NSInteger value;
+    if([scanner scanInteger:&value]&&scanner.isAtEnd){
+        return @(value);
+    }
+    return nil;
+}
+- (NSNumber *)numberOfLongLong{
+    NSScanner *scanner = [[NSScanner alloc] initWithString:self];
+    long long value;
+    if([scanner scanLongLong:&value]&&scanner.isAtEnd){
+        return @(value);
+    }
+    return nil;
+}
+- (NSNumber *)numberOfCGFloat{
+#if defined(__LP64__) && __LP64__
+    return [self numberOfDouble];
+#else
+    return [self numberOfFloat];
+#endif
+}
+- (NSNumber *)numberOfFloat{
+    NSScanner *scanner = [[NSScanner alloc] initWithString:self];
+    float value;
+    if([scanner scanFloat:&value]&&scanner.isAtEnd){
+        return @(value);
+    }
+    return nil;
+}
+- (NSNumber *)numberOfDouble{
+    NSScanner *scanner = [[NSScanner alloc] initWithString:self];
+    double value;
+    if([scanner scanDouble:&value]&&scanner.isAtEnd){
+        return @(value);
+    }
+    return nil;
+}
+//判断字符字符是否是数字
+-(BOOL)isInputShouldNumber{
+    NSString *strValue = self;
+    if (strValue == nil || [strValue length] <= 0){
+        return NO;
+    }
+    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789."] invertedSet];
+    NSString *filtered = [[strValue componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+    if (![strValue isEqualToString:filtered]){
+        return NO;
+    }
+    return YES;
+}
+
+//判断字符字符是否是数字 0-9 （不包含小数点）
+-(BOOL)isInputShouldNumber0_9{
+    NSString *strValue = self;
+    if (strValue == nil || [strValue length] <= 0){
+        return NO;
+    }
+    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet];
+    NSString *filtered = [[strValue componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+    if (![strValue isEqualToString:filtered]){
+        return NO;
+    }
+    return YES;
+}
+#pragma mark - date
+- (NSDate *)dateWithFormat:(NSString *)format{
+    NSDate *date = [NSDate dateWithString:self dateFormat:format];
+    return date;
 }
 @end
