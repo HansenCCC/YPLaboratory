@@ -20,6 +20,10 @@
     [super awakeFromNib];
     // Initialization code
     self.textField.textAlignment = NSTextAlignmentRight;
+    WeakSelf
+    self.textField.whenDidEndEditing = ^(UITextField *textField) {
+        weakSelf.cellModel.value = textField.text;
+    };
 }
 
 - (void)setCellModel:(KKLabelModel *)cellModel{
@@ -43,7 +47,7 @@
         }];
     }
     if (cellModel.imageName.isValidURL) {
-//        [self.rightButton kk_setImageWithURL:cellModel.imageName.isValidURL placeholderImage:<#(UIImage *)#>];
+        [self.rightButton kk_setImageWithURL:cellModel.imageName placeholderImage:kPlaceholder1r1];
     }else{
         [self.rightButton setImage:UIImageWithName(cellModel.imageName) forState:UIControlStateNormal];
     }

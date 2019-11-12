@@ -25,23 +25,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7Z-te-nZq">
-                        <rect key="frame" x="469" y="41" width="30" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7Z-te-nZq">
+                        <rect key="frame" x="403.5" y="8" width="95.5" height="95.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="v7Z-te-nZq" secondAttribute="height" multiplier="1:1" id="zW6-NI-fuZ"/>
+                        </constraints>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrf-4B-pY9" customClass="KKTextField">
-                        <rect key="frame" x="311" y="0.0" width="150" height="111.5"/>
+                        <rect key="frame" x="245.5" y="0.0" width="150" height="111.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="hyQ-Eu-ZjN"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="v7Z-te-nZq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="O0G-wF-WVh"/>
                     <constraint firstItem="v7Z-te-nZq" firstAttribute="leading" secondItem="yrf-4B-pY9" secondAttribute="trailing" constant="8" id="RpR-Qj-lw2"/>
                     <constraint firstAttribute="trailing" secondItem="v7Z-te-nZq" secondAttribute="trailing" constant="15" id="ZB3-ss-D6M"/>
                     <constraint firstItem="Nga-GN-oIi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="dxY-6S-o9o"/>
                     <constraint firstAttribute="bottom" secondItem="yrf-4B-pY9" secondAttribute="bottom" id="hY4-Pn-iFU"/>
                     <constraint firstItem="yrf-4B-pY9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kdW-sk-KF4"/>
                     <constraint firstItem="Nga-GN-oIi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tgi-RI-PLP"/>
+                    <constraint firstAttribute="bottom" secondItem="v7Z-te-nZq" secondAttribute="bottom" constant="8" id="uXb-im-Zke"/>
                     <constraint firstItem="v7Z-te-nZq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vdn-B8-u7T"/>
                 </constraints>
             </tableViewCellContentView>
