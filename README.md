@@ -4,12 +4,11 @@
 iOS底层框架
 
 预览图1
+
 <img src="https://raw.githubusercontent.com/HersonIQ/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE1.png" width="200">
-<!--![Image text](https://raw.githubusercontent.com/HersonIQ/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE1.png)-->
-
 预览图2
-<!--![Image text](https://raw.githubusercontent.com/HersonIQ/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE2.png)-->
 
+<img src="https://raw.githubusercontent.com/HersonIQ/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE2.png" width="200">
 #### 软件架构
 软件架构说明
 
