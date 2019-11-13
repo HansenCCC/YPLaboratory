@@ -85,7 +85,7 @@
     NSRange range = [_mstring rangeOfString:@"\n"];
     while (range.location != NSNotFound) {
         NSString *substring = [_mstring substringWithRange:NSMakeRange(0, range.location)];
-        if (![strings containsObject:substring]) {
+        if (![strings containsObject:substring]&&substring.length > 0) {
             [strings addObject:substring];
         }
         [_mstring deleteCharactersInRange:NSMakeRange(0, range.location + range.length)];
