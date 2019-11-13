@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *value;//内容
 @property (strong, nonatomic) NSString *imageName;//图片资源
 @property (strong, nonatomic) NSString *placeholder;//占位符
+@property (strong, nonatomic) id info;//扩展
 
 - (instancetype)initWithTitle:(NSString *)title value:(NSString *)value;
 @end

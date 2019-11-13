@@ -198,6 +198,26 @@
 		3091741A237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30917416237B9FDE00010E99 /* KKAppIconPreviewViewController.xib */; };
 		3091741C237BD7E600010E99 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3091741B237BD7E600010E99 /* Contents.json */; };
 		3091741D237BD7E600010E99 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3091741B237BD7E600010E99 /* Contents.json */; };
+		30917422237BEA2400010E99 /* KKExamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917420237BEA2400010E99 /* KKExamListViewController.m */; };
+		30917423237BEA2400010E99 /* KKExamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917420237BEA2400010E99 /* KKExamListViewController.m */; };
+		30917424237BEA2400010E99 /* KKExamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30917421237BEA2400010E99 /* KKExamListViewController.xib */; };
+		30917425237BEA2400010E99 /* KKExamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30917421237BEA2400010E99 /* KKExamListViewController.xib */; };
+		3091742C237BEC9900010E99 /* 6作文.json in Resources */ = {isa = PBXBuildFile; fileRef = 30917426237BEC9900010E99 /* 6作文.json */; };
+		3091742D237BEC9900010E99 /* 6作文.json in Resources */ = {isa = PBXBuildFile; fileRef = 30917426237BEC9900010E99 /* 6作文.json */; };
+		3091742E237BEC9900010E99 /* 4完型.json in Resources */ = {isa = PBXBuildFile; fileRef = 30917427237BEC9900010E99 /* 4完型.json */; };
+		3091742F237BEC9900010E99 /* 4完型.json in Resources */ = {isa = PBXBuildFile; fileRef = 30917427237BEC9900010E99 /* 4完型.json */; };
+		30917430237BEC9900010E99 /* 2阅读.json in Resources */ = {isa = PBXBuildFile; fileRef = 30917428237BEC9900010E99 /* 2阅读.json */; };
+		30917431237BEC9900010E99 /* 2阅读.json in Resources */ = {isa = PBXBuildFile; fileRef = 30917428237BEC9900010E99 /* 2阅读.json */; };
+		30917432237BEC9900010E99 /* 1交际.json in Resources */ = {isa = PBXBuildFile; fileRef = 30917429237BEC9900010E99 /* 1交际.json */; };
+		30917433237BEC9900010E99 /* 1交际.json in Resources */ = {isa = PBXBuildFile; fileRef = 30917429237BEC9900010E99 /* 1交际.json */; };
+		30917434237BEC9900010E99 /* 3词汇.json in Resources */ = {isa = PBXBuildFile; fileRef = 3091742A237BEC9900010E99 /* 3词汇.json */; };
+		30917435237BEC9900010E99 /* 3词汇.json in Resources */ = {isa = PBXBuildFile; fileRef = 3091742A237BEC9900010E99 /* 3词汇.json */; };
+		30917436237BEC9900010E99 /* 5翻译.json in Resources */ = {isa = PBXBuildFile; fileRef = 3091742B237BEC9900010E99 /* 5翻译.json */; };
+		30917437237BEC9900010E99 /* 5翻译.json in Resources */ = {isa = PBXBuildFile; fileRef = 3091742B237BEC9900010E99 /* 5翻译.json */; };
+		3091743F237BF5E000010E99 /* KKExamSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091743D237BF5E000010E99 /* KKExamSearchViewController.m */; };
+		30917440237BF5E000010E99 /* KKExamSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091743D237BF5E000010E99 /* KKExamSearchViewController.m */; };
+		30917441237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3091743E237BF5E000010E99 /* KKExamSearchViewController.xib */; };
+		30917442237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3091743E237BF5E000010E99 /* KKExamSearchViewController.xib */; };
 		30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */; };
 		30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */; };
 		30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E20780237975AA00EE3E8E /* KKLabStudioViewController.m */; };
@@ -392,6 +412,18 @@
 		30917415237B9FDE00010E99 /* KKAppIconPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAppIconPreviewViewController.m; sourceTree = "<group>"; };
 		30917416237B9FDE00010E99 /* KKAppIconPreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKAppIconPreviewViewController.xib; sourceTree = "<group>"; };
 		3091741B237BD7E600010E99 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		3091741F237BEA2400010E99 /* KKExamListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKExamListViewController.h; sourceTree = "<group>"; };
+		30917420237BEA2400010E99 /* KKExamListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKExamListViewController.m; sourceTree = "<group>"; };
+		30917421237BEA2400010E99 /* KKExamListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKExamListViewController.xib; sourceTree = "<group>"; };
+		30917426237BEC9900010E99 /* 6作文.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "6作文.json"; sourceTree = "<group>"; };
+		30917427237BEC9900010E99 /* 4完型.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4完型.json"; sourceTree = "<group>"; };
+		30917428237BEC9900010E99 /* 2阅读.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "2阅读.json"; sourceTree = "<group>"; };
+		30917429237BEC9900010E99 /* 1交际.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1交际.json"; sourceTree = "<group>"; };
+		3091742A237BEC9900010E99 /* 3词汇.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "3词汇.json"; sourceTree = "<group>"; };
+		3091742B237BEC9900010E99 /* 5翻译.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "5翻译.json"; sourceTree = "<group>"; };
+		3091743C237BF5E000010E99 /* KKExamSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKExamSearchViewController.h; sourceTree = "<group>"; };
+		3091743D237BF5E000010E99 /* KKExamSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKExamSearchViewController.m; sourceTree = "<group>"; };
+		3091743E237BF5E000010E99 /* KKExamSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKExamSearchViewController.xib; sourceTree = "<group>"; };
 		30CEE7AD2334E8F6006CF794 /* KKCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCountdownButton.h; sourceTree = "<group>"; };
 		30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCountdownButton.m; sourceTree = "<group>"; };
 		30E2077F237975AA00EE3E8E /* KKLabStudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKLabStudioViewController.h; sourceTree = "<group>"; };
@@ -566,6 +598,7 @@
 			children = (
 				30E2077E2379758800EE3E8E /* 工作台 */,
 				30202FED2379618800F1AADA /* app图片制作 */,
+				3091741E237BE80000010E99 /* 英语专业考试 */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -592,7 +625,7 @@
 		30202FED2379618800F1AADA /* app图片制作 */ = {
 			isa = PBXGroup;
 			children = (
-				3091741B237BD7E600010E99 /* Contents.json */,
+				3091743B237BECCE00010E99 /* app图标制作资源 */,
 				30917404237AB37400010E99 /* KKAppIcon.h */,
 				30917405237AB37400010E99 /* KKAppIcon.m */,
 				30917409237AB8B300010E99 /* KKAppIconImageView.h */,
@@ -952,6 +985,41 @@
 			path = "cell(通用cell)";
 			sourceTree = "<group>";
 		};
+		3091741E237BE80000010E99 /* 英语专业考试 */ = {
+			isa = PBXGroup;
+			children = (
+				30917439237BECB100010E99 /* 专业考试资源 */,
+				3091741F237BEA2400010E99 /* KKExamListViewController.h */,
+				30917420237BEA2400010E99 /* KKExamListViewController.m */,
+				30917421237BEA2400010E99 /* KKExamListViewController.xib */,
+				3091743C237BF5E000010E99 /* KKExamSearchViewController.h */,
+				3091743D237BF5E000010E99 /* KKExamSearchViewController.m */,
+				3091743E237BF5E000010E99 /* KKExamSearchViewController.xib */,
+			);
+			path = "英语专业考试";
+			sourceTree = "<group>";
+		};
+		30917439237BECB100010E99 /* 专业考试资源 */ = {
+			isa = PBXGroup;
+			children = (
+				30917429237BEC9900010E99 /* 1交际.json */,
+				30917428237BEC9900010E99 /* 2阅读.json */,
+				3091742A237BEC9900010E99 /* 3词汇.json */,
+				30917427237BEC9900010E99 /* 4完型.json */,
+				3091742B237BEC9900010E99 /* 5翻译.json */,
+				30917426237BEC9900010E99 /* 6作文.json */,
+			);
+			name = "专业考试资源";
+			sourceTree = "<group>";
+		};
+		3091743B237BECCE00010E99 /* app图标制作资源 */ = {
+			isa = PBXGroup;
+			children = (
+				3091741B237BD7E600010E99 /* Contents.json */,
+			);
+			name = "app图标制作资源";
+			sourceTree = "<group>";
+		};
 		30CEE7AC2334E8F6006CF794 /* countdown */ = {
 			isa = PBXGroup;
 			children = (
@@ -1083,24 +1151,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				300CC09D237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */,
+				30917442237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */,
 				30202FF4237961AB00F1AADA /* KKAppIconMakerViewController.xib in Resources */,
 				30658A6D22CF265F0072CD24 /* KKCamera_img_camera.png in Resources */,
 				30036DB422B9D76B00605DF7 /* LaunchScreen.storyboard in Resources */,
 				30658A6922CF265F0072CD24 /* KKCameraTakePhoto@2x.png in Resources */,
 				30658A6722CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */,
+				30917425237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DB122B9D76B00605DF7 /* Assets.xcassets in Resources */,
+				3091742F237BEC9900010E99 /* 4完型.json in Resources */,
 				30658A6322CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */,
 				3091741A237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */,
+				30917435237BEC9900010E99 /* 3词汇.json in Resources */,
 				3091741D237BD7E600010E99 /* Contents.json in Resources */,
 				30658A6B22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
 				30202FE92379593600F1AADA /* KKUserViewController.xib in Resources */,
+				30917437237BEC9900010E99 /* 5翻译.json in Resources */,
 				30917403237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
 				30202FDF2379589D00F1AADA /* KKWorldViewController.xib in Resources */,
 				302897B222C46DEF000F2669 /* city.json in Resources */,
 				30036DAF22B9D76900605DF7 /* Main.storyboard in Resources */,
+				3091742D237BEC9900010E99 /* 6作文.json in Resources */,
 				30202FC6237936B400F1AADA /* index.html in Resources */,
+				30917433237BEC9900010E99 /* 1交际.json in Resources */,
 				309173FB237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE2237958D800F1AADA /* KKHomeViewController.xib in Resources */,
+				30917431237BEC9900010E99 /* 2阅读.json in Resources */,
 				30658A6522CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 				30E20785237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
@@ -1112,24 +1188,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				300CC09C237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */,
+				30917441237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */,
 				30202FF3237961AB00F1AADA /* KKAppIconMakerViewController.xib in Resources */,
 				30658A6C22CF265F0072CD24 /* KKCamera_img_camera.png in Resources */,
 				30036DC522B9DDC500605DF7 /* LaunchScreen.storyboard in Resources */,
 				30658A6822CF265F0072CD24 /* KKCameraTakePhoto@2x.png in Resources */,
 				30658A6622CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */,
+				30917424237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DC622B9DDC500605DF7 /* Assets.xcassets in Resources */,
+				3091742E237BEC9900010E99 /* 4完型.json in Resources */,
 				30658A6222CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */,
 				30917419237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */,
+				30917434237BEC9900010E99 /* 3词汇.json in Resources */,
 				3091741C237BD7E600010E99 /* Contents.json in Resources */,
 				30658A6A22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
 				30202FE82379593600F1AADA /* KKUserViewController.xib in Resources */,
+				30917436237BEC9900010E99 /* 5翻译.json in Resources */,
 				30917402237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
 				30202FDE2379589D00F1AADA /* KKWorldViewController.xib in Resources */,
 				302897B122C46DEF000F2669 /* city.json in Resources */,
 				30036DC722B9DDC500605DF7 /* Main.storyboard in Resources */,
+				3091742C237BEC9900010E99 /* 6作文.json in Resources */,
 				30202FC5237936B400F1AADA /* index.html in Resources */,
+				30917432237BEC9900010E99 /* 1交际.json in Resources */,
 				309173FA237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE1237958D800F1AADA /* KKHomeViewController.xib in Resources */,
+				30917430237BEC9900010E99 /* 2阅读.json in Resources */,
 				30658A6422CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6022CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 				30E20784237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
@@ -1229,8 +1313,10 @@
 				307C27EC23587A6000DB3ED6 /* KKUserInfoModel.m in Sources */,
 				302897B422C46DEF000F2669 /* KKDistrict.m in Sources */,
 				3028973C22C0C734000F2669 /* MBProgressHUD+KExtension.m in Sources */,
+				30917423237BEA2400010E99 /* KKExamListViewController.m in Sources */,
 				3077A33B22BA45A500372F07 /* NSData+KExtension.m in Sources */,
 				302897B622C46DEF000F2669 /* KKAddressPickerModel.m in Sources */,
+				30917440237BF5E000010E99 /* KKExamSearchViewController.m in Sources */,
 				30658A7922CF265F0072CD24 /* KKQRCodeView.m in Sources */,
 				302897B822C46DEF000F2669 /* KKCity.m in Sources */,
 				30658A7D22CF29580072CD24 /* UIImage+HVUI.m in Sources */,
@@ -1313,8 +1399,10 @@
 				307C27EB23587A6000DB3ED6 /* KKUserInfoModel.m in Sources */,
 				302897B322C46DEF000F2669 /* KKDistrict.m in Sources */,
 				3028973B22C0C734000F2669 /* MBProgressHUD+KExtension.m in Sources */,
+				30917422237BEA2400010E99 /* KKExamListViewController.m in Sources */,
 				3077A33A22BA45A500372F07 /* NSData+KExtension.m in Sources */,
 				302897B522C46DEF000F2669 /* KKAddressPickerModel.m in Sources */,
+				3091743F237BF5E000010E99 /* KKExamSearchViewController.m in Sources */,
 				30658A7822CF265F0072CD24 /* KKQRCodeView.m in Sources */,
 				302897B722C46DEF000F2669 /* KKCity.m in Sources */,
 				30658A7C22CF29580072CD24 /* UIImage+HVUI.m in Sources */,

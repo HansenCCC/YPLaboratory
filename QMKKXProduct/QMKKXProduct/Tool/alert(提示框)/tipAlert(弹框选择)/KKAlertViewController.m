@@ -32,6 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.contentView.backgroundColor = KKColor_FFFFFF;
+    self.view.backgroundColor = KKColor_FFFFFF;
     [self setupSubViews];
 }
 - (void)setupSubViews{
@@ -49,10 +50,10 @@
     [self.contentView addSubview:self.leftBtn];
     //
     self.rightBtn = [[UIButton alloc] init];
-    [self.rightBtn setTitleColor:KKColor_000000 forState:UIControlStateNormal];
+    [self.rightBtn setTitleColor:KKColor_FFFFFF forState:UIControlStateNormal];
     [self.rightBtn setTitle:@"确定" forState:UIControlStateNormal];
     [self.rightBtn addTarget:self action:@selector(whenRightClick:) forControlEvents:UIControlEventTouchUpInside];
-    self.rightBtn.backgroundColor = KKColor_FFE12F;
+    self.rightBtn.backgroundColor = KKColor_0000FF;
     self.rightBtn.titleLabel.font = AdaptedBoldFontSize(18.f);
     [self.contentView addSubview:self.rightBtn];
     //
@@ -96,26 +97,28 @@
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
     CGRect bounds = self.view.bounds;
+    CGFloat height = AdaptedWidth(50.f);
     //
     CGRect f1 = bounds;
     f1.size.width = bounds.size.width - 2 * AdaptedWidth(38.f);
     f1.origin.x = (bounds.size.width - f1.size.width)/2;
     //
-    CGRect f5 = bounds;
-    f5.size = [self.titleLabel sizeThatFits:CGSizeMake(f1.size.width - AdaptedWidth(20) * 2, 0)];
-    f5.size.height = MAX(AdaptedWidth(120.f), f5.size.height);
-    f5.size.width = f1.size.width - AdaptedWidth(20) * 2;
-    f5.origin.x = AdaptedWidth(20);
-    f5.origin.y = AdaptedWidth(44.f);
-    self.titleLabel.frame = f5;
-    //
     CGRect f6 = bounds;
     f6.size.width  = f1.size.width - AdaptedWidth(20) * 2;
-    f6.size.height  = AdaptedWidth(44.f);
+    BOOL flag = self.textLabel.text.length > 0;
+    f6.size.height  = flag?AdaptedWidth(44.f):AdaptedWidth(0.f);
     f6.origin.x = AdaptedWidth(20);
     self.textLabel.frame = f6;
     //
-    f1.size.height = f5.size.height + AdaptedWidth(44.f) + AdaptedWidth(44.f) + AdaptedWidth(14.f);
+    CGRect f5 = bounds;
+    f5.size = [self.titleLabel sizeThatFits:CGSizeMake(f1.size.width - AdaptedWidth(20) * 2, 0)];
+    f5.size.height = MAX(AdaptedWidth(120.f) + (flag?AdaptedWidth(0.f):AdaptedWidth(44.f)), f5.size.height);
+    f5.size.width = f1.size.width - AdaptedWidth(20) * 2;
+    f5.origin.x = AdaptedWidth(20);
+    f5.origin.y = CGRectGetMaxY(f6);
+    self.titleLabel.frame = f5;
+    //
+    f1.size.height = f5.size.height + (flag?AdaptedWidth(44.f):AdaptedWidth(0.f)) + AdaptedWidth(44.f) + AdaptedWidth(14.f);
     f1.origin.y = (bounds.size.height - f1.size.height)/2 - AdaptedWidth(20.f);
     self.contentView.frame = f1;
     //
@@ -127,7 +130,7 @@
     //
     CGRect f3 = bounds;
     f3.size.width = f1.size.width/2.0f;
-    f3.size.height = AdaptedWidth(44.f);
+    f3.size.height = height;
     f3.origin.y = f1.size.height - f3.size.height;
     self.leftBtn.frame = f3;
     //
@@ -148,7 +151,7 @@
     f7.origin.x = AdaptedWidth(0.f);
     self.markView.frame = f7;
     
-    self.contentView.layer.cornerRadius = AdaptedWidth(5.f);
+    self.contentView.layer.cornerRadius = AdaptedWidth(13.f);
     self.contentView.clipsToBounds = YES;
 }
 #pragma mark - set|get方法
@@ -209,6 +212,18 @@
 
 
 @implementation KKAlertViewController (ALLALERT)
+/**
+ 显示文本
+ */
++ (KKAlertViewController *)showLabelWithTitle:(NSString *)title complete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    KKAlertViewController *alert = [self allocWithTipText:title leftTitle:@"取消" rightTitle:@"打开" complete:whenCompleteBlock];
+    alert.isShowCloseButton = NO;
+    alert.canTouchBeginMove = YES;
+    UIViewController *vc = alert.view.topViewController;
+    [vc presentViewController:alert animated:YES completion:nil];
+    return alert;
+}
+
 /**
  显示充值成功效果
  */

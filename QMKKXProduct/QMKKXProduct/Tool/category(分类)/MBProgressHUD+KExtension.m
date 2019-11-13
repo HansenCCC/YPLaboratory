@@ -113,6 +113,10 @@
     MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow];
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:iconName]];
     hud.mode = MBProgressHUDModeCustomView;
+    hud.margin = AdaptedWidth(10.f);
+    hud.label.numberOfLines = 0;
+    hud.label.textColor = KKColor_FFFFFF;
+    hud.bezelView.backgroundColor = KKColor_000000;
     [hud hideAnimated:YES afterDelay:KUIProgressHUDAfterDelayTimer];
 }
 

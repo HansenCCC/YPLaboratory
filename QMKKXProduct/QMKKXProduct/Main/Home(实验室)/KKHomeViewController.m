@@ -9,8 +9,7 @@
 #import "KKHomeViewController.h"
 #import "KKLabStudioViewController.h"//工作台
 #import "KKAppIconMakerViewController.h"//App图标制作
-#import "KKLabelModel.h"
-#import "KKLabelTableViewCell.h"
+#import "KKExamListViewController.h"//英语专业考试
 
 @interface KKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -71,7 +70,7 @@
     }else if([cellModel.title isEqualToString:@"App图标制作"]){
         [self pushAppIconMakerViewController];
     }else if([cellModel.title isEqualToString:@"英语专业考试"]){
-        
+        [self pushExamListViewController];
     }else if([cellModel.title isEqualToString:@"网络图片下载"]){
         
     }else if([cellModel.title isEqualToString:@"API网络层"]){
@@ -95,6 +94,11 @@
 //跳转App制作图标
 - (void)pushAppIconMakerViewController{
     KKAppIconMakerViewController *vc = [[KKAppIconMakerViewController alloc] init];
+    [self pushViewController:vc animated:YES];
+}
+//跳转英语专业考试
+- (void)pushExamListViewController{
+    KKExamListViewController *vc = [[KKExamListViewController alloc] init];
     [self pushViewController:vc animated:YES];
 }
 @end

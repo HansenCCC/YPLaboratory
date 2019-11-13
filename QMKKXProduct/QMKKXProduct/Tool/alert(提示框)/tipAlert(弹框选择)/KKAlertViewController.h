@@ -57,6 +57,10 @@ typedef void(^KKAlertViewControllerBlock)(KKAlertViewController *controler ,NSIn
 
 
 @interface KKAlertViewController (ALLALERT)
+/**
+ 显示文本
+ */
++ (KKAlertViewController *)showLabelWithTitle:(NSString *)title complete:(KKAlertViewControllerBlock )whenCompleteBlock;
 
 
 /**
