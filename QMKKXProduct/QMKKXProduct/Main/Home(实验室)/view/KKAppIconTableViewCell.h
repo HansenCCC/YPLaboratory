@@ -10,10 +10,8 @@
 
 @interface KKAppIconTableViewCell : UITableViewCell
 @property (strong, nonatomic) KKLabelModel *cellModel;
-
 @property (weak, nonatomic) IBOutlet KKTextField *textField;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
-
 
 @end
 

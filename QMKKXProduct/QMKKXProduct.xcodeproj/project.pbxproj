@@ -192,6 +192,12 @@
 		3091740F237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091740D237ABB4B00010E99 /* KKAppIconLabelModel.m */; };
 		30917412237AD79900010E99 /* KKColorPickAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917411237AD79900010E99 /* KKColorPickAlert.m */; };
 		30917413237AD79900010E99 /* KKColorPickAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917411237AD79900010E99 /* KKColorPickAlert.m */; };
+		30917417237B9FDE00010E99 /* KKAppIconPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917415237B9FDE00010E99 /* KKAppIconPreviewViewController.m */; };
+		30917418237B9FDE00010E99 /* KKAppIconPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917415237B9FDE00010E99 /* KKAppIconPreviewViewController.m */; };
+		30917419237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30917416237B9FDE00010E99 /* KKAppIconPreviewViewController.xib */; };
+		3091741A237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30917416237B9FDE00010E99 /* KKAppIconPreviewViewController.xib */; };
+		3091741C237BD7E600010E99 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3091741B237BD7E600010E99 /* Contents.json */; };
+		3091741D237BD7E600010E99 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3091741B237BD7E600010E99 /* Contents.json */; };
 		30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */; };
 		30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */; };
 		30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E20780237975AA00EE3E8E /* KKLabStudioViewController.m */; };
@@ -382,6 +388,10 @@
 		3091740D237ABB4B00010E99 /* KKAppIconLabelModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAppIconLabelModel.m; sourceTree = "<group>"; };
 		30917410237AD79900010E99 /* KKColorPickAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKColorPickAlert.h; sourceTree = "<group>"; };
 		30917411237AD79900010E99 /* KKColorPickAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKColorPickAlert.m; sourceTree = "<group>"; };
+		30917414237B9FDE00010E99 /* KKAppIconPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAppIconPreviewViewController.h; sourceTree = "<group>"; };
+		30917415237B9FDE00010E99 /* KKAppIconPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAppIconPreviewViewController.m; sourceTree = "<group>"; };
+		30917416237B9FDE00010E99 /* KKAppIconPreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKAppIconPreviewViewController.xib; sourceTree = "<group>"; };
+		3091741B237BD7E600010E99 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		30CEE7AD2334E8F6006CF794 /* KKCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCountdownButton.h; sourceTree = "<group>"; };
 		30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCountdownButton.m; sourceTree = "<group>"; };
 		30E2077F237975AA00EE3E8E /* KKLabStudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKLabStudioViewController.h; sourceTree = "<group>"; };
@@ -582,6 +592,7 @@
 		30202FED2379618800F1AADA /* app图片制作 */ = {
 			isa = PBXGroup;
 			children = (
+				3091741B237BD7E600010E99 /* Contents.json */,
 				30917404237AB37400010E99 /* KKAppIcon.h */,
 				30917405237AB37400010E99 /* KKAppIcon.m */,
 				30917409237AB8B300010E99 /* KKAppIconImageView.h */,
@@ -589,6 +600,9 @@
 				30202FEE237961AB00F1AADA /* KKAppIconMakerViewController.h */,
 				30202FEF237961AB00F1AADA /* KKAppIconMakerViewController.m */,
 				30202FF0237961AB00F1AADA /* KKAppIconMakerViewController.xib */,
+				30917414237B9FDE00010E99 /* KKAppIconPreviewViewController.h */,
+				30917415237B9FDE00010E99 /* KKAppIconPreviewViewController.m */,
+				30917416237B9FDE00010E99 /* KKAppIconPreviewViewController.xib */,
 			);
 			path = "app图片制作";
 			sourceTree = "<group>";
@@ -1076,6 +1090,8 @@
 				30658A6722CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */,
 				30036DB122B9D76B00605DF7 /* Assets.xcassets in Resources */,
 				30658A6322CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */,
+				3091741A237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */,
+				3091741D237BD7E600010E99 /* Contents.json in Resources */,
 				30658A6B22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
 				30202FE92379593600F1AADA /* KKUserViewController.xib in Resources */,
 				30917403237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
@@ -1103,6 +1119,8 @@
 				30658A6622CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */,
 				30036DC622B9DDC500605DF7 /* Assets.xcassets in Resources */,
 				30658A6222CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */,
+				30917419237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */,
+				3091741C237BD7E600010E99 /* Contents.json in Resources */,
 				30658A6A22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
 				30202FE82379593600F1AADA /* KKUserViewController.xib in Resources */,
 				30917402237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
@@ -1227,6 +1245,7 @@
 				3028979A22C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				30E20783237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
 				3077A34822BB303500372F07 /* UIImageView+KExtension.m in Sources */,
+				30917418237B9FDE00010E99 /* KKAppIconPreviewViewController.m in Sources */,
 				30917413237AD79900010E99 /* KKColorPickAlert.m in Sources */,
 				30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */,
 				3077A35022BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
@@ -1310,6 +1329,7 @@
 				3028979922C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
 				3077A34722BB303500372F07 /* UIImageView+KExtension.m in Sources */,
+				30917417237B9FDE00010E99 /* KKAppIconPreviewViewController.m in Sources */,
 				30917412237AD79900010E99 /* KKColorPickAlert.m in Sources */,
 				30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */,
 				3077A34F22BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,

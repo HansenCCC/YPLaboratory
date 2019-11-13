@@ -12,6 +12,7 @@
 #import "KKAppIconTableViewCell.h"
 #import "KKAppIconLabelModel.h"
 #import "KKAppIconImageView.h"
+#import "KKAppIconPreviewViewController.h"
 
 @interface KKAppIconMakerViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -109,7 +110,10 @@
     });
 }
 - (void)mainQueueTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //结束编辑
+    [self.view endEditing:YES];
     //取消选中状态
+    WeakSelf
     KKLabelModel *cellModel = self.datas[indexPath.row];
     if ([cellModel.title isEqualToString:@"App图标"]) {
         //选择图片
@@ -123,12 +127,26 @@
         NSInteger index = [items indexOfObject:self.appTitleColorModel.value];
         KKColorPickAlert *alert = [[KKColorPickAlert alloc] initWithTitles:items];
         alert.index = index;
+        alert.confirmBlock = ^(NSInteger index) {
+            weakSelf.appTitleColorModel.value = items[index];
+            [weakSelf.tableView reloadData];
+            //储存betaColor记录
+            [KKUser shareInstance].userModel.betaColor = items[index];
+            [[KKUser shareInstance] saveUserModel];
+        };
         [self presentViewController:alert animated:NO completion:nil];
     }else if([cellModel.title isEqualToString:@"Beta背景颜色"]){
         NSArray *items = [UIColor commonColors].allKeys;
         NSInteger index = [items indexOfObject:self.appTitleBackgroundModel.value];
         KKColorPickAlert *alert = [[KKColorPickAlert alloc] initWithTitles:items];
         alert.index = index;
+        alert.confirmBlock = ^(NSInteger index) {
+            weakSelf.appTitleBackgroundModel.value = items[index];
+            [weakSelf.tableView reloadData];
+            //储存betaColor记录
+            [KKUser shareInstance].userModel.betaBackgroundColor = items[index];
+            [[KKUser shareInstance] saveUserModel];
+        };
         [self presentViewController:alert animated:NO completion:nil];
     }else if([cellModel.title isEqualToString:@"添加Beta"]){
         //图片添加beta
@@ -141,6 +159,7 @@
         [self.tableView reloadData];
     }else if([cellModel.title isEqualToString:@"制作App图标"]){
         //制作App图标
+        [self pushAppIconPreviewViewController];
     }
 }
 
@@ -167,5 +186,13 @@
         [[KKUser shareInstance] saveUserModel];
     }]];
     [self presentViewController:alert animated:YES completion:nil];
+}
+//跳转制作图标页面，并预览图
+- (void)pushAppIconPreviewViewController{
+    UIImage *iconImage = self.appIconModel.iconImage;
+    NSString *iconPath = self.appIconModel.filePath?:@"";
+    KKAppIconPreviewViewController *vc = [[KKAppIconPreviewViewController alloc] initWithIconImage:iconImage];
+    vc.iconPath = iconPath;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

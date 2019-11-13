@@ -78,10 +78,6 @@
         
     }else if([cellModel.title isEqualToString:@"快速开发定制试图"]){
         
-    }else if([cellModel.title isEqualToString:@""]){
-        
-    }else if([cellModel.title isEqualToString:@""]){
-        
     }
 }
 #pragma mark - aciton
