@@ -30,6 +30,10 @@
 		3015A05A237D33390086B39D /* KKUIUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015A057237D33390086B39D /* KKUIUnitViewController.m */; };
 		3015A05B237D33390086B39D /* KKUIUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3015A058237D33390086B39D /* KKUIUnitViewController.xib */; };
 		3015A05C237D33390086B39D /* KKUIUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3015A058237D33390086B39D /* KKUIUnitViewController.xib */; };
+		3015A060237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015A05E237D3D3C0086B39D /* KKAppInstallViewController.m */; };
+		3015A061237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015A05E237D3D3C0086B39D /* KKAppInstallViewController.m */; };
+		3015A062237D3D3C0086B39D /* KKAppInstallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3015A05F237D3D3C0086B39D /* KKAppInstallViewController.xib */; };
+		3015A063237D3D3C0086B39D /* KKAppInstallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3015A05F237D3D3C0086B39D /* KKAppInstallViewController.xib */; };
 		30202FC22379362800F1AADA /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC12379362800F1AADA /* KKNavigationController.m */; };
 		30202FC32379362800F1AADA /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC12379362800F1AADA /* KKNavigationController.m */; };
 		30202FC5237936B400F1AADA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 30202FC4237936B400F1AADA /* index.html */; };
@@ -261,6 +265,9 @@
 		3015A056237D33390086B39D /* KKUIUnitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKUIUnitViewController.h; sourceTree = "<group>"; };
 		3015A057237D33390086B39D /* KKUIUnitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKUIUnitViewController.m; sourceTree = "<group>"; };
 		3015A058237D33390086B39D /* KKUIUnitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKUIUnitViewController.xib; sourceTree = "<group>"; };
+		3015A05D237D3D3C0086B39D /* KKAppInstallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAppInstallViewController.h; sourceTree = "<group>"; };
+		3015A05E237D3D3C0086B39D /* KKAppInstallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAppInstallViewController.m; sourceTree = "<group>"; };
+		3015A05F237D3D3C0086B39D /* KKAppInstallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKAppInstallViewController.xib; sourceTree = "<group>"; };
 		30202FC02379362800F1AADA /* KKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNavigationController.h; sourceTree = "<group>"; };
 		30202FC12379362800F1AADA /* KKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
 		30202FC4237936B400F1AADA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -586,6 +593,9 @@
 		3015A054237D32490086B39D /* Apple安装协议 */ = {
 			isa = PBXGroup;
 			children = (
+				3015A05D237D3D3C0086B39D /* KKAppInstallViewController.h */,
+				3015A05E237D3D3C0086B39D /* KKAppInstallViewController.m */,
+				3015A05F237D3D3C0086B39D /* KKAppInstallViewController.xib */,
 			);
 			path = "Apple安装协议";
 			sourceTree = "<group>";
@@ -1249,6 +1259,7 @@
 				3091741A237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */,
 				30917435237BEC9900010E99 /* 3词汇.json in Resources */,
 				3091741D237BD7E600010E99 /* Contents.json in Resources */,
+				3015A063237D3D3C0086B39D /* KKAppInstallViewController.xib in Resources */,
 				30658A6B22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
 				30202FE92379593600F1AADA /* KKUserViewController.xib in Resources */,
 				30917437237BEC9900010E99 /* 5翻译.json in Resources */,
@@ -1288,6 +1299,7 @@
 				30917419237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */,
 				30917434237BEC9900010E99 /* 3词汇.json in Resources */,
 				3091741C237BD7E600010E99 /* Contents.json in Resources */,
+				3015A062237D3D3C0086B39D /* KKAppInstallViewController.xib in Resources */,
 				30658A6A22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
 				30202FE82379593600F1AADA /* KKUserViewController.xib in Resources */,
 				30917436237BEC9900010E99 /* 5翻译.json in Resources */,
@@ -1458,6 +1470,7 @@
 				302897AA22C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
 				302897C022C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
 				30917449237C277E00010E99 /* KKSDWebViewController.m in Sources */,
+				3015A061237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
 				302897C422C46DEF000F2669 /* KKTextView.m in Sources */,
 				30658A7122CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
 				3091740F237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */,
@@ -1546,6 +1559,7 @@
 				302897A922C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
 				302897BF22C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
 				30917448237C277E00010E99 /* KKSDWebViewController.m in Sources */,
+				3015A060237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
 				302897C322C46DEF000F2669 /* KKTextView.m in Sources */,
 				30658A7022CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
 				3091740E237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */,

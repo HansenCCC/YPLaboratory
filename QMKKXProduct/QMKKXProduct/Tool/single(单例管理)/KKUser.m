@@ -146,12 +146,12 @@ static NSString *kNSUserDefaultsStartImg = @"kNSUserDefaultsStartImg";//启动�
 }
 //打开这款游戏 SenTL+pid 例如 SenTL1382
 - (BOOL)openGameByGameId:(NSString*)gameId{
-    NSString *string = [NSString stringWithFormat:@"SenTL%@://",gameId];
+    NSString *string = [NSString stringWithFormat:@"qmkkx%@://",gameId];
     return [self openURL:string.toURL];
 }
 //是否安装这款游戏
 - (BOOL)canOpenGameByGameid:(NSString *)gameId{
-    NSString *string = [NSString stringWithFormat:@"SenTL%@://",gameId];
+    NSString *string = [NSString stringWithFormat:@"qmkkx%@://",gameId];
     return [self canOpenURL:string.toURL];
 }
 @end
