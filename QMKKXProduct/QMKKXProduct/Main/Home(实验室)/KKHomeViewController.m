@@ -11,6 +11,7 @@
 #import "KKAppIconMakerViewController.h"//App图标制作
 #import "KKExamListViewController.h"//英语专业考试
 #import "KKSDWebViewController.h"//网络图片下载
+#import "KKUIUnitViewController.h"//ui组件
 
 @interface KKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -40,7 +41,6 @@
     KKLabelModel *s1m5 = [[KKLabelModel alloc] initWithTitle:@"API网络层" value:nil];
     s1m5.isEnabled = NO;
     KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"ui组件" value:nil];
-    s1m6.isEnabled = NO;
     KKLabelModel *s1m7 = [[KKLabelModel alloc] initWithTitle:@"C语言绘图(Core Graphics)" value:nil];
     s1m7.isEnabled = NO;
     KKLabelModel *s1m8 = [[KKLabelModel alloc] initWithTitle:@"OC语言绘图(UIBezierPath)" value:nil];
@@ -87,7 +87,7 @@
     }else if([cellModel.title isEqualToString:@"API网络层"]){
         
     }else if([cellModel.title isEqualToString:@"ui组件"]){
-        
+        [self pushUIUnitViewController];
     }
 }
 #pragma mark - aciton
@@ -115,6 +115,10 @@
 //网络图片下载
 - (void)pushSDWebViewController{
     KKSDWebViewController *vc = [[KKSDWebViewController alloc] init];
+    [self pushViewController:vc animated:YES];
+}
+- (void)pushUIUnitViewController{
+    KKUIUnitViewController *vc = [[KKUIUnitViewController alloc] init];
     [self pushViewController:vc animated:YES];
 }
 @end

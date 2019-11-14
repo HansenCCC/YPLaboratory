@@ -26,6 +26,10 @@
 		300CC09B237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 300CC098237A5C5C00983BD1 /* KKLabelTableViewCell.m */; };
 		300CC09C237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */; };
 		300CC09D237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */; };
+		3015A059237D33390086B39D /* KKUIUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015A057237D33390086B39D /* KKUIUnitViewController.m */; };
+		3015A05A237D33390086B39D /* KKUIUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015A057237D33390086B39D /* KKUIUnitViewController.m */; };
+		3015A05B237D33390086B39D /* KKUIUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3015A058237D33390086B39D /* KKUIUnitViewController.xib */; };
+		3015A05C237D33390086B39D /* KKUIUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3015A058237D33390086B39D /* KKUIUnitViewController.xib */; };
 		30202FC22379362800F1AADA /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC12379362800F1AADA /* KKNavigationController.m */; };
 		30202FC32379362800F1AADA /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30202FC12379362800F1AADA /* KKNavigationController.m */; };
 		30202FC5237936B400F1AADA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 30202FC4237936B400F1AADA /* index.html */; };
@@ -254,6 +258,9 @@
 		300CC097237A5C5C00983BD1 /* KKLabelTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKLabelTableViewCell.h; sourceTree = "<group>"; };
 		300CC098237A5C5C00983BD1 /* KKLabelTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKLabelTableViewCell.m; sourceTree = "<group>"; };
 		300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKLabelTableViewCell.xib; sourceTree = "<group>"; };
+		3015A056237D33390086B39D /* KKUIUnitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKUIUnitViewController.h; sourceTree = "<group>"; };
+		3015A057237D33390086B39D /* KKUIUnitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKUIUnitViewController.m; sourceTree = "<group>"; };
+		3015A058237D33390086B39D /* KKUIUnitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKUIUnitViewController.xib; sourceTree = "<group>"; };
 		30202FC02379362800F1AADA /* KKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNavigationController.h; sourceTree = "<group>"; };
 		30202FC12379362800F1AADA /* KKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
 		30202FC4237936B400F1AADA /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -538,6 +545,58 @@
 			path = Macros;
 			sourceTree = "<group>";
 		};
+		3015A04F237D31C00086B39D /* ui组件 */ = {
+			isa = PBXGroup;
+			children = (
+				3015A056237D33390086B39D /* KKUIUnitViewController.h */,
+				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
+				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
+			);
+			path = "ui组件";
+			sourceTree = "<group>";
+		};
+		3015A050237D31D80086B39D /* API网络层 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "API网络层";
+			sourceTree = "<group>";
+		};
+		3015A051237D31E50086B39D /* C语言绘图(Core Graphics) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "C语言绘图(Core Graphics)";
+			sourceTree = "<group>";
+		};
+		3015A052237D32140086B39D /* OC语言绘图(UIBezierPath) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "OC语言绘图(UIBezierPath)";
+			sourceTree = "<group>";
+		};
+		3015A053237D32230086B39D /* k线应用 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "k线应用";
+			sourceTree = "<group>";
+		};
+		3015A054237D32490086B39D /* Apple安装协议 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Apple安装协议";
+			sourceTree = "<group>";
+		};
+		3015A055237D32530086B39D /* Apple打开其他App协议 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Apple打开其他App协议";
+			sourceTree = "<group>";
+		};
 		30202FC723793C0000F1AADA /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,6 +666,13 @@
 				30202FED2379618800F1AADA /* app图片制作 */,
 				3091741E237BE80000010E99 /* 英语专业考试 */,
 				30917444237C26C900010E99 /* 网络图片下载 */,
+				3015A050237D31D80086B39D /* API网络层 */,
+				3015A04F237D31C00086B39D /* ui组件 */,
+				3015A051237D31E50086B39D /* C语言绘图(Core Graphics) */,
+				3015A052237D32140086B39D /* OC语言绘图(UIBezierPath) */,
+				3015A053237D32230086B39D /* k线应用 */,
+				3015A054237D32490086B39D /* Apple安装协议 */,
+				3015A055237D32530086B39D /* Apple打开其他App协议 */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1198,6 +1264,7 @@
 				30917431237BEC9900010E99 /* 2阅读.json in Resources */,
 				30658A6522CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
+				3015A05C237D33390086B39D /* KKUIUnitViewController.xib in Resources */,
 				30E20785237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1236,6 +1303,7 @@
 				30917430237BEC9900010E99 /* 2阅读.json in Resources */,
 				30658A6422CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6022CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
+				3015A05B237D33390086B39D /* KKUIUnitViewController.xib in Resources */,
 				30E20784237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1350,6 +1418,7 @@
 				307C27F123587AAD00DB3ED6 /* KKNotification.m in Sources */,
 				3028979A22C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				30E20783237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
+				3015A05A237D33390086B39D /* KKUIUnitViewController.m in Sources */,
 				3077A34822BB303500372F07 /* UIImageView+KExtension.m in Sources */,
 				30917418237B9FDE00010E99 /* KKAppIconPreviewViewController.m in Sources */,
 				30917413237AD79900010E99 /* KKColorPickAlert.m in Sources */,
@@ -1437,6 +1506,7 @@
 				307C27F023587AAD00DB3ED6 /* KKNotification.m in Sources */,
 				3028979922C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
+				3015A059237D33390086B39D /* KKUIUnitViewController.m in Sources */,
 				3077A34722BB303500372F07 /* UIImageView+KExtension.m in Sources */,
 				30917417237B9FDE00010E99 /* KKAppIconPreviewViewController.m in Sources */,
 				30917412237AD79900010E99 /* KKColorPickAlert.m in Sources */,
