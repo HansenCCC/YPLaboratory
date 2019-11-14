@@ -40,16 +40,17 @@
     KKLabelModel *s1m4 = [[KKLabelModel alloc] initWithTitle:@"网络图片下载" value:nil];
     KKLabelModel *s1m5 = [[KKLabelModel alloc] initWithTitle:@"API网络层" value:nil];
     s1m5.isEnabled = NO;
-    KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"ui组件" value:nil];
+    KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"UI组件" value:nil];
     KKLabelModel *s1m7 = [[KKLabelModel alloc] initWithTitle:@"C语言绘图(Core Graphics)" value:nil];
     s1m7.isEnabled = NO;
     KKLabelModel *s1m8 = [[KKLabelModel alloc] initWithTitle:@"OC语言绘图(UIBezierPath)" value:nil];
     s1m8.isEnabled = NO;
-    KKLabelModel *s1m9 = [[KKLabelModel alloc] initWithTitle:@"k线应用" value:nil];
+    KKLabelModel *s1m9 = [[KKLabelModel alloc] initWithTitle:@"K线应用" value:nil];
     s1m9.isEnabled = NO;
     KKLabelModel *s1m10 = [[KKLabelModel alloc] initWithTitle:@"Apple安装协议" value:nil];
     KKLabelModel *s1m11 = [[KKLabelModel alloc] initWithTitle:@"Apple打开其他App协议" value:nil];
-    [self.datas addObjectsFromArray:@[s1m1,s1m2,s1m3,s1m4,s1m5,s1m6,s1m7,s1m8,s1m9,s1m10,s1m11]];
+    KKLabelModel *s1m12 = [[KKLabelModel alloc] initWithTitle:@"Xcode自定义文件模板" value:nil];
+    [self.datas addObjectsFromArray:@[s1m1,s1m2,s1m3,s1m4,s1m5,s1m6,s1m7,s1m8,s1m9,s1m10,s1m11,s1m12]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
@@ -86,8 +87,20 @@
         [self pushSDWebViewController];
     }else if([cellModel.title isEqualToString:@"API网络层"]){
         
-    }else if([cellModel.title isEqualToString:@"ui组件"]){
+    }else if([cellModel.title isEqualToString:@"UI组件"]){
         [self pushUIUnitViewController];
+    }else if([cellModel.title isEqualToString:@"C语言绘图(Core Graphics)"]){
+        
+    }else if([cellModel.title isEqualToString:@"OC语言绘图(UIBezierPath)"]){
+        
+    }else if([cellModel.title isEqualToString:@"K线应用"]){
+        
+    }else if([cellModel.title isEqualToString:@"Apple安装协议"]){
+        
+    }else if([cellModel.title isEqualToString:@"Apple打开其他App协议"]){
+        
+    }else if([cellModel.title isEqualToString:@"Xcode自定义文件模板"]){
+        
     }
 }
 #pragma mark - aciton
@@ -117,6 +130,7 @@
     KKSDWebViewController *vc = [[KKSDWebViewController alloc] init];
     [self pushViewController:vc animated:YES];
 }
+//ui组件
 - (void)pushUIUnitViewController{
     KKUIUnitViewController *vc = [[KKUIUnitViewController alloc] init];
     [self pushViewController:vc animated:YES];

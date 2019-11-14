@@ -53,10 +53,14 @@
             make.right.equalTo(self.contentView).offset(-15.f);
         }];
     }
-    if (cellModel.imageName.isValidURL) {
-        [self.rightButton kk_setImageWithURL:cellModel.imageName placeholderImage:kPlaceholder1r1];
+    if (cellModel.imageName.length > 0) {
+        if (cellModel.imageName.isValidURL) {
+            [self.rightButton kk_setImageWithURL:cellModel.imageName placeholderImage:kPlaceholder1r1];
+        }else{
+            [self.rightButton setImage:UIImageWithName(cellModel.imageName) forState:UIControlStateNormal];
+        }
     }else{
-        [self.rightButton setImage:UIImageWithName(cellModel.imageName) forState:UIControlStateNormal];
+        [self.rightButton setImage:nil forState:UIControlStateNormal];
     }
 }
 @end
