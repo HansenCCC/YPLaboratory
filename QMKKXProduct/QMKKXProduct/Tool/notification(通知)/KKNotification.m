@@ -18,4 +18,4 @@ NSString *const kNSNotificationCenterFailedRegister = @"kNSNotificationCenterFai
 NSString *const kNSNotificationCenterUserInfoUpdate = @"kNSNotificationCenterUserInfoUpdate";//用户信息更新
 
 
-NSString *const kNSNotificationCenterBeePlayAuthLogin = @"kNSNotificationCenterBeePlayAuthLogin";//唤起授权界面
+NSString *const kNSNotificationCenterQMKKXAuthLogin = @"kNSNotificationCenterQMKKXAuthLogin";//唤起QMKKX授权界面

@@ -48,10 +48,10 @@
 
 //第三方传值或登录
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
-    //跳转授权页面
     NSString *urlStr = url.absoluteString;
-    if ([urlStr.lowercaseString containsString:kBeePlayAuthLogin.lowercaseString]) {
-        [[KKUser shareInstance] postNotificationToBeePlayAuthLogin:urlStr];
+    if([urlStr.lowercaseString containsString:kQMKKXAuthLogin.lowercaseString]){
+        //qmkkx跳转授权页面
+        [[KKUser shareInstance] postNotificationToQMKKXAuthLogin:urlStr];
         return YES;
     }
     return YES;

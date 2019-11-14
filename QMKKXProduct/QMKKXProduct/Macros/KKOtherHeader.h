@@ -109,6 +109,6 @@ return __singleton__; \
 #define kPlaceholder1r1 UIImageWithName(@"kk_icon_1r1Placeholder")
 #define kPlaceholder2r1 UIImageWithName(@"kk_icon_2r1Placeholder")
 
-#define kBeePlayAuthLogin @"beeplay://BeeAuthLogin?"//beeplay://BeeAuthLogin
+#define kQMKKXAuthLogin @"chsqmkkx://QMKKXAuthLogin?"//chsqmkkx://QMKKXAuthLogin
 
 #endif /* KKOtherHeader_h */

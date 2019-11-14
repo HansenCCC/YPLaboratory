@@ -600,13 +600,6 @@
 			path = "Apple安装协议";
 			sourceTree = "<group>";
 		};
-		3015A055237D32530086B39D /* Apple打开其他App协议 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Apple打开其他App协议";
-			sourceTree = "<group>";
-		};
 		30202FC723793C0000F1AADA /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -682,7 +675,6 @@
 				3015A052237D32140086B39D /* OC语言绘图(UIBezierPath) */,
 				3015A053237D32230086B39D /* k线应用 */,
 				3015A054237D32490086B39D /* Apple安装协议 */,
-				3015A055237D32530086B39D /* Apple打开其他App协议 */,
 			);
 			path = controller;
 			sourceTree = "<group>";

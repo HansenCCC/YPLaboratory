@@ -21,7 +21,7 @@
     self.titleLabel.adjustsFontSizeToFitWidth = YES;
 }
 - (IBAction)whenAcitonXib:(UIButton *)sender {
-    NSString *urlString = @"chsqmkkx://";
+    NSString *urlString = @"chsqmkkx://QMKKXAuthLogin?";
     NSURL *url = [NSURL URLWithString:urlString];
     if ([[UIApplication sharedApplication] canOpenURL:url]) {
         self.titleLabel.text = @"k k";

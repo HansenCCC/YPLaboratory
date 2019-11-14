@@ -41,8 +41,8 @@
 - (void)postNotificationToFailedRegister;
 //发送资料修改通知
 - (void)postNotificationToUserInfoUpdate;
-//发送bee唤起授权界面
-- (void)postNotificationToBeePlayAuthLogin:(NSString *)info;
+//发送qmkkx唤起授权界面
+- (void)postNotificationToQMKKXAuthLogin:(NSString *)info;
 
 #pragma mark - config
 //获取配置（退出登录和重新登录需要重新请求）

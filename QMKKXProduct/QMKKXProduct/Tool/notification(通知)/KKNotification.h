@@ -15,5 +15,4 @@ extern NSString *const kNSNotificationCenterFailedRegister;// 注册失败
 extern NSString *const kNSNotificationCenterUserInfoUpdate;//用户信息更新
 
 
-extern NSString *const kNSNotificationCenterBeePlayAuthLogin;//唤起授权界面
-
+extern NSString *const kNSNotificationCenterQMKKXAuthLogin;//唤起QMKKX授权界面

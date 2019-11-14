@@ -102,9 +102,9 @@ static NSString *kNSUserDefaultsStartImg = @"kNSUserDefaultsStartImg";//启动�
 - (void)postNotificationToUserInfoUpdate{
     [[NSNotificationCenter defaultCenter] postNotificationName:kNSNotificationCenterUserInfoUpdate object:nil];
 }
-//发送bee唤起授权界面
-- (void)postNotificationToBeePlayAuthLogin:(NSString *)info{
-    [[NSNotificationCenter defaultCenter] postNotificationName:kNSNotificationCenterBeePlayAuthLogin object:info];
+//发送qmkkx唤起授权界面
+- (void)postNotificationToQMKKXAuthLogin:(NSString *)info{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNSNotificationCenterQMKKXAuthLogin object:info];
 }
 #pragma mark - config
 //获取配置（退出登录和重新登录需要重新请求）

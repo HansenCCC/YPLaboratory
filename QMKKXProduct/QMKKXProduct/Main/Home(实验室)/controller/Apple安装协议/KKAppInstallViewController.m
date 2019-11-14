@@ -30,7 +30,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"Apple安装协议";
-    UIBarButtonItem *installItem = [[UIBarButtonItem alloc] initWithTitle:@"安装" style:UIBarButtonItemStylePlain target:self action:@selector(__onInstallButtonDidTap:)];
+    BOOL flag = [[KKUser shareInstance] canOpenGameByGameid:@"0"];
+    NSString *rightString = flag?@"打开":@"安装";
+    UIBarButtonItem *installItem = [[UIBarButtonItem alloc] initWithTitle:rightString style:UIBarButtonItemStylePlain target:self action:@selector(__onInstallButtonDidTap:)];
     self.navigationItem.rightBarButtonItem = installItem;
     //
     NSString *urlString = QMKKXAppInstallTest0installURL;
@@ -41,17 +43,21 @@
 #endif
     NSString *version = [KKUser shareInstance].version;
     NSDate *time = [NSDate date];
-    self.titleLabel.text = [NSString stringWithFormat:@"检测当前设备为%@\n\n\n当前App版本：%@\n\n\n当前时间：%@\n\n\n安装协议：%@\n",device,version,time,urlString];
+    NSString *installString = flag?@"检测已经安装QMKKXAppInstallTest0\n点击右上角，即打开":@"检测未安装QMKKXAppInstallTest0\n点击右上角，即安装";
+    self.titleLabel.text = [NSString stringWithFormat:@"检测当前设备为%@\n\n\n当前App版本：%@\n\n\n当前时间：%@\n\n\n安装协议：%@\n\n\n%@",device,version,time,urlString,installString];
 }
 - (void)__onInstallButtonDidTap:(id)sender{
-    //to do
+    if ([[KKUser shareInstance] canOpenGameByGameid:@"0"]) {
+        [[KKUser shareInstance] openGameByGameId:@"0"];
+    }else{
 #if TARGET_IPHONE_SIMULATOR
-    //模拟器
-    [self showError:@"请使用真机安装!"];
+        //模拟器
+        [self showError:@"请使用真机安装!"];
 #elif TARGET_OS_IPHONE
-    //真机
-    NSString *urlString = QMKKXAppInstallTest0installURL;
-    [[KKUser shareInstance] openURL:urlString.toURL];
+        //真机
+        NSString *urlString = QMKKXAppInstallTest0installURL;
+        [[KKUser shareInstance] openURL:urlString.toURL];
 #endif
+    }
 }
 @end

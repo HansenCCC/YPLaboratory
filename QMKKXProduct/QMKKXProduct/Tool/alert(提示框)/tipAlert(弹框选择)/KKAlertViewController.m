@@ -219,6 +219,8 @@
     KKAlertViewController *alert = [self allocWithTipText:title leftTitle:@"取消" rightTitle:@"打开" complete:whenCompleteBlock];
     alert.isShowCloseButton = NO;
     alert.canTouchBeginMove = YES;
+    alert.isOnlyOneButton = YES;
+    alert.rightBtn.hidden = YES;
     UIViewController *vc = alert.view.topViewController;
     [vc presentViewController:alert animated:YES completion:nil];
     return alert;

@@ -84,15 +84,19 @@
 #pragma mark - notification
 - (void)addObserverNotification{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(whenNeedLogin:) name:kNSNotificationCenterLogging object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(whenNeedBeePlayAuthLogin:) name:kNSNotificationCenterBeePlayAuthLogin object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(whenNeedQMKKXAuthLogin:) name:kNSNotificationCenterQMKKXAuthLogin object:nil];
 }
 //唤起登录注册界面
 - (void)whenNeedLogin:(NSNotification *)info{
     //to do
 }
 //bee唤起授权界面
-- (void)whenNeedBeePlayAuthLogin:(NSNotification *)info{
+- (void)whenNeedQMKKXAuthLogin:(NSNotification *)info{
     //to do
+    NSString *infoString = [NSString stringWithFormat:@"收到App传值:%@",info.object];
+    [KKAlertViewController showLabelWithTitle:infoString complete:^(KKAlertViewController *controler, NSInteger index) {
+        [controler dismissViewControllerCompletion:nil];
+    }];
 }
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
