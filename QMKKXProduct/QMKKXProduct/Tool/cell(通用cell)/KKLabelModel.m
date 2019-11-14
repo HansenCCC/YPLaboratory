@@ -9,12 +9,18 @@
 #import "KKLabelModel.h"
 
 @implementation KKLabelModel
+- (instancetype)init{
+    if (self = [super init]) {
+        self.isShowLine = NO;
+        self.isCanEdit = NO;
+        self.isEnabled = YES;
+    }
+    return self;
+}
 - (instancetype)initWithTitle:(NSString *)title value:(NSString *)value{
     if (self = [self init]) {
         self.title = title;
         self.value = value;
-        self.isShowLine = NO;
-        self.isCanEdit = NO;
     }
     return self;
 }

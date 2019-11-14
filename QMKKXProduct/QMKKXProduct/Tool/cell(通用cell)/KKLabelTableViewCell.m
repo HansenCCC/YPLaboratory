@@ -32,7 +32,14 @@
 }
 - (void)updateSubviews{
     KKLabelModel *cellModel = self.cellModel;
-    self.titleLabel.text = cellModel.title?:@"--";
+    BOOL isEnabled = cellModel.isEnabled;
+    if (isEnabled) {
+        self.titleLabel.text = cellModel.title?:@"--";
+    }else{
+        NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithString:cellModel.title?:@"--"];
+        [attributed addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle) range:NSMakeRange(0, attributed.length)];
+        self.titleLabel.attributedText = attributed;
+    }
     self.textField.userInteractionEnabled = cellModel.isCanEdit;
     self.textField.text = cellModel.value?:@"";
     self.textField.placeholder = cellModel.placeholder?:@"";

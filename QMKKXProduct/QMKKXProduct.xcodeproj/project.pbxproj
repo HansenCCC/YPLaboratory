@@ -218,6 +218,10 @@
 		30917440237BF5E000010E99 /* KKExamSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091743D237BF5E000010E99 /* KKExamSearchViewController.m */; };
 		30917441237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3091743E237BF5E000010E99 /* KKExamSearchViewController.xib */; };
 		30917442237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3091743E237BF5E000010E99 /* KKExamSearchViewController.xib */; };
+		30917448237C277E00010E99 /* KKSDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917446237C277E00010E99 /* KKSDWebViewController.m */; };
+		30917449237C277E00010E99 /* KKSDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30917446237C277E00010E99 /* KKSDWebViewController.m */; };
+		3091744A237C277E00010E99 /* KKSDWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30917447237C277E00010E99 /* KKSDWebViewController.xib */; };
+		3091744B237C277E00010E99 /* KKSDWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30917447237C277E00010E99 /* KKSDWebViewController.xib */; };
 		30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */; };
 		30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */; };
 		30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E20780237975AA00EE3E8E /* KKLabStudioViewController.m */; };
@@ -424,6 +428,9 @@
 		3091743C237BF5E000010E99 /* KKExamSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKExamSearchViewController.h; sourceTree = "<group>"; };
 		3091743D237BF5E000010E99 /* KKExamSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKExamSearchViewController.m; sourceTree = "<group>"; };
 		3091743E237BF5E000010E99 /* KKExamSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKExamSearchViewController.xib; sourceTree = "<group>"; };
+		30917445237C277E00010E99 /* KKSDWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSDWebViewController.h; sourceTree = "<group>"; };
+		30917446237C277E00010E99 /* KKSDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSDWebViewController.m; sourceTree = "<group>"; };
+		30917447237C277E00010E99 /* KKSDWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKSDWebViewController.xib; sourceTree = "<group>"; };
 		30CEE7AD2334E8F6006CF794 /* KKCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCountdownButton.h; sourceTree = "<group>"; };
 		30CEE7AE2334E8F6006CF794 /* KKCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCountdownButton.m; sourceTree = "<group>"; };
 		30E2077F237975AA00EE3E8E /* KKLabStudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKLabStudioViewController.h; sourceTree = "<group>"; };
@@ -599,6 +606,7 @@
 				30E2077E2379758800EE3E8E /* 工作台 */,
 				30202FED2379618800F1AADA /* app图片制作 */,
 				3091741E237BE80000010E99 /* 英语专业考试 */,
+				30917444237C26C900010E99 /* 网络图片下载 */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1020,6 +1028,16 @@
 			name = "app图标制作资源";
 			sourceTree = "<group>";
 		};
+		30917444237C26C900010E99 /* 网络图片下载 */ = {
+			isa = PBXGroup;
+			children = (
+				30917445237C277E00010E99 /* KKSDWebViewController.h */,
+				30917446237C277E00010E99 /* KKSDWebViewController.m */,
+				30917447237C277E00010E99 /* KKSDWebViewController.xib */,
+			);
+			path = "网络图片下载";
+			sourceTree = "<group>";
+		};
 		30CEE7AC2334E8F6006CF794 /* countdown */ = {
 			isa = PBXGroup;
 			children = (
@@ -1157,6 +1175,7 @@
 				30036DB422B9D76B00605DF7 /* LaunchScreen.storyboard in Resources */,
 				30658A6922CF265F0072CD24 /* KKCameraTakePhoto@2x.png in Resources */,
 				30658A6722CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */,
+				3091744B237C277E00010E99 /* KKSDWebViewController.xib in Resources */,
 				30917425237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DB122B9D76B00605DF7 /* Assets.xcassets in Resources */,
 				3091742F237BEC9900010E99 /* 4完型.json in Resources */,
@@ -1194,6 +1213,7 @@
 				30036DC522B9DDC500605DF7 /* LaunchScreen.storyboard in Resources */,
 				30658A6822CF265F0072CD24 /* KKCameraTakePhoto@2x.png in Resources */,
 				30658A6622CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */,
+				3091744A237C277E00010E99 /* KKSDWebViewController.xib in Resources */,
 				30917424237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DC622B9DDC500605DF7 /* Assets.xcassets in Resources */,
 				3091742E237BEC9900010E99 /* 4完型.json in Resources */,
@@ -1368,6 +1388,7 @@
 				3077A33122BA45A400372F07 /* NSObject+KExtension.m in Sources */,
 				302897AA22C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
 				302897C022C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
+				30917449237C277E00010E99 /* KKSDWebViewController.m in Sources */,
 				302897C422C46DEF000F2669 /* KKTextView.m in Sources */,
 				30658A7122CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
 				3091740F237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */,
@@ -1454,6 +1475,7 @@
 				3077A33022BA45A400372F07 /* NSObject+KExtension.m in Sources */,
 				302897A922C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
 				302897BF22C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
+				30917448237C277E00010E99 /* KKSDWebViewController.m in Sources */,
 				302897C322C46DEF000F2669 /* KKTextView.m in Sources */,
 				30658A7022CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
 				3091740E237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */,

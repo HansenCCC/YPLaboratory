@@ -12,6 +12,7 @@
 @property (assign, nonatomic) BOOL isShowArrow;//是否显示Arrow default NO
 @property (assign, nonatomic) BOOL isShowLine;//是否显示线条    default NO
 @property (assign, nonatomic) BOOL isCanEdit;//是否能够编辑    default NO
+@property (assign, nonatomic) BOOL isEnabled;//是否允许响应事件    default YES
 @property (strong, nonatomic) NSString *title;//标题
 @property (strong, nonatomic) NSString *value;//内容
 @property (strong, nonatomic) NSString *imageName;//图片资源

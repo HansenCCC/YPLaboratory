@@ -10,6 +10,7 @@
 #import "KKLabStudioViewController.h"//工作台
 #import "KKAppIconMakerViewController.h"//App图标制作
 #import "KKExamListViewController.h"//英语专业考试
+#import "KKSDWebViewController.h"//网络图片下载
 
 @interface KKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -37,7 +38,9 @@
     KKLabelModel *s1m3 = [[KKLabelModel alloc] initWithTitle:@"英语专业考试" value:nil];
     KKLabelModel *s1m4 = [[KKLabelModel alloc] initWithTitle:@"网络图片下载" value:nil];
     KKLabelModel *s1m5 = [[KKLabelModel alloc] initWithTitle:@"API网络层" value:nil];
+    s1m5.isEnabled = NO;
     KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"快速开发定制试图" value:nil];
+    s1m6.isEnabled = NO;
     [self.datas addObjectsFromArray:@[s1m1,s1m2,s1m3,s1m4,s1m5,s1m6,]];
     [self.tableView reloadData];
 }
@@ -72,7 +75,7 @@
     }else if([cellModel.title isEqualToString:@"英语专业考试"]){
         [self pushExamListViewController];
     }else if([cellModel.title isEqualToString:@"网络图片下载"]){
-        
+        [self pushSDWebViewController];
     }else if([cellModel.title isEqualToString:@"API网络层"]){
         
     }else if([cellModel.title isEqualToString:@"快速开发定制试图"]){
@@ -99,6 +102,11 @@
 //跳转英语专业考试
 - (void)pushExamListViewController{
     KKExamListViewController *vc = [[KKExamListViewController alloc] init];
+    [self pushViewController:vc animated:YES];
+}
+//网络图片下载
+- (void)pushSDWebViewController{
+    KKSDWebViewController *vc = [[KKSDWebViewController alloc] init];
     [self pushViewController:vc animated:YES];
 }
 @end
