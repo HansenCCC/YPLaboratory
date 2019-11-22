@@ -29,6 +29,12 @@
 }
 - (void)reloadDatas{
     //to do
+    NSArray *items = [UIFont familyNames];
+    for (NSString *item in items) {
+        KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:item value:nil];
+        [self.datas addObject:element];
+    }
+    [self.tableView reloadData];
 }
 #pragma mark - lazy load
 - (NSMutableArray<KKLabelModel *> *)datas{

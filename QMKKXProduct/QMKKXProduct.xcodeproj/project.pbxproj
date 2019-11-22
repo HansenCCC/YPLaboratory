@@ -239,6 +239,14 @@
 		30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */; };
 		30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */; };
 		5B93B02036A012D1C70F57FD /* libPods-QMKKXProduct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */; };
+		60C6CFBD238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */; };
+		60C6CFBE238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */; };
+		60C6CFBF238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFBC238846BD00FABAA3 /* KKNavigationConfigViewController.xib */; };
+		60C6CFC0238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFBC238846BD00FABAA3 /* KKNavigationConfigViewController.xib */; };
+		60C6CFC423884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFC223884E7200FABAA3 /* KKSwitchTableViewCell.m */; };
+		60C6CFC523884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFC223884E7200FABAA3 /* KKSwitchTableViewCell.m */; };
+		60C6CFC623884E7200FABAA3 /* KKSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFC323884E7200FABAA3 /* KKSwitchTableViewCell.xib */; };
+		60C6CFC723884E7200FABAA3 /* KKSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFC323884E7200FABAA3 /* KKSwitchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -453,6 +461,12 @@
 		30F8ADB222D5F12200382827 /* KKDropdownBoxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDropdownBoxView.h; sourceTree = "<group>"; };
 		30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKDropdownBoxView.m; sourceTree = "<group>"; };
 		5183A5B7580215A285039901 /* Pods-QMKKXProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.release.xcconfig"; sourceTree = "<group>"; };
+		60C6CFBA238846BD00FABAA3 /* KKNavigationConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNavigationConfigViewController.h; sourceTree = "<group>"; };
+		60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationConfigViewController.m; sourceTree = "<group>"; };
+		60C6CFBC238846BD00FABAA3 /* KKNavigationConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKNavigationConfigViewController.xib; sourceTree = "<group>"; };
+		60C6CFC123884E7200FABAA3 /* KKSwitchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSwitchTableViewCell.h; sourceTree = "<group>"; };
+		60C6CFC223884E7200FABAA3 /* KKSwitchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSwitchTableViewCell.m; sourceTree = "<group>"; };
+		60C6CFC323884E7200FABAA3 /* KKSwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKSwitchTableViewCell.xib; sourceTree = "<group>"; };
 		6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.debug.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QMKKXProduct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProductDev.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev.release.xcconfig"; sourceTree = "<group>"; };
@@ -675,6 +689,7 @@
 				3015A052237D32140086B39D /* OC语言绘图(UIBezierPath) */,
 				3015A053237D32230086B39D /* k线应用 */,
 				3015A054237D32490086B39D /* Apple安装协议 */,
+				60C6CFB92388466F00FABAA3 /* 导航栏配置 */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1057,6 +1072,9 @@
 				309173F5237AA9BB00010E99 /* KKButtonTableViewCell.h */,
 				309173F6237AA9BB00010E99 /* KKButtonTableViewCell.m */,
 				309173F7237AA9BB00010E99 /* KKButtonTableViewCell.xib */,
+				60C6CFC123884E7200FABAA3 /* KKSwitchTableViewCell.h */,
+				60C6CFC223884E7200FABAA3 /* KKSwitchTableViewCell.m */,
+				60C6CFC323884E7200FABAA3 /* KKSwitchTableViewCell.xib */,
 			);
 			path = "cell(通用cell)";
 			sourceTree = "<group>";
@@ -1132,6 +1150,16 @@
 				30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */,
 			);
 			path = "dropdownBox(弹框)";
+			sourceTree = "<group>";
+		};
+		60C6CFB92388466F00FABAA3 /* 导航栏配置 */ = {
+			isa = PBXGroup;
+			children = (
+				60C6CFBA238846BD00FABAA3 /* KKNavigationConfigViewController.h */,
+				60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */,
+				60C6CFBC238846BD00FABAA3 /* KKNavigationConfigViewController.xib */,
+			);
+			path = "导航栏配置";
 			sourceTree = "<group>";
 		};
 		73D8A745D8DABC3D9F40FB78 /* Pods */ = {
@@ -1253,6 +1281,7 @@
 				3091741D237BD7E600010E99 /* Contents.json in Resources */,
 				3015A063237D3D3C0086B39D /* KKAppInstallViewController.xib in Resources */,
 				30658A6B22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
+				60C6CFC723884E7200FABAA3 /* KKSwitchTableViewCell.xib in Resources */,
 				30202FE92379593600F1AADA /* KKUserViewController.xib in Resources */,
 				30917437237BEC9900010E99 /* 5翻译.json in Resources */,
 				30917403237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
@@ -1260,6 +1289,7 @@
 				302897B222C46DEF000F2669 /* city.json in Resources */,
 				30036DAF22B9D76900605DF7 /* Main.storyboard in Resources */,
 				3091742D237BEC9900010E99 /* 6作文.json in Resources */,
+				60C6CFC0238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */,
 				30202FC6237936B400F1AADA /* index.html in Resources */,
 				30917433237BEC9900010E99 /* 1交际.json in Resources */,
 				309173FB237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
@@ -1293,6 +1323,7 @@
 				3091741C237BD7E600010E99 /* Contents.json in Resources */,
 				3015A062237D3D3C0086B39D /* KKAppInstallViewController.xib in Resources */,
 				30658A6A22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
+				60C6CFC623884E7200FABAA3 /* KKSwitchTableViewCell.xib in Resources */,
 				30202FE82379593600F1AADA /* KKUserViewController.xib in Resources */,
 				30917436237BEC9900010E99 /* 5翻译.json in Resources */,
 				30917402237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
@@ -1300,6 +1331,7 @@
 				302897B122C46DEF000F2669 /* city.json in Resources */,
 				30036DC722B9DDC500605DF7 /* Main.storyboard in Resources */,
 				3091742C237BEC9900010E99 /* 6作文.json in Resources */,
+				60C6CFBF238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */,
 				30202FC5237936B400F1AADA /* index.html in Resources */,
 				30917432237BEC9900010E99 /* 1交际.json in Resources */,
 				309173FA237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
@@ -1433,12 +1465,14 @@
 				3077A34422BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				3077A34C22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
 				30202FCB23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
+				60C6CFC523884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */,
 				30658A6F22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
 				3077A39622BCDA4D00372F07 /* KKMuteDetector.m in Sources */,
 				3028979C22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				300CC09B237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
 				3077A33522BA45A400372F07 /* NSDate+KExtension.m in Sources */,
 				30202FE72379593600F1AADA /* KKUserViewController.m in Sources */,
+				60C6CFBE238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */,
 				309173F9237AA9BB00010E99 /* KKButtonTableViewCell.m in Sources */,
 				30658A7522CF265F0072CD24 /* KKQRCodeSessionView.m in Sources */,
 				30202FC32379362800F1AADA /* KKNavigationController.m in Sources */,
@@ -1522,12 +1556,14 @@
 				3077A34322BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				3077A34B22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
 				30202FCA23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
+				60C6CFC423884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */,
 				30658A6E22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
 				3077A39522BCDA4D00372F07 /* KKMuteDetector.m in Sources */,
 				3028979B22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				300CC09A237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
 				3077A33422BA45A400372F07 /* NSDate+KExtension.m in Sources */,
 				30202FE62379593600F1AADA /* KKUserViewController.m in Sources */,
+				60C6CFBD238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */,
 				309173F8237AA9BB00010E99 /* KKButtonTableViewCell.m in Sources */,
 				30658A7422CF265F0072CD24 /* KKQRCodeSessionView.m in Sources */,
 				30202FC22379362800F1AADA /* KKNavigationController.m in Sources */,

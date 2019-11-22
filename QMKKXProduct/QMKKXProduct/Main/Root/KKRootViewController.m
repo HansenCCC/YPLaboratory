@@ -30,7 +30,6 @@
     [self addObserverNotification];
 }
 - (void)setupSubview{
-//    self.tabBar.translucent = NO;
     self.tabBar.barTintColor = KKColor_F0F0F0;
     //
     KKNavigationController *navHomeVC = [self createNavigation:self.homeViewController title:@"实验室" image:UIImageWithName(@"kk_icon_tabbarHome") selectImage:UIImageWithName(@"kk_icon_tabbarHome")];
