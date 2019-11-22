@@ -235,14 +235,14 @@
 @end
 
 @interface UIImage (HV_UIColor)
-/**
- *  使用blend来改变图片的颜色.如一张蓝色的星星图,使用白色的tintColor之后,会变成白色的星星图
- *
- *  @param tintColor 混合的颜色
- *
- *  @return 新的图片
- */
-- (UIImage *)imageWithTintColor:(UIColor *)tintColor;
+///**
+// *  使用blend来改变图片的颜色.如一张蓝色的星星图,使用白色的tintColor之后,会变成白色的星星图
+// *
+// *  @param tintColor 混合的颜色
+// *
+// *  @return 新的图片
+// */
+//- (UIImage *)imageWithTintColor:(UIColor *)tintColor;
 
 /**
  *  根据color,获取1x1尺寸的图片.可用于UIButton的backgroundImage属性设置

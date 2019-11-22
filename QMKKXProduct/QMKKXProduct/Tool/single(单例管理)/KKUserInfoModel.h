@@ -32,6 +32,4 @@
 @property (nonatomic, strong) NSString *betaString;//beta
 @property (nonatomic, strong) NSString *betaColor;//betaColor
 @property (nonatomic, strong) NSString *betaBackgroundColor;//betaBackgroundColor
-//
-
 @end

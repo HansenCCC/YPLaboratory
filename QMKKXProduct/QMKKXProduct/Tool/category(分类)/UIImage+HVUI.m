@@ -574,20 +574,20 @@
 @end
 
 @implementation UIImage (HV_UIColor)
-- (UIImage *)imageWithTintColor:(UIColor *)tintColor{
-	UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
-	[tintColor setFill];
-	CGRect bounds = CGRectMake(0, 0, self.size.width, self.size.height);
-	UIRectFill(bounds);
-	
-	//Draw the tinted image in context
-	[self drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:1.0f];
-	
-	UIImage *tintedImage = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
-	
-	return tintedImage;
-}
+//- (UIImage *)imageWithTintColor:(UIColor *)tintColor{
+//	UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
+//	[tintColor setFill];
+//	CGRect bounds = CGRectMake(0, 0, self.size.width, self.size.height);
+//	UIRectFill(bounds);
+//
+//	//Draw the tinted image in context
+//	[self drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:1.0f];
+//
+//	UIImage *tintedImage = UIGraphicsGetImageFromCurrentImageContext();
+//	UIGraphicsEndImageContext();
+//
+//	return tintedImage;
+//}
 + (UIImage *)imageWithUIColor:(UIColor *)color{
 	UIImage *img = [self imageWithUIColor:color size:CGSizeMake(1, 1)];
 	return img;

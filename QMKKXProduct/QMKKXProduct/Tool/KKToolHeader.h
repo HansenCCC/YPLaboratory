@@ -56,6 +56,6 @@
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
 #import "KKButtonTableViewCell.h"
-
+#import "KKSwitchTableViewCell.h"
 
 #endif /* KKToolHeader_h */

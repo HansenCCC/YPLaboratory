@@ -26,7 +26,8 @@
         //处理导航栏有条线的问题
         [self setShadowImage:[UIImage new]];
     }else{
-        [self setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+        UIImage *image  = nil;
+        [self setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
         [self setShadowImage:nil];
     }
 }

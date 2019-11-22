@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = KKColor_FFFFFF;
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.delegate = self;
     }
@@ -37,6 +38,7 @@
 }
 - (void)setupNavBackItemConfig{
     UIImage *itemImg = UIImageWithName(@"kk_icon_back");
+    itemImg = [itemImg imageWithTintColor:KKColor_000000];
     self.backBtnImage = itemImg;
 }
 - (void)backItemClick{
