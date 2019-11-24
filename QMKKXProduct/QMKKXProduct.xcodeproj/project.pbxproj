@@ -588,6 +588,7 @@
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
 				60C6CFC82389A36C00FABAA3 /* 普通提示框 */,
 				60C6CFD7238A848000FABAA3 /* 输入选择框 */,
+				60C6CFB92388466F00FABAA3 /* 导航栏配置 */,
 			);
 			path = "ui组件";
 			sourceTree = "<group>";
@@ -705,7 +706,6 @@
 				3015A052237D32140086B39D /* OC语言绘图(UIBezierPath) */,
 				3015A053237D32230086B39D /* k线应用 */,
 				3015A054237D32490086B39D /* Apple安装协议 */,
-				60C6CFB92388466F00FABAA3 /* 导航栏配置 */,
 			);
 			path = controller;
 			sourceTree = "<group>";
