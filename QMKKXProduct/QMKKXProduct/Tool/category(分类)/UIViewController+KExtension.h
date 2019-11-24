@@ -58,7 +58,15 @@
  */
 - (void)showError:(NSString *)error;
 
+/**
+显示tip，并携带icon
 
+@param iconName  icon
+@param message   tip
+@param isWindow 是否展示在window
+*/
+- (void)showCustomIcon:(NSString *)iconName message:(NSString *)message isWindow:(BOOL)isWindow;
+- (UIView *)showCustomIcon:(NSString *)iconName message:(NSString *)message isWindow:(BOOL)isWindow timer:(NSTimeInterval )aTimer;
 #pragma mark - keyboard
 /**
  获取当前试图正在编辑的textfield

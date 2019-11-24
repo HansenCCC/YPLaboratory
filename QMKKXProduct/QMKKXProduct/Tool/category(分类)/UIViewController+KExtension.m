@@ -41,37 +41,39 @@
 - (void)hideLoading {
     [KKBaseLoadingView hideWithView:self.view];
 }
-
 //隐藏window上的loading
 - (void)hideLondingOnWindow {
     [KKBaseLoadingView hideWithView:[UIApplication sharedApplication].keyWindow];
 }
 //显示成功信息 2s消失
 - (void)showSuccessWithMsg:(NSString *)msg{
-    [MBProgressHUD showSuccessMessage:msg];
+    NSString *name = @"";
+    [self showCustomIcon:name message:msg isWindow:YES];
 }
 //显示错误信息 2s消失
 - (void)showError:(NSString *)error{
-    [MBProgressHUD showErrorMessage:error];
+    NSString *name = @"";
+    [self showCustomIcon:name message:error isWindow:YES];
 }
-+ (void)showCustomIcon:(NSString *)iconName message:(NSString *)message isWindow:(BOOL)isWindow{
-    UIView *view = isWindow?(UIView*)[UIApplication sharedApplication].delegate.window:(UIView*)[UIApplication sharedApplication].delegate.window.topViewController.view;
-    if (view == nil) {
-        view = [UIApplication sharedApplication].keyWindow;
-    }
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    if (message) {
-        hud.label.text=message?message:@"Loding...";
-        hud.label.font=[UIFont systemFontOfSize:15];
-    }
-    hud.removeFromSuperViewOnHide = YES;
-    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:iconName]];
-    hud.mode = MBProgressHUDModeCustomView;
-    [hud hideAnimated:YES afterDelay:KUIProgressHUDAfterDelayTimer];
+- (void)showCustomIcon:(NSString *)iconName message:(NSString *)message isWindow:(BOOL)isWindow{
+    [self showCustomIcon:iconName message:message isWindow:isWindow timer:KUIProgressHUDAfterDelayTimer];
 }
-
-
-
+- (UIView *)showCustomIcon:(NSString *)iconName message:(NSString *)message isWindow:(BOOL)isWindow timer:(NSTimeInterval )aTimer{
+   return [MBProgressHUD showCustomIcon:iconName message:message isWindow:isWindow timer:aTimer];
+//    UIView *view = isWindow?(UIView*)[UIApplication sharedApplication].delegate.window:(UIView*)[UIApplication sharedApplication].delegate.window.topViewController.view;
+//    if (view == nil) {
+//        view = [UIApplication sharedApplication].keyWindow;
+//    }
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+//    if (message) {
+//        hud.label.text=message?message:@"Loding...";
+//        hud.label.font=[UIFont systemFontOfSize:15];
+//    }
+//    hud.removeFromSuperViewOnHide = YES;
+//    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:iconName]];
+//    hud.mode = MBProgressHUDModeCustomView;
+//    [hud hideAnimated:YES afterDelay:KUIProgressHUDAfterDelayTimer];
+}
 //获取当前试图正在编辑的textfield
 - (UITextField *)controlEditingTextField{
     UITextField *textField;

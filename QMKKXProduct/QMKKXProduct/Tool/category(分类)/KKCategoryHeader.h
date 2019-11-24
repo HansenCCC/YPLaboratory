@@ -26,6 +26,6 @@
 #import "UIScrollView+KExtension.h"//scrollView
 #import "UINavigationBar+KExtension.h"//navigationBar
 #import "UIViewController+KExtension.h"//controller
-
+#import "MBProgressHUD+KExtension.h"//MBProgressHUD
 
 #endif /* KKCategoryHeader_h */
