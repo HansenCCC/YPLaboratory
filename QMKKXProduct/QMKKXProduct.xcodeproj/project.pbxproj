@@ -247,6 +247,10 @@
 		60C6CFC523884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFC223884E7200FABAA3 /* KKSwitchTableViewCell.m */; };
 		60C6CFC623884E7200FABAA3 /* KKSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFC323884E7200FABAA3 /* KKSwitchTableViewCell.xib */; };
 		60C6CFC723884E7200FABAA3 /* KKSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFC323884E7200FABAA3 /* KKSwitchTableViewCell.xib */; };
+		60C6CFD32389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFD12389A41400FABAA3 /* KKProgressHUDViewController.m */; };
+		60C6CFD42389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFD12389A41400FABAA3 /* KKProgressHUDViewController.m */; };
+		60C6CFD52389A41400FABAA3 /* KKProgressHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFD22389A41400FABAA3 /* KKProgressHUDViewController.xib */; };
+		60C6CFD62389A41400FABAA3 /* KKProgressHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFD22389A41400FABAA3 /* KKProgressHUDViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -467,6 +471,9 @@
 		60C6CFC123884E7200FABAA3 /* KKSwitchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKSwitchTableViewCell.h; sourceTree = "<group>"; };
 		60C6CFC223884E7200FABAA3 /* KKSwitchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKSwitchTableViewCell.m; sourceTree = "<group>"; };
 		60C6CFC323884E7200FABAA3 /* KKSwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKSwitchTableViewCell.xib; sourceTree = "<group>"; };
+		60C6CFD02389A41400FABAA3 /* KKProgressHUDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKProgressHUDViewController.h; sourceTree = "<group>"; };
+		60C6CFD12389A41400FABAA3 /* KKProgressHUDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKProgressHUDViewController.m; sourceTree = "<group>"; };
+		60C6CFD22389A41400FABAA3 /* KKProgressHUDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKProgressHUDViewController.xib; sourceTree = "<group>"; };
 		6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.debug.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QMKKXProduct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProductDev.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev.release.xcconfig"; sourceTree = "<group>"; };
@@ -572,6 +579,7 @@
 				3015A056237D33390086B39D /* KKUIUnitViewController.h */,
 				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
+				60C6CFC82389A36C00FABAA3 /* 普通提示框 */,
 			);
 			path = "ui组件";
 			sourceTree = "<group>";
@@ -1162,6 +1170,16 @@
 			path = "导航栏配置";
 			sourceTree = "<group>";
 		};
+		60C6CFC82389A36C00FABAA3 /* 普通提示框 */ = {
+			isa = PBXGroup;
+			children = (
+				60C6CFD02389A41400FABAA3 /* KKProgressHUDViewController.h */,
+				60C6CFD12389A41400FABAA3 /* KKProgressHUDViewController.m */,
+				60C6CFD22389A41400FABAA3 /* KKProgressHUDViewController.xib */,
+			);
+			path = "普通提示框";
+			sourceTree = "<group>";
+		};
 		73D8A745D8DABC3D9F40FB78 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1299,6 +1317,7 @@
 				30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 				3015A05C237D33390086B39D /* KKUIUnitViewController.xib in Resources */,
 				30E20785237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
+				60C6CFD62389A41400FABAA3 /* KKProgressHUDViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1341,6 +1360,7 @@
 				30658A6022CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 				3015A05B237D33390086B39D /* KKUIUnitViewController.xib in Resources */,
 				30E20784237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
+				60C6CFD52389A41400FABAA3 /* KKProgressHUDViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1462,6 +1482,7 @@
 				3077A35022BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
 				30036DB722B9D76B00605DF7 /* main.m in Sources */,
 				30917407237AB37500010E99 /* KKAppIcon.m in Sources */,
+				60C6CFD42389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				3077A34422BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				3077A34C22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
 				30202FCB23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
@@ -1553,6 +1574,7 @@
 				3077A34F22BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
 				30036DC122B9DDC500605DF7 /* main.m in Sources */,
 				30917406237AB37500010E99 /* KKAppIcon.m in Sources */,
+				60C6CFD32389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				3077A34322BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				3077A34B22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
 				30202FCA23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,

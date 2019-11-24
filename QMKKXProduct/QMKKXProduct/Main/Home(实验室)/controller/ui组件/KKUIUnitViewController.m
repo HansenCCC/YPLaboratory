@@ -9,6 +9,7 @@
 #import "KKUIUnitViewController.h"
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
+#import "KKProgressHUDViewController.h"//普通提示框
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -33,11 +34,10 @@
 - (void)reloadDatas{
     [self.datas removeAllObjects];
     //构造cell
-    NSArray *items = [UIFont familyNames];
-    for (NSString *item in items) {
-        KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:item value:nil];
-        [self.datas addObject:element];
-    }
+    KKLabelModel *c1 = [[KKLabelModel alloc] initWithTitle:@"普通提示框(基于MBProgressHUD)" value:nil];
+    c1.info = [KKProgressHUDViewController class];
+    [self.datas addObject:c1];
+    
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
@@ -62,6 +62,19 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //to do
+    [self mainQueueTableView:tableView didSelectRowAtIndexPath:indexPath];
 }
-#pragma mark - aciton
+- (void)mainQueueTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.view endEditing:YES];
+    KKLabelModel *cellModel = self.datas[indexPath.row];
+    Class vcClass = cellModel.info;
+    if (vcClass) {
+        [self pushViewControllerClass:vcClass animated:YES];
+    }
+}
+//通过vcClass跳转
+- (void)pushViewControllerClass:(Class )viewControllerClass animated:(BOOL)animated{
+    UIViewController *vc = [[viewControllerClass alloc] init];
+    [self.navigationController pushViewController:vc animated:animated];
+}
 @end

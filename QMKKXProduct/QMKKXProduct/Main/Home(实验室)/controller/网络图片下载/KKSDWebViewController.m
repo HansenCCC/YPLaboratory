@@ -29,7 +29,11 @@
 }
 - (void)reloadDatas{
     //to do
-    NSArray *items = [UIFont familyNames];
+    NSArray *items = @[@"原生网络下载图片(不缓存)",
+                       @"原生网络下载图片(缓存)",
+                       @"SDWebImage下载图片(不缓存)",
+                       @"SDWebImage下载图片(缓存)",
+                       ];
     for (NSString *item in items) {
         KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:item value:nil];
         [self.datas addObject:element];
