@@ -23,6 +23,11 @@
     [self dispatchQueue10];
     [self dispatchQueue11];
     self.view.backgroundColor = KKColor_000000;
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSString *path = @".";
+    NSArray* tempArray = [manager contentsOfDirectoryAtPath:path error:nil];
+    NSLog(@"%@",tempArray);
 }
 //同步执行 + 并发队列
 - (void)dispatchQueue00{

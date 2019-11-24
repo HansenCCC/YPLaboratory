@@ -1,30 +1,28 @@
 //
-//  KKUIUnitViewController.m
+//  KKFileManagerViewController.m
 //  QMKKXProduct
 //
-//  Created by 程恒盛 on 2019/11/14.
+//  Created by Hansen on 11/25/19.
 //  Copyright © 2019 力王工作室. All rights reserved.
 //
 
-#import "KKUIUnitViewController.h"
+#import "KKFileManagerViewController.h"
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
-#import "KKProgressHUDViewController.h"//普通提示框
-#import "KKPickViewViewController.h"//选择输入框
-#import "KKNavigationConfigViewController.h"//导航栏设置
+#import "KKFileViewController.h"
 
-@interface KKUIUnitViewController ()
+@interface KKFileManagerViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
 @property (weak  , nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation KKUIUnitViewController
+@implementation KKFileManagerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"ui组件";
+    self.title = @"文件管理";
     [self setupSubviews];
     //异步处理消耗内存操作
     [self reloadDatas];
@@ -36,20 +34,11 @@
 - (void)reloadDatas{
     [self.datas removeAllObjects];
     //构造cell
-    KKLabelModel *c1 = [[KKLabelModel alloc] initWithTitle:@"普通提示框(基于MBProgressHUD)" value:nil];
-    c1.info = [KKProgressHUDViewController class];
-    KKLabelModel *c2 = [[KKLabelModel alloc] initWithTitle:@"输入选择框(基于UIPickerView)" value:nil];
-    c2.info = [KKPickViewViewController class];
-    KKLabelModel *c3 = [[KKLabelModel alloc] initWithTitle:@"导航栏配置(基于UINavigationBar)" value:nil];
-    c3.info = [KKNavigationConfigViewController class];
-    KKLabelModel *c4 = [[KKLabelModel alloc] initWithTitle:@"丰富多彩的cell(基于UITableView)" value:nil];
-    c4.isEnabled = NO;
-    KKLabelModel *c5 = [[KKLabelModel alloc] initWithTitle:@"丰富多彩的cell(基于UICollectionView)" value:nil];
-    c5.isEnabled = NO;
-    KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"K线应用" value:nil];
-    s1m6.isEnabled = NO;
-    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m6,]];
-    
+    KKLabelModel *c1 = [[KKLabelModel alloc] initWithTitle:@"仅限模拟器获取Mac资源文件" value:nil];
+    c1.value = @"/";
+    KKLabelModel *c2 = [[KKLabelModel alloc] initWithTitle:@"iPhone文件" value:nil];
+    c2.value = @"/";
+    [self.datas addObjectsFromArray:@[c1,c2,]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
@@ -81,14 +70,8 @@
 - (void)mainQueueTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.view endEditing:YES];
     KKLabelModel *cellModel = self.datas[indexPath.row];
-    Class vcClass = cellModel.info;
-    if (vcClass) {
-        [self pushViewControllerClass:vcClass animated:YES];
-    }
-}
-//通过vcClass跳转
-- (void)pushViewControllerClass:(Class )viewControllerClass animated:(BOOL)animated{
-    UIViewController *vc = [[viewControllerClass alloc] init];
-    [self.navigationController pushViewController:vc animated:animated];
+    KKFileViewController *vc = [[KKFileViewController alloc] init];
+    vc.filePath = cellModel.value;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

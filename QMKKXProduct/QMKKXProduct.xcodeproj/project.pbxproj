@@ -255,6 +255,14 @@
 		60C6CFDC238A84F200FABAA3 /* KKPickViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFD9238A84F200FABAA3 /* KKPickViewViewController.m */; };
 		60C6CFDD238A84F200FABAA3 /* KKPickViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFDA238A84F200FABAA3 /* KKPickViewViewController.xib */; };
 		60C6CFDE238A84F200FABAA3 /* KKPickViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFDA238A84F200FABAA3 /* KKPickViewViewController.xib */; };
+		60C6CFE3238AE6F100FABAA3 /* KKFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFE1238AE6F100FABAA3 /* KKFileManagerViewController.m */; };
+		60C6CFE4238AE6F100FABAA3 /* KKFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFE1238AE6F100FABAA3 /* KKFileManagerViewController.m */; };
+		60C6CFE5238AE6F100FABAA3 /* KKFileManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE2238AE6F100FABAA3 /* KKFileManagerViewController.xib */; };
+		60C6CFE6238AE6F100FABAA3 /* KKFileManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE2238AE6F100FABAA3 /* KKFileManagerViewController.xib */; };
+		60C6CFEA238AEEEE00FABAA3 /* KKFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */; };
+		60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */; };
+		60C6CFEC238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
+		60C6CFED238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -481,6 +489,12 @@
 		60C6CFD8238A84F200FABAA3 /* KKPickViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPickViewViewController.h; sourceTree = "<group>"; };
 		60C6CFD9238A84F200FABAA3 /* KKPickViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPickViewViewController.m; sourceTree = "<group>"; };
 		60C6CFDA238A84F200FABAA3 /* KKPickViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKPickViewViewController.xib; sourceTree = "<group>"; };
+		60C6CFE0238AE6F100FABAA3 /* KKFileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileManagerViewController.h; sourceTree = "<group>"; };
+		60C6CFE1238AE6F100FABAA3 /* KKFileManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileManagerViewController.m; sourceTree = "<group>"; };
+		60C6CFE2238AE6F100FABAA3 /* KKFileManagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileManagerViewController.xib; sourceTree = "<group>"; };
+		60C6CFE7238AEEEE00FABAA3 /* KKFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileViewController.h; sourceTree = "<group>"; };
+		60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileViewController.m; sourceTree = "<group>"; };
+		60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileViewController.xib; sourceTree = "<group>"; };
 		6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.debug.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QMKKXProduct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProductDev.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev.release.xcconfig"; sourceTree = "<group>"; };
@@ -706,6 +720,7 @@
 				3015A052237D32140086B39D /* OC语言绘图(UIBezierPath) */,
 				3015A053237D32230086B39D /* k线应用 */,
 				3015A054237D32490086B39D /* Apple安装协议 */,
+				60C6CFDF238AE6AF00FABAA3 /* 文件管理 */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1198,6 +1213,19 @@
 			path = "输入选择框";
 			sourceTree = "<group>";
 		};
+		60C6CFDF238AE6AF00FABAA3 /* 文件管理 */ = {
+			isa = PBXGroup;
+			children = (
+				60C6CFE0238AE6F100FABAA3 /* KKFileManagerViewController.h */,
+				60C6CFE1238AE6F100FABAA3 /* KKFileManagerViewController.m */,
+				60C6CFE2238AE6F100FABAA3 /* KKFileManagerViewController.xib */,
+				60C6CFE7238AEEEE00FABAA3 /* KKFileViewController.h */,
+				60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */,
+				60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */,
+			);
+			path = "文件管理";
+			sourceTree = "<group>";
+		};
 		73D8A745D8DABC3D9F40FB78 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1309,6 +1337,7 @@
 				30658A6722CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */,
 				60C6CFDE238A84F200FABAA3 /* KKPickViewViewController.xib in Resources */,
 				3091744B237C277E00010E99 /* KKSDWebViewController.xib in Resources */,
+				60C6CFED238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */,
 				30917425237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DB122B9D76B00605DF7 /* Assets.xcassets in Resources */,
 				3091742F237BEC9900010E99 /* 4完型.json in Resources */,
@@ -1324,6 +1353,7 @@
 				30917403237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
 				30202FDF2379589D00F1AADA /* KKWorldViewController.xib in Resources */,
 				302897B222C46DEF000F2669 /* city.json in Resources */,
+				60C6CFE6238AE6F100FABAA3 /* KKFileManagerViewController.xib in Resources */,
 				30036DAF22B9D76900605DF7 /* Main.storyboard in Resources */,
 				3091742D237BEC9900010E99 /* 6作文.json in Resources */,
 				60C6CFC0238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */,
@@ -1353,6 +1383,7 @@
 				30658A6622CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */,
 				60C6CFDD238A84F200FABAA3 /* KKPickViewViewController.xib in Resources */,
 				3091744A237C277E00010E99 /* KKSDWebViewController.xib in Resources */,
+				60C6CFEC238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */,
 				30917424237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DC622B9DDC500605DF7 /* Assets.xcassets in Resources */,
 				3091742E237BEC9900010E99 /* 4完型.json in Resources */,
@@ -1368,6 +1399,7 @@
 				30917402237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
 				30202FDE2379589D00F1AADA /* KKWorldViewController.xib in Resources */,
 				302897B122C46DEF000F2669 /* city.json in Resources */,
+				60C6CFE5238AE6F100FABAA3 /* KKFileManagerViewController.xib in Resources */,
 				30036DC722B9DDC500605DF7 /* Main.storyboard in Resources */,
 				3091742C237BEC9900010E99 /* 6作文.json in Resources */,
 				60C6CFBF238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */,
@@ -1486,6 +1518,7 @@
 				30658A7D22CF29580072CD24 /* UIImage+HVUI.m in Sources */,
 				3077A35422BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */,
+				60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
 				30202FF2237961AB00F1AADA /* KKAppIconMakerViewController.m in Sources */,
 				3028979822C46DEF000F2669 /* KKBaseResponse.m in Sources */,
 				3077A35C22BB357100372F07 /* UIViewController+KExtension.m in Sources */,
@@ -1505,6 +1538,7 @@
 				60C6CFD42389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				3077A34422BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				3077A34C22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
+				60C6CFE4238AE6F100FABAA3 /* KKFileManagerViewController.m in Sources */,
 				30202FCB23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
 				60C6CFC523884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */,
 				30658A6F22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
@@ -1579,6 +1613,7 @@
 				30658A7C22CF29580072CD24 /* UIImage+HVUI.m in Sources */,
 				3077A35322BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */,
+				60C6CFEA238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
 				30202FF1237961AB00F1AADA /* KKAppIconMakerViewController.m in Sources */,
 				3028979722C46DEF000F2669 /* KKBaseResponse.m in Sources */,
 				3077A35B22BB357100372F07 /* UIViewController+KExtension.m in Sources */,
@@ -1598,6 +1633,7 @@
 				60C6CFD32389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				3077A34322BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				3077A34B22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
+				60C6CFE3238AE6F100FABAA3 /* KKFileManagerViewController.m in Sources */,
 				30202FCA23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
 				60C6CFC423884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */,
 				30658A6E22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
