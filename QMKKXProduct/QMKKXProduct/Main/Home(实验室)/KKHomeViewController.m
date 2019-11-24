@@ -61,12 +61,14 @@
     KKLabelModel *s1m10 = [[KKLabelModel alloc] initWithTitle:@"Apple安装协议&App打开和交互" value:nil];
     s1m10.info = [KKAppInstallViewController class];
     KKLabelModel *s1m11 = [[KKLabelModel alloc] initWithTitle:@"Xcode自定义文件模板" value:nil];
-    s1m11.info = [KKBaseViewController class];
+    s1m11.isEnabled = NO;
     KKLabelModel *s1m12 = [[KKLabelModel alloc] initWithTitle:@"导航栏配置" value:nil];
     s1m12.info = [KKNavigationConfigViewController class];
     KKLabelModel *s1m13 = [[KKLabelModel alloc] initWithTitle:@"文件管理" value:nil];
     s1m13.isEnabled = NO;
-    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m2,s1m12,s1m4,s1m13,s1m5,s1m7,s1m8,s1m9,s1m10,s1m11,s1m3]];
+    KKLabelModel *s1m14 = [[KKLabelModel alloc] initWithTitle:@"学习资料和资源(h5地址)" value:nil];
+    s1m14.isEnabled = NO;
+    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m2,s1m12,s1m4,s1m13,s1m5,s1m7,s1m8,s1m9,s1m10,s1m11,s1m3,s1m14]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

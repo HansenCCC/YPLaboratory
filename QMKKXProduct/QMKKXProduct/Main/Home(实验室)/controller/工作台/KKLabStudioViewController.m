@@ -22,6 +22,7 @@
     [self dispatchQueue01];
     [self dispatchQueue10];
     [self dispatchQueue11];
+    self.view.backgroundColor = KKColor_000000;
 }
 //同步执行 + 并发队列
 - (void)dispatchQueue00{

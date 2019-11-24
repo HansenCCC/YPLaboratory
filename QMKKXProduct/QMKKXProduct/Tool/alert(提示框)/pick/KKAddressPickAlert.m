@@ -221,36 +221,36 @@
     }
     return result;
 }
-//#pragma mark - 监听
-//- (void)addObserver {
-//    [self.model addObserver:self forKeyPath:@"pIndex" options:NSKeyValueObservingOptionNew context:nil];
-//    [self.model addObserver:self forKeyPath:@"cIndex" options:NSKeyValueObservingOptionNew context:nil];
-//    [self.model addObserver:self forKeyPath:@"dIndex" options:NSKeyValueObservingOptionNew context:nil];
-//}
-//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-//    if ([keyPath isEqualToString:@"pIndex"]) {
-//        NSInteger pIndex = [change[NSKeyValueChangeNewKey] integerValue];
-//        self.model.currentCitys = self.model.allProvinces[pIndex].c;
-//        [self.pickerView selectRow:pIndex inComponent:0 animated:NO];
-//        [self.pickerView reloadComponent:1];
-//    }
-//    if ([keyPath isEqualToString:@"cIndex"]) {
-//        NSInteger cIndex = [change[NSKeyValueChangeNewKey] integerValue];
-//        self.model.currentDistrict = self.model.currentCitys[cIndex].d;
-//        [self.pickerView selectRow:cIndex inComponent:1 animated:NO];
-//        [self.pickerView reloadComponent:2];
-//    }
-//    if ([keyPath isEqualToString:@"dIndex"]) {
-//        NSInteger dIndex = [change[NSKeyValueChangeNewKey] integerValue];
-//        [self.pickerView selectRow:dIndex inComponent:2 animated:NO];
-//    }
-//}
-//
-//- (void)dealloc {
-//    [self.model removeObserver:self forKeyPath:@"pIndex"];
-//    [self.model removeObserver:self forKeyPath:@"cIndex"];
-//    [self.model removeObserver:self forKeyPath:@"dIndex"];
-//}
+#pragma mark - 监听
+- (void)addObserver {
+    [self.model addObserver:self forKeyPath:@"pIndex" options:NSKeyValueObservingOptionNew context:nil];
+    [self.model addObserver:self forKeyPath:@"cIndex" options:NSKeyValueObservingOptionNew context:nil];
+    [self.model addObserver:self forKeyPath:@"dIndex" options:NSKeyValueObservingOptionNew context:nil];
+}
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"pIndex"]) {
+        NSInteger pIndex = [change[NSKeyValueChangeNewKey] integerValue];
+        self.model.currentCitys = self.model.allProvinces[pIndex].c;
+        [self.pickerView selectRow:pIndex inComponent:0 animated:NO];
+        [self.pickerView reloadComponent:1];
+    }
+    if ([keyPath isEqualToString:@"cIndex"]) {
+        NSInteger cIndex = [change[NSKeyValueChangeNewKey] integerValue];
+        self.model.currentDistrict = self.model.currentCitys[cIndex].d;
+        [self.pickerView selectRow:cIndex inComponent:1 animated:NO];
+        [self.pickerView reloadComponent:2];
+    }
+    if ([keyPath isEqualToString:@"dIndex"]) {
+        NSInteger dIndex = [change[NSKeyValueChangeNewKey] integerValue];
+        [self.pickerView selectRow:dIndex inComponent:2 animated:NO];
+    }
+}
+
+- (void)dealloc {
+    [self.model removeObserver:self forKeyPath:@"pIndex"];
+    [self.model removeObserver:self forKeyPath:@"cIndex"];
+    [self.model removeObserver:self forKeyPath:@"dIndex"];
+}
 
 @end
 

@@ -47,12 +47,12 @@
 }
 //显示成功信息 2s消失
 - (void)showSuccessWithMsg:(NSString *)msg{
-    NSString *name = @"";
+    NSString *name = @"kk_icon_success";
     [self showCustomIcon:name message:msg isWindow:YES];
 }
 //显示错误信息 2s消失
 - (void)showError:(NSString *)error{
-    NSString *name = @"";
+    NSString *name = @"kk_icon_fail";
     [self showCustomIcon:name message:error isWindow:YES];
 }
 - (void)showCustomIcon:(NSString *)iconName message:(NSString *)message isWindow:(BOOL)isWindow{

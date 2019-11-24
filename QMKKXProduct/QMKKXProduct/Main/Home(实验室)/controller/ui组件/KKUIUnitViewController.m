@@ -10,6 +10,7 @@
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
 #import "KKProgressHUDViewController.h"//普通提示框
+#import "KKPickViewViewController.h"//选择输入框
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -36,7 +37,9 @@
     //构造cell
     KKLabelModel *c1 = [[KKLabelModel alloc] initWithTitle:@"普通提示框(基于MBProgressHUD)" value:nil];
     c1.info = [KKProgressHUDViewController class];
-    [self.datas addObject:c1];
+    KKLabelModel *c2 = [[KKLabelModel alloc] initWithTitle:@"输入选择框(基于UIPickerView)" value:nil];
+    c2.info = [KKPickViewViewController class];
+    [self.datas addObjectsFromArray:@[c1,c2]];
     
     [self.tableView reloadData];
 }

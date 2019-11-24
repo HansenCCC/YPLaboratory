@@ -251,6 +251,10 @@
 		60C6CFD42389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFD12389A41400FABAA3 /* KKProgressHUDViewController.m */; };
 		60C6CFD52389A41400FABAA3 /* KKProgressHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFD22389A41400FABAA3 /* KKProgressHUDViewController.xib */; };
 		60C6CFD62389A41400FABAA3 /* KKProgressHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFD22389A41400FABAA3 /* KKProgressHUDViewController.xib */; };
+		60C6CFDB238A84F200FABAA3 /* KKPickViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFD9238A84F200FABAA3 /* KKPickViewViewController.m */; };
+		60C6CFDC238A84F200FABAA3 /* KKPickViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFD9238A84F200FABAA3 /* KKPickViewViewController.m */; };
+		60C6CFDD238A84F200FABAA3 /* KKPickViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFDA238A84F200FABAA3 /* KKPickViewViewController.xib */; };
+		60C6CFDE238A84F200FABAA3 /* KKPickViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFDA238A84F200FABAA3 /* KKPickViewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -474,6 +478,9 @@
 		60C6CFD02389A41400FABAA3 /* KKProgressHUDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKProgressHUDViewController.h; sourceTree = "<group>"; };
 		60C6CFD12389A41400FABAA3 /* KKProgressHUDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKProgressHUDViewController.m; sourceTree = "<group>"; };
 		60C6CFD22389A41400FABAA3 /* KKProgressHUDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKProgressHUDViewController.xib; sourceTree = "<group>"; };
+		60C6CFD8238A84F200FABAA3 /* KKPickViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPickViewViewController.h; sourceTree = "<group>"; };
+		60C6CFD9238A84F200FABAA3 /* KKPickViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPickViewViewController.m; sourceTree = "<group>"; };
+		60C6CFDA238A84F200FABAA3 /* KKPickViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKPickViewViewController.xib; sourceTree = "<group>"; };
 		6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.debug.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QMKKXProduct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProductDev.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev.release.xcconfig"; sourceTree = "<group>"; };
@@ -580,6 +587,7 @@
 				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
 				60C6CFC82389A36C00FABAA3 /* 普通提示框 */,
+				60C6CFD7238A848000FABAA3 /* 输入选择框 */,
 			);
 			path = "ui组件";
 			sourceTree = "<group>";
@@ -1180,6 +1188,16 @@
 			path = "普通提示框";
 			sourceTree = "<group>";
 		};
+		60C6CFD7238A848000FABAA3 /* 输入选择框 */ = {
+			isa = PBXGroup;
+			children = (
+				60C6CFD8238A84F200FABAA3 /* KKPickViewViewController.h */,
+				60C6CFD9238A84F200FABAA3 /* KKPickViewViewController.m */,
+				60C6CFDA238A84F200FABAA3 /* KKPickViewViewController.xib */,
+			);
+			path = "输入选择框";
+			sourceTree = "<group>";
+		};
 		73D8A745D8DABC3D9F40FB78 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1289,6 +1307,7 @@
 				30036DB422B9D76B00605DF7 /* LaunchScreen.storyboard in Resources */,
 				30658A6922CF265F0072CD24 /* KKCameraTakePhoto@2x.png in Resources */,
 				30658A6722CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */,
+				60C6CFDE238A84F200FABAA3 /* KKPickViewViewController.xib in Resources */,
 				3091744B237C277E00010E99 /* KKSDWebViewController.xib in Resources */,
 				30917425237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DB122B9D76B00605DF7 /* Assets.xcassets in Resources */,
@@ -1332,6 +1351,7 @@
 				30036DC522B9DDC500605DF7 /* LaunchScreen.storyboard in Resources */,
 				30658A6822CF265F0072CD24 /* KKCameraTakePhoto@2x.png in Resources */,
 				30658A6622CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */,
+				60C6CFDD238A84F200FABAA3 /* KKPickViewViewController.xib in Resources */,
 				3091744A237C277E00010E99 /* KKSDWebViewController.xib in Resources */,
 				30917424237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DC622B9DDC500605DF7 /* Assets.xcassets in Resources */,
@@ -1516,6 +1536,7 @@
 				3077A33122BA45A400372F07 /* NSObject+KExtension.m in Sources */,
 				302897AA22C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
 				302897C022C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
+				60C6CFDC238A84F200FABAA3 /* KKPickViewViewController.m in Sources */,
 				30917449237C277E00010E99 /* KKSDWebViewController.m in Sources */,
 				3015A061237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
 				302897C422C46DEF000F2669 /* KKTextView.m in Sources */,
@@ -1608,6 +1629,7 @@
 				3077A33022BA45A400372F07 /* NSObject+KExtension.m in Sources */,
 				302897A922C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
 				302897BF22C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
+				60C6CFDB238A84F200FABAA3 /* KKPickViewViewController.m in Sources */,
 				30917448237C277E00010E99 /* KKSDWebViewController.m in Sources */,
 				3015A060237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
 				302897C322C46DEF000F2669 /* KKTextView.m in Sources */,
