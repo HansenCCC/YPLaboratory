@@ -36,9 +36,13 @@
     //构造cell
     KKLabelModel *c1 = [[KKLabelModel alloc] initWithTitle:@"仅限模拟器获取Mac资源文件" value:nil];
     c1.value = @"/";
-    KKLabelModel *c2 = [[KKLabelModel alloc] initWithTitle:@"iPhone文件" value:nil];
-    c2.value = @"/Users/Hansen/Downloads";
-    [self.datas addObjectsFromArray:@[c1,c2,]];
+    KKLabelModel *c2 = [[KKLabelModel alloc] initWithTitle:@"Mac Desktop文件" value:nil];
+    c2.value = @"/Users/Hansen/Desktop/";
+    KKLabelModel *c3 = [[KKLabelModel alloc] initWithTitle:@"NSHomeDirectory()文件" value:nil];
+    c3.value = NSHomeDirectory();
+    KKLabelModel *c4 = [[KKLabelModel alloc] initWithTitle:@"Mac Downloads文件" value:nil];
+    c4.value = @"/Users/Hansen/Downloads/";
+    [self.datas addObjectsFromArray:@[c1,c2,c4,c3,]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
