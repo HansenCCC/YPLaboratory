@@ -14,6 +14,7 @@
 #import "KKUIUnitViewController.h"//ui组件
 #import "KKAppInstallViewController.h"//Apple安装协议
 #import "KKFileManagerViewController.h"//文件管理
+#import "KKNetworkViewController.h"//network网络层
 
 @interface KKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -45,7 +46,7 @@
     KKLabelModel *s1m4 = [[KKLabelModel alloc] initWithTitle:@"网络图片下载" value:nil];
     s1m4.info = [KKSDWebViewController class];
     KKLabelModel *s1m5 = [[KKLabelModel alloc] initWithTitle:@"API网络层" value:nil];
-    s1m5.info = [KKBaseViewController class];
+    s1m5.info = [KKNetworkViewController class];
     s1m5.isEnabled = NO;
     KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"UI组件" value:nil];
     s1m6.info = [KKUIUnitViewController class];

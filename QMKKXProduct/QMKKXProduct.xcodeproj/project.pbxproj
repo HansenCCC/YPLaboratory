@@ -243,6 +243,10 @@
 		60B6810A238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */; };
 		60B6810B238B017300E3F6B7 /* KKFileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68108238B017300E3F6B7 /* KKFileCollectionViewCell.xib */; };
 		60B6810C238B017300E3F6B7 /* KKFileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68108238B017300E3F6B7 /* KKFileCollectionViewCell.xib */; };
+		60B68110238BE90B00E3F6B7 /* KKNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B6810E238BE90B00E3F6B7 /* KKNetworkViewController.m */; };
+		60B68111238BE90B00E3F6B7 /* KKNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B6810E238BE90B00E3F6B7 /* KKNetworkViewController.m */; };
+		60B68112238BE90B00E3F6B7 /* KKNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B6810F238BE90B00E3F6B7 /* KKNetworkViewController.xib */; };
+		60B68113238BE90B00E3F6B7 /* KKNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B6810F238BE90B00E3F6B7 /* KKNetworkViewController.xib */; };
 		60C6CFBD238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */; };
 		60C6CFBE238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */; };
 		60C6CFBF238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFBC238846BD00FABAA3 /* KKNavigationConfigViewController.xib */; };
@@ -484,6 +488,9 @@
 		60B68106238B017300E3F6B7 /* KKFileCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileCollectionViewCell.h; sourceTree = "<group>"; };
 		60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileCollectionViewCell.m; sourceTree = "<group>"; };
 		60B68108238B017300E3F6B7 /* KKFileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileCollectionViewCell.xib; sourceTree = "<group>"; };
+		60B6810D238BE90B00E3F6B7 /* KKNetworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNetworkViewController.h; sourceTree = "<group>"; };
+		60B6810E238BE90B00E3F6B7 /* KKNetworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNetworkViewController.m; sourceTree = "<group>"; };
+		60B6810F238BE90B00E3F6B7 /* KKNetworkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKNetworkViewController.xib; sourceTree = "<group>"; };
 		60C6CFBA238846BD00FABAA3 /* KKNavigationConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNavigationConfigViewController.h; sourceTree = "<group>"; };
 		60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationConfigViewController.m; sourceTree = "<group>"; };
 		60C6CFBC238846BD00FABAA3 /* KKNavigationConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKNavigationConfigViewController.xib; sourceTree = "<group>"; };
@@ -617,6 +624,9 @@
 		3015A050237D31D80086B39D /* API网络层 */ = {
 			isa = PBXGroup;
 			children = (
+				60B6810D238BE90B00E3F6B7 /* KKNetworkViewController.h */,
+				60B6810E238BE90B00E3F6B7 /* KKNetworkViewController.m */,
+				60B6810F238BE90B00E3F6B7 /* KKNetworkViewController.xib */,
 			);
 			path = "API网络层";
 			sourceTree = "<group>";
@@ -1369,6 +1379,7 @@
 				60C6CFC723884E7200FABAA3 /* KKSwitchTableViewCell.xib in Resources */,
 				30202FE92379593600F1AADA /* KKUserViewController.xib in Resources */,
 				30917437237BEC9900010E99 /* 5翻译.json in Resources */,
+				60B68113238BE90B00E3F6B7 /* KKNetworkViewController.xib in Resources */,
 				30917403237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
 				30202FDF2379589D00F1AADA /* KKWorldViewController.xib in Resources */,
 				302897B222C46DEF000F2669 /* city.json in Resources */,
@@ -1416,6 +1427,7 @@
 				60C6CFC623884E7200FABAA3 /* KKSwitchTableViewCell.xib in Resources */,
 				30202FE82379593600F1AADA /* KKUserViewController.xib in Resources */,
 				30917436237BEC9900010E99 /* 5翻译.json in Resources */,
+				60B68112238BE90B00E3F6B7 /* KKNetworkViewController.xib in Resources */,
 				30917402237AAFDD00010E99 /* KKAppIconTableViewCell.xib in Resources */,
 				30202FDE2379589D00F1AADA /* KKWorldViewController.xib in Resources */,
 				302897B122C46DEF000F2669 /* city.json in Resources */,
@@ -1585,6 +1597,7 @@
 				3028979E22C46DEF000F2669 /* KKNetworkBase.m in Sources */,
 				30202FF8237962DE00F1AADA /* KKLabelModel.m in Sources */,
 				30036DD922B9FE0D00605DF7 /* KKNetworkApi.m in Sources */,
+				60B68111238BE90B00E3F6B7 /* KKNetworkViewController.m in Sources */,
 				30202FD123793FE500F1AADA /* KKRootViewController.m in Sources */,
 				302897A222C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33122BA45A400372F07 /* NSObject+KExtension.m in Sources */,
@@ -1681,6 +1694,7 @@
 				3028979D22C46DEF000F2669 /* KKNetworkBase.m in Sources */,
 				30202FF7237962DE00F1AADA /* KKLabelModel.m in Sources */,
 				30036DD822B9FE0D00605DF7 /* KKNetworkApi.m in Sources */,
+				60B68110238BE90B00E3F6B7 /* KKNetworkViewController.m in Sources */,
 				30202FD023793FE500F1AADA /* KKRootViewController.m in Sources */,
 				302897A122C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33022BA45A400372F07 /* NSObject+KExtension.m in Sources */,
