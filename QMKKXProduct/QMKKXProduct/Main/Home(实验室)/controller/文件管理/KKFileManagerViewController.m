@@ -37,7 +37,7 @@
     KKLabelModel *c1 = [[KKLabelModel alloc] initWithTitle:@"仅限模拟器获取Mac资源文件" value:nil];
     c1.value = @"/";
     KKLabelModel *c2 = [[KKLabelModel alloc] initWithTitle:@"iPhone文件" value:nil];
-    c2.value = @"/";
+    c2.value = @"/Users/Hansen/Downloads";
     [self.datas addObjectsFromArray:@[c1,c2,]];
     [self.tableView reloadData];
 }

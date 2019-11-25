@@ -19,9 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kk_icon_1r1Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="NHL-Kw-bad">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RgW-br-jlM">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,18 +32,11 @@
             <constraints>
                 <constraint firstItem="RgW-br-jlM" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="3vA-A9-GH5"/>
                 <constraint firstItem="RgW-br-jlM" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Jc6-5c-lfV"/>
-                <constraint firstAttribute="trailing" secondItem="NHL-Kw-bad" secondAttribute="trailing" id="RgF-E6-UDG"/>
                 <constraint firstItem="RgW-br-jlM" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="Y6T-Nt-a38"/>
-                <constraint firstAttribute="bottom" secondItem="NHL-Kw-bad" secondAttribute="bottom" id="YBh-pJ-icb"/>
                 <constraint firstItem="RgW-br-jlM" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="Zel-fQ-otC"/>
-                <constraint firstItem="NHL-Kw-bad" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="cuZ-9b-aQm"/>
-                <constraint firstItem="NHL-Kw-bad" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="whB-jI-at2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="-175.36231884057972" y="95.758928571428569"/>
         </view>
     </objects>
-    <resources>
-        <image name="kk_icon_1r1Placeholder" width="256" height="256"/>
-    </resources>
 </document>
