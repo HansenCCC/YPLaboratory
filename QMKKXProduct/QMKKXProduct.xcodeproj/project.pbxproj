@@ -687,8 +687,6 @@
 				30202FD52379588200F1AADA /* KKHomeViewController.h */,
 				30202FD62379588200F1AADA /* KKHomeViewController.m */,
 				30202FE0237958D800F1AADA /* KKHomeViewController.xib */,
-				30202FEC23795FA300F1AADA /* model */,
-				30202FEB23795F9E00F1AADA /* view */,
 				30202FEA23795F8B00F1AADA /* controller */,
 			);
 			path = "Home(实验室)";
@@ -754,6 +752,8 @@
 		30202FED2379618800F1AADA /* app图片制作 */ = {
 			isa = PBXGroup;
 			children = (
+				30202FEC23795FA300F1AADA /* model */,
+				30202FEB23795F9E00F1AADA /* view */,
 				3091743B237BECCE00010E99 /* app图标制作资源 */,
 				30917404237AB37400010E99 /* KKAppIcon.h */,
 				30917405237AB37400010E99 /* KKAppIcon.m */,

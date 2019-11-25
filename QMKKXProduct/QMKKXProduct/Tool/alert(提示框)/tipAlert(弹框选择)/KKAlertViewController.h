@@ -64,6 +64,17 @@ typedef void(^KKAlertViewControllerBlock)(KKAlertViewController *controler ,NSIn
 
 
 /**
+ 显示是否清空sdweb缓存
+ */
++ (KKAlertViewController *)showAlertDeleteSDWebImagesWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock;
+
+/**
+ 显示是否清空原生缓存
+ */
++ (KKAlertViewController *)showAlertDeleteImagesWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock;
+
+
+/**
  显示充值成功效果
  */
 + (KKAlertViewController *)showAlertRechargeSuccessWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock;

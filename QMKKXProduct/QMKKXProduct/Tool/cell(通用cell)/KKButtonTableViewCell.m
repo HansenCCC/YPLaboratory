@@ -14,7 +14,7 @@
     [super awakeFromNib];
     // Initialization code
     self.titleButton.userInteractionEnabled = NO;
-    self.titleButton.titleLabel.font = AdaptedBoldFontSize(18.f);
+    self.titleButton.titleLabel.font = AdaptedFontSize(16.f);
     [self.titleButton setTitleColor:KKColor_0000FF forState:UIControlStateNormal];
 }
 - (void)setCellModel:(KKLabelModel *)cellModel{

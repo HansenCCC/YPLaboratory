@@ -37,7 +37,7 @@
 }
 - (void)setupSubViews{
     //
-    self.textLabel = [UILabel labelWithFont:AdaptedBoldFontSize(18.f) textColor:KKColor_000000];
+    self.textLabel = [UILabel labelWithFont:AdaptedBoldFontSize(16.f) textColor:KKColor_000000];
     self.textLabel.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.textLabel];
     //
@@ -46,7 +46,7 @@
     [self.leftBtn setTitleColor:KKColor_999999 forState:UIControlStateNormal];
     [self.leftBtn addTarget:self action:@selector(whenLeftClick:) forControlEvents:UIControlEventTouchUpInside];
     self.leftBtn.backgroundColor = KKColor_EEEEEE;
-    self.leftBtn.titleLabel.font = AdaptedBoldFontSize(18.f);
+    self.leftBtn.titleLabel.font = AdaptedBoldFontSize(15.f);
     [self.contentView addSubview:self.leftBtn];
     //
     self.rightBtn = [[UIButton alloc] init];
@@ -54,7 +54,7 @@
     [self.rightBtn setTitle:@"确定" forState:UIControlStateNormal];
     [self.rightBtn addTarget:self action:@selector(whenRightClick:) forControlEvents:UIControlEventTouchUpInside];
     self.rightBtn.backgroundColor = KKColor_0000FF;
-    self.rightBtn.titleLabel.font = AdaptedBoldFontSize(18.f);
+    self.rightBtn.titleLabel.font = AdaptedBoldFontSize(15.f);
     [self.contentView addSubview:self.rightBtn];
     //
     self.closeButton = [[UIButton alloc] init];
@@ -63,7 +63,7 @@
     [self.closeButton addTarget:self action:@selector(whenCloseClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:self.closeButton];
     //
-    self.titleLabel = [UILabel labelWithFont:AdaptedFontSize(18.f) textColor:KKColor_000000];
+    self.titleLabel = [UILabel labelWithFont:AdaptedFontSize(16.f) textColor:KKColor_000000];
     self.titleLabel.numberOfLines = 10;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.titleLabel];
@@ -97,10 +97,10 @@
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
     CGRect bounds = self.view.bounds;
-    CGFloat height = AdaptedWidth(50.f);
+    CGFloat height = AdaptedWidth(44.f);
     //
     CGRect f1 = bounds;
-    f1.size.width = bounds.size.width - 2 * AdaptedWidth(38.f);
+    f1.size.width = bounds.size.width - 2 * AdaptedWidth(50.f);
     f1.origin.x = (bounds.size.width - f1.size.width)/2;
     //
     CGRect f6 = bounds;
@@ -221,6 +221,29 @@
     alert.canTouchBeginMove = YES;
     alert.isOnlyOneButton = YES;
     alert.rightBtn.hidden = YES;
+    UIViewController *vc = alert.view.topViewController;
+    [vc presentViewController:alert animated:YES completion:nil];
+    return alert;
+}
+
+
+/**
+ 显示是否清空sdweb缓存
+ */
++ (KKAlertViewController *)showAlertDeleteSDWebImagesWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    KKAlertViewController *alert = [self allocWithTipText:@"清空SDWebImage缓存?" leftTitle:@"取消" rightTitle:@"确定" complete:whenCompleteBlock];
+    alert.isShowCloseButton = NO;
+    UIViewController *vc = alert.view.topViewController;
+    [vc presentViewController:alert animated:YES completion:nil];
+    return alert;
+}
+
+/**
+ 显示是否清空原生缓存
+ */
++ (KKAlertViewController *)showAlertDeleteImagesWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    KKAlertViewController *alert = [self allocWithTipText:@"清空图片缓存?" leftTitle:@"取消" rightTitle:@"确定" complete:whenCompleteBlock];
+    alert.isShowCloseButton = NO;
     UIViewController *vc = alert.view.topViewController;
     [vc presentViewController:alert animated:YES completion:nil];
     return alert;

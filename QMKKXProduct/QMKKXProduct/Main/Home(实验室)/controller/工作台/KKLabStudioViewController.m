@@ -28,6 +28,11 @@
     NSString *path = @".";
     NSArray* tempArray = [manager contentsOfDirectoryAtPath:path error:nil];
     NSLog(@"%@",tempArray);
+    
+    UIImageView *image = [[UIImageView alloc] init];
+    [image kk_setImageWithUrl:@"https://raw.githubusercontent.com/HansenCCC/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE1.png"];
+    [image kk_setImageWithUrl:@"https://pics6.baidu.com/feed/34fae6cd7b899e51b0054c9b548b1436c9950d63.jpeg?token=0ce572f72d597e7c8c2a23e69f6f0150&s=B2FA718411008F535BB7D4970300D0C9"];
+    
 }
 //同步执行 + 并发队列
 - (void)dispatchQueue00{
