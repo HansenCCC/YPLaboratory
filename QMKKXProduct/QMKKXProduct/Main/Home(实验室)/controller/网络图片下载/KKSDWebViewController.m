@@ -12,6 +12,7 @@
 @interface KKSDWebViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSString *imagePath;//测试地址
 
 @end
 
@@ -82,26 +83,84 @@
     [self.view endEditing:YES];
     WeakSelf
     KKLabelModel *cellModel = self.datas[indexPath.row];
-    NSString *imagePath = @"https://raw.githubusercontent.com/HansenCCC/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE1.png";
+    NSString *imagePath = self.imagePath;
     if([cellModel.title isEqualToString:@"原生网络下载图片(不缓存)"]){
-        [self showLoadingOnWindow];
+        [self showLoading];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSData *imageData = [NSData dataWithContentsOfURL:imagePath.toURL];
-            UIImage *image = [UIImage imageWithData:imageData];
+            NSData *imageDate = [NSData dataWithContentsOfURL:imagePath.toURL];
+            UIImage *image = [UIImage imageWithData:imageDate];
             NSLog(@"%@",image);
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self hideLondingOnWindow];
+                [weakSelf hideLoading];
             });
         });
     }else if([cellModel.title isEqualToString:@"原生网络下载图片(缓存)"]){
-        
+        [self showLoading];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            NSData *imageDate = [NSData dataWithContentsOfURL:imagePath.toURL];
+            UIImage *image = [UIImage imageWithData:imageDate];
+            NSLog(@"%@",image);
+            NSString *fileName = [imagePath stringByReplacingOccurrencesOfString:@"/" withString:@""];
+            //本地沙盒目录
+            NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"qmkkxImages"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf hideLoading];
+                //判断文件是否存在，不存直接创建
+                BOOL isDirExist = [fileManager fileExistsAtPath:path isDirectory:nil];
+                if(!isDirExist){
+                    [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+                }
+                NSString *filePath = [path stringByAppendingPathComponent:fileName];
+                //将取得的图片写入本地的沙盒中
+                BOOL success = [imageDate writeToFile:filePath  atomically:YES];
+                if (success){
+                    [weakSelf showSuccessWithMsg:@"本地图片缓存成功！"];
+                }else{
+                    [weakSelf showError:@"本地图片缓存失败！"];
+                }
+            });
+        });
     }else if([cellModel.title isEqualToString:@"SDWebImage下载图片(不缓存)"]){
-        
+        MBProgressHUD *hud = (MBProgressHUD *)[self showCustomIcon:nil message:cellModel.title isWindow:NO timer:60];
+        hud.mode = MBProgressHUDModeAnnularDeterminate;
+        //剖析sdweb，SDWebImageDownloaderHighPriority优先下载，不缓存
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:imagePath.toURL options:SDWebImageDownloaderHighPriority progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+            CGFloat expectedSizeCopy = expectedSize;
+            CGFloat receivedSizeCopy = receivedSize;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                hud.progress = receivedSizeCopy/expectedSizeCopy;
+            });
+        } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            [MBProgressHUD hideHUD];
+            if(finished){
+                [weakSelf showSuccessWithMsg:@"图片请求成功！"];
+            }else{
+                [weakSelf showError:error.domain];
+            }
+        }];
     }else if([cellModel.title isEqualToString:@"SDWebImage下载图片(缓存)"]){
-        
+        MBProgressHUD *hud = (MBProgressHUD *)[self showCustomIcon:nil message:cellModel.title isWindow:NO timer:60];
+        hud.mode = MBProgressHUDModeAnnularDeterminate;
+        //剖析sdweb，SDWebImageRetryFailed优先下载，不缓存
+        [[SDWebImageManager sharedManager] loadImageWithURL:imagePath.toURL options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+            CGFloat expectedSizeCopy = expectedSize;
+            CGFloat receivedSizeCopy = receivedSize;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                hud.progress = receivedSizeCopy/expectedSizeCopy;
+            });
+        } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+            [MBProgressHUD hideHUD];
+            if(finished){
+                [weakSelf showSuccessWithMsg:@"图片请求成功！"];
+            }else{
+                [weakSelf showError:error.domain];
+            }
+        }];
     }else if([cellModel.title isEqualToString:@"原生缓存文件夹"]){
         KKFileViewController *vc = [[KKFileViewController alloc] init];
-        vc.filePath = @"/";
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] ;
+        vc.filePath = path;
         [self.navigationController pushViewController:vc animated:YES];
     }else if([cellModel.title isEqualToString:@"清空原生缓存"]){
         [KKAlertViewController showAlertDeleteImagesWithComplete:^(KKAlertViewController *controler, NSInteger index) {
@@ -121,29 +180,19 @@
     }else if([cellModel.title isEqualToString:@"清空SDWebImage缓存"]){
         [KKAlertViewController showAlertDeleteSDWebImagesWithComplete:^(KKAlertViewController *controler, NSInteger index) {
             if (index == 1) {
+                //清空磁盘
                 [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
                     //to do
                     [weakSelf showSuccessWithMsg:@"操作执行完成！"];
                 }];
+                //清空内存
+                [[SDImageCache sharedImageCache] clearMemory];
             }
             [controler dismissViewControllerCompletion:nil];
         }];
     }
 }
-//NSData *imageData = nil;
-//BOOL isExit = [[SDWebImageManager sharedManager] diskImageExistsForURL:[NSURL URLWithString:imageURL]];
-//if (isExit) {
-//    NSString *cacheImageKey = [[SDWebImageManager sharedManager] cacheKeyForURL:[NSURL URLWithString:imageURL]];
-//    if (cacheImageKey.length) {
-//        NSString *cacheImagePath = [[SDImageCache sharedImageCache] defaultCachePathForKey:cacheImageKey];
-//        if (cacheImagePath.length) {
-//            imageData = [NSData dataWithContentsOfFile:cacheImagePath];
-//        }
-//    }
-//}
-//if (!imageData) {
-//   imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
-//}
-//return imageData;
-
+- (NSString *)imagePath{
+    return @"https://raw.githubusercontent.com/HansenCCC/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE1.png";
+}
 @end

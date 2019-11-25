@@ -233,6 +233,7 @@
 + (KKAlertViewController *)showAlertDeleteSDWebImagesWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
     KKAlertViewController *alert = [self allocWithTipText:@"清空SDWebImage缓存?" leftTitle:@"取消" rightTitle:@"确定" complete:whenCompleteBlock];
     alert.isShowCloseButton = NO;
+    alert.canTouchBeginMove = YES;
     UIViewController *vc = alert.view.topViewController;
     [vc presentViewController:alert animated:YES completion:nil];
     return alert;
@@ -244,6 +245,7 @@
 + (KKAlertViewController *)showAlertDeleteImagesWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
     KKAlertViewController *alert = [self allocWithTipText:@"清空图片缓存?" leftTitle:@"取消" rightTitle:@"确定" complete:whenCompleteBlock];
     alert.isShowCloseButton = NO;
+    alert.canTouchBeginMove = YES;
     UIViewController *vc = alert.view.topViewController;
     [vc presentViewController:alert animated:YES completion:nil];
     return alert;

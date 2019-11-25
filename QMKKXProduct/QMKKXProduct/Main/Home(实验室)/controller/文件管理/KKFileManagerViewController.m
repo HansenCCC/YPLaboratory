@@ -40,9 +40,15 @@
     c2.value = @"/Users/Hansen/Desktop/";
     KKLabelModel *c3 = [[KKLabelModel alloc] initWithTitle:@"NSHomeDirectory()文件" value:nil];
     c3.value = NSHomeDirectory();
-    KKLabelModel *c4 = [[KKLabelModel alloc] initWithTitle:@"Mac Downloads文件" value:nil];
-    c4.value = @"/Users/Hansen/Downloads/";
-    [self.datas addObjectsFromArray:@[c1,c2,c4,c3,]];
+    KKLabelModel *c4 = [[KKLabelModel alloc] initWithTitle:@"原生缓存文件夹" value:nil];
+    NSString *filePath4 = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] ;
+    c4.value = filePath4;
+    KKLabelModel *c5 = [[KKLabelModel alloc] initWithTitle:@"SDWebImage缓存文件夹" value:nil];
+    NSString *filePath5 = [[SDImageCache sharedImageCache] makeDiskCachePath:@"default"];
+    c5.value = filePath5;
+    KKLabelModel *c6 = [[KKLabelModel alloc] initWithTitle:@"mainBundle文件夹" value:nil];
+    c6.value = [[NSBundle mainBundle] bundlePath];
+    [self.datas addObjectsFromArray:@[c1,c2,c4,c5,c3,c6,]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

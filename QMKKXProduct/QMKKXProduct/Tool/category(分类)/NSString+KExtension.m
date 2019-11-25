@@ -310,6 +310,7 @@
 //常见图片格式集合 JPG、PNG、PDF、TIFF、SWF
 + (NSArray <NSString *> *)fileImages{
     return @[@"JPG",@"jpg",
+             @"JPEG",@"jpeg",
              @"PNG",@"png",
              @"PDF",@"pdf",
              @"TIFF",@"tiff",
