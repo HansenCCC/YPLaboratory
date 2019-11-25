@@ -5,7 +5,7 @@ iOS底层框架
 
 预览图
 
-<img src="https://raw.githubusercontent.com/HansenCCC/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE1.png" width="200">
+<img src="https://raw.githubusercontent.com/HansenCCC/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE1.png">
 
 #### 软件架构
 软件架构说明
