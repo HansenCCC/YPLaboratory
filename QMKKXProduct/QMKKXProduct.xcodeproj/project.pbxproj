@@ -247,6 +247,26 @@
 		60B68111238BE90B00E3F6B7 /* KKNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B6810E238BE90B00E3F6B7 /* KKNetworkViewController.m */; };
 		60B68112238BE90B00E3F6B7 /* KKNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B6810F238BE90B00E3F6B7 /* KKNetworkViewController.xib */; };
 		60B68113238BE90B00E3F6B7 /* KKNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B6810F238BE90B00E3F6B7 /* KKNetworkViewController.xib */; };
+		60B68117238CCEB600E3F6B7 /* KKCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68115238CCEB600E3F6B7 /* KKCarouselViewController.m */; };
+		60B68118238CCEB600E3F6B7 /* KKCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68115238CCEB600E3F6B7 /* KKCarouselViewController.m */; };
+		60B68119238CCEB600E3F6B7 /* KKCarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68116238CCEB600E3F6B7 /* KKCarouselViewController.xib */; };
+		60B6811A238CCEB600E3F6B7 /* KKCarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68116238CCEB600E3F6B7 /* KKCarouselViewController.xib */; };
+		60B68122238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68120238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.m */; };
+		60B68123238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68120238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.m */; };
+		60B68124238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68121238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.xib */; };
+		60B68125238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68121238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.xib */; };
+		60B68129238CCFCD00E3F6B7 /* KKBezierPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68127238CCFCD00E3F6B7 /* KKBezierPathViewController.m */; };
+		60B6812A238CCFCD00E3F6B7 /* KKBezierPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68127238CCFCD00E3F6B7 /* KKBezierPathViewController.m */; };
+		60B6812B238CCFCD00E3F6B7 /* KKBezierPathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68128238CCFCD00E3F6B7 /* KKBezierPathViewController.xib */; };
+		60B6812C238CCFCD00E3F6B7 /* KKBezierPathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68128238CCFCD00E3F6B7 /* KKBezierPathViewController.xib */; };
+		60B68132238CD21100E3F6B7 /* KKCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B6812E238CD21100E3F6B7 /* KKCarouselView.m */; };
+		60B68133238CD21100E3F6B7 /* KKCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B6812E238CD21100E3F6B7 /* KKCarouselView.m */; };
+		60B68134238CD21100E3F6B7 /* KKCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68130238CD21100E3F6B7 /* KKCollectionViewFlowLayout.m */; };
+		60B68135238CD21100E3F6B7 /* KKCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68130238CD21100E3F6B7 /* KKCollectionViewFlowLayout.m */; };
+		60B6813A238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68138238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m */; };
+		60B6813B238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68138238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m */; };
+		60B6813C238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68139238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib */; };
+		60B6813D238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68139238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib */; };
 		60C6CFBD238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */; };
 		60C6CFBE238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */; };
 		60C6CFBF238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFBC238846BD00FABAA3 /* KKNavigationConfigViewController.xib */; };
@@ -491,6 +511,22 @@
 		60B6810D238BE90B00E3F6B7 /* KKNetworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNetworkViewController.h; sourceTree = "<group>"; };
 		60B6810E238BE90B00E3F6B7 /* KKNetworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNetworkViewController.m; sourceTree = "<group>"; };
 		60B6810F238BE90B00E3F6B7 /* KKNetworkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKNetworkViewController.xib; sourceTree = "<group>"; };
+		60B68114238CCEB600E3F6B7 /* KKCarouselViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KKCarouselViewController.h; path = "QMKKXProduct/Main/Home(实验室)/controller/ui组件/轮播图/KKCarouselViewController.h"; sourceTree = SOURCE_ROOT; };
+		60B68115238CCEB600E3F6B7 /* KKCarouselViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KKCarouselViewController.m; path = "QMKKXProduct/Main/Home(实验室)/controller/ui组件/轮播图/KKCarouselViewController.m"; sourceTree = SOURCE_ROOT; };
+		60B68116238CCEB600E3F6B7 /* KKCarouselViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = KKCarouselViewController.xib; path = "QMKKXProduct/Main/Home(实验室)/controller/ui组件/轮播图/KKCarouselViewController.xib"; sourceTree = SOURCE_ROOT; };
+		60B6811F238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKCoreGraphicsViewController.h; sourceTree = "<group>"; };
+		60B68120238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKCoreGraphicsViewController.m; sourceTree = "<group>"; };
+		60B68121238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKCoreGraphicsViewController.xib; sourceTree = "<group>"; };
+		60B68126238CCFCD00E3F6B7 /* KKBezierPathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBezierPathViewController.h; sourceTree = "<group>"; };
+		60B68127238CCFCD00E3F6B7 /* KKBezierPathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBezierPathViewController.m; sourceTree = "<group>"; };
+		60B68128238CCFCD00E3F6B7 /* KKBezierPathViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKBezierPathViewController.xib; sourceTree = "<group>"; };
+		60B6812E238CD21100E3F6B7 /* KKCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCarouselView.m; sourceTree = "<group>"; };
+		60B6812F238CD21100E3F6B7 /* KKCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCarouselView.h; sourceTree = "<group>"; };
+		60B68130238CD21100E3F6B7 /* KKCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		60B68131238CD21100E3F6B7 /* KKCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		60B68137238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKCarouselViewCollectionViewCell.h; sourceTree = "<group>"; };
+		60B68138238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKCarouselViewCollectionViewCell.m; sourceTree = "<group>"; };
+		60B68139238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKCarouselViewCollectionViewCell.xib; sourceTree = "<group>"; };
 		60C6CFBA238846BD00FABAA3 /* KKNavigationConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNavigationConfigViewController.h; sourceTree = "<group>"; };
 		60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationConfigViewController.m; sourceTree = "<group>"; };
 		60C6CFBC238846BD00FABAA3 /* KKNavigationConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKNavigationConfigViewController.xib; sourceTree = "<group>"; };
@@ -614,6 +650,7 @@
 				3015A056237D33390086B39D /* KKUIUnitViewController.h */,
 				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
+				60B6811C238CCED600E3F6B7 /* 轮播图 */,
 				60C6CFC82389A36C00FABAA3 /* 普通提示框 */,
 				60C6CFD7238A848000FABAA3 /* 输入选择框 */,
 				60C6CFB92388466F00FABAA3 /* 导航栏配置 */,
@@ -629,27 +666,6 @@
 				60B6810F238BE90B00E3F6B7 /* KKNetworkViewController.xib */,
 			);
 			path = "API网络层";
-			sourceTree = "<group>";
-		};
-		3015A051237D31E50086B39D /* C语言绘图(Core Graphics) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "C语言绘图(Core Graphics)";
-			sourceTree = "<group>";
-		};
-		3015A052237D32140086B39D /* OC语言绘图(UIBezierPath) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "OC语言绘图(UIBezierPath)";
-			sourceTree = "<group>";
-		};
-		3015A053237D32230086B39D /* k线应用 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "k线应用";
 			sourceTree = "<group>";
 		};
 		3015A054237D32490086B39D /* Apple安装协议 */ = {
@@ -726,16 +742,15 @@
 			isa = PBXGroup;
 			children = (
 				30E2077E2379758800EE3E8E /* 工作台 */,
-				30202FED2379618800F1AADA /* app图片制作 */,
-				3091741E237BE80000010E99 /* 英语专业考试 */,
 				30917444237C26C900010E99 /* 网络图片下载 */,
-				3015A050237D31D80086B39D /* API网络层 */,
-				3015A04F237D31C00086B39D /* ui组件 */,
-				3015A051237D31E50086B39D /* C语言绘图(Core Graphics) */,
-				3015A052237D32140086B39D /* OC语言绘图(UIBezierPath) */,
-				3015A053237D32230086B39D /* k线应用 */,
-				3015A054237D32490086B39D /* Apple安装协议 */,
 				60C6CFDF238AE6AF00FABAA3 /* 文件管理 */,
+				3091741E237BE80000010E99 /* 英语专业考试 */,
+				3015A050237D31D80086B39D /* API网络层 */,
+				30202FED2379618800F1AADA /* app图片制作 */,
+				3015A054237D32490086B39D /* Apple安装协议 */,
+				60B6811D238CCF8700E3F6B7 /* C语言绘图(Core Graphics) */,
+				60B6811E238CCF8E00E3F6B7 /* OC语言绘图(UIBezierPath) */,
+				3015A04F237D31C00086B39D /* ui组件 */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1012,6 +1027,7 @@
 			isa = PBXGroup;
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
+				60B6812D238CD1FB00E3F6B7 /* carousel(轮播图) */,
 				309173FC237AAF1200010E99 /* cell(通用cell) */,
 				30036DD022B9FBB400605DF7 /* single(单例管理) */,
 				308DF7672359B1B400A503D0 /* webView(网站) */,
@@ -1210,6 +1226,58 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		60B6811C238CCED600E3F6B7 /* 轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				60B68136238CDA1400E3F6B7 /* view */,
+				60B68114238CCEB600E3F6B7 /* KKCarouselViewController.h */,
+				60B68115238CCEB600E3F6B7 /* KKCarouselViewController.m */,
+				60B68116238CCEB600E3F6B7 /* KKCarouselViewController.xib */,
+			);
+			path = "轮播图";
+			sourceTree = "<group>";
+		};
+		60B6811D238CCF8700E3F6B7 /* C语言绘图(Core Graphics) */ = {
+			isa = PBXGroup;
+			children = (
+				60B6811F238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.h */,
+				60B68120238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.m */,
+				60B68121238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.xib */,
+			);
+			path = "C语言绘图(Core Graphics)";
+			sourceTree = "<group>";
+		};
+		60B6811E238CCF8E00E3F6B7 /* OC语言绘图(UIBezierPath) */ = {
+			isa = PBXGroup;
+			children = (
+				60B68126238CCFCD00E3F6B7 /* KKBezierPathViewController.h */,
+				60B68127238CCFCD00E3F6B7 /* KKBezierPathViewController.m */,
+				60B68128238CCFCD00E3F6B7 /* KKBezierPathViewController.xib */,
+			);
+			path = "OC语言绘图(UIBezierPath)";
+			sourceTree = "<group>";
+		};
+		60B6812D238CD1FB00E3F6B7 /* carousel(轮播图) */ = {
+			isa = PBXGroup;
+			children = (
+				60B6812F238CD21100E3F6B7 /* KKCarouselView.h */,
+				60B6812E238CD21100E3F6B7 /* KKCarouselView.m */,
+				60B68131238CD21100E3F6B7 /* KKCollectionViewFlowLayout.h */,
+				60B68130238CD21100E3F6B7 /* KKCollectionViewFlowLayout.m */,
+			);
+			path = "carousel(轮播图)";
+			sourceTree = "<group>";
+		};
+		60B68136238CDA1400E3F6B7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				60B68137238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.h */,
+				60B68138238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m */,
+				60B68139238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		60C6CFB92388466F00FABAA3 /* 导航栏配置 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1370,6 +1438,7 @@
 				30917425237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DB122B9D76B00605DF7 /* Assets.xcassets in Resources */,
 				3091742F237BEC9900010E99 /* 4完型.json in Resources */,
+				60B6811A238CCEB600E3F6B7 /* KKCarouselViewController.xib in Resources */,
 				30658A6322CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */,
 				3091741A237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */,
 				30917435237BEC9900010E99 /* 3词汇.json in Resources */,
@@ -1384,11 +1453,14 @@
 				30202FDF2379589D00F1AADA /* KKWorldViewController.xib in Resources */,
 				302897B222C46DEF000F2669 /* city.json in Resources */,
 				60C6CFE6238AE6F100FABAA3 /* KKFileManagerViewController.xib in Resources */,
+				60B68125238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.xib in Resources */,
 				30036DAF22B9D76900605DF7 /* Main.storyboard in Resources */,
 				3091742D237BEC9900010E99 /* 6作文.json in Resources */,
 				60C6CFC0238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */,
 				30202FC6237936B400F1AADA /* index.html in Resources */,
+				60B6812C238CCFCD00E3F6B7 /* KKBezierPathViewController.xib in Resources */,
 				30917433237BEC9900010E99 /* 1交际.json in Resources */,
+				60B6813D238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib in Resources */,
 				309173FB237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE2237958D800F1AADA /* KKHomeViewController.xib in Resources */,
 				30917431237BEC9900010E99 /* 2阅读.json in Resources */,
@@ -1418,6 +1490,7 @@
 				30917424237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DC622B9DDC500605DF7 /* Assets.xcassets in Resources */,
 				3091742E237BEC9900010E99 /* 4完型.json in Resources */,
+				60B68119238CCEB600E3F6B7 /* KKCarouselViewController.xib in Resources */,
 				30658A6222CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */,
 				30917419237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */,
 				30917434237BEC9900010E99 /* 3词汇.json in Resources */,
@@ -1432,11 +1505,14 @@
 				30202FDE2379589D00F1AADA /* KKWorldViewController.xib in Resources */,
 				302897B122C46DEF000F2669 /* city.json in Resources */,
 				60C6CFE5238AE6F100FABAA3 /* KKFileManagerViewController.xib in Resources */,
+				60B68124238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.xib in Resources */,
 				30036DC722B9DDC500605DF7 /* Main.storyboard in Resources */,
 				3091742C237BEC9900010E99 /* 6作文.json in Resources */,
 				60C6CFBF238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */,
 				30202FC5237936B400F1AADA /* index.html in Resources */,
+				60B6812B238CCFCD00E3F6B7 /* KKBezierPathViewController.xib in Resources */,
 				30917432237BEC9900010E99 /* 1交际.json in Resources */,
+				60B6813C238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib in Resources */,
 				309173FA237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE1237958D800F1AADA /* KKHomeViewController.xib in Resources */,
 				30917430237BEC9900010E99 /* 2阅读.json in Resources */,
@@ -1541,6 +1617,7 @@
 				307C27EC23587A6000DB3ED6 /* KKUserInfoModel.m in Sources */,
 				302897B422C46DEF000F2669 /* KKDistrict.m in Sources */,
 				3028973C22C0C734000F2669 /* MBProgressHUD+KExtension.m in Sources */,
+				60B68133238CD21100E3F6B7 /* KKCarouselView.m in Sources */,
 				30917423237BEA2400010E99 /* KKExamListViewController.m in Sources */,
 				3077A33B22BA45A500372F07 /* NSData+KExtension.m in Sources */,
 				302897B622C46DEF000F2669 /* KKAddressPickerModel.m in Sources */,
@@ -1548,6 +1625,7 @@
 				30658A7922CF265F0072CD24 /* KKQRCodeView.m in Sources */,
 				302897B822C46DEF000F2669 /* KKCity.m in Sources */,
 				30658A7D22CF29580072CD24 /* UIImage+HVUI.m in Sources */,
+				60B68123238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.m in Sources */,
 				3077A35422BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */,
 				60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
@@ -1555,6 +1633,7 @@
 				3028979822C46DEF000F2669 /* KKBaseResponse.m in Sources */,
 				3077A35C22BB357100372F07 /* UIViewController+KExtension.m in Sources */,
 				3028979222C46DEF000F2669 /* HVUILayoutConstraint.m in Sources */,
+				60B6812A238CCFCD00E3F6B7 /* KKBezierPathViewController.m in Sources */,
 				30202FD82379588200F1AADA /* KKHomeViewController.m in Sources */,
 				307C27F123587AAD00DB3ED6 /* KKNotification.m in Sources */,
 				3028979A22C46DEF000F2669 /* KKImagePickerController.m in Sources */,
@@ -1598,6 +1677,7 @@
 				30202FF8237962DE00F1AADA /* KKLabelModel.m in Sources */,
 				30036DD922B9FE0D00605DF7 /* KKNetworkApi.m in Sources */,
 				60B68111238BE90B00E3F6B7 /* KKNetworkViewController.m in Sources */,
+				60B68118238CCEB600E3F6B7 /* KKCarouselViewController.m in Sources */,
 				30202FD123793FE500F1AADA /* KKRootViewController.m in Sources */,
 				302897A222C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33122BA45A400372F07 /* NSObject+KExtension.m in Sources */,
@@ -1615,6 +1695,7 @@
 				3077A33322BA45A400372F07 /* NSDictionary+KExtension.m in Sources */,
 				30658A7322CF265F0072CD24 /* KKPhotoSessionView.m in Sources */,
 				302897BC22C46DEF000F2669 /* KKEmptyDataView.m in Sources */,
+				60B68135238CD21100E3F6B7 /* KKCollectionViewFlowLayout.m in Sources */,
 				3029A08F22C4A49B002E7937 /* AppDelegate+KKThird.m in Sources */,
 				302897CA22C47207000F2669 /* KKRefreshNormalHeader.m in Sources */,
 				3028979622C46DEF000F2669 /* HVUIFlowLayoutConstraint.m in Sources */,
@@ -1626,6 +1707,7 @@
 				3028979422C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
 				30917401237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
 				302897BE22C46DEF000F2669 /* KKTextField.m in Sources */,
+				60B6813B238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1638,6 +1720,7 @@
 				307C27EB23587A6000DB3ED6 /* KKUserInfoModel.m in Sources */,
 				302897B322C46DEF000F2669 /* KKDistrict.m in Sources */,
 				3028973B22C0C734000F2669 /* MBProgressHUD+KExtension.m in Sources */,
+				60B68132238CD21100E3F6B7 /* KKCarouselView.m in Sources */,
 				30917422237BEA2400010E99 /* KKExamListViewController.m in Sources */,
 				3077A33A22BA45A500372F07 /* NSData+KExtension.m in Sources */,
 				302897B522C46DEF000F2669 /* KKAddressPickerModel.m in Sources */,
@@ -1645,6 +1728,7 @@
 				30658A7822CF265F0072CD24 /* KKQRCodeView.m in Sources */,
 				302897B722C46DEF000F2669 /* KKCity.m in Sources */,
 				30658A7C22CF29580072CD24 /* UIImage+HVUI.m in Sources */,
+				60B68122238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.m in Sources */,
 				3077A35322BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */,
 				60C6CFEA238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
@@ -1652,6 +1736,7 @@
 				3028979722C46DEF000F2669 /* KKBaseResponse.m in Sources */,
 				3077A35B22BB357100372F07 /* UIViewController+KExtension.m in Sources */,
 				3028979122C46DEF000F2669 /* HVUILayoutConstraint.m in Sources */,
+				60B68129238CCFCD00E3F6B7 /* KKBezierPathViewController.m in Sources */,
 				30202FD72379588200F1AADA /* KKHomeViewController.m in Sources */,
 				307C27F023587AAD00DB3ED6 /* KKNotification.m in Sources */,
 				3028979922C46DEF000F2669 /* KKImagePickerController.m in Sources */,
@@ -1695,6 +1780,7 @@
 				30202FF7237962DE00F1AADA /* KKLabelModel.m in Sources */,
 				30036DD822B9FE0D00605DF7 /* KKNetworkApi.m in Sources */,
 				60B68110238BE90B00E3F6B7 /* KKNetworkViewController.m in Sources */,
+				60B68117238CCEB600E3F6B7 /* KKCarouselViewController.m in Sources */,
 				30202FD023793FE500F1AADA /* KKRootViewController.m in Sources */,
 				302897A122C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33022BA45A400372F07 /* NSObject+KExtension.m in Sources */,
@@ -1712,6 +1798,7 @@
 				3077A33222BA45A400372F07 /* NSDictionary+KExtension.m in Sources */,
 				30658A7222CF265F0072CD24 /* KKPhotoSessionView.m in Sources */,
 				302897BB22C46DEF000F2669 /* KKEmptyDataView.m in Sources */,
+				60B68134238CD21100E3F6B7 /* KKCollectionViewFlowLayout.m in Sources */,
 				3029A08E22C4A49B002E7937 /* AppDelegate+KKThird.m in Sources */,
 				302897C922C47207000F2669 /* KKRefreshNormalHeader.m in Sources */,
 				3028979522C46DEF000F2669 /* HVUIFlowLayoutConstraint.m in Sources */,
@@ -1723,6 +1810,7 @@
 				3028979322C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
 				30917400237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
 				302897BD22C46DEF000F2669 /* KKTextField.m in Sources */,
+				60B6813A238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

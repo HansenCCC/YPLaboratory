@@ -57,5 +57,7 @@
 #import "KKLabelTableViewCell.h"
 #import "KKButtonTableViewCell.h"
 #import "KKSwitchTableViewCell.h"
+//轮播图
+#import "KKCarouselView.h"
 
 #endif /* KKToolHeader_h */

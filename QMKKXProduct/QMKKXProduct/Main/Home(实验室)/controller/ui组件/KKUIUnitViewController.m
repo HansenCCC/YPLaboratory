@@ -12,6 +12,7 @@
 #import "KKProgressHUDViewController.h"//普通提示框
 #import "KKPickViewViewController.h"//选择输入框
 #import "KKNavigationConfigViewController.h"//导航栏设置
+#import "KKCarouselViewController.h"//carousel
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -48,7 +49,9 @@
     c5.isEnabled = NO;
     KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"K线应用" value:nil];
     s1m6.isEnabled = NO;
-    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m6,]];
+    KKLabelModel *s1m7 = [[KKLabelModel alloc] initWithTitle:@"轮播图(基于KKCarouselView)" value:nil];
+    s1m7.info = [KKCarouselViewController class];
+    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m7,s1m6,]];
     
     [self.tableView reloadData];
 }

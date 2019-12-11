@@ -47,7 +47,6 @@
     s1m4.info = [KKSDWebViewController class];
     KKLabelModel *s1m5 = [[KKLabelModel alloc] initWithTitle:@"API网络层" value:nil];
     s1m5.info = [KKNetworkViewController class];
-    s1m5.isEnabled = NO;
     KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"UI组件" value:nil];
     s1m6.info = [KKUIUnitViewController class];
     KKLabelModel *s1m7 = [[KKLabelModel alloc] initWithTitle:@"C语言绘图(Core Graphics)" value:nil];
