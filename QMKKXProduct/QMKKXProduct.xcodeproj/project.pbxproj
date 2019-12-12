@@ -1959,8 +1959,8 @@
 			baseConfigurationReference = E2336606067C1CE1E5B879B0 /* Pods-QMKKXProductDev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KTGQMS6CPU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QMKKXProduct/Macros/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -1972,8 +1972,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lw.qimukakaxi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingjoy.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.playingjoy.*";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1983,8 +1984,8 @@
 			baseConfigurationReference = ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KTGQMS6CPU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QMKKXProduct/Macros/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -1996,8 +1997,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lw.qimukakaxi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingjoy.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.playingjoy.*";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2007,8 +2009,8 @@
 			baseConfigurationReference = 6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KTGQMS6CPU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QMKKXProduct/Macros/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -2020,8 +2022,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lw.qimukakaxi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingjoy.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.playingjoy.*";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2031,8 +2034,8 @@
 			baseConfigurationReference = 5183A5B7580215A285039901 /* Pods-QMKKXProduct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KTGQMS6CPU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QMKKXProduct/Macros/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -2044,8 +2047,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lw.qimukakaxi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.playingjoy.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.playingjoy.*";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
