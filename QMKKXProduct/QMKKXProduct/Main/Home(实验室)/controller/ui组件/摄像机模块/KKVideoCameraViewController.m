@@ -1,32 +1,29 @@
 //
-//  KKUIUnitViewController.m
+//  KKVideoCameraViewController.m
 //  QMKKXProduct
 //
-//  Created by 程恒盛 on 2019/11/14.
-//  Copyright © 2019 力王工作室. All rights reserved.
+//  Created by Hansen on 1/3/20.
+//  Copyright © 2020 力王工作室. All rights reserved.
 //
 
-#import "KKUIUnitViewController.h"
+#import "KKVideoCameraViewController.h"
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
-#import "KKProgressHUDViewController.h"//普通提示框
-#import "KKPickViewViewController.h"//选择输入框
-#import "KKNavigationConfigViewController.h"//导航栏设置
-#import "KKCarouselViewController.h"//carousel
-#import "KKVideoCameraViewController.h"//camera
+#import "KKQRCodeScanViewController.h"
+#import "KKIDCardScanViewController.h"
 
-@interface KKUIUnitViewController ()
+@interface KKVideoCameraViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
 @property (weak  , nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation KKUIUnitViewController
+@implementation KKVideoCameraViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"ui组件";
+    self.title = @"摄像机模块";
     [self setupSubviews];
     //异步处理消耗内存操作
     [self reloadDatas];
@@ -38,24 +35,17 @@
 - (void)reloadDatas{
     [self.datas removeAllObjects];
     //构造cell
-    KKLabelModel *c1 = [[KKLabelModel alloc] initWithTitle:@"普通提示框(基于MBProgressHUD)" value:nil];
-    c1.info = [KKProgressHUDViewController class];
-    KKLabelModel *c2 = [[KKLabelModel alloc] initWithTitle:@"输入选择框(基于UIPickerView)" value:nil];
-    c2.info = [KKPickViewViewController class];
-    KKLabelModel *c3 = [[KKLabelModel alloc] initWithTitle:@"导航栏配置(基于UINavigationBar)" value:nil];
-    c3.info = [KKNavigationConfigViewController class];
-    KKLabelModel *c4 = [[KKLabelModel alloc] initWithTitle:@"丰富多彩的cell(基于UITableView)" value:nil];
-    c4.isEnabled = NO;
-    KKLabelModel *c5 = [[KKLabelModel alloc] initWithTitle:@"丰富多彩的cell(基于UICollectionView)" value:nil];
-    c5.isEnabled = NO;
-    KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"K线应用" value:nil];
-    s1m6.isEnabled = NO;
-    KKLabelModel *s1m7 = [[KKLabelModel alloc] initWithTitle:@"轮播图(基于KKCarouselView)" value:nil];
-    s1m7.info = [KKCarouselViewController class];
-    KKLabelModel *s1m8 = [[KKLabelModel alloc] initWithTitle:@"摄像机模块" value:nil];
-    s1m8.info = [KKVideoCameraViewController class];
-    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m7,s1m6,s1m8]];
-    
+    KKLabelModel *c1 = [[KKLabelModel alloc] initWithTitle:@"二维码扫码" value:nil];
+    c1.info = [KKQRCodeScanViewController class];
+    KKLabelModel *c2 = [[KKLabelModel alloc] initWithTitle:@"人脸追踪识别" value:nil];
+    c2.isEnabled = NO;
+//    c2.info = [KKPickViewViewController class];
+    KKLabelModel *c3 = [[KKLabelModel alloc] initWithTitle:@"自定义相机" value:nil];
+    c3.isEnabled = NO;
+//    c3.info = [KKNavigationConfigViewController class];
+    KKLabelModel *c4 = [[KKLabelModel alloc] initWithTitle:@"身份证拍照" value:nil];
+    c4.info = [KKIDCardScanViewController class];
+    [self.datas addObjectsFromArray:@[c1,c2,c3,c4,]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
@@ -97,4 +87,5 @@
     UIViewController *vc = [[viewControllerClass alloc] init];
     [self.navigationController pushViewController:vc animated:animated];
 }
+#pragma mark - aciton
 @end

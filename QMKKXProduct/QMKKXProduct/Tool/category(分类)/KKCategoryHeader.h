@@ -22,6 +22,7 @@
 #import "UIView+KExtension.h"//view
 #import "UILabel+KExtension.h"//label
 #import "UIButton+KExtension.h"//button
+#import "UITextField+KExtension.h"//textfield
 #import "UIImageView+KExtension.h"//imageView
 #import "UIScrollView+KExtension.h"//scrollView
 #import "UINavigationBar+KExtension.h"//navigationBar

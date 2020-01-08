@@ -239,6 +239,14 @@
 		30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */; };
 		30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */; };
 		5B93B02036A012D1C70F57FD /* libPods-QMKKXProduct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */; };
+		60022A0F23C5756D004F94DB /* UITextField+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 60022A0E23C5756D004F94DB /* UITextField+KExtension.m */; };
+		60022A1023C5756D004F94DB /* UITextField+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 60022A0E23C5756D004F94DB /* UITextField+KExtension.m */; };
+		603670A423BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */; };
+		603670A523BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */; };
+		603670A623BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */; };
+		603670A723BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */; };
+		603670AB23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */; };
+		603670AC23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */; };
 		60B68109238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */; };
 		60B6810A238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */; };
 		60B6810B238B017300E3F6B7 /* KKFileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68108238B017300E3F6B7 /* KKFileCollectionViewCell.xib */; };
@@ -505,6 +513,13 @@
 		30F8ADB222D5F12200382827 /* KKDropdownBoxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDropdownBoxView.h; sourceTree = "<group>"; };
 		30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKDropdownBoxView.m; sourceTree = "<group>"; };
 		5183A5B7580215A285039901 /* Pods-QMKKXProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.release.xcconfig"; sourceTree = "<group>"; };
+		60022A0D23C5756D004F94DB /* UITextField+KExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+KExtension.h"; sourceTree = "<group>"; };
+		60022A0E23C5756D004F94DB /* UITextField+KExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+KExtension.m"; sourceTree = "<group>"; };
+		603670A123BF39C4001E3D22 /* KKVideoCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKVideoCameraViewController.h; sourceTree = "<group>"; };
+		603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKVideoCameraViewController.m; sourceTree = "<group>"; };
+		603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoCameraViewController.xib; sourceTree = "<group>"; };
+		603670A923BF3B6B001E3D22 /* KKQRCodeScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKQRCodeScanViewController.h; sourceTree = "<group>"; };
+		603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKQRCodeScanViewController.m; sourceTree = "<group>"; };
 		60B68106238B017300E3F6B7 /* KKFileCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileCollectionViewCell.h; sourceTree = "<group>"; };
 		60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileCollectionViewCell.m; sourceTree = "<group>"; };
 		60B68108238B017300E3F6B7 /* KKFileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -654,6 +669,7 @@
 				60C6CFC82389A36C00FABAA3 /* 普通提示框 */,
 				60C6CFD7238A848000FABAA3 /* 输入选择框 */,
 				60C6CFB92388466F00FABAA3 /* 导航栏配置 */,
+				603670A023BF390E001E3D22 /* 摄像机模块 */,
 			);
 			path = "ui组件";
 			sourceTree = "<group>";
@@ -969,7 +985,6 @@
 			isa = PBXGroup;
 			children = (
 				30658A4922CF265F0072CD24 /* images */,
-				30658A5122CF265F0072CD24 /* controller */,
 				30658A5722CF265F0072CD24 /* view */,
 			);
 			path = "capture(相机)";
@@ -987,14 +1002,6 @@
 				30658A5022CF265F0072CD24 /* KKCamera_img_camera.png */,
 			);
 			path = images;
-			sourceTree = "<group>";
-		};
-		30658A5122CF265F0072CD24 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				30658A5222CF265F0072CD24 /* 身份证扫描 */,
-			);
-			path = controller;
 			sourceTree = "<group>";
 		};
 		30658A5222CF265F0072CD24 /* 身份证扫描 */ = {
@@ -1083,6 +1090,8 @@
 				3077A35622BB344D00372F07 /* UILabel+KExtension.m */,
 				3077A36122BB363F00372F07 /* UIButton+KExtension.h */,
 				3077A36222BB363F00372F07 /* UIButton+KExtension.m */,
+				60022A0D23C5756D004F94DB /* UITextField+KExtension.h */,
+				60022A0E23C5756D004F94DB /* UITextField+KExtension.m */,
 				3077A34622BB303500372F07 /* UIImageView+KExtension.h */,
 				3077A34522BB303500372F07 /* UIImageView+KExtension.m */,
 				3077A34222BB2FFF00372F07 /* UIScrollView+KExtension.h */,
@@ -1214,6 +1223,27 @@
 				30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */,
 			);
 			path = "dropdownBox(弹框)";
+			sourceTree = "<group>";
+		};
+		603670A023BF390E001E3D22 /* 摄像机模块 */ = {
+			isa = PBXGroup;
+			children = (
+				603670A123BF39C4001E3D22 /* KKVideoCameraViewController.h */,
+				603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */,
+				603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */,
+				30658A5222CF265F0072CD24 /* 身份证扫描 */,
+				603670A823BF3B2B001E3D22 /* 二维码扫码 */,
+			);
+			path = "摄像机模块";
+			sourceTree = "<group>";
+		};
+		603670A823BF3B2B001E3D22 /* 二维码扫码 */ = {
+			isa = PBXGroup;
+			children = (
+				603670A923BF3B6B001E3D22 /* KKQRCodeScanViewController.h */,
+				603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */,
+			);
+			path = "二维码扫码";
 			sourceTree = "<group>";
 		};
 		60B68105238B013800E3F6B7 /* view */ = {
@@ -1463,6 +1493,7 @@
 				60B6813D238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib in Resources */,
 				309173FB237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE2237958D800F1AADA /* KKHomeViewController.xib in Resources */,
+				603670A723BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */,
 				30917431237BEC9900010E99 /* 2阅读.json in Resources */,
 				30658A6522CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
@@ -1515,6 +1546,7 @@
 				60B6813C238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib in Resources */,
 				309173FA237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE1237958D800F1AADA /* KKHomeViewController.xib in Resources */,
+				603670A623BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */,
 				30917430237BEC9900010E99 /* 2阅读.json in Resources */,
 				30658A6422CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6022CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
@@ -1629,6 +1661,7 @@
 				3077A35422BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */,
 				60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
+				603670A523BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */,
 				30202FF2237961AB00F1AADA /* KKAppIconMakerViewController.m in Sources */,
 				3028979822C46DEF000F2669 /* KKBaseResponse.m in Sources */,
 				3077A35C22BB357100372F07 /* UIViewController+KExtension.m in Sources */,
@@ -1636,6 +1669,7 @@
 				60B6812A238CCFCD00E3F6B7 /* KKBezierPathViewController.m in Sources */,
 				30202FD82379588200F1AADA /* KKHomeViewController.m in Sources */,
 				307C27F123587AAD00DB3ED6 /* KKNotification.m in Sources */,
+				60022A1023C5756D004F94DB /* UITextField+KExtension.m in Sources */,
 				3028979A22C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				30E20783237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
 				3015A05A237D33390086B39D /* KKUIUnitViewController.m in Sources */,
@@ -1688,6 +1722,7 @@
 				3015A061237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
 				302897C422C46DEF000F2669 /* KKTextView.m in Sources */,
 				30658A7122CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
+				603670AC23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */,
 				3091740F237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */,
 				3077A36922BB39F100372F07 /* KKBaseLoadingView.m in Sources */,
 				3077A32F22BA45A400372F07 /* NSTimer+KExtension.m in Sources */,
@@ -1732,6 +1767,7 @@
 				3077A35322BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */,
 				60C6CFEA238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
+				603670A423BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */,
 				30202FF1237961AB00F1AADA /* KKAppIconMakerViewController.m in Sources */,
 				3028979722C46DEF000F2669 /* KKBaseResponse.m in Sources */,
 				3077A35B22BB357100372F07 /* UIViewController+KExtension.m in Sources */,
@@ -1739,6 +1775,7 @@
 				60B68129238CCFCD00E3F6B7 /* KKBezierPathViewController.m in Sources */,
 				30202FD72379588200F1AADA /* KKHomeViewController.m in Sources */,
 				307C27F023587AAD00DB3ED6 /* KKNotification.m in Sources */,
+				60022A0F23C5756D004F94DB /* UITextField+KExtension.m in Sources */,
 				3028979922C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
 				3015A059237D33390086B39D /* KKUIUnitViewController.m in Sources */,
@@ -1791,6 +1828,7 @@
 				3015A060237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
 				302897C322C46DEF000F2669 /* KKTextView.m in Sources */,
 				30658A7022CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
+				603670AB23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */,
 				3091740E237ABB4B00010E99 /* KKAppIconLabelModel.m in Sources */,
 				3077A36822BB39F100372F07 /* KKBaseLoadingView.m in Sources */,
 				3077A32E22BA45A400372F07 /* NSTimer+KExtension.m in Sources */,
