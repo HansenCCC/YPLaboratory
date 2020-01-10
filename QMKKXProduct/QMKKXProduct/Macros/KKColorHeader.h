@@ -48,7 +48,6 @@
 
 
 //other
-#define KKColor_FFE12F CMCustomColor(@"FFE12F")
 #define KKColor_FD445F CMCustomColor(@"FD445F")
 #define KKColor_BBBBBB CMCustomColor(@"BBBBBB")
 #define KKColor_F7F8FA CMCustomColor(@"F7F8FA")

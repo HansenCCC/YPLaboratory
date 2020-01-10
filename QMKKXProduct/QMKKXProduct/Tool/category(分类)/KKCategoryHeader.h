@@ -15,6 +15,7 @@
 #import "NSData+KExtension.h"//data
 #import "NSDate+KExtension.h"//date
 #import "NSString+KExtension.h"//string
+#import "NSMutableAttributedString+KExtension.h"//NSMutableAttributedString
 #import "NSTimer+KExtension.h"//timer
 #import "UIColor+KExtension.h"//color
 #import "UIImage+KExtension.h"//image

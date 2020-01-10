@@ -14,6 +14,7 @@
 #import "KKNavigationConfigViewController.h"//导航栏设置
 #import "KKCarouselViewController.h"//carousel
 #import "KKVideoCameraViewController.h"//camera
+#import "KKSinaAiteViewController.h"//新浪@人
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -54,7 +55,9 @@
     s1m7.info = [KKCarouselViewController class];
     KKLabelModel *s1m8 = [[KKLabelModel alloc] initWithTitle:@"摄像机模块" value:nil];
     s1m8.info = [KKVideoCameraViewController class];
-    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m7,s1m6,s1m8]];
+    KKLabelModel *s1m9 = [[KKLabelModel alloc] initWithTitle:@"模拟新浪@人" value:nil];
+    s1m9.info = [KKSinaAiteViewController class];
+    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m7,s1m6,s1m8,s1m9]];
     
     [self.tableView reloadData];
 }
