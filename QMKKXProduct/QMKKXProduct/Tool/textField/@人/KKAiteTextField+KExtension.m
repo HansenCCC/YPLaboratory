@@ -57,10 +57,15 @@
     NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithAttributedString:attributedText];
     NSMutableArray *attributedInfos = [[NSMutableArray alloc] init];
     NSMutableArray *deleteAttributedInfos = [[NSMutableArray alloc] init];
+    [attributeString enumerateAttribute:NSAttributedInfoAttributeName inRange:NSMakeRange(0, attributeString.length) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(id  _Nullable value, NSRange range, BOOL * _Nonnull stop) {
+        NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithAttributedString:[attributeString attributedSubstringFromRange:range]];
+        NSLog(@"%@",attributed);
+    }];
+    __block NSString *lastValue;
     [attributeString enumerateAttributesInRange:NSMakeRange(0, attributeString.length) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(NSDictionary<NSAttributedStringKey,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
         NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithAttributedString:[attributeString attributedSubstringFromRange:range]];
-        if (attributed.attributedInfo) {
-            if ([attributed.string isEqual:@"@"]) {
+        if (attributed.attributedInfo&&attributed.attributedInfo.length > 0) {
+            if ([attributed.attributedInfo isEqualToString:lastValue]) {
                 //放置循环添加
             }else{
                 if (![attributedInfos containsObject:attributed.attributedInfo]) {
@@ -70,11 +75,13 @@
                 }
             }
         }
+        lastValue = attributed.attributedInfo;
     }];
+    __block NSString *lastValue2;
     [attributeString enumerateAttributesInRange:NSMakeRange(0, attributeString.length) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(NSDictionary<NSAttributedStringKey,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
         NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithAttributedString:[attributeString attributedSubstringFromRange:range]];
-        if (attributed.attributedInfo&&![deleteAttributedInfos containsObject:attributed.attributedInfo]) {
-            if ([attributed.string isEqual:@"@"]) {
+        if (attributed.attributedInfo&&![deleteAttributedInfos containsObject:attributed.attributedInfo]&&attributed.attributedInfo.length > 0) {
+            if ([attributed.attributedInfo isEqualToString:lastValue2]) {
                 //放置循环添加
             }else{
                 [value appendString:attributed.attributedInfo];
@@ -82,6 +89,7 @@
         }else{
             [value appendString:attributed.string];
         }
+        lastValue2 = attributed.attributedInfo;
     }];
     return [value copy];
 }

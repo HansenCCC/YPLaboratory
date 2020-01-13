@@ -62,7 +62,7 @@
 #pragma mark - action
 //@张三
 - (void)whenAiteClick{
-    KKAiteModel *model = [[KKAiteModel alloc] initWithUserId:@"10010" nickname:@"张三"];
+    KKAiteModel *model = [[KKAiteModel alloc] initWithUserId:@"10010" nickname:@"12只张三"];
     [self.textField addAiteWithAiteModel:model];
 }
 //发送评论

@@ -26,6 +26,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"身份证扫描";
     self.view.backgroundColor = [UIColor whiteColor];
     self.isTakePhoto = YES;
     [self setupSubview];
