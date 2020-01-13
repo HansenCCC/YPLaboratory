@@ -30,11 +30,16 @@
     return self;
 }
 -(void)setType:(KKMetadataObjectType)type{
+    _type = type;
     //防止在模拟器下挂掉
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         return;
     }
-    _type = type;
+    NSString *mediaType = AVMediaTypeVideo;
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
+    if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
+        return;
+    }
     if (type == KKMetadataObjectTypeQR){
         [self.qrcCodeOutput setMetadataObjectTypes:@[
                                                      AVMetadataObjectTypeQRCode,
