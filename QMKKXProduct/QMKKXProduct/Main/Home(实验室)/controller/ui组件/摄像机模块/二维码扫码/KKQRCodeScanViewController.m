@@ -25,6 +25,17 @@
     //刷选布局
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self viewDidLayoutSubviews];
+        NSString *mediaType = AVMediaTypeVideo;
+        AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
+        if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"请在iPhone的“设置”-“隐私”-“相机”功能中，找到“Bee”打开相机访问权限" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                //to do
+            }];
+            [alert addAction:alertAction];
+            [self presentViewController:alert animated:YES completion:nil];
+            return;
+        }
     });
 }
 - (void)setupSubview{
@@ -57,8 +68,16 @@
     if (!_sessionView) {
         _sessionView = [[KKQRCodeSessionView alloc] init];
         _sessionView.showFocusView = NO;//取消点击对焦功能
+        WeakSelf
         _sessionView.whenFinish = ^(AVMetadataObject *codeObject) {
-            
+            AVMetadataMachineReadableCodeObject *string = (AVMetadataMachineReadableCodeObject *)codeObject;
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"扫描的内容是：%@",string.stringValue] preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                //to do
+                [weakSelf.sessionView startRunning];
+            }];
+            [alert addAction:alertAction];
+            [weakSelf presentViewController:alert animated:YES completion:nil];
         };
         [self.view addSubview:_sessionView];
     }

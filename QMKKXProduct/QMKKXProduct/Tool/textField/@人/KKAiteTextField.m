@@ -50,6 +50,10 @@
     self.highlightColor = [UIColor yellowColor];
     self.normalColor = [UIColor whiteColor];
 }
+- (void)setNormalColor:(UIColor *)normalColor{
+    _normalColor = normalColor;
+    self.textColor = normalColor;
+}
 //艾特人
 - (void)addAiteWithAiteModel:(KKAiteModel *)aiteModel{
     UIColor *foregroundColor = self.highlightColor;
@@ -85,14 +89,21 @@
 }
 #pragma mark - UITextFieldDelegate
 - (void)textFieldDidEditing:(UITextField *)textField{
-    //每次编辑转化文本
-    NSRange selectedRange = self.selectedRange;
-    UIColor *defaultColor = self.normalColor;
-    UIColor *foregroundColor = self.highlightColor;
-    NSString *value = [self.class transformStringByAttributed:self.attributedText];
-    NSAttributedString *attributeString = [self.class transformAttributedByString:value highlightColor:foregroundColor normalColor:defaultColor];
-    self.attributedText = attributeString;
-    self.selectedRange = selectedRange;
+    //中文拼音预输入
+    if (textField.markedTextRange == nil){
+        //没有点击出现的汉字,一直在点击键盘
+        textField.attributedText = textField.attributedText;
+        //每次编辑转化文本
+        NSRange selectedRange = self.selectedRange;
+        UIColor *defaultColor = self.normalColor;
+        UIColor *foregroundColor = self.highlightColor;
+        NSString *value = [self.class transformStringByAttributed:self.attributedText];
+        NSAttributedString *attributeString = [self.class transformAttributedByString:value highlightColor:foregroundColor normalColor:defaultColor];
+        self.attributedText = attributeString;
+        self.selectedRange = selectedRange;
+    }else{
+        //预输入时，不做操作
+    }
 }
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     //获取textfield

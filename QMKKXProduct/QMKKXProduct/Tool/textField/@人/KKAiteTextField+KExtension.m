@@ -23,7 +23,7 @@
         if (range.location == NSNotFound) {
             NSString *value = [string copy];
             string = @"";
-            NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:value];
+            NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:value attributes:@{NSForegroundColorAttributeName:normalColor}];
             [transformString appendAttributedString:attributedString];
             continue;
         }

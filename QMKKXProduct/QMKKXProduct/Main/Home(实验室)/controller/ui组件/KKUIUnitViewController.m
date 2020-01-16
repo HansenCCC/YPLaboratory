@@ -15,6 +15,7 @@
 #import "KKCarouselViewController.h"//carousel
 #import "KKVideoCameraViewController.h"//camera
 #import "KKSinaAiteViewController.h"//新浪@人
+#import "KKWeChatMomentsViewController.h"//微信朋友圈
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -57,7 +58,9 @@
     s1m8.info = [KKVideoCameraViewController class];
     KKLabelModel *s1m9 = [[KKLabelModel alloc] initWithTitle:@"模拟新浪@人" value:nil];
     s1m9.info = [KKSinaAiteViewController class];
-    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m7,s1m6,s1m8,s1m9]];
+    KKLabelModel *s1m10 = [[KKLabelModel alloc] initWithTitle:@"模拟微信朋友圈" value:nil];
+    s1m10.info = [KKWeChatMomentsViewController class];
+    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m7,s1m6,s1m8,s1m9,s1m10]];
     
     [self.tableView reloadData];
 }

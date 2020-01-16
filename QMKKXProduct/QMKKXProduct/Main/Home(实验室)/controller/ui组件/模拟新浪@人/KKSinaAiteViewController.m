@@ -83,7 +83,8 @@
         _textField.backgroundColor = KKColor_000000;
         _textField.textColor = KKColor_FFFFFF;
         _textField.font = AdaptedFontSize(18);
-        _textField.highlightColor = KKColor_FFE12F;
+        _textField.highlightColor = KKColor_0000FF;
+        _textField.normalColor = KKColor_FFFFFF;
     }
     return _textField;
 }
