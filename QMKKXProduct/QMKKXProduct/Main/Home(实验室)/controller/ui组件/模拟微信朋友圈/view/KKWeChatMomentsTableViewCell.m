@@ -7,6 +7,8 @@
 //
 
 #import "KKWeChatMomentsTableViewCell.h"
+#import "KKWeChatCommentTableViewCell.h"
+
 @interface KKWeChatMomentsTableViewCell ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -26,7 +28,7 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
     self.iconButton = [[UIButton alloc] init];
     [self.contentView addSubview:self.iconButton];
     //
-    self.nameLabel = [UILabel labelWithFont:AdaptedFontSize(15.f) textColor:KKColor_626787];
+    self.nameLabel = [UILabel labelWithFont:AdaptedBoldFontSize(15.f) textColor:KKColor_626787];
     [self.contentView addSubview:self.nameLabel];
     //
     self.contentLabel = [UILabel labelWithFont:AdaptedFontSize(15.f) textColor:KKColor_1A1A1A];
@@ -49,13 +51,23 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.backgroundColor = KKColor_F6F6F6;
+    self.collectionView.backgroundColor = KKColor_FFFFFF;
+    self.collectionView.scrollEnabled = NO;
     [self.contentView addSubview:self.collectionView];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"KKImageViewCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"KKImageViewCollectionViewCell"];
     //
     self.cutLineMarkView = [[UIView alloc] init];
     self.cutLineMarkView.backgroundColor = KKColor_E5E5E5;
     [self.contentView addSubview:self.cutLineMarkView];
+    //
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.tableView.backgroundColor = KKColor_F6F6F6;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerClass:[KKWeChatCommentTableViewCell class] forCellReuseIdentifier:@"KKWeChatCommentTableViewCell"];
+    [self.contentView addSubview:self.tableView];
     //
     self.markView = [[UIView alloc] init];
     self.markView.backgroundColor = KKColor_E5E5E5;
@@ -148,6 +160,21 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
     f7.size.width = f6.size.width;
     self.cutLineMarkView.frame = f7;
     //
+    CGRect f8 = bounds;
+    f8.origin.y = CGRectGetMaxY(f7);
+    f8.origin.x = f7.origin.x;
+    f8.size.width = f7.size.width;
+    CGFloat height = 0.f;
+    for (KKWeChatMomentsCommentModel *cellModel in self.cellModel.comments) {
+        KKWeChatCommentTableViewCell *cell = [KKWeChatCommentTableViewCell sharedInstance];
+        cell.bounds = f8;
+        cell.cellModel = cellModel;
+        CGSize size = [cell sizeThatFits:CGSizeMake(cell.bounds.size.width, 0)];
+        height += size.height;
+    }
+    f8.size.height = height + AdaptedWidth(6.f);
+    self.tableView.frame = f8;
+    //
     CGRect fMax = bounds;
     fMax.size.height = AdaptedWidth(0.5f);
     fMax.origin.y = bounds.size.height - fMax.size.height;
@@ -158,12 +185,34 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
 }
 #pragma mark - UICollectionViewDelegate,UICollectionViewDataSource
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+    KKImageViewCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"KKImageViewCollectionViewCell" forIndexPath:indexPath];
+    NSString *imageUrl = self.cellModel.images[indexPath.row];
+    [cell.imageView kk_setImageWithUrl:imageUrl];
     return cell;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.cellModel.comments.count;
+    return self.cellModel.images.count;
 }
 #pragma mark - UITableViewDelegate,UITableViewDataSource
-
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    KKWeChatMomentsCommentModel *cellModel = self.cellModel.comments[indexPath.row];
+    KKWeChatCommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KKWeChatCommentTableViewCell"];
+    cell.cellModel = cellModel;
+    return cell;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.cellModel.comments.count;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    KKWeChatMomentsCommentModel *cellModel = self.cellModel.comments[indexPath.row];
+    KKWeChatCommentTableViewCell *cell = [KKWeChatCommentTableViewCell sharedInstance];
+    cell.bounds = tableView.bounds;
+    cell.cellModel = cellModel;
+    CGSize size = [cell sizeThatFits:CGSizeMake(cell.bounds.size.width, 0)];
+    CGFloat height = size.height;
+    return height;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //to do
+}
 @end

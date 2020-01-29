@@ -321,6 +321,12 @@
 		60F3BE4B23DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4923DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m */; };
 		60F3BE4E23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4D23E04FE600447EC2 /* KKWeChatMomentsLikesView.m */; };
 		60F3BE4F23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4D23E04FE600447EC2 /* KKWeChatMomentsLikesView.m */; };
+		60F3BEBF23E19DC500447EC2 /* KKImageViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BEBD23E19DC500447EC2 /* KKImageViewCollectionViewCell.m */; };
+		60F3BEC023E19DC500447EC2 /* KKImageViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BEBD23E19DC500447EC2 /* KKImageViewCollectionViewCell.m */; };
+		60F3BEC123E19DC500447EC2 /* KKImageViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F3BEBE23E19DC500447EC2 /* KKImageViewCollectionViewCell.xib */; };
+		60F3BEC223E19DC500447EC2 /* KKImageViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F3BEBE23E19DC500447EC2 /* KKImageViewCollectionViewCell.xib */; };
+		60F3BEC723E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BEC623E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m */; };
+		60F3BEC823E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BEC623E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m */; };
 		60F865AB23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */; };
 		60F865AC23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */; };
 		60F865AD23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */; };
@@ -607,6 +613,11 @@
 		60F3BE4923DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsLikeModel.m; sourceTree = "<group>"; };
 		60F3BE4C23E04FE600447EC2 /* KKWeChatMomentsLikesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsLikesView.h; sourceTree = "<group>"; };
 		60F3BE4D23E04FE600447EC2 /* KKWeChatMomentsLikesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsLikesView.m; sourceTree = "<group>"; };
+		60F3BEBC23E19DC500447EC2 /* KKImageViewCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKImageViewCollectionViewCell.h; sourceTree = "<group>"; };
+		60F3BEBD23E19DC500447EC2 /* KKImageViewCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKImageViewCollectionViewCell.m; sourceTree = "<group>"; };
+		60F3BEBE23E19DC500447EC2 /* KKImageViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKImageViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		60F3BEC523E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatCommentTableViewCell.h; sourceTree = "<group>"; };
+		60F3BEC623E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatCommentTableViewCell.m; sourceTree = "<group>"; };
 		60F865A823D1585600CCEA70 /* KKVideoPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKVideoPlayViewController.h; sourceTree = "<group>"; };
 		60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKVideoPlayViewController.m; sourceTree = "<group>"; };
 		60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoPlayViewController.xib; sourceTree = "<group>"; };
@@ -1193,17 +1204,8 @@
 		309173FC237AAF1200010E99 /* cell(通用cell) */ = {
 			isa = PBXGroup;
 			children = (
-				30202FF5237962DE00F1AADA /* KKLabelModel.h */,
-				30202FF6237962DE00F1AADA /* KKLabelModel.m */,
-				300CC097237A5C5C00983BD1 /* KKLabelTableViewCell.h */,
-				300CC098237A5C5C00983BD1 /* KKLabelTableViewCell.m */,
-				300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */,
-				309173F5237AA9BB00010E99 /* KKButtonTableViewCell.h */,
-				309173F6237AA9BB00010E99 /* KKButtonTableViewCell.m */,
-				309173F7237AA9BB00010E99 /* KKButtonTableViewCell.xib */,
-				60C6CFC123884E7200FABAA3 /* KKSwitchTableViewCell.h */,
-				60C6CFC223884E7200FABAA3 /* KKSwitchTableViewCell.m */,
-				60C6CFC323884E7200FABAA3 /* KKSwitchTableViewCell.xib */,
+				60F3BEC323E19EC000447EC2 /* table */,
+				60F3BEC423E19ECD00447EC2 /* collection */,
 			);
 			path = "cell(通用cell)";
 			sourceTree = "<group>";
@@ -1349,6 +1351,8 @@
 				60F3BE4D23E04FE600447EC2 /* KKWeChatMomentsLikesView.m */,
 				607019B023D006A8009078E6 /* KKWeChatMomentsTableViewCell.h */,
 				607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */,
+				60F3BEC523E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.h */,
+				60F3BEC623E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1470,6 +1474,34 @@
 				60F3BE4523DFF74100447EC2 /* KKWeChatMomentsCommentModel.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		60F3BEC323E19EC000447EC2 /* table */ = {
+			isa = PBXGroup;
+			children = (
+				30202FF5237962DE00F1AADA /* KKLabelModel.h */,
+				30202FF6237962DE00F1AADA /* KKLabelModel.m */,
+				300CC097237A5C5C00983BD1 /* KKLabelTableViewCell.h */,
+				300CC098237A5C5C00983BD1 /* KKLabelTableViewCell.m */,
+				300CC099237A5C5C00983BD1 /* KKLabelTableViewCell.xib */,
+				309173F5237AA9BB00010E99 /* KKButtonTableViewCell.h */,
+				309173F6237AA9BB00010E99 /* KKButtonTableViewCell.m */,
+				309173F7237AA9BB00010E99 /* KKButtonTableViewCell.xib */,
+				60C6CFC123884E7200FABAA3 /* KKSwitchTableViewCell.h */,
+				60C6CFC223884E7200FABAA3 /* KKSwitchTableViewCell.m */,
+				60C6CFC323884E7200FABAA3 /* KKSwitchTableViewCell.xib */,
+			);
+			path = table;
+			sourceTree = "<group>";
+		};
+		60F3BEC423E19ECD00447EC2 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				60F3BEBC23E19DC500447EC2 /* KKImageViewCollectionViewCell.h */,
+				60F3BEBD23E19DC500447EC2 /* KKImageViewCollectionViewCell.m */,
+				60F3BEBE23E19DC500447EC2 /* KKImageViewCollectionViewCell.xib */,
+			);
+			path = collection;
 			sourceTree = "<group>";
 		};
 		60F865A723D1581000CCEA70 /* 视频播放控件 */ = {
@@ -1598,6 +1630,7 @@
 				60C6CFED238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */,
 				30917425237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DB122B9D76B00605DF7 /* Assets.xcassets in Resources */,
+				60F3BEC223E19DC500447EC2 /* KKImageViewCollectionViewCell.xib in Resources */,
 				3091742F237BEC9900010E99 /* 4完型.json in Resources */,
 				60B6811A238CCEB600E3F6B7 /* KKCarouselViewController.xib in Resources */,
 				60F865AE23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */,
@@ -1653,6 +1686,7 @@
 				60C6CFEC238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */,
 				30917424237BEA2400010E99 /* KKExamListViewController.xib in Resources */,
 				30036DC622B9DDC500605DF7 /* Assets.xcassets in Resources */,
+				60F3BEC123E19DC500447EC2 /* KKImageViewCollectionViewCell.xib in Resources */,
 				3091742E237BEC9900010E99 /* 4完型.json in Resources */,
 				60B68119238CCEB600E3F6B7 /* KKCarouselViewController.xib in Resources */,
 				60F865AD23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */,
@@ -1827,6 +1861,7 @@
 				30202FCB23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
 				60C6CFC523884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */,
 				30658A6F22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
+				60F3BEC823E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m in Sources */,
 				3077A39622BCDA4D00372F07 /* KKMuteDetector.m in Sources */,
 				3028979C22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				300CC09B237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
@@ -1881,6 +1916,7 @@
 				3077A34022BB2FD000372F07 /* UIColor+KExtension.m in Sources */,
 				60F3BE4F23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */,
 				3077A36422BB363F00372F07 /* UIButton+KExtension.m in Sources */,
+				60F3BEC023E19DC500447EC2 /* KKImageViewCollectionViewCell.m in Sources */,
 				30658A7722CF265F0072CD24 /* KKAVCaptureBaseSessionView.m in Sources */,
 				60B6810A238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */,
 				3077A33922BA45A400372F07 /* NSArray+KExtension.m in Sources */,
@@ -1944,6 +1980,7 @@
 				30202FCA23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
 				60C6CFC423884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */,
 				30658A6E22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
+				60F3BEC723E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m in Sources */,
 				3077A39522BCDA4D00372F07 /* KKMuteDetector.m in Sources */,
 				3028979B22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				300CC09A237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
@@ -1998,6 +2035,7 @@
 				3077A33F22BB2FD000372F07 /* UIColor+KExtension.m in Sources */,
 				60F3BE4E23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */,
 				3077A36322BB363F00372F07 /* UIButton+KExtension.m in Sources */,
+				60F3BEBF23E19DC500447EC2 /* KKImageViewCollectionViewCell.m in Sources */,
 				30658A7622CF265F0072CD24 /* KKAVCaptureBaseSessionView.m in Sources */,
 				60B68109238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */,
 				3077A33822BA45A400372F07 /* NSArray+KExtension.m in Sources */,

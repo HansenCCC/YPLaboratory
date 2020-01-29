@@ -1,7 +1,7 @@
 //
 //  KKWeChatMomentsTableViewCell.h
 //  QMKKXProduct
-//
+//  朋友圈cell
 //  Created by Hansen on 1/16/20.
 //  Copyright © 2020 力王工作室. All rights reserved.
 //
@@ -20,6 +20,7 @@
 @property (strong, nonatomic) UICollectionViewFlowLayout *flowLayout;//flowLayout
 @property (strong, nonatomic) KKWeChatMomentsLikesView *likesView;//喜欢
 @property (strong, nonatomic) UIView *cutLineMarkView;//切割线条
+@property (strong, nonatomic) UITableView *tableView;//评论集合
 @property (strong, nonatomic) UIView *markView;//线条
 
 //to do

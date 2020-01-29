@@ -10,7 +10,7 @@
 #define KKColorHeader_h
 
 #define CMCustomColor(colorStr) [UIColor colorWithHexString:colorStr]
-#define KKColor_RANDOM [UIColor randomColor]//随机
+#define KKColor_RANDOM [UIColor colorWithRandomColor]//随机
 #define KKColor_CLEAR  [UIColor clearColor]//通明
 
 
