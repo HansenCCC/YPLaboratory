@@ -259,6 +259,8 @@
 		603670A723BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */; };
 		603670AB23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */; };
 		603670AC23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */; };
+		607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
+		607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		60B68109238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */; };
 		60B6810A238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */; };
 		60B6810B238B017300E3F6B7 /* KKFileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68108238B017300E3F6B7 /* KKFileCollectionViewCell.xib */; };
@@ -311,6 +313,18 @@
 		60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */; };
 		60C6CFEC238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
 		60C6CFED238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
+		60F3BE4223DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4123DF02E300447EC2 /* KKWeChatMomentsModel.m */; };
+		60F3BE4323DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4123DF02E300447EC2 /* KKWeChatMomentsModel.m */; };
+		60F3BE4623DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4523DFF74100447EC2 /* KKWeChatMomentsCommentModel.m */; };
+		60F3BE4723DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4523DFF74100447EC2 /* KKWeChatMomentsCommentModel.m */; };
+		60F3BE4A23DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4923DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m */; };
+		60F3BE4B23DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4923DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m */; };
+		60F3BE4E23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4D23E04FE600447EC2 /* KKWeChatMomentsLikesView.m */; };
+		60F3BE4F23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4D23E04FE600447EC2 /* KKWeChatMomentsLikesView.m */; };
+		60F865AB23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */; };
+		60F865AC23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */; };
+		60F865AD23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */; };
+		60F865AE23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -543,6 +557,8 @@
 		603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoCameraViewController.xib; sourceTree = "<group>"; };
 		603670A923BF3B6B001E3D22 /* KKQRCodeScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKQRCodeScanViewController.h; sourceTree = "<group>"; };
 		603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKQRCodeScanViewController.m; sourceTree = "<group>"; };
+		607019B023D006A8009078E6 /* KKWeChatMomentsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsTableViewCell.h; sourceTree = "<group>"; };
+		607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsTableViewCell.m; sourceTree = "<group>"; };
 		60B68106238B017300E3F6B7 /* KKFileCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileCollectionViewCell.h; sourceTree = "<group>"; };
 		60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileCollectionViewCell.m; sourceTree = "<group>"; };
 		60B68108238B017300E3F6B7 /* KKFileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -583,6 +599,17 @@
 		60C6CFE7238AEEEE00FABAA3 /* KKFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileViewController.h; sourceTree = "<group>"; };
 		60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileViewController.m; sourceTree = "<group>"; };
 		60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileViewController.xib; sourceTree = "<group>"; };
+		60F3BE4023DF02E300447EC2 /* KKWeChatMomentsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsModel.h; sourceTree = "<group>"; };
+		60F3BE4123DF02E300447EC2 /* KKWeChatMomentsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsModel.m; sourceTree = "<group>"; };
+		60F3BE4423DFF74100447EC2 /* KKWeChatMomentsCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsCommentModel.h; sourceTree = "<group>"; };
+		60F3BE4523DFF74100447EC2 /* KKWeChatMomentsCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsCommentModel.m; sourceTree = "<group>"; };
+		60F3BE4823DFFD5500447EC2 /* KKWeChatMomentsLikeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsLikeModel.h; sourceTree = "<group>"; };
+		60F3BE4923DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsLikeModel.m; sourceTree = "<group>"; };
+		60F3BE4C23E04FE600447EC2 /* KKWeChatMomentsLikesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsLikesView.h; sourceTree = "<group>"; };
+		60F3BE4D23E04FE600447EC2 /* KKWeChatMomentsLikesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsLikesView.m; sourceTree = "<group>"; };
+		60F865A823D1585600CCEA70 /* KKVideoPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKVideoPlayViewController.h; sourceTree = "<group>"; };
+		60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKVideoPlayViewController.m; sourceTree = "<group>"; };
+		60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoPlayViewController.xib; sourceTree = "<group>"; };
 		6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.debug.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QMKKXProduct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProductDev.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev.release.xcconfig"; sourceTree = "<group>"; };
@@ -688,6 +715,7 @@
 				3015A056237D33390086B39D /* KKUIUnitViewController.h */,
 				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
+				60F865A723D1581000CCEA70 /* 视频播放控件 */,
 				60B6811C238CCED600E3F6B7 /* 轮播图 */,
 				60C6CFC82389A36C00FABAA3 /* 普通提示框 */,
 				60C6CFD7238A848000FABAA3 /* 输入选择框 */,
@@ -1283,6 +1311,8 @@
 		60022A7223CDBD6B004F94DB /* 模拟微信朋友圈 */ = {
 			isa = PBXGroup;
 			children = (
+				60F3BE3F23DF02D400447EC2 /* model */,
+				607019AF23D0068A009078E6 /* view */,
 				60022A7323CDBDCE004F94DB /* KKWeChatMomentsViewController.h */,
 				60022A7423CDBDCE004F94DB /* KKWeChatMomentsViewController.m */,
 				60022A7523CDBDCE004F94DB /* KKWeChatMomentsViewController.xib */,
@@ -1310,6 +1340,17 @@
 				603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */,
 			);
 			path = "二维码扫码";
+			sourceTree = "<group>";
+		};
+		607019AF23D0068A009078E6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				60F3BE4C23E04FE600447EC2 /* KKWeChatMomentsLikesView.h */,
+				60F3BE4D23E04FE600447EC2 /* KKWeChatMomentsLikesView.m */,
+				607019B023D006A8009078E6 /* KKWeChatMomentsTableViewCell.h */,
+				607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		60B68105238B013800E3F6B7 /* view */ = {
@@ -1416,6 +1457,29 @@
 				60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */,
 			);
 			path = "文件管理";
+			sourceTree = "<group>";
+		};
+		60F3BE3F23DF02D400447EC2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				60F3BE4023DF02E300447EC2 /* KKWeChatMomentsModel.h */,
+				60F3BE4123DF02E300447EC2 /* KKWeChatMomentsModel.m */,
+				60F3BE4823DFFD5500447EC2 /* KKWeChatMomentsLikeModel.h */,
+				60F3BE4923DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m */,
+				60F3BE4423DFF74100447EC2 /* KKWeChatMomentsCommentModel.h */,
+				60F3BE4523DFF74100447EC2 /* KKWeChatMomentsCommentModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		60F865A723D1581000CCEA70 /* 视频播放控件 */ = {
+			isa = PBXGroup;
+			children = (
+				60F865A823D1585600CCEA70 /* KKVideoPlayViewController.h */,
+				60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */,
+				60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */,
+			);
+			path = "视频播放控件";
 			sourceTree = "<group>";
 		};
 		73D8A745D8DABC3D9F40FB78 /* Pods */ = {
@@ -1536,6 +1600,7 @@
 				30036DB122B9D76B00605DF7 /* Assets.xcassets in Resources */,
 				3091742F237BEC9900010E99 /* 4完型.json in Resources */,
 				60B6811A238CCEB600E3F6B7 /* KKCarouselViewController.xib in Resources */,
+				60F865AE23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */,
 				30658A6322CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */,
 				3091741A237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */,
 				30917435237BEC9900010E99 /* 3词汇.json in Resources */,
@@ -1590,6 +1655,7 @@
 				30036DC622B9DDC500605DF7 /* Assets.xcassets in Resources */,
 				3091742E237BEC9900010E99 /* 4完型.json in Resources */,
 				60B68119238CCEB600E3F6B7 /* KKCarouselViewController.xib in Resources */,
+				60F865AD23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */,
 				30658A6222CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */,
 				30917419237B9FDE00010E99 /* KKAppIconPreviewViewController.xib in Resources */,
 				30917434237BEC9900010E99 /* 3词汇.json in Resources */,
@@ -1712,7 +1778,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F3BE4B23DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m in Sources */,
 				302897AC22C46DEF000F2669 /* KKDatePickerAlert.m in Sources */,
+				60F3BE4323DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */,
 				30036DD422B9FC0800605DF7 /* KKUser.m in Sources */,
 				307C27EC23587A6000DB3ED6 /* KKUserInfoModel.m in Sources */,
 				302897B422C46DEF000F2669 /* KKDistrict.m in Sources */,
@@ -1720,6 +1788,8 @@
 				60B68133238CD21100E3F6B7 /* KKCarouselView.m in Sources */,
 				30917423237BEA2400010E99 /* KKExamListViewController.m in Sources */,
 				3077A33B22BA45A500372F07 /* NSData+KExtension.m in Sources */,
+				60F3BE4723DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */,
+				60F865AC23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */,
 				302897B622C46DEF000F2669 /* KKAddressPickerModel.m in Sources */,
 				30917440237BF5E000010E99 /* KKExamSearchViewController.m in Sources */,
 				30658A7922CF265F0072CD24 /* KKQRCodeView.m in Sources */,
@@ -1738,6 +1808,7 @@
 				60B6812A238CCFCD00E3F6B7 /* KKBezierPathViewController.m in Sources */,
 				30202FD82379588200F1AADA /* KKHomeViewController.m in Sources */,
 				307C27F123587AAD00DB3ED6 /* KKNotification.m in Sources */,
+				607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */,
 				60022A1023C5756D004F94DB /* UITextField+KExtension.m in Sources */,
 				3028979A22C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				30E20783237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
@@ -1808,6 +1879,7 @@
 				302897CA22C47207000F2669 /* KKRefreshNormalHeader.m in Sources */,
 				3028979622C46DEF000F2669 /* HVUIFlowLayoutConstraint.m in Sources */,
 				3077A34022BB2FD000372F07 /* UIColor+KExtension.m in Sources */,
+				60F3BE4F23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */,
 				3077A36422BB363F00372F07 /* UIButton+KExtension.m in Sources */,
 				30658A7722CF265F0072CD24 /* KKAVCaptureBaseSessionView.m in Sources */,
 				60B6810A238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */,
@@ -1823,7 +1895,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F3BE4A23DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m in Sources */,
 				302897AB22C46DEF000F2669 /* KKDatePickerAlert.m in Sources */,
+				60F3BE4223DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */,
 				30036DD322B9FC0800605DF7 /* KKUser.m in Sources */,
 				307C27EB23587A6000DB3ED6 /* KKUserInfoModel.m in Sources */,
 				302897B322C46DEF000F2669 /* KKDistrict.m in Sources */,
@@ -1831,6 +1905,8 @@
 				60B68132238CD21100E3F6B7 /* KKCarouselView.m in Sources */,
 				30917422237BEA2400010E99 /* KKExamListViewController.m in Sources */,
 				3077A33A22BA45A500372F07 /* NSData+KExtension.m in Sources */,
+				60F3BE4623DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */,
+				60F865AB23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */,
 				302897B522C46DEF000F2669 /* KKAddressPickerModel.m in Sources */,
 				3091743F237BF5E000010E99 /* KKExamSearchViewController.m in Sources */,
 				30658A7822CF265F0072CD24 /* KKQRCodeView.m in Sources */,
@@ -1849,6 +1925,7 @@
 				60B68129238CCFCD00E3F6B7 /* KKBezierPathViewController.m in Sources */,
 				30202FD72379588200F1AADA /* KKHomeViewController.m in Sources */,
 				307C27F023587AAD00DB3ED6 /* KKNotification.m in Sources */,
+				607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */,
 				60022A0F23C5756D004F94DB /* UITextField+KExtension.m in Sources */,
 				3028979922C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
@@ -1919,6 +1996,7 @@
 				302897C922C47207000F2669 /* KKRefreshNormalHeader.m in Sources */,
 				3028979522C46DEF000F2669 /* HVUIFlowLayoutConstraint.m in Sources */,
 				3077A33F22BB2FD000372F07 /* UIColor+KExtension.m in Sources */,
+				60F3BE4E23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */,
 				3077A36322BB363F00372F07 /* UIButton+KExtension.m in Sources */,
 				30658A7622CF265F0072CD24 /* KKAVCaptureBaseSessionView.m in Sources */,
 				60B68109238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */,

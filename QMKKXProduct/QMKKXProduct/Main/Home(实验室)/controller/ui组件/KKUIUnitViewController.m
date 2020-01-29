@@ -16,6 +16,7 @@
 #import "KKVideoCameraViewController.h"//camera
 #import "KKSinaAiteViewController.h"//新浪@人
 #import "KKWeChatMomentsViewController.h"//微信朋友圈
+#import "KKVideoPlayViewController.h"//视频播放控件
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -60,8 +61,10 @@
     s1m9.info = [KKSinaAiteViewController class];
     KKLabelModel *s1m10 = [[KKLabelModel alloc] initWithTitle:@"模拟微信朋友圈" value:nil];
     s1m10.info = [KKWeChatMomentsViewController class];
-    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m7,s1m6,s1m8,s1m9,s1m10]];
-    
+    KKLabelModel *s1m11 = [[KKLabelModel alloc] initWithTitle:@"视频播放控件" value:nil];
+    s1m11.info = [KKVideoPlayViewController class];
+    s1m11.isEnabled = NO;
+    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m7,s1m6,s1m8,s1m11,s1m9,s1m10]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

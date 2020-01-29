@@ -52,4 +52,11 @@
 #define KKColor_BBBBBB CMCustomColor(@"BBBBBB")
 #define KKColor_F7F8FA CMCustomColor(@"F7F8FA")
 
+//微信朋友圈
+#define KKColor_626787 CMCustomColor(@"626787")//昵称
+#define KKColor_1A1A1A CMCustomColor(@"1A1A1A")//内容
+#define KKColor_AFAFAF CMCustomColor(@"AFAFAF")//时间
+#define KKColor_E5E5E5 CMCustomColor(@"E5E5E5")//线条
+#define KKColor_F6F6F6 CMCustomColor(@"F6F6F6")//喜欢
+
 #endif /* KKColorHeader_h */
