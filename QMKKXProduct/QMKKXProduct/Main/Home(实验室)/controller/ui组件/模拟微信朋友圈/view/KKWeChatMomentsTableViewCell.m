@@ -172,7 +172,10 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
         CGSize size = [cell sizeThatFits:CGSizeMake(cell.bounds.size.width, 0)];
         height += size.height;
     }
-    f8.size.height = height + AdaptedWidth(6.f);
+    f8.size.height = height;
+    if (self.cellModel.comments.count > 0) {
+        f8.size.height += AdaptedWidth(6.f);
+    }
     self.tableView.frame = f8;
     //
     CGRect fMax = bounds;
