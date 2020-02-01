@@ -17,6 +17,7 @@
 #import "KKSinaAiteViewController.h"//新浪@人
 #import "KKWeChatMomentsViewController.h"//微信朋友圈
 #import "KKVideoPlayViewController.h"//视频播放控件
+#import "KKTableViewCellViewController.h"//丰富多彩的cell(基于UITableView)
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -48,7 +49,7 @@
     KKLabelModel *c3 = [[KKLabelModel alloc] initWithTitle:@"导航栏配置(基于UINavigationBar)" value:nil];
     c3.info = [KKNavigationConfigViewController class];
     KKLabelModel *c4 = [[KKLabelModel alloc] initWithTitle:@"丰富多彩的cell(基于UITableView)" value:nil];
-    c4.isEnabled = NO;
+    c4.info = [KKTableViewCellViewController class];
     KKLabelModel *c5 = [[KKLabelModel alloc] initWithTitle:@"丰富多彩的cell(基于UICollectionView)" value:nil];
     c5.isEnabled = NO;
     KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"K线应用" value:nil];

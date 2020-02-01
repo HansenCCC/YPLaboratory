@@ -11,6 +11,8 @@
 
 #import "KKCategoryHeader.h"//category(分类)
 
+//database数据库
+#import "KKDatabase.h"
 //提示
 #import "KKPresentAnimation.h"//present转场动画
 #import "KKUIBasePresentController.h"//present试图

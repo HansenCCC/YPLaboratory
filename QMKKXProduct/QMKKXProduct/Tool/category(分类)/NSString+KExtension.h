@@ -132,4 +132,6 @@
 + (NSArray <NSString *> *)fileZips;
 //常见网站格式集合html
 + (NSArray <NSString *> *)fileWeb;
+//常见数据库集合db
++ (NSArray <NSString *> *)fileDatabase;
 @end

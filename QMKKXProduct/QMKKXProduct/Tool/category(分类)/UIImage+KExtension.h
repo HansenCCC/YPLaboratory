@@ -128,7 +128,7 @@
  *  @param tintColor 混合的颜色
  *  @return 新的图片
  */
-- (UIImage *)imageWithTintColor:(UIColor *)tintColor;
+- (UIImage *)kk_imageWithTintColor:(UIColor *)tintColor;
 
 @end
 

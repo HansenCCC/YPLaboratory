@@ -253,6 +253,18 @@
 		60022A7723CDBDCE004F94DB /* KKWeChatMomentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60022A7423CDBDCE004F94DB /* KKWeChatMomentsViewController.m */; };
 		60022A7823CDBDCE004F94DB /* KKWeChatMomentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60022A7523CDBDCE004F94DB /* KKWeChatMomentsViewController.xib */; };
 		60022A7923CDBDCE004F94DB /* KKWeChatMomentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60022A7523CDBDCE004F94DB /* KKWeChatMomentsViewController.xib */; };
+		600A9E2E23E5338E00ACB002 /* KKDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E2D23E5338E00ACB002 /* KKDatabase.m */; };
+		600A9E2F23E5338E00ACB002 /* KKDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E2D23E5338E00ACB002 /* KKDatabase.m */; };
+		600A9E3523E5524500ACB002 /* KKTableViewCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E3323E5524500ACB002 /* KKTableViewCellViewController.m */; };
+		600A9E3623E5524500ACB002 /* KKTableViewCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E3323E5524500ACB002 /* KKTableViewCellViewController.m */; };
+		600A9E3723E5524500ACB002 /* KKTableViewCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600A9E3423E5524500ACB002 /* KKTableViewCellViewController.xib */; };
+		600A9E3823E5524500ACB002 /* KKTableViewCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600A9E3423E5524500ACB002 /* KKTableViewCellViewController.xib */; };
+		600A9E3D23E5615E00ACB002 /* cells.json in Resources */ = {isa = PBXBuildFile; fileRef = 600A9E3C23E5615D00ACB002 /* cells.json */; };
+		600A9E3E23E5615E00ACB002 /* cells.json in Resources */ = {isa = PBXBuildFile; fileRef = 600A9E3C23E5615D00ACB002 /* cells.json */; };
+		600A9E4223E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E4123E567FD00ACB002 /* UITableViewCell+KExtension.m */; };
+		600A9E4323E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E4123E567FD00ACB002 /* UITableViewCell+KExtension.m */; };
+		600A9E4623E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */; };
+		600A9E4723E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */; };
 		603670A423BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */; };
 		603670A523BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */; };
 		603670A623BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */; };
@@ -327,6 +339,10 @@
 		60F3BEC223E19DC500447EC2 /* KKImageViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F3BEBE23E19DC500447EC2 /* KKImageViewCollectionViewCell.xib */; };
 		60F3BEC723E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BEC623E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m */; };
 		60F3BEC823E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BEC623E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m */; };
+		60F3BECD23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BECB23E1D88E00447EC2 /* KKDatabaseViewController.m */; };
+		60F3BECE23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BECB23E1D88E00447EC2 /* KKDatabaseViewController.m */; };
+		60F3BECF23E1D88E00447EC2 /* KKDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F3BECC23E1D88E00447EC2 /* KKDatabaseViewController.xib */; };
+		60F3BED023E1D88E00447EC2 /* KKDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F3BECC23E1D88E00447EC2 /* KKDatabaseViewController.xib */; };
 		60F865AB23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */; };
 		60F865AC23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */; };
 		60F865AD23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */; };
@@ -558,6 +574,16 @@
 		60022A7323CDBDCE004F94DB /* KKWeChatMomentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsViewController.h; sourceTree = "<group>"; };
 		60022A7423CDBDCE004F94DB /* KKWeChatMomentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsViewController.m; sourceTree = "<group>"; };
 		60022A7523CDBDCE004F94DB /* KKWeChatMomentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKWeChatMomentsViewController.xib; sourceTree = "<group>"; };
+		600A9E2C23E5338E00ACB002 /* KKDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDatabase.h; sourceTree = "<group>"; };
+		600A9E2D23E5338E00ACB002 /* KKDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKDatabase.m; sourceTree = "<group>"; };
+		600A9E3223E5524500ACB002 /* KKTableViewCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKTableViewCellViewController.h; sourceTree = "<group>"; };
+		600A9E3323E5524500ACB002 /* KKTableViewCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKTableViewCellViewController.m; sourceTree = "<group>"; };
+		600A9E3423E5524500ACB002 /* KKTableViewCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKTableViewCellViewController.xib; sourceTree = "<group>"; };
+		600A9E3C23E5615D00ACB002 /* cells.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cells.json; sourceTree = "<group>"; };
+		600A9E4023E567FD00ACB002 /* UITableViewCell+KExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+KExtension.h"; sourceTree = "<group>"; };
+		600A9E4123E567FD00ACB002 /* UITableViewCell+KExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KExtension.m"; sourceTree = "<group>"; };
+		600A9E4423E5694700ACB002 /* UITableViewCell+KPreviewDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+KPreviewDemo.h"; sourceTree = "<group>"; };
+		600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KPreviewDemo.m"; sourceTree = "<group>"; };
 		603670A123BF39C4001E3D22 /* KKVideoCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKVideoCameraViewController.h; sourceTree = "<group>"; };
 		603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKVideoCameraViewController.m; sourceTree = "<group>"; };
 		603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoCameraViewController.xib; sourceTree = "<group>"; };
@@ -618,6 +644,9 @@
 		60F3BEBE23E19DC500447EC2 /* KKImageViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKImageViewCollectionViewCell.xib; sourceTree = "<group>"; };
 		60F3BEC523E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatCommentTableViewCell.h; sourceTree = "<group>"; };
 		60F3BEC623E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatCommentTableViewCell.m; sourceTree = "<group>"; };
+		60F3BECA23E1D88E00447EC2 /* KKDatabaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDatabaseViewController.h; sourceTree = "<group>"; };
+		60F3BECB23E1D88E00447EC2 /* KKDatabaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKDatabaseViewController.m; sourceTree = "<group>"; };
+		60F3BECC23E1D88E00447EC2 /* KKDatabaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKDatabaseViewController.xib; sourceTree = "<group>"; };
 		60F865A823D1585600CCEA70 /* KKVideoPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKVideoPlayViewController.h; sourceTree = "<group>"; };
 		60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKVideoPlayViewController.m; sourceTree = "<group>"; };
 		60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoPlayViewController.xib; sourceTree = "<group>"; };
@@ -726,6 +755,8 @@
 				3015A056237D33390086B39D /* KKUIUnitViewController.h */,
 				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
+				600A9E3023E551D300ACB002 /* 丰富多彩的cell(基于UITableView) */,
+				600A9E3123E551FB00ACB002 /* 丰富多彩的cell(基于UICollectionView) */,
 				60F865A723D1581000CCEA70 /* 视频播放控件 */,
 				60B6811C238CCED600E3F6B7 /* 轮播图 */,
 				60C6CFC82389A36C00FABAA3 /* 普通提示框 */,
@@ -824,6 +855,7 @@
 				30E2077E2379758800EE3E8E /* 工作台 */,
 				30917444237C26C900010E99 /* 网络图片下载 */,
 				60C6CFDF238AE6AF00FABAA3 /* 文件管理 */,
+				60F3BEC923E1D83400447EC2 /* 数据库 */,
 				3091741E237BE80000010E99 /* 英语专业考试 */,
 				3015A050237D31D80086B39D /* API网络层 */,
 				30202FED2379618800F1AADA /* app图片制作 */,
@@ -1099,6 +1131,7 @@
 			isa = PBXGroup;
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
+				600A9E2B23E532F300ACB002 /* database(数据库) */,
 				60B6812D238CD1FB00E3F6B7 /* carousel(轮播图) */,
 				309173FC237AAF1200010E99 /* cell(通用cell) */,
 				30036DD022B9FBB400605DF7 /* single(单例管理) */,
@@ -1159,6 +1192,8 @@
 				3077A36222BB363F00372F07 /* UIButton+KExtension.m */,
 				60022A0D23C5756D004F94DB /* UITextField+KExtension.h */,
 				60022A0E23C5756D004F94DB /* UITextField+KExtension.m */,
+				600A9E4023E567FD00ACB002 /* UITableViewCell+KExtension.h */,
+				600A9E4123E567FD00ACB002 /* UITableViewCell+KExtension.m */,
 				3077A34622BB303500372F07 /* UIImageView+KExtension.h */,
 				3077A34522BB303500372F07 /* UIImageView+KExtension.m */,
 				3077A34222BB2FFF00372F07 /* UIScrollView+KExtension.h */,
@@ -1320,6 +1355,43 @@
 				60022A7523CDBDCE004F94DB /* KKWeChatMomentsViewController.xib */,
 			);
 			path = "模拟微信朋友圈";
+			sourceTree = "<group>";
+		};
+		600A9E2B23E532F300ACB002 /* database(数据库) */ = {
+			isa = PBXGroup;
+			children = (
+				600A9E2C23E5338E00ACB002 /* KKDatabase.h */,
+				600A9E2D23E5338E00ACB002 /* KKDatabase.m */,
+			);
+			path = "database(数据库)";
+			sourceTree = "<group>";
+		};
+		600A9E3023E551D300ACB002 /* 丰富多彩的cell(基于UITableView) */ = {
+			isa = PBXGroup;
+			children = (
+				600A9E3C23E5615D00ACB002 /* cells.json */,
+				600A9E4823E5695000ACB002 /* 预览cell */,
+				600A9E3223E5524500ACB002 /* KKTableViewCellViewController.h */,
+				600A9E3323E5524500ACB002 /* KKTableViewCellViewController.m */,
+				600A9E3423E5524500ACB002 /* KKTableViewCellViewController.xib */,
+			);
+			path = "丰富多彩的cell(基于UITableView)";
+			sourceTree = "<group>";
+		};
+		600A9E3123E551FB00ACB002 /* 丰富多彩的cell(基于UICollectionView) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "丰富多彩的cell(基于UICollectionView)";
+			sourceTree = "<group>";
+		};
+		600A9E4823E5695000ACB002 /* 预览cell */ = {
+			isa = PBXGroup;
+			children = (
+				600A9E4423E5694700ACB002 /* UITableViewCell+KPreviewDemo.h */,
+				600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */,
+			);
+			path = "预览cell";
 			sourceTree = "<group>";
 		};
 		603670A023BF390E001E3D22 /* 摄像机模块 */ = {
@@ -1504,6 +1576,16 @@
 			path = collection;
 			sourceTree = "<group>";
 		};
+		60F3BEC923E1D83400447EC2 /* 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				60F3BECA23E1D88E00447EC2 /* KKDatabaseViewController.h */,
+				60F3BECB23E1D88E00447EC2 /* KKDatabaseViewController.m */,
+				60F3BECC23E1D88E00447EC2 /* KKDatabaseViewController.xib */,
+			);
+			path = "数据库";
+			sourceTree = "<group>";
+		};
 		60F865A723D1581000CCEA70 /* 视频播放控件 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1616,6 +1698,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				600A9E3823E5524500ACB002 /* KKTableViewCellViewController.xib in Resources */,
 				300CC09D237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */,
 				60022A7923CDBDCE004F94DB /* KKWeChatMomentsViewController.xib in Resources */,
 				30917442237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */,
@@ -1649,6 +1732,7 @@
 				302897B222C46DEF000F2669 /* city.json in Resources */,
 				60C6CFE6238AE6F100FABAA3 /* KKFileManagerViewController.xib in Resources */,
 				60B68125238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.xib in Resources */,
+				60F3BED023E1D88E00447EC2 /* KKDatabaseViewController.xib in Resources */,
 				30036DAF22B9D76900605DF7 /* Main.storyboard in Resources */,
 				3091742D237BEC9900010E99 /* 6作文.json in Resources */,
 				60C6CFC0238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */,
@@ -1663,6 +1747,7 @@
 				30658A6522CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 				3015A05C237D33390086B39D /* KKUIUnitViewController.xib in Resources */,
+				600A9E3E23E5615E00ACB002 /* cells.json in Resources */,
 				30E20785237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
 				60C6CFD62389A41400FABAA3 /* KKProgressHUDViewController.xib in Resources */,
 			);
@@ -1672,6 +1757,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				600A9E3723E5524500ACB002 /* KKTableViewCellViewController.xib in Resources */,
 				300CC09C237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */,
 				60022A7823CDBDCE004F94DB /* KKWeChatMomentsViewController.xib in Resources */,
 				30917441237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */,
@@ -1705,6 +1791,7 @@
 				302897B122C46DEF000F2669 /* city.json in Resources */,
 				60C6CFE5238AE6F100FABAA3 /* KKFileManagerViewController.xib in Resources */,
 				60B68124238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.xib in Resources */,
+				60F3BECF23E1D88E00447EC2 /* KKDatabaseViewController.xib in Resources */,
 				30036DC722B9DDC500605DF7 /* Main.storyboard in Resources */,
 				3091742C237BEC9900010E99 /* 6作文.json in Resources */,
 				60C6CFBF238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */,
@@ -1719,6 +1806,7 @@
 				30658A6422CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6022CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 				3015A05B237D33390086B39D /* KKUIUnitViewController.xib in Resources */,
+				600A9E3D23E5615E00ACB002 /* cells.json in Resources */,
 				30E20784237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
 				60C6CFD52389A41400FABAA3 /* KKProgressHUDViewController.xib in Resources */,
 			);
@@ -1873,10 +1961,13 @@
 				30202FC32379362800F1AADA /* KKNavigationController.m in Sources */,
 				3077A35822BB344D00372F07 /* UILabel+KExtension.m in Sources */,
 				60022A7723CDBDCE004F94DB /* KKWeChatMomentsViewController.m in Sources */,
+				60F3BECE23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
 				302897C622C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A622C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
 				308DF76B2359B24400A503D0 /* KKUIWebViewController.m in Sources */,
+				600A9E3623E5524500ACB002 /* KKTableViewCellViewController.m in Sources */,
 				60022A3C23C85919004F94DB /* KKAiteTextField+KExtension.m in Sources */,
+				600A9E4323E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */,
 				60022A2F23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */,
 				3077A33722BA45A400372F07 /* NSString+KExtension.m in Sources */,
 				3091740B237AB8B400010E99 /* KKAppIconImageView.m in Sources */,
@@ -1895,6 +1986,7 @@
 				302897A222C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33122BA45A400372F07 /* NSObject+KExtension.m in Sources */,
 				302897AA22C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
+				600A9E2F23E5338E00ACB002 /* KKDatabase.m in Sources */,
 				302897C022C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
 				60C6CFDC238A84F200FABAA3 /* KKPickViewViewController.m in Sources */,
 				30917449237C277E00010E99 /* KKSDWebViewController.m in Sources */,
@@ -1923,6 +2015,7 @@
 				3028979422C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
 				30917401237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
 				302897BE22C46DEF000F2669 /* KKTextField.m in Sources */,
+				600A9E4723E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */,
 				60B6813B238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1992,10 +2085,13 @@
 				30202FC22379362800F1AADA /* KKNavigationController.m in Sources */,
 				3077A35722BB344D00372F07 /* UILabel+KExtension.m in Sources */,
 				60022A7623CDBDCE004F94DB /* KKWeChatMomentsViewController.m in Sources */,
+				60F3BECD23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
 				302897C522C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A522C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
 				308DF76A2359B24400A503D0 /* KKUIWebViewController.m in Sources */,
+				600A9E3523E5524500ACB002 /* KKTableViewCellViewController.m in Sources */,
 				60022A3B23C85919004F94DB /* KKAiteTextField+KExtension.m in Sources */,
+				600A9E4223E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */,
 				60022A2E23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */,
 				3077A33622BA45A400372F07 /* NSString+KExtension.m in Sources */,
 				3091740A237AB8B400010E99 /* KKAppIconImageView.m in Sources */,
@@ -2014,6 +2110,7 @@
 				302897A122C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33022BA45A400372F07 /* NSObject+KExtension.m in Sources */,
 				302897A922C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
+				600A9E2E23E5338E00ACB002 /* KKDatabase.m in Sources */,
 				302897BF22C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
 				60C6CFDB238A84F200FABAA3 /* KKPickViewViewController.m in Sources */,
 				30917448237C277E00010E99 /* KKSDWebViewController.m in Sources */,
@@ -2042,6 +2139,7 @@
 				3028979322C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
 				30917400237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
 				302897BD22C46DEF000F2669 /* KKTextField.m in Sources */,
+				600A9E4623E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */,
 				60B6813A238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

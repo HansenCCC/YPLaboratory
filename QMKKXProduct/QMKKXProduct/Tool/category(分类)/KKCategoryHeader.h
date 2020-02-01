@@ -29,5 +29,6 @@
 #import "UINavigationBar+KExtension.h"//navigationBar
 #import "UIViewController+KExtension.h"//controller
 #import "MBProgressHUD+KExtension.h"//MBProgressHUD
+#import "UITableViewCell+KExtension.h"//UITableViewCell
 
 #endif /* KKCategoryHeader_h */

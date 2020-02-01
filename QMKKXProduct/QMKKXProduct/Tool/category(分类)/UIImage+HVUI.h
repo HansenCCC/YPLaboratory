@@ -242,7 +242,7 @@
 // *
 // *  @return 新的图片
 // */
-//- (UIImage *)imageWithTintColor:(UIColor *)tintColor;
+//- (UIImage *)kk_imageWithTintColor:(UIColor *)tintColor;
 
 /**
  *  根据color,获取1x1尺寸的图片.可用于UIButton的backgroundImage属性设置

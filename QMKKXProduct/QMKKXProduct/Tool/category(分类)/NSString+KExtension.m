@@ -339,4 +339,8 @@
 + (NSArray <NSString *> *)fileWeb{
     return @[@"HTML",@"html",];
 }
+//常见数据库集合db
++ (NSArray <NSString *> *)fileDatabase{
+    return @[@"DB",@"db",];
+}
 @end

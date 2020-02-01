@@ -72,8 +72,8 @@
     KKNavigationController *nav = [[KKNavigationController alloc] initWithRootViewController:viewController];
     nav.delegate = self;
     viewController.title = title;
-    image = [image imageWithTintColor:KKColor_2C2C2C];
-    selectImage = [selectImage imageWithTintColor:KKColor_0000FF];
+    image = [image kk_imageWithTintColor:KKColor_2C2C2C];
+    selectImage = [selectImage kk_imageWithTintColor:KKColor_0000FF];
     UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:title image:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [item setTitleTextAttributes:@{NSForegroundColorAttributeName:KKColor_2C2C2C, NSFontAttributeName:AdaptedFontSize(10.f)} forState:UIControlStateNormal];
     [item setTitleTextAttributes:@{NSForegroundColorAttributeName:KKColor_0000FF, NSFontAttributeName:AdaptedFontSize(10.f)} forState:UIControlStateSelected];

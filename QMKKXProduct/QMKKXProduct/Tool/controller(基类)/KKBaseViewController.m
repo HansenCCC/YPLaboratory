@@ -38,7 +38,7 @@
 }
 - (void)setupNavBackItemConfig{
     UIImage *itemImg = UIImageWithName(@"kk_icon_back");
-    itemImg = [itemImg imageWithTintColor:KKColor_000000];
+    itemImg = [itemImg kk_imageWithTintColor:KKColor_000000];
     self.backBtnImage = itemImg;
 }
 - (void)backItemClick{

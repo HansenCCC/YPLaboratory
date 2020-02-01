@@ -15,6 +15,7 @@
 #import "KKAppInstallViewController.h"//Apple安装协议
 #import "KKFileManagerViewController.h"//文件管理
 #import "KKNetworkViewController.h"//network网络层
+#import "KKDatabaseViewController.h"//数据库
 
 @interface KKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -55,9 +56,8 @@
     KKLabelModel *s1m8 = [[KKLabelModel alloc] initWithTitle:@"OC语言绘图(UIBezierPath)" value:nil];
     s1m8.isEnabled = NO;
     s1m8.info = [KKBaseViewController class];
-//    KKLabelModel *s1m9 = [[KKLabelModel alloc] initWithTitle:@"K线应用" value:nil];
-//    s1m9.isEnabled = NO;
-//    s1m9.info = [KKBaseViewController class];
+    KKLabelModel *s1m9 = [[KKLabelModel alloc] initWithTitle:@"数据库(基于FMDB)" value:nil];
+    s1m9.info = [KKDatabaseViewController class];
     KKLabelModel *s1m10 = [[KKLabelModel alloc] initWithTitle:@"Apple安装协议&App打开和交互" value:nil];
     s1m10.info = [KKAppInstallViewController class];
     KKLabelModel *s1m11 = [[KKLabelModel alloc] initWithTitle:@"Xcode自定义文件模板" value:nil];
@@ -74,7 +74,7 @@
     s1m16.isEnabled = NO;
     KKLabelModel *s1mMax = [[KKLabelModel alloc] initWithTitle:@"鸣谢支持" value:nil];
     s1mMax.isEnabled = NO;
-    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m2,s1m4,s1m13,s1m5,s1m7,s1m8,s1m15,s1m16,s1m10,s1m11,s1m3,s1m12,s1m14,s1mMax]];
+    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m2,s1m4,s1m13,s1m5,s1m9,s1m7,s1m8,s1m15,s1m16,s1m10,s1m11,s1m3,s1m12,s1m14,s1mMax]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

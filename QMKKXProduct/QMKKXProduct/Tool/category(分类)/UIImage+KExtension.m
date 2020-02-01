@@ -207,7 +207,7 @@
 @end
 
 @implementation UIImage (KExtension_UIColor)
-- (UIImage *)imageWithTintColor:(UIColor *)tintColor{
+- (UIImage *)kk_imageWithTintColor:(UIColor *)tintColor{
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
     [tintColor setFill];
     CGRect bounds = CGRectMake( 0.f, 0.f, self.size.width, self.size.height);
