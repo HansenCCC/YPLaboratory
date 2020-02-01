@@ -125,10 +125,6 @@
     f2.origin.y = bounds.size.height - 20;
     f2.size.height = 20;
     self.pageControl.frame = f2;
-    
-    //设置初始位置
-    [self scrollToInitialAnimated:NO];
-    
     //适配横竖屏刷新机制
     [self.collectionView reloadData];
     [self iqScrollToMostSuitableAnimated:NO];
@@ -275,5 +271,9 @@
     NSInteger row = [self.delegate kkCollectionView:self.collectionView numberOfItemsInSection:0];
     self.pageControl.numberOfPages = row;
     [self.collectionView reloadData];
+    //延迟scroll
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self scrollToInitialAnimated:NO];
+    });
 }
 @end

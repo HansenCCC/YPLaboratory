@@ -156,9 +156,9 @@
 + (KKWeChatMomentsCommentModel *)setupWeChatMoments:(NSIndexPath *)indexPath{
     KKWeChatMomentsCommentModel *cellModel = [[KKWeChatMomentsCommentModel alloc] initWithId:@"1" userName:@"力王" content:@"英雄联盟憨憨;我要玩压缩-游戏-高清正版视频在线观看–爱奇艺https://www.iqiyi.com/v_19rv0pc2mg.html"];
     if (indexPath.row == 0) {
-        cellModel.content = @"";
     }else if (indexPath.row == 1){
-        KKWeChatMomentsCommentModel *replyModel = [[KKWeChatMomentsCommentModel alloc] initWithId:@"2" userName:@"李四" content:@"你发的这个我早就看过了"];
+        cellModel.content = @"你发的这个我早就看过了";
+        KKWeChatMomentsCommentModel *replyModel = [[KKWeChatMomentsCommentModel alloc] initWithId:@"2" userName:@"李四" content:nil];
         cellModel.replyModel = replyModel;
     }
     return cellModel;
