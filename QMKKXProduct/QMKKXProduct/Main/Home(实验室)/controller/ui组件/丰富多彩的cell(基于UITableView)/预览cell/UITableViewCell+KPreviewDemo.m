@@ -13,6 +13,7 @@
 #import "KKAppIconLabelModel.h"
 #import "KKAppIconTableViewCell.h"
 #import "KKWeChatMomentsTableViewCell.h"
+#import "KKWeChatCommentTableViewCell.h"
 
 @implementation UITableViewCell (KPreviewDemo)
 + (void)previewDemoTestCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath{
@@ -125,7 +126,7 @@
     KKWeChatMomentsModel *element = [[KKWeChatMomentsModel alloc] init];
     element.nickname = @"力王";
     element.iconUrl = @"https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2462146637,4274174245&fm=26&gp=0.jpg";
-    element.contentValue = @"石器盒子上线以来，注册用户3w左右，日活最高达3k人次。从线上用户反馈来说，用户体验极好。自物品交易、金币交易和拍卖功能上线后，收益成果显著。目前Bee的用户较少，但是我一直都在关注Bee的用户体验和上线反馈率，非常期待Bee能够像其他游戏分发平台那样做大做强。石器盒子上线以来，注册用户3w左右，日活最高达3k人次。从线上用户反馈来说，用户体验极好。自物品交易、金币交易和拍卖功能上线后，收益成果显著。目前Bee的用户较少，但是我一直都在关注Bee的用户体验和上线反馈率，非常期待Bee能够像其他游戏分发平台那样做大做强。";
+    element.contentValue = @"我要的东西呢？\n我要的你也未必带来了。\n什么意思？你上来晒太阳的啊？\n给我个机会。\n怎么给你机会？\n我以前没的选择，现在我想做一个好人。\n好，跟法官说，看他让不让你做好人。\n那就让我死。\n对不起，我是警察。\n谁知道？";
     element.timestampDate = @"两天前";
     element.likes = @[[[KKWeChatMomentsLikeModel alloc] initWithId:@"1" userName:@"张三"],[[KKWeChatMomentsLikeModel alloc] initWithId:@"2" userName:@"李四"],[[KKWeChatMomentsLikeModel alloc] initWithId:@"2" userName:@"王五"]];
     KKWeChatMomentsCommentModel *m1 = [[KKWeChatMomentsCommentModel alloc] initWithId:@"1" userName:@"王五" content:@"你发的这个我看过"];
@@ -134,5 +135,32 @@
     element.comments = @[[[KKWeChatMomentsCommentModel alloc] initWithId:@"1" userName:@"张三" content:@"你发的这个我看过"],[[KKWeChatMomentsCommentModel alloc] initWithId:@"1" userName:@"张三" content:@"我好想记错了，不好意思我好想记错了，不好意思"],m1];
     element.images = @[@"https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2462146637,4274174245&fm=26&gp=0.jpg",@"https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2462146637,4274174245&fm=26&gp=0.jpg",@"https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2462146637,4274174245&fm=26&gp=0.jpg",];
     return element;
+}
+@end
+
+@implementation KKWeChatCommentTableViewCell (KPreviewDemo)
++ (void)previewDemoTestCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath{
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    KKWeChatCommentTableViewCell *kCell = (KKWeChatCommentTableViewCell *)cell;
+    kCell.cellModel = [self setupWeChatMoments:indexPath];
+}
++ (CGFloat)heightForPreviewDemoTest:(NSIndexPath *)indexPath{
+    KKWeChatMomentsCommentModel *cellModel = [self setupWeChatMoments:indexPath];
+    KKWeChatCommentTableViewCell *cell = [KKWeChatCommentTableViewCell sharedInstance];
+    cell.bounds = [UIScreen mainScreen].bounds;
+    cell.cellModel = cellModel;
+    CGSize size = [cell sizeThatFits:CGSizeMake(cell.bounds.size.width, 0)];
+    CGFloat height = size.height + AdaptedWidth(6.f);
+    return height;
+}
++ (KKWeChatMomentsCommentModel *)setupWeChatMoments:(NSIndexPath *)indexPath{
+    KKWeChatMomentsCommentModel *cellModel = [[KKWeChatMomentsCommentModel alloc] initWithId:@"1" userName:@"力王" content:@"英雄联盟憨憨;我要玩压缩-游戏-高清正版视频在线观看–爱奇艺https://www.iqiyi.com/v_19rv0pc2mg.html"];
+    if (indexPath.row == 0) {
+        cellModel.content = @"";
+    }else if (indexPath.row == 1){
+        KKWeChatMomentsCommentModel *replyModel = [[KKWeChatMomentsCommentModel alloc] initWithId:@"2" userName:@"李四" content:@"你发的这个我早就看过了"];
+        cellModel.replyModel = replyModel;
+    }
+    return cellModel;
 }
 @end
