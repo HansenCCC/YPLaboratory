@@ -27,4 +27,8 @@
       "title" : "KKWeChatCommentTableViewCell",
       "value" : "2"
     },
+    {
+      "title" : "KKAdaptiveTableViewCell",
+      "value" : "2"
+    },
 ]

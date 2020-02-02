@@ -273,6 +273,8 @@
 		603670AC23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */; };
 		607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
+		609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
+		609EC2A023E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
 		60B68109238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */; };
 		60B6810A238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */; };
 		60B6810B238B017300E3F6B7 /* KKFileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B68108238B017300E3F6B7 /* KKFileCollectionViewCell.xib */; };
@@ -591,6 +593,8 @@
 		603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKQRCodeScanViewController.m; sourceTree = "<group>"; };
 		607019B023D006A8009078E6 /* KKWeChatMomentsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsTableViewCell.h; sourceTree = "<group>"; };
 		607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsTableViewCell.m; sourceTree = "<group>"; };
+		609EC29D23E7207C003BB61C /* KKAdaptiveTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveTableViewCell.h; sourceTree = "<group>"; };
+		609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAdaptiveTableViewCell.m; sourceTree = "<group>"; };
 		60B68106238B017300E3F6B7 /* KKFileCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileCollectionViewCell.h; sourceTree = "<group>"; };
 		60B68107238B017300E3F6B7 /* KKFileCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileCollectionViewCell.m; sourceTree = "<group>"; };
 		60B68108238B017300E3F6B7 /* KKFileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1562,6 +1566,8 @@
 				60C6CFC123884E7200FABAA3 /* KKSwitchTableViewCell.h */,
 				60C6CFC223884E7200FABAA3 /* KKSwitchTableViewCell.m */,
 				60C6CFC323884E7200FABAA3 /* KKSwitchTableViewCell.xib */,
+				609EC29D23E7207C003BB61C /* KKAdaptiveTableViewCell.h */,
+				609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */,
 			);
 			path = table;
 			sourceTree = "<group>";
@@ -2015,6 +2021,7 @@
 				3028979422C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
 				30917401237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
 				302897BE22C46DEF000F2669 /* KKTextField.m in Sources */,
+				609EC2A023E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */,
 				600A9E4723E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */,
 				60B6813B238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */,
 			);
@@ -2139,6 +2146,7 @@
 				3028979322C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
 				30917400237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
 				302897BD22C46DEF000F2669 /* KKTextField.m in Sources */,
+				609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */,
 				600A9E4623E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */,
 				60B6813A238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */,
 			);

@@ -60,6 +60,7 @@
 #import "KKButtonTableViewCell.h"
 #import "KKSwitchTableViewCell.h"
 #import "KKImageViewCollectionViewCell.h"
+#import "KKAdaptiveTableViewCell.h"
 //轮播图
 #import "KKCarouselView.h"
 

@@ -164,3 +164,29 @@
     return cellModel;
 }
 @end
+
+@implementation KKAdaptiveTableViewCell (KPreviewDemo)
++ (void)previewDemoTestCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath{
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    KKAdaptiveTableViewCell *kCell = (KKAdaptiveTableViewCell *)cell;
+    kCell.contentLabel.text = [self setupWeChatMoments:indexPath];
+}
++ (CGFloat)heightForPreviewDemoTest:(NSIndexPath *)indexPath{
+    NSString *cellModel = [self setupWeChatMoments:indexPath];
+    KKAdaptiveTableViewCell *cell = [KKAdaptiveTableViewCell sharedInstance];
+    cell.bounds = [UIScreen mainScreen].bounds;
+    cell.contentLabel.text = cellModel;
+    CGSize size = [cell sizeThatFits:CGSizeMake(cell.bounds.size.width, 0)];
+    CGFloat height = size.height;
+    return height;
+}
++ (NSString *)setupWeChatMoments:(NSIndexPath *)indexPath{
+    NSString *value = @"";
+    if (indexPath.row == 0) {
+        value = @"力王CH";
+    }else if (indexPath.row == 1){
+        value = @"英雄联盟憨憨;我要玩压缩-游戏-高清正版视频在线观看–爱奇艺https://www.iqiyi.com/v_19rv0pc2mg.html";
+    }
+    return value;
+}
+@end

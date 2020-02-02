@@ -16,18 +16,20 @@
 @implementation KKDatabase
 - (instancetype)init{
     if (self = [super init]) {
-        //默认所有表创建在document目录kk_common.db文件目录下
-        //想另行创建db文件，可以self.dbPath指定路径
-        NSString *docuPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-        NSLog(@"数据库地址:\n%@\n",docuPath);
-        NSString *dbPath = [docuPath stringByAppendingPathComponent:@"kk_common.db"];
-        self.dbPath = dbPath;
+        /*
+         //默认所有表创建在document目录kk_common.db文件目录下
+         //想另行创建db文件，可以self.dbPath指定路径
+         NSString *docuPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+         NSString *dbPath = [docuPath stringByAppendingPathComponent:@"kk_common.db"];
+         self.dbPath = dbPath;
+         */
     }
     return self;
 }
 + (instancetype)databaseWithPath:(NSString *)dbPath{
-    KKDatabase *database = [self init];
+    KKDatabase *database = [[self alloc] init];
     database.dbPath = dbPath;
+    NSLog(@"数据库地址:\n%@\n",dbPath);
     return database;
 }
 //指定创建db路径
@@ -43,6 +45,17 @@
 }
 //设置配置
 - (void)setConfig{
-
+    
+}
+//获取所有的表单信息
+- (NSInteger)tableCount{
+    // 根据请求参数查询数据
+    FMResultSet *resultSet = nil;
+    resultSet = [self.db executeQuery:@"SELECT * FROM sqlite_master where type='table';"];
+    NSInteger tableCount = 0;
+    while (resultSet.next) {
+        tableCount ++;
+    }
+    return tableCount;
 }
 @end

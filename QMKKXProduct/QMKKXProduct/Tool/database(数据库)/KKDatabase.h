@@ -10,6 +10,7 @@
 
 @interface KKDatabase : NSObject
 @property (strong, nonatomic) NSString *dbPath;//db位置
+@property (assign, nonatomic, readonly) NSInteger tableCount;//获取表单数量
 //
 + (instancetype)databaseWithPath:(NSString *)dbPath;
 

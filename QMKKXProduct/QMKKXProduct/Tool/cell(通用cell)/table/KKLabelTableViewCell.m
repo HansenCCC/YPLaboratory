@@ -15,7 +15,6 @@
 
 
 @implementation KKLabelTableViewCell
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -25,7 +24,6 @@
         weakSelf.cellModel.value = textField.text;
     };
 }
-
 - (void)setCellModel:(KKLabelModel *)cellModel{
     _cellModel = cellModel;
     [self updateSubviews];
