@@ -28,15 +28,9 @@
     //异步处理消耗内存操作
     [self reloadDatas];
 }
-- (void)db{
-//    //4.数据库中创建表（可创建多张）
-//    NSString *sql = @"create table if not exists t_student ('ID' INTEGER PRIMARY KEY AUTOINCREMENT,'name' TEXT NOT NULL, 'phone' TEXT NOT NULL,'score' INTEGER NOT NULL)";
-//    //5.执行更新操作 此处database直接操作，不考虑多线程问题，多线程问题，用FMDatabaseQueue 每次数据库操作之后都会返回bool数值，YES，表示success，NO，表示fail,可以通过 @see lastError @see lastErrorCode @see lastErrorMessage
-//    BOOL result = [db executeUpdate:sql];
-//    if (result) {
-//        NSLog(@"create table success");
-//    }
-//    [db close];
+//刷新数据列表
+- (void)whenRightClickAction:(id)sender{
+    [self reloadDatas];
 }
 - (void)setupSubviews{
     //数据库
@@ -44,6 +38,8 @@
     //ui
     [self.tableView registerClass:[KKAdaptiveTableViewCell class] forCellReuseIdentifier:@"KKAdaptiveTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"KKLabelTableViewCell" bundle:nil] forCellReuseIdentifier:@"KKLabelTableViewCell"];
+    //右边导航刷新按钮
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(whenRightClickAction:)];
 }
 - (void)reloadDatas{
     [self.datas removeAllObjects];
