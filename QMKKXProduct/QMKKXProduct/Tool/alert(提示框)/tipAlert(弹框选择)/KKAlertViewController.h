@@ -57,6 +57,25 @@ typedef void(^KKAlertViewControllerBlock)(KKAlertViewController *controler ,NSIn
 
 
 @interface KKAlertViewController (ALLALERT)
+
+/// 自定义提示框
+/// @param title 标题
+/// @param tipText 提示文字
+/// @param leftTitle 左边标题
+/// @param rightTitle 右边标题
+/// @param isOnlyOneButton 是否是有一个按钮 default NO
+/// @param isShowCloseButton 是否显示关闭按钮 default YES
+/// @param canTouchBeginMove 是否点击空白消失 default YES
+/// @param whenCompleteBlock 成功回调
++ (KKAlertViewController *)showCustomWithTitle:(NSString *)title
+                                       tipText:(NSString *)tipText
+                                       leftTitle:(NSString *)leftTitle
+                                       rightTitle:(NSString *)rightTitle
+                                    isOnlyOneButton:(BOOL )isOnlyOneButton
+                                    isShowCloseButton:(BOOL )isShowCloseButton
+                                    canTouchBeginMove:(BOOL )canTouchBeginMove
+                                      complete:(KKAlertViewControllerBlock )whenCompleteBlock;
+
 /**
  显示文本
  */

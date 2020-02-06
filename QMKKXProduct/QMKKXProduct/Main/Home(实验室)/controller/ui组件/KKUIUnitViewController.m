@@ -18,6 +18,7 @@
 #import "KKWeChatMomentsViewController.h"//微信朋友圈
 #import "KKVideoPlayViewController.h"//视频播放控件
 #import "KKTableViewCellViewController.h"//丰富多彩的cell(基于UITableView)
+#import "KKCustomAlertViewController.h"//自定义弹框(alert)
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -65,7 +66,9 @@
     KKLabelModel *s1m11 = [[KKLabelModel alloc] initWithTitle:@"视频播放控件" value:nil];
     s1m11.info = [KKVideoPlayViewController class];
     s1m11.isEnabled = NO;
-    [self.datas addObjectsFromArray:@[c4,c5,c1,c2,c3,s1m7,s1m6,s1m8,s1m11,s1m9,s1m10]];
+    KKLabelModel *s1m12 = [[KKLabelModel alloc] initWithTitle:@"自定义弹框(alert)" value:nil];
+    s1m12.info = [KKCustomAlertViewController class];
+    [self.datas addObjectsFromArray:@[c4,c5,c1,s1m12,c2,c3,s1m7,s1m6,s1m8,s1m11,s1m9,s1m10]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

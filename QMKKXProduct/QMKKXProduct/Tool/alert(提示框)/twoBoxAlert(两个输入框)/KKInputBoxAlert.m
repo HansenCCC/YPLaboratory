@@ -63,7 +63,7 @@
 }
 - (void)setIsOnlyOneTextField:(BOOL)isOnlyOneTextField{
     _isOnlyOneTextField = isOnlyOneTextField;
-    self.bottomTextField.hidden = YES;
+    self.bottomTextField.hidden = isOnlyOneTextField;
     [self viewWillLayoutSubviews];
 }
 - (void)setTipText:(NSString *)tipText{
@@ -95,6 +95,34 @@
 
 
 @implementation KKInputBoxAlert (ALLALERT)
+/// 自定义输入框
+/// @param title 标题
+/// @param bottomTitle 底部标题
+/// @param topPlaceholder 占位符
+/// @param bottomPlaceholder 占位符
+/// @param isOnlyOneTextField 是否是有一个 输入框 默认NO
+/// @param canTouchBeginMove 是否点击空白消失 default YES
+/// @param whenCompleteBlock 成功回调
++ (KKAlertViewController *)showCustomWithTitle:(NSString *)title
+                                       bottomTitle:(NSString *)bottomTitle
+                                       topPlaceholder:(NSString *)topPlaceholder
+                                       bottomPlaceholder:(NSString *)bottomPlaceholder
+                                    isOnlyOneTextField:(BOOL )isOnlyOneTextField
+                                    canTouchBeginMove:(BOOL )canTouchBeginMove
+                                      complete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    KKInputBoxAlert *alert = [[KKInputBoxAlert alloc] initWithPresentType:KKUIBaseMiddlePresentType];
+    alert.whenCompleteBlock = whenCompleteBlock;
+    alert.isOnlyOneTextField = isOnlyOneTextField;
+    alert.isOnlyOneButton = YES;
+    alert.canTouchBeginMove = canTouchBeginMove;
+    alert.rightTitle = bottomTitle;
+    alert.text = title;
+    alert.topTextField.placeholder = topPlaceholder;
+    alert.bottomTextField.placeholder = bottomPlaceholder;
+    UIViewController *vc = alert.view.topViewController;
+    [vc presentViewController:alert animated:YES completion:nil];
+    return alert;
+}
 
 /**
  显示账号验证输入框

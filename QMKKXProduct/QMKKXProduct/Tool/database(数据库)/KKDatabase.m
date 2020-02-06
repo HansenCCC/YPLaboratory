@@ -77,11 +77,108 @@
 #pragma mark - action
 /// 创建表单
 /// @param tableName 表单名称
-- (void)createTable:(NSString *)tableName complete:(void(^)(BOOL success))complete;{
+- (BOOL)createTableWithTableName:(NSString *)tableName{
     NSString *sqlCommand = [NSString stringWithFormat:@"create table if not exists %@ (id Interger primary key)",tableName];
     BOOL success = [self.db executeUpdate:sqlCommand];
-    if (complete) {
-        complete(success);
+    if(!success){
+        NSLog(@"error = %@", [self lastErrorMessage]);
     }
+    return success;
+}
+
+/// 插入内容到表单
+/// @param tableName 表单名称
+/// @param contents 插入数据内容
+- (BOOL)insertTableWithTableName:(NSString *)tableName contents:(NSObject *)contents{
+    //插入内容，遍历字段属性，不能为空属性默认赋值空字符串
+    NSMutableDictionary *dict = contents.mj_keyValues;
+    NSArray <KKDatabaseColumnModel *>*infoItems = [self getFieldsInfoWithTableName:tableName];
+    NSMutableArray *keys = [[NSMutableArray alloc] init];
+    NSMutableArray *values = [[NSMutableArray alloc] init];
+    for (KKDatabaseColumnModel *info in infoItems) {
+        NSString *key = info.name;
+        NSString *value = [dict objectForKey:key];
+        if (info.notnull.intValue == 1) {
+            //不能为空
+        }else{
+            //可以为空
+        }
+        if (info.pk.intValue == 1) {
+            //是特殊自增字段
+            if (value.length > 0) {
+                [keys addObject:key?:@""];
+                [values addObject:value?:@""];
+            }
+        }else{
+            //不是特殊自增字段
+            [keys addObject:key?:@""];
+            [values addObject:value?:@""];
+        }
+    }
+    //嵌套''
+    NSMutableArray *valuesMutable = [[NSMutableArray alloc] init];
+    for (NSString *value in values) {
+        [valuesMutable addObject:[NSString stringWithFormat:@"'%@'",value]];
+    }
+    values = [valuesMutable copy];
+    NSString *key = [keys componentsJoinedByString:@","];
+    NSString *value = [values componentsJoinedByString:@","];
+    NSString *sqlCommand = [NSString stringWithFormat:@"insert into %@ (%@) values (%@)", tableName,key,value];
+    BOOL success = [self.db executeUpdate:sqlCommand];
+    if(!success){
+        NSLog(@"error = %@", [self lastErrorMessage]);
+    }
+    return success;
+}
+
+/// 遍历表单内容
+/// @param tableName 表单名称
+- (NSArray *)selectTableWithTableName:(NSString *)tableName{
+    NSString *sqlCommand = [NSString stringWithFormat:@"select * from %@",tableName];
+    FMResultSet *resultSet = [self.db executeQuery:sqlCommand];
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    while([resultSet next]) {
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+        NSDictionary *columnNames = resultSet.columnNameToIndexMap;
+        NSArray *keys = columnNames.allKeys;
+        for (NSString *key in keys) {
+            NSString *value = [resultSet objectForColumn:key];
+            [dict setObject:value forKey:key];
+        }
+        [items addObject:dict];
+    }
+    return items;
+}
+/// 通过表单获取表单字段
+/// @param tableName 表单名称
+- (NSArray <NSString *>*)getFieldsWithTableName:(NSString *)tableName{
+//    FMResultSet *reslutSet = [self.db getTableSchema:tableName];
+//    NSMutableArray *resultArray = [NSMutableArray array];
+//    while ([reslutSet next]) {
+//        NSString *cloumn = [reslutSet objectForColumnName:@"name"];
+//        [resultArray addObject:cloumn];
+//        NSLog(@"%@",reslutSet.columnNameToIndexMap);
+//        NSLog(@"%@",reslutSet.resultDictionary);
+//    }
+    //获取表单字段，或者通过[db getTableSchema:tableName]获取
+    NSString *sqlCommand = [NSString stringWithFormat:@"select * from %@",tableName];
+    FMResultSet *resultSet = [self.db executeQuery:sqlCommand];
+    NSDictionary *dict = resultSet.columnNameToIndexMap;
+    return dict.allKeys;
+}
+/// 通过表单获取表单字段详情
+- (NSArray <KKDatabaseColumnModel *>*)getFieldsInfoWithTableName:(NSString *)tableName{
+    FMResultSet *reslutSet = [self.db getTableSchema:tableName];
+    NSMutableArray *resultArray = [[NSMutableArray alloc] init];
+    while ([reslutSet next]) {
+        KKDatabaseColumnModel *model = [KKDatabaseColumnModel mj_objectWithKeyValues:reslutSet.resultDictionary];
+        [resultArray addObject:model];
+    }
+    return resultArray;
+}
+
+/// 获取上一个操作错误信息
+- (NSString *)lastErrorMessage{
+    return [self.db lastErrorMessage];
 }
 @end

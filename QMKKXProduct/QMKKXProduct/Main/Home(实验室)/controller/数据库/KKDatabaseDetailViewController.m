@@ -1,42 +1,37 @@
 //
-//  KKDatabaseViewController.m
+//  KKDatabaseDetailViewController.m
 //  QMKKXProduct
 //
-//  Created by Hansen on 1/29/20.
+//  Created by Hansen on 2/3/20.
 //  Copyright © 2020 力王工作室. All rights reserved.
 //
 
-#import "KKDatabaseViewController.h"
+#import "KKDatabaseDetailViewController.h"
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
-#import "KKDatabaseDetailViewController.h"
+#import "KKDatebaseFormViewController.h"
 
-@interface KKDatabaseViewController ()
-@property (strong, nonatomic) KKDatabase *datebase;
+@interface KKDatabaseDetailViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
 @property (weak  , nonatomic) IBOutlet UITableView *tableView;
 
-
 @end
 
-@implementation KKDatabaseViewController
+@implementation KKDatabaseDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"数据库(基于FMDB)";
     [self setupSubviews];
     //异步处理消耗内存操作
     [self reloadDatas];
+    self.title = self.model.title;
 }
 //刷新数据列表
 - (void)whenRightClickAction:(id)sender{
     [self reloadDatas];
 }
 - (void)setupSubviews{
-    //数据库
-    self.datebase = [[KKDatabase alloc] init];
-    //ui
     [self.tableView registerClass:[KKAdaptiveTableViewCell class] forCellReuseIdentifier:@"KKAdaptiveTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"KKLabelTableViewCell" bundle:nil] forCellReuseIdentifier:@"KKLabelTableViewCell"];
     //右边导航刷新按钮
@@ -44,36 +39,16 @@
 }
 - (void)reloadDatas{
     [self.datas removeAllObjects];
-    //遍历项目目录所有文件，查找db文件
-    NSString *homePath = NSHomeDirectory();
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSDirectoryEnumerator *dicEnumerator = [fileManager enumeratorAtPath:homePath];
-    BOOL isDir = NO;
-    BOOL isExist = NO;
-    NSMutableArray *dbFiles = [[NSMutableArray alloc] init];
-    for (NSString *path in dicEnumerator.allObjects) {
-        NSString *filePath = [NSString stringWithFormat:@"%@/%@",homePath,path];
-        isExist = [fileManager fileExistsAtPath:filePath isDirectory:&isDir];
-        if (isDir) {
-            //目录路径
-        }else {
-            //文件路径
-            NSString *pathExtension = [filePath pathExtension];
-            if ([[NSString fileDatabase] containsObject:pathExtension]) {
-                //database
-                NSString *fileName = [filePath lastPathComponent];
-                KKDatabase *database = [KKDatabase databaseWithPath:filePath];
-                KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:fileName value:nil];
-                NSDictionary *reslut = [fileManager attributesOfItemAtPath:filePath error:nil];
-                element.info = reslut;
-                element.value = filePath;
-                element.placeholder = @(database.tableCount).stringValue;
-                [dbFiles addObject:element];
-            }
-        }
-    }
     //构造cell
-    [self.datas addObjectsFromArray:dbFiles];
+    KKDatabase *database = [KKDatabase databaseWithPath:self.model.value];
+    NSArray *items = database.tableSqliteMasters;
+    for (NSDictionary *item in items) {
+        NSString *name = item[@"name"];
+        KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:name value:nil];
+        element.info = item;
+        element.value = self.model.value;
+        [self.datas addObject:element];
+    }
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
@@ -110,35 +85,27 @@
 }
 - (void)mainQueueTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     KKLabelModel *cellModel = self.datas[indexPath.row];
-    KKDatabaseDetailViewController *vc = [[KKDatabaseDetailViewController alloc] init];
+    KKDatebaseFormViewController *vc = [[KKDatebaseFormViewController alloc] init];
     vc.model = cellModel;
     [self.navigationController pushViewController:vc animated:YES];
 }
 //赋值cell
 - (void)setupAdaptiveCell:(KKAdaptiveTableViewCell *)cell cellModel:(KKLabelModel *)cellModel{
-    //to do
-    NSDictionary *reslut = cellModel.info;
-    double byte = 1000.0;
-    long fileSize = reslut.fileSize/byte;
-    double fileSizeTmp;
-    NSString *tip;
-    if (fileSize > byte * byte) {
-        tip = @"GB";
-        fileSizeTmp = fileSize/(byte * byte);
-    }else if(fileSize > byte){
-        tip = @"MB";
-        fileSizeTmp = fileSize/(byte);
-    }else{
-        tip = @"KB";
-        fileSizeTmp = fileSize;
-    }
-    NSString *title = [cellModel.title addString:@"\n\n"];
-    NSString *fileSizeString = [NSString stringWithFormat:@"文件大小: %.2f %@\n",fileSizeTmp,tip];
-    NSString *tableNumber = [NSString stringWithFormat:@"表单数量: %@\n",cellModel.placeholder];
-    NSString *createDate = [NSString stringWithFormat:@"创建时间: %@\n",reslut[NSFileCreationDate]];
-    NSString *updateDate = [NSString stringWithFormat:@"修改时间: %@\n",reslut[NSFileModificationDate]];
-    NSString *filePath = [NSString stringWithFormat:@"文件路径: %@",cellModel.value];
-    NSString *format = [NSString stringWithFormat:@"%@%@%@%@%@",fileSizeString,tableNumber,createDate,updateDate,filePath];
+    NSDictionary *dict = cellModel.info;
+    /*
+     sql表单详情
+     //name = 1;
+     //rootpage = 3;
+     //sql = 4;
+     //"tbl_name" = 2;
+     //type = 0;
+     */
+    NSString *title = [dict[@"name"] addString:@"\n\n"];
+    NSString *rootpage = [NSString stringWithFormat:@"rootpage: %@\n",dict[@"rootpage"]];
+    NSString *sql = [NSString stringWithFormat:@"sql: %@\n",dict[@"sql"]];
+    NSString *tbl_name = [NSString stringWithFormat:@"tbl_name: %@\n",dict[@"tbl_name"]];
+    NSString *type = [NSString stringWithFormat:@"type: %@",dict[@"type"]];
+    NSString *format = [NSString stringWithFormat:@"%@%@%@%@",rootpage,sql,tbl_name,type];
     NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:KKColor_626787,NSFontAttributeName:AdaptedBoldFontSize(15)}];
     //调整行间距
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
@@ -154,4 +121,5 @@
     insets.bottom= AdaptedWidth(8.f);
     cell.contentInsets = insets;
 }
+#pragma mark - aciton
 @end
