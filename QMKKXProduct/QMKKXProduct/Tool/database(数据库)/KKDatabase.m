@@ -77,8 +77,28 @@
 #pragma mark - action
 /// 创建表单
 /// @param tableName 表单名称
-- (BOOL)createTableWithTableName:(NSString *)tableName{
-    NSString *sqlCommand = [NSString stringWithFormat:@"create table if not exists %@ (id Interger primary key)",tableName];
+/// @param columnModels 字段类型
+- (BOOL)createTableWithTableName:(NSString *)tableName columnModels:(NSArray <KKDatabaseColumnModel *>*)columnModels{
+    NSString *column = @"";
+    for (KKDatabaseColumnModel *columnModel in columnModels) {
+        NSString *name = columnModel.name;
+        NSString *pk = @"primary KEY AUTOINCREMENT";
+        NSString *notnull = @"NOT NULL";
+        NSString *type = columnModel.type?:@"TEXT";//没有类型默认为text文本类型
+        NSString *attribute = @"";
+        if (columnModel.pk.intValue == 1) {
+            attribute = pk;
+            type = @"INTEGER";
+        }else if(columnModel.notnull.intValue == 1){
+            attribute = notnull;
+        }
+        NSString *value = [NSString stringWithFormat:@"%@ %@ %@,",name,type,attribute];
+        column = [column addString:value];
+    }
+    if (column.length > 0) {
+        column = [column substringToIndex:column.length - 1];
+    }
+    NSString *sqlCommand = [NSString stringWithFormat:@"create table if not exists %@ (%@)",tableName,column];
     BOOL success = [self.db executeUpdate:sqlCommand];
     if(!success){
         NSLog(@"error = %@", [self lastErrorMessage]);
@@ -124,6 +144,30 @@
     NSString *key = [keys componentsJoinedByString:@","];
     NSString *value = [values componentsJoinedByString:@","];
     NSString *sqlCommand = [NSString stringWithFormat:@"insert into %@ (%@) values (%@)", tableName,key,value];
+    BOOL success = [self.db executeUpdate:sqlCommand];
+    if(!success){
+        NSLog(@"error = %@", [self lastErrorMessage]);
+    }
+    return success;
+}
+
+/// 添加字段到表单
+/// @param tableName 表单名称
+/// @param columnModel 字段model
+- (BOOL)addColumnWithTableName:(NSString *)tableName columnModel:(KKDatabaseColumnModel *)columnModel{
+    NSString *columnName = columnModel.name;
+    NSString *type = columnModel.type?:@"TEXT";
+    NSString *pk = @"primary key AUTOINCREMENT";
+    NSString *notnull = @"";
+    NSString *attribute = @"";
+    if (columnModel.pk.intValue == 1) {
+        attribute = pk;
+        type = @"INTEGER";
+    }else if(columnModel.notnull.intValue == 1){
+        attribute = notnull;
+    }
+    //执行添加字段命令
+    NSString *sqlCommand = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ %@ %@",tableName,columnName,type,attribute];
     BOOL success = [self.db executeUpdate:sqlCommand];
     if(!success){
         NSLog(@"error = %@", [self lastErrorMessage]);

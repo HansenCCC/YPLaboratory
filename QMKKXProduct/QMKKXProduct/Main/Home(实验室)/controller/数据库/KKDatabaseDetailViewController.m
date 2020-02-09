@@ -29,13 +29,41 @@
 }
 //刷新数据列表
 - (void)whenRightClickAction:(id)sender{
-    [self reloadDatas];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"添加表单" message:@"请输入表单名(不能与已有表单名重复)" preferredStyle:UIAlertControllerStyleAlert];
+    WeakSelf
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"请输入表单名";
+    }];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSString *value = alert.textFields.firstObject.text;
+        if (value.length > 0) {
+            //添加表单
+            KKDatabaseColumnModel *columnModel = [[KKDatabaseColumnModel alloc] init];
+            columnModel.name = @"id";
+            columnModel.pk = @"1";
+            KKDatabase *database = [KKDatabase databaseWithPath:weakSelf.model.value];
+            BOOL success = [database createTableWithTableName:value columnModels:@[columnModel]];
+            if (success) {
+                [weakSelf showSuccessWithMsg:@"表单添加成功"];
+                [weakSelf reloadDatas];
+            }else{
+                NSString *error = [database lastErrorMessage];
+                [weakSelf showError:[@"表单添加失败" addString:error]];
+            }
+        }
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //to do
+    }];
+    [alert addAction:action1];
+    [alert addAction:action2];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 - (void)setupSubviews{
     [self.tableView registerClass:[KKAdaptiveTableViewCell class] forCellReuseIdentifier:@"KKAdaptiveTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"KKLabelTableViewCell" bundle:nil] forCellReuseIdentifier:@"KKLabelTableViewCell"];
     //右边导航刷新按钮
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(whenRightClickAction:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(whenRightClickAction:)];
 }
 - (void)reloadDatas{
     [self.datas removeAllObjects];

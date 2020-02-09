@@ -102,7 +102,7 @@ return __singleton__; \
 #define kDefaultGoodsDetailMax  200 //商品详情默认最大输入
 #define KDefaultPageSize 20//默认一页20个
 #define KDefaultMargin  10//默认间隔
-#define KUIProgressHUDAfterDelayTimer 1.0//提示框默认显示多少秒消失
+#define KUIProgressHUDAfterDelayTimer 1.5//提示框默认显示多少秒消失
 
 //占位图
 #define kPlaceholderLogo UIImageWithName(@"kk_icon_logoPlaceholder")

@@ -371,6 +371,8 @@
 		60F865AC23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */; };
 		60F865AD23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */; };
 		60F865AE23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */; };
+		60FA64C123ED9272008BD3AD /* UIAlertController+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FA64C023ED9272008BD3AD /* UIAlertController+KExtension.m */; };
+		60FA64C223ED9272008BD3AD /* UIAlertController+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FA64C023ED9272008BD3AD /* UIAlertController+KExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -693,6 +695,8 @@
 		60F865A823D1585600CCEA70 /* KKVideoPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKVideoPlayViewController.h; sourceTree = "<group>"; };
 		60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKVideoPlayViewController.m; sourceTree = "<group>"; };
 		60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoPlayViewController.xib; sourceTree = "<group>"; };
+		60FA64BF23ED9272008BD3AD /* UIAlertController+KExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+KExtension.h"; sourceTree = "<group>"; };
+		60FA64C023ED9272008BD3AD /* UIAlertController+KExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+KExtension.m"; sourceTree = "<group>"; };
 		6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.debug.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QMKKXProduct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProductDev.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev.release.xcconfig"; sourceTree = "<group>"; };
@@ -1246,6 +1250,8 @@
 				3077A34E22BB306100372F07 /* UINavigationBar+KExtension.m */,
 				3077A35922BB357100372F07 /* UIViewController+KExtension.h */,
 				3077A35A22BB357100372F07 /* UIViewController+KExtension.m */,
+				60FA64BF23ED9272008BD3AD /* UIAlertController+KExtension.h */,
+				60FA64C023ED9272008BD3AD /* UIAlertController+KExtension.m */,
 				3028973A22C0C733000F2669 /* MBProgressHUD+KExtension.h */,
 				3028973922C0C733000F2669 /* MBProgressHUD+KExtension.m */,
 			);
@@ -2099,6 +2105,7 @@
 				3029A08F22C4A49B002E7937 /* AppDelegate+KKThird.m in Sources */,
 				302897CA22C47207000F2669 /* KKRefreshNormalHeader.m in Sources */,
 				3028979622C46DEF000F2669 /* HVUIFlowLayoutConstraint.m in Sources */,
+				60FA64C223ED9272008BD3AD /* UIAlertController+KExtension.m in Sources */,
 				3077A34022BB2FD000372F07 /* UIColor+KExtension.m in Sources */,
 				60F3BE4F23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */,
 				3077A36422BB363F00372F07 /* UIButton+KExtension.m in Sources */,
@@ -2230,6 +2237,7 @@
 				3029A08E22C4A49B002E7937 /* AppDelegate+KKThird.m in Sources */,
 				302897C922C47207000F2669 /* KKRefreshNormalHeader.m in Sources */,
 				3028979522C46DEF000F2669 /* HVUIFlowLayoutConstraint.m in Sources */,
+				60FA64C123ED9272008BD3AD /* UIAlertController+KExtension.m in Sources */,
 				3077A33F22BB2FD000372F07 /* UIColor+KExtension.m in Sources */,
 				60F3BE4E23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */,
 				3077A36322BB363F00372F07 /* UIButton+KExtension.m in Sources */,

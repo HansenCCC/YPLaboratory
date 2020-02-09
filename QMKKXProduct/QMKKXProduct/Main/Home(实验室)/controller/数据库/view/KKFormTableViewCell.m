@@ -10,8 +10,6 @@
 #import "KKFormCollectionViewCell.h"
 
 @interface KKFormTableViewCell ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
 
 @end
 
@@ -38,7 +36,7 @@
     NSArray *items = (NSArray *)self.cellModel.info;
     KKFormCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"KKFormCollectionViewCell" forIndexPath:indexPath];
     cell.backgroundColor = KKColor_RANDOM;
-    cell.titleLabel.text = [NSString stringWithFormat:@"%@",items[indexPath.row]];
+    cell.titleLabel.text = items[indexPath.row]?[NSString stringWithFormat:@"%@",items[indexPath.row]]:@"";
     cell.titleLabel.layer.borderWidth = AdaptedWidth(0.5f);
     cell.titleLabel.layer.borderColor = KKColor_000000.CGColor;
     return cell;
@@ -51,6 +49,11 @@
     CGSize size = collectionView.size;
     size.width = AdaptedWidth(100.f);
     return size;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.whenSelectItemClick) {
+        self.whenSelectItemClick(self, indexPath);
+    }
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if (self.whenScrollViewDidScroll) {

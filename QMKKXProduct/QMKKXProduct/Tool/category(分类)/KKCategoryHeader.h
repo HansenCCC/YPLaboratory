@@ -30,5 +30,6 @@
 #import "UIViewController+KExtension.h"//controller
 #import "MBProgressHUD+KExtension.h"//MBProgressHUD
 #import "UITableViewCell+KExtension.h"//UITableViewCell
+#import "UIAlertController+KExtension.h"//UIAlertController
 
 #endif /* KKCategoryHeader_h */

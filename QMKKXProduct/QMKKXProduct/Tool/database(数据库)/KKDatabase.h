@@ -32,12 +32,18 @@
 
 /// 创建表单
 /// @param tableName 表单名称
-- (BOOL)createTableWithTableName:(NSString *)tableName;
+/// @param columnModels 字段类型
+- (BOOL)createTableWithTableName:(NSString *)tableName columnModels:(NSArray <KKDatabaseColumnModel *>*)columnModels;
 
 /// 插入内容到表单
 /// @param tableName 表单名称
 /// @param contents 插入数据内容
 - (BOOL)insertTableWithTableName:(NSString *)tableName contents:(NSObject *)contents;
+
+/// 添加字段到表单
+/// @param tableName 表单名称
+/// @param columnModel 字段model
+- (BOOL)addColumnWithTableName:(NSString *)tableName columnModel:(KKDatabaseColumnModel *)columnModel;
 
 /// 通过表单获取表单字段
 /// @param tableName 表单名称
