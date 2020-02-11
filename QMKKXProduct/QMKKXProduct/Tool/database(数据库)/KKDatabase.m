@@ -106,7 +106,7 @@
     return success;
 }
 
-/// 插入内容到表单
+/// 增加内容到表单
 /// @param tableName 表单名称
 /// @param contents 插入数据内容
 - (BOOL)insertTableWithTableName:(NSString *)tableName contents:(NSObject *)contents{
@@ -144,6 +144,86 @@
     NSString *key = [keys componentsJoinedByString:@","];
     NSString *value = [values componentsJoinedByString:@","];
     NSString *sqlCommand = [NSString stringWithFormat:@"insert into %@ (%@) values (%@)", tableName,key,value];
+    BOOL success = [self.db executeUpdate:sqlCommand];
+    if(!success){
+        NSLog(@"error = %@", [self lastErrorMessage]);
+    }
+    return success;
+}
+
+/// 删除内容从表单
+/// @param tableName 表单名称
+/// @param contents 插入数据内容
+- (BOOL)deleteTableWithTableName:(NSString *)tableName contents:(NSObject *)contents{
+    //删除内容，遍历字段属性，匹配满足条件的内容进行删除
+    //delete from 't_student' where ID = ?
+    NSMutableDictionary *dict = contents.mj_keyValues;
+    NSArray *keys = dict.allKeys;
+    NSString *format = @"";
+    NSString *and = @" and ";
+    for (NSString *key in keys) {
+        NSString *deleteValue = [NSString stringWithFormat:@"%@ = '%@' %@",key,dict[key],and];
+        if (dict[key] == [NSNull null]) {
+            //内容为空不做操作
+        }else{
+            format = [format addString:deleteValue];
+        }
+    }
+    if (format.length > 0) {
+        format = [format substringToIndex:format.length - and.length];
+    }
+    NSString *sqlCommand = [NSString stringWithFormat:@"delete from %@ where %@", tableName,format];
+    BOOL success = [self.db executeUpdate:sqlCommand];
+    if(!success){
+        NSLog(@"error = %@", [self lastErrorMessage]);
+    }
+    return success;
+}
+
+/// 更新内容从表单
+/// @param tableName 表单名称
+/// @param contents 原数据内容
+/// @param update 更新数据内容
+- (BOOL)updateTableWithTableName:(NSString *)tableName contents:(NSObject *)contents update:(NSObject *)update{
+    //修改内容，遍历字段属性，匹配满足条件的内容进行修改
+    //UPDATE table_name SET column1=value1,column2=value2,...
+    NSString *updateformat = @"";
+    NSString *contentformat = @"";
+    {
+        NSMutableDictionary *dict = contents.mj_keyValues;
+        NSArray *keys = dict.allKeys;
+        //条件语句
+        NSString *and = @" and ";
+        for (NSString *key in keys) {
+            NSString *deleteValue = [NSString stringWithFormat:@"%@ = '%@' %@",key,dict[key],and];
+            if (dict[key] == [NSNull null]) {
+                //内容为空不做操作
+            }else{
+                contentformat = [contentformat addString:deleteValue];
+            }
+        }
+        if (contentformat.length > 0) {
+            contentformat = [contentformat substringToIndex:contentformat.length - and.length];
+        }
+    }
+    {
+        //修改语句
+        NSMutableDictionary *dict = update.mj_keyValues;
+        NSArray *keys = [self getFieldsWithTableName:tableName];
+        NSString *and = @" , ";
+        for (NSString *key in keys) {
+            NSObject *value = dict[key];
+            if (value == [NSNull null]) {
+                value = @"";
+            }
+            NSString *deleteValue = [NSString stringWithFormat:@"%@ = '%@' %@",key,value?:@"",and];
+            updateformat = [updateformat addString:deleteValue];
+        }
+        if (updateformat.length > 0) {
+            updateformat = [updateformat substringToIndex:updateformat.length - and.length];
+        }
+    }
+    NSString *sqlCommand = [NSString stringWithFormat:@"UPDATE %@ SET %@ where %@", tableName,updateformat,contentformat];
     BOOL success = [self.db executeUpdate:sqlCommand];
     if(!success){
         NSLog(@"error = %@", [self lastErrorMessage]);

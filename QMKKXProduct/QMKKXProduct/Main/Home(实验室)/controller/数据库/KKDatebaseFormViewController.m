@@ -34,7 +34,7 @@
     //右边导航刷新按钮
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(whenRightClickAction:)];
 }
-//刷新数据列表
+//点击右上角操作
 - (void)whenRightClickAction:(id)sender{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     WeakSelf
@@ -126,50 +126,85 @@
     [alert addAction:action2];
     [self presentViewController:alert animated:YES completion:nil];
 }
+- (void)whenAcitonDatabase:(NSIndexPath *)indexPath{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    WeakSelf
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"删除内容" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //to do
+        [weakSelf deleteDatabase:indexPath];
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"修改内容" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //to do
+        [weakSelf updateDatabase:indexPath];
+    }];
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //to do
+    }];
+    [alert addAction:action1];
+    [alert addAction:action2];
+    [alert addAction:action3];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+//删除数据
+- (void)deleteDatabase:(NSIndexPath *)indexPath{
+    KKDatabase *database = [KKDatabase databaseWithPath:self.model.value];
+    NSArray *items = [database selectTableWithTableName:self.model.title];
+    NSObject *object = items[indexPath.row - 1];
+    BOOL success = [database deleteTableWithTableName:self.model.title contents:object];
+    if (success) {
+        [self showSuccessWithMsg:@"内容删除成功"];
+        [self reloadDatas];
+    }else{
+        NSString *error = [database lastErrorMessage];
+        [self showError:[@"内容删除失败" addString:error]];
+    }
+}
 //更新数据
 - (void)updateDatabase:(NSIndexPath *)indexPath{
-//    KKLabelModel *cellModel = self.datas[indexPath.row];
-//    //
-//    KKDatabase *database = [KKDatabase databaseWithPath:self.model.value];
-//    NSArray *columns = [database getFieldsWithTableName:self.model.title];
-//    NSArray *values = cellModel.info;
-//    //按照字母排序
-//    columns = [columns sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-//        return [obj1 compare:obj2 options:NSNumericSearch];
-//    }];
-//    //
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"添加数据" message:@"输入框字段对于的值" preferredStyle:UIAlertControllerStyleAlert];
-//    WeakSelf
-//    for (int i = 0; i < columns.count; i++) {
-//        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-//            textField.placeholder = columns[i];
-//            textField.text = [NSString stringWithFormat:@"%@",values[i]];
-//        }];
-//    }
-//    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-////        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-////        for (UITextField *textField in alert.textFields) {
-////            NSString *value = textField.text;
-////            NSString *key = textField.placeholder;
-////            if (value.length > 0){
-////                [dict setObject:value forKey:key];
-////            }
-////        }
-////        BOOL success = [database insertTableWithTableName:self.model.title contents:dict];
-////        if (success) {
-////            [weakSelf showSuccessWithMsg:@"数据添加成功"];
-////            [weakSelf reloadDatas];
-////        }else{
-////            NSString *error = [database lastErrorMessage];
-////            [weakSelf showError:[@"数据添加失败" addString:error]];
-////        }
-//    }];
-//    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-//        //to do
-//    }];
-//    [alert addAction:action1];
-//    [alert addAction:action2];
-//    [self presentViewController:alert animated:YES completion:nil];
+    KKLabelModel *cellModel = self.datas[indexPath.row];
+    //
+    KKDatabase *database = [KKDatabase databaseWithPath:self.model.value];
+    NSArray *columns = [database getFieldsWithTableName:self.model.title];
+    NSArray *values = cellModel.info;
+    //按照字母排序
+    columns = [columns sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2 options:NSNumericSearch];
+    }];
+    //
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"添加数据" message:@"输入框字段对于的值" preferredStyle:UIAlertControllerStyleAlert];
+    WeakSelf
+    for (int i = 0; i < columns.count; i++) {
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.placeholder = columns[i];
+            textField.text = [NSString stringWithFormat:@"%@",values[i]];
+        }];
+    }
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+        for (UITextField *textField in alert.textFields) {
+            NSString *value = textField.text;
+            NSString *key = textField.placeholder;
+            if (value.length > 0){
+                [dict setObject:value forKey:key];
+            }
+        }
+        NSArray *items = [database selectTableWithTableName:weakSelf.model.title];
+        NSObject *object = items[indexPath.row - 1];
+        BOOL success = [database updateTableWithTableName:weakSelf.model.title contents:object update:dict];
+        if (success) {
+            [weakSelf showSuccessWithMsg:@"数据修改成功"];
+            [weakSelf reloadDatas];
+        }else{
+            NSString *error = [database lastErrorMessage];
+            [weakSelf showError:[@"数据修改失败" addString:error]];
+        }
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //to do
+    }];
+    [alert addAction:action1];
+    [alert addAction:action2];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 - (void)reloadDatas{
     [self.datas removeAllObjects];
@@ -244,8 +279,10 @@
     });
 }
 - (void)mainQueueTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //to do
-    [self updateDatabase:indexPath];
+    //
+    if (indexPath.row != 0) {
+        [self whenAcitonDatabase:indexPath];
+    }
 }
 #pragma mark - aciton
 @end

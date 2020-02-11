@@ -35,10 +35,25 @@
 /// @param columnModels 字段类型
 - (BOOL)createTableWithTableName:(NSString *)tableName columnModels:(NSArray <KKDatabaseColumnModel *>*)columnModels;
 
-/// 插入内容到表单
+/// 增加内容到表单
 /// @param tableName 表单名称
-/// @param contents 插入数据内容
+/// @param contents 增加数据内容
 - (BOOL)insertTableWithTableName:(NSString *)tableName contents:(NSObject *)contents;
+
+/// 删除内容从表单
+/// @param tableName 表单名称
+/// @param contents 删除数据内容
+- (BOOL)deleteTableWithTableName:(NSString *)tableName contents:(NSObject *)contents;
+
+/// 查询表单内容
+/// @param tableName 表单名称
+- (NSArray *)selectTableWithTableName:(NSString *)tableName;
+
+/// 更新内容从表单
+/// @param tableName 表单名称
+/// @param contents 原数据内容
+/// @param update 更新数据内容
+- (BOOL)updateTableWithTableName:(NSString *)tableName contents:(NSObject *)contents update:(NSObject *)update;
 
 /// 添加字段到表单
 /// @param tableName 表单名称
@@ -50,10 +65,6 @@
 - (NSArray <NSString *>*)getFieldsWithTableName:(NSString *)tableName;
 /// 通过表单获取表单字段详情
 - (NSArray <KKDatabaseColumnModel *>*)getFieldsInfoWithTableName:(NSString *)tableName;
-
-/// 查询表单内容
-/// @param tableName 表单名称
-- (NSArray *)selectTableWithTableName:(NSString *)tableName;
 
 /// 获取上一个操作错误信息
 - (NSString *)lastErrorMessage;
