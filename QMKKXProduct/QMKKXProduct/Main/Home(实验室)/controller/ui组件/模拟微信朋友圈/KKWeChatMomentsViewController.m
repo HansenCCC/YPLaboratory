@@ -10,6 +10,7 @@
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
 #import "KKWeChatMomentsTableViewCell.h"
+#import "KKReleaseWXMomentsViewController.h"
 
 @interface KKWeChatMomentsViewController ()
 @property (strong, nonatomic) NSMutableArray <KKWeChatMomentsModel *> *datas;
@@ -33,21 +34,37 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"KKLabelTableViewCell" bundle:nil] forCellReuseIdentifier:@"KKLabelTableViewCell"];
     //微信朋友圈cell
     [self.tableView registerClass:[KKWeChatMomentsTableViewCell class] forCellReuseIdentifier:@"KKWeChatMomentsTableViewCell"];
+    self.tableView.mj_header = [KKRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(downLoadNewData)];
+    //右边导航刷新按钮
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(whenRightClickAction:)];
+}
+- (void)downLoadNewData{
+    [self reloadDatas];
+}
+//发布内容
+- (void)whenRightClickAction:(id)sender{
+    //to do
+    KKReleaseWXMomentsViewController *vc = [[KKReleaseWXMomentsViewController alloc] init];
+    KKNavigationController *rootVC = [[KKNavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:rootVC animated:YES completion:nil];
 }
 - (void)reloadDatas{
     [self.datas removeAllObjects];
+    //获取数据库朋友圈信息
+    NSString *tableName = @"kk_wechat_moments";
+    NSString *docuPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *dbPath = [docuPath stringByAppendingPathComponent:@"kk_common.db"];
+    KKDatabase *database = [KKDatabase databaseWithPath:dbPath];
+    NSArray *list = [database selectTableWithTableName:tableName];
     //构造cell
-    NSArray *items = [UIFont familyNames];
-    for (NSString *item in items) {
-        KKWeChatMomentsModel *element = [[KKWeChatMomentsModel alloc] init];
-        element.nickname = item;
-        element.contentValue = @"石器盒子上线以来，注册用户3w左右，日活最高达3k人次。从线上用户反馈来说，用户体验极好。自物品交易、金币交易和拍卖功能上线后，收益成果显著。目前Bee的用户较少，但是我一直都在关注Bee的用户体验和上线反馈率，非常期待Bee能够像其他游戏分发平台那样做大做强。石器盒子上线以来，注册用户3w左右，日活最高达3k人次。从线上用户反馈来说，用户体验极好。自物品交易、金币交易和拍卖功能上线后，收益成果显著。目前Bee的用户较少，但是我一直都在关注Bee的用户体验和上线反馈率，非常期待Bee能够像其他游戏分发平台那样做大做强。";
-        element.timestampDate = @"两天前";
-        element.likes = @[[[KKWeChatMomentsLikeModel alloc] initWithId:@"1" userName:@"张三"],[[KKWeChatMomentsLikeModel alloc] initWithId:@"2" userName:@"李四"]];
-        element.comments = @[[[KKWeChatMomentsCommentModel alloc] initWithId:@"1" userName:@"张三" content:@"你发的这个我看过"],[[KKWeChatMomentsCommentModel alloc] initWithId:@"1" userName:@"张三" content:@"我好想记错了，不好意思我好想记错了，不好意思"]];
-        element.images = @[@"https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2462146637,4274174245&fm=26&gp=0.jpg",@"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2348957240,2361878970&fm=26&gp=0.jpg",@"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1906469856,4113625838&fm=26&gp=0.jpg",@"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1906469856,4113625838&fm=26&gp=0.jpg",];
-        [self.datas addObject:element];
+    for (NSDictionary *dict in list) {
+        NSString *value = dict[@"json"];
+        if (value.length > 0) {
+            KKWeChatMomentsModel *element = [KKWeChatMomentsModel mj_objectWithKeyValues:value];
+            [self.datas addObject:element];
+        }
     }
+    [self.tableView.mj_header endRefreshing];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

@@ -63,5 +63,8 @@
 #import "KKAdaptiveTableViewCell.h"
 //轮播图
 #import "KKCarouselView.h"
+//avPlayer(视频播放)
+#import "KKAVPlayerView.h"//视频播放管理类
+#import "KKBeeAVPlayerView.h"//定制版bee
 
 #endif /* KKToolHeader_h */

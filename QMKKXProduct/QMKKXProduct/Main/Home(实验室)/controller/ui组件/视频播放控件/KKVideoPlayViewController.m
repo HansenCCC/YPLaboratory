@@ -9,6 +9,7 @@
 #import "KKVideoPlayViewController.h"
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
+#import "KKAVPlayerViewController.h"
 
 @interface KKVideoPlayViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -33,7 +34,7 @@
 - (void)reloadDatas{
     [self.datas removeAllObjects];
     //构造cell
-    NSArray *items = [UIFont familyNames];
+    NSArray *items = @[@"MediaPlayer",@"基于AVPlayer自定义UI"];
     for (NSString *item in items) {
         KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:item value:nil];
         [self.datas addObject:element];
@@ -61,7 +62,16 @@
     return AdaptedWidth(44.f);
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //to do
+    //主线程
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self mainQueueTableView:tableView didSelectRowAtIndexPath:indexPath];
+    });
+}
+- (void)mainQueueTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.view endEditing:YES];
+    KKAVPlayerViewController *vc = [[KKAVPlayerViewController alloc] init];
+//    [self presentViewController:vc animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark - aciton
 @end

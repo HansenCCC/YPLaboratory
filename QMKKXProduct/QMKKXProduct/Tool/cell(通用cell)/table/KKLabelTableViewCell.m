@@ -32,7 +32,8 @@
     KKLabelModel *cellModel = self.cellModel;
     BOOL isEnabled = cellModel.isEnabled;
     if (isEnabled) {
-        self.titleLabel.text = cellModel.title?:@"--";
+        NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithString:cellModel.title?:@"--"];
+        self.titleLabel.attributedText = attributed;
     }else{
         NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithString:cellModel.title?:@"--"];
         [attributed addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle) range:NSMakeRange(0, attributed.length)];

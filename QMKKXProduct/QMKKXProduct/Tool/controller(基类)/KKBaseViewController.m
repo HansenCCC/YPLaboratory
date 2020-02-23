@@ -68,4 +68,17 @@
     BOOL open = self.childViewControllers.count != 1;
     return open;
 }
+#pragma mark - 朝向
+-(BOOL)prefersStatusBarHidden{
+    return NO;
+}
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
 @end

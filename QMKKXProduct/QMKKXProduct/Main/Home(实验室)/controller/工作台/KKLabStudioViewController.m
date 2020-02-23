@@ -7,13 +7,25 @@
 //
 
 #import "KKLabStudioViewController.h"
+#import "AppDelegate.h"
 
 @interface KKLabStudioViewController ()
 
 @end
 
 @implementation KKLabStudioViewController
-
+-(BOOL)prefersStatusBarHidden{
+    return NO;
+}
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskLandscapeRight;
+}
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationLandscapeRight;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -22,7 +34,8 @@
     [self dispatchQueue01];
     [self dispatchQueue10];
     [self dispatchQueue11];
-    self.view.backgroundColor = KKColor_000000;
+    self.view.backgroundColor = KKColor_FFFFFF;
+    
     
     NSFileManager *manager = [NSFileManager defaultManager];
     NSString *path = @".";
@@ -33,6 +46,32 @@
     [image kk_setImageWithUrl:@"https://raw.githubusercontent.com/HansenCCC/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE1.png"];
     [image kk_setImageWithUrl:@"https://pics6.baidu.com/feed/34fae6cd7b899e51b0054c9b548b1436c9950d63.jpeg?token=0ce572f72d597e7c8c2a23e69f6f0150&s=B2FA718411008F535BB7D4970300D0C9"];
     
+    //右边导航刷新按钮
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(whenRightClickAction)];
+}
+- (void)whenRightClickAction{
+    if (!kVerticalScreen) {
+        [self setNewOrientation:NO];
+    }else{
+        [self setNewOrientation:YES];
+    }
+//    AppDelegate *appdelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
+//    [appdelegate application:[UIApplication sharedApplication] supportedInterfaceOrientationsForWindow:appdelegate.window];
+//    [UIViewController attemptRotationToDeviceOrientation];
+}
+- (void)setNewOrientation:(BOOL)fullscreen{
+    if (fullscreen) {
+        NSNumber *resetOrientationTarget = [NSNumber numberWithInt:UIInterfaceOrientationUnknown];
+        [[UIDevice currentDevice] setValue:resetOrientationTarget forKey:@"orientation"];
+        NSNumber *orientationTarget = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeRight];
+        [[UIDevice currentDevice] setValue:orientationTarget forKey:@"orientation"];
+    }else{
+        NSNumber *resetOrientationTarget = [NSNumber numberWithInt:UIInterfaceOrientationUnknown];
+        [[UIDevice currentDevice] setValue:resetOrientationTarget forKey:@"orientation"];
+        NSNumber *orientationTarget = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+        [[UIDevice currentDevice] setValue:orientationTarget forKey:@"orientation"];
+    }
+        
 }
 //同步执行 + 并发队列
 - (void)dispatchQueue00{

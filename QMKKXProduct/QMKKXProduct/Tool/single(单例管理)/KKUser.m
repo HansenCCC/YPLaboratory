@@ -109,7 +109,14 @@ static NSString *kNSUserDefaultsStartImg = @"kNSUserDefaultsStartImg";//启动�
 #pragma mark - config
 //获取配置（退出登录和重新登录需要重新请求）
 - (void)setupConfig{
-    //to do
+    //数据库
+    NSString *docuPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *dbPath = [docuPath stringByAppendingPathComponent:@"kk_common.db"];
+    KKDatabase *database = [KKDatabase databaseWithPath:dbPath];
+    KKDatabaseColumnModel *idModel = [[KKDatabaseColumnModel alloc] initWithName:@"id"];
+    idModel.pk = @"1";
+    KKDatabaseColumnModel *jsonModel = [[KKDatabaseColumnModel alloc] initWithName:@"json"];
+    [database createTableWithTableName:@"kk_wechat_moments" columnModels:@[idModel,jsonModel]];
 }
 
 #pragma mark - webPush

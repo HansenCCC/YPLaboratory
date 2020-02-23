@@ -45,7 +45,13 @@
     }
     return YES;
 }
-
+//屏幕朝向问题
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    UIViewController *vc = self.window.topViewController;
+    //由vc控制
+    UIInterfaceOrientationMask orientationMask = [vc supportedInterfaceOrientations];
+    return orientationMask;
+}
 //第三方传值或登录
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
     NSString *urlStr = url.absoluteString;

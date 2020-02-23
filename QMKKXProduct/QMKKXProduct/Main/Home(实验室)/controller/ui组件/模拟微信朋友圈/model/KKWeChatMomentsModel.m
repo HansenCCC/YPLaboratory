@@ -9,10 +9,13 @@
 #import "KKWeChatMomentsModel.h"
 
 @implementation KKWeChatMomentsModel
-+ (NSDictionary *)mj_replacedKeyFromPropertyName{
-    return @{};
-}
+//+ (NSDictionary *)mj_replacedKeyFromPropertyName{
+//    return @{@"":@""};
+//}
 + (NSDictionary *)mj_objectClassInArray{
-    return @{};
+    return @{
+        @"likes":@"KKWeChatMomentsLikeModel",
+        @"comments":@"KKWeChatMomentsCommentModel",
+    };
 }
 @end

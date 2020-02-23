@@ -28,9 +28,9 @@ return __singleton__; \
 }
 
 
-#define CMScreenW    [UIScreen mainScreen].bounds.size.width
-#define CMScreenH    [UIScreen mainScreen].bounds.size.height
-#define CMSizeRatio  [UIScreen mainScreen].bounds.size.width/375.0
+#define kScreenW    [UIScreen mainScreen].bounds.size.width
+#define kScreenH    [UIScreen mainScreen].bounds.size.height
+#define KSizeRatio  [UIScreen mainScreen].bounds.size.width/375.0
 #define WeakSelf     __weak typeof(self) weakSelf = self;
 
 #define Weak(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
@@ -41,11 +41,11 @@ return __singleton__; \
 #define IsPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)//ipad
 #define IsPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)//iphone
 
-#define iPhone5 ([UIScreen mainScreen].bounds.size.width == 320)
-#define iPhone4s ([UIScreen mainScreen].bounds.size.height == 480)
+#define iPhone5 (kScreenW == 320)
+#define iPhone4s (kScreenH == 480)
 #define IS_IPHONE_6P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define is_iPhoneX [UIScreen mainScreen].bounds.size.width == 375.0f && [UIScreen mainScreen].bounds.size.height == 812.0f
+#define is_iPhoneX (kScreenW == 375.0f && kScreenH == 812.0f)||(kScreenW == 812.0f && kScreenH == 375.0f)
 
 #define StatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 
@@ -54,9 +54,9 @@ return __singleton__; \
 /// 第一个参数是当下的控制器适配iOS11 一下的，第二个参数表示scrollview或子类
 #define AdjustsScrollViewInsetNever(controller,view) if(@available(iOS 11.0, *)) {view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;} else if([controller isKindOfClass:[UIViewController class]]) {controller.automaticallyAdjustsScrollViewInsets = false;}
 
-#define SafeAreaTopHeight ((CMScreenH == 812.0||CMScreenH == 896.0) ?88:64)
+#define SafeAreaTopHeight ((kScreenH == 812.0||kScreenH == 896.0) ?88:64)
 
-#define SafeAreaBottomHeight ((CMScreenH == 812.0||CMScreenH == 896.0) ? 34 : 0)
+#define SafeAreaBottomHeight ((kScreenH == 812.0||kScreenH == 896.0) ? 34 : 0)
 
 #define Code_Success 0
 
@@ -64,24 +64,26 @@ return __singleton__; \
 #define AdaptedFontSize(R)     [UIFont systemFontOfSize:AdaptedWidth(R)]
 #define AdaptedBoldFontSize(R)  [UIFont boldSystemFontOfSize:AdaptedWidth(R)]
 
+//是否是竖屏状态
+#define kVerticalScreen ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationUnknown || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)
 
 //375 * 667   414 * 736
 //pad 384 * 512 这里是为了手机版跑在平板上不变形(竖屏)
-#define kScreenWidthRatio  (CMScreenW / 375.0)
-#define kScreenHeightRatio (CMScreenH / 667.0)
+#define kScreenWidthRatio  (kScreenW / (kVerticalScreen?375.0:667.0))
+#define kScreenHeightRatio (kScreenH / (kVerticalScreen?667.0:375.0))
 
 #define AdaptedWidth(x)  ceilf((x) * (IsPad?kPadScreenWidthRatio:kScreenWidthRatio))
 #define AdaptedHeight(x) ceilf((x) * (IsPad?kPadScreenHeightRatio:kScreenHeightRatio))
 
 //这是正经的平板适配(横屏)
 //1000 * 750
-#define kPadScreenWidthRatio  (CMScreenW / 1024.0)
-#define kPadScreenHeightRatio (CMScreenH / 756)
+#define kPadScreenWidthRatio  (kScreenW / 1024.0)
+#define kPadScreenHeightRatio (kScreenH / 756)
 #define AdaptedPadWidth(x) ceilf((x) * kPadScreenWidthRatio)
 #define AdaptedPadHeight(x) ceilf((x) * kPadScreenHeightRatio)
 
 // iPad导航栏尺寸
-#define kPadNavSize CGSizeMake(CMScreenW-AdaptedPadWidth(90), AdaptedPadWidth(60))
+#define kPadNavSize CGSizeMake(kScreenW-AdaptedPadWidth(90), AdaptedPadWidth(60))
 
 #define kOnePixel (1.0f / [UIScreen mainScreen].scale)
 

@@ -9,5 +9,10 @@
 #import "KKDatabaseColumnModel.h"
 
 @implementation KKDatabaseColumnModel
-
+- (instancetype)initWithName:(NSString *)name{
+    if (self = [self init]) {
+        self.name = name;
+    }
+    return self;
+}
 @end

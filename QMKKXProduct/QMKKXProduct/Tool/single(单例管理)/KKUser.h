@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KKUserInfoModel.h"
+#import "KKDatabase.h"
 #import <UIKit/UIKit.h>
 
 @interface KKUser : NSObject

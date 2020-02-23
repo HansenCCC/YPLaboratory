@@ -209,7 +209,7 @@
     {
         //修改语句
         NSMutableDictionary *dict = update.mj_keyValues;
-        NSArray *keys = [self getFieldsWithTableName:tableName];
+        NSArray *keys = dict.allKeys;
         NSString *and = @" , ";
         for (NSString *key in keys) {
             NSObject *value = dict[key];

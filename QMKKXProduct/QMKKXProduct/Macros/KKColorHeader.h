@@ -58,5 +58,9 @@
 #define KKColor_AFAFAF CMCustomColor(@"AFAFAF")//时间
 #define KKColor_E5E5E5 CMCustomColor(@"E5E5E5")//线条
 #define KKColor_F6F6F6 CMCustomColor(@"F6F6F6")//喜欢
+#define KKColor_49C469 CMCustomColor(@"49C469")//按钮
+
+//bee视频播放器
+#define KKColor_0091FF CMCustomColor(@"0091FF")//已读进度
 
 #endif /* KKColorHeader_h */

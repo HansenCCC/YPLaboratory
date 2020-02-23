@@ -26,6 +26,7 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
 - (void)setupSubviews{
     //40dp * 40 dp
     self.iconButton = [[UIButton alloc] init];
+    self.iconButton.clipsToBounds = YES;
     [self.contentView addSubview:self.iconButton];
     //
     self.nameLabel = [UILabel labelWithFont:AdaptedBoldFontSize(15.f) textColor:KKColor_626787];
@@ -86,6 +87,8 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
     }
     self.cutLineMarkView.hidden = cutFlag;
     [self layoutSubviews];
+    [self.tableView reloadData];
+    [self.collectionView reloadData];
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -123,6 +126,8 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
         fcv.size.height = AdaptedWidth(0);
     }else if (self.cellModel.images.count == 1) {
         //一张时
+        self.flowLayout.itemSize = CGSizeMake((collecitonWidth - 2 * spaceWidth)/3.f, (collecitonWidth - 2 * spaceWidth)/3.f);
+        fcv.size.height = collecitonWidth/3.f * (1 + (self.cellModel.images.count - 1)/3);
     }else if (self.cellModel.images.count == 2) {
         //两张时
         self.flowLayout.itemSize = CGSizeMake((collecitonWidth - spaceWidth)/2, (collecitonWidth - spaceWidth)/2);

@@ -8,8 +8,6 @@
 
 #import "TZImagePickerController.h"
 
-
-
 @interface KKImagePickerController : TZImagePickerController
 
 
