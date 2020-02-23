@@ -257,8 +257,8 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
             //是全屏
             [self removeFromSuperview];
             [window addSubview:self];
-            self.frame = CGRectMake(0, 0, kScreenW, kScreenH);
             self.transform = CGAffineTransformMakeRotation(M_PI_2);
+            self.frame = CGRectMake(0, 0, kScreenW, kScreenH);
         }else{
             self.transform  = CGAffineTransformIdentity;
             self.frame = self.originFrame;
