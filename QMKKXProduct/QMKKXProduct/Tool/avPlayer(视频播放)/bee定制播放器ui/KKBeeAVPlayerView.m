@@ -29,6 +29,7 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
 @property (strong, nonatomic) UIView *bottomView;//底部控制view
 @property (strong, nonatomic) KKBeeProgressView *progressView;//进度条
 @property (strong, nonatomic) UIImageView *placeholderImageView;//占位图
+@property (strong, nonatomic) UIPanGestureRecognizer *panGestureRecognizer;
 
 @property (assign, nonatomic) BOOL isTouchUpInside;//是否正在修改进度 default NO
 
@@ -238,10 +239,12 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
         //竖屏->右横屏
         self.fullScreenButton.selected = YES;
         self.backButton.hidden = NO;
+        [self addHandlePanGestureRecognizer];
     }else{
         //横屏->竖屏
         self.fullScreenButton.selected = NO;
         self.backButton.hidden = YES;
+        [self removeHandlePanGestureRecognizer];
     }
     [self changeScreenFullScreen:!self.isFullScreen];
 }
@@ -330,9 +333,22 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     [self.contentView addGestureRecognizer:doubleTapGesture];
     //只有当doubleTapGesture识别失败的时候(即识别出这不是双击操作)，singleTapGesture才能开始识别
     [singleTapGesture requireGestureRecognizerToFail:doubleTapGesture];
+}
+//横屏时，添加手势
+- (void)addHandlePanGestureRecognizer{
     //添加右滑手势 -> 进度+
-    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
-    [self.contentView addGestureRecognizer:panGestureRecognizer];
+    if (self.panGestureRecognizer == nil) {
+        UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
+        self.panGestureRecognizer = panGestureRecognizer;
+        [self.contentView addGestureRecognizer:panGestureRecognizer];
+    }
+}
+//竖屏时，移除手势
+- (void)removeHandlePanGestureRecognizer{
+    if(self.panGestureRecognizer){
+        [self.contentView removeGestureRecognizer:self.panGestureRecognizer];
+        self.panGestureRecognizer = nil;
+    }
 }
 //单击
 -(void)handleSingleTap:(UIGestureRecognizer *)sender{
