@@ -526,7 +526,8 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
         fm.origin.y = bounds.size.height - fm.size.height;
     }else{
         //横屏
-        fm.origin.y = bounds.size.height - fm.size.height - safeAreaInsets.bottom;
+//        fm.origin.y = bounds.size.height - fm.size.height - safeAreaInsets.bottom;
+        fm.origin.y = bounds.size.height - fm.size.height;
     }
     self.bottomView.frame = fm;
     //
