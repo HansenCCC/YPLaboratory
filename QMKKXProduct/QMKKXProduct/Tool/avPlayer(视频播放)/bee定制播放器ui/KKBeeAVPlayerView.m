@@ -28,6 +28,8 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
 @property (strong, nonatomic) KKBeeSlider *slider;//显示进度
 @property (strong, nonatomic) UIView *bottomView;//底部控制view
 @property (strong, nonatomic) KKBeeProgressView *progressView;//进度条
+@property (strong, nonatomic) UIImageView *placeholderImageView;//占位图
+
 @property (assign, nonatomic) BOOL isTouchUpInside;//是否正在修改进度 default NO
 
 @property (assign, nonatomic) CGPoint beginPoint;//开始点
@@ -40,9 +42,7 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
 @property (assign, nonatomic) CGRect originFrame;//原尺寸大小
 @end
 
-@implementation KKBeeAVPlayerView{
-    UISlider *_volumeViewSlider;
-}
+@implementation KKBeeAVPlayerView
 - (instancetype)init{
     if (self = [super init]) {
         //默认NO
@@ -56,11 +56,19 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
         self.changeType = KKBeeAVPlayerViewChangeUnknownType;
         [self setupSubviews];//构造视图
         [self addGestureRecognizer];//添加手势
-        [self getVolumeVolue];//构造声音视图
     }
     return self;
 }
+- (void)setPlaceholderImage:(NSString *)placeholderImage{
+    _placeholderImage = placeholderImage;
+    [self.placeholderImageView kk_setImageWithUrl:placeholderImage];
+}
 - (void)setupSubviews{
+    //
+    self.placeholderImageView = [[UIImageView alloc] init];
+    self.placeholderImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.placeholderImageView.clipsToBounds = YES;
+    [self.contentView addSubview:self.placeholderImageView];
     //
     self.bottomView = [[UIView alloc] init];
     self.bottomView.userInteractionEnabled = YES;
@@ -75,6 +83,7 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     [self.contentView addSubview:self.backButton];
     //
     self.playButton = [[UIButton alloc] init];
+    self.playButton.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.6];
     //默认状态显示播放
     [self.playButton setImage:UIImageWithName(@"kk_bee_play") forState:UIControlStateNormal];
     [self.playButton setImage:UIImageWithName(@"kk_bee_pause") forState:UIControlStateSelected];
@@ -146,86 +155,17 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     // 播放移动到当前播放时间
     [self.avPlayer seekToTime:CMTimeMakeWithSeconds(currentTime, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
 }
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    CGRect bounds = self.bounds;
-    CGRect fm = bounds;
-    fm.size.height = AdaptedWidth(40.f);
-    UIEdgeInsets safeAreaInsets = UIEdgeInsetsZero;
-    if (@available(iOS 11.0, *)) {
-        safeAreaInsets = [[[[UIApplication sharedApplication] delegate] window] safeAreaInsets];
-    } else {
-        // Fallback on earlier versions
-    }
-    if (self.isFullScreen == NO) {
-        //竖屏
-        fm.origin.y = bounds.size.height - fm.size.height;
-    }else{
-        //横屏
-        fm.origin.y = bounds.size.height - fm.size.height - safeAreaInsets.bottom;
-    }
-    self.bottomView.frame = fm;
-    //
-    CGRect f1 = bounds;
-    f1.origin.x = AdaptedWidth(10.f);
-    f1.origin.y = AdaptedWidth(5.f);
-    f1.size = CGSizeMake(AdaptedWidth(30.f), AdaptedWidth(30.f));
-    self.backButton.frame = f1;
-    //
-    CGRect f2 = bounds;
-    f2.size = CGSizeMake(AdaptedWidth(60.f), AdaptedWidth(60.f));
-    f2.origin.x = (bounds.size.width - f2.size.width)/2.0;
-    f2.origin.y = (bounds.size.height - f2.size.height)/2.0;
-    self.playButton.frame = f2;
-    self.playButton.layer.cornerRadius = AdaptedWidth(30.f);
-    //
-    CGRect f3 = bounds;
-    f3.size = [self.beginLabel sizeThatFits:CGSizeZero];
-    f3.size.width = f3.size.width + AdaptedWidth(5.f);
-    f3.origin.x = AdaptedWidth(15.f);
-    f3.origin.y = fm.size.height - AdaptedWidth(10.f) - f3.size.height;
-    self.beginLabel.frame = f3;
-    //
-    CGRect f4 = bounds;
-    f4.size = CGSizeMake(AdaptedWidth(24.f), AdaptedWidth(24.f));
-    f4.origin.x = bounds.size.width - AdaptedWidth(15.f) - f4.size.width;
-    f4.origin.y = CGRectGetMidY(f3) - f4.size.height/2.0;
-    self.fullScreenButton.frame = f4;
-    //
-    CGRect f5 = bounds;
-    f5.size = [self.endLabel sizeThatFits:CGSizeZero];
-    f5.size.width = f5.size.width + AdaptedWidth(5.f);
-    f5.origin.x = f4.origin.x - AdaptedWidth(15.f) - f5.size.width;
-    f5.origin.y = f3.origin.y;
-    self.endLabel.frame = f5;
-    //
-    CGRect f6 = bounds;
-    f6.origin.x = CGRectGetMaxX(f3) + AdaptedWidth(5);
-    f6.size = [self.slider sizeThatFits:CGSizeZero];
-    f6.size.height = f6.size.height * 2.0f;
-    f6.size.width = f5.origin.x - AdaptedWidth(5) - f6.origin.x;
-    f6.origin.y = CGRectGetMidY(f3) - f6.size.height/2.0;
-    self.slider.frame = f6;
-    //
-    CGRect f7 = bounds;
-    f7.size = CGSizeMake(AdaptedWidth(240.f), AdaptedWidth(70.f));
-    f7.origin.x = (bounds.size.width - f7.size.width)/2.0f;
-    f7.origin.y = (bounds.size.height - f7.size.height)/2.0f;
-    self.progressView.frame = f7;
-    if (self.isFullScreen) {
-        //to do
-    }else{
-        //to do
-        self.parentView = self.superview;
-        self.originFrame = self.frame;
-    }
-}
 #pragma mark - action
 //更新进度
 - (void)updateProgressIfNeeded{
     [super updateProgressIfNeeded];
     NSTimeInterval currentTime = CMTimeGetSeconds(self.avPlayer.currentTime);
     NSTimeInterval durationTime = CMTimeGetSeconds(self.avPlayer.currentItem.duration);
+    if (self.isPlaying == NO&&self.progress == 0.f) {
+        self.placeholderImageView.hidden = NO;
+    }else{
+        self.placeholderImageView.hidden = YES;
+    }
     if (self.isTouchUpInside) {
         //正在拖动精度条，不更新进度
         return;
@@ -401,7 +341,7 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
 }
 //双击
 -(void)handleDoubleTap:(UIGestureRecognizer *)sender{
-    //to do
+    //双击全屏或者小屏幕
     [self whenFullScreenAction:self.fullScreenButton];
 }
 - (void)handlePanFrom:(UIPanGestureRecognizer *)sender{
@@ -536,53 +476,97 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     self.showSetting = NO;
 }
 #pragma mark - 关于控制音量
-//构造声音视图
-- (void)getVolumeVolue{
-    CGRect f1 = CGRectMake(0, 0, 40, 40);
-    f1.origin.x = -100.f;
-    f1.origin.y = -100.f;
-    MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:f1];
-    _volumeViewSlider = nil;
-    for (UIView *view in [volumeView subviews]){
-        if ([view.class.description isEqualToString:@"MPVolumeSlider"]){
-            _volumeViewSlider = (UISlider *)view;
-            break;
-        }
-    }
-    [self.contentView addSubview:volumeView];
-    //监听系统音量变化
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoVolumeChanged:) name:@"AVSystemController_SystemVolumeDidChangeNotification" object:nil];
-}
-//获取当前系统声音
-- (CGFloat)voiceSize{
-    return _volumeViewSlider.value;
-}
 //更改系统的音量
 - (void)setVoiceSize:(CGFloat)voiceSize{
     //越小幅度越小0-1之间的数值
-    _volumeViewSlider.value = voiceSize;
+    [super setVoiceSize:voiceSize];
     self.progressView.isBrightness = NO;
     self.progressView.progress = voiceSize;
 }
-- (void)videoVolumeChanged:(NSNotification *)notification{
-    NSDictionary *userInfo = notification.userInfo;
-    NSString *reasonstr = userInfo[@"AVSystemController_AudioVolumeChangeReasonNotificationParameter"];
-    if ([reasonstr isEqualToString:@"ExplicitVolumeChange"]) {
-        float volume = [userInfo[@"AVSystemController_AudioVolumeNotificationParameter"] floatValue];
-        NSLog(@"%f",volume);
-    }
-}
 #pragma mark - 关于控制亮度
-- (CGFloat)brightnessSize{
-    return [UIScreen mainScreen].brightness;
-}
 - (void)setBrightnessSize:(CGFloat)brightnessSize{
-    [UIScreen mainScreen].brightness = brightnessSize;
+    [super setBrightnessSize:brightnessSize];
     self.progressView.isBrightness = YES;
     self.progressView.progress = brightnessSize;
 }
 #pragma mark - dealloc
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+#pragma mark - layout
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    CGRect bounds = self.bounds;
+    CGRect fm = bounds;
+    fm.size.height = AdaptedWidth(40.f);
+    UIEdgeInsets safeAreaInsets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        safeAreaInsets = [[[[UIApplication sharedApplication] delegate] window] safeAreaInsets];
+    } else {
+        // Fallback on earlier versions
+    }
+    if (self.isFullScreen == NO) {
+        //竖屏
+        fm.origin.y = bounds.size.height - fm.size.height;
+    }else{
+        //横屏
+        fm.origin.y = bounds.size.height - fm.size.height - safeAreaInsets.bottom;
+    }
+    self.bottomView.frame = fm;
+    //
+    CGRect f1 = bounds;
+    f1.origin.x = AdaptedWidth(10.f);
+    f1.origin.y = AdaptedWidth(5.f);
+    f1.size = CGSizeMake(AdaptedWidth(30.f), AdaptedWidth(30.f));
+    self.backButton.frame = f1;
+    //
+    CGRect f2 = bounds;
+    f2.size = CGSizeMake(AdaptedWidth(60.f), AdaptedWidth(60.f));
+    f2.origin.x = (bounds.size.width - f2.size.width)/2.0;
+    f2.origin.y = (bounds.size.height - f2.size.height)/2.0;
+    self.playButton.frame = f2;
+    self.playButton.layer.cornerRadius = f2.size.height/2.0f;
+    //
+    CGRect f3 = bounds;
+    f3.size = [self.beginLabel sizeThatFits:CGSizeZero];
+    f3.size.width = f3.size.width + AdaptedWidth(5.f);
+    f3.origin.x = AdaptedWidth(15.f);
+    f3.origin.y = fm.size.height - AdaptedWidth(10.f) - f3.size.height;
+    self.beginLabel.frame = f3;
+    //
+    CGRect f4 = bounds;
+    f4.size = CGSizeMake(AdaptedWidth(24.f), AdaptedWidth(24.f));
+    f4.origin.x = bounds.size.width - AdaptedWidth(15.f) - f4.size.width;
+    f4.origin.y = CGRectGetMidY(f3) - f4.size.height/2.0;
+    self.fullScreenButton.frame = f4;
+    //
+    CGRect f5 = bounds;
+    f5.size = [self.endLabel sizeThatFits:CGSizeZero];
+    f5.size.width = f5.size.width + AdaptedWidth(5.f);
+    f5.origin.x = f4.origin.x - AdaptedWidth(15.f) - f5.size.width;
+    f5.origin.y = f3.origin.y;
+    self.endLabel.frame = f5;
+    //
+    CGRect f6 = bounds;
+    f6.origin.x = CGRectGetMaxX(f3) + AdaptedWidth(5);
+    f6.size = [self.slider sizeThatFits:CGSizeZero];
+    f6.size.height = f6.size.height * 2.0f;
+    f6.size.width = f5.origin.x - AdaptedWidth(5) - f6.origin.x;
+    f6.origin.y = CGRectGetMidY(f3) - f6.size.height/2.0;
+    self.slider.frame = f6;
+    //
+    CGRect f7 = bounds;
+    f7.size = CGSizeMake(AdaptedWidth(240.f), AdaptedWidth(70.f));
+    f7.origin.x = (bounds.size.width - f7.size.width)/2.0f;
+    f7.origin.y = (bounds.size.height - f7.size.height)/2.0f;
+    self.progressView.frame = f7;
+    if (self.isFullScreen) {
+        //to do
+    }else{
+        //to do
+        self.parentView = self.superview;
+        self.originFrame = self.frame;
+    }
+    self.placeholderImageView.frame = bounds;
 }
 @end

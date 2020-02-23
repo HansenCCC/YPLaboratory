@@ -12,10 +12,10 @@
 @property (assign, nonatomic) CGFloat speedProgressThreshold;//进度的阈值，默认为bounds.size.width
 @property (assign, nonatomic) CGFloat voiceProgressThreshold;//音量的阈值，默认为self.bounds.size.height/4.0
 @property (assign, nonatomic) CGFloat brightnessProgressThreshold;//亮度的阈值，默认为self.bounds.size.height/4.0
-@property (assign, nonatomic) CGFloat voiceSize;//声音大小 0-1
-@property (assign, nonatomic) CGFloat brightnessSize;//亮度大小 0-1
 @property (assign, nonatomic) BOOL showSetting;//是否操作框，默认NO
 @property (assign, nonatomic) BOOL isFullScreen;//当前是否是全屏
+@property (strong, nonatomic) NSString *placeholderImage;//未播放时占位图
+
 
 //是否全屏
 - (void)changeScreenFullScreen:(BOOL)fullScreen;

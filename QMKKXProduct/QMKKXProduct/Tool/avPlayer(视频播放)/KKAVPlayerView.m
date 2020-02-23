@@ -7,6 +7,7 @@
 //
 
 #import "KKAVPlayerView.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface KKAVPlayerView ()
 @property (strong, nonatomic) AVPlayerItem *avPlayerItem;//播放源
@@ -18,12 +19,14 @@
 
 @end
 
-@implementation KKAVPlayerView
+@implementation KKAVPlayerView{
+    UISlider *_volumeViewSlider;
+}
 - (instancetype)init{
     if (self = [super init]) {
         //默认竖屏
-        _orientationMask = UIInterfaceOrientationMaskPortrait;
         [self setupSubViews];
+        [self getVolumeVolue];//构造声音视图
         [self addTimer];
         [self addObserver];
         [self addNotification];
@@ -43,6 +46,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoFailedToPlayToEndTime) name:AVPlayerItemFailedToPlayToEndTimeNotification object:nil];
     //监听视频播放结束
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoDidPlayToEndTime) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    //监听系统音量变化
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoVolumeChanged:) name:@"AVSystemController_SystemVolumeDidChangeNotification" object:nil];
 }
 - (void)addObserver{
     //监听timeControlStatus
@@ -193,6 +198,66 @@
 }
 - (NSError *)error{
     return self.avPlayerItem.error;
+}
+#pragma mark - 关于控制音量
+//构造声音视图
+- (void)getVolumeVolue{
+    CGRect f1 = CGRectMake(0, 0, 40, 40);
+    f1.origin.x = -100.f;
+    f1.origin.y = -100.f;
+    MPVolumeView *volumeView = [[MPVolumeView alloc] initWithFrame:f1];
+    _volumeViewSlider = nil;
+    for (UIView *view in [volumeView subviews]){
+        if ([view.class.description isEqualToString:@"MPVolumeSlider"]){
+            _volumeViewSlider = (UISlider *)view;
+            break;
+        }
+    }
+    [self.contentView addSubview:volumeView];
+}
+//获取当前系统声音
+- (CGFloat)voiceSize{
+    return _volumeViewSlider.value;
+}
+//更改系统的音量
+- (void)setVoiceSize:(CGFloat)voiceSize{
+    //越小幅度越小0-1之间的数值
+    _volumeViewSlider.value = voiceSize;
+}
+- (void)videoVolumeChanged:(NSNotification *)notification{
+    NSDictionary *userInfo = notification.userInfo;
+    NSString *reasonstr = userInfo[@"AVSystemController_AudioVolumeChangeReasonNotificationParameter"];
+    if ([reasonstr isEqualToString:@"ExplicitVolumeChange"]) {
+        float volume = [userInfo[@"AVSystemController_AudioVolumeNotificationParameter"] floatValue];
+        NSLog(@"%f",volume);
+    }
+}
+#pragma mark - 关于控制亮度
+- (CGFloat)brightnessSize{
+    return [UIScreen mainScreen].brightness;
+}
+- (void)setBrightnessSize:(CGFloat)brightnessSize{
+    [UIScreen mainScreen].brightness = brightnessSize;
+}
+#pragma mark - 关于控制进度
+- (void)setProgress:(CGFloat)progress{
+    CGFloat value = progress;
+    NSTimeInterval durationTime = CMTimeGetSeconds(self.avPlayer.currentItem.duration);
+    NSTimeInterval currentTime = durationTime * value;
+    // 播放移动到当前播放时间
+    [self.avPlayer seekToTime:CMTimeMakeWithSeconds(currentTime, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+}
+- (CGFloat)progress{
+    NSTimeInterval currentTime = CMTimeGetSeconds(self.avPlayer.currentTime);
+    NSTimeInterval durationTime = CMTimeGetSeconds(self.avPlayer.currentItem.duration);
+    if (currentTime < 0) {
+        currentTime = 0;
+    }
+    if (durationTime == 0) {
+        return 0;
+    }else{
+        return currentTime/durationTime;
+    }
 }
 @end
 

@@ -41,6 +41,7 @@
 - (KKBeeAVPlayerView *)player{
     if (!_player) {
         _player = [[KKBeeAVPlayerView alloc] init];
+        _player.placeholderImage = @"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3023045797,2628106807&fm=26&gp=0.jpg";
     }
     return _player;
 }
