@@ -69,6 +69,12 @@
 #pragma mark - 渐变渲染
 //使用CAGradientLayer 实现渐变色
 - (void)disappearForFrame:(CGRect )frame colors:(NSArray <UIColor *>*) colors isHorizontal:(BOOL )isHorizontal{
+    NSArray *views = [NSArray arrayWithArray:self.layer.sublayers];
+    [views enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[CAGradientLayer class]]) {
+            [obj removeFromSuperlayer];
+        }
+    }];
     NSMutableArray *cGColor = [[NSMutableArray alloc] init];
     for (UIColor *color in colors) {
         [cGColor addObject:(id)color.CGColor];

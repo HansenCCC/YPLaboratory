@@ -8,104 +8,99 @@
 
 #import "KKLabStudioViewController.h"
 #import "AppDelegate.h"
+#import "KKQGDZLAnimalView.h"
 
 @interface KKLabStudioViewController ()
+@property (strong, nonatomic) KKQGDZLAnimalView *qgdzlView;
+@property (strong, nonatomic) UILabel *xlabel;
+@property (strong, nonatomic) UILabel *ylabel;
 
 @end
 
 @implementation KKLabStudioViewController
--(BOOL)prefersStatusBarHidden{
-    return NO;
-}
--(BOOL)shouldAutorotate{
-    return NO;
-}
--(UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskLandscapeRight;
-}
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
-    return UIInterfaceOrientationLandscapeRight;
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"工作台";
-    [self dispatchQueue00];
-    [self dispatchQueue01];
-    [self dispatchQueue10];
-    [self dispatchQueue11];
     self.view.backgroundColor = KKColor_FFFFFF;
-    
-    
-    NSFileManager *manager = [NSFileManager defaultManager];
-    NSString *path = @".";
-    NSArray* tempArray = [manager contentsOfDirectoryAtPath:path error:nil];
-    NSLog(@"%@",tempArray);
-    
-    UIImageView *image = [[UIImageView alloc] init];
-    [image kk_setImageWithUrl:@"https://raw.githubusercontent.com/HansenCCC/QMKKXProduct/master/%E9%A2%84%E8%A7%88%E5%9B%BE1.png"];
-    [image kk_setImageWithUrl:@"https://pics6.baidu.com/feed/34fae6cd7b899e51b0054c9b548b1436c9950d63.jpeg?token=0ce572f72d597e7c8c2a23e69f6f0150&s=B2FA718411008F535BB7D4970300D0C9"];
-    
+    //
+    self.qgdzlView = [[KKQGDZLAnimalView alloc] init];
+    [self.view addSubview:self.qgdzlView];
     //右边导航刷新按钮
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(whenRightClickAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(whenRightClickAction:)];
+    //
+    self.xlabel = [[UILabel alloc] init];
+    self.xlabel.text = @"奇怪的周磊";
+    self.xlabel.backgroundColor = [UIColor redColor];
+    [self.xlabel sizeToFit];
+    [self.qgdzlView addSubview:self.xlabel];
+    //
+    self.ylabel = [[UILabel alloc] init];
+    self.ylabel.text = @"奇怪的周磊";
+    self.ylabel.backgroundColor = [UIColor redColor];
+    [self.ylabel sizeToFit];
+    [self.qgdzlView addSubview:self.ylabel];
 }
-- (void)whenRightClickAction{
-    if (!kVerticalScreen) {
-        [self setNewOrientation:NO];
-    }else{
-        [self setNewOrientation:YES];
-    }
-//    AppDelegate *appdelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
-//    [appdelegate application:[UIApplication sharedApplication] supportedInterfaceOrientationsForWindow:appdelegate.window];
-//    [UIViewController attemptRotationToDeviceOrientation];
+//点击右上角操作
+- (void)whenRightClickAction:(id)sender{
+    CGFloat xProgress = 1;
+    CGFloat yProgress = 1;
+    self.qgdzlView.xProgress = xProgress;
+    self.qgdzlView.yProgress = yProgress;
+    //
+    CGPoint xpoint = [self.qgdzlView xPointForProgress:xProgress];
+    self.xlabel.center = xpoint;
+    //
+    CGPoint ypoint = [self.qgdzlView yPointForProgress:yProgress];
+    self.ylabel.center = ypoint;
 }
-- (void)setNewOrientation:(BOOL)fullscreen{
-    if (fullscreen) {
-        NSNumber *resetOrientationTarget = [NSNumber numberWithInt:UIInterfaceOrientationUnknown];
-        [[UIDevice currentDevice] setValue:resetOrientationTarget forKey:@"orientation"];
-        NSNumber *orientationTarget = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeRight];
-        [[UIDevice currentDevice] setValue:orientationTarget forKey:@"orientation"];
-    }else{
-        NSNumber *resetOrientationTarget = [NSNumber numberWithInt:UIInterfaceOrientationUnknown];
-        [[UIDevice currentDevice] setValue:resetOrientationTarget forKey:@"orientation"];
-        NSNumber *orientationTarget = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
-        [[UIDevice currentDevice] setValue:orientationTarget forKey:@"orientation"];
-    }
-        
-}
-//同步执行 + 并发队列
-- (void)dispatchQueue00{
-    dispatch_queue_t queue = dispatch_queue_create("同步执行 + 并发队列", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_sync(queue, ^{
-        NSLog(@"同步执行 + 并发队列%@",[NSThread currentThread]);
-    });
-}
-//异步执行 + 并发队列
-- (void)dispatchQueue01{
-    dispatch_queue_t queue = dispatch_queue_create("异步执行 + 并发队列", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_async(queue, ^{
-        NSLog(@"异步执行 + 并发队列%@",[NSThread currentThread]);
-    });
-}
-//同步执行 + 串行队列
-- (void)dispatchQueue10{
-    dispatch_queue_t queue = dispatch_queue_create("同步执行 + 串行队列", DISPATCH_QUEUE_SERIAL);
-    dispatch_sync(queue, ^{
-        NSLog(@"同步执行 + 串行队列%@",[NSThread currentThread]);
-    });
-}
-//异步执行 + 串行队列
-- (void)dispatchQueue11{
-    dispatch_queue_t queue = dispatch_queue_create("异步执行 + 串行队列", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(queue, ^{
-        NSLog(@"异步执行 + 串行队列%@",[NSThread currentThread]);
-    });
+- (void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    CGRect bounds = self.view.bounds;
+    CGRect f1 = bounds;
+    f1.origin.y = AdaptedWidth(100.f);
+    f1.origin.x = AdaptedWidth(50.f);
+    f1.size.width = bounds.size.width - 2 * f1.origin.x;
+    f1.size = [self.qgdzlView sizeThatFits:f1.size];
+    self.qgdzlView.frame = f1;
 }
 @end
 
-
-
-
+/*
+//线程相关
+ [self dispatchQueue00];
+ [self dispatchQueue01];
+ [self dispatchQueue10];
+ [self dispatchQueue11];
+ //同步执行 + 并发队列
+ - (void)dispatchQueue00{
+     dispatch_queue_t queue = dispatch_queue_create("同步执行 + 并发队列", DISPATCH_QUEUE_CONCURRENT);
+     dispatch_sync(queue, ^{
+         NSLog(@"同步执行 + 并发队列%@",[NSThread currentThread]);
+     });
+ }
+ //异步执行 + 并发队列
+ - (void)dispatchQueue01{
+     dispatch_queue_t queue = dispatch_queue_create("异步执行 + 并发队列", DISPATCH_QUEUE_CONCURRENT);
+     dispatch_async(queue, ^{
+         NSLog(@"异步执行 + 并发队列%@",[NSThread currentThread]);
+     });
+ }
+ //同步执行 + 串行队列
+ - (void)dispatchQueue10{
+     dispatch_queue_t queue = dispatch_queue_create("同步执行 + 串行队列", DISPATCH_QUEUE_SERIAL);
+     dispatch_sync(queue, ^{
+         NSLog(@"同步执行 + 串行队列%@",[NSThread currentThread]);
+     });
+ }
+ //异步执行 + 串行队列
+ - (void)dispatchQueue11{
+     dispatch_queue_t queue = dispatch_queue_create("异步执行 + 串行队列", DISPATCH_QUEUE_SERIAL);
+     dispatch_async(queue, ^{
+         NSLog(@"异步执行 + 串行队列%@",[NSThread currentThread]);
+     });
+ }
+ */
 
 /*
  GCD开线程巩固 https://www.jianshu.com/p/2d57c72016c6
