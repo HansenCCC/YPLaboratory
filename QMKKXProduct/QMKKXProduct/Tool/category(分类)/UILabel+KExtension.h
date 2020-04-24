@@ -11,6 +11,9 @@
 
 @interface UILabel (KExtension)
 
+/// 设置行间距
+@property (assign, nonatomic) CGFloat lineSpacing;
+
 /**
  label快速创建
  

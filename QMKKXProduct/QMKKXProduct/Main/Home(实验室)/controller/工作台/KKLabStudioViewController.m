@@ -53,6 +53,8 @@
     //
     CGPoint ypoint = [self.qgdzlView yPointForProgress:yProgress];
     self.ylabel.center = ypoint;
+    
+    [KKBadgeView showBadgeToView:self.qgdzlView badgeInteger:1];
 }
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];

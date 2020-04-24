@@ -82,6 +82,9 @@
     self.placeholderView.text = placeholder;
     [self __updatePlaceholderViewHidden];
 }
+- (void)setPlaceholderColor:(UIColor *)placeholderColor{
+    self.placeholderView.textColor = placeholderColor;
+}
 - (void)setContentInset:(UIEdgeInsets)contentInset{
     [super setContentInset:contentInset];
     [self.placeholderView setContentInset:contentInset];

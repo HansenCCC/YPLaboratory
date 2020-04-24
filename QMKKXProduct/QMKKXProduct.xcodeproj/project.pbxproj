@@ -273,6 +273,8 @@
 		600A9E4323E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E4123E567FD00ACB002 /* UITableViewCell+KExtension.m */; };
 		600A9E4623E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */; };
 		600A9E4723E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */; };
+		6015E9A9243DCF2A00C9B315 /* KKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6015E9A8243DCF2A00C9B315 /* KKBadgeView.m */; };
+		6015E9AA243DCF2A00C9B315 /* KKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6015E9A8243DCF2A00C9B315 /* KKBadgeView.m */; };
 		603670A423BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */; };
 		603670A523BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */; };
 		603670A623BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */; };
@@ -646,6 +648,8 @@
 		600A9E4123E567FD00ACB002 /* UITableViewCell+KExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KExtension.m"; sourceTree = "<group>"; };
 		600A9E4423E5694700ACB002 /* UITableViewCell+KPreviewDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+KPreviewDemo.h"; sourceTree = "<group>"; };
 		600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KPreviewDemo.m"; sourceTree = "<group>"; };
+		6015E9A7243DCF2A00C9B315 /* KKBadgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBadgeView.h; sourceTree = "<group>"; };
+		6015E9A8243DCF2A00C9B315 /* KKBadgeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBadgeView.m; sourceTree = "<group>"; };
 		603670A123BF39C4001E3D22 /* KKVideoCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKVideoCameraViewController.h; sourceTree = "<group>"; };
 		603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKVideoCameraViewController.m; sourceTree = "<group>"; };
 		603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoCameraViewController.xib; sourceTree = "<group>"; };
@@ -1230,6 +1234,7 @@
 			isa = PBXGroup;
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
+				6015E9A6243DCF0600C9B315 /* badge(角标) */,
 				6002324223FBCD40005EE419 /* avPlayer(视频播放) */,
 				600A9E2B23E532F300ACB002 /* database(数据库) */,
 				60B6812D238CD1FB00E3F6B7 /* carousel(轮播图) */,
@@ -1532,6 +1537,15 @@
 				600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */,
 			);
 			path = "预览cell";
+			sourceTree = "<group>";
+		};
+		6015E9A6243DCF0600C9B315 /* badge(角标) */ = {
+			isa = PBXGroup;
+			children = (
+				6015E9A7243DCF2A00C9B315 /* KKBadgeView.h */,
+				6015E9A8243DCF2A00C9B315 /* KKBadgeView.m */,
+			);
+			path = "badge(角标)";
 			sourceTree = "<group>";
 		};
 		603670A023BF390E001E3D22 /* 摄像机模块 */ = {
@@ -2162,6 +2176,7 @@
 				60C6CFD42389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				60A066B923E86C8300F05457 /* KKDatebaseFormViewController.m in Sources */,
 				3077A34422BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
+				6015E9AA243DCF2A00C9B315 /* KKBadgeView.m in Sources */,
 				3077A34C22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
 				60C6CFE4238AE6F100FABAA3 /* KKFileManagerViewController.m in Sources */,
 				30202FCB23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
@@ -2303,6 +2318,7 @@
 				60C6CFD32389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				60A066B823E86C8300F05457 /* KKDatebaseFormViewController.m in Sources */,
 				3077A34322BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
+				6015E9A9243DCF2A00C9B315 /* KKBadgeView.m in Sources */,
 				3077A34B22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
 				60C6CFE3238AE6F100FABAA3 /* KKFileManagerViewController.m in Sources */,
 				30202FCA23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
