@@ -19,6 +19,7 @@
 #import "KKVideoPlayViewController.h"//视频播放控件
 #import "KKTableViewCellViewController.h"//丰富多彩的cell(基于UITableView)
 #import "KKCustomAlertViewController.h"//自定义弹框(alert)
+#import "KKBadgeViewController.h"//角标
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -67,7 +68,9 @@
     s1m11.info = [KKVideoPlayViewController class];
     KKLabelModel *s1m12 = [[KKLabelModel alloc] initWithTitle:@"自定义弹框(alert)" value:nil];
     s1m12.info = [KKCustomAlertViewController class];
-    [self.datas addObjectsFromArray:@[c4,c5,c1,s1m12,c2,c3,s1m7,s1m6,s1m8,s1m11,s1m9,s1m10]];
+    KKLabelModel *s1m13 = [[KKLabelModel alloc] initWithTitle:@"角标和红点" value:nil];
+    s1m13.info = [KKBadgeViewController class];
+    [self.datas addObjectsFromArray:@[c4,c5,c1,s1m12,c2,c3,s1m7,s1m6,s1m8,s1m11,s1m9,s1m10,s1m13]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

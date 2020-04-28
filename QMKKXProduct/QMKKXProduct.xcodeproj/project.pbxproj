@@ -281,6 +281,8 @@
 		603670A723BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */; };
 		603670AB23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */; };
 		603670AC23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */; };
+		60445C752457FC0400F54BC9 /* KKBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60445C742457FC0400F54BC9 /* KKBadgeViewController.m */; };
+		60445C762457FC0400F54BC9 /* KKBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60445C742457FC0400F54BC9 /* KKBadgeViewController.m */; };
 		604501802406795400DDCAF6 /* KKQGDZLAnimalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6045017F2406795400DDCAF6 /* KKQGDZLAnimalView.m */; };
 		604501812406795400DDCAF6 /* KKQGDZLAnimalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6045017F2406795400DDCAF6 /* KKQGDZLAnimalView.m */; };
 		6045018824067B5800DDCAF6 /* img-poly-blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6045018224067B5700DDCAF6 /* img-poly-blue@3x.png */; };
@@ -655,6 +657,8 @@
 		603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoCameraViewController.xib; sourceTree = "<group>"; };
 		603670A923BF3B6B001E3D22 /* KKQRCodeScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKQRCodeScanViewController.h; sourceTree = "<group>"; };
 		603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKQRCodeScanViewController.m; sourceTree = "<group>"; };
+		60445C732457FC0400F54BC9 /* KKBadgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBadgeViewController.h; sourceTree = "<group>"; };
+		60445C742457FC0400F54BC9 /* KKBadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBadgeViewController.m; sourceTree = "<group>"; };
 		6045017E2406795400DDCAF6 /* KKQGDZLAnimalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKQGDZLAnimalView.h; sourceTree = "<group>"; };
 		6045017F2406795400DDCAF6 /* KKQGDZLAnimalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKQGDZLAnimalView.m; sourceTree = "<group>"; };
 		6045018224067B5700DDCAF6 /* img-poly-blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-poly-blue@3x.png"; sourceTree = "<group>"; };
@@ -868,6 +872,7 @@
 				603670A023BF390E001E3D22 /* 摄像机模块 */,
 				60022A2423C852B4004F94DB /* 模拟新浪@人 */,
 				60022A7223CDBD6B004F94DB /* 模拟微信朋友圈 */,
+				60445C722457FB8200F54BC9 /* 角标 */,
 			);
 			path = "ui组件";
 			sourceTree = "<group>";
@@ -1570,6 +1575,15 @@
 			path = "二维码扫码";
 			sourceTree = "<group>";
 		};
+		60445C722457FB8200F54BC9 /* 角标 */ = {
+			isa = PBXGroup;
+			children = (
+				60445C732457FC0400F54BC9 /* KKBadgeViewController.h */,
+				60445C742457FC0400F54BC9 /* KKBadgeViewController.m */,
+			);
+			path = "角标";
+			sourceTree = "<group>";
+		};
 		6045017D2406765300DDCAF6 /* 奇怪的周磊 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2126,6 +2140,7 @@
 			files = (
 				60F3BE4B23DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m in Sources */,
 				302897AC22C46DEF000F2669 /* KKDatePickerAlert.m in Sources */,
+				60445C762457FC0400F54BC9 /* KKBadgeViewController.m in Sources */,
 				60F3BE4323DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */,
 				30036DD422B9FC0800605DF7 /* KKUser.m in Sources */,
 				6002324123FBCC67005EE419 /* KKAVPlayerViewController.m in Sources */,
@@ -2268,6 +2283,7 @@
 			files = (
 				60F3BE4A23DFFD5500447EC2 /* KKWeChatMomentsLikeModel.m in Sources */,
 				302897AB22C46DEF000F2669 /* KKDatePickerAlert.m in Sources */,
+				60445C752457FC0400F54BC9 /* KKBadgeViewController.m in Sources */,
 				60F3BE4223DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */,
 				30036DD322B9FC0800605DF7 /* KKUser.m in Sources */,
 				6002324023FBCC67005EE419 /* KKAVPlayerViewController.m in Sources */,

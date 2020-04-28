@@ -52,6 +52,9 @@
     }
     return size;
 }
+- (void)setIsBadge:(BOOL)isBadge{
+    _isBadge = isBadge;
+}
 - (void)layoutSubviews{
     [super layoutSubviews];
     CGRect superviewBounds = self.superview.bounds;
@@ -61,6 +64,9 @@
     CGSize size = [self sizeThatFits:CGSizeZero];
     CGRect f1 = superviewBounds;
     f1.size = size;
+    if (!self.isBadge) {
+        f1.size = CGSizeMake(AdaptedWidth(5.f), AdaptedWidth(5.f));
+    }
     if (self.superview.clipsToBounds) {
         //不允许超出范围
         f1.origin.x = superviewBounds.size.width - f1.size.width;
@@ -84,9 +90,32 @@
         badgeView = [[KKBadgeView alloc] init];
         [view addSubview:badgeView];
     }
+    badgeView.isBadge = YES;
     badgeView.badgeInteger = badgeInteger;
     [badgeView setNeedsLayout];
     [badgeView layoutIfNeeded];
+    return badgeView;
+}
+/// 展示红点在试图右上角上面
+/// @param view 要展示的试图
++ (KKBadgeView *)showBadgeToView:(UIView *)view{
+    KKBadgeView *badgeView = nil;
+    badgeView = (KKBadgeView *)[view traversalAllForClass:[KKBadgeView class]].firstObject;
+    if (!badgeView) {
+        badgeView = [[KKBadgeView alloc] init];
+        [view addSubview:badgeView];
+    }
+    badgeView.isBadge = NO;
+    [badgeView setNeedsLayout];
+    [badgeView layoutIfNeeded];
+    return badgeView;
+}
++ (KKBadgeView *)hiddenBadgeToView:(UIView *)view{
+    KKBadgeView *badgeView = nil;
+    badgeView = (KKBadgeView *)[view traversalAllForClass:[KKBadgeView class]].firstObject;
+    if (badgeView) {
+        [badgeView removeFromSuperview];
+    }
     return badgeView;
 }
 @end
