@@ -68,5 +68,7 @@
 #import "KKBeeAVPlayerView.h"//定制版bee
 //角标
 #import "KKBadgeView.h"
+//标签
+#import "KKLabelsView.h"
 
 #endif /* KKToolHeader_h */

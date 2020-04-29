@@ -20,6 +20,7 @@
 #import "KKTableViewCellViewController.h"//丰富多彩的cell(基于UITableView)
 #import "KKCustomAlertViewController.h"//自定义弹框(alert)
 #import "KKBadgeViewController.h"//角标
+#import "KKLabelsViewController.h"//标签
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -58,7 +59,7 @@
     s6.isEnabled = NO;
     KKLabelModel *s7 = [[KKLabelModel alloc] initWithTitle:@"轮播图(基于KKCarouselView)" value:nil];
     s7.info = [KKCarouselViewController class];
-    KKLabelModel *s8 = [[KKLabelModel alloc] initWithTitle:@"摄像机模块" value:nil];
+    KKLabelModel *s8 = [[KKLabelModel alloc] initWithTitle:@"摄像机模块(基于KKAVCaptureBaseSessionView)" value:nil];
     s8.info = [KKVideoCameraViewController class];
     KKLabelModel *s9 = [[KKLabelModel alloc] initWithTitle:@"模拟新浪@人" value:nil];
     s9.info = [KKSinaAiteViewController class];
@@ -76,7 +77,9 @@
     KKLabelModel *s15 = [[KKLabelModel alloc] initWithTitle:@"OC语言绘图(UIBezierPath)" value:nil];
     s15.isEnabled = NO;
     s15.info = [KKBaseViewController class];
-    [self.datas addObjectsFromArray:@[s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s9,s10,s13]];
+    KKLabelModel *s16 = [[KKLabelModel alloc] initWithTitle:@"标签" value:nil];
+    s16.info = [KKLabelsViewController class];
+    [self.datas addObjectsFromArray:@[s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s9,s10,s13,s16]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
