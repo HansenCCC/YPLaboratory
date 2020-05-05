@@ -157,6 +157,7 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
         #pragma clang diagnostic pop
         decisionHandler(WKNavigationActionPolicyAllow);
+        return;
     }else if ([urlString isKindOfClass:[NSString class]]) {
         if([urlString hasPrefix:@"metoologin"]) {
             //跳转登录界面
