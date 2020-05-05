@@ -65,7 +65,7 @@
     s9.info = [KKSinaAiteViewController class];
     KKLabelModel *s10 = [[KKLabelModel alloc] initWithTitle:@"模拟微信朋友圈" value:nil];
     s10.info = [KKWeChatMomentsViewController class];
-    KKLabelModel *s11 = [[KKLabelModel alloc] initWithTitle:@"视频播放控件" value:nil];
+    KKLabelModel *s11 = [[KKLabelModel alloc] initWithTitle:@"iOS播放视频" value:nil];
     s11.info = [KKVideoPlayViewController class];
     KKLabelModel *s12 = [[KKLabelModel alloc] initWithTitle:@"自定义弹框(alert)" value:nil];
     s12.info = [KKCustomAlertViewController class];

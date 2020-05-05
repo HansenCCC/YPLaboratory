@@ -1638,6 +1638,27 @@
 			path = "labels(标签)";
 			sourceTree = "<group>";
 		};
+		606C7ABB245A9BBB00BF5C7F /* AVPlayerVlewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AVPlayerVlewController;
+			sourceTree = "<group>";
+		};
+		606C7ABC245A9BC600BF5C7F /* MPMoviePlayerController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MPMoviePlayerController;
+			sourceTree = "<group>";
+		};
+		606C7ABD245A9BF400BF5C7F /* MPMoviePlayerViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MPMoviePlayerViewController;
+			sourceTree = "<group>";
+		};
 		607019AF23D0068A009078E6 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -1837,6 +1858,9 @@
 				60F865A823D1585600CCEA70 /* KKVideoPlayViewController.h */,
 				60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */,
 				60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */,
+				606C7ABD245A9BF400BF5C7F /* MPMoviePlayerViewController */,
+				606C7ABC245A9BC600BF5C7F /* MPMoviePlayerController */,
+				606C7ABB245A9BBB00BF5C7F /* AVPlayerVlewController */,
 				6002323D23FBCC3B005EE419 /* AVPlayer */,
 			);
 			path = "视频播放控件";

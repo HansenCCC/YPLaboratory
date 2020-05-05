@@ -53,10 +53,11 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
         self.speedProgressThreshold = kScreenW;//进度的阈值，默认为bounds.size.width
         self.voiceProgressThreshold = kScreenH/4.0;//音量的阈值，默认为self.bounds.size.height/4.0
         self.brightnessProgressThreshold = kScreenH/4.0;//亮度的阈值，默认为self.bounds.size.height/4.0
-        self.avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+        self.avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
         self.changeType = KKBeeAVPlayerViewChangeUnknownType;
         [self setupSubviews];//构造视图
         [self addGestureRecognizer];//添加手势
+        self.backgroundColor = KKColor_000000;
     }
     return self;
 }

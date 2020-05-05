@@ -15,14 +15,31 @@
 @end
 
 @implementation KKAVPlayerViewController
-
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    //试图即将消失 -> 暂停播放
+    if(self.player.isPlaying){
+        [self.player pause];
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"基于AVPlayer自定义UI";
+    self.title = @"AVPlayer";
     [self.view addSubview:self.player];
-    //
-    NSURL *url = [NSURL URLWithString:@"http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4"];
+    [self updateDatas];
+}
+- (void)updateDatas{
+    //占位图
+    self.player.placeholderImage = @"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3023045797,2628106807&fm=26&gp=0.jpg";
+    //视频
+    /*
+     1、https://media.w3.org/2010/05/sintel/trailer.mp4
+     2、http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4
+     3、https://img.qumeng666.com/be8da24a2de0d75014d3e9e2803f47d0.mp4?v=233825
+     */
+    NSString *value = @"https://img.qumeng666.com/be8da24a2de0d75014d3e9e2803f47d0.mp4?v=233825";
+    NSURL *url = [NSURL URLWithString:value];
     self.player.playerItemUrl = url;
 }
 - (void)viewWillLayoutSubviews{
@@ -41,7 +58,6 @@
 - (KKBeeAVPlayerView *)player{
     if (!_player) {
         _player = [[KKBeeAVPlayerView alloc] init];
-        _player.placeholderImage = @"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3023045797,2628106807&fm=26&gp=0.jpg";
     }
     return _player;
 }
