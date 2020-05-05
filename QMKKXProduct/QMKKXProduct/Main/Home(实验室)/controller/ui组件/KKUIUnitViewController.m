@@ -56,7 +56,7 @@
     c4.info = [KKTableViewCellViewController class];
     KKLabelModel *c5 = [[KKLabelModel alloc] initWithTitle:@"丰富多彩的cell(基于UICollectionView)" value:nil];
     c5.isEnabled = NO;
-    KKLabelModel *s6 = [[KKLabelModel alloc] initWithTitle:@"K线应用" value:nil];
+    KKLabelModel *s6 = [[KKLabelModel alloc] initWithTitle:@"K线应用(搁置没时间)" value:nil];
     s6.isEnabled = NO;
     KKLabelModel *s7 = [[KKLabelModel alloc] initWithTitle:@"轮播图(基于KKCarouselView)" value:nil];
     s7.info = [KKCarouselViewController class];
