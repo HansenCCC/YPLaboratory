@@ -10,6 +10,9 @@
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
 #import "KKAVPlayerViewController.h"
+#import <AVKit/AVKit.h>
+#import "KKMPMoviePlayerController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface KKVideoPlayViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -77,9 +80,30 @@
 }
 - (void)mainQueueTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.view endEditing:YES];
-    KKAVPlayerViewController *vc = [[KKAVPlayerViewController alloc] init];
-//    [self presentViewController:vc animated:YES completion:nil];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.row == 0) {
+        KKAVPlayerViewController *vc = [[KKAVPlayerViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(indexPath.row == 1){
+        AVPlayerViewController *vc = [[AVPlayerViewController alloc] init];
+        NSString *url = @"http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4";
+        vc.player = [[AVPlayer alloc] initWithURL:url.toURL];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if(indexPath.row == 2){
+        KKMPMoviePlayerController *vc = [[KKMPMoviePlayerController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if(indexPath.row == 3){
+        if (@available(iOS 13.0, *)) {
+            [self showError:@"MPMoviePlayerViewController(iOS 13已弃用)\nThread 1: Exception: \"MPMoviePlayerViewController is no longer available. Use AVPlayerViewController in AVKit.\""];
+        }else{
+            #pragma clang diagnostic push
+            #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+            //'MPMoviePlayerViewController' is deprecated: first deprecated in iOS 9.0 - Use AVPlayerViewController in AVKit.
+            NSString *url = @"http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4";
+            MPMoviePlayerViewController *vc = [[MPMoviePlayerViewController alloc] initWithContentURL:url.toURL];
+            [self presentViewController:vc animated:YES completion:nil];
+            #pragma clang diagnostic pop
+        }
+    }
 }
 #pragma mark - aciton
 @end

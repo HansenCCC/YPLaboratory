@@ -309,6 +309,8 @@
 		606C7AB524597AAC00BF5C7F /* KKLabelsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AB324597AAC00BF5C7F /* KKLabelsView.m */; };
 		606C7AB824597B8B00BF5C7F /* KKLabelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AB724597B8B00BF5C7F /* KKLabelsViewController.m */; };
 		606C7AB924597B8B00BF5C7F /* KKLabelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AB724597B8B00BF5C7F /* KKLabelsViewController.m */; };
+		606C7ACB2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ACA2461C1B800BF5C7F /* KKMPMoviePlayerController.m */; };
+		606C7ACC2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ACA2461C1B800BF5C7F /* KKMPMoviePlayerController.m */; };
 		607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
@@ -683,6 +685,8 @@
 		606C7AB324597AAC00BF5C7F /* KKLabelsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKLabelsView.m; sourceTree = "<group>"; };
 		606C7AB624597B8B00BF5C7F /* KKLabelsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKLabelsViewController.h; sourceTree = "<group>"; };
 		606C7AB724597B8B00BF5C7F /* KKLabelsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKLabelsViewController.m; sourceTree = "<group>"; };
+		606C7AC92461C1B800BF5C7F /* KKMPMoviePlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKMPMoviePlayerController.h; sourceTree = "<group>"; };
+		606C7ACA2461C1B800BF5C7F /* KKMPMoviePlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKMPMoviePlayerController.m; sourceTree = "<group>"; };
 		607019B023D006A8009078E6 /* KKWeChatMomentsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsTableViewCell.h; sourceTree = "<group>"; };
 		607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsTableViewCell.m; sourceTree = "<group>"; };
 		609EC29D23E7207C003BB61C /* KKAdaptiveTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveTableViewCell.h; sourceTree = "<group>"; };
@@ -1638,25 +1642,13 @@
 			path = "labels(标签)";
 			sourceTree = "<group>";
 		};
-		606C7ABB245A9BBB00BF5C7F /* AVPlayerVlewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AVPlayerVlewController;
-			sourceTree = "<group>";
-		};
 		606C7ABC245A9BC600BF5C7F /* MPMoviePlayerController */ = {
 			isa = PBXGroup;
 			children = (
+				606C7AC92461C1B800BF5C7F /* KKMPMoviePlayerController.h */,
+				606C7ACA2461C1B800BF5C7F /* KKMPMoviePlayerController.m */,
 			);
 			path = MPMoviePlayerController;
-			sourceTree = "<group>";
-		};
-		606C7ABD245A9BF400BF5C7F /* MPMoviePlayerViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MPMoviePlayerViewController;
 			sourceTree = "<group>";
 		};
 		607019AF23D0068A009078E6 /* view */ = {
@@ -1858,9 +1850,7 @@
 				60F865A823D1585600CCEA70 /* KKVideoPlayViewController.h */,
 				60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */,
 				60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */,
-				606C7ABD245A9BF400BF5C7F /* MPMoviePlayerViewController */,
 				606C7ABC245A9BC600BF5C7F /* MPMoviePlayerController */,
-				606C7ABB245A9BBB00BF5C7F /* AVPlayerVlewController */,
 				6002323D23FBCC3B005EE419 /* AVPlayer */,
 			);
 			path = "视频播放控件";
@@ -2236,6 +2226,7 @@
 				60BA347623EC576E00A2A249 /* KKDatabaseColumnModel.m in Sources */,
 				6002324B23FBED1C005EE419 /* KKBeeAVPlayerView.m in Sources */,
 				30917413237AD79900010E99 /* KKColorPickAlert.m in Sources */,
+				606C7ACC2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */,
 				30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */,
 				3077A35022BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
 				30036DB722B9D76B00605DF7 /* main.m in Sources */,
@@ -2381,6 +2372,7 @@
 				60BA347523EC576E00A2A249 /* KKDatabaseColumnModel.m in Sources */,
 				6002324A23FBED1C005EE419 /* KKBeeAVPlayerView.m in Sources */,
 				30917412237AD79900010E99 /* KKColorPickAlert.m in Sources */,
+				606C7ACB2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */,
 				30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */,
 				3077A34F22BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
 				30036DC122B9DDC500605DF7 /* main.m in Sources */,

@@ -81,6 +81,7 @@
             NSMutableArray *items = [[NSMutableArray alloc] init];
             for (UIImage *image in model.info) {
                 [items addObject:@"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1640434779,3971610929&fm=26&gp=0.jpg"];
+                NSLog(@"#%@",image);
             }
             images = [items copy];
         }

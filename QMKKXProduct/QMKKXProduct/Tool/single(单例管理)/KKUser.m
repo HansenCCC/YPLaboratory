@@ -145,7 +145,11 @@ static NSString *kNSUserDefaultsStartImg = @"kNSUserDefaultsStartImg";//启动�
 #pragma mark - 超链接打开操作
 //打开地址
 - (BOOL)openURL:(NSURL*)url{
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    //'openURL:' is deprecated: first deprecated in iOS 10.0
     return [[UIApplication sharedApplication] openURL:url];
+    #pragma clang diagnostic pop
 }
 //是否能打开
 - (BOOL)canOpenURL:(NSURL *)url{

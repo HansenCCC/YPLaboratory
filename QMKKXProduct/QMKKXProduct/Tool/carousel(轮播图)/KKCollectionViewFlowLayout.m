@@ -42,7 +42,7 @@
     //获取停止时，显示的cell的frame
     NSArray *tempArray  = [self layoutAttributesForElementsInRect:rect];
     //初始化衡量值
-    CGFloat  gap = 1000.f;
+//    CGFloat  gap = 1000.f;
     //偏离中心x
     CGFloat  f1_MidX = 0.f;
     for (int i = 0; i < tempArray.count; i++) {

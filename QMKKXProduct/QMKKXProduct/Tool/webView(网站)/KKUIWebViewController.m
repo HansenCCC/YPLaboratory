@@ -137,18 +137,25 @@
 }
 #pragma mark - WKNavigationDelegate
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation{
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    //'UIAlertView' is deprecated: first deprecated in iOS 9.0 - UIAlertView is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead
     [[[UIAlertView alloc] initWithTitle:@"请求失败" message:@"请检查您的网络" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil] show];
+    #pragma clang diagnostic pop
 }
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
     NSURLRequest *request = navigationAction.request;
-    NSMutableURLRequest *mutRequest = [request mutableCopy];
     NSString *urlString = request.URL.absoluteString;
     NSString *oldStrig = self.requestURL.absoluteString;
     //WKNavigationActionPolicyCancel 不是我们拦截的 || WKNavigationActionPolicyAllow 使我们拦截的
     //允许跳转
     if ([urlString rangeOfString:@"//itunes.apple.com"].location !=NSNotFound) {
         //跳转其他界面进行下载
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        //'openURL:' is deprecated: first deprecated in iOS 10.0
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+        #pragma clang diagnostic pop
         decisionHandler(WKNavigationActionPolicyAllow);
     }else if ([urlString isKindOfClass:[NSString class]]) {
         if([urlString hasPrefix:@"metoologin"]) {
