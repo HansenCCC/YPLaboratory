@@ -38,9 +38,13 @@
 - (void)reloadDatas{
     [self.datas removeAllObjects];
     //构造cell
-    NSArray *items = @[@"加载本地HTML(index.html)",@"加载网络HTML(https://www.baidu.com/)",@"",@""];
-    for (NSString *item in items) {
+    NSArray *items = @[@"加载本地HTML(index.html)",@"加载网络HTML(https://www.baidu.com/)",@"UIWebView(iOS 12.0已弃用)"];
+    for (int i = 0;i < items.count; i ++) {
+        NSString *item = items[i];
         KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:item value:nil];
+        if (i == 2||i == 3) {
+            element.isEnabled = NO;
+        }
         [self.datas addObject:element];
     }
     [self.tableView reloadData];
