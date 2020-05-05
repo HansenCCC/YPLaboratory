@@ -21,6 +21,7 @@
 #import "KKCustomAlertViewController.h"//自定义弹框(alert)
 #import "KKBadgeViewController.h"//角标
 #import "KKLabelsViewController.h"//标签
+#import "KKWKWebViewViewController.h"//网站(WKWebView)
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -71,15 +72,17 @@
     s12.info = [KKCustomAlertViewController class];
     KKLabelModel *s13 = [[KKLabelModel alloc] initWithTitle:@"角标和红点" value:nil];
     s13.info = [KKBadgeViewController class];
-    KKLabelModel *s14 = [[KKLabelModel alloc] initWithTitle:@"C语言绘图(Core Graphics)" value:nil];
+    KKLabelModel *s14 = [[KKLabelModel alloc] initWithTitle:@"C语言绘图(基于Core Graphics)" value:nil];
     s14.isEnabled = NO;
     s14.info = [KKBaseViewController class];
-    KKLabelModel *s15 = [[KKLabelModel alloc] initWithTitle:@"OC语言绘图(UIBezierPath)" value:nil];
+    KKLabelModel *s15 = [[KKLabelModel alloc] initWithTitle:@"OC语言绘图(基于UIBezierPath)" value:nil];
     s15.isEnabled = NO;
     s15.info = [KKBaseViewController class];
     KKLabelModel *s16 = [[KKLabelModel alloc] initWithTitle:@"标签" value:nil];
     s16.info = [KKLabelsViewController class];
-    [self.datas addObjectsFromArray:@[s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s9,s10,s13,s16]];
+    KKLabelModel *s17 = [[KKLabelModel alloc] initWithTitle:@"网站(基于WKWebView)" value:nil];
+    s17.info = [KKWKWebViewViewController class];
+    [self.datas addObjectsFromArray:@[s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s9,s10,s13,s16,s17]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

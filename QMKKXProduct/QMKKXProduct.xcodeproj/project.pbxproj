@@ -311,6 +311,8 @@
 		606C7AB924597B8B00BF5C7F /* KKLabelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AB724597B8B00BF5C7F /* KKLabelsViewController.m */; };
 		606C7ACB2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ACA2461C1B800BF5C7F /* KKMPMoviePlayerController.m */; };
 		606C7ACC2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ACA2461C1B800BF5C7F /* KKMPMoviePlayerController.m */; };
+		606C7AD02461D0C000BF5C7F /* KKWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ACF2461D0C000BF5C7F /* KKWKWebViewViewController.m */; };
+		606C7AD12461D0C000BF5C7F /* KKWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ACF2461D0C000BF5C7F /* KKWKWebViewViewController.m */; };
 		607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
@@ -687,6 +689,8 @@
 		606C7AB724597B8B00BF5C7F /* KKLabelsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKLabelsViewController.m; sourceTree = "<group>"; };
 		606C7AC92461C1B800BF5C7F /* KKMPMoviePlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKMPMoviePlayerController.h; sourceTree = "<group>"; };
 		606C7ACA2461C1B800BF5C7F /* KKMPMoviePlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKMPMoviePlayerController.m; sourceTree = "<group>"; };
+		606C7ACE2461D0C000BF5C7F /* KKWKWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWKWebViewViewController.h; sourceTree = "<group>"; };
+		606C7ACF2461D0C000BF5C7F /* KKWKWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWKWebViewViewController.m; sourceTree = "<group>"; };
 		607019B023D006A8009078E6 /* KKWeChatMomentsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsTableViewCell.h; sourceTree = "<group>"; };
 		607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsTableViewCell.m; sourceTree = "<group>"; };
 		609EC29D23E7207C003BB61C /* KKAdaptiveTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveTableViewCell.h; sourceTree = "<group>"; };
@@ -886,6 +890,7 @@
 				60022A7223CDBD6B004F94DB /* 模拟微信朋友圈 */,
 				60445C722457FB8200F54BC9 /* 角标 */,
 				606C7AB024597A7600BF5C7F /* 标签 */,
+				606C7ACD2461D06F00BF5C7F /* 网站(WKWebView) */,
 			);
 			path = "ui组件";
 			sourceTree = "<group>";
@@ -1651,6 +1656,15 @@
 			path = MPMoviePlayerController;
 			sourceTree = "<group>";
 		};
+		606C7ACD2461D06F00BF5C7F /* 网站(WKWebView) */ = {
+			isa = PBXGroup;
+			children = (
+				606C7ACE2461D0C000BF5C7F /* KKWKWebViewViewController.h */,
+				606C7ACF2461D0C000BF5C7F /* KKWKWebViewViewController.m */,
+			);
+			path = "网站(WKWebView)";
+			sourceTree = "<group>";
+		};
 		607019AF23D0068A009078E6 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -2258,6 +2272,7 @@
 				60F3BECE23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
 				302897C622C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A622C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
+				606C7AD12461D0C000BF5C7F /* KKWKWebViewViewController.m in Sources */,
 				308DF76B2359B24400A503D0 /* KKUIWebViewController.m in Sources */,
 				600A9E3623E5524500ACB002 /* KKTableViewCellViewController.m in Sources */,
 				606C7AB924597B8B00BF5C7F /* KKLabelsViewController.m in Sources */,
@@ -2404,6 +2419,7 @@
 				60F3BECD23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
 				302897C522C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A522C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
+				606C7AD02461D0C000BF5C7F /* KKWKWebViewViewController.m in Sources */,
 				308DF76A2359B24400A503D0 /* KKUIWebViewController.m in Sources */,
 				600A9E3523E5524500ACB002 /* KKTableViewCellViewController.m in Sources */,
 				606C7AB824597B8B00BF5C7F /* KKLabelsViewController.m in Sources */,
