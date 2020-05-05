@@ -73,7 +73,7 @@
         //to do
     }else{
         //主动进入编辑状态
-        [self becomeFirstResponder];
+//        [self becomeFirstResponder];
     }
     self.selectedRange = selectedRange;
 }
@@ -88,6 +88,12 @@
     return value;
 }
 #pragma mark - UITextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    //to do
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    //to do
+}
 - (void)textFieldDidEditing:(UITextField *)textField{
     //中文拼音预输入
     if (textField.markedTextRange == nil){
