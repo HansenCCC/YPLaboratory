@@ -31,7 +31,7 @@
 #import "KKNavigationController.h"//navigation
 //集合刷新
 #import "KKRefreshNormalHeader.h"//head
-#import "KKRefreshAutoNormalFooter.h"//footer
+#import "KKRefreshBackNormalFooter.h"//footer
 //监听静音键
 #import "KKMuteDetector.h"//mute
 //网络部分

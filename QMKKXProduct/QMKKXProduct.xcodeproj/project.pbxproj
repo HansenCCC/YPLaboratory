@@ -104,8 +104,6 @@
 		302897BC22C46DEF000F2669 /* KKEmptyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028978022C46DEE000F2669 /* KKEmptyDataView.m */; };
 		302897BD22C46DEF000F2669 /* KKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028978322C46DEE000F2669 /* KKTextField.m */; };
 		302897BE22C46DEF000F2669 /* KKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028978322C46DEE000F2669 /* KKTextField.m */; };
-		302897BF22C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028978622C46DEE000F2669 /* KKRefreshAutoNormalFooter.m */; };
-		302897C022C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028978622C46DEE000F2669 /* KKRefreshAutoNormalFooter.m */; };
 		302897C322C46DEF000F2669 /* KKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028978D22C46DEE000F2669 /* KKTextView.m */; };
 		302897C422C46DEF000F2669 /* KKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028978D22C46DEE000F2669 /* KKTextView.m */; };
 		302897C522C46DEF000F2669 /* KKInputToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3028978F22C46DEE000F2669 /* KKInputToolBar.m */; };
@@ -319,6 +317,8 @@
 		606C7AD9246266F200BF5C7F /* KKFaceTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AD7246266F200BF5C7F /* KKFaceTrackView.m */; };
 		606C7ADD24628DD600BF5C7F /* KKCustomCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ADC24628DD600BF5C7F /* KKCustomCameraViewController.m */; };
 		606C7ADE24628DD600BF5C7F /* KKCustomCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ADC24628DD600BF5C7F /* KKCustomCameraViewController.m */; };
+		606C7AE12462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AE02462A48E00BF5C7F /* KKRefreshBackNormalFooter.m */; };
+		606C7AE22462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AE02462A48E00BF5C7F /* KKRefreshBackNormalFooter.m */; };
 		607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
@@ -512,8 +512,6 @@
 		3028978122C46DEE000F2669 /* KKEmptyDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKEmptyDataView.h; sourceTree = "<group>"; };
 		3028978322C46DEE000F2669 /* KKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKTextField.m; sourceTree = "<group>"; };
 		3028978422C46DEE000F2669 /* KKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKTextField.h; sourceTree = "<group>"; };
-		3028978622C46DEE000F2669 /* KKRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
-		3028978722C46DEE000F2669 /* KKRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
 		3028978C22C46DEE000F2669 /* KKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKTextView.h; sourceTree = "<group>"; };
 		3028978D22C46DEE000F2669 /* KKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKTextView.m; sourceTree = "<group>"; };
 		3028978F22C46DEE000F2669 /* KKInputToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKInputToolBar.m; sourceTree = "<group>"; };
@@ -703,6 +701,8 @@
 		606C7AD7246266F200BF5C7F /* KKFaceTrackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFaceTrackView.m; sourceTree = "<group>"; };
 		606C7ADB24628DD600BF5C7F /* KKCustomCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKCustomCameraViewController.h; sourceTree = "<group>"; };
 		606C7ADC24628DD600BF5C7F /* KKCustomCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKCustomCameraViewController.m; sourceTree = "<group>"; };
+		606C7ADF2462A48E00BF5C7F /* KKRefreshBackNormalFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKRefreshBackNormalFooter.h; sourceTree = "<group>"; };
+		606C7AE02462A48E00BF5C7F /* KKRefreshBackNormalFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKRefreshBackNormalFooter.m; sourceTree = "<group>"; };
 		607019B023D006A8009078E6 /* KKWeChatMomentsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsTableViewCell.h; sourceTree = "<group>"; };
 		607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsTableViewCell.m; sourceTree = "<group>"; };
 		609EC29D23E7207C003BB61C /* KKAdaptiveTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveTableViewCell.h; sourceTree = "<group>"; };
@@ -1192,8 +1192,8 @@
 			children = (
 				302897C722C47207000F2669 /* KKRefreshNormalHeader.h */,
 				302897C822C47207000F2669 /* KKRefreshNormalHeader.m */,
-				3028978722C46DEE000F2669 /* KKRefreshAutoNormalFooter.h */,
-				3028978622C46DEE000F2669 /* KKRefreshAutoNormalFooter.m */,
+				606C7ADF2462A48E00BF5C7F /* KKRefreshBackNormalFooter.h */,
+				606C7AE02462A48E00BF5C7F /* KKRefreshBackNormalFooter.m */,
 			);
 			path = "header&footer";
 			sourceTree = "<group>";
@@ -2272,6 +2272,7 @@
 				3077A35022BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
 				30036DB722B9D76B00605DF7 /* main.m in Sources */,
 				606C7AB524597AAC00BF5C7F /* KKLabelsView.m in Sources */,
+				606C7AE22462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */,
 				30917407237AB37500010E99 /* KKAppIcon.m in Sources */,
 				60C6CFD42389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				60A066B923E86C8300F05457 /* KKDatebaseFormViewController.m in Sources */,
@@ -2328,7 +2329,6 @@
 				600A9E2F23E5338E00ACB002 /* KKDatabase.m in Sources */,
 				60C237A124021AD4002FF47C /* KKBeeProgressView.m in Sources */,
 				60BA347C23EC6AC700A2A249 /* KKCustomAlertViewController.m in Sources */,
-				302897C022C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
 				60C6CFDC238A84F200FABAA3 /* KKPickViewViewController.m in Sources */,
 				30917449237C277E00010E99 /* KKSDWebViewController.m in Sources */,
 				3015A061237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
@@ -2422,6 +2422,7 @@
 				3077A34F22BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
 				30036DC122B9DDC500605DF7 /* main.m in Sources */,
 				606C7AB424597AAC00BF5C7F /* KKLabelsView.m in Sources */,
+				606C7AE12462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */,
 				30917406237AB37500010E99 /* KKAppIcon.m in Sources */,
 				60C6CFD32389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				60A066B823E86C8300F05457 /* KKDatebaseFormViewController.m in Sources */,
@@ -2478,7 +2479,6 @@
 				600A9E2E23E5338E00ACB002 /* KKDatabase.m in Sources */,
 				60C237A024021AD4002FF47C /* KKBeeProgressView.m in Sources */,
 				60BA347B23EC6AC700A2A249 /* KKCustomAlertViewController.m in Sources */,
-				302897BF22C46DEF000F2669 /* KKRefreshAutoNormalFooter.m in Sources */,
 				60C6CFDB238A84F200FABAA3 /* KKPickViewViewController.m in Sources */,
 				30917448237C277E00010E99 /* KKSDWebViewController.m in Sources */,
 				3015A060237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
