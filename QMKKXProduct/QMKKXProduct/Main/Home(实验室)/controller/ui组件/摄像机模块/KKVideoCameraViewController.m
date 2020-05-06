@@ -41,7 +41,7 @@
     c1.info = [KKQRCodeScanViewController class];
     KKLabelModel *c2 = [[KKLabelModel alloc] initWithTitle:@"人脸追踪识别" value:nil];
     c2.info = [KKFaceTrackViewController class];
-    KKLabelModel *c3 = [[KKLabelModel alloc] initWithTitle:@"自定义相机" value:nil];
+    KKLabelModel *c3 = [[KKLabelModel alloc] initWithTitle:@"自定义相机(没时间待完善)" value:nil];
     c3.info = [KKCustomCameraViewController class];
     KKLabelModel *c4 = [[KKLabelModel alloc] initWithTitle:@"身份证拍照" value:nil];
     c4.info = [KKIDCardScanViewController class];
