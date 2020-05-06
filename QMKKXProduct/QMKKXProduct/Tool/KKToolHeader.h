@@ -70,5 +70,10 @@
 #import "KKBadgeView.h"
 //标签
 #import "KKLabelsView.h"
+//相机
+#import "KKAVCaptureBaseSessionView.h"
+#import "KKPhotoSessionView.h"
+#import "KKQRCodeSessionView.h"
+#import "KKQRCodeView.h"
 
 #endif /* KKToolHeader_h */

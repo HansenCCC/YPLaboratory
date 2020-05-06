@@ -75,7 +75,6 @@
         if ([self.delegate respondsToSelector:@selector(captureOutput:didOutputMetadataObjects:fromConnection:)]){
             [self.delegate captureOutput:captureOutput didOutputMetadataObjects:metadataObjects fromConnection:connection];
         }
-            
     }
 }
 @end

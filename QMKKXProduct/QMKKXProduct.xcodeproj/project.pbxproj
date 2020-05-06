@@ -313,6 +313,10 @@
 		606C7ACC2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ACA2461C1B800BF5C7F /* KKMPMoviePlayerController.m */; };
 		606C7AD02461D0C000BF5C7F /* KKWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ACF2461D0C000BF5C7F /* KKWKWebViewViewController.m */; };
 		606C7AD12461D0C000BF5C7F /* KKWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7ACF2461D0C000BF5C7F /* KKWKWebViewViewController.m */; };
+		606C7AD4246253D300BF5C7F /* KKFaceTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AD3246253D300BF5C7F /* KKFaceTrackViewController.m */; };
+		606C7AD5246253D300BF5C7F /* KKFaceTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AD3246253D300BF5C7F /* KKFaceTrackViewController.m */; };
+		606C7AD8246266F200BF5C7F /* KKFaceTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AD7246266F200BF5C7F /* KKFaceTrackView.m */; };
+		606C7AD9246266F200BF5C7F /* KKFaceTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AD7246266F200BF5C7F /* KKFaceTrackView.m */; };
 		607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
@@ -691,6 +695,10 @@
 		606C7ACA2461C1B800BF5C7F /* KKMPMoviePlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKMPMoviePlayerController.m; sourceTree = "<group>"; };
 		606C7ACE2461D0C000BF5C7F /* KKWKWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWKWebViewViewController.h; sourceTree = "<group>"; };
 		606C7ACF2461D0C000BF5C7F /* KKWKWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWKWebViewViewController.m; sourceTree = "<group>"; };
+		606C7AD2246253D300BF5C7F /* KKFaceTrackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFaceTrackViewController.h; sourceTree = "<group>"; };
+		606C7AD3246253D300BF5C7F /* KKFaceTrackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFaceTrackViewController.m; sourceTree = "<group>"; };
+		606C7AD6246266F200BF5C7F /* KKFaceTrackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFaceTrackView.h; sourceTree = "<group>"; };
+		606C7AD7246266F200BF5C7F /* KKFaceTrackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFaceTrackView.m; sourceTree = "<group>"; };
 		607019B023D006A8009078E6 /* KKWeChatMomentsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsTableViewCell.h; sourceTree = "<group>"; };
 		607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsTableViewCell.m; sourceTree = "<group>"; };
 		609EC29D23E7207C003BB61C /* KKAdaptiveTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveTableViewCell.h; sourceTree = "<group>"; };
@@ -1470,11 +1478,15 @@
 			path = "@人";
 			sourceTree = "<group>";
 		};
-		60022A7123CC4C78004F94DB /* 人脸识别 */ = {
+		60022A7123CC4C78004F94DB /* 人脸追踪识别 */ = {
 			isa = PBXGroup;
 			children = (
+				606C7AD6246266F200BF5C7F /* KKFaceTrackView.h */,
+				606C7AD7246266F200BF5C7F /* KKFaceTrackView.m */,
+				606C7AD2246253D300BF5C7F /* KKFaceTrackViewController.h */,
+				606C7AD3246253D300BF5C7F /* KKFaceTrackViewController.m */,
 			);
-			path = "人脸识别";
+			path = "人脸追踪识别";
 			sourceTree = "<group>";
 		};
 		60022A7223CDBD6B004F94DB /* 模拟微信朋友圈 */ = {
@@ -1578,7 +1590,7 @@
 				603670A123BF39C4001E3D22 /* KKVideoCameraViewController.h */,
 				603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */,
 				603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */,
-				60022A7123CC4C78004F94DB /* 人脸识别 */,
+				60022A7123CC4C78004F94DB /* 人脸追踪识别 */,
 				30658A5222CF265F0072CD24 /* 身份证扫描 */,
 				603670A823BF3B2B001E3D22 /* 二维码扫码 */,
 			);
@@ -2205,6 +2217,7 @@
 				3028973C22C0C734000F2669 /* MBProgressHUD+KExtension.m in Sources */,
 				60B68133238CD21100E3F6B7 /* KKCarouselView.m in Sources */,
 				60BA347023EC314E00A2A249 /* KKFormCollectionViewCell.m in Sources */,
+				606C7AD9246266F200BF5C7F /* KKFaceTrackView.m in Sources */,
 				30917423237BEA2400010E99 /* KKExamListViewController.m in Sources */,
 				3077A33B22BA45A500372F07 /* NSData+KExtension.m in Sources */,
 				60F3BE4723DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */,
@@ -2296,6 +2309,7 @@
 				60022A3423C856FB004F94DB /* KKAiteTextField.m in Sources */,
 				302897A222C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33122BA45A400372F07 /* NSObject+KExtension.m in Sources */,
+				606C7AD5246253D300BF5C7F /* KKFaceTrackViewController.m in Sources */,
 				302897AA22C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
 				600A9E2F23E5338E00ACB002 /* KKDatabase.m in Sources */,
 				60C237A124021AD4002FF47C /* KKBeeProgressView.m in Sources */,
@@ -2352,6 +2366,7 @@
 				3028973B22C0C734000F2669 /* MBProgressHUD+KExtension.m in Sources */,
 				60B68132238CD21100E3F6B7 /* KKCarouselView.m in Sources */,
 				60BA346F23EC314E00A2A249 /* KKFormCollectionViewCell.m in Sources */,
+				606C7AD8246266F200BF5C7F /* KKFaceTrackView.m in Sources */,
 				30917422237BEA2400010E99 /* KKExamListViewController.m in Sources */,
 				3077A33A22BA45A500372F07 /* NSData+KExtension.m in Sources */,
 				60F3BE4623DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */,
@@ -2443,6 +2458,7 @@
 				60022A3323C856FB004F94DB /* KKAiteTextField.m in Sources */,
 				302897A122C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33022BA45A400372F07 /* NSObject+KExtension.m in Sources */,
+				606C7AD4246253D300BF5C7F /* KKFaceTrackViewController.m in Sources */,
 				302897A922C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
 				600A9E2E23E5338E00ACB002 /* KKDatabase.m in Sources */,
 				60C237A024021AD4002FF47C /* KKBeeProgressView.m in Sources */,

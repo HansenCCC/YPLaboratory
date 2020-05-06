@@ -18,10 +18,10 @@ typedef enum : NSUInteger {
 @end
 
 @interface KKQRCodeSessionView : KKAVCaptureBaseSessionView<AVCaptureMetadataOutputObjectsDelegate>
-//扫描类型(默认人脸识别类型)
+//扫描类型(默认扫码二维码)
 @property(nonatomic, assign) KKMetadataObjectType type;
 //扫描成功后回调此方法
 @property(nonatomic, strong) void (^whenFinish) (AVMetadataObject *codeObject);
 //delegate
-@property(nonatomic, strong) id<KKQRCodeSessionViewDelegate> delegate;
+@property(nonatomic, weak) id<KKQRCodeSessionViewDelegate> delegate;
 @end
