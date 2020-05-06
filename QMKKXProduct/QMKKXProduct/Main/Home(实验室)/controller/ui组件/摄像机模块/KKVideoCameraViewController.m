@@ -12,6 +12,7 @@
 #import "KKQRCodeScanViewController.h"
 #import "KKIDCardScanViewController.h"
 #import "KKFaceTrackViewController.h"
+#import "KKCustomCameraViewController.h"
 
 @interface KKVideoCameraViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -41,8 +42,7 @@
     KKLabelModel *c2 = [[KKLabelModel alloc] initWithTitle:@"人脸追踪识别" value:nil];
     c2.info = [KKFaceTrackViewController class];
     KKLabelModel *c3 = [[KKLabelModel alloc] initWithTitle:@"自定义相机" value:nil];
-    c3.isEnabled = NO;
-//    c3.info = [KKNavigationConfigViewController class];
+    c3.info = [KKCustomCameraViewController class];
     KKLabelModel *c4 = [[KKLabelModel alloc] initWithTitle:@"身份证拍照" value:nil];
     c4.info = [KKIDCardScanViewController class];
     [self.datas addObjectsFromArray:@[c1,c2,c3,c4,]];
