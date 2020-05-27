@@ -68,7 +68,7 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
 - (void)setupSubviews{
     //
     self.placeholderImageView = [[UIImageView alloc] init];
-    self.placeholderImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.placeholderImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.placeholderImageView.clipsToBounds = YES;
     [self.contentView addSubview:self.placeholderImageView];
     //
@@ -163,7 +163,14 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     [super updateProgressIfNeeded];
     NSTimeInterval currentTime = CMTimeGetSeconds(self.avPlayer.currentTime);
     NSTimeInterval durationTime = CMTimeGetSeconds(self.avPlayer.currentItem.duration);
-    if (self.isPlaying == NO&&self.progress == 0.f) {
+    NSLog(@"%f",self.progress);
+    //在暂停清空下，需要更新avplayer时，播放进度为0时，显示占位图
+    if (self.isPlaying) {
+        self.playButton.selected = YES;
+    }else{
+        self.playButton.selected = NO;
+    }
+    if ((self.isPlaying == NO&&(self.progress == 0.f||isnan(self.progress)))&&(self.needAgainSetupAVPlayer == YES)) {
         self.placeholderImageView.hidden = NO;
     }else{
         self.placeholderImageView.hidden = YES;
@@ -191,6 +198,7 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
 //视频结束播放
 - (void)videoDidPlayToEndTime{
     [super videoDidPlayToEndTime];
+    self.showSetting = YES;
     //播放结束重置视频
     CGFloat value = 0.f;
     NSTimeInterval durationTime = CMTimeGetSeconds(self.avPlayer.currentItem.duration);
@@ -203,12 +211,10 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     [super videoFailedToPlayToEndTime];
 }
 - (void)play{
-    self.playButton.selected = YES;
     self.showSetting = YES;
     [super play];
 }
 - (void)pause{
-    self.playButton.selected = NO;
     self.showSetting = YES;
     [super pause];
 }
@@ -226,7 +232,6 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
         AVPlayerItem *item = self.avPlayer.currentItem;
         NSLog(@"%@",item.error);
         if (item.error) {
-            self.playButton.selected = NO;
             [self.topViewController showError:item.error.description];
         }
     }else if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusPlaying) {
@@ -291,19 +296,16 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     if (object == self.avPlayer && [keyPath isEqualToString:@"timeControlStatus"]) {
         if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusPaused) {
             //暂停
-            self.playButton.selected = NO;
         }else if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusWaitingToPlayAtSpecifiedRate) {
             //to do
             NSLog(@"控件状态等待以指定速率播放2");
             AVPlayerItem *item = self.avPlayer.currentItem;
             NSLog(@"%@",item.error);
             if (item.error) {
-                self.playButton.selected = NO;
                 [self.topViewController showError:item.error.description];
             }
         }else if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusPlaying) {
             //播放
-            self.playButton.selected = YES;
         }
     }else if(object == self.avPlayer && [keyPath isEqualToString:@"status"]) {
         //AVPlayerStatusUnknown = 0,
@@ -507,7 +509,13 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     self.progressView.progress = brightnessSize;
 }
 #pragma mark - dealloc
+- (void)removeFromSuperview{
+    [super removeFromSuperview];
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+}
 - (void)dealloc{
+    //取消计时隐藏
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 #pragma mark - layout

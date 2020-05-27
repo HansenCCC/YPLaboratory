@@ -259,6 +259,10 @@
 		6002324B23FBED1C005EE419 /* KKBeeAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002324923FBED1B005EE419 /* KKBeeAVPlayerView.m */; };
 		6002327323FD4436005EE419 /* KKBeeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002327223FD4436005EE419 /* KKBeeSlider.m */; };
 		6002327423FD4436005EE419 /* KKBeeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002327223FD4436005EE419 /* KKBeeSlider.m */; };
+		6003A90E247CE68100F7F06B /* KKPlayerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003A90D247CE68100F7F06B /* KKPlayerListViewController.m */; };
+		6003A90F247CE68100F7F06B /* KKPlayerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003A90D247CE68100F7F06B /* KKPlayerListViewController.m */; };
+		6003A913247CE95800F7F06B /* KKPlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003A912247CE95800F7F06B /* KKPlayerTableViewCell.m */; };
+		6003A914247CE95800F7F06B /* KKPlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003A912247CE95800F7F06B /* KKPlayerTableViewCell.m */; };
 		600A9E2E23E5338E00ACB002 /* KKDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E2D23E5338E00ACB002 /* KKDatabase.m */; };
 		600A9E2F23E5338E00ACB002 /* KKDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E2D23E5338E00ACB002 /* KKDatabase.m */; };
 		600A9E3523E5524500ACB002 /* KKTableViewCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E3323E5524500ACB002 /* KKTableViewCellViewController.m */; };
@@ -652,6 +656,10 @@
 		6002324923FBED1B005EE419 /* KKBeeAVPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBeeAVPlayerView.m; sourceTree = "<group>"; };
 		6002327123FD4436005EE419 /* KKBeeSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBeeSlider.h; sourceTree = "<group>"; };
 		6002327223FD4436005EE419 /* KKBeeSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBeeSlider.m; sourceTree = "<group>"; };
+		6003A90C247CE68100F7F06B /* KKPlayerListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPlayerListViewController.h; sourceTree = "<group>"; };
+		6003A90D247CE68100F7F06B /* KKPlayerListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPlayerListViewController.m; sourceTree = "<group>"; };
+		6003A911247CE95800F7F06B /* KKPlayerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPlayerTableViewCell.h; sourceTree = "<group>"; };
+		6003A912247CE95800F7F06B /* KKPlayerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPlayerTableViewCell.m; sourceTree = "<group>"; };
 		600A9E2C23E5338E00ACB002 /* KKDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDatabase.h; sourceTree = "<group>"; };
 		600A9E2D23E5338E00ACB002 /* KKDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKDatabase.m; sourceTree = "<group>"; };
 		600A9E3223E5524500ACB002 /* KKTableViewCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKTableViewCellViewController.h; sourceTree = "<group>"; };
@@ -903,6 +911,7 @@
 				60445C722457FB8200F54BC9 /* 角标 */,
 				606C7AB024597A7600BF5C7F /* 标签 */,
 				606C7ACD2461D06F00BF5C7F /* 网站(WKWebView) */,
+				6003A90B247CE61800F7F06B /* 列表播放器 */,
 			);
 			path = "ui组件";
 			sourceTree = "<group>";
@@ -1540,6 +1549,25 @@
 			path = "bee定制播放器ui";
 			sourceTree = "<group>";
 		};
+		6003A90B247CE61800F7F06B /* 列表播放器 */ = {
+			isa = PBXGroup;
+			children = (
+				6003A910247CE93E00F7F06B /* view */,
+				6003A90C247CE68100F7F06B /* KKPlayerListViewController.h */,
+				6003A90D247CE68100F7F06B /* KKPlayerListViewController.m */,
+			);
+			path = "列表播放器";
+			sourceTree = "<group>";
+		};
+		6003A910247CE93E00F7F06B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6003A911247CE95800F7F06B /* KKPlayerTableViewCell.h */,
+				6003A912247CE95800F7F06B /* KKPlayerTableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		600A9E2B23E532F300ACB002 /* database(数据库) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1555,7 +1583,8 @@
 			isa = PBXGroup;
 			children = (
 				600A9E3C23E5615D00ACB002 /* cells.json */,
-				600A9E4823E5695000ACB002 /* 预览cell */,
+				600A9E4423E5694700ACB002 /* UITableViewCell+KPreviewDemo.h */,
+				600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */,
 				600A9E3223E5524500ACB002 /* KKTableViewCellViewController.h */,
 				600A9E3323E5524500ACB002 /* KKTableViewCellViewController.m */,
 				600A9E3423E5524500ACB002 /* KKTableViewCellViewController.xib */,
@@ -1568,15 +1597,6 @@
 			children = (
 			);
 			path = "丰富多彩的cell(基于UICollectionView)";
-			sourceTree = "<group>";
-		};
-		600A9E4823E5695000ACB002 /* 预览cell */ = {
-			isa = PBXGroup;
-			children = (
-				600A9E4423E5694700ACB002 /* UITableViewCell+KPreviewDemo.h */,
-				600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */,
-			);
-			path = "预览cell";
 			sourceTree = "<group>";
 		};
 		6015E9A6243DCF0600C9B315 /* badge(角标) */ = {
@@ -2279,6 +2299,7 @@
 				3077A34422BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				6015E9AA243DCF2A00C9B315 /* KKBadgeView.m in Sources */,
 				3077A34C22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
+				6003A914247CE95800F7F06B /* KKPlayerTableViewCell.m in Sources */,
 				60C6CFE4238AE6F100FABAA3 /* KKFileManagerViewController.m in Sources */,
 				30202FCB23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
 				605F668B23F3152F00AA62C5 /* KKWeChatTextViewTableViewCell.m in Sources */,
@@ -2305,6 +2326,7 @@
 				600A9E3623E5524500ACB002 /* KKTableViewCellViewController.m in Sources */,
 				606C7AB924597B8B00BF5C7F /* KKLabelsViewController.m in Sources */,
 				60022A3C23C85919004F94DB /* KKAiteTextField+KExtension.m in Sources */,
+				6003A90F247CE68100F7F06B /* KKPlayerListViewController.m in Sources */,
 				600A9E4323E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */,
 				60022A2F23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */,
 				3077A33722BA45A400372F07 /* NSString+KExtension.m in Sources */,
@@ -2429,6 +2451,7 @@
 				3077A34322BB2FFF00372F07 /* UIScrollView+KExtension.m in Sources */,
 				6015E9A9243DCF2A00C9B315 /* KKBadgeView.m in Sources */,
 				3077A34B22BB303E00372F07 /* UIImage+KExtension.m in Sources */,
+				6003A913247CE95800F7F06B /* KKPlayerTableViewCell.m in Sources */,
 				60C6CFE3238AE6F100FABAA3 /* KKFileManagerViewController.m in Sources */,
 				30202FCA23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
 				605F668A23F3152F00AA62C5 /* KKWeChatTextViewTableViewCell.m in Sources */,
@@ -2455,6 +2478,7 @@
 				600A9E3523E5524500ACB002 /* KKTableViewCellViewController.m in Sources */,
 				606C7AB824597B8B00BF5C7F /* KKLabelsViewController.m in Sources */,
 				60022A3B23C85919004F94DB /* KKAiteTextField+KExtension.m in Sources */,
+				6003A90E247CE68100F7F06B /* KKPlayerListViewController.m in Sources */,
 				600A9E4223E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */,
 				60022A2E23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */,
 				3077A33622BA45A400372F07 /* NSString+KExtension.m in Sources */,

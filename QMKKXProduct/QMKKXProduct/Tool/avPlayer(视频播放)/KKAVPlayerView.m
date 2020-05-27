@@ -16,7 +16,7 @@
 @property (strong, nonatomic) UIView *contentView;//内容视图
 
 @property (strong, nonatomic) NSTimer *timer;//监听进度
-
+@property (assign, nonatomic) BOOL needAgainSetupAVPlayer;//需要重新创建AVplayer
 @end
 
 @implementation KKAVPlayerView{
@@ -24,15 +24,43 @@
 }
 - (instancetype)init{
     if (self = [super init]) {
+        self.needAgainSetupAVPlayer = NO;
         //默认竖屏
         [self setupSubViews];
         [self getVolumeVolue];//构造声音视图
         [self addTimer];
-        [self addObserver];
         [self addNotification];
         [self setConfig];
     }
     return self;
+}
+- (void)removeAVPlayer{
+    [self removeObserver];
+    if (self.avPlayer) {
+        [self pause];
+        [self.avPlayer.currentItem cancelPendingSeeks];
+        [self.avPlayer.currentItem.asset cancelLoading];
+    }
+    self.avPlayer = nil;
+    [self.avPlayerLayer removeFromSuperlayer];
+}
+- (void)setupAVPlayer{
+    if (self.avPlayerItem) {
+        //https://www.jianshu.com/p/789973b425bc
+        /*
+         githup上ZFPlayer作者表示在iOS9后，AVPlayer的replaceCurrentItemWithPlayerItem方法在切换视频时底层会调用信号量等待然后导致当前线程卡顿，如果在UITableViewCell中切换视频播放使用这个方法，会导致当前线程冻结几秒钟。遇到这个坑还真不好在系统层面对它做什么，后来找到的解决方法是在每次需要切换视频时，需重新创建AVPlayer和AVPlayerItem。
+         */
+        self.avPlayer = [[AVPlayer alloc] initWithPlayerItem:self.avPlayerItem];
+        self.avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:self.avPlayer];
+        //AVLayerVideoGravityResizeAspect
+        //AVLayerVideoGravityResizeAspectFill
+        //AVLayerVideoGravityResize
+        self.avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+        [self.layer insertSublayer:self.avPlayerLayer atIndex:0];
+        [self addObserver];
+        [self layoutIfNeeded];
+        [self setNeedsLayout];
+    }
 }
 - (void)setConfig{
     //使用此类别的应用在手机的静音按钮打开时不会静音，但在手机静音时播放声音
@@ -51,8 +79,16 @@
 }
 - (void)addObserver{
     //监听timeControlStatus
-    [self.avPlayer addObserver:self forKeyPath:@"timeControlStatus" options:NSKeyValueObservingOptionNew context:nil];
-    [self.avPlayer addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    if (self.avPlayer) {
+        [self.avPlayer addObserver:self forKeyPath:@"timeControlStatus" options:NSKeyValueObservingOptionNew context:nil];
+        [self.avPlayer addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    }
+}
+- (void)removeObserver{
+    if (self.avPlayer) {
+        [self.avPlayer removeObserver:self forKeyPath:@"timeControlStatus"];
+        [self.avPlayer removeObserver:self forKeyPath:@"status"];
+    }
 }
 - (void)addTimer{
     //timer
@@ -78,40 +114,27 @@
     self.contentView.frame = f1;
 }
 - (void)dealloc{
-    if (self.avPlayer) {
-        [self.avPlayer removeObserver:self forKeyPath:@"timeControlStatus"];
-        [self.avPlayer removeObserver:self forKeyPath:@"status"];
-    }
+    [self removeObserver];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self.timer invalidate];
     self.timer = nil;
-}
-#pragma mark - lazy load
-- (AVPlayer *)avPlayer{
-    if (!_avPlayer) {
-        _avPlayer = [[AVPlayer alloc] init];
-    }
-    return _avPlayer;
-}
-- (AVPlayerLayer *)avPlayerLayer{
-    if (!_avPlayerLayer) {
-        _avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:self.avPlayer];
-        //AVLayerVideoGravityResizeAspect
-        //AVLayerVideoGravityResizeAspectFill
-        //AVLayerVideoGravityResize
-        _avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
-    }
-    return _avPlayerLayer;
 }
 #pragma mark - aciton
 - (void)setPlayerItemUrl:(NSURL *)playerItemUrl{
     _playerItemUrl = playerItemUrl;
     self.avPlayerItem = [AVPlayerItem playerItemWithURL:playerItemUrl];
-    [self.avPlayer replaceCurrentItemWithPlayerItem:self.avPlayerItem];
+    self.needAgainSetupAVPlayer = YES;
+    [self removeAVPlayer];
 }
 //开始播放
 - (void)play{
     if (self.avPlayerItem) {
+        if (self.needAgainSetupAVPlayer) {
+            self.needAgainSetupAVPlayer = NO;
+            //先移除旧的kvo，再添加新的kvo
+            [self removeAVPlayer];
+            [self setupAVPlayer];
+        }
         [self.avPlayer play];
     }
 }

@@ -22,6 +22,7 @@
 #import "KKBadgeViewController.h"//角标
 #import "KKLabelsViewController.h"//标签
 #import "KKWKWebViewViewController.h"//网站(WKWebView)
+#import "KKPlayerListViewController.h"//列表播放器
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -82,7 +83,9 @@
     s16.info = [KKLabelsViewController class];
     KKLabelModel *s17 = [[KKLabelModel alloc] initWithTitle:@"网站(基于WKWebView)" value:nil];
     s17.info = [KKWKWebViewViewController class];
-    [self.datas addObjectsFromArray:@[s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s9,s10,s13,s16,s17]];
+    KKLabelModel *s18 = [[KKLabelModel alloc] initWithTitle:@"列表播放器(基于AVPlayer，防卡顿处理)" value:nil];
+    s18.info = [KKPlayerListViewController class];
+    [self.datas addObjectsFromArray:@[s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s9,s10,s13,s16,s17,s18]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

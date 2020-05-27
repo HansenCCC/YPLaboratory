@@ -14,6 +14,8 @@
 @property (strong, nonatomic) KKQGDZLAnimalView *qgdzlView;
 @property (strong, nonatomic) UILabel *xlabel;
 @property (strong, nonatomic) UILabel *ylabel;
+@property (strong, nonatomic) KKBeeAVPlayerView *playerView;
+@property (strong, nonatomic) UIScrollView *scrollView;
 
 @end
 
@@ -40,21 +42,69 @@
     self.ylabel.backgroundColor = [UIColor redColor];
     [self.ylabel sizeToFit];
     [self.qgdzlView addSubview:self.ylabel];
+    //
+    self.playerView = [[KKBeeAVPlayerView alloc] init];
+    [self.view addSubview:self.playerView];
 }
 //点击右上角操作
 - (void)whenRightClickAction:(id)sender{
-    CGFloat xProgress = 1;
-    CGFloat yProgress = 1;
-    self.qgdzlView.xProgress = xProgress;
-    self.qgdzlView.yProgress = yProgress;
-    //
-    CGPoint xpoint = [self.qgdzlView xPointForProgress:xProgress];
-    self.xlabel.center = xpoint;
-    //
-    CGPoint ypoint = [self.qgdzlView yPointForProgress:yProgress];
-    self.ylabel.center = ypoint;
-    
-    [KKBadgeView showBadgeToView:self.qgdzlView badgeInteger:1];
+//    CGFloat xProgress = 1;
+//    CGFloat yProgress = 1;
+//    self.qgdzlView.xProgress = xProgress;
+//    self.qgdzlView.yProgress = yProgress;
+//    //
+//    CGPoint xpoint = [self.qgdzlView xPointForProgress:xProgress];
+//    self.xlabel.center = xpoint;
+//    //
+//    CGPoint ypoint = [self.qgdzlView yPointForProgress:yProgress];
+//    self.ylabel.center = ypoint;
+//
+//    [KKBadgeView showBadgeToView:self.qgdzlView badgeInteger:1];
+    NSArray <NSString *>*items = @[@"https://img.qumeng666.com/1590398734.269067",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590399408.463029",
+                                   @"https://img.qumeng666.com/1590399442.681522",
+                                   @"https://img.qumeng666.com/1590399510.690721",
+                                   @"https://img.qumeng666.com/1590398734.269067",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590399408.463029",
+                                   @"https://img.qumeng666.com/1590399442.681522",
+                                   @"https://img.qumeng666.com/1590399510.690721",
+                                   @"https://img.qumeng666.com/1590398734.269067",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590399408.463029",
+                                   @"https://img.qumeng666.com/1590399442.681522",
+                                   @"https://img.qumeng666.com/1590399510.690721",
+                                   @"https://img.qumeng666.com/1590398734.269067",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590399408.463029",
+                                   @"https://img.qumeng666.com/1590399442.681522",
+                                   @"https://img.qumeng666.com/1590399510.690721",
+                                   @"https://img.qumeng666.com/1590398734.269067",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590399408.463029",
+                                   @"https://img.qumeng666.com/1590399442.681522",
+                                   @"https://img.qumeng666.com/1590399510.690721",
+                                   @"https://img.qumeng666.com/1590398734.269067",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590399408.463029",
+                                   @"https://img.qumeng666.com/1590399442.681522",
+                                   @"https://img.qumeng666.com/1590399510.690721",
+                                   @"https://img.qumeng666.com/1590398734.269067",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590398820.492414",
+                                   @"https://img.qumeng666.com/1590399408.463029",
+                                   @"https://img.qumeng666.com/1590399442.681522",
+                                   @"https://img.qumeng666.com/1590399510.690721",
+                                  ];
+    NSInteger index = rand()%items.count;
+    self.playerView.playerItemUrl = items[index].toURL;
 }
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
@@ -65,6 +115,8 @@
     f1.size.width = bounds.size.width - 2 * f1.origin.x;
     f1.size = [self.qgdzlView sizeThatFits:f1.size];
     self.qgdzlView.frame = f1;
+    //
+    self.playerView.frame = f1;
 }
 @end
 
