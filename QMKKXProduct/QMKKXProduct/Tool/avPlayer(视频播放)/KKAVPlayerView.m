@@ -219,6 +219,34 @@
     }
     return flag;
 }
+- (BOOL)isPausing{
+    BOOL flag = NO;
+    if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusPaused) {
+        //暂停
+        flag = YES;
+    }else if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusWaitingToPlayAtSpecifiedRate) {
+        //to do
+        flag = NO;
+    }else if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusPlaying) {
+        //播放
+        flag = NO;
+    }
+    return flag;
+}
+- (BOOL)isBuffer{
+    BOOL flag = NO;
+    if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusPaused) {
+        //暂停
+        flag = NO;
+    }else if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusWaitingToPlayAtSpecifiedRate) {
+        //缓冲钟
+        flag = YES;
+    }else if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusPlaying) {
+        //播放
+        flag = NO;
+    }
+    return flag;
+}
 - (NSError *)error{
     return self.avPlayerItem.error;
 }

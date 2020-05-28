@@ -15,6 +15,7 @@ typedef void(^KKAVPlayerViewObserveBlock)(KKAVPlayerView *view);
 @property (readonly, nonatomic) AVPlayerLayer *avPlayerLayer;//成像视图
 @property (readonly, nonatomic) UIView *contentView;//内容视图
 @property (readonly, nonatomic) BOOL isPlaying;//是否正在播放
+@property (readonly, nonatomic) BOOL isBuffer;//是否正在缓冲
 @property (readonly, nonatomic) BOOL isPausing;//是否正在暂停
 @property (readonly, nonatomic) NSError *error;//播放失败的原因
 @property (readonly, nonatomic) BOOL needAgainSetupAVPlayer;//需要重新创建AVplayer

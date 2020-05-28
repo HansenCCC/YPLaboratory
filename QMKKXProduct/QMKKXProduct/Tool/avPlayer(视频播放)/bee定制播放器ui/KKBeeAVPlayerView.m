@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
 @interface KKBeeAVPlayerView ()
 @property (strong, nonatomic) UIButton *backButton;//返回按钮
 @property (strong, nonatomic) UIButton *playButton;//播放按钮
+@property (strong, nonatomic) UIButton *loadingButton;//loading按钮
+@property (strong, nonatomic) CABasicAnimation *loadingAnimation;//loading动画
 @property (strong, nonatomic) UIButton *fullScreenButton;//全屏按钮
 @property (strong, nonatomic) UILabel *beginLabel;//显示开始时间
 @property (strong, nonatomic) UILabel *endLabel;//显示结束时间
@@ -90,6 +92,21 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     [self.playButton setImage:UIImageWithName(@"kk_bee_pause") forState:UIControlStateSelected];
     [self.playButton addTarget:self action:@selector(whenPlayAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:self.playButton];
+    //
+    self.loadingButton = [[UIButton alloc] init];
+    [self.loadingButton setImage:UIImageWithName(@"kk_bee_playLoading") forState:UIControlStateNormal];
+    self.loadingButton.userInteractionEnabled = NO;
+    [self.contentView addSubview:self.loadingButton];
+    //增加旋转loading动画
+    self.loadingAnimation =  [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    self.loadingAnimation.fromValue = [NSNumber numberWithFloat:0.f];
+    self.loadingAnimation.toValue = [NSNumber numberWithFloat: M_PI *2];
+    self.loadingAnimation.duration  = 1;
+    self.loadingAnimation.autoreverses = NO;
+    self.loadingAnimation.fillMode = kCAFillModeForwards;
+    self.loadingAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];//动画效果慢进慢出
+    self.loadingAnimation.repeatCount = MAXFLOAT;//MAXFLOAT = 不限制次数
+    self.loadingAnimation.removedOnCompletion = NO;//完成时删除试图
     //
     self.fullScreenButton = [[UIButton alloc] init];
     //默认状态显示全屏
@@ -165,9 +182,18 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     NSLog(@"%f",self.progress);
     //在暂停清空下，需要更新avplayer时，播放进度为0时，显示占位图
     if (self.isPlaying) {
+        //正在播放
         self.playButton.selected = YES;
     }else{
+        //没有在播放
         self.playButton.selected = NO;
+    }
+    if (self.isBuffer) {
+        //正在缓冲
+        self.loadingButton.hidden = NO;
+    }else{
+        //缓冲结束
+        self.loadingButton.hidden = YES;
     }
     if ((self.isPlaying == NO&&(self.progress == 0.f||isnan(self.progress)))&&(self.needAgainSetupAVPlayer == YES)) {
         self.placeholderImageView.hidden = NO;
@@ -212,6 +238,8 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
 - (void)play{
     self.showSetting = YES;
     [super play];
+    //开始旋转动画
+    [self.loadingButton.layer addAnimation:self.loadingAnimation forKey:nil];
 }
 - (void)pause{
     self.showSetting = YES;
@@ -313,7 +341,8 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
         if (self.avPlayer.status == AVPlayerStatusUnknown) {
             //未知
         }else if (self.avPlayer.status == AVPlayerStatusReadyToPlay) {
-            //准备播放
+            //准备播放，可以获取到进度和总时间了
+            NSLog(@"准备播放，可以获取到进度和总时间了");
         }else if (self.avPlayer.status == AVPlayerStatusFailed) {
             //失败
             AVPlayerItem *playerItem = self.avPlayer.currentItem;
@@ -551,6 +580,8 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     f2.origin.y = (bounds.size.height - f2.size.height)/2.0;
     self.playButton.frame = f2;
     self.playButton.layer.cornerRadius = f2.size.height/2.0f;
+    //
+    self.loadingButton.frame = f2;
     //
     CGRect f3 = bounds;
     f3.size = [self.beginLabel sizeThatFits:CGSizeZero];
