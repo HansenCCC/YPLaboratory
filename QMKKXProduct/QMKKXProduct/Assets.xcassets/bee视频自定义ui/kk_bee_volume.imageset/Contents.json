@@ -1,23 +1,23 @@
 {
   "images" : [
     {
+      "filename" : "icons／音量.png",
       "idiom" : "universal",
-      "filename" : "ic_音量.png",
       "scale" : "1x"
     },
     {
+      "filename" : "icons／音量@2x.png",
       "idiom" : "universal",
-      "filename" : "ic_音量@2x.png",
       "scale" : "2x"
     },
     {
+      "filename" : "icons／音量@3x.png",
       "idiom" : "universal",
-      "filename" : "ic_音量@3x.png",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

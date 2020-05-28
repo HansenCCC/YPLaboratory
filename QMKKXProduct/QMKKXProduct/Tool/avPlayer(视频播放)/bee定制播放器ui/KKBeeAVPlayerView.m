@@ -85,7 +85,6 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     [self.contentView addSubview:self.backButton];
     //
     self.playButton = [[UIButton alloc] init];
-    self.playButton.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.6];
     //默认状态显示播放
     [self.playButton setImage:UIImageWithName(@"kk_bee_play") forState:UIControlStateNormal];
     [self.playButton setImage:UIImageWithName(@"kk_bee_pause") forState:UIControlStateSelected];
@@ -115,7 +114,7 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     [self.slider setThumbImage:[UIImage imageNamed:@"kk_bee_progressPoint"] forState:UIControlStateNormal];
     self.slider.minimumValue = 0;
     self.slider.maximumValue = 1;
-    self.slider.minimumTrackTintColor = KKColor_0091FF;
+    self.slider.minimumTrackTintColor = KKColor_E54C42;
     self.slider.maximumTrackTintColor = KKColor_FFFFFF;
     //结束拖动
     [self.slider addTarget:self action:@selector(sliderEventTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];

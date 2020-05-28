@@ -62,5 +62,6 @@
 
 //bee视频播放器
 #define KKColor_0091FF CMCustomColor(@"0091FF")//已读进度
+#define KKColor_E54C42 CMCustomColor(@"E54C42")//已读进度
 
 #endif /* KKColorHeader_h */
