@@ -74,6 +74,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoFailedToPlayToEndTime) name:AVPlayerItemFailedToPlayToEndTimeNotification object:nil];
     //监听视频播放结束
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoDidPlayToEndTime) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    //监听视频播放出现错误  a new error log entry has been added
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoNewErrorLogEntry) name:AVPlayerItemNewErrorLogEntryNotification object:nil];
     //监听系统音量变化
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoVolumeChanged:) name:@"AVSystemController_SystemVolumeDidChangeNotification" object:nil];
 }
@@ -171,6 +173,10 @@
 - (void)videoFailedToPlayToEndTime{
     NSLog(@"监听未能播放到其结束时间就中断时");
 }
+//监听视频播放出现错误
+- (void)videoNewErrorLogEntry{
+    NSLog(@"监听视频播放出现错误");
+}
 //监听播放状态，播放中允许旋转屏幕
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     //to do
@@ -180,13 +186,13 @@
         }
         if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusPaused) {
             //暂停
-            NSLog(@"暂停");
+            NSLog(@"已经暂停");
         }else if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusWaitingToPlayAtSpecifiedRate) {
             //to do
             NSLog(@"控件状态等待以指定速率播放");
         }else if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusPlaying) {
             //播放
-            NSLog(@"播放");
+            NSLog(@"正在播放");
         }
     }else if([keyPath isEqualToString:@"status"]) {
         if (self.stateChange) {
@@ -248,7 +254,7 @@
     return flag;
 }
 - (NSError *)error{
-    return self.avPlayerItem.error;
+    return self.avPlayer.currentItem.error;
 }
 #pragma mark - 关于控制音量
 //构造声音视图

@@ -177,9 +177,13 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
 //更新进度
 - (void)updateProgressIfNeeded{
     [super updateProgressIfNeeded];
+    if (self.isTouchUpInside) {
+        //正在拖动进度条，不更新进度
+        return;
+    }
     NSTimeInterval currentTime = CMTimeGetSeconds(self.avPlayer.currentTime);
     NSTimeInterval durationTime = CMTimeGetSeconds(self.avPlayer.currentItem.duration);
-    NSLog(@"%f",self.progress);
+//    NSLog(@"%f",self.progress);
     //在暂停清空下，需要更新avplayer时，播放进度为0时，显示占位图
     if (self.isPlaying) {
         //正在播放
@@ -199,10 +203,6 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
         self.placeholderImageView.hidden = NO;
     }else{
         self.placeholderImageView.hidden = YES;
-    }
-    if (self.isTouchUpInside) {
-        //正在拖动精度条，不更新进度
-        return;
     }
     if (currentTime < 0) {
         currentTime = 0;
@@ -327,8 +327,8 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
             //to do
             NSLog(@"控件状态等待以指定速率播放2");
             AVPlayerItem *item = self.avPlayer.currentItem;
-            NSLog(@"%@",item.error);
             if (item.error) {
+                NSLog(@"%@",item.error);
                 [self.topViewController showError:item.error.description];
             }
         }else if (self.avPlayer.timeControlStatus == AVPlayerTimeControlStatusPlaying) {
@@ -343,10 +343,19 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
         }else if (self.avPlayer.status == AVPlayerStatusReadyToPlay) {
             //准备播放，可以获取到进度和总时间了
             NSLog(@"准备播放，可以获取到进度和总时间了");
+            //失败
+            AVPlayerItem *playerItem = self.avPlayer.currentItem;
+            if (playerItem.error) {
+                NSLog(@"%@",playerItem.error);
+                [self.topViewController showError:playerItem.error.description];
+            }
         }else if (self.avPlayer.status == AVPlayerStatusFailed) {
             //失败
             AVPlayerItem *playerItem = self.avPlayer.currentItem;
-            NSLog(@"%@",playerItem.error);
+            if (playerItem.error) {
+                NSLog(@"%@",playerItem.error);
+                [self.topViewController showError:playerItem.error.description];
+            }
         }
     }
 }

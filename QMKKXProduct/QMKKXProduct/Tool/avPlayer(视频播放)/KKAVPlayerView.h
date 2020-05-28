@@ -36,6 +36,8 @@ typedef void(^KKAVPlayerViewObserveBlock)(KKAVPlayerView *view);
 - (void)videoDidPlayToEndTime;
 //监听未能播放到其结束时间就中断时
 - (void)videoFailedToPlayToEndTime;
+//监听视频播放出现错误
+- (void)videoNewErrorLogEntry;
 
 //开始播放
 - (void)play;

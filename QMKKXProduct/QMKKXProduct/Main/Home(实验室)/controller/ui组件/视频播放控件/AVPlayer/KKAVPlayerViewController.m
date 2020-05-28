@@ -38,7 +38,7 @@
      2、http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4
      3、https://img.qumeng666.com/be8da24a2de0d75014d3e9e2803f47d0.mp4?v=233825
      */
-    NSString *value = @"https://img.qumeng666.com/be8da24a2de0d75014d3e9e2803f47d0.mp4?v=233825";
+    NSString *value = @"https://img.11qumeng666.com/be8da24a2de0d75014d3e9e2803f47d0.mp4?v=233825";
     NSURL *url = [NSURL URLWithString:value];
     self.player.playerItemUrl = url;
 }
