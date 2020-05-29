@@ -56,6 +56,7 @@
         }else{
             #if TARGET_IPHONE_SIMULATOR //模拟器
                 //to do
+            self.avPlayer.volume = 1;
             #elif TARGET_OS_IPHONE //真机
                 self.avPlayer.volume = self.voiceSize;
             #endif
@@ -305,6 +306,7 @@
     }else{
         #if TARGET_IPHONE_SIMULATOR //模拟器
             //to do
+        self.avPlayer.volume = 1;
         #elif TARGET_OS_IPHONE //真机
             self.avPlayer.volume = self.voiceSize;
         #endif
