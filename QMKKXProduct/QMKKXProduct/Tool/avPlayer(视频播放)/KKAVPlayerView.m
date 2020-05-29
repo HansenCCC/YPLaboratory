@@ -54,7 +54,11 @@
         if (self.isMute) {
             self.avPlayer.volume = 0.f;
         }else{
-            self.avPlayer.volume = self.voiceSize;
+            #if TARGET_IPHONE_SIMULATOR //模拟器
+                //to do
+            #elif TARGET_OS_IPHONE //真机
+                self.avPlayer.volume = self.voiceSize;
+            #endif
         }
         self.avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:self.avPlayer];
         //AVLayerVideoGravityResizeAspect
@@ -299,7 +303,11 @@
     if (isMute) {
         self.avPlayer.volume = 0.f;
     }else{
-        self.avPlayer.volume = self.voiceSize;
+        #if TARGET_IPHONE_SIMULATOR //模拟器
+            //to do
+        #elif TARGET_OS_IPHONE //真机
+            self.avPlayer.volume = self.voiceSize;
+        #endif
     }
 }
 #pragma mark - 关于控制亮度
