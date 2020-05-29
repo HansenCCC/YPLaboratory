@@ -51,6 +51,11 @@
          githup上ZFPlayer作者表示在iOS9后，AVPlayer的replaceCurrentItemWithPlayerItem方法在切换视频时底层会调用信号量等待然后导致当前线程卡顿，如果在UITableViewCell中切换视频播放使用这个方法，会导致当前线程冻结几秒钟。遇到这个坑还真不好在系统层面对它做什么，后来找到的解决方法是在每次需要切换视频时，需重新创建AVPlayer和AVPlayerItem。
          */
         self.avPlayer = [[AVPlayer alloc] initWithPlayerItem:self.avPlayerItem];
+        if (self.isMute) {
+            self.avPlayer.volume = 0.f;
+        }else{
+            self.avPlayer.volume = self.voiceSize;
+        }
         self.avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:self.avPlayer];
         //AVLayerVideoGravityResizeAspect
         //AVLayerVideoGravityResizeAspectFill
@@ -287,6 +292,14 @@
     if ([reasonstr isEqualToString:@"ExplicitVolumeChange"]) {
         float volume = [userInfo[@"AVSystemController_AudioVolumeNotificationParameter"] floatValue];
         NSLog(@"%f",volume);
+    }
+}
+- (void)setIsMute:(BOOL)isMute{
+    _isMute = isMute;
+    if (isMute) {
+        self.avPlayer.volume = 0.f;
+    }else{
+        self.avPlayer.volume = self.voiceSize;
     }
 }
 #pragma mark - 关于控制亮度

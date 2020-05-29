@@ -27,6 +27,8 @@ typedef void(^KKAVPlayerViewObserveBlock)(KKAVPlayerView *view);
 @property (assign, nonatomic) CGFloat voiceSize;//设置声音大小 0-1
 @property (assign, nonatomic) CGFloat brightnessSize;//设置亮度大小 0-1
 @property (assign, nonatomic) CGFloat progress;//设置进度 0-1
+@property (assign, nonatomic) BOOL isMute;//是否静音 设置静音并不会修改系统声音，只是当前播放没有声音 default NO
+
 
 //更新ui
 - (void)updateProgressIfNeeded;
