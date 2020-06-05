@@ -15,6 +15,22 @@
 //支付宝SDK
 #import <AlipaySDK/AlipaySDK.h>
 
+/*
+ ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+ 没有注册公司，各个平台很难注册应用程序，该功能搁置处理
+ 
+ 
+ //apiname=com.alipay.account.auth&app_id=2016921659043620254&app_name=mc&auth_type=AUTHACCOUNT&biz_type=openservice&method=alipay.open.auth.sdk.code.get&pid=2088294695624536&product_id=APP_FAST_LOGIN&scope=kuaijie&target_id=2014324xxxx&sign=H14sOpDw5J96o7fyM9Mdr2a62fX7TtZFacYZijRW1TL9lMR2FfjaMQfSF55RvIoNamHFiejDAIDo4Igbp0FJNLlubhidElERz6%2BogPrBoO6X%2FdA5%2Fj6kQHYiZHcuD9AAgtjhQnRQA2M%3D&sign_type=RSA
+ //支付宝寻物启事appid=2021001145615178
+ NSString *infoStr = @"apiname=com.alipay.account.auth&app_id=2016921659043620254&app_name=mc&auth_type=AUTHACCOUNT&biz_type=openservice&method=alipay.open.auth.sdk.code.get&pid=2088294695624536&product_id=APP_FAST_LOGIN&scope=kuaijie&target_id=2014324xxxx&sign=H14sOpDw5J96o7fyM9Mdr2a62fX7TtZFacYZijRW1TL9lMR2FfjaMQfSF55RvIoNamHFiejDAIDo4Igbp0FJNLlubhidElERz6%2BogPrBoO6X%2FdA5%2Fj6kQHYiZHcuD9AAgtjhQnRQA2M%3D&sign_type=RSA";//infoStr 后台返回，当前信息网络找的
+ [[AlipaySDK defaultService] payOrder:infoStr fromScheme:@"chsqmkkx" callback:^(NSDictionary *resultDic) {
+     NSLog(@"%@",resultDic);
+ }];
+ ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+ 
+ */
+
+
 @interface KKThirdFunctionViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *datas;
@@ -68,25 +84,25 @@
             if (index == 0) {
                 [weakSelf wechatThirdLogin];
             }else if(index ==  1){
-                
+                [weakSelf wechatThirdShare];
             }else if(index == 2){
-                
+                [weakSelf wechatThirdPay];
             }
         }else if (indexPath.row == 1) {
             if (index == 0) {
-                
+                [weakSelf qqThirdLogin];
             }else if(index ==  1){
-                
+                [weakSelf qqThirdShare];
             }else if(index == 2){
-                
+                [weakSelf qqThirdPay];
             }
         }else if (indexPath.row == 2) {
             if (index == 0) {
-                
+                [weakSelf sinaThirdLogin];
             }else if(index ==  1){
-                
+                [weakSelf sinaThirdShare];
             }else if(index == 2){
-                
+                [weakSelf sinaThirdPay];
             }
         }else if (indexPath.row == 3) {
             if (index == 0) {
@@ -97,6 +113,7 @@
                 [self aliThirdPay];
             }
         }
+        [weakSelf showError:@"⚠️⚠️⚠️\n没有注册公司，各个平台很难注册应用程序，该功能搁置处理\n⚠️⚠️⚠️\n"];
     };
     return cell;
 }
@@ -118,40 +135,52 @@
 }
 #pragma mark - 微信
 - (void)wechatThirdLogin{
-    [WXApi registerApp:@"" universalLink:@""];
-//    [WXApi registerApp:@"wxfb1ca05fe8aa2dd2"];
-//    //构造SendAuthReq结构体
-//    SendAuthReq *req = [[SendAuthReq alloc]init];
-//    req.scope = @"snsapi_userinfo";
-//    req.state = @"QMKKXProduct";
-//    //第三方向微信终端发送一个SendAuthReq消息结构
-//    [WXApi sendReq:req];
+    //微信登录
+    
+}
+- (void)wechatThirdShare{
+    //微信分享
+    
+}
+- (void)wechatThirdPay{
+    //微信pay
+    
 }
 #pragma mark - QQ
-
-
+- (void)qqThirdLogin{
+    //qq登录
+    
+}
+- (void)qqThirdShare{
+    //qq分享
+    
+}
+- (void)qqThirdPay{
+    //qqpay
+    
+}
 #pragma mark - 微博
-
-
+- (void)sinaThirdLogin{
+    //新浪登录
+    
+}
+- (void)sinaThirdShare{
+    //新浪分享
+    
+}
+- (void)sinaThirdPay{
+    //新浪pay
+    
+}
 #pragma mark - 支付宝
 - (void)aliThirdLogin{
-    //apiname=com.alipay.account.auth&app_id=2016921659043620254&app_name=mc&auth_type=AUTHACCOUNT&biz_type=openservice&method=alipay.open.auth.sdk.code.get&pid=2088294695624536&product_id=APP_FAST_LOGIN&scope=kuaijie&target_id=2014324xxxx&sign=H14sOpDw5J96o7fyM9Mdr2a62fX7TtZFacYZijRW1TL9lMR2FfjaMQfSF55RvIoNamHFiejDAIDo4Igbp0FJNLlubhidElERz6%2BogPrBoO6X%2FdA5%2Fj6kQHYiZHcuD9AAgtjhQnRQA2M%3D&sign_type=RSA
-    //支付宝寻物启事appid=2021001145615178
-    NSString *infoStr = @"apiname=com.alipay.account.auth&app_id=2016921659043620254&app_name=mc&auth_type=AUTHACCOUNT&biz_type=openservice&method=alipay.open.auth.sdk.code.get&pid=2088294695624536&product_id=APP_FAST_LOGIN&scope=kuaijie&target_id=2014324xxxx&sign=H14sOpDw5J96o7fyM9Mdr2a62fX7TtZFacYZijRW1TL9lMR2FfjaMQfSF55RvIoNamHFiejDAIDo4Igbp0FJNLlubhidElERz6%2BogPrBoO6X%2FdA5%2Fj6kQHYiZHcuD9AAgtjhQnRQA2M%3D&sign_type=RSA";//infoStr 后台返回，当前信息网络找的
-    [[AlipaySDK defaultService] auth_V2WithInfo:infoStr fromScheme:@"chsqmkkx" callback:^(NSDictionary *resultDic) {
-        NSLog(@"%@",resultDic);
-    }];
+    //支付宝支付
 }
 - (void)aliThirdShare{
-    [self showError:@"支付宝支付、分享、登录功能搁置\n支付包注册APP失败，原因需要营业执照。"];
+    //支付宝分享
 }
 - (void)aliThirdPay{
-    //apiname=com.alipay.account.auth&app_id=2016921659043620254&app_name=mc&auth_type=AUTHACCOUNT&biz_type=openservice&method=alipay.open.auth.sdk.code.get&pid=2088294695624536&product_id=APP_FAST_LOGIN&scope=kuaijie&target_id=2014324xxxx&sign=H14sOpDw5J96o7fyM9Mdr2a62fX7TtZFacYZijRW1TL9lMR2FfjaMQfSF55RvIoNamHFiejDAIDo4Igbp0FJNLlubhidElERz6%2BogPrBoO6X%2FdA5%2Fj6kQHYiZHcuD9AAgtjhQnRQA2M%3D&sign_type=RSA
-    //支付宝寻物启事appid=2021001145615178
-    NSString *infoStr = @"apiname=com.alipay.account.auth&app_id=2016921659043620254&app_name=mc&auth_type=AUTHACCOUNT&biz_type=openservice&method=alipay.open.auth.sdk.code.get&pid=2088294695624536&product_id=APP_FAST_LOGIN&scope=kuaijie&target_id=2014324xxxx&sign=H14sOpDw5J96o7fyM9Mdr2a62fX7TtZFacYZijRW1TL9lMR2FfjaMQfSF55RvIoNamHFiejDAIDo4Igbp0FJNLlubhidElERz6%2BogPrBoO6X%2FdA5%2Fj6kQHYiZHcuD9AAgtjhQnRQA2M%3D&sign_type=RSA";//infoStr 后台返回，当前信息网络找的
-    [[AlipaySDK defaultService] payOrder:infoStr fromScheme:@"chsqmkkx" callback:^(NSDictionary *resultDic) {
-        NSLog(@"%@",resultDic);
-    }];
+    //支付宝支付
 }
 
 @end
