@@ -1052,7 +1052,6 @@
 		30202FEA23795F8B00F1AADA /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				604B04032484A0DA00AE672A /* 第三方分享&登陆&支付 */,
 				30E2077E2379758800EE3E8E /* 工作台 */,
 				30917444237C26C900010E99 /* 网络图片下载 */,
 				60C6CFDF238AE6AF00FABAA3 /* 文件管理 */,
@@ -1064,6 +1063,7 @@
 				60B6811D238CCF8700E3F6B7 /* C语言绘图(Core Graphics) */,
 				60B6811E238CCF8E00E3F6B7 /* OC语言绘图(UIBezierPath) */,
 				3015A04F237D31C00086B39D /* ui组件 */,
+				604B04032484A0DA00AE672A /* 第三方分享&登陆&支付 */,
 			);
 			path = controller;
 			sourceTree = "<group>";
