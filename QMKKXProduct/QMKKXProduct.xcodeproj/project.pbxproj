@@ -2886,7 +2886,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/WeChatSDK1.8.7.1\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkxDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Distribution-com.*";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2919,7 +2919,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/WeChatSDK1.8.7.1\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkxDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Distribution-com.*";
 				TARGETED_DEVICE_FAMILY = "1,2";
