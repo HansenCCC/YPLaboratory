@@ -539,6 +539,19 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     self.progressView.isBrightness = NO;
     self.progressView.progress = voiceSize;
 }
+//检测到系统声音修改
+- (void)videoVolumeChanged:(NSNotification *)notification{
+    [super videoVolumeChanged:notification];
+    if (self.isFullScreen == YES) {
+        self.progressView.isBrightness = NO;
+        self.progressView.progress = self.voiceSize;
+        //横屏隐藏系统音量
+        self.volumeSlider.hidden = NO;
+    }else{
+        //竖屏显示系统音量
+        self.volumeSlider.hidden = YES;
+    }
+}
 #pragma mark - 关于控制亮度
 - (void)setBrightnessSize:(CGFloat)brightnessSize{
     [super setBrightnessSize:brightnessSize];
@@ -580,7 +593,7 @@ typedef NS_ENUM(NSInteger,KKBeeAVPlayerViewChangeType) {
     CGRect f1 = bounds;
     f1.origin.x = AdaptedWidth(10.f);
     f1.origin.y = AdaptedWidth(5.f);
-    f1.size = CGSizeMake(AdaptedWidth(30.f), AdaptedWidth(30.f));
+    f1.size = CGSizeMake(AdaptedWidth(40.f), AdaptedWidth(40.f));
     self.backButton.frame = f1;
     //
     CGRect f2 = bounds;

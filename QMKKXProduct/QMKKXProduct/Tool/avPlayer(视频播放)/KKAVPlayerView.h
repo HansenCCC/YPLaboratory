@@ -13,6 +13,7 @@ typedef void(^KKAVPlayerViewObserveBlock)(KKAVPlayerView *view);
 @interface KKAVPlayerView : UIView
 @property (readonly, nonatomic) AVPlayer *avPlayer;//视频播放管理
 @property (readonly, nonatomic) AVPlayerLayer *avPlayerLayer;//成像视图
+@property (readonly, nonatomic) UISlider *volumeSlider;//音量slider
 @property (readonly, nonatomic) UIView *contentView;//内容视图
 @property (readonly, nonatomic) BOOL isPlaying;//是否正在播放
 @property (readonly, nonatomic) BOOL isBuffer;//是否正在缓冲
@@ -28,7 +29,8 @@ typedef void(^KKAVPlayerViewObserveBlock)(KKAVPlayerView *view);
 @property (assign, nonatomic) CGFloat brightnessSize;//设置亮度大小 0-1
 @property (assign, nonatomic) CGFloat progress;//设置进度 0-1
 @property (assign, nonatomic) BOOL isMute;//是否静音 设置静音并不会修改系统声音，只是当前播放没有声音 default NO
-
+//检测到系统声音修改
+- (void)videoVolumeChanged:(NSNotification *)notification;
 
 //更新ui
 - (void)updateProgressIfNeeded;

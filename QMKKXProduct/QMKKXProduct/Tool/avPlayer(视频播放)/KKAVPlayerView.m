@@ -267,6 +267,9 @@
     return self.avPlayer.currentItem.error;
 }
 #pragma mark - 关于控制音量
+- (UISlider *)volumeSlider{
+    return _volumeViewSlider;
+}
 //构造声音视图
 - (void)getVolumeVolue{
     CGRect f1 = CGRectMake(0, 0, 40, 40);
