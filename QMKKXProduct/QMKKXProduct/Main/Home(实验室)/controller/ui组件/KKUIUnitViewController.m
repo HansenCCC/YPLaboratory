@@ -23,6 +23,7 @@
 #import "KKLabelsViewController.h"//标签
 #import "KKWKWebViewViewController.h"//网站(WKWebView)
 #import "KKPlayerListViewController.h"//列表播放器
+#import "KKCommonHomeStyleViewController.h"//常用的首页样式
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -79,13 +80,15 @@
     KKLabelModel *s15 = [[KKLabelModel alloc] initWithTitle:@"OC语言绘图(基于UIBezierPath)" value:nil];
     s15.isEnabled = NO;
     s15.info = [KKBaseViewController class];
-    KKLabelModel *s16 = [[KKLabelModel alloc] initWithTitle:@"标签" value:nil];
+    KKLabelModel *s16 = [[KKLabelModel alloc] initWithTitle:@"标签(基于KKLabelsView)" value:nil];
     s16.info = [KKLabelsViewController class];
     KKLabelModel *s17 = [[KKLabelModel alloc] initWithTitle:@"网站(基于WKWebView)" value:nil];
     s17.info = [KKWKWebViewViewController class];
     KKLabelModel *s18 = [[KKLabelModel alloc] initWithTitle:@"TableView嵌入播放器(防线程卡顿处理)" value:nil];
     s18.info = [KKPlayerListViewController class];
-    [self.datas addObjectsFromArray:@[s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17]];
+    KKLabelModel *s19 = [[KKLabelModel alloc] initWithTitle:@"常见的首页样式" value:nil];
+    s19.info = [KKCommonHomeStyleViewController class];
+    [self.datas addObjectsFromArray:@[s19,s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

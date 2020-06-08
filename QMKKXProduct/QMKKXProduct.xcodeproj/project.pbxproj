@@ -399,6 +399,8 @@
 		60BA347E23EC6AC700A2A249 /* KKCustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60BA347A23EC6AC700A2A249 /* KKCustomAlertViewController.xib */; };
 		60C237A024021AD4002FF47C /* KKBeeProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C2379F24021AD4002FF47C /* KKBeeProgressView.m */; };
 		60C237A124021AD4002FF47C /* KKBeeProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C2379F24021AD4002FF47C /* KKBeeProgressView.m */; };
+		60C4AD8D248E0C10003B06A1 /* KKCommonHomeStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C4AD8C248E0C10003B06A1 /* KKCommonHomeStyleViewController.m */; };
+		60C4AD8E248E0C10003B06A1 /* KKCommonHomeStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C4AD8C248E0C10003B06A1 /* KKCommonHomeStyleViewController.m */; };
 		60C6CFBD238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */; };
 		60C6CFBE238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */; };
 		60C6CFBF238846BD00FABAA3 /* KKNavigationConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFBC238846BD00FABAA3 /* KKNavigationConfigViewController.xib */; };
@@ -423,6 +425,10 @@
 		60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */; };
 		60C6CFEC238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
 		60C6CFED238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
+		60F1C481248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */; };
+		60F1C482248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */; };
+		60F1C486248E17CB006C5A7F /* KKBeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C485248E17CB006C5A7F /* KKBeeViewController.m */; };
+		60F1C487248E17CB006C5A7F /* KKBeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C485248E17CB006C5A7F /* KKBeeViewController.m */; };
 		60F3BE4223DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4123DF02E300447EC2 /* KKWeChatMomentsModel.m */; };
 		60F3BE4323DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4123DF02E300447EC2 /* KKWeChatMomentsModel.m */; };
 		60F3BE4623DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4523DFF74100447EC2 /* KKWeChatMomentsCommentModel.m */; };
@@ -794,6 +800,8 @@
 		60BA347A23EC6AC700A2A249 /* KKCustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKCustomAlertViewController.xib; sourceTree = "<group>"; };
 		60C2379E24021AD4002FF47C /* KKBeeProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBeeProgressView.h; sourceTree = "<group>"; };
 		60C2379F24021AD4002FF47C /* KKBeeProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBeeProgressView.m; sourceTree = "<group>"; };
+		60C4AD8B248E0C10003B06A1 /* KKCommonHomeStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKCommonHomeStyleViewController.h; sourceTree = "<group>"; };
+		60C4AD8C248E0C10003B06A1 /* KKCommonHomeStyleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKCommonHomeStyleViewController.m; sourceTree = "<group>"; };
 		60C6CFBA238846BD00FABAA3 /* KKNavigationConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNavigationConfigViewController.h; sourceTree = "<group>"; };
 		60C6CFBB238846BD00FABAA3 /* KKNavigationConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNavigationConfigViewController.m; sourceTree = "<group>"; };
 		60C6CFBC238846BD00FABAA3 /* KKNavigationConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKNavigationConfigViewController.xib; sourceTree = "<group>"; };
@@ -812,6 +820,10 @@
 		60C6CFE7238AEEEE00FABAA3 /* KKFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileViewController.h; sourceTree = "<group>"; };
 		60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileViewController.m; sourceTree = "<group>"; };
 		60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileViewController.xib; sourceTree = "<group>"; };
+		60F1C47F248E10FE006C5A7F /* KKNeteaseGodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNeteaseGodViewController.h; sourceTree = "<group>"; };
+		60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNeteaseGodViewController.m; sourceTree = "<group>"; };
+		60F1C484248E17CB006C5A7F /* KKBeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBeeViewController.h; sourceTree = "<group>"; };
+		60F1C485248E17CB006C5A7F /* KKBeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBeeViewController.m; sourceTree = "<group>"; };
 		60F3BE4023DF02E300447EC2 /* KKWeChatMomentsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsModel.h; sourceTree = "<group>"; };
 		60F3BE4123DF02E300447EC2 /* KKWeChatMomentsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsModel.m; sourceTree = "<group>"; };
 		60F3BE4423DFF74100447EC2 /* KKWeChatMomentsCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsCommentModel.h; sourceTree = "<group>"; };
@@ -950,6 +962,7 @@
 				3015A056237D33390086B39D /* KKUIUnitViewController.h */,
 				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
+				60C4AD8A248E0BEF003B06A1 /* 常见的首页样式 */,
 				60BA347723EC6A9A00A2A249 /* 自定义弹框(alert) */,
 				600A9E3023E551D300ACB002 /* 丰富多彩的cell(基于UITableView) */,
 				600A9E3123E551FB00ACB002 /* 丰富多彩的cell(基于UICollectionView) */,
@@ -1898,6 +1911,26 @@
 			path = "自定义弹框(alert)";
 			sourceTree = "<group>";
 		};
+		60C4AD8A248E0BEF003B06A1 /* 常见的首页样式 */ = {
+			isa = PBXGroup;
+			children = (
+				60C4AD8B248E0C10003B06A1 /* KKCommonHomeStyleViewController.h */,
+				60C4AD8C248E0C10003B06A1 /* KKCommonHomeStyleViewController.m */,
+				60F1C483248E17A5006C5A7F /* Bee首页样式 */,
+				60C4AD8F248E0FC9003B06A1 /* 网易大神首页样式 */,
+			);
+			path = "常见的首页样式";
+			sourceTree = "<group>";
+		};
+		60C4AD8F248E0FC9003B06A1 /* 网易大神首页样式 */ = {
+			isa = PBXGroup;
+			children = (
+				60F1C47F248E10FE006C5A7F /* KKNeteaseGodViewController.h */,
+				60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */,
+			);
+			path = "网易大神首页样式";
+			sourceTree = "<group>";
+		};
 		60C6CFB92388466F00FABAA3 /* 导航栏配置 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1940,6 +1973,15 @@
 				60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */,
 			);
 			path = "文件管理";
+			sourceTree = "<group>";
+		};
+		60F1C483248E17A5006C5A7F /* Bee首页样式 */ = {
+			isa = PBXGroup;
+			children = (
+				60F1C484248E17CB006C5A7F /* KKBeeViewController.h */,
+				60F1C485248E17CB006C5A7F /* KKBeeViewController.m */,
+			);
+			path = "Bee首页样式";
 			sourceTree = "<group>";
 		};
 		60F3BE3F23DF02D400447EC2 /* model */ = {
@@ -2374,6 +2416,7 @@
 				302897B822C46DEF000F2669 /* KKCity.m in Sources */,
 				30658A7D22CF29580072CD24 /* UIImage+HVUI.m in Sources */,
 				60B68123238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.m in Sources */,
+				60C4AD8E248E0C10003B06A1 /* KKCommonHomeStyleViewController.m in Sources */,
 				3077A35422BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */,
 				605F668523F30C6900AA62C5 /* KKReleaseWXMomentsViewController.m in Sources */,
@@ -2418,6 +2461,7 @@
 				609EC2AA23E7C3D0003BB61C /* KKDatabaseDetailViewController.m in Sources */,
 				30658A6F22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
 				60F3BEC823E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m in Sources */,
+				60F1C487248E17CB006C5A7F /* KKBeeViewController.m in Sources */,
 				3077A39622BCDA4D00372F07 /* KKMuteDetector.m in Sources */,
 				3028979C22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				300CC09B237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
@@ -2432,6 +2476,7 @@
 				60F3BECE23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
 				302897C622C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A622C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
+				60F1C482248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */,
 				606C7AD12461D0C000BF5C7F /* KKWKWebViewViewController.m in Sources */,
 				308DF76B2359B24400A503D0 /* KKUIWebViewController.m in Sources */,
 				600A9E3623E5524500ACB002 /* KKTableViewCellViewController.m in Sources */,
@@ -2528,6 +2573,7 @@
 				302897B722C46DEF000F2669 /* KKCity.m in Sources */,
 				30658A7C22CF29580072CD24 /* UIImage+HVUI.m in Sources */,
 				60B68122238CCF9B00E3F6B7 /* KKCoreGraphicsViewController.m in Sources */,
+				60C4AD8D248E0C10003B06A1 /* KKCommonHomeStyleViewController.m in Sources */,
 				3077A35322BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */,
 				605F668423F30C6900AA62C5 /* KKReleaseWXMomentsViewController.m in Sources */,
@@ -2572,6 +2618,7 @@
 				609EC2A923E7C3D0003BB61C /* KKDatabaseDetailViewController.m in Sources */,
 				30658A6E22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
 				60F3BEC723E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m in Sources */,
+				60F1C486248E17CB006C5A7F /* KKBeeViewController.m in Sources */,
 				3077A39522BCDA4D00372F07 /* KKMuteDetector.m in Sources */,
 				3028979B22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				300CC09A237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
@@ -2586,6 +2633,7 @@
 				60F3BECD23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
 				302897C522C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A522C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
+				60F1C481248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */,
 				606C7AD02461D0C000BF5C7F /* KKWKWebViewViewController.m in Sources */,
 				308DF76A2359B24400A503D0 /* KKUIWebViewController.m in Sources */,
 				600A9E3523E5524500ACB002 /* KKTableViewCellViewController.m in Sources */,
