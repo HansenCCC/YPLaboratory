@@ -113,7 +113,7 @@
                 [self aliThirdPay];
             }
         }
-        [weakSelf showError:@"⚠️⚠️⚠️\n没有注册公司，各个平台很难注册应用程序，该功能搁置处理\n⚠️⚠️⚠️\n"];
+        [weakSelf showError:@"⚠️⚠️⚠️\n没有注册公司或工作室\n各个平台很难注册应用程序\n该功能暂时搁置处理\n⚠️⚠️⚠️\n"];
     };
     return cell;
 }
