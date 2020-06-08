@@ -104,7 +104,6 @@
     CGFloat top = AdaptedWidth(200.f);
     CGPoint contentOffset = scrollView.contentOffset;
     contentOffset.y += (top + SafeAreaTopHeight);
-    NSLog(@"%f",contentOffset.y);
     if (contentOffset.y > 0) {
         //上滑
         CGRect bounds = self.view.bounds;

@@ -38,11 +38,11 @@
 }
 - (void)updateDatas{
     [self.datas removeAllObjects];
-    NSArray *items = @[@"网易大神首页样式",
-                        @"Bee首页样式",
-                        @"--待补充",
-                        @"--待补充",
-                        @"--待补充",
+    NSArray *items = @[@"Bee首页样式",
+                       @"网易大神首页样式",
+                       @"--待补充",
+                       @"--待补充",
+                       @"--待补充",
     ];
     //to do
     for (NSString *value in items) {
@@ -79,10 +79,10 @@
 - (void)mainQueueTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.view endEditing:YES];
     if (indexPath.row == 0) {
-        KKNeteaseGodViewController *vc = [[KKNeteaseGodViewController alloc] init];
+        KKBeeViewController *vc = [[KKBeeViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if(indexPath.row == 1){
-        KKBeeViewController *vc = [[KKBeeViewController alloc] init];
+        KKNeteaseGodViewController *vc = [[KKNeteaseGodViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }else if(indexPath.row == 2){
         
