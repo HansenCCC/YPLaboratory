@@ -20,12 +20,16 @@
     // Do any additional setup after loading the view.
     self.title = @"支付密码框";
     [self setupSubview];
+    //主动弹起键盘
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.textField.textField becomeFirstResponder];
+    });
 }
 - (void)setupSubview{
     //
     //右边导航刷新按钮
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(whenRightClickAction:)];
-    
+    //
     self.textField = [[KKPayTextField alloc] init];
     self.textField.secureTextEntry = NO;//允许查看
     [self.view addSubview:self.textField];
