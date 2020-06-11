@@ -419,6 +419,10 @@
 		60F1C482248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */; };
 		60F1C486248E17CB006C5A7F /* KKBeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C485248E17CB006C5A7F /* KKBeeViewController.m */; };
 		60F1C487248E17CB006C5A7F /* KKBeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C485248E17CB006C5A7F /* KKBeeViewController.m */; };
+		60F1C5C124921CF0006C5A7F /* KKPayPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C5C024921CF0006C5A7F /* KKPayPasswordViewController.m */; };
+		60F1C5C224921CF0006C5A7F /* KKPayPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C5C024921CF0006C5A7F /* KKPayPasswordViewController.m */; };
+		60F1C5C6249223AB006C5A7F /* KKPayTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C5C5249223AB006C5A7F /* KKPayTextField.m */; };
+		60F1C5C7249223AB006C5A7F /* KKPayTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C5C5249223AB006C5A7F /* KKPayTextField.m */; };
 		60F3BE4223DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4123DF02E300447EC2 /* KKWeChatMomentsModel.m */; };
 		60F3BE4323DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4123DF02E300447EC2 /* KKWeChatMomentsModel.m */; };
 		60F3BE4623DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BE4523DFF74100447EC2 /* KKWeChatMomentsCommentModel.m */; };
@@ -808,6 +812,10 @@
 		60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNeteaseGodViewController.m; sourceTree = "<group>"; };
 		60F1C484248E17CB006C5A7F /* KKBeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBeeViewController.h; sourceTree = "<group>"; };
 		60F1C485248E17CB006C5A7F /* KKBeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBeeViewController.m; sourceTree = "<group>"; };
+		60F1C5BF24921CF0006C5A7F /* KKPayPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPayPasswordViewController.h; sourceTree = "<group>"; };
+		60F1C5C024921CF0006C5A7F /* KKPayPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPayPasswordViewController.m; sourceTree = "<group>"; };
+		60F1C5C4249223AB006C5A7F /* KKPayTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPayTextField.h; sourceTree = "<group>"; };
+		60F1C5C5249223AB006C5A7F /* KKPayTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPayTextField.m; sourceTree = "<group>"; };
 		60F3BE4023DF02E300447EC2 /* KKWeChatMomentsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsModel.h; sourceTree = "<group>"; };
 		60F3BE4123DF02E300447EC2 /* KKWeChatMomentsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsModel.m; sourceTree = "<group>"; };
 		60F3BE4423DFF74100447EC2 /* KKWeChatMomentsCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsCommentModel.h; sourceTree = "<group>"; };
@@ -946,6 +954,7 @@
 				3015A056237D33390086B39D /* KKUIUnitViewController.h */,
 				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
+				60F1C5BE24921C97006C5A7F /* 支付密码框 */,
 				60C4AD8A248E0BEF003B06A1 /* 常见的首页样式 */,
 				60BA347723EC6A9A00A2A249 /* 自定义弹框(alert) */,
 				600A9E3023E551D300ACB002 /* 丰富多彩的cell(基于UITableView) */,
@@ -1242,6 +1251,7 @@
 			children = (
 				3028978422C46DEE000F2669 /* KKTextField.h */,
 				3028978322C46DEE000F2669 /* KKTextField.m */,
+				60F1C5C324922340006C5A7F /* 支付密码 */,
 				60022A3023C856C6004F94DB /* @人 */,
 			);
 			path = textField;
@@ -1954,6 +1964,24 @@
 			path = "Bee首页样式";
 			sourceTree = "<group>";
 		};
+		60F1C5BE24921C97006C5A7F /* 支付密码框 */ = {
+			isa = PBXGroup;
+			children = (
+				60F1C5BF24921CF0006C5A7F /* KKPayPasswordViewController.h */,
+				60F1C5C024921CF0006C5A7F /* KKPayPasswordViewController.m */,
+			);
+			path = "支付密码框";
+			sourceTree = "<group>";
+		};
+		60F1C5C324922340006C5A7F /* 支付密码 */ = {
+			isa = PBXGroup;
+			children = (
+				60F1C5C4249223AB006C5A7F /* KKPayTextField.h */,
+				60F1C5C5249223AB006C5A7F /* KKPayTextField.m */,
+			);
+			path = "支付密码";
+			sourceTree = "<group>";
+		};
 		60F3BE3F23DF02D400447EC2 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2366,6 +2394,7 @@
 				60B68133238CD21100E3F6B7 /* KKCarouselView.m in Sources */,
 				60BA347023EC314E00A2A249 /* KKFormCollectionViewCell.m in Sources */,
 				606C7AD9246266F200BF5C7F /* KKFaceTrackView.m in Sources */,
+				60F1C5C224921CF0006C5A7F /* KKPayPasswordViewController.m in Sources */,
 				30917423237BEA2400010E99 /* KKExamListViewController.m in Sources */,
 				3077A33B22BA45A500372F07 /* NSData+KExtension.m in Sources */,
 				60F3BE4723DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */,
@@ -2436,6 +2465,7 @@
 				3077A35822BB344D00372F07 /* UILabel+KExtension.m in Sources */,
 				60022A7723CDBDCE004F94DB /* KKWeChatMomentsViewController.m in Sources */,
 				60F3BECE23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
+				60F1C5C7249223AB006C5A7F /* KKPayTextField.m in Sources */,
 				302897C622C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A622C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
 				60F1C482248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */,
@@ -2522,6 +2552,7 @@
 				60B68132238CD21100E3F6B7 /* KKCarouselView.m in Sources */,
 				60BA346F23EC314E00A2A249 /* KKFormCollectionViewCell.m in Sources */,
 				606C7AD8246266F200BF5C7F /* KKFaceTrackView.m in Sources */,
+				60F1C5C124921CF0006C5A7F /* KKPayPasswordViewController.m in Sources */,
 				30917422237BEA2400010E99 /* KKExamListViewController.m in Sources */,
 				3077A33A22BA45A500372F07 /* NSData+KExtension.m in Sources */,
 				60F3BE4623DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */,
@@ -2592,6 +2623,7 @@
 				3077A35722BB344D00372F07 /* UILabel+KExtension.m in Sources */,
 				60022A7623CDBDCE004F94DB /* KKWeChatMomentsViewController.m in Sources */,
 				60F3BECD23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
+				60F1C5C6249223AB006C5A7F /* KKPayTextField.m in Sources */,
 				302897C522C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A522C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
 				60F1C481248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */,

@@ -24,6 +24,7 @@
 #import "KKWKWebViewViewController.h"//网站(WKWebView)
 #import "KKPlayerListViewController.h"//列表播放器
 #import "KKCommonHomeStyleViewController.h"//常用的首页样式
+#import "KKPayPasswordViewController.h"//支付密码
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -88,7 +89,9 @@
     s18.info = [KKPlayerListViewController class];
     KKLabelModel *s19 = [[KKLabelModel alloc] initWithTitle:@"常见的首页样式" value:nil];
     s19.info = [KKCommonHomeStyleViewController class];
-    [self.datas addObjectsFromArray:@[s19,s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17]];
+    KKLabelModel *s20 = [[KKLabelModel alloc] initWithTitle:@"支付密码框" value:nil];
+    s20.info = [KKPayPasswordViewController class];
+    [self.datas addObjectsFromArray:@[s19,s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17,s20]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

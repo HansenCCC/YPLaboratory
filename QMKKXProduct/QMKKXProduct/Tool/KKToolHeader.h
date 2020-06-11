@@ -44,6 +44,7 @@
 //输入框
 #import "KKTextField.h"//textField
 #import "KKTextView.h"//textView
+#import "KKPayTextField.h"//payTextField
 //toolbar
 #import "KKInputToolBar.h"//bar
 //倒计时view
