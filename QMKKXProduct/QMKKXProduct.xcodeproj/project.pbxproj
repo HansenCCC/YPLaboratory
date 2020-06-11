@@ -285,16 +285,6 @@
 		603670AC23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */; };
 		60445C752457FC0400F54BC9 /* KKBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60445C742457FC0400F54BC9 /* KKBadgeViewController.m */; };
 		60445C762457FC0400F54BC9 /* KKBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60445C742457FC0400F54BC9 /* KKBadgeViewController.m */; };
-		604501802406795400DDCAF6 /* KKQGDZLAnimalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6045017F2406795400DDCAF6 /* KKQGDZLAnimalView.m */; };
-		604501812406795400DDCAF6 /* KKQGDZLAnimalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6045017F2406795400DDCAF6 /* KKQGDZLAnimalView.m */; };
-		6045018824067B5800DDCAF6 /* img-poly-blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6045018224067B5700DDCAF6 /* img-poly-blue@3x.png */; };
-		6045018924067B5800DDCAF6 /* img-poly-blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6045018224067B5700DDCAF6 /* img-poly-blue@3x.png */; };
-		6045018E24067B5800DDCAF6 /* img-cubeframe@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6045018524067B5700DDCAF6 /* img-cubeframe@3x.png */; };
-		6045018F24067B5800DDCAF6 /* img-cubeframe@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6045018524067B5700DDCAF6 /* img-cubeframe@3x.png */; };
-		6045019024067B5800DDCAF6 /* img-poly-blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6045018624067B5700DDCAF6 /* img-poly-blue@2x.png */; };
-		6045019124067B5800DDCAF6 /* img-poly-blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6045018624067B5700DDCAF6 /* img-poly-blue@2x.png */; };
-		6045019224067B5800DDCAF6 /* img-poly-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 6045018724067B5700DDCAF6 /* img-poly-blue.png */; };
-		6045019324067B5800DDCAF6 /* img-poly-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 6045018724067B5700DDCAF6 /* img-poly-blue.png */; };
 		60463DD223F39C4D00D9A376 /* KKWeChatImageListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60463DD123F39C4D00D9A376 /* KKWeChatImageListTableViewCell.m */; };
 		60463DD323F39C4D00D9A376 /* KKWeChatImageListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60463DD123F39C4D00D9A376 /* KKWeChatImageListTableViewCell.m */; };
 		604B04062484A17B00AE672A /* KKThirdFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604B04052484A17B00AE672A /* KKThirdFunctionViewController.m */; };
@@ -709,12 +699,6 @@
 		603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKQRCodeScanViewController.m; sourceTree = "<group>"; };
 		60445C732457FC0400F54BC9 /* KKBadgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBadgeViewController.h; sourceTree = "<group>"; };
 		60445C742457FC0400F54BC9 /* KKBadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBadgeViewController.m; sourceTree = "<group>"; };
-		6045017E2406795400DDCAF6 /* KKQGDZLAnimalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKQGDZLAnimalView.h; sourceTree = "<group>"; };
-		6045017F2406795400DDCAF6 /* KKQGDZLAnimalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKQGDZLAnimalView.m; sourceTree = "<group>"; };
-		6045018224067B5700DDCAF6 /* img-poly-blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-poly-blue@3x.png"; sourceTree = "<group>"; };
-		6045018524067B5700DDCAF6 /* img-cubeframe@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-cubeframe@3x.png"; sourceTree = "<group>"; };
-		6045018624067B5700DDCAF6 /* img-poly-blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-poly-blue@2x.png"; sourceTree = "<group>"; };
-		6045018724067B5700DDCAF6 /* img-poly-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-poly-blue.png"; sourceTree = "<group>"; };
 		60463DD023F39C4D00D9A376 /* KKWeChatImageListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatImageListTableViewCell.h; sourceTree = "<group>"; };
 		60463DD123F39C4D00D9A376 /* KKWeChatImageListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatImageListTableViewCell.m; sourceTree = "<group>"; };
 		604B04042484A17B00AE672A /* KKThirdFunctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKThirdFunctionViewController.h; sourceTree = "<group>"; };
@@ -1521,7 +1505,6 @@
 		30E2077E2379758800EE3E8E /* 工作台 */ = {
 			isa = PBXGroup;
 			children = (
-				6045017D2406765300DDCAF6 /* 奇怪的周磊 */,
 				30E2077F237975AA00EE3E8E /* KKLabStudioViewController.h */,
 				30E20780237975AA00EE3E8E /* KKLabStudioViewController.m */,
 				30E20781237975AA00EE3E8E /* KKLabStudioViewController.xib */,
@@ -1705,19 +1688,6 @@
 				60445C742457FC0400F54BC9 /* KKBadgeViewController.m */,
 			);
 			path = "角标";
-			sourceTree = "<group>";
-		};
-		6045017D2406765300DDCAF6 /* 奇怪的周磊 */ = {
-			isa = PBXGroup;
-			children = (
-				6045018524067B5700DDCAF6 /* img-cubeframe@3x.png */,
-				6045018724067B5700DDCAF6 /* img-poly-blue.png */,
-				6045018624067B5700DDCAF6 /* img-poly-blue@2x.png */,
-				6045018224067B5700DDCAF6 /* img-poly-blue@3x.png */,
-				6045017E2406795400DDCAF6 /* KKQGDZLAnimalView.h */,
-				6045017F2406795400DDCAF6 /* KKQGDZLAnimalView.m */,
-			);
-			path = "奇怪的周磊";
 			sourceTree = "<group>";
 		};
 		604B04032484A0DA00AE672A /* 第三方分享&登陆&支付 */ = {
@@ -2167,10 +2137,8 @@
 				600A9E3823E5524500ACB002 /* KKTableViewCellViewController.xib in Resources */,
 				300CC09D237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */,
 				60022A7923CDBDCE004F94DB /* KKWeChatMomentsViewController.xib in Resources */,
-				6045019124067B5800DDCAF6 /* img-poly-blue@2x.png in Resources */,
 				30917442237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */,
 				604B04572484EC9600AE672A /* README.txt in Resources */,
-				6045019324067B5800DDCAF6 /* img-poly-blue.png in Resources */,
 				60B6810C238B017300E3F6B7 /* KKFileCollectionViewCell.xib in Resources */,
 				30202FF4237961AB00F1AADA /* KKAppIconMakerViewController.xib in Resources */,
 				30658A6D22CF265F0072CD24 /* KKCamera_img_camera.png in Resources */,
@@ -2194,7 +2162,6 @@
 				3091741D237BD7E600010E99 /* Contents.json in Resources */,
 				3015A063237D3D3C0086B39D /* KKAppInstallViewController.xib in Resources */,
 				30658A6B22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
-				6045018F24067B5800DDCAF6 /* img-cubeframe@3x.png in Resources */,
 				60C6CFC723884E7200FABAA3 /* KKSwitchTableViewCell.xib in Resources */,
 				30202FE92379593600F1AADA /* KKUserViewController.xib in Resources */,
 				30917437237BEC9900010E99 /* 5翻译.json in Resources */,
@@ -2212,7 +2179,6 @@
 				30202FC6237936B400F1AADA /* index.html in Resources */,
 				60B6812C238CCFCD00E3F6B7 /* KKBezierPathViewController.xib in Resources */,
 				30917433237BEC9900010E99 /* 1交际.json in Resources */,
-				6045018924067B5800DDCAF6 /* img-poly-blue@3x.png in Resources */,
 				60B6813D238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib in Resources */,
 				309173FB237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE2237958D800F1AADA /* KKHomeViewController.xib in Resources */,
@@ -2240,10 +2206,8 @@
 				600A9E3723E5524500ACB002 /* KKTableViewCellViewController.xib in Resources */,
 				300CC09C237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */,
 				60022A7823CDBDCE004F94DB /* KKWeChatMomentsViewController.xib in Resources */,
-				6045019024067B5800DDCAF6 /* img-poly-blue@2x.png in Resources */,
 				30917441237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */,
 				604B04562484EC9600AE672A /* README.txt in Resources */,
-				6045019224067B5800DDCAF6 /* img-poly-blue.png in Resources */,
 				60B6810B238B017300E3F6B7 /* KKFileCollectionViewCell.xib in Resources */,
 				30202FF3237961AB00F1AADA /* KKAppIconMakerViewController.xib in Resources */,
 				30658A6C22CF265F0072CD24 /* KKCamera_img_camera.png in Resources */,
@@ -2267,7 +2231,6 @@
 				3091741C237BD7E600010E99 /* Contents.json in Resources */,
 				3015A062237D3D3C0086B39D /* KKAppInstallViewController.xib in Resources */,
 				30658A6A22CF265F0072CD24 /* KKCameraScanscanBg.png in Resources */,
-				6045018E24067B5800DDCAF6 /* img-cubeframe@3x.png in Resources */,
 				60C6CFC623884E7200FABAA3 /* KKSwitchTableViewCell.xib in Resources */,
 				30202FE82379593600F1AADA /* KKUserViewController.xib in Resources */,
 				30917436237BEC9900010E99 /* 5翻译.json in Resources */,
@@ -2285,7 +2248,6 @@
 				30202FC5237936B400F1AADA /* index.html in Resources */,
 				60B6812B238CCFCD00E3F6B7 /* KKBezierPathViewController.xib in Resources */,
 				30917432237BEC9900010E99 /* 1交际.json in Resources */,
-				6045018824067B5800DDCAF6 /* img-poly-blue@3x.png in Resources */,
 				60B6813C238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib in Resources */,
 				309173FA237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE1237958D800F1AADA /* KKHomeViewController.xib in Resources */,
@@ -2511,7 +2473,6 @@
 				30917449237C277E00010E99 /* KKSDWebViewController.m in Sources */,
 				3015A061237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
 				302897C422C46DEF000F2669 /* KKTextView.m in Sources */,
-				604501812406795400DDCAF6 /* KKQGDZLAnimalView.m in Sources */,
 				30658A7122CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
 				603670AC23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */,
 				604B04072484A17B00AE672A /* KKThirdFunctionViewController.m in Sources */,
@@ -2668,7 +2629,6 @@
 				30917448237C277E00010E99 /* KKSDWebViewController.m in Sources */,
 				3015A060237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
 				302897C322C46DEF000F2669 /* KKTextView.m in Sources */,
-				604501802406795400DDCAF6 /* KKQGDZLAnimalView.m in Sources */,
 				30658A7022CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
 				603670AB23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */,
 				604B04062484A17B00AE672A /* KKThirdFunctionViewController.m in Sources */,
