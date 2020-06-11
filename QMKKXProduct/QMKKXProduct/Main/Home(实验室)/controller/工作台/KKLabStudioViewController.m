@@ -8,10 +8,8 @@
 
 #import "KKLabStudioViewController.h"
 #import "AppDelegate.h"
-#import "KKQGDZLAnimalView.h"
 
 @interface KKLabStudioViewController ()
-@property (strong, nonatomic) KKQGDZLAnimalView *qgdzlView;
 @property (strong, nonatomic) UILabel *xlabel;
 @property (strong, nonatomic) UILabel *ylabel;
 @property (strong, nonatomic) KKBeeAVPlayerView *playerView;
@@ -25,23 +23,8 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"工作台";
     self.view.backgroundColor = KKColor_FFFFFF;
-    //
-    self.qgdzlView = [[KKQGDZLAnimalView alloc] init];
-    [self.view addSubview:self.qgdzlView];
     //右边导航刷新按钮
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(whenRightClickAction:)];
-    //
-    self.xlabel = [[UILabel alloc] init];
-    self.xlabel.text = @"奇怪的周磊";
-    self.xlabel.backgroundColor = [UIColor redColor];
-    [self.xlabel sizeToFit];
-    [self.qgdzlView addSubview:self.xlabel];
-    //
-    self.ylabel = [[UILabel alloc] init];
-    self.ylabel.text = @"奇怪的周磊";
-    self.ylabel.backgroundColor = [UIColor redColor];
-    [self.ylabel sizeToFit];
-    [self.qgdzlView addSubview:self.ylabel];
     //
     self.playerView = [[KKBeeAVPlayerView alloc] init];
     [self.view addSubview:self.playerView];
@@ -113,8 +96,7 @@
     f1.origin.y = AdaptedWidth(100.f);
     f1.origin.x = AdaptedWidth(50.f);
     f1.size.width = bounds.size.width - 2 * f1.origin.x;
-    f1.size = [self.qgdzlView sizeThatFits:f1.size];
-    self.qgdzlView.frame = f1;
+    f1.size.height = AdaptedWidth(200);
     //
     self.playerView.frame = f1;
 }
