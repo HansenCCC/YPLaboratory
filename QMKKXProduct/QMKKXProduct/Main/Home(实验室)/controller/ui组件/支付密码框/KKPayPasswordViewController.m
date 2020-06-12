@@ -33,11 +33,6 @@
     self.textField = [[KKPayTextField alloc] init];
     self.textField.secureTextEntry = NO;//允许查看
     [self.view addSubview:self.textField];
-    //颜色配置
-    self.textField.backgroundColor = [UIColor colorWithRed:229/255.0 green:76/255.0 blue:66/255.0 alpha:0.02];
-    self.textField.layer.borderWidth = 1;
-    self.textField.layer.borderColor = [UIColor colorWithRed:221/255.0 green:221/255.0 blue:221/255.0 alpha:1.0].CGColor;
-    self.textField.layer.cornerRadius = AdaptedWidth(4.f);
 }
 - (void)whenRightClickAction:(id)sender{
     //to do

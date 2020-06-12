@@ -117,6 +117,12 @@
     }
     self.labelViews = [labels copy];
     [self updateLabels];
+    
+    //颜色配置
+    self.backgroundColor = [UIColor colorWithRed:229/255.0 green:76/255.0 blue:66/255.0 alpha:0.02];
+    self.layer.borderWidth = 1;
+    self.layer.borderColor = [UIColor colorWithRed:221/255.0 green:221/255.0 blue:221/255.0 alpha:1.0].CGColor;
+    self.layer.cornerRadius = AdaptedWidth(4.f);
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
