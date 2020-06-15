@@ -30,6 +30,10 @@ typedef NS_ENUM(NSInteger,KKDropdownBoxViewType){
 - (instancetype)initWithTitles:(NSArray <NSString *>*)titles withComplete:(KKDropdownBoxViewBlock) complete;
 
 
-- (void)showWithView:(UIView *)view;
+/// 展示view的下拉框
+/// @param rect 展示的位置和展示大小
+/// @param view 要被展示的view
+- (void)showViewCenter:(CGRect)rect toView:(UIView *)view;
+
 @end
 

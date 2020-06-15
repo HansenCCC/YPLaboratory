@@ -25,6 +25,7 @@
 #import "KKPlayerListViewController.h"//列表播放器
 #import "KKCommonHomeStyleViewController.h"//常用的首页样式
 #import "KKPayPasswordViewController.h"//支付密码
+#import "KKDropdownBoxViewController.h"//下拉框
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -91,7 +92,9 @@
     s19.info = [KKCommonHomeStyleViewController class];
     KKLabelModel *s20 = [[KKLabelModel alloc] initWithTitle:@"支付密码框" value:nil];
     s20.info = [KKPayPasswordViewController class];
-    [self.datas addObjectsFromArray:@[s19,s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17,s20]];
+    KKLabelModel *s21 = [[KKLabelModel alloc] initWithTitle:@"下拉选项弹框(基于KKDropdownBoxView)" value:nil];
+    s21.info = [KKDropdownBoxViewController class];
+    [self.datas addObjectsFromArray:@[s19,s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17,s20,s21]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
