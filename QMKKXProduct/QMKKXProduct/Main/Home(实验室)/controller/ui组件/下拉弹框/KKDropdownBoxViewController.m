@@ -36,15 +36,15 @@
 }
 - (void)updateDatas{
     [self.datas removeAllObjects];
-    NSArray *items = @[@"下拉框",
-                       @"下拉框",
-                       @"下拉框",
-                       @"下拉框",
-                       @"下拉框",
-                       @"下拉框",
-                       @"下拉框",
-                       @"下拉框",
-                       @"下拉框"];
+    NSArray *items = @[@"下拉框100*100",
+                       @"下拉框100*200",
+                       @"下拉框100*300",
+                       @"下拉框200*100",
+                       @"下拉框200*200",
+                       @"下拉框200*300",
+                       @"下拉框300*100",
+                       @"下拉框300*200",
+                       @"下拉框300*300"];
     for (int i = 0;i < items.count; i ++) {
         NSString *item = items[i];
         KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:item value:nil];
