@@ -12,3 +12,10 @@
 
 
 @end
+
+@implementation KKWeChatShareModel 
+
+
+
+
+@end

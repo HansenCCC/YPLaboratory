@@ -57,7 +57,13 @@ DEF_SINGLETON(KKPayManager);
 }
 
 #pragma mark - 微信相关
-
+//初始化微信
+- (void)weChatRegisterApp{
+    //调起微信支付
+    //bee_openid = wx0647716e2f53ac8b
+    NSString *openId = @"wx0647716e2f53ac8b";
+    [WXApi registerApp:openId enableMTA:YES];
+}
 /// openurl的回调响应
 /// @param openUrl url
 - (BOOL)weChatHandleOpenURL:(NSURL *)openUrl{
@@ -99,10 +105,7 @@ DEF_SINGLETON(KKPayManager);
 }
 //吊起微信客户端支付
 - (void)weChatPayWithModel:(KKWeChatPayModel *)model complete:(void(^)(BOOL success,id info))complete{
-    //调起微信支付
-    //bee_openid = wx0647716e2f53ac8b
-    NSString *openId = @"wx0647716e2f53ac8b";
-    [WXApi registerApp:openId enableMTA:YES];
+    [self weChatRegisterApp];
     //
     PayReq *req = [[PayReq alloc] init];
     req.partnerId = model.partnerid;
@@ -119,9 +122,7 @@ DEF_SINGLETON(KKPayManager);
 //吊起微信oauth认证
 - (void)weChatOauthComplete:(void(^)(BOOL success,id info))complete{
     //微信登录
-    //bee_openid = wx0647716e2f53ac8b
-    NSString *openId = @"wx0647716e2f53ac8b";
-    [WXApi registerApp:openId enableMTA:YES];
+    [self weChatRegisterApp];
     //构造SendAuthReq结构体
     SendAuthReq* req =[[SendAuthReq alloc ] init];
     req.scope = @"snsapi_userinfo" ;
@@ -132,6 +133,37 @@ DEF_SINGLETON(KKPayManager);
         complete(flag,nil);
     }
 }
+
+//吊起微信分享
+- (void)weChatShareWithModel:(KKWeChatShareModel *)model complete:(void(^)(BOOL success,id info))complete{
+    //微信分享
+    [self weChatRegisterApp];
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+    req.text = model.text;
+    if (model.webpageUrl.length > 0) {
+        req.bText = NO;
+    }else{
+        req.bText = YES;
+    }
+    req.scene = (int)model.sceneType;
+    //
+    WXMediaMessage *message = [[WXMediaMessage alloc] init];
+    message.title = model.text;
+    message.description = model.detail;
+    NSData *thumbData = model.thumbData;//缩略图
+    message.thumbData = thumbData;
+    if (model.webpageUrl.length > 0) {
+        WXWebpageObject *webObject = [[WXWebpageObject alloc] init];
+        webObject.webpageUrl = model.webpageUrl;
+        message.mediaObject = webObject;
+        req.message = message;
+    }
+    BOOL flag = [WXApi sendReq:req];
+    if(complete){
+        complete(flag,nil);
+    }
+}
+
 //通过接口获取微信openid
 - (void)weChatOauthGetOpenIDWithSecret:(NSString *)secret code:(NSString *)code complete:(void(^)(BOOL success,id info))complete{
     //bee_openid = wx0647716e2f53ac8b

@@ -48,6 +48,15 @@ AS_SINGLETON(KKPayManager);
  */
 - (void)weChatOauthComplete:(void(^)(BOOL success,id info))complete;
 
+
+/**
+ 吊起微信分享
+ @param model 请求参数
+ @param complete 回调  success只判断是否吊起客户端不做支付成功判断  info返回信息
+ */
+- (void)weChatShareWithModel:(KKWeChatShareModel *)model complete:(void(^)(BOOL success,id info))complete;
+
+
 /**
  通过接口获取微信openid
 

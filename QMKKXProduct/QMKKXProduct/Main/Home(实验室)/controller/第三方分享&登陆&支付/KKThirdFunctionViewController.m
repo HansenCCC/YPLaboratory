@@ -198,8 +198,19 @@
     }];
 }
 - (void)wechatThirdShare{
-    //微信分享
-    
+    //
+    KKWeChatShareModel *model = [[KKWeChatShareModel alloc] init];
+    model.text = @"这是分享标题";
+    model.detail = @"这是分享描述";
+    model.webpageUrl = @"https://www.pgyer.com/app/publish";
+    WeakSelf
+    [[KKPayManager sharedInstance] weChatShareWithModel:model complete:^(BOOL success, id info) {
+        if (success) {
+            
+        }else{
+            [weakSelf showError:@"微信分享失败！"];
+        }
+    }];
 }
 - (void)wechatThirdPay{
     //微信支付
