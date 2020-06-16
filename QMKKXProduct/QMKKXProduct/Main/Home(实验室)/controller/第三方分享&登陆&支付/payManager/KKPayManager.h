@@ -25,6 +25,13 @@ AS_SINGLETON(KKPayManager);
 - (BOOL)aliPayHandleOpenURL:(NSURL *)openUrl;
 
 /**
+ 吊起支付宝oauth认证
+ 
+@param complete 回调  success只判断是否吊起客户端不做支付成功判断  info返回信息
+*/
+- (void)aliOauthComplete:(void(^)(BOOL success,id info))complete;
+
+/**
  吊起支付宝客户端支付
 
  @param model 请求参数

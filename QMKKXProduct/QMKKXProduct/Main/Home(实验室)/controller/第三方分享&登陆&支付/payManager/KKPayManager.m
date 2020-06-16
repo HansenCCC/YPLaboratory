@@ -55,6 +55,24 @@ DEF_SINGLETON(KKPayManager);
         }
     }];
 }
+//吊起支付宝oauth认证
+- (void)aliOauthComplete:(void(^)(BOOL success,id info))complete{
+    //开始登录
+    NSString *appID = KKAliAppID;
+    NSString *pid = @"";
+    NSString *redirectUri = @"";
+    APayAuthInfo *model = [[APayAuthInfo alloc] initWithAppID:appID pid:pid redirectUri:redirectUri];
+    [[AlipaySDK defaultService] authWithInfo:model callback:^(NSDictionary *resultDic) {
+        NSInteger errCode = [[resultDic objectForKey:@"resultStatus"] integerValue];
+        BOOL flag = NO;
+        if (errCode == 9000) {
+            flag = YES;
+        }
+        if (complete) {
+            complete(flag,resultDic);
+        }
+    }];
+}
 
 #pragma mark - 微信相关
 //初始化微信

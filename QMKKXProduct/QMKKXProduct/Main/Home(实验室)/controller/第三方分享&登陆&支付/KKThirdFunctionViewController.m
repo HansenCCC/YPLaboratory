@@ -267,7 +267,15 @@
 }
 #pragma mark - 支付宝
 - (void)aliThirdLogin{
-    //支付宝支付
+    //支付宝登录
+    WeakSelf
+    [[KKPayManager sharedInstance] aliOauthComplete:^(BOOL success, id info) {
+        if (success) {
+            //等待通知回调
+        }else{
+            [weakSelf showError:@"支付宝登录失败！"];
+        }
+    }];
 }
 - (void)aliThirdShare{
     //支付宝分享
