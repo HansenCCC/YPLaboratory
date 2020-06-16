@@ -100,6 +100,10 @@ DEF_SINGLETON(KKPayManager);
 //吊起微信客户端支付
 - (void)weChatPayWithModel:(KKWeChatPayModel *)model complete:(void(^)(BOOL success,id info))complete{
     //调起微信支付
+    //bee_openid = wx0647716e2f53ac8b
+    NSString *openId = @"wx0647716e2f53ac8b";
+    [WXApi registerApp:openId enableMTA:YES];
+    //
     PayReq *req = [[PayReq alloc] init];
     req.partnerId = model.partnerid;
     req.prepayId = model.prepayid;

@@ -202,9 +202,24 @@
     
 }
 - (void)wechatThirdPay{
-    //微信pay
+    //微信支付
     WeakSelf
+    //appid = wx0647716e2f53ac8b
+    NSString *appid = @"wx0647716e2f53ac8b";
+    NSString *noncestr = @"a98f623732dc1769f1d86c7a9af47d98";
+    NSString *package = @"Sign=WXPay";
+    NSString *partnerid = @"10000100";
+    NSString *prepayid = @"wx2016020113211441bedffa200696249595";
+    NSString *sign = @"9CDF57FCD819DAA18C8846EAFF3B95D7";
+    NSString *timestamp = [NSString stringWithFormat:@"%.0f",[[NSDate date] timeIntervalSince1970]];
     KKWeChatPayModel *model = [[KKWeChatPayModel alloc] init];
+    model.appid = appid;
+    model.noncestr = noncestr;
+    model.package = package;
+    model.partnerid = partnerid;
+    model.prepayid = prepayid;
+    model.sign = sign;
+    model.timestamp = timestamp;
     [[KKPayManager sharedInstance] weChatPayWithModel:model complete:^(BOOL success, id info) {
         if (success) {
             //等待通知回调
