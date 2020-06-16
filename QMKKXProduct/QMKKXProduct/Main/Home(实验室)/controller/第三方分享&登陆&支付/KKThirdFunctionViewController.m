@@ -112,6 +112,11 @@
     NSArray *items = @[@"微信",@"QQ",@"新浪",@"支付宝",];
     for (NSString *value in items) {
         KKLabelModel *cellModel = [[KKLabelModel alloc] initWithTitle:value value:nil];
+        if ([value isEqualToString:@"QQ"]||[value isEqualToString:@"新浪"]) {
+            cellModel.isEnabled = NO;
+        }else{
+            cellModel.isEnabled = YES;
+        }
         [self.datas addObject:cellModel];
     }
     [self.tableView reloadData];

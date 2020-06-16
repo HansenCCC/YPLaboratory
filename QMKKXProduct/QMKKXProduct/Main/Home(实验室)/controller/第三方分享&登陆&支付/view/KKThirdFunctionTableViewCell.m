@@ -19,7 +19,14 @@
 }
 - (void)setCellModel:(KKLabelModel *)cellModel{
     _cellModel = cellModel;
-    self.titleLabel.text = cellModel.title;
+    if (cellModel.isEnabled) {
+        NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithString:cellModel.title?:@"--"];
+        self.titleLabel.attributedText = attributed;
+    }else{
+        NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithString:cellModel.title?:@"--"];
+        [attributed addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle) range:NSMakeRange(0, attributed.length)];
+        self.titleLabel.attributedText = attributed;
+    }
 }
 - (IBAction)whenAcitonClick:(UIButton *)sender {
     NSInteger index = 0;
