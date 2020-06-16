@@ -43,8 +43,8 @@ DEF_SINGLETON(KKPayManager);
 //吊起支付宝客户端支付
 - (void)aliPayWithModel:(KKAliPayModel *)model complete:(void(^)(BOOL success,id info))complete{
     //开始支付
-    NSString *appKey = @"";
-    [[AlipaySDK defaultService] payOrder:model.alipayStr fromScheme:appKey callback:^(NSDictionary *resultDic) {
+    NSString *scheme = @"chsqmkkx";
+    [[AlipaySDK defaultService] payOrder:model.alipayStr fromScheme:scheme callback:^(NSDictionary *resultDic) {
         NSInteger errCode = [[resultDic objectForKey:@"resultStatus"] integerValue];
         BOOL flag = NO;
         if (errCode == 9000) {
@@ -60,8 +60,7 @@ DEF_SINGLETON(KKPayManager);
 //初始化微信
 - (void)weChatRegisterApp{
     //调起微信支付
-    //bee_openid = wx0647716e2f53ac8b
-    NSString *openId = @"wx0647716e2f53ac8b";
+    NSString *openId = KKWeChatAppID;
     [WXApi registerApp:openId enableMTA:YES];
 }
 /// openurl的回调响应
@@ -166,8 +165,7 @@ DEF_SINGLETON(KKPayManager);
 
 //通过接口获取微信openid
 - (void)weChatOauthGetOpenIDWithSecret:(NSString *)secret code:(NSString *)code complete:(void(^)(BOOL success,id info))complete{
-    //bee_openid = wx0647716e2f53ac8b
-    NSString *openId = @"wx0647716e2f53ac8b";
+    NSString *openId = KKWeChatAppID;
     NSString *url =[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code",openId,secret,code];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSURL *zoneUrl = [NSURL URLWithString:url];

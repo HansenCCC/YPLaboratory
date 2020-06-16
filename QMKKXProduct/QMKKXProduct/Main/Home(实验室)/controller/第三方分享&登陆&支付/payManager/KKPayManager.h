@@ -10,6 +10,11 @@
 #import "KKAliPayModel.h"//支付包支付model
 #import "KKWeChatPayModel.h"//微信支付model
 
+
+static NSString *KKWeChatAppID = @"wx0647716e2f53ac8b";//微信APPid  测试id为Bee APP的注册id
+static NSString *KKAliAppID = @"";//阿里APPid 暂无
+
+
 @interface KKPayManager : NSObject
 AS_SINGLETON(KKPayManager);
 

@@ -274,6 +274,16 @@
 }
 - (void)aliThirdPay{
     //支付宝支付
+    WeakSelf
+    KKAliPayModel *model = [[KKAliPayModel alloc] init];
+    model.alipayStr = @"apiname=com.alipay.account.auth&app_id=2016921659043620254&app_name=mc&auth_type=AUTHACCOUNT&biz_type=openservice&method=alipay.open.auth.sdk.code.get&pid=2088294695624536&product_id=APP_FAST_LOGIN&scope=kuaijie&target_id=2014324xxxx&sign=H14sOpDw5J96o7fyM9Mdr2a62fX7TtZFacYZijRW1TL9lMR2FfjaMQfSF55RvIoNamHFiejDAIDo4Igbp0FJNLlubhidElERz6%2BogPrBoO6X%2FdA5%2Fj6kQHYiZHcuD9AAgtjhQnRQA2M%3D&sign_type=RSA";
+    [[KKPayManager sharedInstance] aliPayWithModel:model complete:^(BOOL success, id info) {
+        if (success) {
+            [weakSelf showSuccessWithMsg:@"支付宝支付成功！"];
+        }else{
+            [weakSelf showError:@"支付宝支付失败！"];
+        }
+    }];
 }
 
 @end
