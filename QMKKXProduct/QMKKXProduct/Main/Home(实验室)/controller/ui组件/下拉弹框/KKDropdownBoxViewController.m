@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"dropdownBox(弹框)";
+    self.title = @"下拉选项弹框(基于KKDropdownBoxView)";
     self.datas = [[NSMutableArray alloc] init];
     [self setupSubvuews];
     [self updateDatas];

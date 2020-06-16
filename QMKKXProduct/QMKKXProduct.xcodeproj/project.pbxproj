@@ -347,6 +347,12 @@
 		6097E5E224974051007ECC55 /* kk_icon_menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6097E5DD24974050007ECC55 /* kk_icon_menu@3x.png */; };
 		6097E5E324974051007ECC55 /* kk_icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6097E5DE24974050007ECC55 /* kk_icon_menu.png */; };
 		6097E5E424974051007ECC55 /* kk_icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6097E5DE24974050007ECC55 /* kk_icon_menu.png */; };
+		6097E5E824977AA3007ECC55 /* KKPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5E724977AA3007ECC55 /* KKPayManager.m */; };
+		6097E5E924977AA3007ECC55 /* KKPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5E724977AA3007ECC55 /* KKPayManager.m */; };
+		6097E5ED24977EDE007ECC55 /* KKWeChatPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5EC24977EDE007ECC55 /* KKWeChatPayModel.m */; };
+		6097E5EE24977EDE007ECC55 /* KKWeChatPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5EC24977EDE007ECC55 /* KKWeChatPayModel.m */; };
+		6097E5F124977F04007ECC55 /* KKAliPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5F024977F04007ECC55 /* KKAliPayModel.m */; };
+		6097E5F224977F04007ECC55 /* KKAliPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5F024977F04007ECC55 /* KKAliPayModel.m */; };
 		609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
 		609EC2A023E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
 		609EC2A923E7C3D0003BB61C /* KKDatabaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC2A723E7C3D0003BB61C /* KKDatabaseDetailViewController.m */; };
@@ -761,6 +767,12 @@
 		6097E5DC24974050007ECC55 /* kk_icon_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kk_icon_menu@2x.png"; sourceTree = "<group>"; };
 		6097E5DD24974050007ECC55 /* kk_icon_menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kk_icon_menu@3x.png"; sourceTree = "<group>"; };
 		6097E5DE24974050007ECC55 /* kk_icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kk_icon_menu.png; sourceTree = "<group>"; };
+		6097E5E624977AA3007ECC55 /* KKPayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPayManager.h; sourceTree = "<group>"; };
+		6097E5E724977AA3007ECC55 /* KKPayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPayManager.m; sourceTree = "<group>"; };
+		6097E5EB24977EDE007ECC55 /* KKWeChatPayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatPayModel.h; sourceTree = "<group>"; };
+		6097E5EC24977EDE007ECC55 /* KKWeChatPayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatPayModel.m; sourceTree = "<group>"; };
+		6097E5EF24977F04007ECC55 /* KKAliPayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAliPayModel.h; sourceTree = "<group>"; };
+		6097E5F024977F04007ECC55 /* KKAliPayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAliPayModel.m; sourceTree = "<group>"; };
 		609EC29D23E7207C003BB61C /* KKAdaptiveTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveTableViewCell.h; sourceTree = "<group>"; };
 		609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAdaptiveTableViewCell.m; sourceTree = "<group>"; };
 		609EC2A623E7C3D0003BB61C /* KKDatabaseDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDatabaseDetailViewController.h; sourceTree = "<group>"; };
@@ -1720,6 +1732,7 @@
 		604B04032484A0DA00AE672A /* 第三方分享&登陆&支付 */ = {
 			isa = PBXGroup;
 			children = (
+				6097E5EA24977AAF007ECC55 /* payManager */,
 				604B04042484A17B00AE672A /* KKThirdFunctionViewController.h */,
 				604B04052484A17B00AE672A /* KKThirdFunctionViewController.m */,
 				604B045A24867F0D00AE672A /* AliSDK15.7.6 */,
@@ -1843,6 +1856,19 @@
 				6097E5D924971F25007ECC55 /* KKDropdownBoxViewController.m */,
 			);
 			path = "下拉弹框";
+			sourceTree = "<group>";
+		};
+		6097E5EA24977AAF007ECC55 /* payManager */ = {
+			isa = PBXGroup;
+			children = (
+				6097E5E624977AA3007ECC55 /* KKPayManager.h */,
+				6097E5E724977AA3007ECC55 /* KKPayManager.m */,
+				6097E5EF24977F04007ECC55 /* KKAliPayModel.h */,
+				6097E5F024977F04007ECC55 /* KKAliPayModel.m */,
+				6097E5EB24977EDE007ECC55 /* KKWeChatPayModel.h */,
+				6097E5EC24977EDE007ECC55 /* KKWeChatPayModel.m */,
+			);
+			path = payManager;
 			sourceTree = "<group>";
 		};
 		60B68105238B013800E3F6B7 /* view */ = {
@@ -2442,6 +2468,7 @@
 				60C4AD8E248E0C10003B06A1 /* KKCommonHomeStyleViewController.m in Sources */,
 				3077A35422BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */,
+				6097E5F224977F04007ECC55 /* KKAliPayModel.m in Sources */,
 				605F668523F30C6900AA62C5 /* KKReleaseWXMomentsViewController.m in Sources */,
 				60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
 				603670A523BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */,
@@ -2466,6 +2493,7 @@
 				30917413237AD79900010E99 /* KKColorPickAlert.m in Sources */,
 				606C7ACC2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */,
 				30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */,
+				6097E5EE24977EDE007ECC55 /* KKWeChatPayModel.m in Sources */,
 				3077A35022BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
 				30036DB722B9D76B00605DF7 /* main.m in Sources */,
 				606C7AB524597AAC00BF5C7F /* KKLabelsView.m in Sources */,
@@ -2489,6 +2517,7 @@
 				3028979C22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				300CC09B237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
 				3077A33522BA45A400372F07 /* NSDate+KExtension.m in Sources */,
+				6097E5E924977AA3007ECC55 /* KKPayManager.m in Sources */,
 				30202FE72379593600F1AADA /* KKUserViewController.m in Sources */,
 				60C6CFBE238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */,
 				309173F9237AA9BB00010E99 /* KKButtonTableViewCell.m in Sources */,
@@ -2601,6 +2630,7 @@
 				60C4AD8D248E0C10003B06A1 /* KKCommonHomeStyleViewController.m in Sources */,
 				3077A35322BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */,
+				6097E5F124977F04007ECC55 /* KKAliPayModel.m in Sources */,
 				605F668423F30C6900AA62C5 /* KKReleaseWXMomentsViewController.m in Sources */,
 				60C6CFEA238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
 				603670A423BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */,
@@ -2625,6 +2655,7 @@
 				30917412237AD79900010E99 /* KKColorPickAlert.m in Sources */,
 				606C7ACB2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */,
 				30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */,
+				6097E5ED24977EDE007ECC55 /* KKWeChatPayModel.m in Sources */,
 				3077A34F22BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
 				30036DC122B9DDC500605DF7 /* main.m in Sources */,
 				606C7AB424597AAC00BF5C7F /* KKLabelsView.m in Sources */,
@@ -2648,6 +2679,7 @@
 				3028979B22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				300CC09A237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
 				3077A33422BA45A400372F07 /* NSDate+KExtension.m in Sources */,
+				6097E5E824977AA3007ECC55 /* KKPayManager.m in Sources */,
 				30202FE62379593600F1AADA /* KKUserViewController.m in Sources */,
 				60C6CFBD238846BD00FABAA3 /* KKNavigationConfigViewController.m in Sources */,
 				309173F8237AA9BB00010E99 /* KKButtonTableViewCell.m in Sources */,

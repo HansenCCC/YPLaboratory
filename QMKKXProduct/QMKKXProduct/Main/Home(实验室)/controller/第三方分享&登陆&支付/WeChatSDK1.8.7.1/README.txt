@@ -18,31 +18,6 @@ Security,CoreGraphics,WebKit、
 
 
 重要!
-
-SDK1.8.7.1
-1. 修复Xcode11以下编译不通过
-
-SDK1.8.7
-1. 修复iPadOS，未安装微信的情况下，因为UA问题无法授权登录
-2. 修复未安装微信的情况下, 适配了UIScene的App因为UIAlertView Crash
-3. 增加Universal Link检测函数
-
-SDK1.8.6.2
-1. 修改包含"UIWebView"字符的类名
-
-SDK1.8.6.1
-1.短信授权登录使用的UIWebview切换成WKWebview
-
-SDK1.8.6
-1. 支持Universal Link拉起微信以及返回App
-2. SDK移除MTA库
-
-SDK1.8.5
-1. 更换MTA库:取消对剪切板的访问, 防止和其他SDK竞争导致crash
-2. NSMutableArray的MTA分类方法改名，减少命名冲突
-3. 不含支付功能版本移除非税支付和医保支付接口
-4. 分享音乐支持填写歌词和高清封面图
-
 SDK1.8.4
 1. 调整分享图片大小限制
 2. 新增openBusinessView接口

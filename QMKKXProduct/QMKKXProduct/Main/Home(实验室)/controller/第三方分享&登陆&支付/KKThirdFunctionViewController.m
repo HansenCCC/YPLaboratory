@@ -8,6 +8,7 @@
 
 #import "KKThirdFunctionViewController.h"
 #import "KKThirdFunctionTableViewCell.h"//cell
+#import "KKPayManager.h"//支付管理
 
 //微信SDK
 #import "WXApi.h"
@@ -46,6 +47,7 @@
     self.datas = [[NSMutableArray alloc] init];
     [self setupSubvuews];
     [self updateDatas];
+    [self addObserverNotification];
 }
 - (void)setupSubvuews{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -56,6 +58,53 @@
     [self.view addSubview:self.tableView];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"KKThirdFunctionTableViewCell" bundle:nil] forCellReuseIdentifier:@"KKThirdFunctionTableViewCell"];
+}
+- (void)addObserverNotification{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(whenReceivedAliPayNotification:) name:kNSNotificationCenterQMKKXAliPay object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(whenReceivedAliLoginNotification:) name:kNSNotificationCenterQMKKXAliLogin object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(whenReceivedWeChatPayNotification:) name:kNSNotificationCenterQMKKXWeChatPay object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(whenReceivedWeChatLoginNotification:) name:kNSNotificationCenterQMKKXWeChatLogin object:nil];
+}
+//收到支付宝支付回调
+- (void)whenReceivedAliPayNotification:(NSNotification *)sender{
+    id object = sender.object;
+    if ([object isKindOfClass:[NSError class]]) {
+        NSError *error = object;
+        [self showError:error.domain];
+    }else{
+        [self showSuccessWithMsg:@"支付宝支付成功！"];
+    }
+}
+//收到支付宝登录回调
+- (void)whenReceivedAliLoginNotification:(NSNotification *)sender{
+    id object = sender.object;
+    if ([object isKindOfClass:[NSError class]]) {
+        NSError *error = object;
+        [self showError:error.domain];
+    }else{
+        [self showSuccessWithMsg:@"支付宝登录成功！"];
+    }
+}
+//收到微信支付回调
+- (void)whenReceivedWeChatPayNotification:(NSNotification *)sender{
+    id object = sender.object;
+    if ([object isKindOfClass:[NSError class]]) {
+        NSError *error = object;
+        [self showError:error.domain];
+    }else{
+        [self showSuccessWithMsg:@"微信支付成功！"];
+    }
+}
+//收到微信授权登录回调
+- (void)whenReceivedWeChatLoginNotification:(NSNotification *)sender{
+    id object = sender.object;
+    if ([object isKindOfClass:[NSError class]]) {
+        NSError *error = object;
+        [self showError:error.domain];
+    }else if([object isKindOfClass:[NSString class]]){
+        NSString *openCode = object;
+        [self showSuccessWithMsg:[NSString stringWithFormat:@"微信登录成功！\n获取code=%@",openCode]];
+    }
 }
 - (void)updateDatas{
     [self.datas removeAllObjects];
@@ -72,6 +121,9 @@
     [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.top.equalTo(self.view);
     }];
+}
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -106,14 +158,13 @@
             }
         }else if (indexPath.row == 3) {
             if (index == 0) {
-                [self aliThirdLogin];
+                [weakSelf aliThirdLogin];
             }else if(index ==  1){
-                [self aliThirdShare];
+                [weakSelf aliThirdShare];
             }else if(index == 2){
-                [self aliThirdPay];
+                [weakSelf aliThirdPay];
             }
         }
-        [weakSelf showError:@"⚠️⚠️⚠️\n没有注册公司或工作室\n各个平台很难注册应用程序\n该功能暂时搁置处理\n⚠️⚠️⚠️\n"];
     };
     return cell;
 }
@@ -136,7 +187,15 @@
 #pragma mark - 微信
 - (void)wechatThirdLogin{
     //微信登录
-    
+    //bee_openid = wx0647716e2f53ac8b
+    WeakSelf
+    [[KKPayManager sharedInstance] weChatOauthComplete:^(BOOL success, id info) {
+        if (success) {
+            //等待通知回调
+        }else{
+            [weakSelf showError:@"微信登录失败！"];
+        }
+    }];
 }
 - (void)wechatThirdShare{
     //微信分享
@@ -144,7 +203,15 @@
 }
 - (void)wechatThirdPay{
     //微信pay
-    
+    WeakSelf
+    KKWeChatPayModel *model = [[KKWeChatPayModel alloc] init];
+    [[KKPayManager sharedInstance] weChatPayWithModel:model complete:^(BOOL success, id info) {
+        if (success) {
+            //等待通知回调
+        }else{
+            [weakSelf showError:@"微信支付失败！"];
+        }
+    }];
 }
 #pragma mark - QQ
 - (void)qqThirdLogin{

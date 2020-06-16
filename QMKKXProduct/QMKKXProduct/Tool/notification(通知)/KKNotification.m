@@ -19,3 +19,10 @@ NSString *const kNSNotificationCenterUserInfoUpdate = @"kNSNotificationCenterUse
 
 
 NSString *const kNSNotificationCenterQMKKXAuthLogin = @"kNSNotificationCenterQMKKXAuthLogin";//唤起QMKKX授权界面
+
+//第三方支付相关
+NSString *const kNSNotificationCenterQMKKXAliPay = @"kNSNotificationCenterQMKKXAliPay";//支付宝支付回调
+NSString *const kNSNotificationCenterQMKKXAliLogin = @"kNSNotificationCenterQMKKXAliLogin";//支付宝登录回调
+
+NSString *const kNSNotificationCenterQMKKXWeChatPay = @"kNSNotificationCenterQMKKXWeChatPay";//微信支付回调
+NSString *const kNSNotificationCenterQMKKXWeChatLogin = @"kNSNotificationCenterQMKKXWeChatLogin";//微信登录回调

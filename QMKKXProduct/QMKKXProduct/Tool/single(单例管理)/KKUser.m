@@ -106,6 +106,22 @@ static NSString *kNSUserDefaultsStartImg = @"kNSUserDefaultsStartImg";//启动�
 - (void)postNotificationToQMKKXAuthLogin:(NSString *)info{
     [[NSNotificationCenter defaultCenter] postNotificationName:kNSNotificationCenterQMKKXAuthLogin object:info];
 }
+//发送qmkkx支付宝支付回调
+- (void)postNotificationToQMKKXAliPay:(id)info{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNSNotificationCenterQMKKXAliPay object:info];
+}
+//发送qmkkx支付宝支付回调
+- (void)postNotificationToQMKKXAliLogin:(id)info{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNSNotificationCenterQMKKXAliLogin object:info];
+}
+//发送qmkkx微信支付回调
+- (void)postNotificationToQMKKXWeChatPay:(id)info{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNSNotificationCenterQMKKXWeChatPay object:info];
+}
+//发送qmkkx微信登录回调
+- (void)postNotificationToQMKKXWeChatLogin:(id)info{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNSNotificationCenterQMKKXWeChatLogin object:info];
+}
 #pragma mark - config
 //获取配置（退出登录和重新登录需要重新请求）
 - (void)setupConfig{

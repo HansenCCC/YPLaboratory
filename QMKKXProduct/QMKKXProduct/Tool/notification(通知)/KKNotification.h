@@ -16,3 +16,10 @@ extern NSString *const kNSNotificationCenterUserInfoUpdate;//用户信息更新
 
 
 extern NSString *const kNSNotificationCenterQMKKXAuthLogin;//唤起QMKKX授权界面
+
+//第三方支付相关
+extern NSString *const kNSNotificationCenterQMKKXAliPay;//支付宝支付回调
+extern NSString *const kNSNotificationCenterQMKKXAliLogin;//支付宝登录回调
+
+extern NSString *const kNSNotificationCenterQMKKXWeChatPay;//微信支付回调
+extern NSString *const kNSNotificationCenterQMKKXWeChatLogin;//微信登录回调

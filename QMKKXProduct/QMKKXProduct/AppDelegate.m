@@ -11,6 +11,9 @@
 #import "AppDelegate+KKConfig.h"
 #import "KKRootViewController.h"//root
 
+//第三方支付回调
+#import "KKPayManager.h"//支付管理
+
 @interface AppDelegate ()
 
 @end
@@ -52,13 +55,21 @@
     UIInterfaceOrientationMask orientationMask = [vc supportedInterfaceOrientations];
     return orientationMask;
 }
-//第三方传值或登录
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+#pragma mark - iOS 9.0 以后  支付、分享、回调openURL相关
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options{
     NSString *urlStr = url.absoluteString;
     if([urlStr.lowercaseString containsString:kQMKKXAuthLogin.lowercaseString]){
         //qmkkx跳转授权页面
         [[KKUser shareInstance] postNotificationToQMKKXAuthLogin:urlStr];
         return YES;
+    }
+    //第三方支付回调
+    if ([url.host isEqualToString:@"safepay"]) {
+        //支付跳转支付宝钱包进行支付，处理支付结果
+        return [[KKPayManager sharedInstance] aliPayHandleOpenURL:url];
+    }else if([url.host isEqualToString:@"pay"]||[url.host isEqualToString:@"oauth"]){
+        //支付跳转微信钱包进行支付，处理支付结果
+        return [[KKPayManager sharedInstance] weChatHandleOpenURL:url];
     }
     return YES;
 }

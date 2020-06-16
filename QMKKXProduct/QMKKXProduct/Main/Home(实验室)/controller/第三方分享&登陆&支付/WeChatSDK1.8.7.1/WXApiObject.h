@@ -66,6 +66,30 @@ enum WXMPWebviewType {
     WXMPWebviewType_Ad = 0,        /**< 广告网页 **/
 };
 
+
+
+/*! @brief 应用支持接收微信的文件类型
+ *
+ */
+typedef NS_ENUM(UInt64, enAppSupportContentFlag) {
+    MMAPP_SUPPORT_NOCONTENT = 0x0,
+    MMAPP_SUPPORT_TEXT      = 0x1,
+    MMAPP_SUPPORT_PICTURE   = 0x2,
+    MMAPP_SUPPORT_LOCATION  = 0x4,
+    MMAPP_SUPPORT_VIDEO     = 0x8,
+    MMAPP_SUPPORT_AUDIO     = 0x10,
+    MMAPP_SUPPORT_WEBPAGE   = 0x20,
+    
+    // Suport File Type
+    MMAPP_SUPPORT_DOC  = 0x40,               // doc
+    MMAPP_SUPPORT_DOCX = 0x80,               // docx
+    MMAPP_SUPPORT_PPT  = 0x100,              // ppt
+    MMAPP_SUPPORT_PPTX = 0x200,              // pptx
+    MMAPP_SUPPORT_XLS  = 0x400,              // xls
+    MMAPP_SUPPORT_XLSX = 0x800,              // xlsx
+    MMAPP_SUPPORT_PDF  = 0x1000,             // pdf
+};
+
 /*! @brief log的级别
  *
  */
@@ -80,55 +104,6 @@ typedef NS_ENUM(NSInteger,WXLogLevel) {
  */
 typedef void(^WXLogBolock)(NSString *log);
 
-/*! @brief 微信Universal Link检查函数 (WXApi#checkUniversalLinkReady:)，检查步骤枚举值
- *
- * WXULCheckStepParams 参数检测
- * WXULCheckStepSystemVersion 当前系统版本检测
- * WXULCheckStepWechatVersion 微信客户端版本检测
- * WXULCheckStepSDKInnerOperation 微信SDK内部操作检测
- * WXULCheckStepLaunchWechat  App拉起微信检测
- * WXULCheckStepBackToCurrentApp 由微信返回当前App检测
- * WXULCheckStepFinal 最终结果
- */
-typedef NS_ENUM(NSInteger, WXULCheckStep)
-{
-    WXULCheckStepParams,
-    WXULCheckStepSystemVersion,
-    WXULCheckStepWechatVersion,
-    WXULCheckStepSDKInnerOperation,
-    WXULCheckStepLaunchWechat,
-    WXULCheckStepBackToCurrentApp,
-    WXULCheckStepFinal,
-};
-
-
-#pragma mark - WXCheckULStepResult
-
-/*! @brief 该类为微信Universal Link检测函数结果类
-*
-*/
-@interface WXCheckULStepResult : NSObject
-
-/** 是否成功 */
-@property(nonatomic, assign) BOOL success;
-/** 当前错误信息 */
-@property(nonatomic, strong) NSString* errorInfo;
-/** 修正建议 */
-@property(nonatomic, strong) NSString* suggestion;
-
-- (instancetype)initWithCheckResult:(BOOL)success errorInfo:(nullable NSString*)errorInfo suggestion:(nullable NSString*)suggestion;
-
-@end
-
-
-/*! @brief 微信Universal Link检查函数 (WXApi#checkUniversalLinkReady:)，回调Block
- *
- * @param step 当前检测步骤
- * @param result 检测结果
- */
-typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* result);
-
-
 #pragma mark - BaseReq
 /*! @brief 该类为微信终端SDK所有请求类的基类
  *
@@ -137,7 +112,7 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
 
 /** 请求类型 */
 @property (nonatomic, assign) int type;
-/** 由用户微信号和AppID组成的唯一标识，需要校验微信用户是否换号登录时填写*/
+/** 由用户微信号和AppID组成的唯一标识，发送请求时第三方程序必须填写，用于校验微信用户是否换号登录*/
 @property (nonatomic, copy) NSString *openID;
 
 @end
@@ -165,7 +140,6 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
 
 #ifndef BUILD_WITHOUT_PAY
 
-#pragma mark - PayReq
 /*! @brief 第三方向微信终端发起支付的消息结构体
  *
  *  第三方向微信终端发起支付的消息结构体，微信终端处理后会向第三方返回处理结果
@@ -201,6 +175,7 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
 
 @end
 
+
 #pragma mark - WXOfflinePay
 /*! @brief 第三方向微信终端发起离线支付
  *
@@ -218,36 +193,8 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
 
 @end
 
-
-#pragma mark - WXNontaxPayReq
-@interface WXNontaxPayReq:BaseReq
-
-@property (nonatomic, copy) NSString *urlString;
-
-@end
-
-#pragma mark - WXNontaxPayResp
-@interface WXNontaxPayResp : BaseResp
-
-@property (nonatomic, copy) NSString *wxOrderId;
-
-@end
-
-#pragma mark - WXPayInsuranceReq
-@interface WXPayInsuranceReq : BaseReq
-
-@property (nonatomic, copy) NSString *urlString;
-
-@end
-
-#pragma mark - WXPayInsuranceResp
-@interface WXPayInsuranceResp : BaseResp
-
-@property (nonatomic, copy) NSString *wxOrderId;
-
-@end
-
 #endif
+
 
 
 #pragma mark - SendAuthReq
@@ -267,7 +214,6 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
  * @note state字符串长度不能超过1K
  */
 @property (nonatomic, copy) NSString *state;
-
 @end
 
 #pragma mark - SendAuthResp
@@ -326,6 +272,8 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
 @property(nonatomic, copy) NSString *lang;
 @property(nonatomic, copy) NSString *country;
 @end
+
+
 
 #pragma mark - GetMessageFromWXReq
 /*! @brief 微信终端向第三方程序请求提供内容的消息结构体。
@@ -397,6 +345,34 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
 @property (nonatomic, copy) NSString *lang;
 @property (nonatomic, copy) NSString *country;
 @end
+
+
+
+#pragma mark - OpenTempSessionReq
+/* ! @brief 第三方通知微信，打开临时会话
+ *
+ * 第三方通知微信，打开临时会话
+ */
+@interface OpenTempSessionReq : BaseReq
+/** 需要打开的用户名
+ * @attention 长度不能超过512字节
+ */
+@property (nonatomic, copy) NSString *username;
+/** 开发者自定义参数，拉起临时会话后会发给开发者后台，可以用于识别场景
+ * @attention 长度不能超过32位
+ */
+@property (nonatomic, copy) NSString *sessionFrom;
+@end
+
+#pragma mark - OpenTempSessionResp
+/*! @brief 微信终端向第三方程序返回的OpenTempSessionReq处理结果。
+ *
+ * 第三方程序向微信终端发送OpenTempSessionReq后，微信发送回来的处理结果，该结果用OpenTempSessionResp表示。
+ */
+@interface OpenTempSessionResp : BaseResp
+
+@end
+
 
 
 #pragma mark - OpenWebviewReq
@@ -479,6 +455,50 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
 
 @end
 
+
+
+#pragma mark - JumpToBizProfileReq
+/* ! @brief 第三方通知微信，打开指定微信号profile页面
+ *
+ * 第三方通知微信，打开指定微信号profile页面
+ */
+@interface JumpToBizProfileReq : BaseReq
+/** 跳转到该公众号的profile
+ * @attention 长度不能超过512字节
+ */
+@property (nonatomic, copy) NSString *username;
+/** 如果用户加了该公众号为好友，extMsg会上传到服务器
+ * @attention 长度不能超过1024字节
+ */
+@property (nonatomic, copy, nullable) NSString *extMsg;
+/**
+ * 跳转的公众号类型
+ * @see WXBizProfileType
+ */
+@property (nonatomic, assign) int profileType;
+@end
+
+
+
+#pragma mark - JumpToBizWebviewReq
+/* ! @brief 第三方通知微信，打开指定usrname的profile网页版
+ *
+ */
+@interface JumpToBizWebviewReq : BaseReq
+/** 跳转的网页类型，目前只支持广告页
+ * @see WXMPWebviewType
+ */
+@property(nonatomic, assign) int webType;
+/** 跳转到该公众号的profile网页版
+ * @attention 长度不能超过512字节
+ */
+@property(nonatomic, copy) NSString *tousrname;
+/** 如果用户加了该公众号为好友，extMsg会上传到服务器
+ * @attention 长度不能超过1024字节
+ */
+@property(nonatomic, copy, nullable) NSString *extMsg;
+
+@end
 
 #pragma mark - WXCardItem
 
@@ -625,7 +645,7 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
 @end
 
 #pragma mark - WXSubscribeMiniProgramMsg
-/** ! @brief 第三方请求订阅小程序消息
+/** ! @brief 微信返回第三方请求选择发票结果
  *
  */
 @interface WXSubscribeMiniProgramMsgReq : BaseReq
@@ -656,6 +676,34 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
 
 @end
 
+#pragma mark - WXNontaxPayReq
+@interface WXNontaxPayReq:BaseReq
+
+@property (nonatomic, copy) NSString *urlString;
+
+@end
+
+#pragma mark - WXNontaxPayResp
+@interface WXNontaxPayResp : BaseResp
+
+@property (nonatomic, copy) NSString *wxOrderId;
+
+@end
+
+#pragma mark - WXPayInsuranceReq
+@interface WXPayInsuranceReq : BaseReq
+
+@property (nonatomic, copy) NSString *urlString;
+
+@end
+
+#pragma mark - WXPayInsuranceResp
+@interface WXPayInsuranceResp : BaseResp
+
+@property (nonatomic, copy) NSString *wxOrderId;
+
+@end
+
 #pragma mark - WXMediaMessage
 
 /*! @brief 多媒体消息结构体
@@ -675,7 +723,7 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
  */
 @property (nonatomic, copy) NSString *description;
 /** 缩略图数据
- * @note 大小不能超过64K
+ * @note 大小不能超过32K
  */
 @property (nonatomic, strong, nullable) NSData *thumbData;
 /**
@@ -757,15 +805,6 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
  */
 @property (nonatomic, copy) NSString *musicLowBandDataUrl;
 
-/**音乐封面图Url
- * @note 长度不能超过10K
- */
-@property (nonatomic, copy) NSString *songAlbumUrl;
-
-/**歌词信息 LRC格式
- * @note 长度不能超过32K
- */
-@property (nonatomic, copy, nullable) NSString *songLyric;
 @end
 
 
@@ -979,9 +1018,6 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
  */
 @property (nonatomic, assign) WXMiniProgramType miniProgramType;
 
-/** 是否禁用转发 */
-@property (nonatomic, assign) BOOL disableForward;
-
 @end
 
 #pragma mark - WXLaunchMiniProgramReq
@@ -1011,12 +1047,6 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
  * @attention json格式
  */
 @property (nonatomic, copy, nullable) NSString *extMsg;
-
-/** extDic
- * @attention 字典，可存放图片等比较大的数据
- */
-@property (nonatomic, copy, nullable) NSDictionary *extDic;
-
 @end
 
 #pragma mark - WXLaunchMiniProgramResp
@@ -1054,10 +1084,6 @@ typedef void(^WXCheckULCompletion)(WXULCheckStep step, WXCheckULStepResult* resu
  */
 @property (nonatomic, copy, nullable) NSString *extInfo;
 
-/** extData数据
- * @note
- */
-@property (nonatomic, strong, nullable) NSData *extData;
 @end
 
 

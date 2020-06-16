@@ -45,6 +45,15 @@
 //发送qmkkx唤起授权界面
 - (void)postNotificationToQMKKXAuthLogin:(NSString *)info;
 
+//发送qmkkx支付宝支付回调
+- (void)postNotificationToQMKKXAliPay:(id)info;
+//发送qmkkx支付宝支付回调
+- (void)postNotificationToQMKKXAliLogin:(id)info;
+//发送qmkkx微信支付回调
+- (void)postNotificationToQMKKXWeChatPay:(id)info;
+//发送qmkkx微信登录回调
+- (void)postNotificationToQMKKXWeChatLogin:(id)info;
+
 #pragma mark - config
 //获取配置（退出登录和重新登录需要重新请求）
 - (void)setupConfig;
