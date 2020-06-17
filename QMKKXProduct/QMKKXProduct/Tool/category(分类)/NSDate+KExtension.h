@@ -53,4 +53,9 @@
  */
 + (NSDate *)dateWithString:(NSString *)dateString dateFormat:(NSString *)dateFormat;
 
+
+/// 失物招领时间格式  时间转化->刚刚，一分钟前，一个小时前，一天前
+/// @param compareDate 时间
++ (NSString *)kk_transformCurrentTime:(NSDate *)compareDate;
+
 @end

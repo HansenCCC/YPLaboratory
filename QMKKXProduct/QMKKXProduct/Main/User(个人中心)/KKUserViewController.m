@@ -57,7 +57,9 @@
         NSString *value = dict[@"json"];
         if (value.length > 0) {
             KKPeopleAcitonModel *element = [KKPeopleAcitonModel mj_objectWithKeyValues:value];
-            NSString *name = [NSString stringWithFormat:@"%@ 你跳转到%@",element.date,element.value];
+            //字符转时间
+            NSDate *date = [NSDate dateWithString:element.date dateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            NSString *name = [NSString stringWithFormat:@"%@ 你跳转到%@",[NSDate kk_transformCurrentTime:date],element.value];
             KKLabelModel *model = [[KKLabelModel alloc] initWithTitle:name value:nil];
             model.info = element;
             [self.datas addObject:model];
