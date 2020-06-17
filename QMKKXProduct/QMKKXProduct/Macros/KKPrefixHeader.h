@@ -11,4 +11,6 @@
 
 #import "KKNetworkApi.h"//API
 
+#import "KKNavigationController+KKAciton.h"//用户行为记录
+
 #endif /* KKPrefixHeader_h */

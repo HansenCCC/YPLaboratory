@@ -132,7 +132,11 @@ static NSString *kNSUserDefaultsStartImg = @"kNSUserDefaultsStartImg";//启动�
     KKDatabaseColumnModel *idModel = [[KKDatabaseColumnModel alloc] initWithName:@"id"];
     idModel.pk = @"1";
     KKDatabaseColumnModel *jsonModel = [[KKDatabaseColumnModel alloc] initWithName:@"json"];
+    //创建朋友圈数据库
     [database createTableWithTableName:@"kk_wechat_moments" columnModels:@[idModel,jsonModel]];
+    //创建用户行为数据库
+    NSString *userActionTable = self.userActionTable;
+    [database createTableWithTableName:userActionTable columnModels:@[idModel,jsonModel]];
 }
 
 #pragma mark - webPush
@@ -180,5 +184,23 @@ static NSString *kNSUserDefaultsStartImg = @"kNSUserDefaultsStartImg";//启动�
 - (BOOL)canOpenGameByGameid:(NSString *)gameId{
     NSString *string = [NSString stringWithFormat:@"qmkkx%@://",gameId];
     return [self canOpenURL:string.toURL];
+}
+
+#pragma mark - 历史存储相关
+- (NSString *)userActionTable{
+    return @"kk_qmkkx_user_actions";
+}
+/// 添加用户行为
+/// @param jsonValue json
+- (BOOL)savaUserActionWithJson:(NSString *)jsonValue{
+    //table
+    NSString *tableName = self.userActionTable;
+    NSString *docuPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    //db
+    NSString *dbPath = [docuPath stringByAppendingPathComponent:@"kk_common.db"];
+    KKDatabase *database = [KKDatabase databaseWithPath:dbPath];
+    //
+    BOOL success = [database insertTableWithTableName:tableName contents:@{@"json":jsonValue}];
+    return success;
 }
 @end

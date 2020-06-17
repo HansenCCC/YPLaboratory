@@ -64,6 +64,8 @@
 - (void)presentWebViewContoller:(UIViewController *)selfVC url:(NSString *)urlString complete:(void(^)(BOOL refresh))complete;
 //present webview
 - (void)presentWebViewContoller:(UIViewController *)selfVC title:(NSString *)title url:(NSString *)urlString complete:(void(^)(BOOL refresh))complete;
+
+
 #pragma mark - 超链接打开操作
 //超链接打开地址
 - (BOOL)openURL:(NSURL*)url;
@@ -73,4 +75,11 @@
 - (BOOL)openGameByGameId:(NSString*)gameId;
 //是否安装这款游戏
 - (BOOL)canOpenGameByGameid:(NSString *)gameId;
+
+#pragma mark - 历史存储相关
+@property (nonatomic, readonly) NSString *userActionTable;
+
+/// 记录用户行为
+/// @param jsonValue json
+- (BOOL)savaUserActionWithJson:(NSString *)jsonValue;
 @end

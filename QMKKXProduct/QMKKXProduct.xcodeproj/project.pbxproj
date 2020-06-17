@@ -283,6 +283,10 @@
 		603670A723BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */; };
 		603670AB23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */; };
 		603670AC23BF3B6B001E3D22 /* KKQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */; };
+		603C17782498B67B00C7E480 /* KKPeopleAcitonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C17772498B67B00C7E480 /* KKPeopleAcitonModel.m */; };
+		603C17792498B67B00C7E480 /* KKPeopleAcitonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C17772498B67B00C7E480 /* KKPeopleAcitonModel.m */; };
+		603C177C2498B75500C7E480 /* KKNavigationController+KKAciton.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C177B2498B75500C7E480 /* KKNavigationController+KKAciton.m */; };
+		603C177D2498B75500C7E480 /* KKNavigationController+KKAciton.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C177B2498B75500C7E480 /* KKNavigationController+KKAciton.m */; };
 		60445C752457FC0400F54BC9 /* KKBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60445C742457FC0400F54BC9 /* KKBadgeViewController.m */; };
 		60445C762457FC0400F54BC9 /* KKBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60445C742457FC0400F54BC9 /* KKBadgeViewController.m */; };
 		60463DD223F39C4D00D9A376 /* KKWeChatImageListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60463DD123F39C4D00D9A376 /* KKWeChatImageListTableViewCell.m */; };
@@ -715,6 +719,10 @@
 		603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoCameraViewController.xib; sourceTree = "<group>"; };
 		603670A923BF3B6B001E3D22 /* KKQRCodeScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKQRCodeScanViewController.h; sourceTree = "<group>"; };
 		603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKQRCodeScanViewController.m; sourceTree = "<group>"; };
+		603C17762498B67B00C7E480 /* KKPeopleAcitonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPeopleAcitonModel.h; sourceTree = "<group>"; };
+		603C17772498B67B00C7E480 /* KKPeopleAcitonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPeopleAcitonModel.m; sourceTree = "<group>"; };
+		603C177A2498B75500C7E480 /* KKNavigationController+KKAciton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKNavigationController+KKAciton.h"; sourceTree = "<group>"; };
+		603C177B2498B75500C7E480 /* KKNavigationController+KKAciton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "KKNavigationController+KKAciton.m"; sourceTree = "<group>"; };
 		60445C732457FC0400F54BC9 /* KKBadgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBadgeViewController.h; sourceTree = "<group>"; };
 		60445C742457FC0400F54BC9 /* KKBadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBadgeViewController.m; sourceTree = "<group>"; };
 		60463DD023F39C4D00D9A376 /* KKWeChatImageListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatImageListTableViewCell.h; sourceTree = "<group>"; };
@@ -1074,6 +1082,7 @@
 		30202FD42379582700F1AADA /* User(个人中心) */ = {
 			isa = PBXGroup;
 			children = (
+				603C17752498B5EB00C7E480 /* model */,
 				30202FE32379593600F1AADA /* KKUserViewController.h */,
 				30202FE42379593600F1AADA /* KKUserViewController.m */,
 				30202FE52379593600F1AADA /* KKUserViewController.xib */,
@@ -1365,13 +1374,13 @@
 			isa = PBXGroup;
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
+				30036DD022B9FBB400605DF7 /* single(单例管理) */,
 				606C7AB124597A9200BF5C7F /* labels(标签) */,
 				6015E9A6243DCF0600C9B315 /* badge(角标) */,
 				6002324223FBCD40005EE419 /* avPlayer(视频播放) */,
 				600A9E2B23E532F300ACB002 /* database(数据库) */,
 				60B6812D238CD1FB00E3F6B7 /* carousel(轮播图) */,
 				309173FC237AAF1200010E99 /* cell(通用cell) */,
-				30036DD022B9FBB400605DF7 /* single(单例管理) */,
 				308DF7672359B1B400A503D0 /* webView(网站) */,
 				307C27ED23587AAD00DB3ED6 /* notification(通知) */,
 				30CEE7AC2334E8F6006CF794 /* countdown */,
@@ -1718,6 +1727,17 @@
 				603670AA23BF3B6B001E3D22 /* KKQRCodeScanViewController.m */,
 			);
 			path = "二维码扫码";
+			sourceTree = "<group>";
+		};
+		603C17752498B5EB00C7E480 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				603C177A2498B75500C7E480 /* KKNavigationController+KKAciton.h */,
+				603C177B2498B75500C7E480 /* KKNavigationController+KKAciton.m */,
+				603C17762498B67B00C7E480 /* KKPeopleAcitonModel.h */,
+				603C17772498B67B00C7E480 /* KKPeopleAcitonModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		60445C722457FB8200F54BC9 /* 角标 */ = {
@@ -2469,6 +2489,7 @@
 				3077A35422BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */,
 				6097E5F224977F04007ECC55 /* KKAliPayModel.m in Sources */,
+				603C177D2498B75500C7E480 /* KKNavigationController+KKAciton.m in Sources */,
 				605F668523F30C6900AA62C5 /* KKReleaseWXMomentsViewController.m in Sources */,
 				60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
 				603670A523BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */,
@@ -2498,6 +2519,7 @@
 				30036DB722B9D76B00605DF7 /* main.m in Sources */,
 				606C7AB524597AAC00BF5C7F /* KKLabelsView.m in Sources */,
 				606C7AE22462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */,
+				603C17792498B67B00C7E480 /* KKPeopleAcitonModel.m in Sources */,
 				30917407237AB37500010E99 /* KKAppIcon.m in Sources */,
 				60C6CFD42389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				60A066B923E86C8300F05457 /* KKDatebaseFormViewController.m in Sources */,
@@ -2631,6 +2653,7 @@
 				3077A35322BB316200372F07 /* UIView+KExtension.m in Sources */,
 				30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */,
 				6097E5F124977F04007ECC55 /* KKAliPayModel.m in Sources */,
+				603C177C2498B75500C7E480 /* KKNavigationController+KKAciton.m in Sources */,
 				605F668423F30C6900AA62C5 /* KKReleaseWXMomentsViewController.m in Sources */,
 				60C6CFEA238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
 				603670A423BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */,
@@ -2660,6 +2683,7 @@
 				30036DC122B9DDC500605DF7 /* main.m in Sources */,
 				606C7AB424597AAC00BF5C7F /* KKLabelsView.m in Sources */,
 				606C7AE12462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */,
+				603C17782498B67B00C7E480 /* KKPeopleAcitonModel.m in Sources */,
 				30917406237AB37500010E99 /* KKAppIcon.m in Sources */,
 				60C6CFD32389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				60A066B823E86C8300F05457 /* KKDatebaseFormViewController.m in Sources */,

@@ -19,6 +19,7 @@
     [super awakeFromNib];
     // Initialization code
     self.textField.textAlignment = NSTextAlignmentRight;
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
     WeakSelf
     self.textField.whenDidEndEditing = ^(UITextField *textField) {
         weakSelf.cellModel.value = textField.text;
