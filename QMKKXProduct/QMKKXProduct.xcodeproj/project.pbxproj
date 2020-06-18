@@ -459,6 +459,12 @@
 		60F3BECE23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F3BECB23E1D88E00447EC2 /* KKDatabaseViewController.m */; };
 		60F3BECF23E1D88E00447EC2 /* KKDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F3BECC23E1D88E00447EC2 /* KKDatabaseViewController.xib */; };
 		60F3BED023E1D88E00447EC2 /* KKDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F3BECC23E1D88E00447EC2 /* KKDatabaseViewController.xib */; };
+		60F685E0249A10DC00994C39 /* KKImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F685DF249A10DC00994C39 /* KKImageBrowserViewController.m */; };
+		60F685E1249A10DC00994C39 /* KKImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F685DF249A10DC00994C39 /* KKImageBrowserViewController.m */; };
+		60F685E5249A1A0000994C39 /* KKImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F685E4249A1A0000994C39 /* KKImageBrowser.m */; };
+		60F685E6249A1A0000994C39 /* KKImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F685E4249A1A0000994C39 /* KKImageBrowser.m */; };
+		60F685E9249B40D200994C39 /* KKImageBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F685E8249B40D200994C39 /* KKImageBrowserCell.m */; };
+		60F685EA249B40D200994C39 /* KKImageBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F685E8249B40D200994C39 /* KKImageBrowserCell.m */; };
 		60F865AB23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */; };
 		60F865AC23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */; };
 		60F865AD23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */; };
@@ -865,6 +871,12 @@
 		60F3BECA23E1D88E00447EC2 /* KKDatabaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDatabaseViewController.h; sourceTree = "<group>"; };
 		60F3BECB23E1D88E00447EC2 /* KKDatabaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKDatabaseViewController.m; sourceTree = "<group>"; };
 		60F3BECC23E1D88E00447EC2 /* KKDatabaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKDatabaseViewController.xib; sourceTree = "<group>"; };
+		60F685DE249A10DC00994C39 /* KKImageBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKImageBrowserViewController.h; sourceTree = "<group>"; };
+		60F685DF249A10DC00994C39 /* KKImageBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKImageBrowserViewController.m; sourceTree = "<group>"; };
+		60F685E3249A1A0000994C39 /* KKImageBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKImageBrowser.h; sourceTree = "<group>"; };
+		60F685E4249A1A0000994C39 /* KKImageBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKImageBrowser.m; sourceTree = "<group>"; };
+		60F685E7249B40D200994C39 /* KKImageBrowserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKImageBrowserCell.h; sourceTree = "<group>"; };
+		60F685E8249B40D200994C39 /* KKImageBrowserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKImageBrowserCell.m; sourceTree = "<group>"; };
 		60F865A823D1585600CCEA70 /* KKVideoPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKVideoPlayViewController.h; sourceTree = "<group>"; };
 		60F865A923D1585600CCEA70 /* KKVideoPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKVideoPlayViewController.m; sourceTree = "<group>"; };
 		60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoPlayViewController.xib; sourceTree = "<group>"; };
@@ -987,6 +999,7 @@
 				3015A056237D33390086B39D /* KKUIUnitViewController.h */,
 				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
+				60F685DD249A10BA00994C39 /* 图片查看器 */,
 				6097E5D724971EEA007ECC55 /* 下拉弹框 */,
 				60F1C5BE24921C97006C5A7F /* 支付密码框 */,
 				60C4AD8A248E0BEF003B06A1 /* 常见的首页样式 */,
@@ -2114,6 +2127,27 @@
 			path = "数据库";
 			sourceTree = "<group>";
 		};
+		60F685DD249A10BA00994C39 /* 图片查看器 */ = {
+			isa = PBXGroup;
+			children = (
+				60F685E2249A19D400994C39 /* imageBrowser(图片查看器) */,
+				60F685DE249A10DC00994C39 /* KKImageBrowserViewController.h */,
+				60F685DF249A10DC00994C39 /* KKImageBrowserViewController.m */,
+			);
+			path = "图片查看器";
+			sourceTree = "<group>";
+		};
+		60F685E2249A19D400994C39 /* imageBrowser(图片查看器) */ = {
+			isa = PBXGroup;
+			children = (
+				60F685E3249A1A0000994C39 /* KKImageBrowser.h */,
+				60F685E4249A1A0000994C39 /* KKImageBrowser.m */,
+				60F685E7249B40D200994C39 /* KKImageBrowserCell.h */,
+				60F685E8249B40D200994C39 /* KKImageBrowserCell.m */,
+			);
+			path = "imageBrowser(图片查看器)";
+			sourceTree = "<group>";
+		};
 		60F865A723D1581000CCEA70 /* 视频播放控件 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2501,6 +2535,7 @@
 				60B6812A238CCFCD00E3F6B7 /* KKBezierPathViewController.m in Sources */,
 				605611CB23E98D6D00DBA792 /* KKFormTableViewCell.m in Sources */,
 				30202FD82379588200F1AADA /* KKHomeViewController.m in Sources */,
+				60F685E1249A10DC00994C39 /* KKImageBrowserViewController.m in Sources */,
 				307C27F123587AAD00DB3ED6 /* KKNotification.m in Sources */,
 				607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */,
 				60022A1023C5756D004F94DB /* UITextField+KExtension.m in Sources */,
@@ -2560,8 +2595,10 @@
 				6003A90F247CE68100F7F06B /* KKPlayerListViewController.m in Sources */,
 				600A9E4323E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */,
 				60022A2F23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */,
+				60F685EA249B40D200994C39 /* KKImageBrowserCell.m in Sources */,
 				3077A33722BA45A400372F07 /* NSString+KExtension.m in Sources */,
 				3091740B237AB8B400010E99 /* KKAppIconImageView.m in Sources */,
+				60F685E6249A1A0000994C39 /* KKImageBrowser.m in Sources */,
 				302897BA22C46DEF000F2669 /* KKAddressPickAlert.m in Sources */,
 				30036DA922B9D76900605DF7 /* AppDelegate.m in Sources */,
 				302897A422C46DEF000F2669 /* KKUIBasePresentController.m in Sources */,
@@ -2665,6 +2702,7 @@
 				60B68129238CCFCD00E3F6B7 /* KKBezierPathViewController.m in Sources */,
 				605611CA23E98D6D00DBA792 /* KKFormTableViewCell.m in Sources */,
 				30202FD72379588200F1AADA /* KKHomeViewController.m in Sources */,
+				60F685E0249A10DC00994C39 /* KKImageBrowserViewController.m in Sources */,
 				307C27F023587AAD00DB3ED6 /* KKNotification.m in Sources */,
 				607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */,
 				60022A0F23C5756D004F94DB /* UITextField+KExtension.m in Sources */,
@@ -2724,8 +2762,10 @@
 				6003A90E247CE68100F7F06B /* KKPlayerListViewController.m in Sources */,
 				600A9E4223E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */,
 				60022A2E23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */,
+				60F685E9249B40D200994C39 /* KKImageBrowserCell.m in Sources */,
 				3077A33622BA45A400372F07 /* NSString+KExtension.m in Sources */,
 				3091740A237AB8B400010E99 /* KKAppIconImageView.m in Sources */,
+				60F685E5249A1A0000994C39 /* KKImageBrowser.m in Sources */,
 				302897B922C46DEF000F2669 /* KKAddressPickAlert.m in Sources */,
 				30036DC222B9DDC500605DF7 /* AppDelegate.m in Sources */,
 				302897A322C46DEF000F2669 /* KKUIBasePresentController.m in Sources */,

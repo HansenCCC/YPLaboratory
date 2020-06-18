@@ -26,6 +26,7 @@
 #import "KKCommonHomeStyleViewController.h"//常用的首页样式
 #import "KKPayPasswordViewController.h"//支付密码
 #import "KKDropdownBoxViewController.h"//下拉框
+#import "KKImageBrowserViewController.h"//图片查看器
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -34,7 +35,6 @@
 @end
 
 @implementation KKUIUnitViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -94,7 +94,9 @@
     s20.info = [KKPayPasswordViewController class];
     KKLabelModel *s21 = [[KKLabelModel alloc] initWithTitle:@"下拉选项弹框(基于KKDropdownBoxView)" value:nil];
     s21.info = [KKDropdownBoxViewController class];
-    [self.datas addObjectsFromArray:@[s19,s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17,s20,s21]];
+    KKLabelModel *s22 = [[KKLabelModel alloc] initWithTitle:@"图片查看器(基于KKImageBrowser)" value:nil];
+    s22.info = [KKImageBrowserViewController class];
+    [self.datas addObjectsFromArray:@[s19,s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17,s20,s21,s22]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

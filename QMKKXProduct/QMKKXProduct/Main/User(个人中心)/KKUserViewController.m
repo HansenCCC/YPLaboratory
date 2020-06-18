@@ -65,6 +65,9 @@
             [self.datas addObject:model];
         }
     }
+    //倒叙排列
+    self.datas = [[NSMutableArray alloc] initWithArray:[[self.datas reverseObjectEnumerator] allObjects]];
+    //刷新试图
     [self.tableView.mj_header endRefreshing];
     [self.tableView.mj_footer endRefreshing];
     [self.tableView reloadData];
@@ -90,6 +93,7 @@
     return AdaptedWidth(45.f);
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    return;
     //取消选中状态
     KKLabelModel *cellModel = self.datas[indexPath.row];
     KKPeopleAcitonModel *reslut = cellModel.info;

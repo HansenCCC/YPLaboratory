@@ -109,7 +109,7 @@
         KKPayTextFieldLabel *label = [[KKPayTextFieldLabel alloc] init];
         label.tag = i;
         [self addSubview:label];
-        if (i == 6) {
+        if (i == 5) {
             //最后一个不显示线条
             label.markView.hidden = YES;
         }
