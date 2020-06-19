@@ -7,24 +7,8 @@
 //
 
 #import "KKImageBrowser.h"
-#import "KKImageBrowserCell.h"
-
-
-@implementation KKImageBrowserModel
-/// 快速创建model
-/// @param url url
-/// @param type 类型
-- (instancetype)initWithUrl:(NSURL *)url type:(KKImageBrowserType) type{
-    if (self = [self init]) {
-        self.url = url;
-        self.type = type;
-    }
-    return self;
-}
-@end
 
 @interface KKImageBrowser ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
-@property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 @property (strong, nonatomic) UICollectionViewFlowLayout *flowLayout;
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (assign, nonatomic) BOOL cacheStatusBarHidden;
@@ -37,7 +21,6 @@
 - (instancetype)init{
     if (self = [super init]) {
         [self setupSubviews];
-        [self addGestureRecognizer];
     }
     return self;
 }
@@ -62,14 +45,6 @@
     self.placeholderView.contentMode = UIViewContentModeScaleAspectFit;
     self.placeholderView.backgroundColor = KKColor_000000;
     [self addSubview:self.placeholderView];
-}
-- (void)addGestureRecognizer{
-    self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(whenTapClick:)];
-    [self addGestureRecognizer:self.tapGestureRecognizer];
-}
-- (void)whenTapClick:(id)sender{
-    //点击事件 -> 移除展示
-    [self removeShow];
 }
 - (void)removeShow{
     //复原状态栏
@@ -104,6 +79,10 @@
 }
 //展示
 - (void)show{
+    if (self.images.count == 0) {
+        NSAssert(NO, @"图片内容不能为空");
+        return;
+    }
     //记录状态栏
     self.cacheStatusBarHidden = [UIApplication sharedApplication].statusBarHidden;
     //隐藏状态栏
@@ -149,8 +128,16 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     KKImageBrowserModel *cellModel = self.images[indexPath.row];
     KKImageBrowserCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"KKImageBrowserCell" forIndexPath:indexPath];
-    cell.backgroundColor = KKColor_000000;
-    [cell.browserImageView kk_setImageWithUrl:cellModel.url.absoluteString];
+    cell.cellModel = cellModel;
+    WeakSelf
+    cell.whenActionClick = ^(NSInteger index) {
+        if (index == 0) {
+            //单击了
+            [weakSelf removeShow];
+        }else if(index == 1){
+            //双击了
+        }
+    };
     return cell;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
