@@ -71,8 +71,6 @@
     self.collectionView.alpha = 0;
     self.frame = f1;
     self.backgroundView.frame = f1;
-    self.backgroundView.alpha = 1;
-    self.placeholderView.frame = self.bounds;
     //执行动画
     [UIView animateWithDuration:0.3 animations:^{
         self.backgroundView.alpha = 0;
@@ -136,13 +134,18 @@
     KKImageBrowserModel *cellModel = self.images[indexPath.row];
     KKImageBrowserCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"KKImageBrowserCell" forIndexPath:indexPath];
     cell.cellModel = cellModel;
+    cell.weakBackgroundView = self.backgroundView;
     WeakSelf
-    cell.whenActionClick = ^(NSInteger index) {
+    cell.whenActionClick = ^(KKImageBrowserCell *cell,NSInteger index) {
         if (index == 0) {
             //单击了
             [weakSelf removeShow];
         }else if(index == 1){
             //双击了
+        }else if(index == 2){
+            //用户下滑上滑退出
+            weakSelf.placeholderView.frame = cell.scrollView.frame;
+            [weakSelf removeShow];
         }
     };
     return cell;

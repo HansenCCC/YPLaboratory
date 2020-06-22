@@ -5,6 +5,11 @@
 //  Created by Hansen on 6/17/20.
 //  Copyright © 2020 力王工作室. All rights reserved.
 //
+//  运用技术方便
+//  1、试图animateWithDuration动画
+//  2、试图transform变化
+//  3、手势部分
+//
 
 #import <UIKit/UIKit.h>
 #import "KKImageBrowserCell.h"
@@ -16,5 +21,4 @@
 //展示
 - (void)show;
 @end
-
 

@@ -26,9 +26,12 @@ typedef enum : NSUInteger {
 @end
 
 @interface KKImageBrowserCell : UICollectionViewCell
+@property (strong, nonatomic) UIScrollView *scrollView;
 @property (strong, nonatomic) UIImageView *browserImageView;
 @property (strong, nonatomic) KKImageBrowserModel *cellModel;
-@property (copy  , nonatomic) void(^whenActionClick)(NSInteger index);
+@property (weak  , nonatomic) UIView *weakBackgroundView;
 
+//用户单击0，用户双击1，用户下滑上滑退出2
+@property (copy  , nonatomic) void(^whenActionClick)(KKImageBrowserCell *cell,NSInteger index);
 @end
 
