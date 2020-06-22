@@ -78,5 +78,7 @@
 #import "KKQRCodeView.h"
 //dropdownBox(弹框)
 #import "KKDropdownBoxView.h"
+//imageBrowser(图片查看器)
+#import "KKImageBrowser.h"
 
 #endif /* KKToolHeader_h */

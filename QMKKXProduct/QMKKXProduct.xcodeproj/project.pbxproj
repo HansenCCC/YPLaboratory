@@ -1392,6 +1392,7 @@
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
 				30036DD022B9FBB400605DF7 /* single(单例管理) */,
+				60F685E2249A19D400994C39 /* imageBrowser(图片查看器) */,
 				606C7AB124597A9200BF5C7F /* labels(标签) */,
 				6015E9A6243DCF0600C9B315 /* badge(角标) */,
 				6002324223FBCD40005EE419 /* avPlayer(视频播放) */,
@@ -2136,7 +2137,6 @@
 		60F685DD249A10BA00994C39 /* 图片查看器 */ = {
 			isa = PBXGroup;
 			children = (
-				60F685E2249A19D400994C39 /* imageBrowser(图片查看器) */,
 				60F685DE249A10DC00994C39 /* KKImageBrowserViewController.h */,
 				60F685DF249A10DC00994C39 /* KKImageBrowserViewController.m */,
 			);
