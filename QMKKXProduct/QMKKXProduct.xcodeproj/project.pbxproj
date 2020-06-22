@@ -433,6 +433,8 @@
 		60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */; };
 		60C6CFEC238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
 		60C6CFED238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
+		60ECDAED249F5C9500A39F81 /* UIView+KKXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */; };
+		60ECDAEE249F5C9500A39F81 /* UIView+KKXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */; };
 		60F1C481248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */; };
 		60F1C482248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */; };
 		60F1C486248E17CB006C5A7F /* KKBeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C485248E17CB006C5A7F /* KKBeeViewController.m */; };
@@ -847,6 +849,8 @@
 		60C6CFE7238AEEEE00FABAA3 /* KKFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileViewController.h; sourceTree = "<group>"; };
 		60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileViewController.m; sourceTree = "<group>"; };
 		60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileViewController.xib; sourceTree = "<group>"; };
+		60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KKXib.m"; sourceTree = "<group>"; };
+		60ECDAEC249F5C9500A39F81 /* UIView+KKXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KKXib.h"; sourceTree = "<group>"; };
 		60F1C47F248E10FE006C5A7F /* KKNeteaseGodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNeteaseGodViewController.h; sourceTree = "<group>"; };
 		60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKNeteaseGodViewController.m; sourceTree = "<group>"; };
 		60F1C484248E17CB006C5A7F /* KKBeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBeeViewController.h; sourceTree = "<group>"; };
@@ -1445,6 +1449,8 @@
 				30658A7B22CF29580072CD24 /* UIImage+HVUI.m */,
 				3077A35222BB316200372F07 /* UIView+KExtension.h */,
 				3077A35122BB316200372F07 /* UIView+KExtension.m */,
+				60ECDAEC249F5C9500A39F81 /* UIView+KKXib.h */,
+				60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */,
 				3077A35522BB344D00372F07 /* UILabel+KExtension.h */,
 				3077A35622BB344D00372F07 /* UILabel+KExtension.m */,
 				3077A36122BB363F00372F07 /* UIButton+KExtension.h */,
@@ -2555,6 +2561,7 @@
 				606C7AB524597AAC00BF5C7F /* KKLabelsView.m in Sources */,
 				606C7AE22462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */,
 				603C17792498B67B00C7E480 /* KKPeopleAcitonModel.m in Sources */,
+				60ECDAEE249F5C9500A39F81 /* UIView+KKXib.m in Sources */,
 				30917407237AB37500010E99 /* KKAppIcon.m in Sources */,
 				60C6CFD42389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				60A066B923E86C8300F05457 /* KKDatebaseFormViewController.m in Sources */,
@@ -2722,6 +2729,7 @@
 				606C7AB424597AAC00BF5C7F /* KKLabelsView.m in Sources */,
 				606C7AE12462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */,
 				603C17782498B67B00C7E480 /* KKPeopleAcitonModel.m in Sources */,
+				60ECDAED249F5C9500A39F81 /* UIView+KKXib.m in Sources */,
 				30917406237AB37500010E99 /* KKAppIcon.m in Sources */,
 				60C6CFD32389A41400FABAA3 /* KKProgressHUDViewController.m in Sources */,
 				60A066B823E86C8300F05457 /* KKDatebaseFormViewController.m in Sources */,

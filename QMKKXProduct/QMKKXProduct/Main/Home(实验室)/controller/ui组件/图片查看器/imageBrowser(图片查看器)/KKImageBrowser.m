@@ -14,6 +14,7 @@
 @property (assign, nonatomic) BOOL cacheStatusBarHidden;
 @property (assign, nonatomic) UIView *weakView;
 @property (strong, nonatomic) UIImageView *placeholderView;//占位试图
+@property (strong, nonatomic) UIView *backgroundView;//背景试图
 
 @end
 
@@ -25,7 +26,10 @@
     return self;
 }
 - (void)setupSubviews{
-    self.backgroundColor = KKColor_000000;
+    //
+    self.backgroundView = [[UIView alloc] init];
+    self.backgroundView.backgroundColor = KKColor_000000;
+    [self addSubview:self.backgroundView];
     //
     self.flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.flowLayout.minimumLineSpacing = 0;
@@ -36,14 +40,13 @@
     self.collectionView.bounces = YES;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.backgroundColor = KKColor_FFFFFF;
+    self.collectionView.backgroundColor = KKColor_CLEAR;
     [self addSubview:self.collectionView];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
     [self.collectionView registerClass:[KKImageBrowserCell class] forCellWithReuseIdentifier:@"KKImageBrowserCell"];
     //增加占位图
     self.placeholderView = [[UIImageView alloc] initWithFrame:CGRectZero];
     self.placeholderView.contentMode = UIViewContentModeScaleAspectFit;
-    self.placeholderView.backgroundColor = KKColor_000000;
     [self addSubview:self.placeholderView];
 }
 - (void)removeShow{
@@ -65,14 +68,15 @@
         CGPoint point = window.center;
         f2 = CGRectMake(point.x, point.y, 0, 0);
     }
+    self.collectionView.alpha = 0;
     self.frame = f1;
-    self.collectionView.frame = self.bounds;
+    self.backgroundView.frame = f1;
+    self.backgroundView.alpha = 1;
     self.placeholderView.frame = self.bounds;
     //执行动画
     [UIView animateWithDuration:0.3 animations:^{
-        self.frame = f2;
-        self.collectionView.frame = self.bounds;
-        self.placeholderView.frame = self.bounds;
+        self.backgroundView.alpha = 0;
+        self.placeholderView.frame = f2;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
@@ -105,18 +109,21 @@
         f1 = CGRectMake(point.x, point.y, 0, 0);
     }
     CGRect f2 = window.bounds;
-    self.frame = f1;
+    self.frame = f2;
+    self.backgroundView.frame = f2;
+    self.backgroundView.alpha = 0;
+    self.placeholderView.frame = f1;
+    //集合试图
     self.collectionView.frame = self.bounds;
-    self.placeholderView.frame = self.bounds;
     [self.collectionView reloadData];
+    self.collectionView.alpha = 0;
     [UIView animateWithDuration:0.3 animations:^{
-        self.frame = f2;
-        self.collectionView.frame = self.bounds;
+        self.backgroundView.alpha = 1;
         self.placeholderView.frame = self.bounds;
-        [self.collectionView reloadData];
     } completion:^(BOOL finished) {
         self.collectionView.contentOffset = CGPointMake(index * f2.size.width, 0);
         self.placeholderView.hidden = YES;
+        self.collectionView.alpha = 1;
     }];
     [window addSubview:self];
 }
@@ -165,5 +172,8 @@
     KKImageBrowserModel *cellModel = self.images[indexPath.row];
     self.weakView = cellModel.toView;
     [self.placeholderView kk_setImageWithUrl:cellModel.url.absoluteString];
+}
+- (void)dealloc{
+    NSLog(@"隐藏");
 }
 @end

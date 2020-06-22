@@ -36,10 +36,10 @@
     return self;
 }
 - (void)setupSubviews{
-    self.backgroundColor = KKColor_000000;
+    self.backgroundColor = KKColor_CLEAR;
     //
     self.scrollView = [[UIScrollView alloc] init];
-    self.scrollView.backgroundColor = [UIColor blackColor];
+    self.scrollView.backgroundColor = KKColor_CLEAR;
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.delegate = self;

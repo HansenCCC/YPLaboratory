@@ -21,6 +21,7 @@
 #import "UIImage+KExtension.h"//image
 #import "UIImage+HVUI.h"//image++
 #import "UIView+KExtension.h"//view
+#import "UIView+KKXib.h"//xib相关
 #import "UILabel+KExtension.h"//label
 #import "UIButton+KExtension.h"//button
 #import "UITextField+KExtension.h"//textfield
