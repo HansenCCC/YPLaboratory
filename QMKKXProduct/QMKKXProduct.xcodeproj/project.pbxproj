@@ -259,6 +259,10 @@
 		6002324B23FBED1C005EE419 /* KKBeeAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002324923FBED1B005EE419 /* KKBeeAVPlayerView.m */; };
 		6002327323FD4436005EE419 /* KKBeeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002327223FD4436005EE419 /* KKBeeSlider.m */; };
 		6002327423FD4436005EE419 /* KKBeeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002327223FD4436005EE419 /* KKBeeSlider.m */; };
+		60025F5C24A997E40033522C /* KKGreedySnakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60025F5B24A997E40033522C /* KKGreedySnakeView.m */; };
+		60025F5D24A997E40033522C /* KKGreedySnakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60025F5B24A997E40033522C /* KKGreedySnakeView.m */; };
+		60025F6424A9F8A40033522C /* KKGreedySnakeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60025F6324A9F8A40033522C /* KKGreedySnakeCell.m */; };
+		60025F6524A9F8A40033522C /* KKGreedySnakeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60025F6324A9F8A40033522C /* KKGreedySnakeCell.m */; };
 		6003A90E247CE68100F7F06B /* KKPlayerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003A90D247CE68100F7F06B /* KKPlayerListViewController.m */; };
 		6003A90F247CE68100F7F06B /* KKPlayerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003A90D247CE68100F7F06B /* KKPlayerListViewController.m */; };
 		6003A913247CE95800F7F06B /* KKPlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003A912247CE95800F7F06B /* KKPlayerTableViewCell.m */; };
@@ -277,6 +281,8 @@
 		600A9E4723E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */; };
 		6015E9A9243DCF2A00C9B315 /* KKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6015E9A8243DCF2A00C9B315 /* KKBadgeView.m */; };
 		6015E9AA243DCF2A00C9B315 /* KKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6015E9A8243DCF2A00C9B315 /* KKBadgeView.m */; };
+		60238CF624A7487100BF413D /* KKGreedySnakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60238CF524A7487100BF413D /* KKGreedySnakeViewController.m */; };
+		60238CF724A7487100BF413D /* KKGreedySnakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60238CF524A7487100BF413D /* KKGreedySnakeViewController.m */; };
 		603670A423BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */; };
 		603670A523BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */; };
 		603670A623BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */; };
@@ -433,6 +439,10 @@
 		60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */; };
 		60C6CFEC238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
 		60C6CFED238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
+		60D128AE24B5BA8E00891E6B /* KKRunLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128AD24B5BA8E00891E6B /* KKRunLabelViewController.m */; };
+		60D128AF24B5BA8E00891E6B /* KKRunLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128AD24B5BA8E00891E6B /* KKRunLabelViewController.m */; };
+		60D128B324B5BBC100891E6B /* KKRunLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128B224B5BBC100891E6B /* KKRunLabel.m */; };
+		60D128B424B5BBC100891E6B /* KKRunLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128B224B5BBC100891E6B /* KKRunLabel.m */; };
 		60ECDAED249F5C9500A39F81 /* UIView+KKXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */; };
 		60ECDAEE249F5C9500A39F81 /* UIView+KKXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */; };
 		60F1C481248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */; };
@@ -706,6 +716,10 @@
 		6002324923FBED1B005EE419 /* KKBeeAVPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBeeAVPlayerView.m; sourceTree = "<group>"; };
 		6002327123FD4436005EE419 /* KKBeeSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBeeSlider.h; sourceTree = "<group>"; };
 		6002327223FD4436005EE419 /* KKBeeSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBeeSlider.m; sourceTree = "<group>"; };
+		60025F5A24A997E40033522C /* KKGreedySnakeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKGreedySnakeView.h; sourceTree = "<group>"; };
+		60025F5B24A997E40033522C /* KKGreedySnakeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKGreedySnakeView.m; sourceTree = "<group>"; };
+		60025F6224A9F8A40033522C /* KKGreedySnakeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKGreedySnakeCell.h; sourceTree = "<group>"; };
+		60025F6324A9F8A40033522C /* KKGreedySnakeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKGreedySnakeCell.m; sourceTree = "<group>"; };
 		6003A90C247CE68100F7F06B /* KKPlayerListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPlayerListViewController.h; sourceTree = "<group>"; };
 		6003A90D247CE68100F7F06B /* KKPlayerListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKPlayerListViewController.m; sourceTree = "<group>"; };
 		6003A911247CE95800F7F06B /* KKPlayerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKPlayerTableViewCell.h; sourceTree = "<group>"; };
@@ -722,6 +736,8 @@
 		600A9E4523E5694700ACB002 /* UITableViewCell+KPreviewDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KPreviewDemo.m"; sourceTree = "<group>"; };
 		6015E9A7243DCF2A00C9B315 /* KKBadgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBadgeView.h; sourceTree = "<group>"; };
 		6015E9A8243DCF2A00C9B315 /* KKBadgeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBadgeView.m; sourceTree = "<group>"; };
+		60238CF424A7487100BF413D /* KKGreedySnakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKGreedySnakeViewController.h; sourceTree = "<group>"; };
+		60238CF524A7487100BF413D /* KKGreedySnakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKGreedySnakeViewController.m; sourceTree = "<group>"; };
 		603670A123BF39C4001E3D22 /* KKVideoCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKVideoCameraViewController.h; sourceTree = "<group>"; };
 		603670A223BF39C4001E3D22 /* KKVideoCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKVideoCameraViewController.m; sourceTree = "<group>"; };
 		603670A323BF39C4001E3D22 /* KKVideoCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKVideoCameraViewController.xib; sourceTree = "<group>"; };
@@ -849,6 +865,10 @@
 		60C6CFE7238AEEEE00FABAA3 /* KKFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileViewController.h; sourceTree = "<group>"; };
 		60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileViewController.m; sourceTree = "<group>"; };
 		60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileViewController.xib; sourceTree = "<group>"; };
+		60D128AC24B5BA8E00891E6B /* KKRunLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKRunLabelViewController.h; sourceTree = "<group>"; };
+		60D128AD24B5BA8E00891E6B /* KKRunLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKRunLabelViewController.m; sourceTree = "<group>"; };
+		60D128B124B5BBC100891E6B /* KKRunLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKRunLabel.h; sourceTree = "<group>"; };
+		60D128B224B5BBC100891E6B /* KKRunLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKRunLabel.m; sourceTree = "<group>"; };
 		60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KKXib.m"; sourceTree = "<group>"; };
 		60ECDAEC249F5C9500A39F81 /* UIView+KKXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KKXib.h"; sourceTree = "<group>"; };
 		60F1C47F248E10FE006C5A7F /* KKNeteaseGodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNeteaseGodViewController.h; sourceTree = "<group>"; };
@@ -1003,6 +1023,8 @@
 				3015A056237D33390086B39D /* KKUIUnitViewController.h */,
 				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
+				60D128AB24B5BA5B00891E6B /* 跑马灯效果 */,
+				60238CF324A7481400BF413D /* 贪吃蛇 */,
 				60F685DD249A10BA00994C39 /* 图片查看器 */,
 				6097E5D724971EEA007ECC55 /* 下拉弹框 */,
 				60F1C5BE24921C97006C5A7F /* 支付密码框 */,
@@ -1392,6 +1414,7 @@
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
 				30036DD022B9FBB400605DF7 /* single(单例管理) */,
+				60D128B024B5BB9A00891E6B /* runLabel(跑马灯效果) */,
 				60F685E2249A19D400994C39 /* imageBrowser(图片查看器) */,
 				606C7AB124597A9200BF5C7F /* labels(标签) */,
 				6015E9A6243DCF0600C9B315 /* badge(角标) */,
@@ -1667,6 +1690,17 @@
 			path = "bee定制播放器ui";
 			sourceTree = "<group>";
 		};
+		60025F5924A997B80033522C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				60025F6224A9F8A40033522C /* KKGreedySnakeCell.h */,
+				60025F6324A9F8A40033522C /* KKGreedySnakeCell.m */,
+				60025F5A24A997E40033522C /* KKGreedySnakeView.h */,
+				60025F5B24A997E40033522C /* KKGreedySnakeView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		6003A90B247CE61800F7F06B /* 列表播放器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1724,6 +1758,16 @@
 				6015E9A8243DCF2A00C9B315 /* KKBadgeView.m */,
 			);
 			path = "badge(角标)";
+			sourceTree = "<group>";
+		};
+		60238CF324A7481400BF413D /* 贪吃蛇 */ = {
+			isa = PBXGroup;
+			children = (
+				60025F5924A997B80033522C /* view */,
+				60238CF424A7487100BF413D /* KKGreedySnakeViewController.h */,
+				60238CF524A7487100BF413D /* KKGreedySnakeViewController.m */,
+			);
+			path = "贪吃蛇";
 			sourceTree = "<group>";
 		};
 		603670A023BF390E001E3D22 /* 摄像机模块 */ = {
@@ -2045,6 +2089,24 @@
 				60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */,
 			);
 			path = "文件管理";
+			sourceTree = "<group>";
+		};
+		60D128AB24B5BA5B00891E6B /* 跑马灯效果 */ = {
+			isa = PBXGroup;
+			children = (
+				60D128AC24B5BA8E00891E6B /* KKRunLabelViewController.h */,
+				60D128AD24B5BA8E00891E6B /* KKRunLabelViewController.m */,
+			);
+			path = "跑马灯效果";
+			sourceTree = "<group>";
+		};
+		60D128B024B5BB9A00891E6B /* runLabel(跑马灯效果) */ = {
+			isa = PBXGroup;
+			children = (
+				60D128B124B5BBC100891E6B /* KKRunLabel.h */,
+				60D128B224B5BBC100891E6B /* KKRunLabel.m */,
+			);
+			path = "runLabel(跑马灯效果)";
 			sourceTree = "<group>";
 		};
 		60F1C483248E17A5006C5A7F /* Bee首页样式 */ = {
@@ -2505,6 +2567,7 @@
 				60445C762457FC0400F54BC9 /* KKBadgeViewController.m in Sources */,
 				60F3BE4323DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */,
 				30036DD422B9FC0800605DF7 /* KKUser.m in Sources */,
+				60238CF724A7487100BF413D /* KKGreedySnakeViewController.m in Sources */,
 				6002324123FBCC67005EE419 /* KKAVPlayerViewController.m in Sources */,
 				307C27EC23587A6000DB3ED6 /* KKUserInfoModel.m in Sources */,
 				302897B422C46DEF000F2669 /* KKDistrict.m in Sources */,
@@ -2517,6 +2580,7 @@
 				3077A33B22BA45A500372F07 /* NSData+KExtension.m in Sources */,
 				60F3BE4723DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */,
 				604B04442484D97F00AE672A /* KKThirdFunctionTableViewCell.m in Sources */,
+				60D128B424B5BBC100891E6B /* KKRunLabel.m in Sources */,
 				60F865AC23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */,
 				302897B622C46DEF000F2669 /* KKAddressPickerModel.m in Sources */,
 				30917440237BF5E000010E99 /* KKExamSearchViewController.m in Sources */,
@@ -2591,6 +2655,7 @@
 				60022A7723CDBDCE004F94DB /* KKWeChatMomentsViewController.m in Sources */,
 				60F3BECE23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
 				60F1C5C7249223AB006C5A7F /* KKPayTextField.m in Sources */,
+				60025F5D24A997E40033522C /* KKGreedySnakeView.m in Sources */,
 				302897C622C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A622C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
 				60F1C482248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */,
@@ -2621,6 +2686,7 @@
 				60022A3423C856FB004F94DB /* KKAiteTextField.m in Sources */,
 				302897A222C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33122BA45A400372F07 /* NSObject+KExtension.m in Sources */,
+				60D128AF24B5BA8E00891E6B /* KKRunLabelViewController.m in Sources */,
 				606C7AD5246253D300BF5C7F /* KKFaceTrackViewController.m in Sources */,
 				302897AA22C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
 				600A9E2F23E5338E00ACB002 /* KKDatabase.m in Sources */,
@@ -2648,6 +2714,7 @@
 				3028979622C46DEF000F2669 /* HVUIFlowLayoutConstraint.m in Sources */,
 				60FA64C223ED9272008BD3AD /* UIAlertController+KExtension.m in Sources */,
 				3077A34022BB2FD000372F07 /* UIColor+KExtension.m in Sources */,
+				60025F6524A9F8A40033522C /* KKGreedySnakeCell.m in Sources */,
 				60F3BE4F23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */,
 				3077A36422BB363F00372F07 /* UIButton+KExtension.m in Sources */,
 				60F3BEC023E19DC500447EC2 /* KKImageViewCollectionViewCell.m in Sources */,
@@ -2673,6 +2740,7 @@
 				60445C752457FC0400F54BC9 /* KKBadgeViewController.m in Sources */,
 				60F3BE4223DF02E300447EC2 /* KKWeChatMomentsModel.m in Sources */,
 				30036DD322B9FC0800605DF7 /* KKUser.m in Sources */,
+				60238CF624A7487100BF413D /* KKGreedySnakeViewController.m in Sources */,
 				6002324023FBCC67005EE419 /* KKAVPlayerViewController.m in Sources */,
 				307C27EB23587A6000DB3ED6 /* KKUserInfoModel.m in Sources */,
 				302897B322C46DEF000F2669 /* KKDistrict.m in Sources */,
@@ -2685,6 +2753,7 @@
 				3077A33A22BA45A500372F07 /* NSData+KExtension.m in Sources */,
 				60F3BE4623DFF74100447EC2 /* KKWeChatMomentsCommentModel.m in Sources */,
 				604B04432484D97F00AE672A /* KKThirdFunctionTableViewCell.m in Sources */,
+				60D128B324B5BBC100891E6B /* KKRunLabel.m in Sources */,
 				60F865AB23D1585600CCEA70 /* KKVideoPlayViewController.m in Sources */,
 				302897B522C46DEF000F2669 /* KKAddressPickerModel.m in Sources */,
 				3091743F237BF5E000010E99 /* KKExamSearchViewController.m in Sources */,
@@ -2759,6 +2828,7 @@
 				60022A7623CDBDCE004F94DB /* KKWeChatMomentsViewController.m in Sources */,
 				60F3BECD23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
 				60F1C5C6249223AB006C5A7F /* KKPayTextField.m in Sources */,
+				60025F5C24A997E40033522C /* KKGreedySnakeView.m in Sources */,
 				302897C522C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A522C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
 				60F1C481248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */,
@@ -2789,6 +2859,7 @@
 				60022A3323C856FB004F94DB /* KKAiteTextField.m in Sources */,
 				302897A122C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33022BA45A400372F07 /* NSObject+KExtension.m in Sources */,
+				60D128AE24B5BA8E00891E6B /* KKRunLabelViewController.m in Sources */,
 				606C7AD4246253D300BF5C7F /* KKFaceTrackViewController.m in Sources */,
 				302897A922C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
 				600A9E2E23E5338E00ACB002 /* KKDatabase.m in Sources */,
@@ -2816,6 +2887,7 @@
 				3028979522C46DEF000F2669 /* HVUIFlowLayoutConstraint.m in Sources */,
 				60FA64C123ED9272008BD3AD /* UIAlertController+KExtension.m in Sources */,
 				3077A33F22BB2FD000372F07 /* UIColor+KExtension.m in Sources */,
+				60025F6424A9F8A40033522C /* KKGreedySnakeCell.m in Sources */,
 				60F3BE4E23E04FE600447EC2 /* KKWeChatMomentsLikesView.m in Sources */,
 				3077A36322BB363F00372F07 /* UIButton+KExtension.m in Sources */,
 				60F3BEBF23E19DC500447EC2 /* KKImageViewCollectionViewCell.m in Sources */,

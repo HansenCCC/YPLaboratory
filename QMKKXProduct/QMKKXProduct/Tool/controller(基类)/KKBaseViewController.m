@@ -68,6 +68,9 @@
     BOOL open = self.childViewControllers.count != 1;
     return open;
 }
+#if QMKKXProductDEV//测试环境
+
+#elif QMKKXProduct//正式环境
 #pragma mark - 朝向
 -(BOOL)prefersStatusBarHidden{
     return NO;
@@ -81,4 +84,5 @@
 -(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
     return UIInterfaceOrientationPortrait;
 }
+#endif
 @end

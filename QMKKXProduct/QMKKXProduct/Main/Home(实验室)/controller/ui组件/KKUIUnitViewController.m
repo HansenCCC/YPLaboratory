@@ -27,6 +27,8 @@
 #import "KKPayPasswordViewController.h"//支付密码
 #import "KKDropdownBoxViewController.h"//下拉框
 #import "KKImageBrowserViewController.h"//图片查看器
+#import "KKGreedySnakeViewController.h"//贪吃蛇
+#import "KKRunLabelViewController.h"//跑马灯
 
 @interface KKUIUnitViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -94,9 +96,13 @@
     s20.info = [KKPayPasswordViewController class];
     KKLabelModel *s21 = [[KKLabelModel alloc] initWithTitle:@"下拉选项弹框(基于KKDropdownBoxView)" value:nil];
     s21.info = [KKDropdownBoxViewController class];
-    KKLabelModel *s22 = [[KKLabelModel alloc] initWithTitle:@"图片查看器(基于KKImageBrowser)" value:nil];
+    KKLabelModel *s22 = [[KKLabelModel alloc] initWithTitle:@"仿微信图片查看器(基于KKImageBrowser)" value:nil];
     s22.info = [KKImageBrowserViewController class];
-    [self.datas addObjectsFromArray:@[s19,s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17,s20,s21,s22]];
+    KKLabelModel *s23 = [[KKLabelModel alloc] initWithTitle:@"贪吃蛇" value:nil];
+    s23.info = [KKGreedySnakeViewController class];
+    KKLabelModel *s24 = [[KKLabelModel alloc] initWithTitle:@"跑马灯效果" value:nil];
+    s24.info = [KKRunLabelViewController class];
+    [self.datas addObjectsFromArray:@[s19,s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17,s20,s21,s22,s23,s24]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

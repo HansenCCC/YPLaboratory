@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"图片查看器(基于KKImageBrowser)";
+    self.title = @"仿微信图片查看器(基于KKImageBrowser)";
     self.datas = [[NSMutableArray alloc] init];
     [self setupSubvuews];
     [self updateDatas];
