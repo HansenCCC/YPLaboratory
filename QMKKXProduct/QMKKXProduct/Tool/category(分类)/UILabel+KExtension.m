@@ -11,11 +11,11 @@
 
 @implementation UILabel (KExtension)
 
-- (CGFloat)lineSpacing{
-    NSNumber *number = objc_getAssociatedObject(self, @selector(lineSpacing));
+- (CGFloat)kk_lineSpacing{
+    NSNumber *number = objc_getAssociatedObject(self, @selector(kk_lineSpacing));
     return number.floatValue;
 }
-- (void)setLineSpacing:(CGFloat)lineSpacing{
+- (void)setKk_lineSpacing:(CGFloat)lineSpacing{
     if (self.text.length == 0) {
         return;
     }
