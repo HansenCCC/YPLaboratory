@@ -349,6 +349,10 @@
 		606C7AE22462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AE02462A48E00BF5C7F /* KKRefreshBackNormalFooter.m */; };
 		607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
+		6094E167251DD28F001CE756 /* KKAdaptiveImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6094E166251DD28F001CE756 /* KKAdaptiveImagesViewController.m */; };
+		6094E168251DD28F001CE756 /* KKAdaptiveImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6094E166251DD28F001CE756 /* KKAdaptiveImagesViewController.m */; };
+		6094E170251DD362001CE756 /* KKAdaptiveImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6094E16F251DD362001CE756 /* KKAdaptiveImageTableViewCell.m */; };
+		6094E171251DD362001CE756 /* KKAdaptiveImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6094E16F251DD362001CE756 /* KKAdaptiveImageTableViewCell.m */; };
 		6097E5DA24971F25007ECC55 /* KKDropdownBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5D924971F25007ECC55 /* KKDropdownBoxViewController.m */; };
 		6097E5DB24971F25007ECC55 /* KKDropdownBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5D924971F25007ECC55 /* KKDropdownBoxViewController.m */; };
 		6097E5DF24974050007ECC55 /* kk_icon_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6097E5DC24974050007ECC55 /* kk_icon_menu@2x.png */; };
@@ -802,6 +806,10 @@
 		606C7AE02462A48E00BF5C7F /* KKRefreshBackNormalFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKRefreshBackNormalFooter.m; sourceTree = "<group>"; };
 		607019B023D006A8009078E6 /* KKWeChatMomentsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsTableViewCell.h; sourceTree = "<group>"; };
 		607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsTableViewCell.m; sourceTree = "<group>"; };
+		6094E165251DD28F001CE756 /* KKAdaptiveImagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveImagesViewController.h; sourceTree = "<group>"; };
+		6094E166251DD28F001CE756 /* KKAdaptiveImagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAdaptiveImagesViewController.m; sourceTree = "<group>"; };
+		6094E16E251DD362001CE756 /* KKAdaptiveImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveImageTableViewCell.h; sourceTree = "<group>"; };
+		6094E16F251DD362001CE756 /* KKAdaptiveImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAdaptiveImageTableViewCell.m; sourceTree = "<group>"; };
 		6097E5D824971F25007ECC55 /* KKDropdownBoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDropdownBoxViewController.h; sourceTree = "<group>"; };
 		6097E5D924971F25007ECC55 /* KKDropdownBoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKDropdownBoxViewController.m; sourceTree = "<group>"; };
 		6097E5DC24974050007ECC55 /* kk_icon_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kk_icon_menu@2x.png"; sourceTree = "<group>"; };
@@ -1039,6 +1047,7 @@
 				3015A056237D33390086B39D /* KKUIUnitViewController.h */,
 				3015A057237D33390086B39D /* KKUIUnitViewController.m */,
 				3015A058237D33390086B39D /* KKUIUnitViewController.xib */,
+				6094E164251DD0C7001CE756 /* 自适应图片高度 */,
 				60D128AB24B5BA5B00891E6B /* 跑马灯效果 */,
 				60238CF324A7481400BF413D /* 贪吃蛇 */,
 				60F685DD249A10BA00994C39 /* 图片查看器 */,
@@ -1951,6 +1960,25 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		6094E164251DD0C7001CE756 /* 自适应图片高度 */ = {
+			isa = PBXGroup;
+			children = (
+				6094E16D251DD345001CE756 /* view */,
+				6094E165251DD28F001CE756 /* KKAdaptiveImagesViewController.h */,
+				6094E166251DD28F001CE756 /* KKAdaptiveImagesViewController.m */,
+			);
+			path = "自适应图片高度";
+			sourceTree = "<group>";
+		};
+		6094E16D251DD345001CE756 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6094E16E251DD362001CE756 /* KKAdaptiveImageTableViewCell.h */,
+				6094E16F251DD362001CE756 /* KKAdaptiveImageTableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		6097E5D724971EEA007ECC55 /* 下拉弹框 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2709,6 +2737,7 @@
 				60022A3C23C85919004F94DB /* KKAiteTextField+KExtension.m in Sources */,
 				6003A90F247CE68100F7F06B /* KKPlayerListViewController.m in Sources */,
 				600A9E4323E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */,
+				6094E171251DD362001CE756 /* KKAdaptiveImageTableViewCell.m in Sources */,
 				60022A2F23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */,
 				60F685EA249B40D200994C39 /* KKImageBrowserCell.m in Sources */,
 				3077A33722BA45A400372F07 /* NSString+KExtension.m in Sources */,
@@ -2763,6 +2792,7 @@
 				3077A36422BB363F00372F07 /* UIButton+KExtension.m in Sources */,
 				60F3BEC023E19DC500447EC2 /* KKImageViewCollectionViewCell.m in Sources */,
 				30658A7722CF265F0072CD24 /* KKAVCaptureBaseSessionView.m in Sources */,
+				6094E168251DD28F001CE756 /* KKAdaptiveImagesViewController.m in Sources */,
 				60B6810A238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */,
 				3077A33922BA45A400372F07 /* NSArray+KExtension.m in Sources */,
 				3028979422C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
@@ -2886,6 +2916,7 @@
 				60022A3B23C85919004F94DB /* KKAiteTextField+KExtension.m in Sources */,
 				6003A90E247CE68100F7F06B /* KKPlayerListViewController.m in Sources */,
 				600A9E4223E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */,
+				6094E170251DD362001CE756 /* KKAdaptiveImageTableViewCell.m in Sources */,
 				60022A2E23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */,
 				60F685E9249B40D200994C39 /* KKImageBrowserCell.m in Sources */,
 				3077A33622BA45A400372F07 /* NSString+KExtension.m in Sources */,
@@ -2940,6 +2971,7 @@
 				3077A36322BB363F00372F07 /* UIButton+KExtension.m in Sources */,
 				60F3BEBF23E19DC500447EC2 /* KKImageViewCollectionViewCell.m in Sources */,
 				30658A7622CF265F0072CD24 /* KKAVCaptureBaseSessionView.m in Sources */,
+				6094E167251DD28F001CE756 /* KKAdaptiveImagesViewController.m in Sources */,
 				60B68109238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */,
 				3077A33822BA45A400372F07 /* NSArray+KExtension.m in Sources */,
 				3028979322C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
