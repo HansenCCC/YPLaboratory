@@ -54,6 +54,10 @@
 }
 - (void)__updatePlaceholderViewHidden{
     self.placeholderView.hidden = self.text.length!=0||self.placeholder.length==0;
+    [self layoutSubviews];
+}
+- (void)updatePlaceholderViewHidden{
+    [self __updatePlaceholderViewHidden];
 }
 - (void)layoutSubviews{
     [super layoutSubviews];

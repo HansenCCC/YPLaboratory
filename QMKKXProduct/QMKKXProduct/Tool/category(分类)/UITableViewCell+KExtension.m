@@ -20,7 +20,9 @@ DEF_SINGLETON(UITableViewCell);
     UITableView *tableView = (UITableView *)self.superview;
     if ([tableView isKindOfClass:[UITableView class]]) {
         NSIndexPath *indexPath = [tableView indexPathForCell:self];
-        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        if (indexPath) {
+            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
     }
 }
 

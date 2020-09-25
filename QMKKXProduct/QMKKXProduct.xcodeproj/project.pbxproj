@@ -363,6 +363,14 @@
 		6097E5EE24977EDE007ECC55 /* KKWeChatPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5EC24977EDE007ECC55 /* KKWeChatPayModel.m */; };
 		6097E5F124977F04007ECC55 /* KKAliPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5F024977F04007ECC55 /* KKAliPayModel.m */; };
 		6097E5F224977F04007ECC55 /* KKAliPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097E5F024977F04007ECC55 /* KKAliPayModel.m */; };
+		6099414E250089CE00FF8486 /* KKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099414C250089CE00FF8486 /* KKTextViewController.m */; };
+		6099414F250089CE00FF8486 /* KKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099414C250089CE00FF8486 /* KKTextViewController.m */; };
+		60994150250089CE00FF8486 /* KKTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099414D250089CE00FF8486 /* KKTextFieldViewController.m */; };
+		60994151250089CE00FF8486 /* KKTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099414D250089CE00FF8486 /* KKTextFieldViewController.m */; };
+		6099415725008B8900FF8486 /* KKAiteTextView+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099415425008B8900FF8486 /* KKAiteTextView+KExtension.m */; };
+		6099415825008B8900FF8486 /* KKAiteTextView+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099415425008B8900FF8486 /* KKAiteTextView+KExtension.m */; };
+		6099415925008B8900FF8486 /* KKAiteTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099415525008B8900FF8486 /* KKAiteTextView.m */; };
+		6099415A25008B8900FF8486 /* KKAiteTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099415525008B8900FF8486 /* KKAiteTextView.m */; };
 		609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
 		609EC2A023E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
 		609EC2A923E7C3D0003BB61C /* KKDatabaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC2A723E7C3D0003BB61C /* KKDatabaseDetailViewController.m */; };
@@ -805,6 +813,14 @@
 		6097E5EC24977EDE007ECC55 /* KKWeChatPayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatPayModel.m; sourceTree = "<group>"; };
 		6097E5EF24977F04007ECC55 /* KKAliPayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAliPayModel.h; sourceTree = "<group>"; };
 		6097E5F024977F04007ECC55 /* KKAliPayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAliPayModel.m; sourceTree = "<group>"; };
+		6099414A250089CE00FF8486 /* KKTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKTextFieldViewController.h; sourceTree = "<group>"; };
+		6099414B250089CE00FF8486 /* KKTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKTextViewController.h; sourceTree = "<group>"; };
+		6099414C250089CE00FF8486 /* KKTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKTextViewController.m; sourceTree = "<group>"; };
+		6099414D250089CE00FF8486 /* KKTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKTextFieldViewController.m; sourceTree = "<group>"; };
+		6099415325008B8900FF8486 /* KKAiteTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKAiteTextView.h; sourceTree = "<group>"; };
+		6099415425008B8900FF8486 /* KKAiteTextView+KExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KKAiteTextView+KExtension.m"; sourceTree = "<group>"; };
+		6099415525008B8900FF8486 /* KKAiteTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKAiteTextView.m; sourceTree = "<group>"; };
+		6099415625008B8900FF8486 /* KKAiteTextView+KExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KKAiteTextView+KExtension.h"; sourceTree = "<group>"; };
 		609EC29D23E7207C003BB61C /* KKAdaptiveTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveTableViewCell.h; sourceTree = "<group>"; };
 		609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAdaptiveTableViewCell.m; sourceTree = "<group>"; };
 		609EC2A623E7C3D0003BB61C /* KKDatabaseDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDatabaseDetailViewController.h; sourceTree = "<group>"; };
@@ -1347,6 +1363,7 @@
 			children = (
 				3028978C22C46DEE000F2669 /* KKTextView.h */,
 				3028978D22C46DEE000F2669 /* KKTextView.m */,
+				6099415225008B8900FF8486 /* @人(可换行进阶版) */,
 			);
 			path = textView;
 			sourceTree = "<group>";
@@ -1413,6 +1430,7 @@
 			isa = PBXGroup;
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
+				60994149250089CE00FF8486 /* inputBox(输入框控制器) */,
 				30036DD022B9FBB400605DF7 /* single(单例管理) */,
 				60D128B024B5BB9A00891E6B /* runLabel(跑马灯效果) */,
 				60F685E2249A19D400994C39 /* imageBrowser(图片查看器) */,
@@ -1953,6 +1971,28 @@
 				6097E5EC24977EDE007ECC55 /* KKWeChatPayModel.m */,
 			);
 			path = payManager;
+			sourceTree = "<group>";
+		};
+		60994149250089CE00FF8486 /* inputBox(输入框控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				6099414B250089CE00FF8486 /* KKTextViewController.h */,
+				6099414C250089CE00FF8486 /* KKTextViewController.m */,
+				6099414A250089CE00FF8486 /* KKTextFieldViewController.h */,
+				6099414D250089CE00FF8486 /* KKTextFieldViewController.m */,
+			);
+			path = "inputBox(输入框控制器)";
+			sourceTree = "<group>";
+		};
+		6099415225008B8900FF8486 /* @人(可换行进阶版) */ = {
+			isa = PBXGroup;
+			children = (
+				6099415325008B8900FF8486 /* KKAiteTextView.h */,
+				6099415525008B8900FF8486 /* KKAiteTextView.m */,
+				6099415625008B8900FF8486 /* KKAiteTextView+KExtension.h */,
+				6099415425008B8900FF8486 /* KKAiteTextView+KExtension.m */,
+			);
+			path = "@人(可换行进阶版)";
 			sourceTree = "<group>";
 		};
 		60B68105238B013800E3F6B7 /* view */ = {
@@ -2610,6 +2650,7 @@
 				607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */,
 				60022A1023C5756D004F94DB /* UITextField+KExtension.m in Sources */,
 				3028979A22C46DEF000F2669 /* KKImagePickerController.m in Sources */,
+				6099415A25008B8900FF8486 /* KKAiteTextView.m in Sources */,
 				30E20783237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
 				3015A05A237D33390086B39D /* KKUIUnitViewController.m in Sources */,
 				3077A34822BB303500372F07 /* UIImageView+KExtension.m in Sources */,
@@ -2618,6 +2659,7 @@
 				6002324B23FBED1C005EE419 /* KKBeeAVPlayerView.m in Sources */,
 				30917413237AD79900010E99 /* KKColorPickAlert.m in Sources */,
 				606C7ACC2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */,
+				6099414F250089CE00FF8486 /* KKTextViewController.m in Sources */,
 				30CEE7B02334E8F7006CF794 /* KKCountdownButton.m in Sources */,
 				6097E5EE24977EDE007ECC55 /* KKWeChatPayModel.m in Sources */,
 				3077A35022BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
@@ -2637,6 +2679,7 @@
 				30202FCB23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
 				605F668B23F3152F00AA62C5 /* KKWeChatTextViewTableViewCell.m in Sources */,
 				60C6CFC523884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */,
+				60994151250089CE00FF8486 /* KKTextFieldViewController.m in Sources */,
 				609EC2AA23E7C3D0003BB61C /* KKDatabaseDetailViewController.m in Sources */,
 				30658A6F22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
 				60F3BEC823E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m in Sources */,
@@ -2707,6 +2750,7 @@
 				606C7ADE24628DD600BF5C7F /* KKCustomCameraViewController.m in Sources */,
 				30658A7322CF265F0072CD24 /* KKPhotoSessionView.m in Sources */,
 				302897BC22C46DEF000F2669 /* KKEmptyDataView.m in Sources */,
+				6099415825008B8900FF8486 /* KKAiteTextView+KExtension.m in Sources */,
 				60B68135238CD21100E3F6B7 /* KKCollectionViewFlowLayout.m in Sources */,
 				3029A08F22C4A49B002E7937 /* AppDelegate+KKThird.m in Sources */,
 				60463DD323F39C4D00D9A376 /* KKWeChatImageListTableViewCell.m in Sources */,
@@ -2783,6 +2827,7 @@
 				607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */,
 				60022A0F23C5756D004F94DB /* UITextField+KExtension.m in Sources */,
 				3028979922C46DEF000F2669 /* KKImagePickerController.m in Sources */,
+				6099415925008B8900FF8486 /* KKAiteTextView.m in Sources */,
 				30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
 				3015A059237D33390086B39D /* KKUIUnitViewController.m in Sources */,
 				3077A34722BB303500372F07 /* UIImageView+KExtension.m in Sources */,
@@ -2791,6 +2836,7 @@
 				6002324A23FBED1C005EE419 /* KKBeeAVPlayerView.m in Sources */,
 				30917412237AD79900010E99 /* KKColorPickAlert.m in Sources */,
 				606C7ACB2461C1B800BF5C7F /* KKMPMoviePlayerController.m in Sources */,
+				6099414E250089CE00FF8486 /* KKTextViewController.m in Sources */,
 				30CEE7AF2334E8F7006CF794 /* KKCountdownButton.m in Sources */,
 				6097E5ED24977EDE007ECC55 /* KKWeChatPayModel.m in Sources */,
 				3077A34F22BB306100372F07 /* UINavigationBar+KExtension.m in Sources */,
@@ -2810,6 +2856,7 @@
 				30202FCA23793D9A00F1AADA /* AppDelegate+KKConfig.m in Sources */,
 				605F668A23F3152F00AA62C5 /* KKWeChatTextViewTableViewCell.m in Sources */,
 				60C6CFC423884E7200FABAA3 /* KKSwitchTableViewCell.m in Sources */,
+				60994150250089CE00FF8486 /* KKTextFieldViewController.m in Sources */,
 				609EC2A923E7C3D0003BB61C /* KKDatabaseDetailViewController.m in Sources */,
 				30658A6E22CF265F0072CD24 /* KKIDCardScanBackgroundView.m in Sources */,
 				60F3BEC723E1A9BA00447EC2 /* KKWeChatCommentTableViewCell.m in Sources */,
@@ -2880,6 +2927,7 @@
 				606C7ADD24628DD600BF5C7F /* KKCustomCameraViewController.m in Sources */,
 				30658A7222CF265F0072CD24 /* KKPhotoSessionView.m in Sources */,
 				302897BB22C46DEF000F2669 /* KKEmptyDataView.m in Sources */,
+				6099415725008B8900FF8486 /* KKAiteTextView+KExtension.m in Sources */,
 				60B68134238CD21100E3F6B7 /* KKCollectionViewFlowLayout.m in Sources */,
 				3029A08E22C4A49B002E7937 /* AppDelegate+KKThird.m in Sources */,
 				60463DD223F39C4D00D9A376 /* KKWeChatImageListTableViewCell.m in Sources */,

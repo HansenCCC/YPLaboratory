@@ -80,5 +80,8 @@
 #import "KKDropdownBoxView.h"
 //imageBrowser(图片查看器)
 #import "KKImageBrowser.h"
+//文本输入
+#import "KKTextViewController.h"
+#import "KKTextFieldViewController.h"
 
 #endif /* KKToolHeader_h */
