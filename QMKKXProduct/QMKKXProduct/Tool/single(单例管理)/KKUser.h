@@ -19,6 +19,7 @@
 @property (readonly, nonatomic) NSString *appType;//1石器盒子，0夺宝盒子  目前暂时考虑检查更新
 @property (readonly, nonatomic) NSString *iosType;//IOS下载包类型 1:企业 2:APPSTORE
 @property (readonly, nonatomic) NSString *startImg;//启动图片地址
+@property (readonly, nonatomic) NSString *channel;//渠道id
 @property (readonly, nonatomic) KKUserInfoModel *userModel;//用户登录信息
 
 + (instancetype)shareInstance;//标准初始化

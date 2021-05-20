@@ -94,13 +94,13 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     return;
-    //取消选中状态
-    KKLabelModel *cellModel = self.datas[indexPath.row];
-    KKPeopleAcitonModel *reslut = cellModel.info;
-    Class vcClass = NSClassFromString(reslut.value);
-    if (vcClass) {
-        [self pushViewControllerClass:vcClass animated:YES];
-    }
+//    //取消选中状态
+//    KKLabelModel *cellModel = self.datas[indexPath.row];
+//    KKPeopleAcitonModel *reslut = cellModel.info;
+//    Class vcClass = NSClassFromString(reslut.value);
+//    if (vcClass) {
+//        [self pushViewControllerClass:vcClass animated:YES];
+//    }
 }
 #pragma mark - aciton
 //通用跳转方法

@@ -14,7 +14,7 @@ extern NSString *const kNSNotificationCenterDidRegister;//注册成功
 extern NSString *const kNSNotificationCenterFailedRegister;// 注册失败
 extern NSString *const kNSNotificationCenterUserInfoUpdate;//用户信息更新
 
-
+extern NSString *const kNSNotificationCenterUserClickPush;//用户点击通知栏
 extern NSString *const kNSNotificationCenterQMKKXAuthLogin;//唤起QMKKX授权界面
 
 //第三方支付相关

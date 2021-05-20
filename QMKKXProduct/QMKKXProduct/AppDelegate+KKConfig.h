@@ -11,8 +11,6 @@
 
 @interface AppDelegate (KKConfig)
 
-//iq键盘配置
-- (void)IQKeyBoradConfig;
 //获取配置（退出登录和重新登录需要重新请求）
 - (void)setupConfig;
 

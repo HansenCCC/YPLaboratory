@@ -11,10 +11,16 @@
 
 @interface AppDelegate (KKThird)
 
-//cleanCloud SDK初始化
-- (void)setupAVOSCloud;
-
-
+//添加初始化JPush代码
+- (void)jpushInitDidFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
+//注册通知
+- (void)registerUserNotification;
+//监听网络测试
+- (void)listenNetworkReachabilityStatus;
+//iq键盘配置
+- (void)keyboardManagerConfig;
+//bugle崩溃监控
+- (void)buglyConfigure;
 @end
 
 

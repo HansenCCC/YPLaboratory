@@ -42,6 +42,9 @@ static NSString *kNSUserDefaultsStartImg = @"kNSUserDefaultsStartImg";//启动�
 - (NSString *)platform{
     return @"2";
 }
+- (NSString *)channel{
+    return @"10000";
+}
 - (BOOL)isLogin{
     return self.userModel.isLogin;
 }

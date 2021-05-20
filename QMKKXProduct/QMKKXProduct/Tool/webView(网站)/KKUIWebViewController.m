@@ -75,6 +75,7 @@
     [configuration.userContentController addScriptMessageHandler:self name:@"MetooLogin"];
     [configuration.userContentController addScriptMessageHandler:self name:@"closePage"];
     [configuration.userContentController addScriptMessageHandler:self name:@"toLogin"];
+    [configuration.userContentController addScriptMessageHandler:self name:@"feedBack"];
 }
 //移除js交互
 - (void)removeScriptMessageHandlerForName{
@@ -203,6 +204,8 @@
         }else if ([message.name isEqualToString:@"MetooLogin"]||[message.name isEqualToString:@"toLogin"]) {
             //弹起登录框
             [[KKUser shareInstance] postNotificationToLogging];
+        }else if ([message.name isEqualToString:@"feedBack"]) {
+            NSLog(@"%@",message.name);
         }
     });
 }

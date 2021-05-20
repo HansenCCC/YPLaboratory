@@ -29,13 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onReq:(BaseReq*)req;
 
 
-
-/*! @brief 发送一个sendReq后，收到微信的回应
- *
- * 收到一个来自微信的处理结果。调用一次sendReq后会收到onResp。
- * 可能收到的处理结果有SendMessageToWXResp、SendAuthResp等。
- * @param resp具体的回应内容，是自动释放的
- */
+/// 发送一个sendReq后，收到微信的回应
+/// 收到一个来自微信的处理结果。调用一次sendReq后会收到onResp。
+/// 可能收到的处理结果有SendMessageToWXResp、SendAuthResp等。
+/// @param resp resp具体的回应内容，是自动释放的
 - (void)onResp:(BaseResp*)resp;
 
 @end
@@ -62,7 +59,6 @@ NS_ASSUME_NONNULL_BEGIN
  * iOS7及以上系统需要调起一次微信才会出现在微信的可用应用列表中。
  * @attention 请保证在主线程中调用此函数
  * @param appid 微信开发者ID
- * @param typeFlag 应用支持打开的文件类型
  * @return 成功返回YES，失败返回NO。
  */
 + (BOOL)registerApp:(NSString *)appid;
@@ -188,7 +184,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)startLogByLevel:(WXLogLevel)level logDelegate:(id<WXApiLogDelegate>)logDelegate;
 
 /*! @brief 停止打印log，会清理block或者delegate为空，释放block
- *  @param 
  */
 + (void)stopLog;
 @end

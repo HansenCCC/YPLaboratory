@@ -80,7 +80,7 @@ static NSString *OK = @"success";
             [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         }
     }
-    [manager GET:url parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager GET:url parameters:data headers:@{} progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         KKBaseResponse *response = [KKBaseResponse mj_objectWithKeyValues:responseObject];
         if ([response.status isEqualToString:OK]){
@@ -110,6 +110,10 @@ static NSString *OK = @"success";
     NSDictionary *dictionary = @{
                                  @"token":[KKUser shareInstance].token?:@"",
                                  };
+    NSDictionary *headerDictionary = @{
+        @"token":[KKUser shareInstance].token?:@"",//登陆状态token
+        @"Content-Type":@"application/json",//后端接收格式
+    };
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
     [data addEntriesFromDictionary:parameters];
     NSLog(@"*******************************************************");
@@ -120,16 +124,8 @@ static NSString *OK = @"success";
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer.timeoutInterval = timeoutInterval?:kTimeoutInterval;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/*", nil];
-    //注册请求类型必须声明为json
-    NSString *key = @"isUserAFJSONRequestSerializer";
-    if ([data.allKeys containsObject:key]) {
-        BOOL flag = [data objectForKey:key];
-        if (flag) {
-            manager.requestSerializer = [AFJSONRequestSerializer serializer];
-            [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        }
-    }
-    [manager POST:url parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [manager POST:url parameters:data headers:headerDictionary progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         KKBaseResponse *response = [KKBaseResponse mj_objectWithKeyValues:responseObject];
         if ([response.status isEqualToString:OK]){
@@ -148,7 +144,6 @@ static NSString *OK = @"success";
         }
     }];
 }
-
 
 #pragma mark - 错误信息
 + (NSError *)errorCatch:(NSError *)error {

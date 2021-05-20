@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		124A4F5D3D20DE3E6D2B5231 /* libPods-QMKKXProductDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D97E42EE617F05749659758D /* libPods-QMKKXProductDev.a */; };
 		30036DA922B9D76900605DF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30036DA822B9D76900605DF7 /* AppDelegate.m */; };
 		30036DAF22B9D76900605DF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30036DAD22B9D76900605DF7 /* Main.storyboard */; };
 		30036DB122B9D76B00605DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30036DB022B9D76B00605DF7 /* Assets.xcassets */; };
@@ -236,7 +235,7 @@
 		30E20785237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E20781237975AA00EE3E8E /* KKLabStudioViewController.xib */; };
 		30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */; };
 		30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F8ADB322D5F12200382827 /* KKDropdownBoxView.m */; };
-		5B93B02036A012D1C70F57FD /* libPods-QMKKXProduct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */; };
+		3AB93A5AC81492B648C269F6 /* Pods_QMKKXProductDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5578E10DC0F16747B3F8A29 /* Pods_QMKKXProductDev.framework */; };
 		60022A0F23C5756D004F94DB /* UITextField+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 60022A0E23C5756D004F94DB /* UITextField+KExtension.m */; };
 		60022A1023C5756D004F94DB /* UITextField+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 60022A0E23C5756D004F94DB /* UITextField+KExtension.m */; };
 		60022A2E23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60022A2D23C853D1004F94DB /* KKSinaAiteViewController.m */; };
@@ -455,6 +454,7 @@
 		60D128AF24B5BA8E00891E6B /* KKRunLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128AD24B5BA8E00891E6B /* KKRunLabelViewController.m */; };
 		60D128B324B5BBC100891E6B /* KKRunLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128B224B5BBC100891E6B /* KKRunLabel.m */; };
 		60D128B424B5BBC100891E6B /* KKRunLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128B224B5BBC100891E6B /* KKRunLabel.m */; };
+		60D290947C5052B2F76BE4FF /* Pods_QMKKXProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FBF4AB36D97B0B02D7068 /* Pods_QMKKXProduct.framework */; };
 		60ECDAED249F5C9500A39F81 /* UIView+KKXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */; };
 		60ECDAEE249F5C9500A39F81 /* UIView+KKXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */; };
 		60F1C481248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */; };
@@ -931,9 +931,9 @@
 		60FA64BF23ED9272008BD3AD /* UIAlertController+KExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+KExtension.h"; sourceTree = "<group>"; };
 		60FA64C023ED9272008BD3AD /* UIAlertController+KExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+KExtension.m"; sourceTree = "<group>"; };
 		6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.debug.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.debug.xcconfig"; sourceTree = "<group>"; };
-		8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QMKKXProduct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		802FBF4AB36D97B0B02D7068 /* Pods_QMKKXProduct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QMKKXProduct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProductDev.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev.release.xcconfig"; sourceTree = "<group>"; };
-		D97E42EE617F05749659758D /* libPods-QMKKXProductDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QMKKXProductDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5578E10DC0F16747B3F8A29 /* Pods_QMKKXProductDev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QMKKXProductDev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2336606067C1CE1E5B879B0 /* Pods-QMKKXProductDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProductDev.debug.xcconfig"; path = "Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -948,7 +948,7 @@
 				604B04592484EC9600AE672A /* libWeChatSDK.a in Frameworks */,
 				604B041C2484CF3B00AE672A /* CoreGraphics.framework in Frameworks */,
 				604B041B2484CF3600AE672A /* Security.framework in Frameworks */,
-				124A4F5D3D20DE3E6D2B5231 /* libPods-QMKKXProductDev.a in Frameworks */,
+				3AB93A5AC81492B648C269F6 /* Pods_QMKKXProductDev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,7 +962,7 @@
 				604B04582484EC9600AE672A /* libWeChatSDK.a in Frameworks */,
 				604B04182484CF2400AE672A /* CoreGraphics.framework in Frameworks */,
 				604B04162484CF1B00AE672A /* Security.framework in Frameworks */,
-				5B93B02036A012D1C70F57FD /* libPods-QMKKXProduct.a in Frameworks */,
+				60D290947C5052B2F76BE4FF /* Pods_QMKKXProduct.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2314,8 +2314,8 @@
 				604B04192484CF2B00AE672A /* WebKit.framework */,
 				604B04172484CF2400AE672A /* CoreGraphics.framework */,
 				604B04152484CF1B00AE672A /* Security.framework */,
-				8324EE3611341B4CB6C8BC61 /* libPods-QMKKXProduct.a */,
-				D97E42EE617F05749659758D /* libPods-QMKKXProductDev.a */,
+				802FBF4AB36D97B0B02D7068 /* Pods_QMKKXProduct.framework */,
+				B5578E10DC0F16747B3F8A29 /* Pods_QMKKXProductDev.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2331,7 +2331,7 @@
 				30036DA022B9D76900605DF7 /* Sources */,
 				30036DA122B9D76900605DF7 /* Frameworks */,
 				30036DA222B9D76900605DF7 /* Resources */,
-				C683275AFDC27C04BAA840B3 /* [CP] Copy Pods Resources */,
+				FA5E0F7ACAD29912D73EF053 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2350,7 +2350,7 @@
 				30036DBF22B9DDC500605DF7 /* Sources */,
 				30036DC322B9DDC500605DF7 /* Frameworks */,
 				30036DC422B9DDC500605DF7 /* Resources */,
-				741EDD49FEF37B6797C35153 /* [CP] Copy Pods Resources */,
+				1C7ABBFED817D30124A932C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2567,38 +2567,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		741EDD49FEF37B6797C35153 /* [CP] Copy Pods Resources */ = {
+		1C7ABBFED817D30124A932C7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C683275AFDC27C04BAA840B3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E3BB4EDCC8C48209C17961C0 /* [CP] Check Pods Manifest.lock */ = {
@@ -2621,6 +2604,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA5E0F7ACAD29912D73EF053 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3063,7 +3063,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3118,7 +3118,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -3131,8 +3131,10 @@
 			baseConfigurationReference = E2336606067C1CE1E5B879B0 /* Pods-QMKKXProductDev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KTGQMS6CPU;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3.3.1;
+				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/AliSDK15.7.6",
@@ -3152,9 +3154,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/WeChatSDK1.8.7.1\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkxDev;
+				MARKETING_VERSION = 3.3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Distribution-com.*";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3164,8 +3167,10 @@
 			baseConfigurationReference = ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KTGQMS6CPU;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3.3.1;
+				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/AliSDK15.7.6",
@@ -3185,9 +3190,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/WeChatSDK1.8.7.1\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkxDev;
+				MARKETING_VERSION = 3.3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Distribution-com.*";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3197,8 +3203,10 @@
 			baseConfigurationReference = 6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KTGQMS6CPU;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3.3.1;
+				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/AliSDK15.7.6",
@@ -3218,9 +3226,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/WeChatSDK1.8.7.1\"",
 				);
+				MARKETING_VERSION = 3.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Distribution-com.*";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3230,8 +3239,10 @@
 			baseConfigurationReference = 5183A5B7580215A285039901 /* Pods-QMKKXProduct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KTGQMS6CPU;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3.3.1;
+				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/AliSDK15.7.6",
@@ -3251,9 +3262,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/WeChatSDK1.8.7.1\"",
 				);
+				MARKETING_VERSION = 3.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Distribution-com.*";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

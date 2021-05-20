@@ -17,7 +17,7 @@ NSString *const kNSNotificationCenterDidRegister = @"kNSNotificationCenterDidReg
 NSString *const kNSNotificationCenterFailedRegister = @"kNSNotificationCenterFailedRegister";// 注册失败
 NSString *const kNSNotificationCenterUserInfoUpdate = @"kNSNotificationCenterUserInfoUpdate";//用户信息更新
 
-
+NSString *const kNSNotificationCenterUserClickPush = @"kNSNotificationCenterUserClickPush";//用户点击通知栏
 NSString *const kNSNotificationCenterQMKKXAuthLogin = @"kNSNotificationCenterQMKKXAuthLogin";//唤起QMKKX授权界面
 
 //第三方支付相关

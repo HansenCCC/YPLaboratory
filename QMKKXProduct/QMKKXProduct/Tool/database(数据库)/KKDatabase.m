@@ -30,7 +30,6 @@
 + (instancetype)databaseWithPath:(NSString *)dbPath{
     KKDatabase *database = [[self alloc] init];
     database.dbPath = dbPath;
-    NSLog(@"数据库地址:\n%@\n",dbPath);
     return database;
 }
 //指定创建db路径

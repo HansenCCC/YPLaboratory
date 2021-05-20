@@ -112,8 +112,11 @@
     UIView  *winView =(UIView*)[UIApplication sharedApplication].delegate.window;
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    [self hideAllHUDsForView:winView animated:YES];
-    [self hideAllHUDsForView:[self getCurrentUIVC].view animated:YES];
+    [self hideHUDForView:winView animated:YES];
+    [self hideHUDForView:[self getCurrentUIVC].view animated:YES];
+    //废弃的旧方法
+//    [self hideAllHUDsForView:winView animated:YES];
+//    [self hideAllHUDsForView:[self getCurrentUIVC].view animated:YES];
 #pragma clang diagnostic pop
 }
 //获取当前屏幕显示的viewcontroller

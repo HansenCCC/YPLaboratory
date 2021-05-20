@@ -90,7 +90,7 @@
         vc.requestURL = url;
         [self presentViewController:nav animated:YES completion:nil];
     }else if(indexPath.row == 1){
-        NSString *path = @"https://www.baidu.com/";
+        NSString *path = @"http://test.tvimg.cn/moto_html/feedback2.html";
         KKUIWebViewController *vc = [[KKUIWebViewController alloc] init];
         KKNavigationController *nav = [[KKNavigationController alloc] initWithRootViewController:vc];
         vc.requestURL = path.toURL;

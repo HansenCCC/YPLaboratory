@@ -22,10 +22,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self setupAVOSCloud];
-    [self IQKeyBoradConfig];
+    [self jpushInitDidFinishLaunchingWithOptions:launchOptions];//添加初始化JPush代码
+    [self registerUserNotification];//注册通知
+    [self listenNetworkReachabilityStatus];//网络监控
+    [self keyboardManagerConfig];//键盘防遮盖输入框
+    [self buglyConfigure];//bugle 闪退崩溃记录
     [self setupConfig];//配置
     [self setRootViewController];
+    //log
+    NSString *docuPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"🚀🚀🚀\n文件存储地址：%@\n🚀🚀🚀",docuPath);
     return YES;
 }
 //设置根试图
@@ -39,7 +45,6 @@
 //指定页面禁止使用第三方键盘
 - (BOOL)application:(UIApplication *)application shouldAllowExtensionPointIdentifier:(UIApplicationExtensionPointIdentifier)extensionPointIdentifier{
     NSArray *vcClass = @[
-                         
                          ];
     for (Class a in vcClass) {
         if ([self.window.topViewController isKindOfClass:a]) {
@@ -54,23 +59,5 @@
     //由vc控制
     UIInterfaceOrientationMask orientationMask = [vc supportedInterfaceOrientations];
     return orientationMask;
-}
-#pragma mark - iOS 9.0 以后  支付、分享、回调openURL相关
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options{
-    NSString *urlStr = url.absoluteString;
-    if([urlStr.lowercaseString containsString:kQMKKXAuthLogin.lowercaseString]){
-        //qmkkx跳转授权页面
-        [[KKUser shareInstance] postNotificationToQMKKXAuthLogin:urlStr];
-        return YES;
-    }
-    //第三方支付回调
-    if ([url.host isEqualToString:@"safepay"]) {
-        //支付跳转支付宝钱包进行支付，处理支付结果
-        return [[KKPayManager sharedInstance] aliPayHandleOpenURL:url];
-    }else if([url.host isEqualToString:@"pay"]||[url.host isEqualToString:@"oauth"]){
-        //支付跳转微信钱包进行支付，处理支付结果
-        return [[KKPayManager sharedInstance] weChatHandleOpenURL:url];
-    }
-    return YES;
 }
 @end
