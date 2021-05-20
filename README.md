@@ -227,7 +227,10 @@ GitHub更新的并不是很勤快，偷闲随机更新。
 
 3、[脚本自动化批量修改ipa的icon、启动图、APP名称等(demo只修改icon，其他原理一样)、重签ipa][3]
 
+4、[QMKKXProduct iOS技术分享][4]
+
 
   [1]: https://github.com/HansenCCC/KKQuickDraw
   [2]: https://github.com/HansenCCC/HSAddUdids
   [3]: https://github.com/HansenCCC/HSIPAReplaceIcon
+  [4]: https://github.com/HansenCCC/QMKKXProduct
