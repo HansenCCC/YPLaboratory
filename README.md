@@ -2,9 +2,9 @@
 
 #### QMKKXProduct 页面展示
 
-<img src="http://i1.fuimg.com/737869/872ec7e077f65fec.png" width="400">
+<img src="http://i1.fuimg.com/737869/872ec7e077f65fec.png" width="600">
 
-<img src="http://i1.fuimg.com/737869/01b801e066c1cb7c.png" width="400">
+<img src="http://i1.fuimg.com/737869/01b801e066c1cb7c.png" width="600">
 
 # QMKKXProduct 说明
 
@@ -126,6 +126,7 @@ pod 'JPush','3.2.4-noidfa'
 ```
 
 #### 基础介绍
+```
 > •api
 接口需要写在KKNetworkApi.h文件
 网络请求调用KKNetworkBase.h里面的方法
@@ -165,8 +166,10 @@ MacOSX的系统文件模板位置
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/
 用户自定义模板位置
 ~/Library/Developer/Xcode/Templates
+```
 
 #### 代码提交规范
+```
 > •feat：新功能（feature）
 > •fix：修补bug
 > •docs：文档（documentation）
@@ -174,19 +177,23 @@ MacOSX的系统文件模板位置
 > •refactor：重构（即不是新增功能，也不是修改bug的代码变动）
 > •test：增加测试
 > •chore：构建过程或辅助工具的变动
-
+```
 
 ----------
 
 
 # 自述
 
-> 普通开发，15年8月份入坑做iOS，已经五六年了吧。
+普通开发，15年8月份入坑做iOS，已经五六年了吧。
+
 喜欢封装一些工具和研究一些东西，平时很少用轮子，是那种喜欢造轮子的人。
-<img src="http://i1.fuimg.com/737869/899a0d9bb8d8716e.png" width="400">
+
 GitHub更新的并不是很勤快，偷闲随机更新。
+
 写QMKKXProduct发到GitHub，希望能帮到刚入坑iOS开发的小伙伴。项目是用Objective-C写的，如果是学习Swift的小伙伴也可以用来参考。
+
 大部分都是一些常用UI，希望我代码的逻辑、风格、写法和规范能对您有所帮助。
+
 钱不是存出来的，打工最多也就一套房子一套车。自己还是想搞点事情的。（这里是一条广告：所以呢，有问题可以联系我，有偿无偿都可以。）
 
 
@@ -198,3 +205,19 @@ GitHub更新的并不是很勤快，偷闲随机更新。
 #### Copyright © 2019 力王. All rights reserved.
 #### QQ:2534550460@qq.com  GitHub:https://github.com/HansenCCC  tel:13767141841
 #### copy请标明出处，感谢，谢谢阅读
+
+
+----------
+
+#### 你还对这些感兴趣吗
+
+1、[iOS实现HTML H5秒开、拦截请求替换资源、优化HTML加载速度][1]
+
+2、[超级签名中最重要的一步：跳过双重认证，自动化脚本添加udid并下载描述文件（证书和bundleid不存在时，会自动创建）][2]
+
+3、[脚本自动化批量修改ipa的icon、启动图、APP名称等(demo只修改icon，其他原理一样)、重签ipa][3]
+
+
+  [1]: https://github.com/HansenCCC/KKQuickDraw
+  [2]: https://github.com/HansenCCC/HSAddUdids
+  [3]: https://github.com/HansenCCC/HSIPAReplaceIcon
