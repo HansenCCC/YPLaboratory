@@ -48,6 +48,7 @@
     KKLabelModel *s1m4 = [[KKLabelModel alloc] initWithTitle:@"网络图片下载" value:nil];
     s1m4.info = [KKSDWebViewController class];
     KKLabelModel *s1m5 = [[KKLabelModel alloc] initWithTitle:@"API网络层" value:nil];
+    s1m5.isEnabled = NO;
     s1m5.info = [KKNetworkViewController class];
     KKLabelModel *s1m6 = [[KKLabelModel alloc] initWithTitle:@"UI组件" value:nil];
     s1m6.info = [KKUIUnitViewController class];
@@ -68,7 +69,8 @@
     KKLabelModel *s1m16 = [[KKLabelModel alloc] initWithTitle:@"第三方分享&登陆&支付" value:nil];
     s1m16.info = [KKThirdFunctionViewController class];
     KKLabelModel *s1mMax = [[KKLabelModel alloc] initWithTitle:@"鸣谢支持" value:nil];
-    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m2,s1m4,s1m5,s1m9,s1m15,s1m16,s1m10,s1m11,s1m3,s1m13,s1m12,s1m14,s1mMax]];
+//    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m2,s1m4,s1m5,s1m9,s1m15,s1m16,s1m10,s1m11,s1m3,s1m13,s1m12,s1m14,s1mMax]];
+    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m2,s1m4,s1m9,s1m16,s1m10,s1m3,s1m13,s1m14,s1m5,s1m15,s1mMax]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
