@@ -8,7 +8,7 @@
 
 #import "KKBaseViewController.h"
 
-@interface KKBaseViewController ()<UIGestureRecognizerDelegate>
+@interface KKBaseViewController ()
 @property (nonatomic, strong) UIButton *backButton;
 
 @end
@@ -25,9 +25,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = KKColor_FFFFFF;
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.delegate = self;
-    }
     [self setupNavBackItem];
 }
 - (void)setupNavBackItem{
@@ -60,13 +57,6 @@
 - (void)dealloc{
     NSLog(@"释放了==========[%@ --- deallloc]=========",NSStringFromClass([self class]));
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-#pragma mark - UIGestureRecognizerDelegate
-//当手势开始滑动作用：拦截手势触发
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-    //子控制器个数只剩下一个(这一个就是根控制器),手势不可用
-    BOOL open = self.childViewControllers.count != 1;
-    return open;
 }
 #if QMKKXProductDEV//测试环境
 
