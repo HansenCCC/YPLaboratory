@@ -201,6 +201,21 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.cellModel.images.count;
 }
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSMutableArray *datas = [[NSMutableArray alloc] init];
+    for (int i = 0; i < self.cellModel.images.count; i ++) {
+        NSString *image = self.cellModel.images[i];
+        KKImageBrowserModel *model = [[KKImageBrowserModel alloc] initWithUrl:image.toURL type:KKImageBrowserImageType];
+        NSIndexPath *index = [NSIndexPath indexPathForRow:i inSection:0];
+        UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:index];
+        model.toView = cell;
+        [datas addObject:model];
+    }
+    KKImageBrowser *view = [[KKImageBrowser alloc] init];
+    view.images = datas;
+    view.index = indexPath.row;
+    [view show];
+}
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     KKWeChatMomentsCommentModel *cellModel = self.cellModel.comments[indexPath.row];
