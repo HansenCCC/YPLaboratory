@@ -65,11 +65,11 @@
 #pragma mark-------------------- show Image----------------------------
 + (void)showSuccessMessage:(NSString *)Message{
     [self hideHUD];
-    NSString *name =@"MBHUD_Success";
+    NSString *name =@"kk_icon_success";
     [self showCustomIconInWindow:name message:Message];
 }
 + (void)showErrorMessage:(NSString *)Message{
-    NSString *name =@"MBHUD_Error";
+    NSString *name =@"kk_icon_fail";
     [self showCustomIconInWindow:name message:Message];
 }
 + (void)showInfoMessage:(NSString *)Message{
@@ -90,12 +90,15 @@
     MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow];
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:iconName]];
     hud.mode = MBProgressHUDModeCustomView;
-    hud.margin = AdaptedWidth(10.f);
+    hud.margin = AdaptedWidth(8.f);
     hud.label.numberOfLines = 0;
-    hud.label.textColor = KKColor_000000;
+    hud.label.textColor = KKColor_FFFFFF;
     hud.label.font = AdaptedFontSize(15.f);
-    hud.bezelView.backgroundColor = KKColor_999999;
+    hud.bezelView.color = [UIColor colorWithWhite:0 alpha:0.65];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     [hud hideAnimated:YES afterDelay:aTimer];
+    hud.bezelView.layer.cornerRadius = AdaptedWidth(13.f);
+    [hud setNeedsUpdateConstraints];
     return hud;
 }
 + (void)ShowProgeressBarHUDInWindow:(NSString*)message{

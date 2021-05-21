@@ -806,6 +806,8 @@
 		606C7AE02462A48E00BF5C7F /* KKRefreshBackNormalFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKRefreshBackNormalFooter.m; sourceTree = "<group>"; };
 		607019B023D006A8009078E6 /* KKWeChatMomentsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWeChatMomentsTableViewCell.h; sourceTree = "<group>"; };
 		607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsTableViewCell.m; sourceTree = "<group>"; };
+		6071FF8C2657525100FE5754 /* QMKKXProduct.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QMKKXProduct.entitlements; sourceTree = "<group>"; };
+		6071FF8F2657525900FE5754 /* QMKKXProductDev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QMKKXProductDev.entitlements; sourceTree = "<group>"; };
 		6094E165251DD28F001CE756 /* KKAdaptiveImagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveImagesViewController.h; sourceTree = "<group>"; };
 		6094E166251DD28F001CE756 /* KKAdaptiveImagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAdaptiveImagesViewController.m; sourceTree = "<group>"; };
 		6094E16E251DD362001CE756 /* KKAdaptiveImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveImageTableViewCell.h; sourceTree = "<group>"; };
@@ -991,6 +993,8 @@
 		30036DA622B9D76900605DF7 /* QMKKXProduct */ = {
 			isa = PBXGroup;
 			children = (
+				6071FF8F2657525900FE5754 /* QMKKXProductDev.entitlements */,
+				6071FF8C2657525100FE5754 /* QMKKXProduct.entitlements */,
 				30036DA722B9D76900605DF7 /* AppDelegate.h */,
 				30036DA822B9D76900605DF7 /* AppDelegate.m */,
 				3029A08C22C4A49B002E7937 /* AppDelegate+KKThird.h */,
@@ -3131,6 +3135,7 @@
 			baseConfigurationReference = E2336606067C1CE1E5B879B0 /* Pods-QMKKXProductDev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
+				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProductDev.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3.3.1;
@@ -3167,6 +3172,7 @@
 			baseConfigurationReference = ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
+				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProductDev.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3.3.1;
@@ -3203,6 +3209,7 @@
 			baseConfigurationReference = 6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProduct.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3.3.1;
@@ -3239,6 +3246,7 @@
 			baseConfigurationReference = 5183A5B7580215A285039901 /* Pods-QMKKXProduct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProduct.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3.3.1;

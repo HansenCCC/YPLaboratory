@@ -28,6 +28,10 @@
     //异步处理消耗内存操作
     [self reloadDatas];
 }
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.tableView.mj_header beginRefreshing];
+}
 - (void)setupSubviews{
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
@@ -64,8 +68,8 @@
             [self.datas addObject:element];
         }
     }
-    [self.tableView.mj_header endRefreshing];
     [self.tableView reloadData];
+    [self.tableView.mj_header endRefreshing];
 }
 #pragma mark - lazy load
 - (NSMutableArray<KKWeChatMomentsModel *> *)datas{

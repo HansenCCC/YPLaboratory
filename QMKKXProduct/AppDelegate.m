@@ -29,6 +29,12 @@
     [self buglyConfigure];//bugle 闪退崩溃记录
     [self setupConfig];//配置
     [self setRootViewController];
+    //关闭黑夜模式
+    if (@available(iOS 13.0, *)) {
+        self.window.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
+    } else {
+        // Fallback on earlier versions
+    }
     //log
     NSString *docuPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSLog(@"🚀🚀🚀\n文件存储地址：%@\n🚀🚀🚀",docuPath);

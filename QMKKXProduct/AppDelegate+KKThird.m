@@ -13,7 +13,7 @@
 #import <Bugly/Bugly.h>
 #import "KKPayManager.h"//支付管理
 
-#define kJPushAppKey @"a6e51105a33ab62c18f1b79e"//极光推送key
+#define kJPushAppKey @"6d07b5c0eec2ef820228c45f"//极光推送key
 #define kBuglyAppId @"e336771932"//apiiidapiiid
 
 @interface AppDelegate (KKThird)<JPUSHRegisterDelegate,BuglyDelegate>

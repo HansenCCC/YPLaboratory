@@ -77,10 +77,29 @@
     for (KKLabelModel *model in self.datas) {
         if ([model.title isEqualToString:@"想法"]) {
             content = model.value;
+            //to do
+            NSArray *items = @[
+                @"每次我一个人走夜路都好害怕，天这么黑，我这么美，真怕别人看不见啊。",
+                @"谁说“念念不忘，必有回响”，喜欢的人从没搭理过我，想一夜暴富，也从没实现过。",
+                @"有个员工买了个杯子，上面印着“我要涨工资”，每每开会都要把这几个字冲着老板。终于有一天，老板也买了个杯子，上面写着“滚蛋”！",
+                @"每次在街上看见很瘦的人，我都想分些肉给她，因为我有一颗善良的心。",
+                @"大家都是：情不知所起，一往而深；唯独我不一样，我是：钱不知所去，一贫如洗。",
+                @"逛商场要走时门口保安喊我：“等一下，你衣服鼓鼓囊囊的装了什么？”我愤怒地掀起大衣吼：“是肉，是肉！我自己的。”",
+                @"那些过不去的坎，还不都是因为你腿短！",
+                @"别人都是笑起来很好看，但是你却不一样，你是看起来很好笑。",
+                @"永远不要和父母吵架，因为你吵不赢的时候只有挨骂，当你吵得赢的时候只有挨打。",
+                @"有钱有脸叫男神，有钱没脸叫老公，有脸没钱叫蓝颜，至于没钱没脸的，对不起你是个好人……啊，多么痛的领悟！",
+                @"长得丑但身材好是一种什么体验？”“背看倾国倾城，正看忧国忧民。",
+                @"扪心自问，如果你是别人，你愿意和自己搞对象么？”“想都不敢想，哪有这种福气！",
+                @"有些女人穿丝袜，显得身材好。还有一些女人穿丝袜，显得丝袜质量好。",
+            ];
+            //随机
+            long rand = (random() * @([NSDate date].timeIntervalSince1970).intValue)%items.count;
+            content = items[rand];
         }else if ([model.title isEqualToString:@"图片"]) {
             NSMutableArray *items = [[NSMutableArray alloc] init];
             for (UIImage *image in model.info) {
-                [items addObject:@"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1640434779,3971610929&fm=26&gp=0.jpg"];
+                [items addObject:@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201303%2F16%2F173710lvx470i4348z6i6z.jpg&refer=http%3A%2F%2Fattach.bbs.miui.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624172590&t=3ac6e04d3208dfd8f6c7acbee1f52a6a"];
                 NSLog(@"#%@",image);
             }
             images = [items copy];
