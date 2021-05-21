@@ -1,6 +1,10 @@
 # QMKKXProduct
 
-[![Build Status](http://i2.tiimg.com/737869/066bc16ba89fa4e2.png)](https://github.com/AFNetworking/AFNetworking/actions)
+[![Build Status](https://img.shields.io/badge/Github-QMKKXProduct-brightgreen.svg)](https://github.com/HansenCCC/QMKKXProduct)
+[![Build Status](https://img.shields.io/badge/platform-ios-orange.svg)](https://github.com/HansenCCC/QMKKXProduct)
+[![Build Status](https://img.shields.io/badge/HansenCCC-Github-blue.svg)](https://github.com/HansenCCC)
+[![Build Status](https://img.shields.io/badge/HansenCCC-知乎-lightgrey.svg)](https://www.zhihu.com/people/EngCCC)
+
 
 iOS技术分享（APP图标制作、仿微信朋友圈、仿微信图片查看器、防新浪@人、仿支付宝密码弹框、仿发圈、标签、js交互+wk、加载网页、自适应cell高度、TableView嵌入播放器防卡顿、定制好看弹框、选择地址、选择时间、选择颜色、导航自定义控制、轮播图、二维码扫描、人脸追踪、自定义相机、身份证拍照、ios播放器、AVPlayer封装、下拉选项弹框、贪吃蛇、跑马灯、TableView自适应高度、原生图片下载缓存、文件夹操作、数据库操作、三方登录、分享、支付、Apple安装协议、App之间传值、鸣谢支持）
 
@@ -183,6 +187,12 @@ MacOSX的系统文件模板位置
 > •chore：构建过程或辅助工具的变动
 ```
 
+#### 如何编译项目
+```
+//项目并没有提交pods文件，需要用cocoapods安装库。只需要用终端cd 到项目目录，执行pod install
+pod install
+
+```
 ----------
 
 
@@ -223,7 +233,10 @@ GitHub更新的并不是很勤快，偷闲随机更新。
 
 3、[脚本自动化批量修改ipa的icon、启动图、APP名称等(demo只修改icon，其他原理一样)、重签ipa][3]
 
+4、[QMKKXProduct iOS技术分享][4]
+
 
   [1]: https://github.com/HansenCCC/KKQuickDraw
   [2]: https://github.com/HansenCCC/HSAddUdids
   [3]: https://github.com/HansenCCC/HSIPAReplaceIcon
+  [4]: https://github.com/HansenCCC/QMKKXProduct
