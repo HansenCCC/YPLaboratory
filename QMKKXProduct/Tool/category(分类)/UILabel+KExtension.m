@@ -22,7 +22,7 @@
     //设置值
     objc_setAssociatedObject(self, @selector(lineSpacing),@(lineSpacing), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     //to do
-    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:self.attributedText];
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:self.attributedText.string];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.lineSpacing = lineSpacing;
     paragraphStyle.alignment = self.textAlignment;

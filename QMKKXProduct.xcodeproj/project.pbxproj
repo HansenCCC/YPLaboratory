@@ -310,16 +310,6 @@
 		604B04442484D97F00AE672A /* KKThirdFunctionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 604B04412484D97F00AE672A /* KKThirdFunctionTableViewCell.m */; };
 		604B04452484D97F00AE672A /* KKThirdFunctionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604B04422484D97F00AE672A /* KKThirdFunctionTableViewCell.xib */; };
 		604B04462484D97F00AE672A /* KKThirdFunctionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604B04422484D97F00AE672A /* KKThirdFunctionTableViewCell.xib */; };
-		604B04562484EC9600AE672A /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 604B04512484EC9500AE672A /* README.txt */; };
-		604B04572484EC9600AE672A /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 604B04512484EC9500AE672A /* README.txt */; };
-		604B04582484EC9600AE672A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 604B04542484EC9600AE672A /* libWeChatSDK.a */; };
-		604B04592484EC9600AE672A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 604B04542484EC9600AE672A /* libWeChatSDK.a */; };
-		604B045D24867F4D00AE672A /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 604B045B24867F4C00AE672A /* AlipaySDK.bundle */; };
-		604B045E24867F4D00AE672A /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 604B045B24867F4C00AE672A /* AlipaySDK.bundle */; };
-		604B045F24867F4D00AE672A /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604B045C24867F4D00AE672A /* AlipaySDK.framework */; };
-		604B046024867F4D00AE672A /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604B045C24867F4D00AE672A /* AlipaySDK.framework */; };
-		604B046224867F9700AE672A /* updatelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 604B046124867F9700AE672A /* updatelog.txt */; };
-		604B046324867F9700AE672A /* updatelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 604B046124867F9700AE672A /* updatelog.txt */; };
 		605611CA23E98D6D00DBA792 /* KKFormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 605611C823E98D6D00DBA792 /* KKFormTableViewCell.m */; };
 		605611CB23E98D6D00DBA792 /* KKFormTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 605611C823E98D6D00DBA792 /* KKFormTableViewCell.m */; };
 		605611CC23E98D6D00DBA792 /* KKFormTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605611C923E98D6D00DBA792 /* KKFormTableViewCell.xib */; };
@@ -455,6 +445,14 @@
 		60D128B324B5BBC100891E6B /* KKRunLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128B224B5BBC100891E6B /* KKRunLabel.m */; };
 		60D128B424B5BBC100891E6B /* KKRunLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128B224B5BBC100891E6B /* KKRunLabel.m */; };
 		60D290947C5052B2F76BE4FF /* Pods_QMKKXProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FBF4AB36D97B0B02D7068 /* Pods_QMKKXProduct.framework */; };
+		60E8ABCB2657A4B3007446A6 /* KKApplePayManner.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E8ABCA2657A4B3007446A6 /* KKApplePayManner.m */; };
+		60E8ABCC2657A4B3007446A6 /* KKApplePayManner.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E8ABCA2657A4B3007446A6 /* KKApplePayManner.m */; };
+		60E8ABD22657A619007446A6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E8ABD12657A619007446A6 /* StoreKit.framework */; };
+		60E8ABD32657A623007446A6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E8ABD12657A619007446A6 /* StoreKit.framework */; };
+		60E8ABD82657A911007446A6 /* KKApplePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E8ABD62657A911007446A6 /* KKApplePayViewController.m */; };
+		60E8ABD92657A911007446A6 /* KKApplePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E8ABD62657A911007446A6 /* KKApplePayViewController.m */; };
+		60E8ABDA2657A911007446A6 /* KKApplePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E8ABD72657A911007446A6 /* KKApplePayViewController.xib */; };
+		60E8ABDB2657A911007446A6 /* KKApplePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E8ABD72657A911007446A6 /* KKApplePayViewController.xib */; };
 		60ECDAED249F5C9500A39F81 /* UIView+KKXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */; };
 		60ECDAEE249F5C9500A39F81 /* UIView+KKXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */; };
 		60F1C481248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1C480248E10FE006C5A7F /* KKNeteaseGodViewController.m */; };
@@ -772,14 +770,6 @@
 		604B04402484D97F00AE672A /* KKThirdFunctionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKThirdFunctionTableViewCell.h; sourceTree = "<group>"; };
 		604B04412484D97F00AE672A /* KKThirdFunctionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKThirdFunctionTableViewCell.m; sourceTree = "<group>"; };
 		604B04422484D97F00AE672A /* KKThirdFunctionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKThirdFunctionTableViewCell.xib; sourceTree = "<group>"; };
-		604B04512484EC9500AE672A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		604B04522484EC9500AE672A /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		604B04532484EC9500AE672A /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		604B04542484EC9600AE672A /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		604B04552484EC9600AE672A /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
-		604B045B24867F4C00AE672A /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
-		604B045C24867F4D00AE672A /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
-		604B046124867F9700AE672A /* updatelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = updatelog.txt; sourceTree = "<group>"; };
 		605611C723E98D6D00DBA792 /* KKFormTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFormTableViewCell.h; sourceTree = "<group>"; };
 		605611C823E98D6D00DBA792 /* KKFormTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFormTableViewCell.m; sourceTree = "<group>"; };
 		605611C923E98D6D00DBA792 /* KKFormTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFormTableViewCell.xib; sourceTree = "<group>"; };
@@ -895,6 +885,12 @@
 		60D128AD24B5BA8E00891E6B /* KKRunLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKRunLabelViewController.m; sourceTree = "<group>"; };
 		60D128B124B5BBC100891E6B /* KKRunLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKRunLabel.h; sourceTree = "<group>"; };
 		60D128B224B5BBC100891E6B /* KKRunLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKRunLabel.m; sourceTree = "<group>"; };
+		60E8ABC92657A4B3007446A6 /* KKApplePayManner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKApplePayManner.h; sourceTree = "<group>"; };
+		60E8ABCA2657A4B3007446A6 /* KKApplePayManner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKApplePayManner.m; sourceTree = "<group>"; };
+		60E8ABD12657A619007446A6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		60E8ABD52657A911007446A6 /* KKApplePayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKApplePayViewController.h; sourceTree = "<group>"; };
+		60E8ABD62657A911007446A6 /* KKApplePayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKApplePayViewController.m; sourceTree = "<group>"; };
+		60E8ABD72657A911007446A6 /* KKApplePayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKApplePayViewController.xib; sourceTree = "<group>"; };
 		60ECDAEB249F5C9500A39F81 /* UIView+KKXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KKXib.m"; sourceTree = "<group>"; };
 		60ECDAEC249F5C9500A39F81 /* UIView+KKXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KKXib.h"; sourceTree = "<group>"; };
 		60F1C47F248E10FE006C5A7F /* KKNeteaseGodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKNeteaseGodViewController.h; sourceTree = "<group>"; };
@@ -944,10 +940,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604B046024867F4D00AE672A /* AlipaySDK.framework in Frameworks */,
 				604B04202484CF7000AE672A /* libc++.tbd in Frameworks */,
 				604B041D2484CF3F00AE672A /* WebKit.framework in Frameworks */,
-				604B04592484EC9600AE672A /* libWeChatSDK.a in Frameworks */,
+				60E8ABD32657A623007446A6 /* StoreKit.framework in Frameworks */,
 				604B041C2484CF3B00AE672A /* CoreGraphics.framework in Frameworks */,
 				604B041B2484CF3600AE672A /* Security.framework in Frameworks */,
 				3AB93A5AC81492B648C269F6 /* Pods_QMKKXProductDev.framework in Frameworks */,
@@ -958,10 +953,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604B045F24867F4D00AE672A /* AlipaySDK.framework in Frameworks */,
 				604B041F2484CF6900AE672A /* libc++.tbd in Frameworks */,
 				604B041A2484CF2B00AE672A /* WebKit.framework in Frameworks */,
-				604B04582484EC9600AE672A /* libWeChatSDK.a in Frameworks */,
+				60E8ABD22657A619007446A6 /* StoreKit.framework in Frameworks */,
 				604B04182484CF2400AE672A /* CoreGraphics.framework in Frameworks */,
 				604B04162484CF1B00AE672A /* Security.framework in Frameworks */,
 				60D290947C5052B2F76BE4FF /* Pods_QMKKXProduct.framework in Frameworks */,
@@ -1161,10 +1155,12 @@
 		30202FEA23795F8B00F1AADA /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				60E8ABD42657A79C007446A6 /* 苹果内购 */,
+				604B04032484A0DA00AE672A /* 第三方分享&登陆&支付 */,
 				30E2077E2379758800EE3E8E /* 工作台 */,
+				60F3BEC923E1D83400447EC2 /* 数据库 */,
 				30917444237C26C900010E99 /* 网络图片下载 */,
 				60C6CFDF238AE6AF00FABAA3 /* 文件管理 */,
-				60F3BEC923E1D83400447EC2 /* 数据库 */,
 				3091741E237BE80000010E99 /* 英语专业考试 */,
 				3015A050237D31D80086B39D /* API网络层 */,
 				30202FED2379618800F1AADA /* app图片制作 */,
@@ -1172,7 +1168,6 @@
 				60B6811D238CCF8700E3F6B7 /* C语言绘图(Core Graphics) */,
 				60B6811E238CCF8E00E3F6B7 /* OC语言绘图(UIBezierPath) */,
 				3015A04F237D31C00086B39D /* ui组件 */,
-				604B04032484A0DA00AE672A /* 第三方分享&登陆&支付 */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1443,6 +1438,7 @@
 			isa = PBXGroup;
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
+				60E8ABC82657A483007446A6 /* applePay */,
 				60994149250089CE00FF8486 /* inputBox(输入框控制器) */,
 				30036DD022B9FBB400605DF7 /* single(单例管理) */,
 				60D128B024B5BB9A00891E6B /* runLabel(跑马灯效果) */,
@@ -1850,8 +1846,6 @@
 				6097E5EA24977AAF007ECC55 /* payManager */,
 				604B04042484A17B00AE672A /* KKThirdFunctionViewController.h */,
 				604B04052484A17B00AE672A /* KKThirdFunctionViewController.m */,
-				604B045A24867F0D00AE672A /* AliSDK15.7.6 */,
-				604B04472484E71E00AE672A /* WeChatSDK1.8.7.1 */,
 				604B043B2484D8BE00AE672A /* view */,
 			);
 			path = "第三方分享&登陆&支付";
@@ -1865,28 +1859,6 @@
 				604B04422484D97F00AE672A /* KKThirdFunctionTableViewCell.xib */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		604B04472484E71E00AE672A /* WeChatSDK1.8.7.1 */ = {
-			isa = PBXGroup;
-			children = (
-				604B04512484EC9500AE672A /* README.txt */,
-				604B04542484EC9600AE672A /* libWeChatSDK.a */,
-				604B04552484EC9600AE672A /* WechatAuthSDK.h */,
-				604B04522484EC9500AE672A /* WXApi.h */,
-				604B04532484EC9500AE672A /* WXApiObject.h */,
-			);
-			path = WeChatSDK1.8.7.1;
-			sourceTree = "<group>";
-		};
-		604B045A24867F0D00AE672A /* AliSDK15.7.6 */ = {
-			isa = PBXGroup;
-			children = (
-				604B046124867F9700AE672A /* updatelog.txt */,
-				604B045B24867F4C00AE672A /* AlipaySDK.bundle */,
-				604B045C24867F4D00AE672A /* AlipaySDK.framework */,
-			);
-			path = AliSDK15.7.6;
 			sourceTree = "<group>";
 		};
 		605611C623E98CBD00DBA792 /* view */ = {
@@ -2181,6 +2153,25 @@
 			path = "runLabel(跑马灯效果)";
 			sourceTree = "<group>";
 		};
+		60E8ABC82657A483007446A6 /* applePay */ = {
+			isa = PBXGroup;
+			children = (
+				60E8ABC92657A4B3007446A6 /* KKApplePayManner.h */,
+				60E8ABCA2657A4B3007446A6 /* KKApplePayManner.m */,
+			);
+			path = applePay;
+			sourceTree = "<group>";
+		};
+		60E8ABD42657A79C007446A6 /* 苹果内购 */ = {
+			isa = PBXGroup;
+			children = (
+				60E8ABD52657A911007446A6 /* KKApplePayViewController.h */,
+				60E8ABD62657A911007446A6 /* KKApplePayViewController.m */,
+				60E8ABD72657A911007446A6 /* KKApplePayViewController.xib */,
+			);
+			path = "苹果内购";
+			sourceTree = "<group>";
+		};
 		60F1C483248E17A5006C5A7F /* Bee首页样式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2314,6 +2305,7 @@
 		C0C29A5B01E14A39AFE7F40F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60E8ABD12657A619007446A6 /* StoreKit.framework */,
 				604B041E2484CF6800AE672A /* libc++.tbd */,
 				604B04192484CF2B00AE672A /* WebKit.framework */,
 				604B04172484CF2400AE672A /* CoreGraphics.framework */,
@@ -2406,13 +2398,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604B046324867F9700AE672A /* updatelog.txt in Resources */,
 				60BA347E23EC6AC700A2A249 /* KKCustomAlertViewController.xib in Resources */,
 				600A9E3823E5524500ACB002 /* KKTableViewCellViewController.xib in Resources */,
 				300CC09D237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */,
 				60022A7923CDBDCE004F94DB /* KKWeChatMomentsViewController.xib in Resources */,
 				30917442237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */,
-				604B04572484EC9600AE672A /* README.txt in Resources */,
 				60B6810C238B017300E3F6B7 /* KKFileCollectionViewCell.xib in Resources */,
 				6097E5E024974050007ECC55 /* kk_icon_menu@2x.png in Resources */,
 				30202FF4237961AB00F1AADA /* KKAppIconMakerViewController.xib in Resources */,
@@ -2461,13 +2451,13 @@
 				6097E5E224974051007ECC55 /* kk_icon_menu@3x.png in Resources */,
 				609EC2AC23E7C3D0003BB61C /* KKDatabaseDetailViewController.xib in Resources */,
 				603670A723BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */,
-				604B045E24867F4D00AE672A /* AlipaySDK.bundle in Resources */,
 				30917431237BEC9900010E99 /* 2阅读.json in Resources */,
 				605611CD23E98D6D00DBA792 /* KKFormTableViewCell.xib in Resources */,
 				30658A6522CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 				3015A05C237D33390086B39D /* KKUIUnitViewController.xib in Resources */,
 				600A9E3E23E5615E00ACB002 /* cells.json in Resources */,
+				60E8ABDB2657A911007446A6 /* KKApplePayViewController.xib in Resources */,
 				605F668723F30C6900AA62C5 /* KKReleaseWXMomentsViewController.xib in Resources */,
 				30E20785237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
 				60C6CFD62389A41400FABAA3 /* KKProgressHUDViewController.xib in Resources */,
@@ -2478,13 +2468,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604B046224867F9700AE672A /* updatelog.txt in Resources */,
 				60BA347D23EC6AC700A2A249 /* KKCustomAlertViewController.xib in Resources */,
 				600A9E3723E5524500ACB002 /* KKTableViewCellViewController.xib in Resources */,
 				300CC09C237A5C5C00983BD1 /* KKLabelTableViewCell.xib in Resources */,
 				60022A7823CDBDCE004F94DB /* KKWeChatMomentsViewController.xib in Resources */,
 				30917441237BF5E000010E99 /* KKExamSearchViewController.xib in Resources */,
-				604B04562484EC9600AE672A /* README.txt in Resources */,
 				60B6810B238B017300E3F6B7 /* KKFileCollectionViewCell.xib in Resources */,
 				6097E5DF24974050007ECC55 /* kk_icon_menu@2x.png in Resources */,
 				30202FF3237961AB00F1AADA /* KKAppIconMakerViewController.xib in Resources */,
@@ -2533,13 +2521,13 @@
 				6097E5E124974051007ECC55 /* kk_icon_menu@3x.png in Resources */,
 				609EC2AB23E7C3D0003BB61C /* KKDatabaseDetailViewController.xib in Resources */,
 				603670A623BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */,
-				604B045D24867F4D00AE672A /* AlipaySDK.bundle in Resources */,
 				30917430237BEC9900010E99 /* 2阅读.json in Resources */,
 				605611CC23E98D6D00DBA792 /* KKFormTableViewCell.xib in Resources */,
 				30658A6422CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6022CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 				3015A05B237D33390086B39D /* KKUIUnitViewController.xib in Resources */,
 				600A9E3D23E5615E00ACB002 /* cells.json in Resources */,
+				60E8ABDA2657A911007446A6 /* KKApplePayViewController.xib in Resources */,
 				605F668623F30C6900AA62C5 /* KKReleaseWXMomentsViewController.xib in Resources */,
 				30E20784237975AA00EE3E8E /* KKLabStudioViewController.xib in Resources */,
 				60C6CFD52389A41400FABAA3 /* KKProgressHUDViewController.xib in Resources */,
@@ -2666,6 +2654,7 @@
 				30F8ADB522D5F12200382827 /* KKDropdownBoxView.m in Sources */,
 				6097E5F224977F04007ECC55 /* KKAliPayModel.m in Sources */,
 				603C177D2498B75500C7E480 /* KKNavigationController+KKAciton.m in Sources */,
+				60E8ABCC2657A4B3007446A6 /* KKApplePayManner.m in Sources */,
 				605F668523F30C6900AA62C5 /* KKReleaseWXMomentsViewController.m in Sources */,
 				60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
 				603670A523BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */,
@@ -2731,6 +2720,7 @@
 				60F3BECE23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
 				60F1C5C7249223AB006C5A7F /* KKPayTextField.m in Sources */,
 				60025F5D24A997E40033522C /* KKGreedySnakeView.m in Sources */,
+				60E8ABD92657A911007446A6 /* KKApplePayViewController.m in Sources */,
 				302897C622C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A622C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
 				60F1C482248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */,
@@ -2845,6 +2835,7 @@
 				30F8ADB422D5F12200382827 /* KKDropdownBoxView.m in Sources */,
 				6097E5F124977F04007ECC55 /* KKAliPayModel.m in Sources */,
 				603C177C2498B75500C7E480 /* KKNavigationController+KKAciton.m in Sources */,
+				60E8ABCB2657A4B3007446A6 /* KKApplePayManner.m in Sources */,
 				605F668423F30C6900AA62C5 /* KKReleaseWXMomentsViewController.m in Sources */,
 				60C6CFEA238AEEEE00FABAA3 /* KKFileViewController.m in Sources */,
 				603670A423BF39C4001E3D22 /* KKVideoCameraViewController.m in Sources */,
@@ -2910,6 +2901,7 @@
 				60F3BECD23E1D88E00447EC2 /* KKDatabaseViewController.m in Sources */,
 				60F1C5C6249223AB006C5A7F /* KKPayTextField.m in Sources */,
 				60025F5C24A997E40033522C /* KKGreedySnakeView.m in Sources */,
+				60E8ABD82657A911007446A6 /* KKApplePayViewController.m in Sources */,
 				302897C522C46DEF000F2669 /* KKInputToolBar.m in Sources */,
 				302897A522C46DEF000F2669 /* KKPresentAnimation.m in Sources */,
 				60F1C481248E10FE006C5A7F /* KKNeteaseGodViewController.m in Sources */,
@@ -3138,7 +3130,7 @@
 				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProductDev.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.3.1;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3175,7 +3167,7 @@
 				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProductDev.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.3.1;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3212,7 +3204,7 @@
 				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProduct.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.3.1;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3249,7 +3241,7 @@
 				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProduct.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.3.1;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

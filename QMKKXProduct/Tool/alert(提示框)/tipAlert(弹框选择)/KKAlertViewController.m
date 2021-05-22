@@ -13,7 +13,6 @@
 @property (strong ,nonatomic) UIButton *rightBtn;
 @property (strong ,nonatomic) UILabel *titleLabel;
 @property (strong ,nonatomic) UILabel *textLabel;
-@property (strong ,nonatomic) UIButton *closeButton;
 @property (strong ,nonatomic) UIView *markView;
 
 @end
@@ -24,10 +23,10 @@
         self.canTouchBeginMove = NO;
         self.isShowCloseButton = YES;
         self.isOnlyOneButton = NO;
+        self.contentWidth = AdaptedWidth(260.f);
     }
     return self;
 }
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -35,17 +34,30 @@
     self.view.backgroundColor = KKColor_FFFFFF;
     [self setupSubViews];
 }
+- (void)dismissViewControllerCompletion:(void (^)(void))completion{
+    [super dismissViewControllerCompletion:completion];
+//    //傻屌动画
+//    self.view.alpha = 1;
+//    self.contentView.transform = CGAffineTransformIdentity;
+//    [UIView animateWithDuration:0.3 animations:^{
+//        self.view.alpha = 0.0f;
+//        self.contentView.transform = CGAffineTransformScale(self.contentView.transform, 1.2, 1.2);
+//    } completion:^(BOOL finished) {
+//        //todo
+//        [super dismissViewControllerCompletion:completion];
+//    }];
+}
 - (void)setupSubViews{
     //
-    self.textLabel = [UILabel labelWithFont:AdaptedBoldFontSize(16.f) textColor:KKColor_000000];
-    self.textLabel.textAlignment = NSTextAlignmentCenter;
-    [self.contentView addSubview:self.textLabel];
+    self.titleLabel = [UILabel labelWithFont:AdaptedFontSize(19.f) textColor:KKColor_333333];
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:self.titleLabel];
     //
     self.leftBtn = [[UIButton alloc] init];
     [self.leftBtn setTitle:@"取消" forState:UIControlStateNormal];
-    [self.leftBtn setTitleColor:KKColor_999999 forState:UIControlStateNormal];
+    [self.leftBtn setTitleColor:KKColor_333333 forState:UIControlStateNormal];
     [self.leftBtn addTarget:self action:@selector(whenLeftClick:) forControlEvents:UIControlEventTouchUpInside];
-    self.leftBtn.backgroundColor = KKColor_EEEEEE;
+    self.leftBtn.backgroundColor = KKColor_F0F0F0;
     self.leftBtn.titleLabel.font = AdaptedBoldFontSize(15.f);
     [self.contentView addSubview:self.leftBtn];
     //
@@ -57,16 +69,10 @@
     self.rightBtn.titleLabel.font = AdaptedBoldFontSize(15.f);
     [self.contentView addSubview:self.rightBtn];
     //
-    self.closeButton = [[UIButton alloc] init];
-    self.closeButton.hidden = !self.isShowCloseButton;
-    [self.closeButton setImage:UIImageWithName(@"kk_icon_delete") forState:UIControlStateNormal];
-    [self.closeButton addTarget:self action:@selector(whenCloseClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.contentView addSubview:self.closeButton];
-    //
-    self.titleLabel = [UILabel labelWithFont:AdaptedFontSize(16.f) textColor:KKColor_000000];
-    self.titleLabel.numberOfLines = 10;
-    self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [self.contentView addSubview:self.titleLabel];
+    self.textLabel = [UILabel labelWithFont:AdaptedFontSize(15.f) textColor:KKColor_666666];
+    self.textLabel.numberOfLines = 10;
+    self.textLabel.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:self.textLabel];
     //
     self.markView = [[UIView alloc] init];
     self.markView.backgroundColor = KKColor_EEEEEE;
@@ -78,55 +84,62 @@
     if (self.whenCompleteBlock) {
         self.whenCompleteBlock(self,0);
     }
-    //隐藏
-//    [self dismissViewControllerCompletion:nil];
 }
 - (void)whenRightClick:(id)sender{
     //
     if (self.whenCompleteBlock) {
         self.whenCompleteBlock(self,1);
     }
-    //隐藏
-//    [self dismissViewControllerCompletion:nil];
 }
 - (void)whenCloseClick:(id)sender{
     //隐藏
     [self dismissViewControllerCompletion:nil];
 }
-
+//内容板块布局
+- (void)displayContentWillLayoutSubviews{
+    //
+    CGRect f1 = self.view.bounds;
+    CGFloat space = AdaptedWidth(20.f);
+    f1.size = [self.textLabel sizeThatFits:CGSizeMake(self.contentView.frame.size.width - space * 2, 0)];
+    f1.size.width = self.contentView.frame.size.width - space * 2;
+    f1.origin.x = space;
+    BOOL flag = self.titleLabel.text.length > 0;
+    f1.origin.y = CGRectGetMaxY(self.titleLabel.frame) + (flag?AdaptedWidth(8.f):0);
+    self.textLabel.frame = f1;
+    self.displayContentView = self.textLabel;
+}
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
     CGRect bounds = self.view.bounds;
-    CGFloat height = AdaptedWidth(44.f);
+    //自动布局
+    CGSize size = [self.textLabel sizeThatFits:CGSizeZero];
+    self.contentWidth = AdaptedWidth(260.f);
+    CGFloat height = AdaptedWidth(40.f);
+    CGFloat space = AdaptedWidth(20.f);
+    if (size.width/2.0 >= self.contentWidth) {
+        self.contentWidth = bounds.size.width - 2 * AdaptedWidth(40.f);
+        height = AdaptedWidth(40.f);
+        self.textLabel.textAlignment = NSTextAlignmentLeft;
+    }
     //
     CGRect f1 = bounds;
-    f1.size.width = bounds.size.width - 2 * AdaptedWidth(50.f);
+//    f1.size.width = bounds.size.width - 2 * AdaptedWidth(50.f);
+    f1.size.width = self.contentWidth;
     f1.origin.x = (bounds.size.width - f1.size.width)/2;
     //
     CGRect f6 = bounds;
-    f6.size.width  = f1.size.width - AdaptedWidth(20) * 2;
-    BOOL flag = self.textLabel.text.length > 0;
-    f6.size.height  = flag?AdaptedWidth(44.f):AdaptedWidth(0.f);
-    f6.origin.x = AdaptedWidth(20);
-    self.textLabel.frame = f6;
+    BOOL flag = self.titleLabel.text.length > 0;
+    f6.size = [self.titleLabel sizeThatFits:CGSizeZero];
+    f6.origin.x = (f1.size.width - f6.size.width)/2.0f;
+    f6.size.height  = flag?f6.size.height:AdaptedWidth(0.f);
+    f6.origin.y = space;
+    self.titleLabel.frame = f6;
+    //内容板块布局
+    [self displayContentWillLayoutSubviews];
     //
-    CGRect f5 = bounds;
-    f5.size = [self.titleLabel sizeThatFits:CGSizeMake(f1.size.width - AdaptedWidth(20) * 2, 0)];
-    f5.size.height = MAX(AdaptedWidth(120.f) + (flag?AdaptedWidth(0.f):AdaptedWidth(44.f)), f5.size.height);
-    f5.size.width = f1.size.width - AdaptedWidth(20) * 2;
-    f5.origin.x = AdaptedWidth(20);
-    f5.origin.y = CGRectGetMaxY(f6);
-    self.titleLabel.frame = f5;
-    //
-    f1.size.height = f5.size.height + (flag?AdaptedWidth(44.f):AdaptedWidth(0.f)) + AdaptedWidth(44.f) + AdaptedWidth(14.f);
+    f1.size.height = CGRectGetMaxY(self.displayContentView.frame) + height + space;
     f1.origin.y = (bounds.size.height - f1.size.height)/2 - AdaptedWidth(20.f);
     self.contentView.frame = f1;
-    //
-    CGRect f2 = bounds;
-    f2.size = CGSizeMake(AdaptedWidth(44.f), AdaptedWidth(44.f));
-    f2.origin.y = 0;
-    f2.origin.x = f1.size.width - f2.origin.y - f2.size.width;
-    self.closeButton.frame = f2;
     //
     CGRect f3 = bounds;
     f3.size.width = f1.size.width/2.0f;
@@ -151,24 +164,20 @@
     f7.origin.x = AdaptedWidth(0.f);
     self.markView.frame = f7;
     
-    self.contentView.layer.cornerRadius = AdaptedWidth(13.f);
+    self.contentView.layer.cornerRadius = AdaptedWidth(7.f);
     self.contentView.clipsToBounds = YES;
 }
 #pragma mark - set|get方法
-- (void)setTipText:(NSString *)tipText{
-    _tipText = tipText;
-    self.titleLabel.text = tipText;
+- (void)setHeadTitle:(NSString *)headTitle{
+    _headTitle = headTitle;
+    self.titleLabel.text = headTitle;
     //重新布局
     [self viewWillLayoutSubviews];
 }
-- (void)setText:(NSString *)text{
-    _text = text;
-    self.textLabel.text = text;
-    if (text.length > 0) {
-        self.markView.hidden = NO;
-    }else{
-        self.markView.hidden = YES;
-    }
+- (void)setTextDetail:(NSString *)textDetail{
+    _textDetail = textDetail;
+    self.textLabel.text = textDetail;
+    self.textLabel.kk_lineSpacing = AdaptedWidth(5.f);
     //重新布局
     [self viewWillLayoutSubviews];
 }
@@ -182,30 +191,11 @@
 }
 - (void)setIsShowCloseButton:(BOOL)isShowCloseButton{
     _isShowCloseButton = isShowCloseButton;
-    self.closeButton.hidden = !isShowCloseButton;
 }
 - (void)setIsOnlyOneButton:(BOOL)isOnlyOneButton{
     _isOnlyOneButton = isOnlyOneButton;
     //重新布局
     [self viewWillLayoutSubviews];
-}
-
-+ (instancetype)onlyOneButtonWithTipText:(NSString *)title oneText:(NSString *)oneText complete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *vc = [[KKAlertViewController alloc] initWithPresentType:KKUIBaseMiddlePresentType];
-    vc.tipText = title;
-    vc.rightTitle = oneText;
-    vc.isOnlyOneButton = YES;
-    vc.whenCompleteBlock = whenCompleteBlock;
-    return vc;
-}
-+ (instancetype)allocWithTipText:(NSString *)title leftTitle:(NSString *)leftTitle rightTitle:(NSString *)rightTitle complete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *vc = [[KKAlertViewController alloc] initWithPresentType:KKUIBaseMiddlePresentType];
-    vc.tipText = title;
-    vc.rightTitle = leftTitle;
-    vc.rightTitle = rightTitle;
-    vc.whenCompleteBlock = whenCompleteBlock;
-    vc.isOnlyOneButton = NO;
-    return vc;
 }
 @end
 
@@ -214,25 +204,25 @@
 @implementation KKAlertViewController (ALLALERT)
 
 /// 自定义提示框
-/// @param title 标题
-/// @param tipText 提示文字
+/// @param headTitle 标题
+/// @param textDetail  内容
 /// @param leftTitle 左边标题
 /// @param rightTitle 右边标题
 /// @param isOnlyOneButton 是否是有一个按钮 default NO
 /// @param isShowCloseButton 是否显示关闭按钮 default YES
 /// @param canTouchBeginMove 是否点击空白消失 default YES
 /// @param whenCompleteBlock 成功回调
-+ (KKAlertViewController *)showCustomWithTitle:(NSString *)title
-                                       tipText:(NSString *)tipText
++ (KKAlertViewController *)showCustomWithTitle:(NSString *)headTitle
+                                       textDetail:(NSString *)textDetail
                                        leftTitle:(NSString *)leftTitle
                                        rightTitle:(NSString *)rightTitle
                                     isOnlyOneButton:(BOOL )isOnlyOneButton
                                     isShowCloseButton:(BOOL )isShowCloseButton
                                     canTouchBeginMove:(BOOL )canTouchBeginMove
                                       complete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *vc = [[KKAlertViewController alloc] initWithPresentType:KKUIBaseMiddlePresentType];
-    vc.tipText = tipText;
-    vc.text = title;
+    KKAlertViewController *vc = [[self alloc] initWithPresentType:KKUIBaseMiddlePresentType];
+    vc.headTitle = headTitle;
+    vc.textDetail = textDetail;
     vc.leftTitle = leftTitle;
     vc.rightTitle = rightTitle;
     vc.whenCompleteBlock = whenCompleteBlock;
@@ -244,96 +234,49 @@
     return vc;
 }
 
-
-/**
- 显示文本
- */
-+ (KKAlertViewController *)showLabelWithTitle:(NSString *)title complete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *alert = [self allocWithTipText:title leftTitle:@"取消" rightTitle:@"打开" complete:whenCompleteBlock];
-    alert.isShowCloseButton = NO;
-    alert.canTouchBeginMove = YES;
-    alert.isOnlyOneButton = YES;
-    alert.rightBtn.hidden = YES;
-    UIViewController *vc = alert.view.topViewController;
-    [vc presentViewController:alert animated:YES completion:nil];
-    return alert;
-}
-
-
-/**
- 显示是否清空sdweb缓存
- */
-+ (KKAlertViewController *)showAlertDeleteSDWebImagesWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *alert = [self allocWithTipText:@"清空SDWebImage缓存?" leftTitle:@"取消" rightTitle:@"确定" complete:whenCompleteBlock];
-    alert.isShowCloseButton = NO;
-    alert.canTouchBeginMove = YES;
-    UIViewController *vc = alert.view.topViewController;
-    [vc presentViewController:alert animated:YES completion:nil];
-    return alert;
+/// 快速初始化一个按钮的提示框
+/// @param title 标题
+/// @param textDetail TipText内容
+/// @param oneText 按钮内容
+/// @param whenCompleteBlock 点击回调
++ (instancetype)allocWithTitle:(NSString *)title textDetail:(NSString *)textDetail oneText:(NSString *)oneText complete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    return [self showCustomWithTitle:title textDetail:textDetail leftTitle:nil rightTitle:oneText isOnlyOneButton:YES isShowCloseButton:YES canTouchBeginMove:NO complete:whenCompleteBlock];
 }
 
 /**
- 显示是否清空原生缓存
+ 快速初始化两个按钮的提示框
+ 
+ @param textDetail TipText内容
+ @param leftTitle 左边按钮内容
+ @param rightTitle 右边按钮内容
+ @param whenCompleteBlock 点击回调
+ @return self
  */
-+ (KKAlertViewController *)showAlertDeleteImagesWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *alert = [self allocWithTipText:@"清空图片缓存?" leftTitle:@"取消" rightTitle:@"确定" complete:whenCompleteBlock];
-    alert.isShowCloseButton = NO;
-    alert.canTouchBeginMove = YES;
-    UIViewController *vc = alert.view.topViewController;
-    [vc presentViewController:alert animated:YES completion:nil];
-    return alert;
++ (instancetype)allocWithTitle:(NSString *)title textDetail:(NSString *)textDetail leftTitle:(NSString *)leftTitle rightTitle:(NSString *)rightTitle complete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    return [self showCustomWithTitle:title textDetail:textDetail leftTitle:leftTitle rightTitle:rightTitle isOnlyOneButton:NO isShowCloseButton:YES canTouchBeginMove:NO complete:whenCompleteBlock];
 }
 
-/**
- 显示充值成功效果
- */
-+ (KKAlertViewController *)showAlertRechargeSuccessWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *alert = [self onlyOneButtonWithTipText:@"充值成功，请登录游戏查看。" oneText:@"知道了" complete:whenCompleteBlock];
-    UIViewController *vc = alert.view.topViewController;
-    [vc presentViewController:alert animated:YES completion:nil];
-    return alert;
-}
-/**
- 切换猫玩游戏账号
- */
-+ (KKAlertViewController *)showAlertSwitchAccountWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *alert = [self allocWithTipText:@"需要切换猫玩账号吗" leftTitle:@"取消" rightTitle:@"切换账号" complete:whenCompleteBlock];
-    alert.isShowCloseButton = NO;
-    UIViewController *vc = alert.view.topViewController;
-    [vc presentViewController:alert animated:YES completion:nil];
-    return alert;
+#pragma mark - 应用内
+
+/// 是否清空原生图片缓存
+/// @param whenCompleteBlock 点击回调
++ (instancetype)showAlertDeleteImagesWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    KKAlertViewController *vc = [self allocWithTitle:@"提示" textDetail:@"是否清空原生图片缓存？" leftTitle:@"确定" rightTitle:@"取消" complete:whenCompleteBlock];
+    return vc;
 }
 
-/**
- 是否退出商品发布
- */
-+ (KKAlertViewController *)showAlertBackReleaseWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *alert = [self allocWithTipText:@"是否退出商品发布" leftTitle:@"取消" rightTitle:@"确定" complete:whenCompleteBlock];
-    alert.isShowCloseButton = NO;
-    UIViewController *vc = alert.view.topViewController;
-    [vc presentViewController:alert animated:YES completion:nil];
-    return alert;
+/// 是否清空图片换成
+/// @param whenCompleteBlock 点击回调
++ (instancetype)showAlertDeleteSDWebImagesWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    KKAlertViewController *vc = [self allocWithTitle:@"提示" textDetail:@"是否清空SDWebImage图片缓存？" leftTitle:@"确定" rightTitle:@"取消" complete:whenCompleteBlock];
+    return vc;
 }
 
+/// 收到应用之间传值
+/// @param whenCompleteBlock 点击回调
++ (instancetype)showLabelWithContent:(NSString *)content complete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    KKAlertViewController *vc = [self allocWithTitle:@"提示" textDetail:content oneText:@"确定" complete:whenCompleteBlock];
+    return vc;
+}
 
-/**
- 是否要删除该商品信息
- */
-+ (KKAlertViewController *)showAlertDeleteGoodsDetailWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *alert = [self allocWithTipText:@"是否要删除该商品信息" leftTitle:@"取消" rightTitle:@"确定" complete:whenCompleteBlock];
-    alert.isShowCloseButton = NO;
-    UIViewController *vc = alert.view.topViewController;
-    [vc presentViewController:alert animated:YES completion:nil];
-    return alert;
-}
-/**
- 是否要下架该商品信息
- */
-+ (KKAlertViewController *)showAlertShelvesGoodsDetailWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKAlertViewController *alert = [self allocWithTipText:@"是否要下架该商品信息" leftTitle:@"取消" rightTitle:@"确定" complete:whenCompleteBlock];
-    alert.isShowCloseButton = NO;
-    UIViewController *vc = alert.view.topViewController;
-    [vc presentViewController:alert animated:YES completion:nil];
-    return alert;
-}
 @end

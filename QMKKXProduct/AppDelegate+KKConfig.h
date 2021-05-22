@@ -10,9 +10,9 @@
 
 
 @interface AppDelegate (KKConfig)
-
 //获取配置（退出登录和重新登录需要重新请求）
 - (void)setupConfig;
-
+//校验内购
+- (void)checkInternalPurchasePayment;
 @end
 

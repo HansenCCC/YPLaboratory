@@ -66,10 +66,6 @@
     self.bottomTextField.hidden = isOnlyOneTextField;
     [self viewWillLayoutSubviews];
 }
-- (void)setTipText:(NSString *)tipText{
-    //置空
-    [super setTipText:@""];
-}
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
     CGRect bounds = self.contentView.bounds;
@@ -116,7 +112,7 @@
     alert.isOnlyOneButton = YES;
     alert.canTouchBeginMove = canTouchBeginMove;
     alert.rightTitle = bottomTitle;
-    alert.text = title;
+    alert.headTitle = title;
     alert.topTextField.placeholder = topPlaceholder;
     alert.bottomTextField.placeholder = bottomPlaceholder;
     UIViewController *vc = alert.view.topViewController;
@@ -132,7 +128,7 @@
     alert.whenCompleteBlock = whenCompleteBlock;
     alert.isOnlyOneButton = YES;
     alert.rightTitle = @"验证";
-    alert.text = @"账号验证";
+    alert.headTitle = @"账号验证";
     alert.topTextField.placeholder = @"请输入您的游戏账号";
     alert.bottomTextField.placeholder = @"请输入您的密码";
     UIViewController *vc = alert.view.topViewController;

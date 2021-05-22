@@ -16,4 +16,20 @@
     [[KKUser shareInstance] setupConfig];
 }
 
+#pragma mark - 校验内购
+- (void)checkInternalPurchasePayment{
+    WeakSelf
+    [[KKApplePayManner sharedInstance] checkInternalPurchasePayment:^(NSString *checkPath, NSDictionary *payDic, NSError *error) {
+        NSLog(@"%@",error);
+        if (payDic.count > 0) {
+            [weakSelf requestSendAppStoreBuyReceipt:payDic];
+        }
+    }];
+}
+//向服务端发送购买凭证 验证真实性和正确性
+- (void)requestSendAppStoreBuyReceipt:(NSDictionary *)param{
+    //to du
+    //首先服务验证  -> 验证成功，删除凭证
+    [[KKApplePayManner sharedInstance] deleteByPaymentVoucher:param];
+}
 @end

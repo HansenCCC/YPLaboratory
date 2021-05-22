@@ -205,14 +205,14 @@
         [[KKUser shareInstance] postNotificationToQMKKXAuthLogin:urlStr];
         return YES;
     }
-    //第三方支付回调
-    if ([url.host isEqualToString:@"safepay"]) {
-        //支付跳转支付宝钱包进行支付，处理支付结果
-        return [[KKPayManager sharedInstance] aliPayHandleOpenURL:url];
-    }else if([url.host isEqualToString:@"pay"]||[url.host isEqualToString:@"oauth"]){
-        //支付跳转微信钱包进行支付，处理支付结果
-        return [[KKPayManager sharedInstance] weChatHandleOpenURL:url];
-    }
+//    //第三方支付回调
+//    if ([url.host isEqualToString:@"safepay"]) {
+//        //支付跳转支付宝钱包进行支付，处理支付结果
+//        return [[KKPayManager sharedInstance] aliPayHandleOpenURL:url];
+//    }else if([url.host isEqualToString:@"pay"]||[url.host isEqualToString:@"oauth"]){
+//        //支付跳转微信钱包进行支付，处理支付结果
+//        return [[KKPayManager sharedInstance] weChatHandleOpenURL:url];
+//    }
     return YES;
 }
 @end

@@ -17,6 +17,7 @@
 #import "KKNetworkViewController.h"//network网络层
 #import "KKDatabaseViewController.h"//数据库
 #import "KKThirdFunctionViewController.h"//第三方分享&登陆&支付
+#import "KKApplePayViewController.h"//苹果内购支付
 
 @interface KKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -68,9 +69,12 @@
     s1m15.isEnabled = NO;
     KKLabelModel *s1m16 = [[KKLabelModel alloc] initWithTitle:@"第三方分享&登陆&支付" value:nil];
     s1m16.info = [KKThirdFunctionViewController class];
+    s1m16.isEnabled = NO;
+    KKLabelModel *s1m17 = [[KKLabelModel alloc] initWithTitle:@"苹果内购支付" value:nil];
+    s1m17.info = [KKApplePayViewController class];
     KKLabelModel *s1mMax = [[KKLabelModel alloc] initWithTitle:@"鸣谢支持" value:nil];
 //    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m2,s1m4,s1m5,s1m9,s1m15,s1m16,s1m10,s1m11,s1m3,s1m13,s1m12,s1m14,s1mMax]];
-    [self.datas addObjectsFromArray:@[s1m6,s1m2,s1m4,s1m9,s1m16,s1m10,s1m3,s1m13,s1mMax,s1m14,s1m5,s1m15,]];
+    [self.datas addObjectsFromArray:@[s1m6,s1m17,s1m2,s1m4,s1m9,s1m10,s1m3,s1m13,s1mMax,s1m14,s1m5,s1m15,s1m16]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
@@ -97,7 +101,7 @@
     //取消选中状态
     KKLabelModel *cellModel = self.datas[indexPath.row];
     Class vcClass = cellModel.info;
-    if (vcClass) {
+    if (vcClass&&cellModel.isEnabled) {
         [self pushViewControllerClass:vcClass animated:YES];
     }
 }

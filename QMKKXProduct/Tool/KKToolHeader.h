@@ -83,5 +83,7 @@
 //文本输入
 #import "KKTextViewController.h"
 #import "KKTextFieldViewController.h"
+//苹果内购
+#import "KKApplePayManner.h"
 
 #endif /* KKToolHeader_h */

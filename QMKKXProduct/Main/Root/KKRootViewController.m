@@ -89,11 +89,11 @@
 - (void)whenNeedLogin:(NSNotification *)info{
     //to do
 }
-//bee唤起授权界面
+//应用之间传值
 - (void)whenNeedQMKKXAuthLogin:(NSNotification *)info{
     //to do
     NSString *infoString = [NSString stringWithFormat:@"收到App传值:%@",info.object];
-    [KKAlertViewController showLabelWithTitle:infoString complete:^(KKAlertViewController *controler, NSInteger index) {
+    [KKAlertViewController showLabelWithContent:infoString complete:^(KKAlertViewController *controler, NSInteger index) {
         [controler dismissViewControllerCompletion:nil];
     }];
 }

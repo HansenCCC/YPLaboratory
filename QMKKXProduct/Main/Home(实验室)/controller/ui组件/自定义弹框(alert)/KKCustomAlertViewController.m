@@ -77,7 +77,6 @@
     KKLabelModel *cellModel = self.datas[indexPath.row];
     NSString *title = cellModel.title;
     if ([title rangeOfString:@"普通提示框"].location != NSNotFound) {
-        NSString *tipText = @"这是内容";
         NSString *leftTitle = @"左边";
         NSString *rightTitle = @"右边";
         BOOL isOnlyOneButton = YES;
@@ -85,19 +84,18 @@
         BOOL canTouchBeginMove = YES;
         //to do
         if ([title isEqualToString:@"普通提示框"]) {
-            title = @"";
             isOnlyOneButton = NO;
         }else if ([title isEqualToString:@"普通提示框(带标题)"]){
             isOnlyOneButton = NO;
         }else if ([title isEqualToString:@"普通提示框(一个按钮)"]){
-            title = @"";
         }else if ([title isEqualToString:@"普通提示框(点击空白不隐藏)"]){
-            title = @"";
             isOnlyOneButton = NO;
             canTouchBeginMove = NO;
         }
+        title = @"注意！";
+        NSString *detail = @"iOS技术分享（APP图标制作、仿微信朋友圈、仿微信图片查看器、防新浪@人、仿支付宝密码弹框、仿发圈、标签、js交互+wk、加载网页、自适应cell高度、TableView嵌入播放器防卡顿、定制好看弹框、选择地址、选择时间、选择颜色、导航自定义控制、轮播图、二维码扫描、人脸追踪、自定义相机、身份证拍照、ios播放器、AVPlayer封装、下拉选项弹框、贪吃蛇、跑马灯、TableView自适应高度、原生图片下载缓存、文件夹操作、数据库操作、三方登录、分享、支付、Apple安装协议、App之间传值、鸣谢支持）";
         //to do
-        [KKAlertViewController showCustomWithTitle:title tipText:tipText leftTitle:leftTitle rightTitle:rightTitle isOnlyOneButton:isOnlyOneButton isShowCloseButton:isShowCloseButton canTouchBeginMove:canTouchBeginMove complete:^(KKAlertViewController *controler, NSInteger index) {
+        [KKAlertViewController showCustomWithTitle:title textDetail:detail leftTitle:leftTitle rightTitle:rightTitle isOnlyOneButton:isOnlyOneButton isShowCloseButton:isShowCloseButton canTouchBeginMove:canTouchBeginMove complete:^(KKAlertViewController *controler, NSInteger index) {
             [controler dismissViewControllerCompletion:nil];
         }];
     }else if([title rangeOfString:@"普通输入框"].location != NSNotFound){

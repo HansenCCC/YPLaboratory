@@ -164,7 +164,7 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if([cellModel.title isEqualToString:@"清空原生缓存"]){
         [KKAlertViewController showAlertDeleteImagesWithComplete:^(KKAlertViewController *controler, NSInteger index) {
-            if (index == 1) {
+            if (index == 0) {
                 //to do
                 [weakSelf showSuccessWithMsg:@"操作执行完成！"];
             }
@@ -179,7 +179,7 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else if([cellModel.title isEqualToString:@"清空SDWebImage缓存"]){
         [KKAlertViewController showAlertDeleteSDWebImagesWithComplete:^(KKAlertViewController *controler, NSInteger index) {
-            if (index == 1) {
+            if (index == 0) {
                 //清空磁盘
                 [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
                     //to do
