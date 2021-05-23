@@ -30,7 +30,7 @@ return __singleton__; \
 
 #define kScreenW    [UIScreen mainScreen].bounds.size.width
 #define kScreenH    [UIScreen mainScreen].bounds.size.height
-#define KSizeRatio  [UIScreen mainScreen].bounds.size.width/375.0
+#define KSizeRatio MAX(1.0, [UIScreen mainScreen].bounds.size.width/375.0)
 #define WeakSelf     __weak typeof(self) weakSelf = self;
 
 #define Weak(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
@@ -69,8 +69,8 @@ return __singleton__; \
 
 //375 * 667   414 * 736
 //pad 384 * 512 这里是为了手机版跑在平板上不变形(竖屏)
-#define kScreenWidthRatio  (kScreenW / (kVerticalScreen?375.0:667.0))
-#define kScreenHeightRatio (kScreenH / (kVerticalScreen?667.0:375.0))
+#define kScreenWidthRatio  MAX(1.0,(kScreenW/(kVerticalScreen?375.0:667.0)))
+#define kScreenHeightRatio MAX(1.0,(kScreenH/(kVerticalScreen?667.0:375.0)))
 
 #define AdaptedWidth(x)  ceilf((x) * (IsPad?kPadScreenWidthRatio:kScreenWidthRatio))
 #define AdaptedHeight(x) ceilf((x) * (IsPad?kPadScreenHeightRatio:kScreenHeightRatio))

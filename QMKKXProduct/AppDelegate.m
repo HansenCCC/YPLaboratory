@@ -28,6 +28,7 @@
     [self keyboardManagerConfig];//键盘防遮盖输入框
     [self buglyConfigure];//bugle 闪退崩溃记录
     [self setupConfig];//配置
+    [self checkInternalPurchasePayment];//校验内购支付是否存在丢单的订单
     [self setRootViewController];
     //关闭黑夜模式
     if (@available(iOS 13.0, *)) {

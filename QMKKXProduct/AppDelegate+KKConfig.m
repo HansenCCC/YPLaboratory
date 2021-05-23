@@ -28,8 +28,30 @@
 }
 //向服务端发送购买凭证 验证真实性和正确性
 - (void)requestSendAppStoreBuyReceipt:(NSDictionary *)param{
-    //to du
-    //首先服务验证  -> 验证成功，删除凭证
-    [[KKApplePayManner sharedInstance] deleteByPaymentVoucher:param];
+#if QMKKXProductDEV//测试环境
+    NSString *checkURL = @"https://sandbox.itunes.apple.com/verifyReceipt";
+#elif QMKKXProduct//正式环境
+    NSString *checkURL = @"https://buy.itunes.apple.com/verifyReceipt";
+#endif
+    //timeoutInterval需要长一点
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:checkURL.toURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0f];
+    request.HTTPMethod = @"POST";
+    NSString *receiptData = param[@"receiptData"];
+    NSString *payload = [NSString stringWithFormat:@"{\"receipt-data\" : \"%@\"}",receiptData];
+    NSData *payloadData = [payload dataUsingEncoding:NSUTF8StringEncoding];
+    request.HTTPBody = payloadData;
+    NSURLSession *sessionPost = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [sessionPost dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!error) {
+                NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+                if ([result[@"status"] intValue] == 0) {
+                    //支付成功 (通常需要校验：bid，product_id，purchase_date，status，in_app)
+                    [[KKApplePayManner sharedInstance] deleteByPaymentVoucher:param];
+                }
+            }
+        });
+    }];
+    [dataTask resume];
 }
 @end

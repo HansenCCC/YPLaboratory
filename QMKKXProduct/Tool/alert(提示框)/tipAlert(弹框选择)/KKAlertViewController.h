@@ -108,6 +108,15 @@ typedef void(^KKAlertViewControllerBlock)(KKAlertViewController *controler ,NSIn
 /// @param whenCompleteBlock 点击回调
 + (instancetype)showLabelWithContent:(NSString *)content complete:(KKAlertViewControllerBlock )whenCompleteBlock;
 
+/// 展示支付失败提示
+/// @param content 内容
+/// @param whenCompleteBlock 回调
++ (instancetype)showPayFailWithContent:(NSString *)content complete:(KKAlertViewControllerBlock )whenCompleteBlock;
+
+/// 展示支付成功提示
+/// @param whenCompleteBlock 回调
++ (instancetype)showPaySuccessWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock;
+
 @end
 
 

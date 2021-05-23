@@ -220,6 +220,12 @@
                                     isShowCloseButton:(BOOL )isShowCloseButton
                                     canTouchBeginMove:(BOOL )canTouchBeginMove
                                       complete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    UIWindow *windows = [UIApplication sharedApplication].delegate.window;
+    UIViewController *topVC = windows.topViewController;
+    //预防重复弹框
+    if ([topVC isKindOfClass:[KKUIBasePresentController class]]) {
+        return nil;
+    }
     KKAlertViewController *vc = [[self alloc] initWithPresentType:KKUIBaseMiddlePresentType];
     vc.headTitle = headTitle;
     vc.textDetail = textDetail;
@@ -229,7 +235,6 @@
     vc.isOnlyOneButton = isOnlyOneButton;
     vc.isShowCloseButton = isShowCloseButton;
     vc.canTouchBeginMove = canTouchBeginMove;
-    UIViewController *topVC = vc.view.topViewController;
     [topVC presentViewController:vc animated:YES completion:nil];
     return vc;
 }
@@ -279,4 +284,16 @@
     return vc;
 }
 
+/// 展示支付失败提示
+/// @param content 内容
+/// @param whenCompleteBlock 回调
++ (instancetype)showPayFailWithContent:(NSString *)content complete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    return [KKAlertViewController allocWithTitle:@"购买失败！" textDetail:content oneText:@"确定" complete:whenCompleteBlock];
+}
+
+/// 展示支付成功提示
+/// @param whenCompleteBlock 回调
++ (instancetype)showPaySuccessWithComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
+    return [KKAlertViewController allocWithTitle:@"购买成功！" textDetail:@"您这是干嘛呀，使不得使不得，破费了破费了！" oneText:@"确认" complete:whenCompleteBlock];
+}
 @end
