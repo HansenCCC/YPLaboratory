@@ -338,6 +338,10 @@
 		606C7AE22462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AE02462A48E00BF5C7F /* KKRefreshBackNormalFooter.m */; };
 		607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
+		607FD6B4265C208800A5282C /* KKThankSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607FD6B2265C208800A5282C /* KKThankSupportViewController.m */; };
+		607FD6B5265C208800A5282C /* KKThankSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607FD6B2265C208800A5282C /* KKThankSupportViewController.m */; };
+		607FD6B6265C208800A5282C /* KKThankSupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FD6B3265C208800A5282C /* KKThankSupportViewController.xib */; };
+		607FD6B7265C208800A5282C /* KKThankSupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FD6B3265C208800A5282C /* KKThankSupportViewController.xib */; };
 		6094E167251DD28F001CE756 /* KKAdaptiveImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6094E166251DD28F001CE756 /* KKAdaptiveImagesViewController.m */; };
 		6094E168251DD28F001CE756 /* KKAdaptiveImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6094E166251DD28F001CE756 /* KKAdaptiveImagesViewController.m */; };
 		6094E170251DD362001CE756 /* KKAdaptiveImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6094E16F251DD362001CE756 /* KKAdaptiveImageTableViewCell.m */; };
@@ -798,6 +802,9 @@
 		607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsTableViewCell.m; sourceTree = "<group>"; };
 		6071FF8C2657525100FE5754 /* QMKKXProduct.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QMKKXProduct.entitlements; sourceTree = "<group>"; };
 		6071FF8F2657525900FE5754 /* QMKKXProductDev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QMKKXProductDev.entitlements; sourceTree = "<group>"; };
+		607FD6B1265C208800A5282C /* KKThankSupportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKThankSupportViewController.h; sourceTree = "<group>"; };
+		607FD6B2265C208800A5282C /* KKThankSupportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKThankSupportViewController.m; sourceTree = "<group>"; };
+		607FD6B3265C208800A5282C /* KKThankSupportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKThankSupportViewController.xib; sourceTree = "<group>"; };
 		6094E165251DD28F001CE756 /* KKAdaptiveImagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveImagesViewController.h; sourceTree = "<group>"; };
 		6094E166251DD28F001CE756 /* KKAdaptiveImagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAdaptiveImagesViewController.m; sourceTree = "<group>"; };
 		6094E16E251DD362001CE756 /* KKAdaptiveImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveImageTableViewCell.h; sourceTree = "<group>"; };
@@ -1155,6 +1162,7 @@
 		30202FEA23795F8B00F1AADA /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				607FD6B0265C203D00A5282C /* 鸣谢支持 */,
 				60E8ABD42657A79C007446A6 /* 苹果内购 */,
 				604B04032484A0DA00AE672A /* 第三方分享&登陆&支付 */,
 				30E2077E2379758800EE3E8E /* 工作台 */,
@@ -1936,6 +1944,16 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		607FD6B0265C203D00A5282C /* 鸣谢支持 */ = {
+			isa = PBXGroup;
+			children = (
+				607FD6B1265C208800A5282C /* KKThankSupportViewController.h */,
+				607FD6B2265C208800A5282C /* KKThankSupportViewController.m */,
+				607FD6B3265C208800A5282C /* KKThankSupportViewController.xib */,
+			);
+			path = "鸣谢支持";
+			sourceTree = "<group>";
+		};
 		6094E164251DD0C7001CE756 /* 自适应图片高度 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2448,6 +2466,7 @@
 				60B6813D238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib in Resources */,
 				309173FB237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE2237958D800F1AADA /* KKHomeViewController.xib in Resources */,
+				607FD6B7265C208800A5282C /* KKThankSupportViewController.xib in Resources */,
 				6097E5E224974051007ECC55 /* kk_icon_menu@3x.png in Resources */,
 				609EC2AC23E7C3D0003BB61C /* KKDatabaseDetailViewController.xib in Resources */,
 				603670A723BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */,
@@ -2518,6 +2537,7 @@
 				60B6813C238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.xib in Resources */,
 				309173FA237AA9BB00010E99 /* KKButtonTableViewCell.xib in Resources */,
 				30202FE1237958D800F1AADA /* KKHomeViewController.xib in Resources */,
+				607FD6B6265C208800A5282C /* KKThankSupportViewController.xib in Resources */,
 				6097E5E124974051007ECC55 /* kk_icon_menu@3x.png in Resources */,
 				609EC2AB23E7C3D0003BB61C /* KKDatabaseDetailViewController.xib in Resources */,
 				603670A623BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */,
@@ -2760,6 +2780,7 @@
 				60BA347C23EC6AC700A2A249 /* KKCustomAlertViewController.m in Sources */,
 				60C6CFDC238A84F200FABAA3 /* KKPickViewViewController.m in Sources */,
 				30917449237C277E00010E99 /* KKSDWebViewController.m in Sources */,
+				607FD6B5265C208800A5282C /* KKThankSupportViewController.m in Sources */,
 				3015A061237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
 				302897C422C46DEF000F2669 /* KKTextView.m in Sources */,
 				30658A7122CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,
@@ -2941,6 +2962,7 @@
 				60BA347B23EC6AC700A2A249 /* KKCustomAlertViewController.m in Sources */,
 				60C6CFDB238A84F200FABAA3 /* KKPickViewViewController.m in Sources */,
 				30917448237C277E00010E99 /* KKSDWebViewController.m in Sources */,
+				607FD6B4265C208800A5282C /* KKThankSupportViewController.m in Sources */,
 				3015A060237D3D3C0086B39D /* KKAppInstallViewController.m in Sources */,
 				302897C322C46DEF000F2669 /* KKTextView.m in Sources */,
 				30658A7022CF265F0072CD24 /* KKIDCardScanViewController.m in Sources */,

@@ -18,6 +18,7 @@
 #import "KKDatabaseViewController.h"//数据库
 #import "KKThirdFunctionViewController.h"//第三方分享&登陆&支付
 #import "KKApplePayViewController.h"//苹果内购支付
+#import "KKThankSupportViewController.h"//鸣谢支持
 
 @interface KKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -72,9 +73,11 @@
     s1m16.isEnabled = NO;
     KKLabelModel *s1m17 = [[KKLabelModel alloc] initWithTitle:@"苹果内购支付" value:nil];
     s1m17.info = [KKApplePayViewController class];
+    KKLabelModel *s1m18 = [[KKLabelModel alloc] initWithTitle:@"检查更新" value:nil];
     KKLabelModel *s1mMax = [[KKLabelModel alloc] initWithTitle:@"鸣谢支持" value:nil];
+    s1mMax.info = [KKThankSupportViewController class];
 //    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m2,s1m4,s1m5,s1m9,s1m15,s1m16,s1m10,s1m11,s1m3,s1m13,s1m12,s1m14,s1mMax]];
-    [self.datas addObjectsFromArray:@[s1m6,s1m17,s1m2,s1m4,s1m9,s1m10,s1m3,s1m13,s1mMax,s1m5,s1m15,s1m16]];
+    [self.datas addObjectsFromArray:@[s1m6,s1m17,s1m2,s1m4,s1m9,s1m3,s1m13,s1m18,s1mMax,s1m5,s1m15,s1m16]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load
@@ -103,6 +106,9 @@
     Class vcClass = cellModel.info;
     if (vcClass&&cellModel.isEnabled) {
         [self pushViewControllerClass:vcClass animated:YES];
+    }else if([cellModel.title isEqualToString:@"检查更新"]){
+        NSString *itmsApps = @"itms-apps://itunes.apple.com/cn/app/id1568656582?mt=8"; //更换id即可
+        [[UIApplication sharedApplication] openURL:itmsApps.toURL options:@{} completionHandler:nil];
     }
 }
 #pragma mark - aciton

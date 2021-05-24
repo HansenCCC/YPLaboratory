@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +13,69 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kk_icon_appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VTi-Jt-hjP">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="WkQ-xa-8oX"/>
+                                    <constraint firstAttribute="width" secondItem="VTi-Jt-hjP" secondAttribute="height" multiplier="1:1" id="lkf-g7-C6v"/>
+                                    <constraint firstAttribute="width" constant="200" id="r9n-AR-L8M"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2019 Hansen. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwy-A2-nzp">
+                                <rect key="frame" x="20" y="844" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by 程恒盛 on 2019/6/19." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QN-AC-nvo">
+                                <rect key="frame" x="20" y="816.5" width="374" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS实验室" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVm-vb-7oX">
+                                <rect key="frame" x="20" y="556" width="374" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本号 3.3.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thg-79-GKU">
+                                <rect key="frame" x="20" y="788" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4QN-AC-nvo" secondAttribute="trailing" constant="20" id="2Ic-FM-Jn0"/>
+                            <constraint firstItem="Hwy-A2-nzp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5pN-0e-2NP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hwy-A2-nzp" secondAttribute="trailing" constant="20" id="AIL-Xz-7nE"/>
+                            <constraint firstItem="4QN-AC-nvo" firstAttribute="top" secondItem="Thg-79-GKU" secondAttribute="bottom" constant="8" id="DYD-yY-ILB"/>
+                            <constraint firstItem="VTi-Jt-hjP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ewb-oT-pUP"/>
+                            <constraint firstItem="dVm-vb-7oX" firstAttribute="top" secondItem="VTi-Jt-hjP" secondAttribute="bottom" constant="8" id="ExF-W6-CkK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Thg-79-GKU" secondAttribute="trailing" constant="20" id="Ivq-BW-EAX"/>
+                            <constraint firstItem="4QN-AC-nvo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zgn-W9-bvh"/>
+                            <constraint firstItem="Hwy-A2-nzp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="b5b-WU-1Fc"/>
+                            <constraint firstItem="Thg-79-GKU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bsu-9g-bpb"/>
+                            <constraint firstItem="dVm-vb-7oX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dlV-33-Rlo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dVm-vb-7oX" secondAttribute="trailing" constant="20" id="l2x-UO-OxQ"/>
+                            <constraint firstItem="VTi-Jt-hjP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qfB-DK-xvU"/>
+                            <constraint firstItem="Hwy-A2-nzp" firstAttribute="top" secondItem="4QN-AC-nvo" secondAttribute="bottom" constant="8" id="vag-wf-Xs0"/>
+                            <constraint firstItem="dVm-vb-7oX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wbA-qq-rFs"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-349.27536231884062" y="381.69642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kk_icon_appLogo" width="341.33334350585938" height="341.33334350585938"/>
+    </resources>
 </document>

@@ -41,6 +41,14 @@
  */
 + (UIColor *)colorWithRandomColor;
 
+
+/**
+ 随机莫兰迪色系
+ 
+ @return 随机颜色
+ */
++ (UIColor *)colorWithMorandiRandomColor;
+
 /**
  通过color获取颜色hexstring
 

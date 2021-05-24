@@ -131,7 +131,7 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
     }else if (self.cellModel.images.count == 2) {
         //两张时
         self.flowLayout.itemSize = CGSizeMake((collecitonWidth - spaceWidth)/2, (collecitonWidth - spaceWidth)/2);
-        fcv.size.height = collecitonWidth/3.f;
+        fcv.size.height = collecitonWidth/2.f;
     }else if(self.cellModel.images.count > 2){
         //大于两张时
         self.flowLayout.itemSize = CGSizeMake((collecitonWidth - 2 * spaceWidth)/3.f, (collecitonWidth - 2 * spaceWidth)/3.f);
