@@ -338,6 +338,8 @@
 		606C7AE22462A48E00BF5C7F /* KKRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C7AE02462A48E00BF5C7F /* KKRefreshBackNormalFooter.m */; };
 		607019B223D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
 		607019B323D006A8009078E6 /* KKWeChatMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */; };
+		6077FE92265D792500544B5B /* KKFileBoxAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6077FE91265D792500544B5B /* KKFileBoxAlert.m */; };
+		6077FE93265D792500544B5B /* KKFileBoxAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6077FE91265D792500544B5B /* KKFileBoxAlert.m */; };
 		607FD6B4265C208800A5282C /* KKThankSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607FD6B2265C208800A5282C /* KKThankSupportViewController.m */; };
 		607FD6B5265C208800A5282C /* KKThankSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607FD6B2265C208800A5282C /* KKThankSupportViewController.m */; };
 		607FD6B6265C208800A5282C /* KKThankSupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FD6B3265C208800A5282C /* KKThankSupportViewController.xib */; };
@@ -802,6 +804,8 @@
 		607019B123D006A8009078E6 /* KKWeChatMomentsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWeChatMomentsTableViewCell.m; sourceTree = "<group>"; };
 		6071FF8C2657525100FE5754 /* QMKKXProduct.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QMKKXProduct.entitlements; sourceTree = "<group>"; };
 		6071FF8F2657525900FE5754 /* QMKKXProductDev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QMKKXProductDev.entitlements; sourceTree = "<group>"; };
+		6077FE90265D792500544B5B /* KKFileBoxAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileBoxAlert.h; sourceTree = "<group>"; };
+		6077FE91265D792500544B5B /* KKFileBoxAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileBoxAlert.m; sourceTree = "<group>"; };
 		607FD6B1265C208800A5282C /* KKThankSupportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKThankSupportViewController.h; sourceTree = "<group>"; };
 		607FD6B2265C208800A5282C /* KKThankSupportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKThankSupportViewController.m; sourceTree = "<group>"; };
 		607FD6B3265C208800A5282C /* KKThankSupportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKThankSupportViewController.xib; sourceTree = "<group>"; };
@@ -1288,7 +1292,6 @@
 				3028976522C46DEE000F2669 /* KKUIBasePresentController.m */,
 				3028976E22C46DEE000F2669 /* pick */,
 				3028976222C46DEE000F2669 /* tipAlert(弹框选择) */,
-				3028976B22C46DEE000F2669 /* twoBoxAlert(两个输入框) */,
 			);
 			path = "alert(提示框)";
 			sourceTree = "<group>";
@@ -1298,6 +1301,8 @@
 			children = (
 				3028976422C46DEE000F2669 /* KKAlertViewController.h */,
 				3028976322C46DEE000F2669 /* KKAlertViewController.m */,
+				6077FE8F265D78CD00544B5B /* fileBoxAlert */,
+				3028976B22C46DEE000F2669 /* twoBoxAlert(两个输入框) */,
 			);
 			path = "tipAlert(弹框选择)";
 			sourceTree = "<group>";
@@ -1942,6 +1947,15 @@
 				60463DD123F39C4D00D9A376 /* KKWeChatImageListTableViewCell.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		6077FE8F265D78CD00544B5B /* fileBoxAlert */ = {
+			isa = PBXGroup;
+			children = (
+				6077FE90265D792500544B5B /* KKFileBoxAlert.h */,
+				6077FE91265D792500544B5B /* KKFileBoxAlert.m */,
+			);
+			path = fileBoxAlert;
 			sourceTree = "<group>";
 		};
 		607FD6B0265C203D00A5282C /* 鸣谢支持 */ = {
@@ -2772,6 +2786,7 @@
 				60022A3423C856FB004F94DB /* KKAiteTextField.m in Sources */,
 				302897A222C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33122BA45A400372F07 /* NSObject+KExtension.m in Sources */,
+				6077FE93265D792500544B5B /* KKFileBoxAlert.m in Sources */,
 				60D128AF24B5BA8E00891E6B /* KKRunLabelViewController.m in Sources */,
 				606C7AD5246253D300BF5C7F /* KKFaceTrackViewController.m in Sources */,
 				302897AA22C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,
@@ -2954,6 +2969,7 @@
 				60022A3323C856FB004F94DB /* KKAiteTextField.m in Sources */,
 				302897A122C46DEF000F2669 /* KKAlertViewController.m in Sources */,
 				3077A33022BA45A400372F07 /* NSObject+KExtension.m in Sources */,
+				6077FE92265D792500544B5B /* KKFileBoxAlert.m in Sources */,
 				60D128AE24B5BA8E00891E6B /* KKRunLabelViewController.m in Sources */,
 				606C7AD4246253D300BF5C7F /* KKFaceTrackViewController.m in Sources */,
 				302897A922C46DEF000F2669 /* KKInputBoxAlert.m in Sources */,

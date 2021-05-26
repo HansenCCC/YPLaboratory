@@ -141,6 +141,9 @@
         [self.navigationController pushViewController:vc animated:YES];
     }else{
         //文件
+        [KKFileBoxAlert showAlertWithFilePath:filePathTmp complete:^(KKAlertViewController *controler, NSInteger index) {
+            [controler dismissViewControllerCompletion:nil];
+        }];
     }
 }
 @end

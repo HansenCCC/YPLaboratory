@@ -22,6 +22,7 @@
 #import "KKAddressPickAlert.h"//地址pick
 #import "KKAlertViewController.h"//标准alert
 #import "KKInputBoxAlert.h"//两个输入框
+#import "KKFileBoxAlert.h"//文件展示弹框
 //加载菊花
 #import "KKBaseLoadingView.h"//loading
 //支持icon左右上下不同位置的button

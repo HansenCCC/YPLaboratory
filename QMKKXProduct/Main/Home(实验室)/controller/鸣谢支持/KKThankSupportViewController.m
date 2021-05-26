@@ -33,6 +33,53 @@
 - (void)reloadDatas{
     [self.datas removeAllObjects];
     {
+        //开发者
+        KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:@"关于我们" value:@""];
+        [self.datas addObject:element];
+        KKLabelModel *e1 = [[KKLabelModel alloc] initWithTitle:@"开发者" value:@"程恒盛-Hansen"];
+        e1.info = @"https://github.com/HansenCCC";
+        [self.datas addObject:e1];
+        KKLabelModel *e2 = [[KKLabelModel alloc] initWithTitle:@"电话" value:@"+86 13767141841"];
+        e2.info = @"tel:+86 13767141841";
+        [self.datas addObject:e2];
+        KKLabelModel *e3 = [[KKLabelModel alloc] initWithTitle:@"邮件" value:@"2534550460@qq.com"];
+        e3.info = @"mailto:2534550460@qq.com";
+        [self.datas addObject:e3];
+        KKLabelModel *e4 = [[KKLabelModel alloc] initWithTitle:@"状态" value:@"夏天的砖，烫手！"];
+        [self.datas addObject:e4];
+    }
+    {
+#if TARGET_IPHONE_SIMULATOR //模拟器
+        NSString *device = [NSString stringWithFormat:@"%@",[NSString getCurrentDeviceModel]];
+#elif TARGET_OS_IPHONE //真机
+        NSString *device = [NSString stringWithFormat:@"%@",[NSString getCurrentDeviceModel]];
+#endif
+        NSString *sys = [[UIDevice currentDevice] systemVersion];
+        NSString *systemName = [[UIDevice currentDevice] systemName];
+        NSString *dateString = [[NSDate date] stringWithDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSString *identification = [[UIDevice currentDevice] identifierForVendor].UUIDString;
+        NSString *batteryLevel = @([[UIDevice currentDevice] batteryLevel]).stringValue;
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];//获取当前语言
+        NSArray *languageInfo = [userDefaults objectForKey:@"AppleLanguages"];
+        //应用数据
+        KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:@"本机信息" value:@""];
+        [self.datas addObject:element];
+        KKLabelModel *e1 = [[KKLabelModel alloc] initWithTitle:@"设备机型" value:device];
+        [self.datas addObject:e1];
+        KKLabelModel *e2 = [[KKLabelModel alloc] initWithTitle:@"系统版本" value:sys];
+        [self.datas addObject:e2];
+        KKLabelModel *e3 = [[KKLabelModel alloc] initWithTitle:@"系统名称" value:systemName];
+        [self.datas addObject:e3];
+        KKLabelModel *e4 = [[KKLabelModel alloc] initWithTitle:@"当前时间" value:dateString];
+        [self.datas addObject:e4];
+        KKLabelModel *e5 = [[KKLabelModel alloc] initWithTitle:@"电池信息" value:batteryLevel];
+        [self.datas addObject:e5];
+        KKLabelModel *e6 = [[KKLabelModel alloc] initWithTitle:@"系统语言" value:languageInfo.mj_JSONString];
+        [self.datas addObject:e6];
+        KKLabelModel *e7 = [[KKLabelModel alloc] initWithTitle:@"唯一标识" value:identification];
+        [self.datas addObject:e7];
+    }
+    {
         //涉及到的三方基础库
         KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:@"涉及到的三方基础库" value:@""];
         [self.datas addObject:element];
@@ -109,13 +156,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //to do
     KKLabelModel *cellModel = self.datas[indexPath.row];
-    if (cellModel.value.length > 0) {
+    if (cellModel.value.length > 0&&cellModel.info) {
         [KKAlertViewController showCustomWithTitle:@"提示" textDetail:[@"是否跳转Safari显示具体详情？\n" addString:cellModel.info?:@""] leftTitle:@"确定" rightTitle:@"取消" isOnlyOneButton:NO isShowCloseButton:NO canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
             [controler dismissViewControllerCompletion:nil];
             if (index == 0) {
                 NSString *info = cellModel.info;
                 [[UIApplication sharedApplication] openURL:info.toURL options:@{} completionHandler:nil];
             }
+        }];
+    }else if([cellModel.title isEqualToString:@"唯一标识"]){
+        //
+        [KKAlertViewController showCustomWithTitle:@"提示" textDetail:[@"复制唯一标识到粘贴板\n" addString:cellModel.value?:@""] leftTitle:nil rightTitle:@"复制" isOnlyOneButton:YES isShowCloseButton:NO canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
+            [controler dismissViewControllerCompletion:nil];
+            if (cellModel.value.length == 0){
+                return;
+            }
+            //复制文字到剪切板
+            UIPasteboard *paste = [UIPasteboard generalPasteboard];
+            paste.string = cellModel.value;
         }];
     }
 }

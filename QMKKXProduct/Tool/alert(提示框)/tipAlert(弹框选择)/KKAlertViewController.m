@@ -51,6 +51,7 @@
     //
     self.titleLabel = [UILabel labelWithFont:AdaptedFontSize(19.f) textColor:KKColor_333333];
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
     [self.contentView addSubview:self.titleLabel];
     //
     self.leftBtn = [[UIButton alloc] init];
@@ -130,6 +131,7 @@
     CGRect f6 = bounds;
     BOOL flag = self.titleLabel.text.length > 0;
     f6.size = [self.titleLabel sizeThatFits:CGSizeZero];
+    f6.size.width = self.contentWidth - AdaptedWidth(20.f);
     f6.origin.x = (f1.size.width - f6.size.width)/2.0f;
     f6.size.height  = flag?f6.size.height:AdaptedWidth(0.f);
     f6.origin.y = space;
