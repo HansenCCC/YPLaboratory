@@ -18,6 +18,13 @@ target 'QMKKXProduct' do
   pod 'JCore','2.1.4-noidfa'
   pod 'JPush','3.2.4-noidfa'
   pod 'FMDB' , '2.7.2'
+  
+  #高德地图
+  pod 'AMapSearch', '7.1.0'
+  pod 'AMap2DMap', '5.6.1'
+#  pod 'AMap3DMap' 使用起来内存过大，放弃使用
+  pod 'AMapLocation', '2.6.4'
+  pod 'AMapFoundation', '1.6.2'
 end
 
 target 'QMKKXProductDev' do
@@ -36,6 +43,13 @@ target 'QMKKXProductDev' do
   pod 'JCore','2.1.4-noidfa'
   pod 'JPush','3.2.4-noidfa'
   pod 'FMDB' , '2.7.2'
+  
+  #高德地图
+  pod 'AMapSearch', '7.1.0'
+  pod 'AMap2DMap', '5.6.1'
+#  pod 'AMap3DMap' 使用起来内存过大，放弃使用
+  pod 'AMapLocation', '2.6.4'
+  pod 'AMapFoundation', '1.6.2'
 end
 
 #消除waring

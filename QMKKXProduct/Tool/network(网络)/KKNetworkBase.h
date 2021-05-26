@@ -18,7 +18,8 @@
 //当前状态，废弃状态  无类使用
 @interface KKNetworkBase : NSObject
 
-
+/// 默认上传参数
++ (NSDictionary *)NetworkDefaultParam;
 
 
 //有网YES, 无网:NO

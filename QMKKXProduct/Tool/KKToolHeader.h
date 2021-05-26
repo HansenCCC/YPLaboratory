@@ -23,6 +23,7 @@
 #import "KKAlertViewController.h"//标准alert
 #import "KKInputBoxAlert.h"//两个输入框
 #import "KKFileBoxAlert.h"//文件展示弹框
+#import "KKMapAlert.h"//经纬度选择弹框
 //加载菊花
 #import "KKBaseLoadingView.h"//loading
 //支持icon左右上下不同位置的button
@@ -86,5 +87,7 @@
 #import "KKTextFieldViewController.h"
 //苹果内购
 #import "KKApplePayManner.h"
-
+//mapView(高德地图)
+#import "KKMapView.h"
+#import "KKMapLocationManager.h"
 #endif /* KKToolHeader_h */

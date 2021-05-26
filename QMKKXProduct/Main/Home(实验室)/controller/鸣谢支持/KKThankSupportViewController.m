@@ -39,6 +39,8 @@
         KKLabelModel *e1 = [[KKLabelModel alloc] initWithTitle:@"开发者" value:@"程恒盛-Hansen"];
         e1.info = @"https://github.com/HansenCCC";
         [self.datas addObject:e1];
+        KKLabelModel *e1_1 = [[KKLabelModel alloc] initWithTitle:@"开发者-服务器（感谢）" value:@"徐拥军-XYJ"];
+        [self.datas addObject:e1_1];
         KKLabelModel *e2 = [[KKLabelModel alloc] initWithTitle:@"电话" value:@"+86 13767141841"];
         e2.info = @"tel:+86 13767141841";
         [self.datas addObject:e2];
@@ -47,6 +49,20 @@
         [self.datas addObject:e3];
         KKLabelModel *e4 = [[KKLabelModel alloc] initWithTitle:@"状态" value:@"夏天的砖，烫手！"];
         [self.datas addObject:e4];
+    }
+    {
+        NSString *versionCode = [KKUser shareInstance].version?:@"";
+        NSString *channelId = [KKUser shareInstance].channel?:@"";
+        NSString *token = [KKUser shareInstance].userModel.token?:@"--";
+        //应用信息
+        KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:@"应用信息" value:@""];
+        [self.datas addObject:element];
+        KKLabelModel *e1 = [[KKLabelModel alloc] initWithTitle:@"versionCode" value:versionCode];
+        [self.datas addObject:e1];
+        KKLabelModel *e2 = [[KKLabelModel alloc] initWithTitle:@"channelId" value:channelId];
+        [self.datas addObject:e2];
+        KKLabelModel *e3 = [[KKLabelModel alloc] initWithTitle:@"token" value:token];
+        [self.datas addObject:e3];
     }
     {
 #if TARGET_IPHONE_SIMULATOR //模拟器

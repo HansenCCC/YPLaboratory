@@ -14,6 +14,7 @@
 #import "KKAppIconTableViewCell.h"
 #import "KKWeChatMomentsTableViewCell.h"
 #import "KKWeChatCommentTableViewCell.h"
+#import "KKFormTableViewCell.h"
 
 @implementation UITableViewCell (KPreviewDemo)
 + (void)previewDemoTestCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath{
@@ -188,5 +189,21 @@
         value = @"英雄联盟憨憨;我要玩压缩-游戏-高清正版视频在线观看–爱奇艺https://www.iqiyi.com/v_19rv0pc2mg.html";
     }
     return value;
+}
+@end
+
+@implementation KKFormTableViewCell (KPreviewDemo)
++ (void)previewDemoTestCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath{
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    KKLabelTableViewCell *kCell = (KKLabelTableViewCell *)cell;
+    KKLabelModel *cellModel = [[KKLabelModel alloc] initWithTitle:@"丰富多彩的cell" value:nil];
+    if (indexPath.row == 0) {
+        cellModel.title = @"丰富多彩的cell(展示小星星)";
+        cellModel.isShowStar = YES;
+        cellModel.placeholder = @"丰富多彩的cell";
+        cellModel.rightImageName = @"kk_icon_arrowRight";
+        cellModel.rightImageSize = CGSizeMake(AdaptedWidth(25.f), AdaptedWidth(25.f));
+    }
+    kCell.cellModel = cellModel;
 }
 @end

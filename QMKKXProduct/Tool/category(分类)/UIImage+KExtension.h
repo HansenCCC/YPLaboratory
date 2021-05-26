@@ -117,6 +117,15 @@
  @return image
  */
 + (UIImage *)fixOrientation:(UIImage *)image;
+
+/**
+ 限制图片大小，传入的maxSize单位是KB
+
+ @param sourceImage 要处理的图片
+ @param maxSize 大小
+ @return 返回响应尺寸
+ */
++ (NSData *)reSizeImageData:(UIImage *)sourceImage maxSizeWithKB:(CGFloat)maxSize;
 @end
 
 

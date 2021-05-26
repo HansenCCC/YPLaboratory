@@ -9,7 +9,7 @@
 #import "KKNetworkBase.h"
 
 static const NSTimeInterval kTimeoutInterval = 30.0;
-static NSString *OK = @"success";
+static NSString *OK = @"0";
 
 @implementation KKNetworkBase
 + (BOOL)isNetwork{
@@ -58,9 +58,8 @@ static NSString *OK = @"success";
  *  @param  parameters          参数
  */
 + (void)GET:(NSString *)url timeoutInterval:(NSTimeInterval)timeoutInterval parameters:(id)parameters success:(void (^)(KKBaseResponse *response))success failure:(void (^)(NSError *error))failure {
-    NSDictionary *dictionary = @{
-                                 @"token":[KKUser shareInstance].token?:@"",
-                                 };
+    NSDictionary *dictionary = [self NetworkDefaultParam];
+    NSDictionary *headerDictionary;
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
     [data addEntriesFromDictionary:parameters];
     NSLog(@"*******************************************************");
@@ -69,18 +68,22 @@ static NSString *OK = @"success";
     NSLog(@"Parameters:%@",data.mj_JSONString);
     NSLog(@"*******************************************************");
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer.timeoutInterval = timeoutInterval?:kTimeoutInterval;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/*", nil];
-    //注册请求类型必须声明为json
-    NSString *key = @"isUserAFJSONRequestSerializer";
+    //兼容请求类型，表单和json（写这个的原因：服务那边请求头可能是json或者表单。）
+    NSString *key = @"application/x-www-form-urlencoded";
     if ([data.allKeys containsObject:key]) {
         BOOL flag = [data objectForKey:key];
         if (flag) {
-            manager.requestSerializer = [AFJSONRequestSerializer serializer];
-            [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            headerDictionary = @{
+                @"Content-Type":@"application/x-www-form-urlencoded",
+            };
         }
+    }else{
+        headerDictionary = @{
+            @"Content-Type":@"application/json",
+        };
     }
-    [manager GET:url parameters:data headers:@{} progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager GET:url parameters:data headers:headerDictionary progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         KKBaseResponse *response = [KKBaseResponse mj_objectWithKeyValues:responseObject];
         if ([response.status isEqualToString:OK]){
@@ -107,13 +110,8 @@ static NSString *OK = @"success";
  *  @param  parameters          参数
  */
 + (void)POST:(NSString *)url timeoutInterval:(NSTimeInterval)timeoutInterval parameters:(id)parameters success:(void (^)(KKBaseResponse *response))success failure:(void (^)(NSError *error))failure {
-    NSDictionary *dictionary = @{
-                                 @"token":[KKUser shareInstance].token?:@"",
-                                 };
-    NSDictionary *headerDictionary = @{
-        @"token":[KKUser shareInstance].token?:@"",//登陆状态token
-        @"Content-Type":@"application/json",//后端接收格式
-    };
+    NSDictionary *dictionary = [self NetworkDefaultParam];
+    NSDictionary *headerDictionary;
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
     [data addEntriesFromDictionary:parameters];
     NSLog(@"*******************************************************");
@@ -122,9 +120,22 @@ static NSString *OK = @"success";
     NSLog(@"Parameters:%@",data.mj_JSONString);
     NSLog(@"*******************************************************");
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer.timeoutInterval = timeoutInterval?:kTimeoutInterval;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/*", nil];
-    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //兼容请求类型，表单和json（写这个的原因：服务那边请求头可能是json或者表单。）
+    NSString *key = @"application/x-www-form-urlencoded";
+    if ([data.allKeys containsObject:key]) {
+        BOOL flag = [data objectForKey:key];
+        if (flag) {
+            headerDictionary = @{
+                @"Content-Type":@"application/x-www-form-urlencoded",
+            };
+        }
+    }else{
+        headerDictionary = @{
+            @"Content-Type":@"application/json",
+        };
+    }
+    manager.requestSerializer.timeoutInterval = timeoutInterval?:kTimeoutInterval;
     [manager POST:url parameters:data headers:headerDictionary progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         KKBaseResponse *response = [KKBaseResponse mj_objectWithKeyValues:responseObject];
@@ -185,5 +196,21 @@ static NSString *OK = @"success";
     //    } else {
     //        return error;
     //    }
+}
++ (NSDictionary *)NetworkDefaultParam{
+    //获取时间戳
+    NSTimeInterval interval = [[NSDate date] timeIntervalSince1970] * 1000;
+    long timeInterval = interval;
+    NSString *timeStamp = [NSString stringWithFormat:@"%ld",timeInterval]?:@"";
+    NSString *versionCode = [KKUser shareInstance].version?:@"";
+    NSString *channelId = [KKUser shareInstance].channel?:@"";
+    NSString *token = [KKUser shareInstance].userModel.token?:@"";
+    NSDictionary *dictionary = @{
+        @"channelId":channelId,//渠道id
+        @"timeStamp":timeStamp,//当前请求时间戳
+        @"token":token,//登陆状态token
+        @"versionCode":versionCode,//版本号
+    };
+    return dictionary;
 }
 @end

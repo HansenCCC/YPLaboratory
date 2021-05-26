@@ -37,6 +37,8 @@ DEF_SINGLETON(UITableViewCell);
 /// @param tableView 父视图
 - (CGFloat)kk_extensionCellHeight:(id)cellModel tableView:(UITableView *)tableView{
     //to do
+    self.bounds = tableView.bounds;
+    [self kk_extensionCellModel:cellModel];
     return AdaptedWidth(44.f);
 }
 

@@ -13,6 +13,8 @@ extern NSString *const kNSNotificationCenterLogout;//退出登录
 extern NSString *const kNSNotificationCenterDidRegister;//注册成功
 extern NSString *const kNSNotificationCenterFailedRegister;// 注册失败
 extern NSString *const kNSNotificationCenterUserInfoUpdate;//用户信息更新
+extern NSString *const kNSNotificationCenterNeedUpdateWorld;//需要更新World
+
 
 extern NSString *const kNSNotificationCenterUserClickPush;//用户点击通知栏
 extern NSString *const kNSNotificationCenterQMKKXAuthLogin;//唤起QMKKX授权界面

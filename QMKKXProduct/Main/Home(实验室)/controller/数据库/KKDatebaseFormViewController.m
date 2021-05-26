@@ -9,7 +9,7 @@
 #import "KKDatebaseFormViewController.h"
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
-#import "KKFormTableViewCell.h"
+#import "KKDatebaseFormTableViewCell.h"
 
 @interface KKDatebaseFormViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -30,7 +30,7 @@
 }
 - (void)setupSubviews{
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"KKFormTableViewCell" bundle:nil] forCellReuseIdentifier:@"KKFormTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"KKDatebaseFormTableViewCell" bundle:nil] forCellReuseIdentifier:@"KKDatebaseFormTableViewCell"];
     //右边导航刷新按钮
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(whenRightClickAction:)];
 }
@@ -250,17 +250,17 @@
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     KKLabelModel *cellModel = self.datas[indexPath.row];
-    KKFormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KKFormTableViewCell"];
+    KKDatebaseFormTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KKDatebaseFormTableViewCell"];
     cell.cellModel = cellModel;
     WeakSelf
     cell.whenScrollViewDidScroll = ^(UIScrollView *scrollView) {
         NSArray *cells = [weakSelf.tableView visibleCells];
-        for (KKFormTableViewCell *tc in cells) {
+        for (KKDatebaseFormTableViewCell *tc in cells) {
             tc.contentOffset = scrollView.contentOffset;
         }
         weakSelf.contentOffset = scrollView.contentOffset;
     };
-    cell.whenSelectItemClick = ^(KKFormTableViewCell *cell, NSIndexPath *collectionViewCellIndexPath) {
+    cell.whenSelectItemClick = ^(KKDatebaseFormTableViewCell *cell, NSIndexPath *collectionViewCellIndexPath) {
         [weakSelf tableView:tableView didSelectRowAtIndexPath:indexPath];
     };
     cell.contentOffset = self.contentOffset;

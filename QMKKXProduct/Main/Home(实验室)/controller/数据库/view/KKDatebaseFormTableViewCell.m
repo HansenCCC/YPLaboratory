@@ -1,19 +1,19 @@
 //
-//  KKFormTableViewCell.m
+//  KKDatebaseFormTableViewCell.m
 //  QMKKXProduct
 //
 //  Created by Hansen on 2/4/20.
 //  Copyright © 2020 力王工作室. All rights reserved.
 //
 
-#import "KKFormTableViewCell.h"
+#import "KKDatebaseFormTableViewCell.h"
 #import "KKFormCollectionViewCell.h"
 
-@interface KKFormTableViewCell ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface KKDatebaseFormTableViewCell ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @end
 
-@implementation KKFormTableViewCell
+@implementation KKDatebaseFormTableViewCell
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setupSubviews];

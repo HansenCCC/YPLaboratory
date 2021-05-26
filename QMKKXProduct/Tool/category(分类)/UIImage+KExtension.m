@@ -204,6 +204,23 @@
     CGImageRelease(cgimg);
     return img;
 }
+//限制图片大小，传入的maxSize单位是KB
++ (NSData *)reSizeImageData:(UIImage *)sourceImage maxSizeWithKB:(CGFloat)maxSize{
+    if (!sourceImage) {
+        return nil;
+    }
+    NSData *imageData = UIImageJPEGRepresentation(sourceImage, 1.0);
+    CGFloat sizeOriginKB = imageData.length / 1024.0;
+    
+    CGFloat resizeRate = 0.9;
+    while (sizeOriginKB > maxSize && resizeRate > 0.1) {
+        imageData = UIImageJPEGRepresentation(sourceImage, resizeRate);
+        sizeOriginKB = imageData.length / 1024.0;
+        resizeRate -= 0.1;
+    }
+    
+    return imageData;
+}
 @end
 
 @implementation UIImage (KExtension_UIColor)

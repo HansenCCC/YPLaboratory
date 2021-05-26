@@ -97,14 +97,22 @@ return __singleton__; \
 #define kToolBarHeight  AdaptedWidth(44.f)
 #define kPickViewHeight  AdaptedWidth(216.f)
 
-//config 默认游戏id
+//config 默认配置
 #define kQuantityMax  6 //数量输入框最大输入数量
 #define kDefaultBoxMax  20 //输入框默认最大输入数量
 #define kPhoneWXQQBoxMax  30 //输入框手机、微信、qq最大输入数量
+#define kDefaultPhoneMax  11 //输入框手机最大输入数量
+#define kDefaultVerificationMax  6 //输入框短信验证最大输入数量
+#define kDefaultPasswordMax  16 //输入框密码最大输入数量
 #define kDefaultGoodsDetailMax  200 //商品详情默认最大输入
 #define KDefaultPageSize 20//默认一页20个
 #define KDefaultMargin  10//默认间隔
 #define KUIProgressHUDAfterDelayTimer 1.5//提示框默认显示多少秒消失
+#define kDefaultMaxImageSize 512.0  //默认图片最大尺寸
+#define KDefaultNickNameMin  3//默认昵称最小数量
+#define KDefaultNickNameMax  10//默认昵称最大数量
+#define KDefaultPersonalizedContextMax  100//默认个性签名最大数量
+
 
 //占位图
 #define kPlaceholderLogo UIImageWithName(@"kk_icon_logoPlaceholder")

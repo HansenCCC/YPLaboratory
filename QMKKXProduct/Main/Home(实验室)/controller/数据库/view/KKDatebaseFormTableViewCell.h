@@ -1,5 +1,5 @@
 //
-//  KKFormTableViewCell.h
+//  KKDatebaseFormTableViewCell.h
 //  QMKKXProduct
 //
 //  Created by Hansen on 2/4/20.
@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KKFormTableViewCell : UITableViewCell
+@interface KKDatebaseFormTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
-@property (copy, nonatomic) void (^whenSelectItemClick)(KKFormTableViewCell *cell,NSIndexPath *indexPath);
+@property (copy, nonatomic) void (^whenSelectItemClick)(KKDatebaseFormTableViewCell *cell,NSIndexPath *indexPath);
 @property (copy, nonatomic) void (^whenScrollViewDidScroll)(UIScrollView *scrollView);
 
 @property (strong, nonatomic) KKLabelModel *cellModel;

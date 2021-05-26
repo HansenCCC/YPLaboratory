@@ -19,6 +19,15 @@
     }
     return self;
 }
+/// 快速创建model
+/// @param image image
+- (instancetype)initWithImage:(UIImage *)image{
+    if (self = [self init]) {
+        self.image = image;
+        self.type = KKImageBrowserImageType;
+    }
+    return self;
+}
 @end
 
 @interface KKImageBrowserCell ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
