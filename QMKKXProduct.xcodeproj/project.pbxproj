@@ -408,6 +408,8 @@
 		6099E307265E5F7E00D8FD47 /* KKWorldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099E305265E5F7E00D8FD47 /* KKWorldTableViewCell.m */; };
 		6099E30C265E60C100D8FD47 /* KKWorldTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099E30B265E60C100D8FD47 /* KKWorldTableViewHeaderFooterView.m */; };
 		6099E30D265E60C100D8FD47 /* KKWorldTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099E30B265E60C100D8FD47 /* KKWorldTableViewHeaderFooterView.m */; };
+		6099E313266019F200D8FD47 /* KKTextBoxAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099E312266019F200D8FD47 /* KKTextBoxAlert.m */; };
+		6099E314266019F200D8FD47 /* KKTextBoxAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099E312266019F200D8FD47 /* KKTextBoxAlert.m */; };
 		609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
 		609EC2A023E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */; };
 		609EC2A923E7C3D0003BB61C /* KKDatabaseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609EC2A723E7C3D0003BB61C /* KKDatabaseDetailViewController.m */; };
@@ -908,6 +910,8 @@
 		6099E305265E5F7E00D8FD47 /* KKWorldTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWorldTableViewCell.m; sourceTree = "<group>"; };
 		6099E30A265E60C100D8FD47 /* KKWorldTableViewHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKWorldTableViewHeaderFooterView.h; sourceTree = "<group>"; };
 		6099E30B265E60C100D8FD47 /* KKWorldTableViewHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKWorldTableViewHeaderFooterView.m; sourceTree = "<group>"; };
+		6099E311266019F200D8FD47 /* KKTextBoxAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKTextBoxAlert.h; sourceTree = "<group>"; };
+		6099E312266019F200D8FD47 /* KKTextBoxAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKTextBoxAlert.m; sourceTree = "<group>"; };
 		609EC29D23E7207C003BB61C /* KKAdaptiveTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAdaptiveTableViewCell.h; sourceTree = "<group>"; };
 		609EC29E23E7207C003BB61C /* KKAdaptiveTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAdaptiveTableViewCell.m; sourceTree = "<group>"; };
 		609EC2A623E7C3D0003BB61C /* KKDatabaseDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDatabaseDetailViewController.h; sourceTree = "<group>"; };
@@ -1381,6 +1385,7 @@
 			children = (
 				3028976422C46DEE000F2669 /* KKAlertViewController.h */,
 				3028976322C46DEE000F2669 /* KKAlertViewController.m */,
+				6099E310266019B400D8FD47 /* textAlert */,
 				6099E273265E148F00D8FD47 /* mapAlert */,
 				6077FE8F265D78CD00544B5B /* fileBoxAlert */,
 				3028976B22C46DEE000F2669 /* twoBoxAlert(两个输入框) */,
@@ -2201,6 +2206,15 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
+		6099E310266019B400D8FD47 /* textAlert */ = {
+			isa = PBXGroup;
+			children = (
+				6099E311266019F200D8FD47 /* KKTextBoxAlert.h */,
+				6099E312266019F200D8FD47 /* KKTextBoxAlert.m */,
+			);
+			path = textAlert;
+			sourceTree = "<group>";
+		};
 		60B68105238B013800E3F6B7 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -3001,6 +3015,7 @@
 				30036DD922B9FE0D00605DF7 /* KKNetworkApi.m in Sources */,
 				6002327423FD4436005EE419 /* KKBeeSlider.m in Sources */,
 				60B68111238BE90B00E3F6B7 /* KKNetworkViewController.m in Sources */,
+				6099E314266019F200D8FD47 /* KKTextBoxAlert.m in Sources */,
 				6099E26A265E120000D8FD47 /* KKPostFormTableViewCell.m in Sources */,
 				60B68118238CCEB600E3F6B7 /* KKCarouselViewController.m in Sources */,
 				6099E264265E120000D8FD47 /* KKPostSectionTableViewCell.m in Sources */,
@@ -3203,6 +3218,7 @@
 				30036DD822B9FE0D00605DF7 /* KKNetworkApi.m in Sources */,
 				6002327323FD4436005EE419 /* KKBeeSlider.m in Sources */,
 				60B68110238BE90B00E3F6B7 /* KKNetworkViewController.m in Sources */,
+				6099E313266019F200D8FD47 /* KKTextBoxAlert.m in Sources */,
 				6099E269265E120000D8FD47 /* KKPostFormTableViewCell.m in Sources */,
 				60B68117238CCEB600E3F6B7 /* KKCarouselViewController.m in Sources */,
 				6099E263265E120000D8FD47 /* KKPostSectionTableViewCell.m in Sources */,

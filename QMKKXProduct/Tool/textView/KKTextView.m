@@ -102,4 +102,8 @@
         }
     }
 }
+- (void)setBackgroundColor:(UIColor *)backgroundColor{
+    [super setBackgroundColor:backgroundColor];
+    self.placeholderView.backgroundColor = backgroundColor;
+}
 @end

@@ -46,7 +46,7 @@
 /// 展示地图
 /// @param whenCompleteBlock 回调
 + (instancetype)showMapComplete:(KKAlertViewControllerBlock )whenCompleteBlock{
-    KKMapAlert *alert = (KKMapAlert *)[KKMapAlert showCustomWithTitle:@"标出丢失物品位置" textDetail:nil leftTitle:@"取消" rightTitle:@"确定" isOnlyOneButton:NO isShowCloseButton:NO canTouchBeginMove:NO complete:whenCompleteBlock];
+    KKMapAlert *alert = (KKMapAlert *)[KKMapAlert showCustomWithTitle:@"分享您的位置" textDetail:nil leftTitle:@"取消" rightTitle:@"确定" isOnlyOneButton:NO isShowCloseButton:NO canTouchBeginMove:NO complete:whenCompleteBlock];
     return alert;
 }
 

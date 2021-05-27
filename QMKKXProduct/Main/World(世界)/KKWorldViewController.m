@@ -187,10 +187,29 @@
     WeakSelf
     [KKAlertViewController showCustomWithTitle:@"提示" textDetail:content leftTitle:@"举报" rightTitle:@"确定" isOnlyOneButton:NO isShowCloseButton:NO canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
         [controler dismissViewControllerCompletion:nil];
-        //唉，就是玩
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [weakSelf showSuccessWithMsg:@"反馈成功！感谢您的反馈"];
-        });
+        if(index == 0){
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weakSelf showFeedbackNextAlert];
+            });
+        }
+    }];
+}
+- (void)showFeedbackNextAlert{
+    //实际没有反馈到服务，服务没有加这个接口，模拟器反馈
+    WeakSelf
+    [KKTextBoxAlert showCustomWithTitle:@"意见反馈" textDetail:nil leftTitle:nil rightTitle:@"提交" placeholder:@"输入您要反馈的内容" isOnlyOneButton:YES isShowCloseButton:NO canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
+        KKTextBoxAlert *vc = (KKTextBoxAlert *)controler;
+        [vc.view endEditing:YES];
+        if (vc.textView.text.length == 0) {
+            [vc showError:@"反馈内容不能为空！"];
+        }else{
+            [controler dismissViewControllerCompletion:nil];
+            [weakSelf showLoading];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weakSelf hideLoading];
+                [weakSelf showSuccessWithMsg:@"反馈成功！感谢您的反馈"];
+            });
+        }
     }];
 }
 - (void)whenReceivedAliPayNotification:(id)sender{
