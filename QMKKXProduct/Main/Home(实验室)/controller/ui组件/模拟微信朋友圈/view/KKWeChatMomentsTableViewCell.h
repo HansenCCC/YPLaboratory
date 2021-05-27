@@ -10,6 +10,9 @@
 #import "KKWeChatMomentsModel.h"
 #import "KKWeChatMomentsLikesView.h"
 
+@class KKWeChatMomentsTableViewCell;
+typedef void(^KKWeChatMomentsTableViewCellBlock)(NSInteger index,KKWeChatMomentsTableViewCell *cacheCell);
+
 @interface KKWeChatMomentsTableViewCell : UITableViewCell
 @property (strong, nonatomic) UIButton *iconButton;//icon
 @property (strong, nonatomic) UILabel *nameLabel;//昵称
@@ -22,7 +25,7 @@
 @property (strong, nonatomic) UIView *cutLineMarkView;//切割线条
 @property (strong, nonatomic) UITableView *tableView;//评论集合
 @property (strong, nonatomic) UIView *markView;//线条
-
+@property (strong, nonatomic) KKWeChatMomentsTableViewCellBlock whenActionBlock;
 //to do
 @property (strong, nonatomic) KKWeChatMomentsModel *cellModel;
 AS_SINGLETON(KKWeChatMomentsTableViewCell);

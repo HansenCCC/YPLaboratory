@@ -23,6 +23,11 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
     }
     return self;
 }
+- (void)whenActionBlock:(id)sender{
+    if (self.whenActionBlock) {
+        self.whenActionBlock(0, self);
+    }
+}
 - (void)setupSubviews{
     //40dp * 40 dp
     self.iconButton = [[UIButton alloc] init];
@@ -40,6 +45,7 @@ DEF_SINGLETON(KKWeChatMomentsTableViewCell);
     [self.contentView addSubview:self.timeLabel];
     //
     self.commentButton = [[UIButton alloc] init];
+    [self.commentButton addTarget:self action:@selector(whenActionBlock:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:self.commentButton];
     //
     self.likesView = [[KKWeChatMomentsLikesView alloc] init];

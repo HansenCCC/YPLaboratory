@@ -145,6 +145,13 @@
     KKFindPostedResponseModel *cellModel = self.datas[indexPath.section][indexPath.row];
     KKWorldTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KKWorldTableViewCell"];
     cell.worldModel = cellModel;
+    WeakSelf
+    cell.whenActionBlock = ^(NSInteger index, KKWeChatMomentsTableViewCell *cacheCell) {
+        if (index == 0) {
+            NSString *content = [NSString stringWithFormat:@"此贴内容是否违规，或者引起不适？"];
+            [weakSelf showFeedbackAlert:content];
+        }
+    };
     return cell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -176,6 +183,16 @@
     return AdaptedWidth(25.f);
 }
 #pragma mark - aciton
+- (void)showFeedbackAlert:(NSString *)content{
+    WeakSelf
+    [KKAlertViewController showCustomWithTitle:@"提示" textDetail:content leftTitle:@"举报" rightTitle:@"确定" isOnlyOneButton:NO isShowCloseButton:NO canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
+        [controler dismissViewControllerCompletion:nil];
+        //唉，就是玩
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf showSuccessWithMsg:@"反馈成功！感谢您的反馈"];
+        });
+    }];
+}
 - (void)whenReceivedAliPayNotification:(id)sender{
     [self.tableView.mj_header beginRefreshing];
 }
