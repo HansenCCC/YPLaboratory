@@ -36,12 +36,21 @@
     [self updateDatas];
 }
 - (void)backItemClick{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [super backItemClick];
 }
-- (void)setupSubvuews{
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     //添加返回按钮
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = KKColor_1A4FB9;
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    //添加返回按钮
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.barTintColor = nil;
+}
+- (void)setupSubvuews{
     //left
     UIButton *leftButton = [UIButton buttonWithFont:[UIFont systemFontOfSize:15] textColor:KKColor_FFFFFF forState:UIControlStateNormal];
     [leftButton setTitle:@"取消" forState:UIControlStateNormal];

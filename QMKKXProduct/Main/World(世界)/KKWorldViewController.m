@@ -52,8 +52,8 @@
     self.tableView.mj_footer = [KKRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerRefreshData)];
     [self.tableView registerClass:[KKWorldTableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"KKWorldTableViewHeaderFooterView"];
     //
-    self.topButton.alpha = 0.3;
-    self.downButton.alpha = 0.3;
+    self.topButton.alpha = 0.4;
+    self.downButton.alpha = 0.4;
 }
 //下拉刷新
 - (void)headerRefreshData{
@@ -126,8 +126,11 @@
 - (void)whenRightClickAction:(id)sender{
     //to do
     KKPostViewController *vc = [[KKPostViewController alloc] init];
-    KKNavigationController *rootVC = [[KKNavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:rootVC animated:YES completion:nil];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+//    KKPostViewController *vc = [[KKPostViewController alloc] init];
+//    KKNavigationController *rootVC = [[KKNavigationController alloc] initWithRootViewController:vc];
+//    [self presentViewController:rootVC animated:YES completion:nil];
 }
 
 #pragma mark - lazy load

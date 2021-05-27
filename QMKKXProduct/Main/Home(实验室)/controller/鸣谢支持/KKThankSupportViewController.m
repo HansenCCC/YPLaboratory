@@ -39,7 +39,7 @@
         KKLabelModel *e1 = [[KKLabelModel alloc] initWithTitle:@"开发者" value:@"程恒盛-Hansen"];
         e1.info = @"https://github.com/HansenCCC";
         [self.datas addObject:e1];
-        KKLabelModel *e1_1 = [[KKLabelModel alloc] initWithTitle:@"开发者-服务器（感谢）" value:@"徐拥军-XYJ"];
+        KKLabelModel *e1_1 = [[KKLabelModel alloc] initWithTitle:@"开发者-服务器" value:@"徐拥军-XYJ"];
         [self.datas addObject:e1_1];
         KKLabelModel *e2 = [[KKLabelModel alloc] initWithTitle:@"电话" value:@"+86 13767141841"];
         e2.info = @"tel:+86 13767141841";
