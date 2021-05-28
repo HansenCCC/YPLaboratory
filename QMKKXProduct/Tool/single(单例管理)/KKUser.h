@@ -21,6 +21,7 @@
 @property (readonly, nonatomic) NSString *startImg;//启动图片地址
 @property (readonly, nonatomic) NSString *channel;//渠道id
 @property (readonly, nonatomic) KKUserInfoModel *userModel;//用户登录信息
+@property (readonly, nonatomic) NSDictionary *ipAddresses;//用户设备ip
 
 + (instancetype)shareInstance;//标准初始化
 

@@ -75,7 +75,8 @@
     KKPostFooterView *footerView = [[KKPostFooterView alloc] initWithFrame:CGRectMake(0, 0, 0, AdaptedWidth(200.f))];
     WeakSelf
     footerView.whenTapAciton = ^(NSInteger index) {
-        [[KKUser shareInstance] presentWebViewContoller:weakSelf url:@"https://www.baidu.com/" complete:nil];
+        NSString *url = [API_H5HOST addString:API_HTML_POST];
+        [[KKUser shareInstance] presentWebViewContoller:weakSelf url:url complete:nil];
     };
     self.footerView = footerView;
     self.tableView.tableFooterView = footerView;
@@ -269,10 +270,9 @@
     model.identification = identification;
     model.batteryLevel = batteryLevel;
     model.languageInfo = languageInfo;
+    model.ipAddresses = [KKUser shareInstance].ipAddresses;
     //
     [self showLoadingOnWindow];
-    NSLog(@"%@",model.mj_JSONString);
-    NSLog(@"%@",model.mj_keyValues);
     [KKNetworkPostedService issueWithRequestModel:model success:^(KKBaseResponse *response) {
         [weakSelf hideLondingOnWindow];
         [[NSNotificationCenter defaultCenter] postNotificationName:kNSNotificationCenterNeedUpdateWorld object:nil];

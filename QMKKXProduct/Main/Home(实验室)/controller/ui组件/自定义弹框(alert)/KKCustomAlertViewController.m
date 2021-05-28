@@ -38,7 +38,9 @@
     @"普通提示框(一个按钮)",
     @"普通提示框(点击空白不隐藏)",
     @"普通输入框(一个)",
-    @"普通输入框(两个)",];
+    @"获取经纬度弹框",
+    @"内嵌HTML弹框",
+    ];
     for (NSString *item in items) {
         KKLabelModel *element = [[KKLabelModel alloc] initWithTitle:item value:nil];
         [self.datas addObject:element];
@@ -100,15 +102,31 @@
         }];
     }else if([title rangeOfString:@"普通输入框"].location != NSNotFound){
         //
-        if ([title isEqualToString:@"普通输入框(一个)"]) {
-            [KKInputBoxAlert showCustomWithTitle:title bottomTitle:@"确定" topPlaceholder:@"占位符" bottomPlaceholder:@"占位符" isOnlyOneTextField:YES canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
+        WeakSelf
+        [KKTextBoxAlert showCustomWithTitle:title textDetail:nil leftTitle:nil rightTitle:@"提交" placeholder:@"这是一个占位符~" isOnlyOneButton:YES isShowCloseButton:NO canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
+            KKTextBoxAlert *vc = (KKTextBoxAlert *)controler;
+            [vc.view endEditing:YES];
+            if (vc.textView.text.length == 0) {
+                [vc showError:@"输入内容不能为空！"];
+            }else{
                 [controler dismissViewControllerCompletion:nil];
-            }];
-        }else if ([title isEqualToString:@"普通输入框(两个)"]){
-            [KKInputBoxAlert showCustomWithTitle:title bottomTitle:@"确定" topPlaceholder:@"占位符" bottomPlaceholder:@"占位符" isOnlyOneTextField:NO canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
-                [controler dismissViewControllerCompletion:nil];
-            }];
-        }
+                [weakSelf showLoading];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakSelf hideLoading];
+                    [weakSelf showSuccessWithMsg:@"提交成功！"];
+                });
+            }
+        }];
+    }else if([title rangeOfString:@"获取经纬度弹框"].location != NSNotFound){
+        [KKMapAlert showMapComplete:^(KKAlertViewController *controler, NSInteger index) {
+            [controler dismissViewControllerCompletion:nil];
+        }];
+    }else if([title rangeOfString:@"内嵌HTML弹框"].location != NSNotFound){
+        NSString *url = @"https://github.com/HansenCCC";
+        NSURLRequest *request = [NSURLRequest requestWithURL:url.toURL];
+        [KKHtmlBoxAlert showCustomWithTitle:title textDetail:nil leftTitle:nil rightTitle:@"关闭" request:request isOnlyOneButton:YES isShowCloseButton:NO canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
+            [controler dismissViewControllerCompletion:nil];
+        }];
     }
 }
 #pragma mark - aciton

@@ -25,6 +25,7 @@
 #import "KKFileBoxAlert.h"//文件展示弹框
 #import "KKMapAlert.h"//经纬度选择弹框
 #import "KKTextBoxAlert.h"//输入框弹框
+#import "KKHtmlBoxAlert.h"//html 弹框
 //加载菊花
 #import "KKBaseLoadingView.h"//loading
 //支持icon左右上下不同位置的button

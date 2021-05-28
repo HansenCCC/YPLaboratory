@@ -19,7 +19,6 @@
     self.backBtnImage = itemImg;
     //web配置
     [self webViewConfig];
-    [self addObserverNotification];
 }
 //web配置
 - (void)webViewConfig{
@@ -71,7 +70,7 @@
     CGRect bounds = self.view.bounds;
     CGRect f1 = bounds;
     self.webView.frame = f1;
-    
+    //
     CGRect f2 = bounds;
     f2.size = [self.progressView sizeThatFits:CGSizeZero];
     f2.size.width = bounds.size.width;

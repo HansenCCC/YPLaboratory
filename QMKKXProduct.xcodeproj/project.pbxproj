@@ -486,6 +486,8 @@
 		60C6CFEB238AEEEE00FABAA3 /* KKFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */; };
 		60C6CFEC238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
 		60C6CFED238AEEEE00FABAA3 /* KKFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */; };
+		60C6CFF226608B4E00CEDE30 /* KKHtmlBoxAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFF126608B4E00CEDE30 /* KKHtmlBoxAlert.m */; };
+		60C6CFF326608B4E00CEDE30 /* KKHtmlBoxAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CFF126608B4E00CEDE30 /* KKHtmlBoxAlert.m */; };
 		60D128AE24B5BA8E00891E6B /* KKRunLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128AD24B5BA8E00891E6B /* KKRunLabelViewController.m */; };
 		60D128AF24B5BA8E00891E6B /* KKRunLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128AD24B5BA8E00891E6B /* KKRunLabelViewController.m */; };
 		60D128B324B5BBC100891E6B /* KKRunLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D128B224B5BBC100891E6B /* KKRunLabel.m */; };
@@ -972,6 +974,8 @@
 		60C6CFE7238AEEEE00FABAA3 /* KKFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKFileViewController.h; sourceTree = "<group>"; };
 		60C6CFE8238AEEEE00FABAA3 /* KKFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKFileViewController.m; sourceTree = "<group>"; };
 		60C6CFE9238AEEEE00FABAA3 /* KKFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKFileViewController.xib; sourceTree = "<group>"; };
+		60C6CFF026608B4E00CEDE30 /* KKHtmlBoxAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKHtmlBoxAlert.h; sourceTree = "<group>"; };
+		60C6CFF126608B4E00CEDE30 /* KKHtmlBoxAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKHtmlBoxAlert.m; sourceTree = "<group>"; };
 		60D128AC24B5BA8E00891E6B /* KKRunLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKRunLabelViewController.h; sourceTree = "<group>"; };
 		60D128AD24B5BA8E00891E6B /* KKRunLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKRunLabelViewController.m; sourceTree = "<group>"; };
 		60D128B124B5BBC100891E6B /* KKRunLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKRunLabel.h; sourceTree = "<group>"; };
@@ -1385,6 +1389,7 @@
 			children = (
 				3028976422C46DEE000F2669 /* KKAlertViewController.h */,
 				3028976322C46DEE000F2669 /* KKAlertViewController.m */,
+				60C6CFE526608B0D00CEDE30 /* htmlAlert */,
 				6099E310266019B400D8FD47 /* textAlert */,
 				6099E273265E148F00D8FD47 /* mapAlert */,
 				6077FE8F265D78CD00544B5B /* fileBoxAlert */,
@@ -2351,6 +2356,15 @@
 			path = "文件管理";
 			sourceTree = "<group>";
 		};
+		60C6CFE526608B0D00CEDE30 /* htmlAlert */ = {
+			isa = PBXGroup;
+			children = (
+				60C6CFF026608B4E00CEDE30 /* KKHtmlBoxAlert.h */,
+				60C6CFF126608B4E00CEDE30 /* KKHtmlBoxAlert.m */,
+			);
+			path = htmlAlert;
+			sourceTree = "<group>";
+		};
 		60D128AB24B5BA5B00891E6B /* 跑马灯效果 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2995,6 +3009,7 @@
 				600A9E4323E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */,
 				6099E268265E120000D8FD47 /* KKPostHeaderTableViewCell.m in Sources */,
 				6094E171251DD362001CE756 /* KKAdaptiveImageTableViewCell.m in Sources */,
+				60C6CFF326608B4E00CEDE30 /* KKHtmlBoxAlert.m in Sources */,
 				60022A2F23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */,
 				60F685EA249B40D200994C39 /* KKImageBrowserCell.m in Sources */,
 				6099E2EB265E461C00D8FD47 /* UIScrollView+KKEmptyDataView.m in Sources */,
@@ -3198,6 +3213,7 @@
 				600A9E4223E567FD00ACB002 /* UITableViewCell+KExtension.m in Sources */,
 				6099E267265E120000D8FD47 /* KKPostHeaderTableViewCell.m in Sources */,
 				6094E170251DD362001CE756 /* KKAdaptiveImageTableViewCell.m in Sources */,
+				60C6CFF226608B4E00CEDE30 /* KKHtmlBoxAlert.m in Sources */,
 				60022A2E23C853D1004F94DB /* KKSinaAiteViewController.m in Sources */,
 				60F685E9249B40D200994C39 /* KKImageBrowserCell.m in Sources */,
 				6099E2EA265E461C00D8FD47 /* UIScrollView+KKEmptyDataView.m in Sources */,

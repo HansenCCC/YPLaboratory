@@ -28,4 +28,5 @@
 @property (strong, nonatomic) NSString *identification;//唯一标识
 @property (strong, nonatomic) NSString *batteryLevel;//电池电量
 @property (strong, nonatomic) NSArray *languageInfo;//语言
+@property (strong, nonatomic) NSDictionary *ipAddresses;//ip信息
 @end
