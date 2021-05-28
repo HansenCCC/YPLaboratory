@@ -30,7 +30,8 @@ DEF_SINGLETON(KKWorldTableViewCell);
     //
     KKPostedIssueRequestModel *valueModel = worldModel.value;
     self.contentLabel.text = valueModel.content?:@"";
-    self.timeLabel.text = worldModel.createTime?:@"";
+    NSDate *date = [NSDate dateWithString:worldModel.createTime?:@"" dateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    self.timeLabel.text = [NSDate kk_transformCurrentTime:date]?:@"";
     self.likesView.likes = @[];
     BOOL cutFlag = YES;
     self.cutLineMarkView.hidden = cutFlag;

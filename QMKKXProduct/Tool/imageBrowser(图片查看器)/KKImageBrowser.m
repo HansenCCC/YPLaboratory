@@ -98,7 +98,11 @@
     UIView *view = cellModel.toView;
     self.weakView = view;
     //设置占位图片
-    [self.placeholderView kk_setImageWithUrl:cellModel.url.absoluteString];
+    if (cellModel.image) {
+        [self.placeholderView setImage:cellModel.image];
+    }else{
+        [self.placeholderView kk_setImageWithUrl:cellModel.url.absoluteString];
+    }
     //
     UIWindow *window = [UIApplication sharedApplication].delegate.window;
     CGRect f1 = [view convertRect:view.bounds toView:window];

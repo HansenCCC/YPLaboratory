@@ -164,7 +164,11 @@
 - (void)setCellModel:(KKImageBrowserModel *)cellModel{
     _cellModel = cellModel;
     self.scrollView.zoomScale = 1.0f;
-    [self.browserImageView kk_setImageWithUrl:cellModel.url.absoluteString];
+    if (cellModel.image) {
+        [self.browserImageView setImage:cellModel.image];
+    }else{
+        [self.browserImageView kk_setImageWithUrl:cellModel.url.absoluteString];
+    }
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
