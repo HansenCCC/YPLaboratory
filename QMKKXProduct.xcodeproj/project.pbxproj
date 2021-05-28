@@ -3444,7 +3444,7 @@
 				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProductDev.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3481,7 +3481,7 @@
 				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProductDev.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3518,7 +3518,7 @@
 				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProduct.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3555,7 +3555,7 @@
 				CODE_SIGN_ENTITLEMENTS = QMKKXProduct/QMKKXProduct.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TB5KM6Y5DQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

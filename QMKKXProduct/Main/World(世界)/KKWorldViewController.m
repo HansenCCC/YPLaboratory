@@ -89,6 +89,9 @@
             lastModel = model;
             if (lastDate == nil) {
                 [dateArray addObject:model];
+                if (model == items.lastObject) {
+                    [mItems addObject:[dateArray copy]];
+                }
                 continue;
             }
             //判断是否是同一天

@@ -216,7 +216,7 @@ static NSString *kNSUserDefaultsStartImg = @"kNSUserDefaultsStartImg";//启动�
 #define IOS_VPN         @"utun0"
 #define IP_ADDR_IPv4    @"ipv4"
 #define IP_ADDR_IPv6    @"ipv6"
-+ (NSDictionary *)ipAddresses{
+- (NSDictionary *)ipAddresses{
     NSMutableDictionary *addresses = [NSMutableDictionary dictionaryWithCapacity:8];
     // retrieve the current interfaces - returns 0 on success
     struct ifaddrs *interfaces;
