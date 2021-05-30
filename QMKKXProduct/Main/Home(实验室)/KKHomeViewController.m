@@ -12,7 +12,6 @@
 #import "KKExamListViewController.h"//英语专业考试
 #import "KKSDWebViewController.h"//网络图片下载
 #import "KKUIUnitViewController.h"//ui组件
-#import "KKAppInstallViewController.h"//Apple安装协议
 #import "KKFileManagerViewController.h"//文件管理
 #import "KKNetworkViewController.h"//network网络层
 #import "KKDatabaseViewController.h"//数据库
@@ -57,7 +56,6 @@
     KKLabelModel *s1m9 = [[KKLabelModel alloc] initWithTitle:@"数据库(基于FMDB)" value:nil];
     s1m9.info = [KKDatabaseViewController class];
     KKLabelModel *s1m10 = [[KKLabelModel alloc] initWithTitle:@"Apple安装协议&App打开和交互" value:nil];
-    s1m10.info = [KKAppInstallViewController class];
     KKLabelModel *s1m11 = [[KKLabelModel alloc] initWithTitle:@"Xcode自定义文件模板" value:nil];
     s1m11.isEnabled = NO;
     KKLabelModel *s1m12 = [[KKLabelModel alloc] initWithTitle:@"Shell&Python脚本学习" value:nil];

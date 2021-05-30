@@ -9,6 +9,7 @@
 #import "KKApplePayViewController.h"
 #import "KKLabelModel.h"
 #import "KKLabelTableViewCell.h"
+#import "KKAdaptiveTableViewCell.h"
 
 @interface KKApplePayViewController ()
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -62,6 +63,10 @@
 - (void)setupSubviews{
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"KKLabelTableViewCell" bundle:nil] forCellReuseIdentifier:@"KKLabelTableViewCell"];
+    [self.tableView registerClass:[KKAdaptiveTableViewCell class] forCellReuseIdentifier:@"KKAdaptiveTableViewCell"];
+    UIEdgeInsets contentInset = self.tableView.contentInset;
+    contentInset.bottom += 70.f;
+    self.tableView.contentInset = contentInset;
 }
 - (void)reloadDatas{
     [self.datas removeAllObjects];
@@ -88,22 +93,51 @@
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     KKLabelModel *cellModel = self.datas[indexPath.row];
-    KKLabelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KKLabelTableViewCell"];
-    cell.cellModel = cellModel;
+    KKAdaptiveTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KKAdaptiveTableViewCell"];
+    [self setupAdaptiveCell:cell cellModel:cellModel];
     if (indexPath.row == self.selectIndex) {
-        cell.titleLabel.textColor = KKColor_0000FF;
-        [cell.rightButton setImage:UIImageWithName(@"kk_icon_cny") forState:UIControlStateNormal];
+        cell.contentLabel.textColor = KKColor_0000FF;
+//        [cell.rightButton setImage:UIImageWithName(@"kk_icon_cny") forState:UIControlStateNormal];
     }else{
-        cell.titleLabel.textColor = KKColor_000000;
-        [cell.rightButton setImage:nil forState:UIControlStateNormal];
+        cell.contentLabel.textColor = KKColor_000000;
+//        [cell.rightButton setImage:nil forState:UIControlStateNormal];
     }
     return cell;
+}
+//赋值cell
+- (void)setupAdaptiveCell:(KKAdaptiveTableViewCell *)cell cellModel:(KKLabelModel *)cellModel{
+    SKProduct *product = cellModel.info;
+    NSString *title = [NSString stringWithFormat:@"名称：%@\n\n",cellModel.title];
+    NSString *localizedDescription = [NSString stringWithFormat:@"描述：%@\n",product.localizedDescription?:@"--"];
+    NSString *price = [NSString stringWithFormat:@"价格: %@\n",product.price?:@"--"];
+    NSString *info = [NSString stringWithFormat:@"具体: %@\n",product.mj_JSONString?:@"--"];
+    NSString *format = [NSString stringWithFormat:@"%@%@%@",localizedDescription,price,info];
+    NSMutableAttributedString *attributed = [[NSMutableAttributedString alloc] initWithString:title attributes:@{NSFontAttributeName:AdaptedBoldFontSize(18)}];
+    //调整行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = AdaptedWidth(5.f);
+    NSAttributedString *formatAttributed = [[NSAttributedString alloc] initWithString:format attributes:@{NSFontAttributeName:AdaptedFontSize(12),NSParagraphStyleAttributeName:paragraphStyle}];
+    [attributed appendAttributedString:formatAttributed];
+    //内容label
+    cell.contentLabel.attributedText = attributed;
+    UIEdgeInsets insets = cell.contentInsets;
+    insets.left = AdaptedWidth(15.f);
+    insets.right = AdaptedWidth(8.f);
+    insets.top = AdaptedWidth(8.f);
+    insets.bottom= AdaptedWidth(8.f);
+    cell.contentInsets = insets;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.datas.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return AdaptedWidth(44.f);
+    KKLabelModel *cellModel = self.datas[indexPath.row];
+    KKAdaptiveTableViewCell *cell = [KKAdaptiveTableViewCell sharedInstance];
+    [self setupAdaptiveCell:cell cellModel:cellModel];
+    cell.bounds = tableView.bounds;
+    CGSize size = [cell sizeThatFits:CGSizeMake(cell.bounds.size.width, 0)];
+    CGFloat height = size.height;
+    return height;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //to do

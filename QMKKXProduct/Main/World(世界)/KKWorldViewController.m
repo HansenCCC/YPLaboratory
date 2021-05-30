@@ -105,6 +105,9 @@
                 [mItems addObject:[dateArray copy]];
                 [dateArray removeAllObjects];
                 [dateArray addObject:model];
+                if (model == items.lastObject) {
+                    [mItems addObject:[dateArray copy]];
+                }
             }
         }
         if (items.count < model.pageSize.intValue) {
@@ -188,7 +191,7 @@
 #pragma mark - aciton
 - (void)showFeedbackAlert:(NSString *)content{
     WeakSelf
-    [KKAlertViewController showCustomWithTitle:@"提示" textDetail:content leftTitle:@"举报" rightTitle:@"确定" isOnlyOneButton:NO isShowCloseButton:NO canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
+    [KKAlertViewController showCustomWithTitle:@"提示" textDetail:content leftTitle:@"举报" rightTitle:@"取消" isOnlyOneButton:NO isShowCloseButton:NO canTouchBeginMove:YES complete:^(KKAlertViewController *controler, NSInteger index) {
         [controler dismissViewControllerCompletion:nil];
         if(index == 0){
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
