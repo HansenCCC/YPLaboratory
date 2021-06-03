@@ -162,9 +162,9 @@
     WeakSelf
     NSString *title = @"提示";
     NSString *content = @"网络好像除了点问题，\n重新试试吧~";
-    NSString *leftTitle = @"重试";
-    NSString *rightTitle = @"退出";
-    [KKAlertViewController showCustomWithTitle:title textDetail:content leftTitle:rightTitle rightTitle:leftTitle isOnlyOneButton:NO isShowCloseButton:NO canTouchBeginMove:NO complete:^(KKAlertViewController *controler, NSInteger index) {
+    NSString *leftTitle = @"退出";
+    NSString *rightTitle = @"重试";
+    [KKAlertViewController showCustomWithTitle:title textDetail:content leftTitle:leftTitle rightTitle:rightTitle isOnlyOneButton:NO isShowCloseButton:NO canTouchBeginMove:NO complete:^(KKAlertViewController *controler, NSInteger index) {
         if (index == 0) {
             exit(0);
         }else if(index == 1){
