@@ -22,7 +22,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    sleep(1.f);
     [self jpushInitDidFinishLaunchingWithOptions:launchOptions];//添加初始化JPush代码
     [self registerUserNotification];//注册通知
     [self listenNetworkReachabilityStatus];//网络监控

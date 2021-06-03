@@ -106,7 +106,7 @@
     KKLabelModel *s25 = [[KKLabelModel alloc] initWithTitle:@"自适应图片高度" value:nil];
     s25.info = [KKAdaptiveImagesViewController class];
 //    [self.datas addObjectsFromArray:@[s19,s14,s15,c4,c5,c1,s12,c2,c3,s7,s6,s8,s11,s18,s9,s10,s13,s16,s17,s20,s21,s22,s23,s24,s25]];
-    [self.datas addObjectsFromArray:@[c4,s19,c1,s12,c2,c3,s7,s8,s11,s18,s9,s10,s13,s16,s17,s20,s21,s22,s23,s24,s25,s14,s15,c5,s6]];
+    [self.datas addObjectsFromArray:@[c4,s19,c1,s12,c2,c3,s7,s8,s11,s18,s9,s10,s13,s16,s17,s20,s21,s22,s23,s24,s25]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

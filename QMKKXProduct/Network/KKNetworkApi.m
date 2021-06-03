@@ -9,11 +9,11 @@
 #import "KKNetworkApi.h"
 
 #if QMKKXProductDEV//测试环境
-NSString *const API_HOST = @"http://118.31.45.80:8899/";//ip地址
-NSString *const API_H5HOST = @"http://118.31.45.80/";//h5 ip地址
+NSString *const API_HOST = @"https://ch.ssswzl.xyz:8800/";//ip地址
+NSString *const API_H5HOST = @"https://ch.ssswzl.xyz:4466/";//h5 ip地址
 #elif QMKKXProduct//正式环境
-NSString *const API_HOST = @"http://118.31.45.80:8899/";//ip地址
-NSString *const API_H5HOST = @"http://118.31.45.80/";//h5 ip地址
+NSString *const API_HOST = @"https://ch.ssswzl.xyz:8800/";//ip地址
+NSString *const API_H5HOST = @"https://ch.ssswzl.xyz:4466/";//h5 ip地址
 #endif
 
 #pragma mark - 文件上传
