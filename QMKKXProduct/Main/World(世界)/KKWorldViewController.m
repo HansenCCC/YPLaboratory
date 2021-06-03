@@ -102,8 +102,10 @@
                     [mItems addObject:[dateArray copy]];
                 }
             }else{
-                [mItems addObject:[dateArray copy]];
-                [dateArray removeAllObjects];
+                if (dateArray.count > 0) {
+                    [mItems addObject:[dateArray copy]];
+                    [dateArray removeAllObjects];
+                }
                 [dateArray addObject:model];
                 if (model == items.lastObject) {
                     [mItems addObject:[dateArray copy]];
