@@ -343,4 +343,25 @@
 + (NSArray <NSString *> *)fileDatabase{
     return @[@"DB",@"db",];
 }
+
+#pragma mark - 字符提取
+/// 提取两字符之间的值
+/// @param startString 头字符
+/// @param endString 尾字符
+- (NSArray <NSString *>*)substringWithStart:(NSString *)startString end:(NSString *)endString{
+    NSMutableString *copySelf = [self mutableCopy];
+    NSMutableArray *results = [[NSMutableArray alloc] init];
+    NSRange startRange = [copySelf rangeOfString:startString];
+    NSRange endRange = [copySelf rangeOfString:endString];
+    while (startRange.location != NSNotFound&&endRange.location != NSNotFound) {
+        //提取两字符之间的值
+        NSRange range = NSMakeRange(startRange.location , endRange.location + endRange.length  - startRange.location);
+        NSString *result = [copySelf substringWithRange:range];
+        [results addObject:result];
+        [copySelf deleteCharactersInRange:range];
+        startRange = [copySelf rangeOfString:startString];
+        endRange = [copySelf rangeOfString:endString];
+    };
+    return results;
+}
 @end

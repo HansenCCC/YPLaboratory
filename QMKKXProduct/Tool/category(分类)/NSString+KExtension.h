@@ -134,4 +134,10 @@
 + (NSArray <NSString *> *)fileWeb;
 //常见数据库集合db
 + (NSArray <NSString *> *)fileDatabase;
+
+#pragma mark - 字符提取
+/// 提取两字符之间的值
+/// @param startString 头字符
+/// @param endString 尾字符
+- (NSArray <NSString *>*)substringWithStart:(NSString *)startString end:(NSString *)endString;
 @end
