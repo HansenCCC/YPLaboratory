@@ -92,4 +92,6 @@
 //mapView(高德地图)
 #import "KKMapView.h"
 #import "KKMapLocationManager.h"
+#import "KKWKURLSchemeHandler.h"//网络监管协议
+
 #endif /* KKToolHeader_h */

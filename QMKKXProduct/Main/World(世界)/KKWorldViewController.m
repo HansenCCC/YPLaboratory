@@ -136,9 +136,6 @@
     KKPostViewController *vc = [[KKPostViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
-//    KKPostViewController *vc = [[KKPostViewController alloc] init];
-//    KKNavigationController *rootVC = [[KKNavigationController alloc] initWithRootViewController:vc];
-//    [self presentViewController:rootVC animated:YES completion:nil];
 }
 
 #pragma mark - lazy load

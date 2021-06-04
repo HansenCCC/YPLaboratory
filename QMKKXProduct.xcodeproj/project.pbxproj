@@ -458,6 +458,10 @@
 		60BA347C23EC6AC700A2A249 /* KKCustomAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BA347923EC6AC700A2A249 /* KKCustomAlertViewController.m */; };
 		60BA347D23EC6AC700A2A249 /* KKCustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60BA347A23EC6AC700A2A249 /* KKCustomAlertViewController.xib */; };
 		60BA347E23EC6AC700A2A249 /* KKCustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60BA347A23EC6AC700A2A249 /* KKCustomAlertViewController.xib */; };
+		60BEE0172669E3C0001E580E /* KKControlURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BEE0132669E3BF001E580E /* KKControlURLProtocol.m */; };
+		60BEE0182669E3C0001E580E /* KKControlURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BEE0132669E3BF001E580E /* KKControlURLProtocol.m */; };
+		60BEE0192669E3C0001E580E /* KKWKURLSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BEE0152669E3BF001E580E /* KKWKURLSchemeHandler.m */; };
+		60BEE01A2669E3C0001E580E /* KKWKURLSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BEE0152669E3BF001E580E /* KKWKURLSchemeHandler.m */; };
 		60C237A024021AD4002FF47C /* KKBeeProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C2379F24021AD4002FF47C /* KKBeeProgressView.m */; };
 		60C237A124021AD4002FF47C /* KKBeeProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C2379F24021AD4002FF47C /* KKBeeProgressView.m */; };
 		60C4AD8D248E0C10003B06A1 /* KKCommonHomeStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C4AD8C248E0C10003B06A1 /* KKCommonHomeStyleViewController.m */; };
@@ -952,6 +956,10 @@
 		60BA347823EC6AC700A2A249 /* KKCustomAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKCustomAlertViewController.h; sourceTree = "<group>"; };
 		60BA347923EC6AC700A2A249 /* KKCustomAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKCustomAlertViewController.m; sourceTree = "<group>"; };
 		60BA347A23EC6AC700A2A249 /* KKCustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKCustomAlertViewController.xib; sourceTree = "<group>"; };
+		60BEE0122669E3BF001E580E /* KKControlURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKControlURLProtocol.h; sourceTree = "<group>"; };
+		60BEE0132669E3BF001E580E /* KKControlURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKControlURLProtocol.m; sourceTree = "<group>"; };
+		60BEE0152669E3BF001E580E /* KKWKURLSchemeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKWKURLSchemeHandler.m; sourceTree = "<group>"; };
+		60BEE0162669E3BF001E580E /* KKWKURLSchemeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKWKURLSchemeHandler.h; sourceTree = "<group>"; };
 		60C2379E24021AD4002FF47C /* KKBeeProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBeeProgressView.h; sourceTree = "<group>"; };
 		60C2379F24021AD4002FF47C /* KKBeeProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBeeProgressView.m; sourceTree = "<group>"; };
 		60C4AD8B248E0C10003B06A1 /* KKCommonHomeStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKCommonHomeStyleViewController.h; sourceTree = "<group>"; };
@@ -1542,6 +1550,8 @@
 			isa = PBXGroup;
 			children = (
 				3077A36A22BB3A4E00372F07 /* KKToolHeader.h */,
+				60BEE0112669E3BF001E580E /* networkProtocol(网络监管协议) */,
+				60BEE0142669E3BF001E580E /* schemeHandler(网络监管协议) */,
 				6099E298265E166E00D8FD47 /* mapView(高德地图) */,
 				60E8ABC82657A483007446A6 /* applePay */,
 				60994149250089CE00FF8486 /* inputBox(输入框控制器) */,
@@ -2292,6 +2302,24 @@
 			path = "自定义弹框(alert)";
 			sourceTree = "<group>";
 		};
+		60BEE0112669E3BF001E580E /* networkProtocol(网络监管协议) */ = {
+			isa = PBXGroup;
+			children = (
+				60BEE0122669E3BF001E580E /* KKControlURLProtocol.h */,
+				60BEE0132669E3BF001E580E /* KKControlURLProtocol.m */,
+			);
+			path = "networkProtocol(网络监管协议)";
+			sourceTree = "<group>";
+		};
+		60BEE0142669E3BF001E580E /* schemeHandler(网络监管协议) */ = {
+			isa = PBXGroup;
+			children = (
+				60BEE0162669E3BF001E580E /* KKWKURLSchemeHandler.h */,
+				60BEE0152669E3BF001E580E /* KKWKURLSchemeHandler.m */,
+			);
+			path = "schemeHandler(网络监管协议)";
+			sourceTree = "<group>";
+		};
 		60C4AD8A248E0BEF003B06A1 /* 常见的首页样式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2946,6 +2974,7 @@
 				3028979A22C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				6099415A25008B8900FF8486 /* KKAiteTextView.m in Sources */,
 				30E20783237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
+				60BEE0182669E3C0001E580E /* KKControlURLProtocol.m in Sources */,
 				3015A05A237D33390086B39D /* KKUIUnitViewController.m in Sources */,
 				3077A34822BB303500372F07 /* UIImageView+KExtension.m in Sources */,
 				30917418237B9FDE00010E99 /* KKAppIconPreviewViewController.m in Sources */,
@@ -3084,6 +3113,7 @@
 				30917401237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
 				6097E5DB24971F25007ECC55 /* KKDropdownBoxViewController.m in Sources */,
 				302897BE22C46DEF000F2669 /* KKTextField.m in Sources */,
+				60BEE01A2669E3C0001E580E /* KKWKURLSchemeHandler.m in Sources */,
 				609EC2A023E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */,
 				600A9E4723E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */,
 				60B6813B238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */,
@@ -3150,6 +3180,7 @@
 				3028979922C46DEF000F2669 /* KKImagePickerController.m in Sources */,
 				6099415925008B8900FF8486 /* KKAiteTextView.m in Sources */,
 				30E20782237975AA00EE3E8E /* KKLabStudioViewController.m in Sources */,
+				60BEE0172669E3C0001E580E /* KKControlURLProtocol.m in Sources */,
 				3015A059237D33390086B39D /* KKUIUnitViewController.m in Sources */,
 				3077A34722BB303500372F07 /* UIImageView+KExtension.m in Sources */,
 				30917417237B9FDE00010E99 /* KKAppIconPreviewViewController.m in Sources */,
@@ -3288,6 +3319,7 @@
 				30917400237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
 				6097E5DA24971F25007ECC55 /* KKDropdownBoxViewController.m in Sources */,
 				302897BD22C46DEF000F2669 /* KKTextField.m in Sources */,
+				60BEE0192669E3C0001E580E /* KKWKURLSchemeHandler.m in Sources */,
 				609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */,
 				600A9E4623E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */,
 				60B6813A238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */,

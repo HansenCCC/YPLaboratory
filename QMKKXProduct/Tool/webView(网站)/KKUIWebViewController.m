@@ -74,6 +74,7 @@
     CGRect f2 = bounds;
     f2.size = [self.progressView sizeThatFits:CGSizeZero];
     f2.size.width = bounds.size.width;
+    f2.origin.y = CGRectGetMaxY(self.navigationController.navigationBar.frame);
     self.progressView.frame = f2;
 }
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
