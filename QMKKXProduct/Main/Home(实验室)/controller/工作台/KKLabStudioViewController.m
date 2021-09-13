@@ -9,97 +9,133 @@
 #import "KKLabStudioViewController.h"
 #import "AppDelegate.h"
 
-@interface KKLabStudioViewController ()
+@interface KKLabStudioViewController () <UIDocumentPickerDelegate>
+
 @property (strong, nonatomic) UILabel *xlabel;
 @property (strong, nonatomic) UILabel *ylabel;
 @property (strong, nonatomic) KKBeeAVPlayerView *playerView;
 @property (strong, nonatomic) UIScrollView *scrollView;
 
+@property (nonatomic, strong) UIButton *button;
+
 @end
 
 @implementation KKLabStudioViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    self.title = @"工作台";
-    self.view.backgroundColor = KKColor_FFFFFF;
-    //右边导航刷新按钮
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(whenRightClickAction:)];
     //
-    self.playerView = [[KKBeeAVPlayerView alloc] init];
-    [self.view addSubview:self.playerView];
+    self.button = [[UIButton alloc] init];
+    [self.view addSubview:self.button];
 }
-//点击右上角操作
-- (void)whenRightClickAction:(id)sender{
-//    CGFloat xProgress = 1;
-//    CGFloat yProgress = 1;
-//    self.qgdzlView.xProgress = xProgress;
-//    self.qgdzlView.yProgress = yProgress;
+
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    // Do any additional setup after loading the view from its nib.
+//    self.title = @"工作台";
+//    self.view.backgroundColor = KKColor_FFFFFF;
+//    //右边导航刷新按钮
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(whenRightClickAction:)];
 //    //
-//    CGPoint xpoint = [self.qgdzlView xPointForProgress:xProgress];
-//    self.xlabel.center = xpoint;
-//    //
-//    CGPoint ypoint = [self.qgdzlView yPointForProgress:yProgress];
-//    self.ylabel.center = ypoint;
+//    self.playerView = [[KKBeeAVPlayerView alloc] init];
+//    [self.view addSubview:self.playerView];
+//}
 //
-//    [KKBadgeView showBadgeToView:self.qgdzlView badgeInteger:1];
-    NSArray <NSString *>*items = @[@"https://img.qumeng666.com/1590398734.269067",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590399408.463029",
-                                   @"https://img.qumeng666.com/1590399442.681522",
-                                   @"https://img.qumeng666.com/1590399510.690721",
-                                   @"https://img.qumeng666.com/1590398734.269067",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590399408.463029",
-                                   @"https://img.qumeng666.com/1590399442.681522",
-                                   @"https://img.qumeng666.com/1590399510.690721",
-                                   @"https://img.qumeng666.com/1590398734.269067",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590399408.463029",
-                                   @"https://img.qumeng666.com/1590399442.681522",
-                                   @"https://img.qumeng666.com/1590399510.690721",
-                                   @"https://img.qumeng666.com/1590398734.269067",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590399408.463029",
-                                   @"https://img.qumeng666.com/1590399442.681522",
-                                   @"https://img.qumeng666.com/1590399510.690721",
-                                   @"https://img.qumeng666.com/1590398734.269067",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590399408.463029",
-                                   @"https://img.qumeng666.com/1590399442.681522",
-                                   @"https://img.qumeng666.com/1590399510.690721",
-                                   @"https://img.qumeng666.com/1590398734.269067",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590399408.463029",
-                                   @"https://img.qumeng666.com/1590399442.681522",
-                                   @"https://img.qumeng666.com/1590399510.690721",
-                                   @"https://img.qumeng666.com/1590398734.269067",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590398820.492414",
-                                   @"https://img.qumeng666.com/1590399408.463029",
-                                   @"https://img.qumeng666.com/1590399442.681522",
-                                   @"https://img.qumeng666.com/1590399510.690721",
-                                  ];
-    NSInteger index = rand()%items.count;
-    self.playerView.playerItemUrl = items[index].toURL;
-}
-- (void)viewWillLayoutSubviews{
-    [super viewWillLayoutSubviews];
-    CGRect bounds = self.view.bounds;
-    CGRect f1 = bounds;
-    f1.origin.y = AdaptedWidth(100.f);
-    f1.origin.x = AdaptedWidth(50.f);
-    f1.size.width = bounds.size.width - 2 * f1.origin.x;
-    f1.size.height = AdaptedWidth(200);
-    //
-    self.playerView.frame = f1;
-}
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    [self presentDocumentPicker];
+//}
+//
+//- (void)presentDocumentPicker {
+//    NSArray *documentTypes = @[@"public.content", @"public.text", @"public.source-code ", @"public.image", @"public.audiovisual-content", @"com.adobe.pdf", @"com.apple.keynote.key", @"com.microsoft.word.doc", @"com.microsoft.excel.xls", @"com.microsoft.powerpoint.ppt",@"com.pkware.zip-archive",];
+//    UIDocumentPickerViewController *documentPickerViewController = [[UIDocumentPickerViewController alloc] initWithDocumentTypes:documentTypes
+//                                                                                                                          inMode:UIDocumentPickerModeOpen];
+//    documentPickerViewController.delegate = self;
+//    [self presentViewController:documentPickerViewController animated:YES completion:nil];
+//}
+//
+//#pragma mark - UIDocumentPickerDelegate
+//- (void)documentPicker:(UIDocumentPickerViewController *)controller didPickDocumentsAtURLs:(NSArray <NSURL *>*)urls{
+//    for (NSURL *url in urls) {
+//        NSArray *array = [[url absoluteString] componentsSeparatedByString:@"/"];
+//        NSString *fileName = [array lastObject];
+//        fileName = [fileName stringByRemovingPercentEncoding];
+//        NSData *data = [NSData dataWithContentsOfURL:url];
+//        NSLog(@"%@",data);
+//    }
+//}
+//
+//
+////点击右上角操作
+//- (void)whenRightClickAction:(id)sender{
+////    CGFloat xProgress = 1;
+////    CGFloat yProgress = 1;
+////    self.qgdzlView.xProgress = xProgress;
+////    self.qgdzlView.yProgress = yProgress;
+////    //
+////    CGPoint xpoint = [self.qgdzlView xPointForProgress:xProgress];
+////    self.xlabel.center = xpoint;
+////    //
+////    CGPoint ypoint = [self.qgdzlView yPointForProgress:yProgress];
+////    self.ylabel.center = ypoint;
+////
+////    [KKBadgeView showBadgeToView:self.qgdzlView badgeInteger:1];
+//    NSArray <NSString *>*items = @[@"https://img.qumeng666.com/1590398734.269067",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590399408.463029",
+//                                   @"https://img.qumeng666.com/1590399442.681522",
+//                                   @"https://img.qumeng666.com/1590399510.690721",
+//                                   @"https://img.qumeng666.com/1590398734.269067",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590399408.463029",
+//                                   @"https://img.qumeng666.com/1590399442.681522",
+//                                   @"https://img.qumeng666.com/1590399510.690721",
+//                                   @"https://img.qumeng666.com/1590398734.269067",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590399408.463029",
+//                                   @"https://img.qumeng666.com/1590399442.681522",
+//                                   @"https://img.qumeng666.com/1590399510.690721",
+//                                   @"https://img.qumeng666.com/1590398734.269067",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590399408.463029",
+//                                   @"https://img.qumeng666.com/1590399442.681522",
+//                                   @"https://img.qumeng666.com/1590399510.690721",
+//                                   @"https://img.qumeng666.com/1590398734.269067",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590399408.463029",
+//                                   @"https://img.qumeng666.com/1590399442.681522",
+//                                   @"https://img.qumeng666.com/1590399510.690721",
+//                                   @"https://img.qumeng666.com/1590398734.269067",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590399408.463029",
+//                                   @"https://img.qumeng666.com/1590399442.681522",
+//                                   @"https://img.qumeng666.com/1590399510.690721",
+//                                   @"https://img.qumeng666.com/1590398734.269067",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590398820.492414",
+//                                   @"https://img.qumeng666.com/1590399408.463029",
+//                                   @"https://img.qumeng666.com/1590399442.681522",
+//                                   @"https://img.qumeng666.com/1590399510.690721",
+//                                  ];
+//    NSInteger index = rand()%items.count;
+//    self.playerView.playerItemUrl = items[index].toURL;
+//}
+//- (void)viewWillLayoutSubviews{
+//    [super viewWillLayoutSubviews];
+//    CGRect bounds = self.view.bounds;
+//    CGRect f1 = bounds;
+//    f1.origin.y = AdaptedWidth(100.f);
+//    f1.origin.x = AdaptedWidth(50.f);
+//    f1.size.width = bounds.size.width - 2 * f1.origin.x;
+//    f1.size.height = AdaptedWidth(200);
+//    //
+//    self.playerView.frame = f1;
+//}
 @end
 
 /*

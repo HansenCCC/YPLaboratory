@@ -545,6 +545,14 @@
 		60F865AE23D1585600CCEA70 /* KKVideoPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F865AA23D1585600CCEA70 /* KKVideoPlayViewController.xib */; };
 		60FA64C123ED9272008BD3AD /* UIAlertController+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FA64C023ED9272008BD3AD /* UIAlertController+KExtension.m */; };
 		60FA64C223ED9272008BD3AD /* UIAlertController+KExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FA64C023ED9272008BD3AD /* UIAlertController+KExtension.m */; };
+		8FB9744226DC762800540825 /* KKBlackTechnologyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9744126DC762800540825 /* KKBlackTechnologyViewController.m */; };
+		8FB9744326DC762800540825 /* KKBlackTechnologyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9744126DC762800540825 /* KKBlackTechnologyViewController.m */; };
+		8FE2B39F26EB30A30023909C /* KKBrushFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2B39E26EB30A30023909C /* KKBrushFlowViewController.m */; };
+		8FE2B3A026EB30A30023909C /* KKBrushFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2B39E26EB30A30023909C /* KKBrushFlowViewController.m */; };
+		8FE2B3A326EB3E700023909C /* KKBrushFlowToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2B3A226EB3E700023909C /* KKBrushFlowToolViewController.m */; };
+		8FE2B3A426EB3E700023909C /* KKBrushFlowToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2B3A226EB3E700023909C /* KKBrushFlowToolViewController.m */; };
+		8FE2B3A726EB42B90023909C /* KKBrushFlowToolCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2B3A626EB42B90023909C /* KKBrushFlowToolCollectionViewCell.m */; };
+		8FE2B3A826EB42B90023909C /* KKBrushFlowToolCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE2B3A626EB42B90023909C /* KKBrushFlowToolCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1033,6 +1041,14 @@
 		60FA64C023ED9272008BD3AD /* UIAlertController+KExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+KExtension.m"; sourceTree = "<group>"; };
 		6F04FEFD3CAE842206C75D73 /* Pods-QMKKXProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProduct.debug.xcconfig"; path = "Target Support Files/Pods-QMKKXProduct/Pods-QMKKXProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		802FBF4AB36D97B0B02D7068 /* Pods_QMKKXProduct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QMKKXProduct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB9744026DC762800540825 /* KKBlackTechnologyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBlackTechnologyViewController.h; sourceTree = "<group>"; };
+		8FB9744126DC762800540825 /* KKBlackTechnologyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBlackTechnologyViewController.m; sourceTree = "<group>"; };
+		8FE2B39D26EB30A30023909C /* KKBrushFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBrushFlowViewController.h; sourceTree = "<group>"; };
+		8FE2B39E26EB30A30023909C /* KKBrushFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBrushFlowViewController.m; sourceTree = "<group>"; };
+		8FE2B3A126EB3E700023909C /* KKBrushFlowToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBrushFlowToolViewController.h; sourceTree = "<group>"; };
+		8FE2B3A226EB3E700023909C /* KKBrushFlowToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBrushFlowToolViewController.m; sourceTree = "<group>"; };
+		8FE2B3A526EB42B90023909C /* KKBrushFlowToolCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKBrushFlowToolCollectionViewCell.h; sourceTree = "<group>"; };
+		8FE2B3A626EB42B90023909C /* KKBrushFlowToolCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKBrushFlowToolCollectionViewCell.m; sourceTree = "<group>"; };
 		ABAC957AA604DC26A8A0DD66 /* Pods-QMKKXProductDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProductDev.release.xcconfig"; path = "Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev.release.xcconfig"; sourceTree = "<group>"; };
 		B5578E10DC0F16747B3F8A29 /* Pods_QMKKXProductDev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QMKKXProductDev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2336606067C1CE1E5B879B0 /* Pods-QMKKXProductDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMKKXProductDev.debug.xcconfig"; path = "Target Support Files/Pods-QMKKXProductDev/Pods-QMKKXProductDev.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1262,6 +1278,7 @@
 		30202FEA23795F8B00F1AADA /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				8FB9743F26DC75EB00540825 /* 黑科技 */,
 				607FD6B0265C203D00A5282C /* 鸣谢支持 */,
 				60E8ABD42657A79C007446A6 /* 苹果内购 */,
 				604B04032484A0DA00AE672A /* 第三方分享&登陆&支付 */,
@@ -2560,6 +2577,29 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8FB9743F26DC75EB00540825 /* 黑科技 */ = {
+			isa = PBXGroup;
+			children = (
+				8FB9744026DC762800540825 /* KKBlackTechnologyViewController.h */,
+				8FB9744126DC762800540825 /* KKBlackTechnologyViewController.m */,
+				8FE2B39C26EB30790023909C /* BrushFlow */,
+			);
+			path = "黑科技";
+			sourceTree = "<group>";
+		};
+		8FE2B39C26EB30790023909C /* BrushFlow */ = {
+			isa = PBXGroup;
+			children = (
+				8FE2B39D26EB30A30023909C /* KKBrushFlowViewController.h */,
+				8FE2B39E26EB30A30023909C /* KKBrushFlowViewController.m */,
+				8FE2B3A126EB3E700023909C /* KKBrushFlowToolViewController.h */,
+				8FE2B3A226EB3E700023909C /* KKBrushFlowToolViewController.m */,
+				8FE2B3A526EB42B90023909C /* KKBrushFlowToolCollectionViewCell.h */,
+				8FE2B3A626EB42B90023909C /* KKBrushFlowToolCollectionViewCell.m */,
+			);
+			path = BrushFlow;
+			sourceTree = "<group>";
+		};
 		C0C29A5B01E14A39AFE7F40F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3011,6 +3051,7 @@
 				3028979C22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				300CC09B237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
 				3077A33522BA45A400372F07 /* NSDate+KExtension.m in Sources */,
+				8FE2B3A426EB3E700023909C /* KKBrushFlowToolViewController.m in Sources */,
 				6097E5E924977AA3007ECC55 /* KKPayManager.m in Sources */,
 				6099E2D1265E331700D8FD47 /* KKNetworkPostedService.m in Sources */,
 				30202FE72379593600F1AADA /* KKUserViewController.m in Sources */,
@@ -3074,6 +3115,7 @@
 				600A9E2F23E5338E00ACB002 /* KKDatabase.m in Sources */,
 				60C237A124021AD4002FF47C /* KKBeeProgressView.m in Sources */,
 				6099E2E5265E442A00D8FD47 /* KKFindPostedRequestModel.m in Sources */,
+				8FE2B3A026EB30A30023909C /* KKBrushFlowViewController.m in Sources */,
 				60BA347C23EC6AC700A2A249 /* KKCustomAlertViewController.m in Sources */,
 				60C6CFDC238A84F200FABAA3 /* KKPickViewViewController.m in Sources */,
 				30917449237C277E00010E99 /* KKSDWebViewController.m in Sources */,
@@ -3108,6 +3150,7 @@
 				30658A7722CF265F0072CD24 /* KKAVCaptureBaseSessionView.m in Sources */,
 				6094E168251DD28F001CE756 /* KKAdaptiveImagesViewController.m in Sources */,
 				60B6810A238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */,
+				8FB9744326DC762800540825 /* KKBlackTechnologyViewController.m in Sources */,
 				3077A33922BA45A400372F07 /* NSArray+KExtension.m in Sources */,
 				3028979422C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
 				30917401237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
@@ -3117,6 +3160,7 @@
 				609EC2A023E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */,
 				600A9E4723E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */,
 				60B6813B238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */,
+				8FE2B3A826EB42B90023909C /* KKBrushFlowToolCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3217,6 +3261,7 @@
 				3028979B22C46DEF000F2669 /* KKBaseViewController.m in Sources */,
 				300CC09A237A5C5C00983BD1 /* KKLabelTableViewCell.m in Sources */,
 				3077A33422BA45A400372F07 /* NSDate+KExtension.m in Sources */,
+				8FE2B3A326EB3E700023909C /* KKBrushFlowToolViewController.m in Sources */,
 				6097E5E824977AA3007ECC55 /* KKPayManager.m in Sources */,
 				6099E2D0265E331700D8FD47 /* KKNetworkPostedService.m in Sources */,
 				30202FE62379593600F1AADA /* KKUserViewController.m in Sources */,
@@ -3280,6 +3325,7 @@
 				600A9E2E23E5338E00ACB002 /* KKDatabase.m in Sources */,
 				60C237A024021AD4002FF47C /* KKBeeProgressView.m in Sources */,
 				6099E2E4265E442A00D8FD47 /* KKFindPostedRequestModel.m in Sources */,
+				8FE2B39F26EB30A30023909C /* KKBrushFlowViewController.m in Sources */,
 				60BA347B23EC6AC700A2A249 /* KKCustomAlertViewController.m in Sources */,
 				60C6CFDB238A84F200FABAA3 /* KKPickViewViewController.m in Sources */,
 				30917448237C277E00010E99 /* KKSDWebViewController.m in Sources */,
@@ -3314,6 +3360,7 @@
 				30658A7622CF265F0072CD24 /* KKAVCaptureBaseSessionView.m in Sources */,
 				6094E167251DD28F001CE756 /* KKAdaptiveImagesViewController.m in Sources */,
 				60B68109238B017300E3F6B7 /* KKFileCollectionViewCell.m in Sources */,
+				8FB9744226DC762800540825 /* KKBlackTechnologyViewController.m in Sources */,
 				3077A33822BA45A400372F07 /* NSArray+KExtension.m in Sources */,
 				3028979322C46DEF000F2669 /* KKUIFlowLayoutButton.m in Sources */,
 				30917400237AAFDD00010E99 /* KKAppIconTableViewCell.m in Sources */,
@@ -3323,6 +3370,7 @@
 				609EC29F23E7207C003BB61C /* KKAdaptiveTableViewCell.m in Sources */,
 				600A9E4623E5694700ACB002 /* UITableViewCell+KPreviewDemo.m in Sources */,
 				60B6813A238CDA4800E3F6B7 /* KKCarouselViewCollectionViewCell.m in Sources */,
+				8FE2B3A726EB42B90023909C /* KKBrushFlowToolCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

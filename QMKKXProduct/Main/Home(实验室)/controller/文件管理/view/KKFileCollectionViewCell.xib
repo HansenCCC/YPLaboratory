@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -35,11 +36,12 @@
                             <constraint firstAttribute="height" constant="15" id="srC-Xc-yaX"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" systemColor="systemBlueColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="aPM-Tl-6XQ" secondAttribute="bottom" id="0x2-H2-Qi8"/>
                 <constraint firstAttribute="trailing" secondItem="aPM-Tl-6XQ" secondAttribute="trailing" id="76M-ww-fSL"/>
@@ -52,7 +54,6 @@
                 <constraint firstAttribute="trailing" secondItem="pDi-Sr-wZb" secondAttribute="trailing" id="u0b-nK-FL5"/>
                 <constraint firstItem="aPM-Tl-6XQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="z36-Xo-Wvd"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="101" height="161"/>
             <connections>
                 <outlet property="detailLabel" destination="aPM-Tl-6XQ" id="gI3-a5-kxE"/>
@@ -62,4 +63,9 @@
             <point key="canvasLocation" x="35.507246376811594" y="38.504464285714285"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

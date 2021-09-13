@@ -18,6 +18,7 @@
 #import "KKThirdFunctionViewController.h"//第三方分享&登陆&支付
 #import "KKApplePayViewController.h"//苹果内购支付
 #import "KKThankSupportViewController.h"//鸣谢支持
+#import "KKBlackTechnologyViewController.h"//黑科技
 
 @interface KKHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray <KKLabelModel *> *datas;
@@ -72,10 +73,12 @@
     KKLabelModel *s1m17 = [[KKLabelModel alloc] initWithTitle:@"苹果内购支付" value:nil];
     s1m17.info = [KKApplePayViewController class];
     KKLabelModel *s1m18 = [[KKLabelModel alloc] initWithTitle:@"检查更新" value:nil];
+    KKLabelModel *s1m19 = [[KKLabelModel alloc] initWithTitle:@"黑科技" value:nil];
+    s1m19.info = [KKBlackTechnologyViewController class];
     KKLabelModel *s1mMax = [[KKLabelModel alloc] initWithTitle:@"鸣谢支持" value:nil];
     s1mMax.info = [KKThankSupportViewController class];
 //    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m2,s1m4,s1m5,s1m9,s1m15,s1m16,s1m10,s1m11,s1m3,s1m13,s1m12,s1m14,s1mMax]];
-    [self.datas addObjectsFromArray:@[s1m6,s1m17,s1m2,s1m4,s1m9,s1m3,s1m13,s1m18,s1mMax]];
+    [self.datas addObjectsFromArray:@[s1m1,s1m6,s1m17,s1m2,s1m4,s1m9,s1m3,s1m13,s1m19,s1m18,s1mMax]];
     [self.tableView reloadData];
 }
 #pragma mark - lazy load

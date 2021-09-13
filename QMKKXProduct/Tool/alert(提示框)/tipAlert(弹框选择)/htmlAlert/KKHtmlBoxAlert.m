@@ -141,14 +141,14 @@
 /// @param canTouchBeginMove 是否点击空白消失 default YES
 /// @param whenCompleteBlock 成功回调
 + (KKHtmlBoxAlert *)showCustomWithTitle:(NSString *)headTitle
-                                       textDetail:(NSString *)textDetail
-                                       leftTitle:(NSString *)leftTitle
-                                       rightTitle:(NSString *)rightTitle
+                             textDetail:(NSString *)textDetail
+                              leftTitle:(NSString *)leftTitle
+                             rightTitle:(NSString *)rightTitle
                                 request:(NSURLRequest *)request
-                                    isOnlyOneButton:(BOOL )isOnlyOneButton
-                                    isShowCloseButton:(BOOL )isShowCloseButton
-                                    canTouchBeginMove:(BOOL )canTouchBeginMove
-                                      complete:(KKAlertViewControllerBlock )whenCompleteBlock{
+                        isOnlyOneButton:(BOOL )isOnlyOneButton
+                      isShowCloseButton:(BOOL )isShowCloseButton
+                      canTouchBeginMove:(BOOL )canTouchBeginMove
+                               complete:(KKAlertViewControllerBlock )whenCompleteBlock{
     UIWindow *windows = [UIApplication sharedApplication].delegate.window;
     UIViewController *topVC = windows.topViewController;
     //预防重复弹框
