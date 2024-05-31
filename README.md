@@ -1,5 +1,8 @@
 # QMKKXProduct
 
+#### 旧功能见 Old_QMKKXProduct 目录
+
+
 [![Build Status](https://img.shields.io/badge/Github-QMKKXProduct-brightgreen.svg)](https://github.com/HansenCCC/QMKKXProduct)
 [![Build Status](https://img.shields.io/badge/platform-ios-orange.svg)](https://github.com/HansenCCC/QMKKXProduct)
 [![Build Status](https://img.shields.io/badge/HansenCCC-Github-blue.svg)](https://github.com/HansenCCC)
