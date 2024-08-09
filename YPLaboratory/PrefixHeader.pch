@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  YPLaboratory
+//
+//  Created by Hansen on 2023/5/17.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <YPUIKit/YPUIKit.h>
+#import <MJRefresh/MJRefresh.h>
+#import <MJExtension/MJExtension.h>
+#import <Masonry/Masonry.h>
+#import <SDWebImage/SDWebImage.h>
+#import "YPLaboratoryCategory.h"
+#import "YPLaboratoryTools.h"
+
+#endif /* PrefixHeader_pch */

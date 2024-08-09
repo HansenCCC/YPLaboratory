@@ -1,0 +1,33 @@
+/*
+  Localizable.strings
+  YPLaboratory
+
+  Created by Hansen on 2023/5/17.
+  
+*/
+
+// 实验室
+"ls_home_tabbar" = "实验室";
+"ls_ui_component" = "UI 组件";
+"ls_apple_internal_purchase" = "内购支付";
+"ls_app_icon_build" = "App 图标制作";
+"ls_network" = "网络";
+"ls_database" = "数据库";
+"ls_file_management" = "文件管理";
+"ls_idea_box" = "程序之美";
+"ls_check_update" = "检查更新";
+"ls_about_us" = "关于我们";
+
+
+"ls_network_image_download" = "网络图片下载";
+
+
+// 世界
+"ls_world_tabbar" = "世界";
+
+
+
+
+
+// 我
+"ls_user_tabbar" = "我的";

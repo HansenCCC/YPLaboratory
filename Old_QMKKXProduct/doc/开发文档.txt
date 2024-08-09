@@ -1,0 +1,47 @@
+
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+开发使用文档
+
+api
+接口需要写在KKNetworkApi.h文件
+网络请求调用KKNetworkBase.h里面的方法
+
+font
+普通字体font使用AdaptedFontSize
+粗体字体font使用boldSystemFontOfSize
+
+layout
+布局配置间距使用宏：AdaptedWidth
+
+color
+颜色统一使用宏定义
+例如KKColor_FFFFFF
+
+loading 
+加载状态使用showLoading & hideLoading
+
+error
+显示报错showError
+
+succes
+显示成功showSuccessWithMsg
+
+controller
+新建UIViewController需要继承KKBaseViewController
+新建NavigationController需要继承KKNavigationController
+
+imageUrl
+加载网络图片使用分类
+UIImageView -> UIImageView+KExtension.h
+UIButton    -> UIButton+KExtension.h
+
+
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+
+自定义xcode模板
+
+MacOSX的系统文件模板位置
+/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/
+用户自定义模板位置
+~/Library/Developer/Xcode/Templates

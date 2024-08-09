@@ -1,0 +1,38 @@
+[
+    {
+      "title" : "UITableViewCell",
+      "value" : "5"
+    },
+    {
+      "title" : "KKLabelTableViewCell",
+      "value" : "6"
+    },
+    {
+      "title" : "KKButtonTableViewCell",
+      "value" : "1"
+    },
+    {
+      "title" : "KKSwitchTableViewCell",
+      "value" : "1"
+    },
+    {
+      "title" : "KKFormTableViewCell",
+      "value" : "1"
+    },
+    {
+      "title" : "KKAppIconTableViewCell",
+      "value" : "1"
+    },
+    {
+      "title" : "KKWeChatMomentsTableViewCell",
+      "value" : "1"
+    },
+    {
+      "title" : "KKWeChatCommentTableViewCell",
+      "value" : "2"
+    },
+    {
+      "title" : "KKAdaptiveTableViewCell",
+      "value" : "2"
+    },
+]

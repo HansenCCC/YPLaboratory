@@ -1,0 +1,6 @@
+framework module TapDB {
+  umbrella header "TapDB.h"
+
+  export *
+  module * { export * }
+}

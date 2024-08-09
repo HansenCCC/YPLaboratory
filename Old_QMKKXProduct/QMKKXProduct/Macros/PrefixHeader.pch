@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  QMKKXProduct
+//
+//  Created by 程恒盛 on 2019/6/19.
+//  Copyright © 2019 力王工作室. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "KKPrefixHeader.h"//prefix
+#import "KKOtherHeader.h"//define宏集合
+#import "KKColorHeader.h"//color颜色集合
+#import "KKToolHeader.h"//tool
+
+//Third
+#import <AFNetworking/AFNetworking.h>//af
+#import <FMDB/FMDB.h>//db
+#import <IQKeyboardManager/IQKeyboardManager.h>//keyboard
+#import <JPush/JPUSHService.h>//push
+#import <Masonry/Masonry.h>//frame
+#import <MJRefresh/MJRefresh.h>//refresh
+#import <SDWebImage/UIImageView+WebCache.h>//sdImage
+#import <SDWebImage/UIButton+WebCache.h>//sdBtn
+#import <TZImagePickerController/TZImagePickerController.h>//pickImage
+#import <MJExtension/MJExtension.h>//model Extension
+
+#endif /* PrefixHeader_pch */
