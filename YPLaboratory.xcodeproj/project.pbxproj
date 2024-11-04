@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		17B65EBA9D4EF60CD769BD61 /* Pods_YPLaboratory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CFE1650DC88C3573EB43A6 /* Pods_YPLaboratory.framework */; };
-		6013C7352A68F89100C84F36 /* YPAVCaptureSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6013C7332A68F89100C84F36 /* YPAVCaptureSessionView.m */; };
 		6019B7922A2E376B0083FA7F /* YPPageRouterModule+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 6019B7912A2E376B0083FA7F /* YPPageRouterModule+Update.m */; };
 		601FEB942A42F350000B703C /* YPModuleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 601FEB932A42F350000B703C /* YPModuleImageCell.m */; };
 		601FEB962A42FC40000B703C /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 601FEB952A42FC40000B703C /* Contents.json */; };
@@ -72,7 +71,7 @@
 		606929F82A2BA0BB0045D2EB /* YPModuleBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606929F72A2BA0BB0045D2EB /* YPModuleBaseCell.m */; };
 		606929FB2A2BA4B20045D2EB /* YPModuleButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606929FA2A2BA4B20045D2EB /* YPModuleButtonCell.m */; };
 		6073390F2A2F8E050096EC27 /* YPPageRouterModule+Idea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6073390E2A2F8E050096EC27 /* YPPageRouterModule+Idea.m */; };
-		607339122A2F921F0096EC27 /* YPPageRouterModule+FullStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 607339112A2F921F0096EC27 /* YPPageRouterModule+FullStack.m */; };
+		607D9DA52CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DA42CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m */; };
 		608D8FA32A73730F004E1E6D /* YPCameraCaptureSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 608D8FA22A73730F004E1E6D /* YPCameraCaptureSessionView.m */; };
 		6099531B2A3B0A60004BD3E1 /* YPIconBuildManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099531A2A3B0A60004BD3E1 /* YPIconBuildManager.m */; };
 		60B1E0DF2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1E0DE2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m */; };
@@ -86,7 +85,6 @@
 		60C44E842A186E2C0073EA3F /* YPPageRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C44E832A186E2C0073EA3F /* YPPageRouter.m */; };
 		60F52A9B2A4936A400BB6254 /* YPSwiperNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F52A9A2A4936A400BB6254 /* YPSwiperNormalTableViewCell.m */; };
 		60F52A9E2A49374900BB6254 /* YPSwiperCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F52A9D2A49374900BB6254 /* YPSwiperCardTableViewCell.m */; };
-		60FF4C992A1B17A600A2D04B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FF4C982A1B17A600A2D04B /* StoreKit.framework */; };
 		60FF4CBA2A1F4C0100A2D04B /* YPPageRouterModule+Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF4CB92A1F4C0100A2D04B /* YPPageRouterModule+Component.m */; };
 		60FF4CBF2A1F4CBF00A2D04B /* YPPageRouterModule+AppleInternalPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF4CBE2A1F4CBF00A2D04B /* YPPageRouterModule+AppleInternalPurchase.m */; };
 		60FF4CC22A1F547B00A2D04B /* YPPageRouterModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF4CC12A1F547B00A2D04B /* YPPageRouterModule.m */; };
@@ -96,8 +94,6 @@
 		04CFE1650DC88C3573EB43A6 /* Pods_YPLaboratory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YPLaboratory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		147C523EF284DF972559701E /* Pods-YPLaboratory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPLaboratory.debug.xcconfig"; path = "Target Support Files/Pods-YPLaboratory/Pods-YPLaboratory.debug.xcconfig"; sourceTree = "<group>"; };
 		24FAB785EC799017D07AD679 /* Pods-YPLaboratory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPLaboratory.release.xcconfig"; path = "Target Support Files/Pods-YPLaboratory/Pods-YPLaboratory.release.xcconfig"; sourceTree = "<group>"; };
-		6013C7332A68F89100C84F36 /* YPAVCaptureSessionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPAVCaptureSessionView.m; sourceTree = "<group>"; };
-		6013C7342A68F89100C84F36 /* YPAVCaptureSessionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPAVCaptureSessionView.h; sourceTree = "<group>"; };
 		6019B7902A2E376B0083FA7F /* YPPageRouterModule+Update.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPPageRouterModule+Update.h"; sourceTree = "<group>"; };
 		6019B7912A2E376B0083FA7F /* YPPageRouterModule+Update.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+Update.m"; sourceTree = "<group>"; };
 		601FEB922A42F350000B703C /* YPModuleImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPModuleImageCell.h; sourceTree = "<group>"; };
@@ -224,8 +220,8 @@
 		606929FA2A2BA4B20045D2EB /* YPModuleButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPModuleButtonCell.m; sourceTree = "<group>"; };
 		6073390D2A2F8E050096EC27 /* YPPageRouterModule+Idea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPPageRouterModule+Idea.h"; sourceTree = "<group>"; };
 		6073390E2A2F8E050096EC27 /* YPPageRouterModule+Idea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+Idea.m"; sourceTree = "<group>"; };
-		607339102A2F921F0096EC27 /* YPPageRouterModule+FullStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPPageRouterModule+FullStack.h"; sourceTree = "<group>"; };
-		607339112A2F921F0096EC27 /* YPPageRouterModule+FullStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+FullStack.m"; sourceTree = "<group>"; };
+		607D9DA32CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPDisableScreenCaptureViewController.h; sourceTree = "<group>"; };
+		607D9DA42CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPDisableScreenCaptureViewController.m; sourceTree = "<group>"; };
 		608D8FA12A73730F004E1E6D /* YPCameraCaptureSessionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPCameraCaptureSessionView.h; sourceTree = "<group>"; };
 		608D8FA22A73730F004E1E6D /* YPCameraCaptureSessionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPCameraCaptureSessionView.m; sourceTree = "<group>"; };
 		609953192A3B0A60004BD3E1 /* YPIconBuildManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPIconBuildManager.h; sourceTree = "<group>"; };
@@ -252,7 +248,6 @@
 		60F52A9A2A4936A400BB6254 /* YPSwiperNormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPSwiperNormalTableViewCell.m; sourceTree = "<group>"; };
 		60F52A9C2A49374900BB6254 /* YPSwiperCardTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPSwiperCardTableViewCell.h; sourceTree = "<group>"; };
 		60F52A9D2A49374900BB6254 /* YPSwiperCardTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPSwiperCardTableViewCell.m; sourceTree = "<group>"; };
-		60FF4C982A1B17A600A2D04B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		60FF4C9A2A1B17AD00A2D04B /* YPLaboratory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YPLaboratory.entitlements; sourceTree = "<group>"; };
 		60FF4CB82A1F4C0100A2D04B /* YPPageRouterModule+Component.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPPageRouterModule+Component.h"; sourceTree = "<group>"; };
 		60FF4CB92A1F4C0100A2D04B /* YPPageRouterModule+Component.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+Component.m"; sourceTree = "<group>"; };
@@ -271,7 +266,6 @@
 				6025800A2A1A604F00091000 /* TapDB.framework in Frameworks */,
 				17B65EBA9D4EF60CD769BD61 /* Pods_YPLaboratory.framework in Frameworks */,
 				6025800B2A1A604F00091000 /* TapCommonSDK.framework in Frameworks */,
-				60FF4C992A1B17A600A2D04B /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +370,7 @@
 		602B3D2A2A4B3D1200A62E1F /* MouldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				607D9DA22CD8C0B000C3B591 /* DisableScreenCapture */,
 				60B1E0DC2A67DDEB00DD2CE8 /* SystemFonts */,
 				60C1C7682A4E85B4004FC354 /* MultifunctionalCamera */,
 				60C1C7602A4D8703004FC354 /* H5Webview */,
@@ -590,6 +585,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		607D9DA22CD8C0B000C3B591 /* DisableScreenCapture */ = {
+			isa = PBXGroup;
+			children = (
+				607D9DA32CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.h */,
+				607D9DA42CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m */,
+			);
+			path = DisableScreenCapture;
+			sourceTree = "<group>";
+		};
 		609953172A3B0A2B004BD3E1 /* IconBuild */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,8 +634,6 @@
 		60C1C7682A4E85B4004FC354 /* MultifunctionalCamera */ = {
 			isa = PBXGroup;
 			children = (
-				6013C7342A68F89100C84F36 /* YPAVCaptureSessionView.h */,
-				6013C7332A68F89100C84F36 /* YPAVCaptureSessionView.m */,
 				60C1C7712A4E872E004FC354 /* Camera */,
 				60C1C76D2A4E86A1004FC354 /* FaceTrack */,
 				60C1C7692A4E85C8004FC354 /* QRCodeScan */,
@@ -713,8 +715,6 @@
 				60FF4CB92A1F4C0100A2D04B /* YPPageRouterModule+Component.m */,
 				60FF4CBD2A1F4CBF00A2D04B /* YPPageRouterModule+AppleInternalPurchase.h */,
 				60FF4CBE2A1F4CBF00A2D04B /* YPPageRouterModule+AppleInternalPurchase.m */,
-				607339102A2F921F0096EC27 /* YPPageRouterModule+FullStack.h */,
-				607339112A2F921F0096EC27 /* YPPageRouterModule+FullStack.m */,
 			);
 			path = RouterSection;
 			sourceTree = "<group>";
@@ -722,7 +722,6 @@
 		DB4B6438A8C32231897D241C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60FF4C982A1B17A600A2D04B /* StoreKit.framework */,
 				04CFE1650DC88C3573EB43A6 /* Pods_YPLaboratory.framework */,
 			);
 			name = Frameworks;
@@ -855,6 +854,7 @@
 				6034B2DC2A14A6E40024E610 /* UIImage+YPLaboratory.m in Sources */,
 				60257FDC2A1A25BD00091000 /* UIViewController+Router.m in Sources */,
 				6034B2E02A14A6E40024E610 /* UIColor+YPLaboratory.m in Sources */,
+				607D9DA52CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m in Sources */,
 				6034B2EF2A14A82A0024E610 /* YPNavigationViewController.m in Sources */,
 				6034B2D92A14A6E40024E610 /* UIView+YPLaboratory.m in Sources */,
 				60257FF02A1A452100091000 /* YPNetworking.m in Sources */,
@@ -877,7 +877,6 @@
 				602580042A1A5FC400091000 /* YPNoticeHeader.m in Sources */,
 				6034B2E82A14A6E40024E610 /* NSObject+YPLaboratory.m in Sources */,
 				6034B2E72A14A6E40024E610 /* UIImageView+YPLaboratory.m in Sources */,
-				6013C7352A68F89100C84F36 /* YPAVCaptureSessionView.m in Sources */,
 				60C44E812A186D6F0073EA3F /* YPRouterManager.m in Sources */,
 				60FF4CBF2A1F4CBF00A2D04B /* YPPageRouterModule+AppleInternalPurchase.m in Sources */,
 				60C1C7742A4E873D004FC354 /* YPCameraViewController.m in Sources */,
@@ -894,7 +893,6 @@
 				602580002A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.m in Sources */,
 				606929F82A2BA0BB0045D2EB /* YPModuleBaseCell.m in Sources */,
 				6099531B2A3B0A60004BD3E1 /* YPIconBuildManager.m in Sources */,
-				607339122A2F921F0096EC27 /* YPPageRouterModule+FullStack.m in Sources */,
 				60257FF22A1A452100091000 /* YPHTTPRequest.m in Sources */,
 				602B3D292A4B3C8000A62E1F /* YPAppUpdatePopupController.m in Sources */,
 				6034B31D2A14A9D90024E610 /* YPUserModel.m in Sources */,
@@ -1094,6 +1092,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPLaboratory/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPLaboratory/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "APP需要您的同意，才能访问相机进行拍照，以便您用于发帖中使用图片";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "APP需要您的同意，才能访问到您的地理位置，以便您发帖分享自己的地理位置";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "APP需要您的同意，才能访问麦克风，以便您发帖过程中录制视频";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "APP需要您的同意，才能访问添加照片，以便您保存图片到相册";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "APP需要您的同意，才能访问相册，以便您发帖添加图片";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1104,7 +1107,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1129,6 +1132,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPLaboratory/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPLaboratory/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "APP需要您的同意，才能访问相机进行拍照，以便您用于发帖中使用图片";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "APP需要您的同意，才能访问到您的地理位置，以便您发帖分享自己的地理位置";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "APP需要您的同意，才能访问麦克风，以便您发帖过程中录制视频";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "APP需要您的同意，才能访问添加照片，以便您保存图片到相册";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "APP需要您的同意，才能访问相册，以便您发帖添加图片";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1139,7 +1147,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

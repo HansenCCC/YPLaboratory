@@ -16,6 +16,10 @@
 #import "YPFaceTrackViewController.h"
 #import "YPCameraViewController.h"
 #import "YPSystemFontsTableViewCell.h"
+#import "YPModuleNormalCell.h"
+#import "YPModuleSwitchCell.h"
+#import "YPModuleButtonCell.h"
+#import "YPModuleImageCell.h"
 
 @implementation YPPageRouterModule (Component)
 
@@ -24,13 +28,13 @@
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"丰富多彩的 cell（UITableView）".yp_localizedString;
+        element.title = @"多样的表格视图（UITableView）".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"丰富多彩的 cell（UICollectionViewFlowLayout）".yp_localizedString;
+        element.title = @"多样的集合视图（UICollectionView）".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
@@ -89,7 +93,7 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"简单的单行输入框".yp_localizedString;
+        element.title = @"单行输入框".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         element.placeholder = element.title;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
@@ -102,7 +106,7 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"简单的多行输入框".yp_localizedString;
+        element.title = @"多行输入框".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         element.placeholder = element.title;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
@@ -115,11 +119,11 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"ls_file_management".yp_localizedString;
+        element.title = @"文件管理".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             NSString *path = NSHomeDirectory();
-            YPFileBrowser *browser = [[YPFileBrowser alloc] initWithPath:path];
+            YPFileBrowserController *browser = [[YPFileBrowserController alloc] initWithPath:path];
             YPNavigationViewController *nav = [[YPNavigationViewController alloc] initWithRootViewController:browser];
             [[UIViewController yp_topViewController] presentViewController:nav animated:YES completion:nil];
         };
@@ -197,15 +201,65 @@
 
 // 丰富多彩的cell
 + (NSArray *)ComponentRouters_TableCells {
-    NSMutableArray *dataList = [[NSMutableArray alloc] init];
+    // YPModuleNormalCell
+    NSMutableArray *dataList1 = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"丰富多彩的 cell（UITableView）".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
+        element.title = @"简单列表".yp_localizedString;
+        element.type = YPPageRouterTypeTableCell;
+        element.cellClass = [YPModuleNormalCell class];
+        [dataList1 addObject:element];
     }
-    YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
-    return @[section];
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"简单列表".yp_localizedString;
+        element.type = YPPageRouterTypeTableCell;
+        element.cellClass = [YPModuleNormalCell class];
+        element.content = @"有值";
+        [dataList1 addObject:element];
+    }
+    YPPageRouterModule *section1 = [[YPPageRouterModule alloc] initWithRouters:dataList1];
+    section1.headerTitle = @"YPModuleNormalCell";
+    
+    // YPModuleButtonCell
+    NSMutableArray *dataList2 = [[NSMutableArray alloc] init];
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"一个按钮".yp_localizedString;
+        element.type = YPPageRouterTypeTableCell;
+        element.cellClass = [YPModuleButtonCell class];
+        [dataList2 addObject:element];
+    }
+    YPPageRouterModule *section2 = [[YPPageRouterModule alloc] initWithRouters:dataList2];
+    section2.headerTitle = @"YPModuleButtonCell";
+    
+    // YPModuleSwitchCell
+    NSMutableArray *dataList3 = [[NSMutableArray alloc] init];
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"一个开关".yp_localizedString;
+        element.type = YPPageRouterTypeTableCell;
+        element.cellClass = [YPModuleSwitchCell class];
+        element.content = @(YES).stringValue;
+        [dataList3 addObject:element];
+    }
+    YPPageRouterModule *section3 = [[YPPageRouterModule alloc] initWithRouters:dataList3];
+    section3.headerTitle = @"YPModuleSwitchCell";
+    
+    // YPModuleImageCell
+    NSMutableArray *dataList4 = [[NSMutableArray alloc] init];
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"右边图片".yp_localizedString;
+        element.type = YPPageRouterTypeTableCell;
+        element.cellClass = [YPModuleImageCell class];
+        element.extend = [UIImage imageNamed:@"yp-appLogo"];
+        [dataList4 addObject:element];
+    }
+    YPPageRouterModule *section4 = [[YPPageRouterModule alloc] initWithRouters:dataList4];
+    section4.headerTitle = @"YPModuleImageCell";
+    
+    return @[section1, section2, section3, section4];
 }
 
 // 丰富多彩的cell
@@ -213,7 +267,7 @@
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"丰富多彩的 cell（UITableView）".yp_localizedString;
+        element.title = @"多样的表格视图".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }

@@ -29,7 +29,7 @@
 
 - (YPPageRouter *)homeRouter {
     YPPageRouter *homeRouter = [[YPPageRouter alloc] init];
-    homeRouter.title = @"ls_home_tabbar".yp_localizedString;
+    homeRouter.title = @"实验室".yp_localizedString;
     homeRouter.type = YPPageRouterTypeTable;
 //    homeRouter.useInsetGrouped = YES;
     return homeRouter;
@@ -37,13 +37,13 @@
 
 - (NSArray <YPPageRouterModule *>*)getRoutersByModel:(YPPageRouter *)model {
     NSArray *dataList = @[];
-    if ([model.title isEqualToString:@"ls_home_tabbar".yp_localizedString]) {
+    if ([model.title isEqualToString:@"实验室".yp_localizedString]) {
         dataList = [YPPageRouterModule HomeRouters];
-    } else if ([model.title isEqualToString:@"ls_ui_component".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"UI 组件".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters];
-    } else if ([model.title isEqualToString:@"ls_apple_internal_purchase".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"内购支付".yp_localizedString]) {
         dataList = [YPPageRouterModule AppleInternalPurchase];
-    } else if ([model.title isEqualToString:@"丰富多彩的 cell（UITableView）".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"多样的表格视图（UITableView）".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_TableCells];
     } else if ([model.title isEqualToString:@"多样的选择框（UIPickerView）".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_PickerView];
@@ -53,11 +53,7 @@
         dataList = [YPPageRouterModule ComponentRouters_YPAlertView];
     } else if ([model.title isEqualToString:@"普通加载框（YPLoadingView）".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_YPLoadingView];
-    } else if ([model.title isEqualToString:@"ls_idea_box".yp_localizedString]) {
-        dataList = [YPPageRouterModule IdeaRouters];
-    } else if ([model.title isEqualToString:@"全栈日记".yp_localizedString]) {
-        dataList = [YPPageRouterModule FullStackRouters];
-    } else if ([model.title isEqualToString:@"ls_app_icon_build".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"App 图标制作".yp_localizedString]) {
         dataList = [YPPageRouterModule IdeaRouters_IconBuild];
     } else if ([model.title isEqualToString:@"自定义弹框（YPPopupController）".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_YPPopupController];

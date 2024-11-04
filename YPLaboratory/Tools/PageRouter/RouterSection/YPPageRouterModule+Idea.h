@@ -11,9 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YPPageRouterModule (Idea)
 
-// 程序之美
-+ (NSArray *)IdeaRouters;
-
 // 图标制作
 + (NSArray *)IdeaRouters_IconBuild;
 

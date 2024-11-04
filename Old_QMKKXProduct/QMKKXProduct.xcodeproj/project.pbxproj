@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -115,8 +115,6 @@
 		30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 30658A4A22CF265F0072CD24 /* KKCamera_btn_arrows_back.png */; };
 		30658A6222CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30658A4B22CF265F0072CD24 /* KKCameraScanLine@2x.png */; };
 		30658A6322CF265F0072CD24 /* KKCameraScanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30658A4B22CF265F0072CD24 /* KKCameraScanLine@2x.png */; };
-		30658A6422CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30658A4C22CF265F0072CD24 /* KKCameraScanLine@3x.png */; };
-		30658A6522CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30658A4C22CF265F0072CD24 /* KKCameraScanLine@3x.png */; };
 		30658A6622CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 30658A4D22CF265F0072CD24 /* KKCamera_imag_scan_background.png */; };
 		30658A6722CF265F0072CD24 /* KKCamera_imag_scan_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 30658A4D22CF265F0072CD24 /* KKCamera_imag_scan_background.png */; };
 		30658A6822CF265F0072CD24 /* KKCameraTakePhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30658A4E22CF265F0072CD24 /* KKCameraTakePhoto@2x.png */; };
@@ -499,8 +497,6 @@
 		60D290947C5052B2F76BE4FF /* Pods_QMKKXProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802FBF4AB36D97B0B02D7068 /* Pods_QMKKXProduct.framework */; };
 		60E8ABCB2657A4B3007446A6 /* KKApplePayManner.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E8ABCA2657A4B3007446A6 /* KKApplePayManner.m */; };
 		60E8ABCC2657A4B3007446A6 /* KKApplePayManner.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E8ABCA2657A4B3007446A6 /* KKApplePayManner.m */; };
-		60E8ABD22657A619007446A6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E8ABD12657A619007446A6 /* StoreKit.framework */; };
-		60E8ABD32657A623007446A6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E8ABD12657A619007446A6 /* StoreKit.framework */; };
 		60E8ABD82657A911007446A6 /* KKApplePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E8ABD62657A911007446A6 /* KKApplePayViewController.m */; };
 		60E8ABD92657A911007446A6 /* KKApplePayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E8ABD62657A911007446A6 /* KKApplePayViewController.m */; };
 		60E8ABDA2657A911007446A6 /* KKApplePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E8ABD72657A911007446A6 /* KKApplePayViewController.xib */; };
@@ -661,7 +657,6 @@
 		30314F6B22BA412800481B32 /* KKColorHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKColorHeader.h; sourceTree = "<group>"; };
 		30658A4A22CF265F0072CD24 /* KKCamera_btn_arrows_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KKCamera_btn_arrows_back.png; sourceTree = "<group>"; };
 		30658A4B22CF265F0072CD24 /* KKCameraScanLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KKCameraScanLine@2x.png"; sourceTree = "<group>"; };
-		30658A4C22CF265F0072CD24 /* KKCameraScanLine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KKCameraScanLine@3x.png"; sourceTree = "<group>"; };
 		30658A4D22CF265F0072CD24 /* KKCamera_imag_scan_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KKCamera_imag_scan_background.png; sourceTree = "<group>"; };
 		30658A4E22CF265F0072CD24 /* KKCameraTakePhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KKCameraTakePhoto@2x.png"; sourceTree = "<group>"; };
 		30658A4F22CF265F0072CD24 /* KKCameraScanscanBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KKCameraScanscanBg.png; sourceTree = "<group>"; };
@@ -1002,7 +997,6 @@
 		60D128B224B5BBC100891E6B /* KKRunLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKRunLabel.m; sourceTree = "<group>"; };
 		60E8ABC92657A4B3007446A6 /* KKApplePayManner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKApplePayManner.h; sourceTree = "<group>"; };
 		60E8ABCA2657A4B3007446A6 /* KKApplePayManner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKApplePayManner.m; sourceTree = "<group>"; };
-		60E8ABD12657A619007446A6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		60E8ABD52657A911007446A6 /* KKApplePayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKApplePayViewController.h; sourceTree = "<group>"; };
 		60E8ABD62657A911007446A6 /* KKApplePayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKApplePayViewController.m; sourceTree = "<group>"; };
 		60E8ABD72657A911007446A6 /* KKApplePayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KKApplePayViewController.xib; sourceTree = "<group>"; };
@@ -1069,7 +1063,6 @@
 			files = (
 				604B04202484CF7000AE672A /* libc++.tbd in Frameworks */,
 				604B041D2484CF3F00AE672A /* WebKit.framework in Frameworks */,
-				60E8ABD32657A623007446A6 /* StoreKit.framework in Frameworks */,
 				604B041C2484CF3B00AE672A /* CoreGraphics.framework in Frameworks */,
 				604B041B2484CF3600AE672A /* Security.framework in Frameworks */,
 				3AB93A5AC81492B648C269F6 /* Pods_QMKKXProductDev.framework in Frameworks */,
@@ -1082,7 +1075,6 @@
 			files = (
 				604B041F2484CF6900AE672A /* libc++.tbd in Frameworks */,
 				604B041A2484CF2B00AE672A /* WebKit.framework in Frameworks */,
-				60E8ABD22657A619007446A6 /* StoreKit.framework in Frameworks */,
 				604B04182484CF2400AE672A /* CoreGraphics.framework in Frameworks */,
 				604B04162484CF1B00AE672A /* Security.framework in Frameworks */,
 				60D290947C5052B2F76BE4FF /* Pods_QMKKXProduct.framework in Frameworks */,
@@ -1536,7 +1528,6 @@
 			children = (
 				30658A4A22CF265F0072CD24 /* KKCamera_btn_arrows_back.png */,
 				30658A4B22CF265F0072CD24 /* KKCameraScanLine@2x.png */,
-				30658A4C22CF265F0072CD24 /* KKCameraScanLine@3x.png */,
 				30658A4D22CF265F0072CD24 /* KKCamera_imag_scan_background.png */,
 				30658A4E22CF265F0072CD24 /* KKCameraTakePhoto@2x.png */,
 				30658A4F22CF265F0072CD24 /* KKCameraScanscanBg.png */,
@@ -2631,7 +2622,6 @@
 		C0C29A5B01E14A39AFE7F40F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60E8ABD12657A619007446A6 /* StoreKit.framework */,
 				604B041E2484CF6800AE672A /* libc++.tbd */,
 				604B04192484CF2B00AE672A /* WebKit.framework */,
 				604B04172484CF2400AE672A /* CoreGraphics.framework */,
@@ -2782,7 +2772,6 @@
 				603670A723BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */,
 				30917431237BEC9900010E99 /* 2阅读.json in Resources */,
 				605611CD23E98D6D00DBA792 /* KKDatebaseFormTableViewCell.xib in Resources */,
-				30658A6522CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6122CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 				3015A05C237D33390086B39D /* KKUIUnitViewController.xib in Resources */,
 				600A9E3E23E5615E00ACB002 /* cells.json in Resources */,
@@ -2853,7 +2842,6 @@
 				603670A623BF39C4001E3D22 /* KKVideoCameraViewController.xib in Resources */,
 				30917430237BEC9900010E99 /* 2阅读.json in Resources */,
 				605611CC23E98D6D00DBA792 /* KKDatebaseFormTableViewCell.xib in Resources */,
-				30658A6422CF265F0072CD24 /* KKCameraScanLine@3x.png in Resources */,
 				30658A6022CF265F0072CD24 /* KKCamera_btn_arrows_back.png in Resources */,
 				3015A05B237D33390086B39D /* KKUIUnitViewController.xib in Resources */,
 				600A9E3D23E5615E00ACB002 /* cells.json in Resources */,
@@ -3660,7 +3648,7 @@
 				);
 				MARKETING_VERSION = 3.3.2;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx22;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -3700,7 +3688,7 @@
 					"\"$(SRCROOT)/QMKKXProduct/Main/Home(实验室)/controller/第三方分享&登陆&支付/WeChatSDK1.8.7.1\"",
 				);
 				MARKETING_VERSION = 3.3.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx22;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;

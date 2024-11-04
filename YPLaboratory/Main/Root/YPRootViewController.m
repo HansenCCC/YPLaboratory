@@ -28,9 +28,9 @@
 
 - (void)setupSubviews {
     self.viewControllers = @[
-        [self createNavigation:self.homeViewController title:@"ls_home_tabbar".yp_localizedString image:[UIImage imageNamed:@"yp_icon_home"]],
-        [self createNavigation:self.worldViewController title:@"ls_world_tabbar".yp_localizedString image:[UIImage imageNamed:@"yp_icon_world"]],
-        [self createNavigation:self.userViewController title:@"ls_user_tabbar".yp_localizedString image:[UIImage imageNamed:@"yp_icon_user"]],
+        [self createNavigation:self.homeViewController title:@"实验室".yp_localizedString image:[UIImage imageNamed:@"yp_icon_home"]],
+        [self createNavigation:self.worldViewController title:@"世界".yp_localizedString image:[UIImage imageNamed:@"yp_icon_world"]],
+        [self createNavigation:self.userViewController title:@"我的".yp_localizedString image:[UIImage imageNamed:@"yp_icon_user"]],
     ];
     self.tabBar.tintColor = [UIColor yp_themeColor];
 }

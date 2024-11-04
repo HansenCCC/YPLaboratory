@@ -13,6 +13,5 @@
 #import "YPPageRouterModule+Idea.h"
 #import "YPPageRouterModule+Component.h"
 #import "YPPageRouterModule+AppleInternalPurchase.h"
-#import "YPPageRouterModule+FullStack.h"
 
 #endif /* Header_h */

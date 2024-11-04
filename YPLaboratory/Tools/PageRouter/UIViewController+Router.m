@@ -41,6 +41,7 @@
             YPBaseViewController *vc = [[vcClass alloc] init];
             if ([vc isKindOfClass:[YPBaseViewController class]]) {
                 vc.hidesBottomBarWhenPushed = YES;
+                vc.title = cellModel.title;
                 [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
             }
         }

@@ -7,24 +7,24 @@
 */
 
 // 实验室
-"ls_home_tabbar" = "Laboratory";
-"ls_ui_component" = "UI component";
-"ls_apple_internal_purchase" = "Apple internal purchase";
-"ls_app_icon_build" = "Application icon production";
-"ls_network_image_download" = "Network image download";
-"ls_database" = "Database";
-"ls_file_management" = "File management";
+"实验室" = "Laboratory";
+"UI 组件" = "UI component";
+"内购支付" = "Apple internal purchase";
+"App 图标制作" = "Application icon production";
+"网络图片下载" = "Network image download";
+"数据库" = "Database";
+"文件管理" = "File management";
 "ls_idea_box" = "Idea Box";
-"ls_check_update" = "Check for updates";
-"ls_about_us" = "About us";
+"检查更新" = "Check for updates";
+"关于我们" = "About us";
 
 
 // 世界
-"ls_world_tabbar" = "World";
+"世界" = "World";
 
 
 
 
 
 // 我
-"ls_user_tabbar" = "Me";
+"我的" = "Me";

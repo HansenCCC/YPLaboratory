@@ -13,13 +13,7 @@
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"ls_idea_box".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"ls_ui_component".yp_localizedString;
+        element.title = @"UI 组件".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
@@ -37,20 +31,81 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"ls_apple_internal_purchase".yp_localizedString;
+        element.title = @"内购支付".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         element.useInsetGrouped = YES;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"ls_network".yp_localizedString;
+        element.title = @"网络请求".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"ls_database".yp_localizedString;
+        element.title = @"数据库".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"App 图标制作".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"防 截屏|录屏 功能".yp_localizedString;
+        element.type = YPPageRouterTypePush;
+        element.extend = @"YPDisableScreenCaptureViewController";
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"井字游戏".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"模拟 mdos 攻击".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"获取 WIFI 列表".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"获取当前 WIFI 联网设备".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"获取蓝牙设备列表".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"Socket 的消息互传".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"App 公祭日置灰模式".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"手持弹幕".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
@@ -71,28 +126,19 @@
     NSMutableArray *dataList2 = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"ls_check_update".yp_localizedString;
+        element.title = @"检查更新".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList2 addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"ls_about_us".yp_localizedString;
+        element.title = @"关于我们".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList2 addObject:element];
     }
     YPPageRouterModule *section2 = [[YPPageRouterModule alloc] initWithRouters:dataList2];
     
-    NSMutableArray *dataList3 = [[NSMutableArray alloc] init];
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"全栈日记".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList3 addObject:element];
-    }
-    YPPageRouterModule *section3 = [[YPPageRouterModule alloc] initWithRouters:dataList3];
-    
-    return @[section1, section3, section2];
+    return @[section1, section2];
 }
 
 @end
