@@ -118,7 +118,7 @@
 + (CGFloat)heightForPreviewDemoTest:(NSIndexPath *)indexPath{
     KKWeChatMomentsModel *cellModel = [KKWeChatMomentsTableViewCell setupWeChatMoments:indexPath];
     KKWeChatMomentsTableViewCell *cell = [KKWeChatMomentsTableViewCell sharedInstance];
-    cell.bounds = [UIScreen mainScreen].bounds;
+    /Users/Hansen/iOS/YPLaboratory/Old_QMKKXProduct/QMKKXProduct/Main/Home(实验室)/controller/英语专业考试 cell.bounds = [UIScreen mainScreen].bounds;
     cell.cellModel = cellModel;
     CGFloat height = CGRectGetMaxY(cell.tableView.frame);
     return height + AdaptedWidth(10.f);
