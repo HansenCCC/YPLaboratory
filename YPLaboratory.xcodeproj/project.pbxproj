@@ -72,6 +72,13 @@
 		606929FB2A2BA4B20045D2EB /* YPModuleButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606929FA2A2BA4B20045D2EB /* YPModuleButtonCell.m */; };
 		6073390F2A2F8E050096EC27 /* YPPageRouterModule+Idea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6073390E2A2F8E050096EC27 /* YPPageRouterModule+Idea.m */; };
 		607D9DA52CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DA42CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m */; };
+		607D9DAF2CD9C26400C3B591 /* YPDiverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DAD2CD9C26400C3B591 /* YPDiverseViewController.m */; };
+		607D9DB12CD9C28200C3B591 /* Cells.json in Resources */ = {isa = PBXBuildFile; fileRef = 607D9DB02CD9C28200C3B591 /* Cells.json */; };
+		607D9DB52CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DB42CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.m */; };
+		607D9DB92CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DB82CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m */; };
+		607D9DBD2CDA03CB00C3B591 /* YPWaterfallFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DBC2CDA03CB00C3B591 /* YPWaterfallFlowViewController.m */; };
+		607D9DC02CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DBF2CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m */; };
+		607D9DC22CDA10AC00C3B591 /* Waterfall.json in Resources */ = {isa = PBXBuildFile; fileRef = 607D9DC12CDA10AC00C3B591 /* Waterfall.json */; };
 		608D8FA32A73730F004E1E6D /* YPCameraCaptureSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 608D8FA22A73730F004E1E6D /* YPCameraCaptureSessionView.m */; };
 		6099531B2A3B0A60004BD3E1 /* YPIconBuildManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099531A2A3B0A60004BD3E1 /* YPIconBuildManager.m */; };
 		60B1E0DF2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1E0DE2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m */; };
@@ -222,6 +229,18 @@
 		6073390E2A2F8E050096EC27 /* YPPageRouterModule+Idea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+Idea.m"; sourceTree = "<group>"; };
 		607D9DA32CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPDisableScreenCaptureViewController.h; sourceTree = "<group>"; };
 		607D9DA42CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPDisableScreenCaptureViewController.m; sourceTree = "<group>"; };
+		607D9DAC2CD9C26400C3B591 /* YPDiverseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPDiverseViewController.h; sourceTree = "<group>"; };
+		607D9DAD2CD9C26400C3B591 /* YPDiverseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPDiverseViewController.m; sourceTree = "<group>"; };
+		607D9DB02CD9C28200C3B591 /* Cells.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cells.json; sourceTree = "<group>"; };
+		607D9DB32CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+YPPreviewDemo.h"; sourceTree = "<group>"; };
+		607D9DB42CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+YPPreviewDemo.m"; sourceTree = "<group>"; };
+		607D9DB72CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPCollectionViewWaterfallFlowLayout.h; sourceTree = "<group>"; };
+		607D9DB82CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPCollectionViewWaterfallFlowLayout.m; sourceTree = "<group>"; };
+		607D9DBB2CDA03CB00C3B591 /* YPWaterfallFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPWaterfallFlowViewController.h; sourceTree = "<group>"; };
+		607D9DBC2CDA03CB00C3B591 /* YPWaterfallFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPWaterfallFlowViewController.m; sourceTree = "<group>"; };
+		607D9DBE2CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPWaterfallFlowCollectionViewCell.h; sourceTree = "<group>"; };
+		607D9DBF2CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPWaterfallFlowCollectionViewCell.m; sourceTree = "<group>"; };
+		607D9DC12CDA10AC00C3B591 /* Waterfall.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Waterfall.json; sourceTree = "<group>"; };
 		608D8FA12A73730F004E1E6D /* YPCameraCaptureSessionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPCameraCaptureSessionView.h; sourceTree = "<group>"; };
 		608D8FA22A73730F004E1E6D /* YPCameraCaptureSessionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPCameraCaptureSessionView.m; sourceTree = "<group>"; };
 		609953192A3B0A60004BD3E1 /* YPIconBuildManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPIconBuildManager.h; sourceTree = "<group>"; };
@@ -370,6 +389,8 @@
 		602B3D2A2A4B3D1200A62E1F /* MouldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				607D9DB62CDA030F00C3B591 /* WaterfallFlow */,
+				607D9DAE2CD9C26400C3B591 /* Diverse */,
 				607D9DA22CD8C0B000C3B591 /* DisableScreenCapture */,
 				60B1E0DC2A67DDEB00DD2CE8 /* SystemFonts */,
 				60C1C7682A4E85B4004FC354 /* MultifunctionalCamera */,
@@ -594,6 +615,32 @@
 			path = DisableScreenCapture;
 			sourceTree = "<group>";
 		};
+		607D9DAE2CD9C26400C3B591 /* Diverse */ = {
+			isa = PBXGroup;
+			children = (
+				607D9DB02CD9C28200C3B591 /* Cells.json */,
+				607D9DB32CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.h */,
+				607D9DB42CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.m */,
+				607D9DAC2CD9C26400C3B591 /* YPDiverseViewController.h */,
+				607D9DAD2CD9C26400C3B591 /* YPDiverseViewController.m */,
+			);
+			path = Diverse;
+			sourceTree = "<group>";
+		};
+		607D9DB62CDA030F00C3B591 /* WaterfallFlow */ = {
+			isa = PBXGroup;
+			children = (
+				607D9DC12CDA10AC00C3B591 /* Waterfall.json */,
+				607D9DB72CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.h */,
+				607D9DB82CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m */,
+				607D9DBE2CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.h */,
+				607D9DBF2CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m */,
+				607D9DBB2CDA03CB00C3B591 /* YPWaterfallFlowViewController.h */,
+				607D9DBC2CDA03CB00C3B591 /* YPWaterfallFlowViewController.m */,
+			);
+			path = WaterfallFlow;
+			sourceTree = "<group>";
+		};
 		609953172A3B0A2B004BD3E1 /* IconBuild */ = {
 			isa = PBXGroup;
 			children = (
@@ -789,8 +836,10 @@
 			files = (
 				6034B27C2A14A48A0024E610 /* Localizable.strings in Resources */,
 				6034B2642A1485D90024E610 /* LaunchScreen.storyboard in Resources */,
+				607D9DB12CD9C28200C3B591 /* Cells.json in Resources */,
 				6034B2782A14A4800024E610 /* InfoPlist.strings in Resources */,
 				6034B2612A1485D90024E610 /* Assets.xcassets in Resources */,
+				607D9DC22CDA10AC00C3B591 /* Waterfall.json in Resources */,
 				6034B25F2A1485D80024E610 /* Main.storyboard in Resources */,
 				601FEB962A42FC40000B703C /* Contents.json in Resources */,
 			);
@@ -865,6 +914,7 @@
 				6034B2862A14A64E0024E610 /* YPRootViewController.m in Sources */,
 				60F52A9E2A49374900BB6254 /* YPSwiperCardTableViewCell.m in Sources */,
 				606929FB2A2BA4B20045D2EB /* YPModuleButtonCell.m in Sources */,
+				607D9DBD2CDA03CB00C3B591 /* YPWaterfallFlowViewController.m in Sources */,
 				60FF4CBA2A1F4C0100A2D04B /* YPPageRouterModule+Component.m in Sources */,
 				60257FE82A1A400C00091000 /* YPLaboratoryDevice.m in Sources */,
 				60257FD82A1A15A100091000 /* YPModuleTableViewController.m in Sources */,
@@ -897,6 +947,8 @@
 				602B3D292A4B3C8000A62E1F /* YPAppUpdatePopupController.m in Sources */,
 				6034B31D2A14A9D90024E610 /* YPUserModel.m in Sources */,
 				6034B2EC2A14A7940024E610 /* YPBaseViewController.m in Sources */,
+				607D9DB52CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.m in Sources */,
+				607D9DC02CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m in Sources */,
 				60257FFA2A1A5B8200091000 /* YPHTTPInitiateRequest.m in Sources */,
 				6034B2E62A14A6E40024E610 /* NSDictionary+YPLaboratory.m in Sources */,
 				6034B2562A1485D80024E610 /* AppDelegate.m in Sources */,
@@ -904,9 +956,11 @@
 				60C1C75F2A4D8306004FC354 /* YPAppH5PopupController.m in Sources */,
 				6034B2DD2A14A6E40024E610 /* NSString+YPLaboratory.m in Sources */,
 				608D8FA32A73730F004E1E6D /* YPCameraCaptureSessionView.m in Sources */,
+				607D9DAF2CD9C26400C3B591 /* YPDiverseViewController.m in Sources */,
 				60257FE72A1A400C00091000 /* YPSettingManager.m in Sources */,
 				6034B31E2A14A9D90024E610 /* YPUserProxy.m in Sources */,
 				6034B31C2A14A9D90024E610 /* YPUserTableViewCell.m in Sources */,
+				607D9DB92CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m in Sources */,
 				6034B31F2A14A9D90024E610 /* YPUserViewController.m in Sources */,
 				6019B7922A2E376B0083FA7F /* YPPageRouterModule+Update.m in Sources */,
 				60257FFD2A1A5F2400091000 /* AppDelegate+YPThird.m in Sources */,

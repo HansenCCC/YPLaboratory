@@ -48,7 +48,11 @@
     
     CGRect f2 = bounds;
     f2.size.width = [self.contentLabel sizeThatFits:CGSizeMake(100.f, 0)].width;
-    f2.origin.x = bounds.size.width - f2.size.width - 5.f;
+    if (self.accessoryType != UITableViewCellAccessoryNone) {
+        f2.origin.x = bounds.size.width - f2.size.width - 5.f;
+    } else {
+        f2.origin.x = bounds.size.width - f2.size.width - 20.f;
+    }
     self.contentLabel.frame = f2;
 }
 

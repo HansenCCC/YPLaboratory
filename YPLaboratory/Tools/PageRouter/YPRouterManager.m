@@ -43,8 +43,6 @@
         dataList = [YPPageRouterModule ComponentRouters];
     } else if ([model.title isEqualToString:@"内购支付".yp_localizedString]) {
         dataList = [YPPageRouterModule AppleInternalPurchase];
-    } else if ([model.title isEqualToString:@"多样的表格视图（UITableView）".yp_localizedString]) {
-        dataList = [YPPageRouterModule ComponentRouters_TableCells];
     } else if ([model.title isEqualToString:@"多样的选择框（UIPickerView）".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_PickerView];
     } else if ([model.title isEqualToString:@"导航栏控制（UINavigationBar）".yp_localizedString]) {
@@ -65,8 +63,6 @@
         dataList = [YPPageRouterModule ComponentRouters_MultifunctionalCamera];
     } else if ([model.title isEqualToString:@"系统字体".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_SystemFonts];
-    } else if ([model.title isEqualToString:@"".yp_localizedString]) {
-        
     } else if ([model.title isEqualToString:@"".yp_localizedString]) {
         
     } else if ([model.title isEqualToString:@"".yp_localizedString]) {

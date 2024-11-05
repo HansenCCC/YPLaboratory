@@ -15,9 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSArray *)ComponentRouters;
 
 // 丰富多彩的cell
-+ (NSArray *)ComponentRouters_TableCells;
-
-// 丰富多彩的cell
 + (NSArray *)ComponentRouters_CollectionCells;
 
 // 多样的选择框

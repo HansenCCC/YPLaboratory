@@ -24,31 +24,24 @@
 }
 
 - (void)startLoadData {
-    self.dataList = @[];
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Cells.json" ofType:nil];
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSString *utf8String = data.UTF8String;
-    NSArray *items = [KKLabelModel mj_objectArrayWithKeyValuesArray:utf8String.jsonArray];
-    [self.datas addObjectsFromArray:items];
-    for (KKLabelModel *label in self.datas) {
-        NSString *cell = label.title;
-        //判断cell是否存在xib文件
-        //⚠️xib最终会变成nib文件⚠️
-        NSString*nibPath = [[NSBundle mainBundle] pathForResource:cell ofType:@"nib"];
-        if (nibPath.length > 0) {
-            UINib *nib = [UINib nibWithNibName:cell bundle:[NSBundle mainBundle]];
-            [self.tableView registerNib:nib forCellReuseIdentifier:cell];
-        }else{
-            [self.tableView registerClass:NSClassFromString(cell) forCellReuseIdentifier:cell];
-        }
+    NSString *cellPath = [[NSBundle mainBundle] pathForResource:@"Cells.json" ofType:nil];
+    NSData *data = [NSData dataWithContentsOfFile:cellPath];
+    NSError *error = nil;
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    NSArray *items = [YPPageRouter mj_objectArrayWithKeyValuesArray:jsonDic];
+    self.dataList = [items copy];
+    for (YPPageRouter *cellModel in self.dataList) {
+        [self.tableView registerClass:NSClassFromString(cellModel.title) forCellReuseIdentifier:cellModel.title];
     }
-    //构造cell
     [self.tableView reloadData];
 }
 
 - (void)setupSubviews {
-    
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.view);
+    }];
 }
 
 #pragma mark - getters | setters
@@ -75,6 +68,60 @@
         _tableView = tableView;
     }
     return _tableView;
+}
+
+#pragma mark - UITableViewDelegate, UITableViewDataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    YPPageRouter *cellModel = self.dataList[indexPath.section];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellModel.title];
+    Class class = [cell class];
+    if (class) {
+        /// 动态调用类方法
+        SEL sel = NSSelectorFromString(@"previewDemoTestCell:indexPath:");
+        if ([class respondsToSelector:sel]) {
+            IMP imp = [class methodForSelector:sel];
+            void (*function)(id, SEL,UITableViewCell *,NSIndexPath *) = (void *)imp;
+            function(class,sel,cell,indexPath);
+        }
+    } else {
+        return [[UITableViewCell alloc] init];
+    }
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = 44.f;
+    YPPageRouter *cellModel = self.dataList[indexPath.section];
+    Class class = NSClassFromString(cellModel.title);
+    if (class) {
+        SEL sel = NSSelectorFromString(@"heightForPreviewDemoTest:");
+        if ([class respondsToSelector:sel]) {
+            IMP imp = [class methodForSelector:sel];
+            CGFloat (*function)(id, SEL,NSIndexPath *) = (void *)imp;
+            height = function(class,sel,indexPath);
+        }
+    }
+    return height;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    YPPageRouter *cellModel = self.dataList[section];
+    return cellModel.content.intValue;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.dataList.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    YPPageRouter *cellModel = self.dataList[section];
+    return cellModel.title;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [[YPShakeManager shareInstance] tapShare];
 }
 
 @end

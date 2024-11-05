@@ -48,7 +48,11 @@
     CGRect f2 = bounds;
     f2.size = [self.cellSwitch sizeThatFits:CGSizeZero];
     f2.origin.y = (bounds.size.height - f2.size.height) / 2.f;
-    f2.origin.x = bounds.size.width - f2.size.width - 20.f;
+    if (self.accessoryType != UITableViewCellAccessoryNone) {
+        f2.origin.x = bounds.size.width - f2.size.width - 5.f;
+    } else {
+        f2.origin.x = bounds.size.width - f2.size.width - 20.f;
+    }
     self.cellSwitch.frame = f2;
 }
 

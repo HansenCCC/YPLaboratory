@@ -1,0 +1,30 @@
+[
+    {
+      "title" : "UITableViewCell",
+      "content" : "5"
+    },
+    {
+      "title" : "YPModuleNormalCell",
+      "content" : "2"
+    },
+    {
+      "title" : "YPModuleSwitchCell",
+      "content" : "2"
+    },
+    {
+      "title" : "YPModuleButtonCell",
+      "content" : "1"
+    },
+    {
+      "title" : "YPModuleImageCell",
+      "content" : "5"
+    },
+    {
+      "title" : "YPSwiperNormalTableViewCell",
+      "content" : "1"
+    },
+    {
+      "title" : "YPSwiperCardTableViewCell",
+      "content" : "1"
+    }
+]
