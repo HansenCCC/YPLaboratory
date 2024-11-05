@@ -23,16 +23,16 @@ NS_ASSUME_NONNULL_BEGIN
 // 导航栏控制
 + (NSArray *)ComponentRouters_NavigationBar;
 
-// 普通提示框（YPAlertView）
+// 普通提示框
 + (NSArray *)ComponentRouters_YPAlertView;
 
-// 普通加载框（YPLoadingView）
+// 普通加载框
 + (NSArray *)ComponentRouters_YPLoadingView;
 
-// 自定义弹框（YPPopupController）
+// 自定义弹框
 + (NSArray *)ComponentRouters_YPPopupController;
 
-// 轮播图（YPSwiperView）
+// 自定义轮播图
 + (NSArray *)ComponentRouters_YPSwiperView;
 
 // 摄像机

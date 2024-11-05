@@ -28,9 +28,19 @@
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"多样的表格视图（UITableView）".yp_localizedString;
-        element.type = YPPageRouterTypePush;
-        element.extend = @"YPDiverseViewController";
+        element.title = @"APP内打开一个网页".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPH5WebviewController *vc = [[YPH5WebviewController alloc] init];
+            vc.request = [NSURLRequest requestWithURL:[NSURL URLWithString:[YPSettingManager sharedInstance].personalHomepage]];
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"导航栏控制".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
     {
@@ -42,55 +52,46 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"多样的选择框（UIPickerView）".yp_localizedString;
+        element.title = @"多样的表格视图".yp_localizedString;
+        element.type = YPPageRouterTypePush;
+        element.extend = @"YPDiverseViewController";
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"多样的选择框".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"导航栏控制（UINavigationBar）".yp_localizedString;
+        element.title = @"多样的按钮".yp_localizedString;
+        element.type = YPPageRouterTypePush;
+        element.extend = @"YPButtonViewController";
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"普通提示框".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"好用的按钮（YPButton）".yp_localizedString;
+        element.title = @"普通加载框".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"普通提示框（YPAlertView）".yp_localizedString;
+        element.title = @"自定义弹框".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"普通加载框（YPLoadingView）".yp_localizedString;
+        element.title = @"自定义轮播图".yp_localizedString;
         element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"自定义弹框（YPPopupController）".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"轮播图（YPSwiperView）".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"APP内打开一个网页".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            YPH5WebviewController *vc = [[YPH5WebviewController alloc] init];
-            vc.request = [NSURLRequest requestWithURL:[NSURL URLWithString:[YPSettingManager sharedInstance].personalHomepage]];
-            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
-        };
         [dataList addObject:element];
     }
     {
@@ -529,7 +530,7 @@
     return @[section];
 }
 
-// 普通提示框（YPAlertView）
+// 普通提示框
 + (NSArray *)ComponentRouters_YPAlertView {
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
@@ -554,7 +555,7 @@
     return @[section];
 }
 
-// 普通加载框（YPLoadingView）
+// 普通加载框
 + (NSArray *)ComponentRouters_YPLoadingView {
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
@@ -585,21 +586,9 @@
     return @[section];
 }
 
-// 自定义弹框（YPPopupController）
+// 自定义弹框
 + (NSArray *)ComponentRouters_YPPopupController {
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"例如：更新弹框".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            YPAppUpdatePopupController *vc = [YPAppUpdatePopupController popupControllerWithStyle:YPPopupControllerStyleMiddle];
-            vc.updateTitle = @"发现新的版本 v10.xxx";
-            vc.updateContent = @"全新界面设计，更加现代化和直观..........";
-            [[UIViewController yp_topViewController] presentViewController:vc animated:YES completion:nil];
-        };
-        [dataList addObject:element];
-    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"例如：时间选择弹框".yp_localizedString;
@@ -663,11 +652,23 @@
         };
         [dataList addObject:element];
     }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"例如：更新弹框".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPAppUpdatePopupController *vc = [YPAppUpdatePopupController popupControllerWithStyle:YPPopupControllerStyleMiddle];
+            vc.updateTitle = @"发现新的版本 v10.xxx";
+            vc.updateContent = @"全新界面设计，更加现代化和直观..........";
+            [[UIViewController yp_topViewController] presentViewController:vc animated:YES completion:nil];
+        };
+        [dataList addObject:element];
+    }
     YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
     return @[section,];
 }
 
-// 轮播图（YPSwiperView）
+// 自定义轮播图
 + (NSArray *)ComponentRouters_YPSwiperView {
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {

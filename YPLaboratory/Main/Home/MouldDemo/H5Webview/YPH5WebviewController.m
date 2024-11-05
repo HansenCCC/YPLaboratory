@@ -78,30 +78,23 @@
     // 添加js方法，当h5调用此方法，将会被监听到
     WKWebViewConfiguration *configuration = self.webView.configuration;
     [configuration.userContentController addScriptMessageHandler:self name:@"shareContent"];
-    [configuration.userContentController addScriptMessageHandler:self name:@"closeH5"];
-    [configuration.userContentController addScriptMessageHandler:self name:@"pushVC"];
 }
 
 - (void)removeScriptMessageHandlerForName {
     // 异常js方法，不移除则会造成循环引用
     WKWebViewConfiguration *configuration = self.webView.configuration;
     [configuration.userContentController removeScriptMessageHandlerForName:@"shareContent"];
-    [configuration.userContentController removeScriptMessageHandlerForName:@"closeH5"];
-    [configuration.userContentController removeScriptMessageHandlerForName:@"pushVC"];
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     CGRect bounds = self.view.bounds;
     CGRect f1 = bounds;
-    f1.origin.y = YP_HEIGHT_NAV_BAR;
-    f1.size.height = bounds.size.height - f1.origin.y - YP_HEIGHT_IPHONEX_BOTTOM_MARGIN;
     self.webView.frame = f1;
     //
     CGRect f2 = bounds;
     f2.size = [self.progressView sizeThatFits:CGSizeZero];
     f2.size.width = bounds.size.width;
-    f2.origin.y = YP_HEIGHT_NAV_BAR;
     self.progressView.frame = f2;
 }
 
@@ -175,10 +168,6 @@
     // 在Objective-C中执行JavaScript并发送消息
     dispatch_async(dispatch_get_main_queue(), ^{
         if ([message.name isEqualToString:@"shareContent"]) {
-            
-        } else if ([message.name isEqualToString:@"closeH5"]) {
-            
-        } else if ([message.name isEqualToString:@"pushVC"]) {
             
         }
     });

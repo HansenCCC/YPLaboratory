@@ -43,21 +43,21 @@
         dataList = [YPPageRouterModule ComponentRouters];
     } else if ([model.title isEqualToString:@"内购支付".yp_localizedString]) {
         dataList = [YPPageRouterModule AppleInternalPurchase];
-    } else if ([model.title isEqualToString:@"多样的选择框（UIPickerView）".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"多样的选择框".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_PickerView];
-    } else if ([model.title isEqualToString:@"导航栏控制（UINavigationBar）".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"导航栏控制".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_NavigationBar];
-    } else if ([model.title isEqualToString:@"普通提示框（YPAlertView）".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"普通提示框".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_YPAlertView];
-    } else if ([model.title isEqualToString:@"普通加载框（YPLoadingView）".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"普通加载框".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_YPLoadingView];
     } else if ([model.title isEqualToString:@"App 图标制作".yp_localizedString]) {
         dataList = [YPPageRouterModule IdeaRouters_IconBuild];
-    } else if ([model.title isEqualToString:@"自定义弹框（YPPopupController）".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"自定义弹框".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_YPPopupController];
     } else if ([model.title isEqualToString:@"制作 App 图标".yp_localizedString]) {
         dataList = [YPPageRouterModule IdeaRouters_IconBuild_Setup];
-    } else if ([model.title isEqualToString:@"轮播图（YPSwiperView）".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"自定义轮播图".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_YPSwiperView];
     } else if ([model.title isEqualToString:@"摄像机".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_MultifunctionalCamera];
