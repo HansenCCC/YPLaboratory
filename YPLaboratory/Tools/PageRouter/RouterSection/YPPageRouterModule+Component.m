@@ -177,16 +177,17 @@
         element.extend = @"YPRunLabelViewController";
         [dataList addObject:element];
     }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"手持弹幕".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"手持弹幕".yp_localizedString;
+//        element.type = YPPageRouterTypeTable;
+//        [dataList addObject:element];
+//    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"App 公祭日置灰模式".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypePush;
+        element.extend = @"YPSetAshViewController";
         [dataList addObject:element];
     }
     {
