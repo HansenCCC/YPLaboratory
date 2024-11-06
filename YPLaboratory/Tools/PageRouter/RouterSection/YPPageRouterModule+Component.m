@@ -28,7 +28,7 @@
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"APP内打开一个网页".yp_localizedString;
+        element.title = @"打开一个网页".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             YPH5WebviewController *vc = [[YPH5WebviewController alloc] init];
