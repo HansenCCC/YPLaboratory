@@ -63,8 +63,8 @@
         dataList = [YPPageRouterModule ComponentRouters_MultifunctionalCamera];
     } else if ([model.title isEqualToString:@"系统字体".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_SystemFonts];
-    } else if ([model.title isEqualToString:@"".yp_localizedString]) {
-        
+    } else if ([model.title isEqualToString:@"角标和红点".yp_localizedString]) {
+        dataList = [YPPageRouterModule ComponentRouters_Badge];
     } else if ([model.title isEqualToString:@"".yp_localizedString]) {
         
     } else if ([model.title isEqualToString:@"".yp_localizedString]) {

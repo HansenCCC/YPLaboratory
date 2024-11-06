@@ -75,6 +75,12 @@
 //    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"获取设备信息".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"获取 WIFI 列表".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];

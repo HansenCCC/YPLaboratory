@@ -774,4 +774,40 @@
     return @[section];
 }
 
+/// 角标
++ (NSArray *)ComponentRouters_Badge {
+    NSMutableArray *dataList = [[NSMutableArray alloc] init];
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"显示未读数".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            UIView *displayLabel = [cell yp_findSubviewsOfClass:[UILabel class]].firstObject;
+            if ([displayLabel yp_findSubviewsOfClass:[YPBadgeView class]].count == 0) {
+                [YPBadgeView showBadgeToView:displayLabel badgeInteger:99];
+            } else {
+                [YPBadgeView hiddenBadgeToView:displayLabel];
+            }
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"显示红点".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            UIView *displayLabel = [cell yp_findSubviewsOfClass:[UILabel class]].firstObject;
+            if ([displayLabel yp_findSubviewsOfClass:[YPBadgeView class]].count == 0) {
+                [YPBadgeView showBadgeToView:displayLabel];
+            } else {
+                [YPBadgeView hiddenBadgeToView:displayLabel];
+            }
+        };
+        [dataList addObject:element];
+    }
+    YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
+    section.headerTitle = @"角标和红点".yp_localizedString;
+    return @[section];
+}
+
 @end
