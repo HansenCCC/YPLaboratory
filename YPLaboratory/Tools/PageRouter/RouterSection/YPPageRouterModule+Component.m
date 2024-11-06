@@ -138,18 +138,18 @@
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"iOS 视频播放".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"TableView嵌入播放器（仿线程卡顿处理）".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"iOS 视频播放".yp_localizedString;
+//        element.type = YPPageRouterTypeTable;
+//        [dataList addObject:element];
+//    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"TableView嵌入播放器（仿线程卡顿处理）".yp_localizedString;
+//        element.type = YPPageRouterTypeTable;
+//        [dataList addObject:element];
+//    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"模拟新浪@人".yp_localizedString;
@@ -171,12 +171,6 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"模拟支付宝输入密码".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"应用与网站之间通讯（js 交互）".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }

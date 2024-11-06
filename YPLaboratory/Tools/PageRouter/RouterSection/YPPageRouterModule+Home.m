@@ -63,25 +63,19 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"井字游戏".yp_localizedString;
+        element.title = @"JavaScript 和 OC 交互".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"模拟 mdos 攻击".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"模拟 mdos 攻击".yp_localizedString;
+//        element.type = YPPageRouterTypeTable;
+//        [dataList addObject:element];
+//    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"获取 WIFI 列表".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"获取当前 WIFI 联网设备".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
