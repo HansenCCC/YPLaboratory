@@ -115,13 +115,12 @@
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"代码生成工具".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
-    
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"代码生成工具".yp_localizedString;
+//        element.type = YPPageRouterTypeTable;
+//        [dataList addObject:element];
+//    }
     YPPageRouterModule *section1 = [[YPPageRouterModule alloc] initWithRouters:dataList];
     NSMutableArray *dataList2 = [[NSMutableArray alloc] init];
     {

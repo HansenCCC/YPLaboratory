@@ -175,16 +175,17 @@
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"一些常见下拉弹框".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"下拉弹框".yp_localizedString;
+//        element.type = YPPageRouterTypeTable;
+//        [dataList addObject:element];
+//    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"跑马灯效果".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypePush;
+        element.extend = @"YPRunLabelViewController";
         [dataList addObject:element];
     }
     {

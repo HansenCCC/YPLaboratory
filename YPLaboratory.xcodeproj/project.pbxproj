@@ -84,6 +84,7 @@
 		6099531B2A3B0A60004BD3E1 /* YPIconBuildManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099531A2A3B0A60004BD3E1 /* YPIconBuildManager.m */; };
 		60B128CE2CDB13C300A3E6BE /* YPPayInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B128CD2CDB13C300A3E6BE /* YPPayInputViewController.m */; };
 		60B128D22CDB146C00A3E6BE /* YPPayInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B128D12CDB146C00A3E6BE /* YPPayInputView.m */; };
+		60B128DA2CDB3CA700A3E6BE /* YPRunLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B128D92CDB3CA700A3E6BE /* YPRunLabelViewController.m */; };
 		60B1E0DF2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1E0DE2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m */; };
 		60C1C75F2A4D8306004FC354 /* YPAppH5PopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C75E2A4D8306004FC354 /* YPAppH5PopupController.m */; };
 		60C1C7632A4D8716004FC354 /* YPH5WebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C7622A4D8716004FC354 /* YPH5WebviewController.m */; };
@@ -254,6 +255,8 @@
 		60B128CD2CDB13C300A3E6BE /* YPPayInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPPayInputViewController.m; sourceTree = "<group>"; };
 		60B128D02CDB146C00A3E6BE /* YPPayInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPPayInputView.h; sourceTree = "<group>"; };
 		60B128D12CDB146C00A3E6BE /* YPPayInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPPayInputView.m; sourceTree = "<group>"; };
+		60B128D82CDB3CA700A3E6BE /* YPRunLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPRunLabelViewController.h; sourceTree = "<group>"; };
+		60B128D92CDB3CA700A3E6BE /* YPRunLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPRunLabelViewController.m; sourceTree = "<group>"; };
 		60B1E0DD2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPSystemFontsTableViewCell.h; sourceTree = "<group>"; };
 		60B1E0DE2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPSystemFontsTableViewCell.m; sourceTree = "<group>"; };
 		60C1C75D2A4D8306004FC354 /* YPAppH5PopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPAppH5PopupController.h; sourceTree = "<group>"; };
@@ -398,6 +401,7 @@
 		602B3D2A2A4B3D1200A62E1F /* MouldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				60B128D72CDB3C9600A3E6BE /* RunLabel */,
 				60B128CB2CDB139A00A3E6BE /* PayInput */,
 				607D9DC32CDA1A2600C3B591 /* Button */,
 				607D9DB62CDA030F00C3B591 /* WaterfallFlow */,
@@ -680,6 +684,15 @@
 				60B128CD2CDB13C300A3E6BE /* YPPayInputViewController.m */,
 			);
 			path = PayInput;
+			sourceTree = "<group>";
+		};
+		60B128D72CDB3C9600A3E6BE /* RunLabel */ = {
+			isa = PBXGroup;
+			children = (
+				60B128D82CDB3CA700A3E6BE /* YPRunLabelViewController.h */,
+				60B128D92CDB3CA700A3E6BE /* YPRunLabelViewController.m */,
+			);
+			path = RunLabel;
 			sourceTree = "<group>";
 		};
 		60B1E0DC2A67DDEB00DD2CE8 /* SystemFonts */ = {
@@ -995,6 +1008,7 @@
 				6034B31E2A14A9D90024E610 /* YPUserProxy.m in Sources */,
 				6034B31C2A14A9D90024E610 /* YPUserTableViewCell.m in Sources */,
 				607D9DB92CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m in Sources */,
+				60B128DA2CDB3CA700A3E6BE /* YPRunLabelViewController.m in Sources */,
 				6034B31F2A14A9D90024E610 /* YPUserViewController.m in Sources */,
 				6019B7922A2E376B0083FA7F /* YPPageRouterModule+Update.m in Sources */,
 				60257FFD2A1A5F2400091000 /* AppDelegate+YPThird.m in Sources */,
