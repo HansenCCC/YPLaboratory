@@ -120,24 +120,6 @@
         };
         [dataList addObject:element];
     }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"文件管理".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            NSString *path = NSHomeDirectory();
-            YPFileBrowserController *browser = [[YPFileBrowserController alloc] initWithPath:path];
-            YPNavigationViewController *nav = [[YPNavigationViewController alloc] initWithRootViewController:browser];
-            [[UIViewController yp_topViewController] presentViewController:nav animated:YES completion:nil];
-        };
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"摄像机".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"iOS 视频播放".yp_localizedString;
@@ -175,6 +157,13 @@
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"防 截屏|录屏 功能".yp_localizedString;
+        element.type = YPPageRouterTypePush;
+        element.extend = @"YPDisableScreenCaptureViewController";
+        [dataList addObject:element];
+    }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"下拉弹框".yp_localizedString;
@@ -186,6 +175,18 @@
         element.title = @"跑马灯效果".yp_localizedString;
         element.type = YPPageRouterTypePush;
         element.extend = @"YPRunLabelViewController";
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"手持弹幕".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"App 公祭日置灰模式".yp_localizedString;
+        element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
     {
