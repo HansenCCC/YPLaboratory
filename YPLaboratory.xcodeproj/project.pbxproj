@@ -82,6 +82,8 @@
 		607D9DC62CDA1A4200C3B591 /* YPButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DC52CDA1A4200C3B591 /* YPButtonViewController.m */; };
 		608D8FA32A73730F004E1E6D /* YPCameraCaptureSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 608D8FA22A73730F004E1E6D /* YPCameraCaptureSessionView.m */; };
 		6099531B2A3B0A60004BD3E1 /* YPIconBuildManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099531A2A3B0A60004BD3E1 /* YPIconBuildManager.m */; };
+		60B128CE2CDB13C300A3E6BE /* YPPayInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B128CD2CDB13C300A3E6BE /* YPPayInputViewController.m */; };
+		60B128D22CDB146C00A3E6BE /* YPPayInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B128D12CDB146C00A3E6BE /* YPPayInputView.m */; };
 		60B1E0DF2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1E0DE2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m */; };
 		60C1C75F2A4D8306004FC354 /* YPAppH5PopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C75E2A4D8306004FC354 /* YPAppH5PopupController.m */; };
 		60C1C7632A4D8716004FC354 /* YPH5WebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C7622A4D8716004FC354 /* YPH5WebviewController.m */; };
@@ -248,6 +250,10 @@
 		608D8FA22A73730F004E1E6D /* YPCameraCaptureSessionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPCameraCaptureSessionView.m; sourceTree = "<group>"; };
 		609953192A3B0A60004BD3E1 /* YPIconBuildManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPIconBuildManager.h; sourceTree = "<group>"; };
 		6099531A2A3B0A60004BD3E1 /* YPIconBuildManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPIconBuildManager.m; sourceTree = "<group>"; };
+		60B128CC2CDB13C300A3E6BE /* YPPayInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPPayInputViewController.h; sourceTree = "<group>"; };
+		60B128CD2CDB13C300A3E6BE /* YPPayInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPPayInputViewController.m; sourceTree = "<group>"; };
+		60B128D02CDB146C00A3E6BE /* YPPayInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPPayInputView.h; sourceTree = "<group>"; };
+		60B128D12CDB146C00A3E6BE /* YPPayInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPPayInputView.m; sourceTree = "<group>"; };
 		60B1E0DD2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPSystemFontsTableViewCell.h; sourceTree = "<group>"; };
 		60B1E0DE2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPSystemFontsTableViewCell.m; sourceTree = "<group>"; };
 		60C1C75D2A4D8306004FC354 /* YPAppH5PopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPAppH5PopupController.h; sourceTree = "<group>"; };
@@ -392,6 +398,7 @@
 		602B3D2A2A4B3D1200A62E1F /* MouldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				60B128CB2CDB139A00A3E6BE /* PayInput */,
 				607D9DC32CDA1A2600C3B591 /* Button */,
 				607D9DB62CDA030F00C3B591 /* WaterfallFlow */,
 				607D9DAE2CD9C26400C3B591 /* Diverse */,
@@ -664,6 +671,17 @@
 			path = IconBuild;
 			sourceTree = "<group>";
 		};
+		60B128CB2CDB139A00A3E6BE /* PayInput */ = {
+			isa = PBXGroup;
+			children = (
+				60B128D02CDB146C00A3E6BE /* YPPayInputView.h */,
+				60B128D12CDB146C00A3E6BE /* YPPayInputView.m */,
+				60B128CC2CDB13C300A3E6BE /* YPPayInputViewController.h */,
+				60B128CD2CDB13C300A3E6BE /* YPPayInputViewController.m */,
+			);
+			path = PayInput;
+			sourceTree = "<group>";
+		};
 		60B1E0DC2A67DDEB00DD2CE8 /* SystemFonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -932,6 +950,7 @@
 				60257FE82A1A400C00091000 /* YPLaboratoryDevice.m in Sources */,
 				60257FD82A1A15A100091000 /* YPModuleTableViewController.m in Sources */,
 				60257FD72A1A15A100091000 /* YPModuleTableProxy.m in Sources */,
+				60B128D22CDB146C00A3E6BE /* YPPayInputView.m in Sources */,
 				60257FD52A1A15A100091000 /* YPModuleNormalCell.m in Sources */,
 				60257FF12A1A452100091000 /* YPHTTPResponse.m in Sources */,
 				6034B2DA2A14A6E40024E610 /* UIScrollView+YPLaboratory.m in Sources */,
@@ -952,6 +971,7 @@
 				60C44E842A186E2C0073EA3F /* YPPageRouter.m in Sources */,
 				60C1C77E2A502524004FC354 /* YPQRCodeScanCaptureSessionView.m in Sources */,
 				60C1C7702A4E86F6004FC354 /* YPFaceTrackViewController.m in Sources */,
+				60B128CE2CDB13C300A3E6BE /* YPPayInputViewController.m in Sources */,
 				60257FD92A1A15A100091000 /* YPModuleTableViewModel.m in Sources */,
 				602580002A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.m in Sources */,
 				607D9DC62CDA1A4200C3B591 /* YPButtonViewController.m in Sources */,

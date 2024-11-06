@@ -150,27 +150,28 @@
 //        element.type = YPPageRouterTypeTable;
 //        [dataList addObject:element];
 //    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"模拟新浪@人".yp_localizedString;
+//        element.type = YPPageRouterTypeTable;
+//        [dataList addObject:element];
+//    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"模拟微信朋友圈".yp_localizedString;
+//        element.type = YPPageRouterTypeTable;
+//        [dataList addObject:element];
+//    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"模拟新浪@人".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"模拟微信朋友圈".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.title = @"模拟支付宝输入密码".yp_localizedString;
+        element.type = YPPageRouterTypePush;
+        element.extend = @"YPPayInputViewController";
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"角标和红点".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"模拟支付宝输入密码".yp_localizedString;
         element.type = YPPageRouterTypeTable;
         [dataList addObject:element];
     }
