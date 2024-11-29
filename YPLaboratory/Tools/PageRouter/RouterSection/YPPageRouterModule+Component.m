@@ -803,7 +803,7 @@
         for (NSString *fontName in [UIFont familyNames]) {
             index ++;
             YPPageRouter *element = [[YPPageRouter alloc] init];
-            element.title = [NSString stringWithFormat:@"1234567890"];
+            element.title = [NSString stringWithFormat:@"ABC 123 你好"];
             element.content = fontName;
             element.type = YPPageRouterTypeCustom;
             element.cellClass = [YPSystemFontsTableViewCell class];
