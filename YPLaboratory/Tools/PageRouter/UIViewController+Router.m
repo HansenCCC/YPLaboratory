@@ -75,18 +75,6 @@
                                 // 检验成功，用户已经支付了
                                 [[YPPurchaseManager sharedInstance] deleteByPaymentVoucher:payDic];
                                 [YPAlertView alertText:@"谢谢您的慷慨。\n祝您工作顺利，生活愉快！" duration:4.f];
-                                // 获取商品名称
-                                NSString *productName = payDic[@"productName"]?:@"";
-                                // 订单号
-                                NSString *orderId = [NSString stringWithFormat:@"%@",payDic[@"transactionId"]?:@""];
-                                // 获取商品价格
-                                NSInteger amount = [NSString stringWithFormat:@"%@",payDic[@"price"]].floatValue * 100;// 金额 分
-                                // 上报支付成功
-                                [[YPTrackingManager sharedInstance] uploadEvent:YPTrackingEventTypePaymentComplete event:@{
-                                    @"orderId":orderId,
-                                    @"productName":productName,
-                                    @"amount":@(amount),
-                                }];
                             } else {
                                 [YPAlertView alertText:@"校验支付状态失败，请稍后再试！"];
                             }

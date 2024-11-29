@@ -25,9 +25,6 @@
 		60257FFD2A1A5F2400091000 /* AppDelegate+YPThird.m in Sources */ = {isa = PBXBuildFile; fileRef = 60257FFC2A1A5F2400091000 /* AppDelegate+YPThird.m */; };
 		602580002A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60257FFF2A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.m */; };
 		602580042A1A5FC400091000 /* YPNoticeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 602580022A1A5FC400091000 /* YPNoticeHeader.m */; };
-		6025800A2A1A604F00091000 /* TapDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602580062A1A604F00091000 /* TapDB.framework */; };
-		6025800B2A1A604F00091000 /* TapCommonSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602580082A1A604F00091000 /* TapCommonSDK.framework */; };
-		6025800C2A1A604F00091000 /* YPTrackingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 602580092A1A604F00091000 /* YPTrackingManager.m */; };
 		602B3D292A4B3C8000A62E1F /* YPAppUpdatePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B3D282A4B3C8000A62E1F /* YPAppUpdatePopupController.m */; };
 		6034B2562A1485D80024E610 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2552A1485D80024E610 /* AppDelegate.m */; };
 		6034B25F2A1485D80024E610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6034B25D2A1485D80024E610 /* Main.storyboard */; };
@@ -140,10 +137,6 @@
 		60257FFF2A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPHTTPVerifyPaymentRequest.m; sourceTree = "<group>"; };
 		602580022A1A5FC400091000 /* YPNoticeHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPNoticeHeader.m; sourceTree = "<group>"; };
 		602580032A1A5FC400091000 /* YPNoticeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPNoticeHeader.h; sourceTree = "<group>"; };
-		602580062A1A604F00091000 /* TapDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapDB.framework; sourceTree = "<group>"; };
-		602580072A1A604F00091000 /* YPTrackingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPTrackingManager.h; sourceTree = "<group>"; };
-		602580082A1A604F00091000 /* TapCommonSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapCommonSDK.framework; sourceTree = "<group>"; };
-		602580092A1A604F00091000 /* YPTrackingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPTrackingManager.m; sourceTree = "<group>"; };
 		602B3D272A4B3C8000A62E1F /* YPAppUpdatePopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPAppUpdatePopupController.h; sourceTree = "<group>"; };
 		602B3D282A4B3C8000A62E1F /* YPAppUpdatePopupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPAppUpdatePopupController.m; sourceTree = "<group>"; };
 		6034B2512A1485D80024E610 /* YPLaboratory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YPLaboratory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,9 +293,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6025800A2A1A604F00091000 /* TapDB.framework in Frameworks */,
 				17B65EBA9D4EF60CD769BD61 /* Pods_YPLaboratory.framework in Frameworks */,
-				6025800B2A1A604F00091000 /* TapCommonSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,17 +373,6 @@
 				602580022A1A5FC400091000 /* YPNoticeHeader.m */,
 			);
 			path = Notification;
-			sourceTree = "<group>";
-		};
-		602580052A1A604F00091000 /* Tracking */ = {
-			isa = PBXGroup;
-			children = (
-				602580062A1A604F00091000 /* TapDB.framework */,
-				602580082A1A604F00091000 /* TapCommonSDK.framework */,
-				602580072A1A604F00091000 /* YPTrackingManager.h */,
-				602580092A1A604F00091000 /* YPTrackingManager.m */,
-			);
-			path = Tracking;
 			sourceTree = "<group>";
 		};
 		602B3D262A4B3C6B00A62E1F /* AppUpdatePopup */ = {
@@ -498,7 +478,6 @@
 			children = (
 				6034B2F02A14A8620024E610 /* YPLaboratoryTools.h */,
 				60809BEB2CF9B62700C04654 /* ImagePicker */,
-				602580052A1A604F00091000 /* Tracking */,
 				602580012A1A5FC400091000 /* Notification */,
 				60257FF72A1A5B7400091000 /* Requests */,
 				60257FE92A1A452100091000 /* Network */,
@@ -977,7 +956,6 @@
 				6034B2DF2A14A6E40024E610 /* NSBundle+YPLaboratory.m in Sources */,
 				6034B2DE2A14A6E40024E610 /* NSTimer+YPLaboratory.m in Sources */,
 				6034B2E32A14A6E40024E610 /* UILabel+YPLaboratory.m in Sources */,
-				6025800C2A1A604F00091000 /* YPTrackingManager.m in Sources */,
 				6034B2DC2A14A6E40024E610 /* UIImage+YPLaboratory.m in Sources */,
 				60257FDC2A1A25BD00091000 /* UIViewController+Router.m in Sources */,
 				6034B2E02A14A6E40024E610 /* UIColor+YPLaboratory.m in Sources */,

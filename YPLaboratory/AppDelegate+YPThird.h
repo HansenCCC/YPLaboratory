@@ -11,9 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AppDelegate (YPThird)
 
-// 添加初始化JPush代码
-- (void)jpushInitDidFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
-
 // bugly
 - (void)buglyInitConfigure;
 

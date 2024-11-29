@@ -16,7 +16,6 @@ target 'YPLaboratory' do
   pod 'MJExtension', '3.4.1'
   pod 'SDWebImage', '5.15.6'
   pod 'FLAnimatedImage', '1.0.17'
-  pod 'JPush', '5.0.0'
   pod 'Bugly', '2.5.93'
   pod 'Masonry', '1.1.0'
 end

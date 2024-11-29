@@ -19,8 +19,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[YPTrackingManager sharedInstance] initTrackSDK];
-    [self jpushInitDidFinishLaunchingWithOptions:launchOptions];// 初始化极光push
     [self buglyInitConfigure];// 初始化bugly
     [self setupDatabase];// 初始化数据库
     [self addObserverNotification];

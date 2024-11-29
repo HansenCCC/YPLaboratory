@@ -13,7 +13,6 @@
 #import "YPRouterManager.h"
 #import "YPSettingManager.h"
 #import "YPNoticeHeader.h"
-#import "YPTrackingManager.h"
 #import "YPImagePickerController.h"
 
 #endif /* YPLaboratoryToolsHeader_h */
