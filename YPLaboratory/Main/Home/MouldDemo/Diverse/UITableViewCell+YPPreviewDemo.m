@@ -65,6 +65,7 @@
             cellModel.content = @(NO).stringValue;
         }
     } else if ([cell isKindOfClass:[YPModuleButtonCell class]]) {
+        cellModel.title = @"中间按钮";
     } else if ([cell isKindOfClass:[YPModuleImageCell class]]) {
         cellModel.extend = [UIImage imageNamed:@"yp-icon-1024"];
     } else if ([cell isKindOfClass:[YPSwiperNormalTableViewCell class]]) {

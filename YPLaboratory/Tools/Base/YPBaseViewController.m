@@ -47,7 +47,7 @@
 }
 
 - (void)backItemClick {
-    [[YPShakeManager shareInstance] tapShare];
+    [[YPShakeManager shareInstance] tapShake];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

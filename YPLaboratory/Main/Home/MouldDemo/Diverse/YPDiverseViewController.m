@@ -121,7 +121,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [[YPShakeManager shareInstance] tapShare];
+    [[YPShakeManager shareInstance] tapShake];
 }
 
 @end

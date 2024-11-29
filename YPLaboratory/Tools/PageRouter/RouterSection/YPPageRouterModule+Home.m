@@ -33,7 +33,6 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"内购支付".yp_localizedString;
         element.type = YPPageRouterTypeTable;
-        element.useInsetGrouped = YES;
         [dataList addObject:element];
     }
     {

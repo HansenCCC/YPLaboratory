@@ -111,7 +111,7 @@
 }
 
 - (void)handleMetadataObjects {
-    [[YPShakeManager shareInstance] tapShare];
+    [[YPShakeManager shareInstance] tapShake];
     [self stopRunning];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"当前识别二维码有 %lu 个", (unsigned long)self.metadataObjects.count] preferredStyle:UIAlertControllerStyleAlert];
     for (NSString *string in self.metadataObjects) {
@@ -120,18 +120,18 @@
             pasteboard.string = string;
             [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",string?:@"",@"文本已复制".yp_localizedString]];
             [[UIViewController yp_topViewController] dismissViewControllerAnimated:YES completion:nil];
-            [[YPShakeManager shareInstance] longPressShare];
+            [[YPShakeManager shareInstance] longPressShake];
         }];
         [alert addAction:alertAction];
     }
     [alert addAction:[UIAlertAction actionWithTitle:@"重新扫描" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [self.metadataObjects removeAllObjects];
         [self startRunning];
-        [[YPShakeManager shareInstance] tapShare];
+        [[YPShakeManager shareInstance] tapShake];
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"退出" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         [[UIViewController yp_topViewController] dismissViewControllerAnimated:YES completion:nil];
-        [[YPShakeManager shareInstance] tapShare];
+        [[YPShakeManager shareInstance] tapShake];
     }]];
     [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
 }

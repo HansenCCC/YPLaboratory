@@ -12,7 +12,6 @@ target 'YPLaboratory' do
   pod 'YPUIKit-ObjC', :git => 'https://github.com/HansenCCC/YPUIKit-ObjC.git', :branch => 'master'
   pod 'LookinServer', :configurations => ['Debug']
   pod 'MJRefresh', '3.7.5'
-  pod 'FMDB', '2.7.5'
   pod 'AFNetworking', '4.0.1'
   pod 'MJExtension', '3.4.1'
   pod 'SDWebImage', '5.15.6'

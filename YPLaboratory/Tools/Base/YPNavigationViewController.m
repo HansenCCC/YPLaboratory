@@ -27,7 +27,7 @@
 #pragma mark - UIGestureRecognizerDelegate
 //当手势开始滑动作用：拦截手势触发
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    [[YPShakeManager shareInstance] tapShare];
+    [[YPShakeManager shareInstance] tapShake];
     //子控制器个数只剩下一个(这一个就是根控制器),手势不可用
     NSArray *vcs = self.childViewControllers;
     if (vcs.count > 1) {

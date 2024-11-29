@@ -75,7 +75,6 @@
 		607D9DAF2CD9C26400C3B591 /* YPDiverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DAD2CD9C26400C3B591 /* YPDiverseViewController.m */; };
 		607D9DB12CD9C28200C3B591 /* Cells.json in Resources */ = {isa = PBXBuildFile; fileRef = 607D9DB02CD9C28200C3B591 /* Cells.json */; };
 		607D9DB52CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DB42CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.m */; };
-		607D9DB92CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DB82CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m */; };
 		607D9DBD2CDA03CB00C3B591 /* YPWaterfallFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DBC2CDA03CB00C3B591 /* YPWaterfallFlowViewController.m */; };
 		607D9DC02CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DBF2CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m */; };
 		607D9DC22CDA10AC00C3B591 /* Waterfall.json in Resources */ = {isa = PBXBuildFile; fileRef = 607D9DC12CDA10AC00C3B591 /* Waterfall.json */; };
@@ -239,8 +238,6 @@
 		607D9DB02CD9C28200C3B591 /* Cells.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cells.json; sourceTree = "<group>"; };
 		607D9DB32CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+YPPreviewDemo.h"; sourceTree = "<group>"; };
 		607D9DB42CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+YPPreviewDemo.m"; sourceTree = "<group>"; };
-		607D9DB72CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPCollectionViewWaterfallFlowLayout.h; sourceTree = "<group>"; };
-		607D9DB82CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPCollectionViewWaterfallFlowLayout.m; sourceTree = "<group>"; };
 		607D9DBB2CDA03CB00C3B591 /* YPWaterfallFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPWaterfallFlowViewController.h; sourceTree = "<group>"; };
 		607D9DBC2CDA03CB00C3B591 /* YPWaterfallFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPWaterfallFlowViewController.m; sourceTree = "<group>"; };
 		607D9DBE2CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPWaterfallFlowCollectionViewCell.h; sourceTree = "<group>"; };
@@ -650,8 +647,6 @@
 			isa = PBXGroup;
 			children = (
 				607D9DC12CDA10AC00C3B591 /* Waterfall.json */,
-				607D9DB72CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.h */,
-				607D9DB82CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m */,
 				607D9DBE2CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.h */,
 				607D9DBF2CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m */,
 				607D9DBB2CDA03CB00C3B591 /* YPWaterfallFlowViewController.h */,
@@ -1021,7 +1016,6 @@
 				60257FE72A1A400C00091000 /* YPSettingManager.m in Sources */,
 				6034B31E2A14A9D90024E610 /* YPUserProxy.m in Sources */,
 				6034B31C2A14A9D90024E610 /* YPUserTableViewCell.m in Sources */,
-				607D9DB92CDA032800C3B591 /* YPCollectionViewWaterfallFlowLayout.m in Sources */,
 				60B128DA2CDB3CA700A3E6BE /* YPRunLabelViewController.m in Sources */,
 				6034B31F2A14A9D90024E610 /* YPUserViewController.m in Sources */,
 				6019B7922A2E376B0083FA7F /* YPPageRouterModule+Update.m in Sources */,
