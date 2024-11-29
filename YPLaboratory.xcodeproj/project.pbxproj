@@ -79,6 +79,8 @@
 		607D9DC02CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DBF2CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m */; };
 		607D9DC22CDA10AC00C3B591 /* Waterfall.json in Resources */ = {isa = PBXBuildFile; fileRef = 607D9DC12CDA10AC00C3B591 /* Waterfall.json */; };
 		607D9DC62CDA1A4200C3B591 /* YPButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DC52CDA1A4200C3B591 /* YPButtonViewController.m */; };
+		60809BE82CF9B5AE00C04654 /* YPAVCaptureSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60809BE62CF9B5AE00C04654 /* YPAVCaptureSessionView.m */; };
+		60809BEC2CF9B62700C04654 /* YPImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60809BEA2CF9B62700C04654 /* YPImagePickerController.m */; };
 		608D8FA32A73730F004E1E6D /* YPCameraCaptureSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 608D8FA22A73730F004E1E6D /* YPCameraCaptureSessionView.m */; };
 		6099531B2A3B0A60004BD3E1 /* YPIconBuildManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6099531A2A3B0A60004BD3E1 /* YPIconBuildManager.m */; };
 		60B128CE2CDB13C300A3E6BE /* YPPayInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B128CD2CDB13C300A3E6BE /* YPPayInputViewController.m */; };
@@ -245,6 +247,10 @@
 		607D9DC12CDA10AC00C3B591 /* Waterfall.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Waterfall.json; sourceTree = "<group>"; };
 		607D9DC42CDA1A4200C3B591 /* YPButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPButtonViewController.h; sourceTree = "<group>"; };
 		607D9DC52CDA1A4200C3B591 /* YPButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPButtonViewController.m; sourceTree = "<group>"; };
+		60809BE52CF9B5AE00C04654 /* YPAVCaptureSessionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPAVCaptureSessionView.h; sourceTree = "<group>"; };
+		60809BE62CF9B5AE00C04654 /* YPAVCaptureSessionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPAVCaptureSessionView.m; sourceTree = "<group>"; };
+		60809BE92CF9B62700C04654 /* YPImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPImagePickerController.h; sourceTree = "<group>"; };
+		60809BEA2CF9B62700C04654 /* YPImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPImagePickerController.m; sourceTree = "<group>"; };
 		608D8FA12A73730F004E1E6D /* YPCameraCaptureSessionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPCameraCaptureSessionView.h; sourceTree = "<group>"; };
 		608D8FA22A73730F004E1E6D /* YPCameraCaptureSessionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPCameraCaptureSessionView.m; sourceTree = "<group>"; };
 		609953192A3B0A60004BD3E1 /* YPIconBuildManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPIconBuildManager.h; sourceTree = "<group>"; };
@@ -491,6 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				6034B2F02A14A8620024E610 /* YPLaboratoryTools.h */,
+				60809BEB2CF9B62700C04654 /* ImagePicker */,
 				602580052A1A604F00091000 /* Tracking */,
 				602580012A1A5FC400091000 /* Notification */,
 				60257FF72A1A5B7400091000 /* Requests */,
@@ -664,6 +671,24 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		60809BE72CF9B5AE00C04654 /* CaptureSession */ = {
+			isa = PBXGroup;
+			children = (
+				60809BE52CF9B5AE00C04654 /* YPAVCaptureSessionView.h */,
+				60809BE62CF9B5AE00C04654 /* YPAVCaptureSessionView.m */,
+			);
+			path = CaptureSession;
+			sourceTree = "<group>";
+		};
+		60809BEB2CF9B62700C04654 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				60809BE92CF9B62700C04654 /* YPImagePickerController.h */,
+				60809BEA2CF9B62700C04654 /* YPImagePickerController.m */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
 		609953172A3B0A2B004BD3E1 /* IconBuild */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +758,7 @@
 		60C1C7682A4E85B4004FC354 /* MultifunctionalCamera */ = {
 			isa = PBXGroup;
 			children = (
+				60809BE72CF9B5AE00C04654 /* CaptureSession */,
 				60C1C7712A4E872E004FC354 /* Camera */,
 				60C1C76D2A4E86A1004FC354 /* FaceTrack */,
 				60C1C7692A4E85C8004FC354 /* QRCodeScan */,
@@ -967,6 +993,7 @@
 				60F52A9E2A49374900BB6254 /* YPSwiperCardTableViewCell.m in Sources */,
 				606929FB2A2BA4B20045D2EB /* YPModuleButtonCell.m in Sources */,
 				607D9DBD2CDA03CB00C3B591 /* YPWaterfallFlowViewController.m in Sources */,
+				60809BEC2CF9B62700C04654 /* YPImagePickerController.m in Sources */,
 				60FF4CBA2A1F4C0100A2D04B /* YPPageRouterModule+Component.m in Sources */,
 				60257FE82A1A400C00091000 /* YPLaboratoryDevice.m in Sources */,
 				60257FD82A1A15A100091000 /* YPModuleTableViewController.m in Sources */,
@@ -1012,6 +1039,7 @@
 				60C1C75F2A4D8306004FC354 /* YPAppH5PopupController.m in Sources */,
 				6034B2DD2A14A6E40024E610 /* NSString+YPLaboratory.m in Sources */,
 				608D8FA32A73730F004E1E6D /* YPCameraCaptureSessionView.m in Sources */,
+				60809BE82CF9B5AE00C04654 /* YPAVCaptureSessionView.m in Sources */,
 				607D9DAF2CD9C26400C3B591 /* YPDiverseViewController.m in Sources */,
 				60257FE72A1A400C00091000 /* YPSettingManager.m in Sources */,
 				6034B31E2A14A9D90024E610 /* YPUserProxy.m in Sources */,
@@ -1217,7 +1245,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1257,7 +1285,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
