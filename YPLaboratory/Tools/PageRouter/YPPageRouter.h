@@ -11,17 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef enum : NSUInteger {
     YPPageRouterTypeNormal = 0,
-    YPPageRouterTypeButton, // 简单按钮的cell
-    YPPageRouterTypeSwitch, // 简单开关的cell
-    YPPageRouterTypeCopy, // Copy model->content
-    YPPageRouterTypeTable, // 是一个列表 table
-    YPPageRouterTypeCollection, // 是一个列表 collection
-    YPPageRouterTypePush, // 需要Push新的页面 extend=类试图的字符串
-    YPPageRouterTypeAppCheckUpdate, // app检查更新
-    YPPageRouterTypeAppComment, // app评论
-    YPPageRouterTypeAppInternalPurchase, // 应用内购 extend=productId
-    YPPageRouterTypeTableCell, // 子视图，需要指定展示cell（table）
-    YPPageRouterTypeCollectionCell, // 子视图，需要指定展示cell（collection）
+    YPPageRouterTypeButton, /// 简单按钮的 cell
+    YPPageRouterTypeSwitch, /// 简单开关的 cell
+    YPPageRouterTypeModule, /// 是一个内置列表 table
+    YPPageRouterTypeCustom, /// 展示指定 cell
 } YPPageRouterType;
 
 @interface YPPageRouter : NSObject

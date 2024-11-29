@@ -30,7 +30,7 @@
 - (YPPageRouter *)homeRouter {
     YPPageRouter *homeRouter = [[YPPageRouter alloc] init];
     homeRouter.title = @"实验室".yp_localizedString;
-    homeRouter.type = YPPageRouterTypeTable;
+    homeRouter.type = YPPageRouterTypeModule;
 //    homeRouter.useInsetGrouped = YES;
     return homeRouter;
 }

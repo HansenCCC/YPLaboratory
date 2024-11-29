@@ -20,6 +20,13 @@
 #import "YPModuleSwitchCell.h"
 #import "YPModuleButtonCell.h"
 #import "YPModuleImageCell.h"
+#import "YPWaterfallFlowViewController.h"
+#import "YPDiverseViewController.h"
+#import "YPButtonViewController.h"
+#import "YPPayInputViewController.h"
+#import "YPDisableScreenCaptureViewController.h"
+#import "YPSetAshViewController.h"
+#import "YPRunLabelViewController.h"
 
 @implementation YPPageRouterModule (Component)
 
@@ -29,7 +36,7 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"打开一个网页".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             YPH5WebviewController *vc = [[YPH5WebviewController alloc] init];
             vc.request = [NSURLRequest requestWithURL:[NSURL URLWithString:[YPSettingManager sharedInstance].personalHomepage]];
@@ -40,64 +47,79 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"导航栏控制".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"瀑布流试图".yp_localizedString;
-        element.type = YPPageRouterTypePush;
-        element.extend = @"YPWaterfallFlowViewController";
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPWaterfallFlowViewController *vc = [[YPWaterfallFlowViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            vc.title = router.title;
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"多样的表格视图".yp_localizedString;
-        element.type = YPPageRouterTypePush;
-        element.extend = @"YPDiverseViewController";
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPDiverseViewController *vc = [[YPDiverseViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            vc.title = router.title;
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"多样的选择框".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"多样的按钮".yp_localizedString;
-        element.type = YPPageRouterTypePush;
-        element.extend = @"YPButtonViewController";
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPButtonViewController *vc = [[YPButtonViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            vc.title = router.title;
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"普通提示框".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"普通加载框".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"自定义弹框".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"自定义轮播图".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"单行输入框".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         element.placeholder = element.title;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             YPSingleLineInputViewController *vc = [[YPSingleLineInputViewController alloc] init];
@@ -110,7 +132,7 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"多行输入框".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         element.placeholder = element.title;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             YPMultiLineInputViewController *vc = [[YPMultiLineInputViewController alloc] init];
@@ -123,77 +145,97 @@
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"iOS 视频播放".yp_localizedString;
-//        element.type = YPPageRouterTypeTable;
+//        element.type = YPPageRouterTypeModule;
 //        [dataList addObject:element];
 //    }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"TableView嵌入播放器（仿线程卡顿处理）".yp_localizedString;
-//        element.type = YPPageRouterTypeTable;
+//        element.type = YPPageRouterTypeModule;
 //        [dataList addObject:element];
 //    }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"模拟新浪@人".yp_localizedString;
-//        element.type = YPPageRouterTypeTable;
+//        element.type = YPPageRouterTypeModule;
 //        [dataList addObject:element];
 //    }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"模拟微信朋友圈".yp_localizedString;
-//        element.type = YPPageRouterTypeTable;
+//        element.type = YPPageRouterTypeModule;
 //        [dataList addObject:element];
 //    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"模拟支付宝输入密码".yp_localizedString;
-        element.type = YPPageRouterTypePush;
-        element.extend = @"YPPayInputViewController";
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPPayInputViewController *vc = [[YPPayInputViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            vc.title = router.title;
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"角标和红点".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"防 截屏|录屏 功能".yp_localizedString;
-        element.type = YPPageRouterTypePush;
-        element.extend = @"YPDisableScreenCaptureViewController";
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPDisableScreenCaptureViewController *vc = [[YPDisableScreenCaptureViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            vc.title = router.title;
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
         [dataList addObject:element];
     }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"下拉弹框".yp_localizedString;
-//        element.type = YPPageRouterTypeTable;
+//        element.type = YPPageRouterTypeModule;
 //        [dataList addObject:element];
 //    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"跑马灯效果".yp_localizedString;
-        element.type = YPPageRouterTypePush;
-        element.extend = @"YPRunLabelViewController";
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPRunLabelViewController *vc = [[YPRunLabelViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            vc.title = router.title;
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
         [dataList addObject:element];
     }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"手持弹幕".yp_localizedString;
-//        element.type = YPPageRouterTypeTable;
+//        element.type = YPPageRouterTypeModule;
 //        [dataList addObject:element];
 //    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"App 公祭日置灰模式".yp_localizedString;
-        element.type = YPPageRouterTypePush;
-        element.extend = @"YPSetAshViewController";
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPSetAshViewController *vc = [[YPSetAshViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            vc.title = router.title;
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"系统字体".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
     YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
@@ -206,7 +248,7 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"一行一个".yp_localizedString;
-        element.type = YPPageRouterTypeTable;
+        element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
     YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
@@ -672,7 +714,7 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"普通轮播图".yp_localizedString;
-        element.type = YPPageRouterTypeTableCell;
+        element.type = YPPageRouterTypeCustom;
         element.cellClass = [YPSwiperNormalTableViewCell class];
         element.cellHeight = 200.f;
         element.extend = @[
@@ -690,7 +732,7 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"卡片轮播图".yp_localizedString;
-        element.type = YPPageRouterTypeTableCell;
+        element.type = YPPageRouterTypeCustom;
         element.cellHeight = 200.f;
         element.cellClass = [YPSwiperCardTableViewCell class];
         element.extend = @[
@@ -763,7 +805,7 @@
             YPPageRouter *element = [[YPPageRouter alloc] init];
             element.title = [NSString stringWithFormat:@"1234567890"];
             element.content = fontName;
-            element.type = YPPageRouterTypeTableCell;
+            element.type = YPPageRouterTypeCustom;
             element.cellClass = [YPSystemFontsTableViewCell class];
             element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
                 UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];

@@ -17,7 +17,7 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = [YPIconBuildManager shareInstance].iconPath?:@"";
-        element.type = YPPageRouterTypeTableCell;
+        element.type = YPPageRouterTypeCustom;
         element.cellHeight = 100.f;
         element.cellClass = [YPModuleImageCell class];
         element.extend = [YPIconBuildManager shareInstance].iconImage;
@@ -166,7 +166,7 @@
         }
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = name?:@"";
-        element.type = YPPageRouterTypeTableCell;
+        element.type = YPPageRouterTypeCustom;
         CGFloat cellHeight = MAX(44.f, size.height * scale.integerValue);
         cellHeight = MIN(cellHeight, 150.f);
         element.cellHeight = cellHeight;

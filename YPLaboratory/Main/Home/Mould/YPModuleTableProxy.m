@@ -36,14 +36,7 @@
     NSString *identifier = @"YPModuleBaseCell";
     switch (cellModel.type) {
         case YPPageRouterTypeNormal:
-        case YPPageRouterTypeCopy:
-        case YPPageRouterTypeTable:
-        case YPPageRouterTypeCollection:
-        case YPPageRouterTypePush:
-        case YPPageRouterTypeAppCheckUpdate:
-        case YPPageRouterTypeAppComment:
-        case YPPageRouterTypeAppInternalPurchase:
-        case YPPageRouterTypeCollectionCell: {
+        case YPPageRouterTypeModule: {
             identifier = @"YPModuleNormalCell";
         }
             break;
@@ -55,7 +48,7 @@
             identifier = @"YPModuleButtonCell";
         }
             break;
-        case YPPageRouterTypeTableCell: {
+        case YPPageRouterTypeCustom: {
             identifier = NSStringFromClass(cellModel.cellClass);
         }
             break;
