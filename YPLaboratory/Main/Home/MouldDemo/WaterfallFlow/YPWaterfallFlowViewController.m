@@ -6,13 +6,13 @@
 //
 
 #import "YPWaterfallFlowViewController.h"
-#import "YPCollectionViewWaterfallFlowLayout.h"
+#import "YPWaterfallFlowLayout.h"
 #import "YPWaterfallFlowCollectionViewCell.h"
 
-@interface YPWaterfallFlowViewController () <UICollectionViewDelegate, UICollectionViewDataSource, YPCollectionViewWaterfallFlowLayoutDelegate>
+@interface YPWaterfallFlowViewController () <UICollectionViewDelegate, UICollectionViewDataSource, YPWaterfallFlowLayoutDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) YPCollectionViewWaterfallFlowLayout *flowLayout;
+@property (nonatomic, strong) YPWaterfallFlowLayout *flowLayout;
 @property (nonatomic, strong) NSArray *dataList;
 
 @end
@@ -62,7 +62,7 @@
     return self.dataList.count;
 }
 
-#pragma mark - YPCollectionViewWaterfallFlowLayoutDelegate
+#pragma mark - YPWaterfallFlowLayoutDelegate
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGRect f1 = collectionView.bounds;
@@ -96,9 +96,9 @@
     return _collectionView;
 }
 
-- (YPCollectionViewWaterfallFlowLayout *)flowLayout {
+- (YPWaterfallFlowLayout *)flowLayout {
     if (!_flowLayout) {
-        _flowLayout = [[YPCollectionViewWaterfallFlowLayout alloc] init];
+        _flowLayout = [[YPWaterfallFlowLayout alloc] init];
         _flowLayout.delegate = self;
         _flowLayout.minimumLineSpacing = 10.f;
         _flowLayout.minimumInteritemSpacing = 10.f;
