@@ -35,18 +35,18 @@
         element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"网络请求".yp_localizedString;
-        element.type = YPPageRouterTypeModule;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"数据库".yp_localizedString;
-        element.type = YPPageRouterTypeModule;
-        [dataList addObject:element];
-    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"网络请求".yp_localizedString;
+//        element.type = YPPageRouterTypeModule;
+//        [dataList addObject:element];
+//    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"数据库".yp_localizedString;
+//        element.type = YPPageRouterTypeModule;
+//        [dataList addObject:element];
+//    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"App 图标制作".yp_localizedString;
@@ -71,12 +71,12 @@
         element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"JS 和 OC 交互".yp_localizedString;
-        element.type = YPPageRouterTypeModule;
-        [dataList addObject:element];
-    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"JS 和 OC 交互".yp_localizedString;
+//        element.type = YPPageRouterTypeModule;
+//        [dataList addObject:element];
+//    }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"模拟 mdos 攻击".yp_localizedString;
@@ -89,28 +89,34 @@
         element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"获取 WIFI 列表".yp_localizedString;
-        element.type = YPPageRouterTypeModule;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"获取蓝牙设备列表".yp_localizedString;
-        element.type = YPPageRouterTypeModule;
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"Socket 的消息互传".yp_localizedString;
-        element.type = YPPageRouterTypeModule;
-        [dataList addObject:element];
-    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"获取 WIFI 列表".yp_localizedString;
+//        element.type = YPPageRouterTypeModule;
+//        [dataList addObject:element];
+//    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"获取蓝牙设备列表".yp_localizedString;
+//        element.type = YPPageRouterTypeModule;
+//        [dataList addObject:element];
+//    }
+//    {
+//        YPPageRouter *element = [[YPPageRouter alloc] init];
+//        element.title = @"Socket 的消息互传".yp_localizedString;
+//        element.type = YPPageRouterTypeModule;
+//        [dataList addObject:element];
+//    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"调试日志".yp_localizedString;
         element.type = YPPageRouterTypeModule;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            NSString *path = [YPLog logPath];
+            YPFileBrowserController *browser = [[YPFileBrowserController alloc] initWithPath:path];
+            YPNavigationViewController *nav = [[YPNavigationViewController alloc] initWithRootViewController:browser];
+            [[UIViewController yp_topViewController] presentViewController:nav animated:YES completion:nil];
+        };
         [dataList addObject:element];
     }
 //    {
