@@ -1214,7 +1214,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPLaboratory/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPLaboratory/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "iOS 实验室";
+				INFOPLIST_KEY_CFBundleDisplayName = "iOS实验室";
 				INFOPLIST_KEY_NSCameraUsageDescription = "APP需要您的同意，才能访问相机进行拍照，以便您用于发帖中使用图片";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "APP需要您的同意，才能访问到您的地理位置，以便您发帖分享自己的地理位置";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "APP需要您的同意，才能访问麦克风，以便您发帖过程中录制视频";
@@ -1255,7 +1255,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPLaboratory/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPLaboratory/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "iOS 实验室";
+				INFOPLIST_KEY_CFBundleDisplayName = "iOS实验室";
 				INFOPLIST_KEY_NSCameraUsageDescription = "APP需要您的同意，才能访问相机进行拍照，以便您用于发帖中使用图片";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "APP需要您的同意，才能访问到您的地理位置，以便您发帖分享自己的地理位置";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "APP需要您的同意，才能访问麦克风，以便您发帖过程中录制视频";
