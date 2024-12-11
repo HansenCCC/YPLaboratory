@@ -130,13 +130,28 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"检查更新".yp_localizedString;
-        element.type = YPPageRouterTypeModule;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [[YPAppManager shareInstance] openAppStoreForApp];
+        };
         [dataList2 addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"关于我们".yp_localizedString;
-        element.type = YPPageRouterTypeModule;
+        element.title = @"项目源码".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.extend = @"https://github.com/HansenCCC/YPLaboratory";
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            NSString *urlString = @"https://github.com/HansenCCC/YPLaboratory";
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"应用跳转".yp_localizedString message:[NSString stringWithFormat:@"是否跳转Safari显示具体详情？\n%@".yp_localizedString,router.extend] preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"去 Safari 查看".yp_localizedString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:router.extend?:@""] options:@{} completionHandler:nil];
+            }]];
+            [alert addAction:[UIAlertAction actionWithTitle:@"取消".yp_localizedString style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+            }]];
+            [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
+        };
         [dataList2 addObject:element];
     }
     YPPageRouterModule *section2 = [[YPPageRouterModule alloc] initWithRouters:dataList2];

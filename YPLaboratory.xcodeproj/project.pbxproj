@@ -93,6 +93,7 @@
 		60C1C77E2A502524004FC354 /* YPQRCodeScanCaptureSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C77D2A502524004FC354 /* YPQRCodeScanCaptureSessionView.m */; };
 		60C44E812A186D6F0073EA3F /* YPRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C44E802A186D6F0073EA3F /* YPRouterManager.m */; };
 		60C44E842A186E2C0073EA3F /* YPPageRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C44E832A186E2C0073EA3F /* YPPageRouter.m */; };
+		60C6B0D52D09815D00194FFA /* YPPageRouterModule+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6B0D42D09815D00194FFA /* YPPageRouterModule+Device.m */; };
 		60F52A9B2A4936A400BB6254 /* YPSwiperNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F52A9A2A4936A400BB6254 /* YPSwiperNormalTableViewCell.m */; };
 		60F52A9E2A49374900BB6254 /* YPSwiperCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F52A9D2A49374900BB6254 /* YPSwiperCardTableViewCell.m */; };
 		60FF4CBA2A1F4C0100A2D04B /* YPPageRouterModule+Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF4CB92A1F4C0100A2D04B /* YPPageRouterModule+Component.m */; };
@@ -274,6 +275,8 @@
 		60C44E802A186D6F0073EA3F /* YPRouterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPRouterManager.m; sourceTree = "<group>"; };
 		60C44E822A186E2C0073EA3F /* YPPageRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPPageRouter.h; sourceTree = "<group>"; };
 		60C44E832A186E2C0073EA3F /* YPPageRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPPageRouter.m; sourceTree = "<group>"; };
+		60C6B0D32D09815D00194FFA /* YPPageRouterModule+Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPPageRouterModule+Device.h"; sourceTree = "<group>"; };
+		60C6B0D42D09815D00194FFA /* YPPageRouterModule+Device.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+Device.m"; sourceTree = "<group>"; };
 		60F52A992A4936A400BB6254 /* YPSwiperNormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPSwiperNormalTableViewCell.h; sourceTree = "<group>"; };
 		60F52A9A2A4936A400BB6254 /* YPSwiperNormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPSwiperNormalTableViewCell.m; sourceTree = "<group>"; };
 		60F52A9C2A49374900BB6254 /* YPSwiperCardTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPSwiperCardTableViewCell.h; sourceTree = "<group>"; };
@@ -819,6 +822,8 @@
 				60FF4CB92A1F4C0100A2D04B /* YPPageRouterModule+Component.m */,
 				60FF4CBD2A1F4CBF00A2D04B /* YPPageRouterModule+AppleInternalPurchase.h */,
 				60FF4CBE2A1F4CBF00A2D04B /* YPPageRouterModule+AppleInternalPurchase.m */,
+				60C6B0D32D09815D00194FFA /* YPPageRouterModule+Device.h */,
+				60C6B0D42D09815D00194FFA /* YPPageRouterModule+Device.m */,
 			);
 			path = RouterSection;
 			sourceTree = "<group>";
@@ -975,6 +980,7 @@
 				60FF4CBA2A1F4C0100A2D04B /* YPPageRouterModule+Component.m in Sources */,
 				60257FE82A1A400C00091000 /* YPLaboratoryDevice.m in Sources */,
 				60257FD82A1A15A100091000 /* YPModuleTableViewController.m in Sources */,
+				60C6B0D52D09815D00194FFA /* YPPageRouterModule+Device.m in Sources */,
 				60257FD72A1A15A100091000 /* YPModuleTableProxy.m in Sources */,
 				60B128D22CDB146C00A3E6BE /* YPPayInputView.m in Sources */,
 				60257FD52A1A15A100091000 /* YPModuleNormalCell.m in Sources */,
@@ -1208,6 +1214,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPLaboratory/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPLaboratory/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "iOS 实验室";
 				INFOPLIST_KEY_NSCameraUsageDescription = "APP需要您的同意，才能访问相机进行拍照，以便您用于发帖中使用图片";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "APP需要您的同意，才能访问到您的地理位置，以便您发帖分享自己的地理位置";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "APP需要您的同意，才能访问麦克风，以便您发帖过程中录制视频";
@@ -1248,6 +1255,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPLaboratory/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPLaboratory/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "iOS 实验室";
 				INFOPLIST_KEY_NSCameraUsageDescription = "APP需要您的同意，才能访问相机进行拍照，以便您用于发帖中使用图片";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "APP需要您的同意，才能访问到您的地理位置，以便您发帖分享自己的地理位置";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "APP需要您的同意，才能访问麦克风，以便您发帖过程中录制视频";
