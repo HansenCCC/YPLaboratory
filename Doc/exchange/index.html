@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            try {
+                new QRCode(document.getElementById("qrcode-group"), {
+                    text: "https://weixin.qq.com/g/AwYAALzsSkkHDTbZRojrMgBpXja1JJn69th7uqsEtmTd3MnNaTdALXYifQCqNVXV",
+                    width: 200,
+                    height: 200,
+                });
+            } catch (error) {
+
+            }
+            try {
+                new QRCode(document.getElementById("qrcode-me"), {
+                    text: "https://u.wechat.com/MGJ2Uh4lkUfZFgb8SGdCXWM?s=2",
+                    width: 200,
+                    height: 200,
+                });
+            } catch (error) {
+
+            }
+        });
+    </script>
+    <title>技术交流群</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+        }
+
+        #qrcode-group img,
+        #qrcode-me img {
+            margin: auto;
+        }
+
+        .line {
+            height: 2px;
+            width: 100vw;
+            background-color: #efefef;
+        }
+
+        .arrow {
+            width: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h3>iOS 技术交流群</h3>
+        <div>
+            <div id="qrcode-group"></div>
+            <p>扫描二维码加入 iOS 开发交流群</p>
+            <p>加群失败可以加我拉群。</p>
+            <img class="arrow"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAS1JREFUaEPt2m0OgjAMBuByMz2ZejL1ZMriSIgi68dbRshL4r+Be9Z1rAuDHOQaDuIQQvYWSWRETiJyMQCfIvKoP8Nty02RkJezN5A+QB4yAq7GaMzNZ0RU9gC51YFwBvRzGyFfwxeZWozIfDA5tTi1ftcm5ghzZOWNxeV3fCkzR5gjzJH1fS1zhDnCHGGO6KtfbT1yHw8IynFPj0u1qmkgkX0UCt48adFAekZjGohmVDSQMqUKpufV7GezQe19z+nVnFbWc60eGBXCCintt8SoER7IVhgTwgvJxpgREUgWxoWIQtAYNwIBQWFCCBQkigkjkBAvBoJAQ6wYGCIDosVAEVmQFgaOyIT8w6QgsiHl+aUEmCpL2McBS/WEdhvfsxZR/TchqmHasNFhIvIGtoxTM8bwAMYAAAAASUVORK5CYII="
+                alt="">
+        </div>
+        <div>
+            <p>我的微信号: QMKKX-CHS</p>
+            <div id="qrcode-me"></div>
+            <p>加我拉你进群</p>
+        </div>
+        <div class="line"></div>
+        <div>
+            <h3>我的广告</h3>
+            <div>
+                <p>问我技术问题 <span>9.9</span> 元起。</p>
+                <p>其他项目需求，加我微信沟通。</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

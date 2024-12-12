@@ -113,24 +113,19 @@
 - (void)handleMetadataObjects {
     [[YPShakeManager shareInstance] tapShake];
     [self stopRunning];
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"当前识别二维码有 %lu 个", (unsigned long)self.metadataObjects.count] preferredStyle:UIAlertControllerStyleAlert];
-    for (NSString *string in self.metadataObjects) {
-        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:string style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-            pasteboard.string = string;
-            [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",string?:@"",@"文本已复制".yp_localizedString]];
-            [[UIViewController yp_topViewController] dismissViewControllerAnimated:YES completion:nil];
-            [[YPShakeManager shareInstance] longPressShake];
-        }];
-        [alert addAction:alertAction];
-    }
-    [alert addAction:[UIAlertAction actionWithTitle:@"重新扫描" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    NSString *qrString = self.metadataObjects.firstObject;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"当前识别二维码为 \n%@", qrString] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"复制" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        pasteboard.string = qrString;
+        [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",qrString?:@"",@"文本已复制".yp_localizedString]];
+        [[UIViewController yp_topViewController] dismissViewControllerAnimated:YES completion:nil];
+        [[YPShakeManager shareInstance] longPressShake];
+    }];
+    [alert addAction:alertAction];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [self.metadataObjects removeAllObjects];
         [self startRunning];
-        [[YPShakeManager shareInstance] tapShake];
-    }]];
-    [alert addAction:[UIAlertAction actionWithTitle:@"退出" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        [[UIViewController yp_topViewController] dismissViewControllerAnimated:YES completion:nil];
         [[YPShakeManager shareInstance] tapShake];
     }]];
     [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];

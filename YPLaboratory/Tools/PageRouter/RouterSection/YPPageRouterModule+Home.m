@@ -6,6 +6,7 @@
 //
 
 #import "YPPageRouterModule+Home.h"
+#import "YPH5WebviewController.h"
 
 @implementation YPPageRouterModule (Home)
 
@@ -121,10 +122,13 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"技术交流";
+        element.title = @"技术交流群";
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            
+            YPH5WebviewController *vc = [[YPH5WebviewController alloc] init];
+            vc.request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://chuizi.shop/app/1568656582/exchange/index.html"]];
+            YPNavigationViewController *nav = [[YPNavigationViewController alloc] initWithRootViewController:vc];
+            [[UIViewController yp_topViewController] presentViewController:nav animated:YES completion:nil];
         };
         [dataList addObject:element];
     }

@@ -10,6 +10,18 @@
 @implementation YPPageRouterModule (Project)
 
 + (NSArray *)ComponentRouters_Project {
+    
+    void(^didSelectedCallback)(YPPageRouter *router,UIView *cell) = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"应用跳转".yp_localizedString message:[NSString stringWithFormat:@"是否跳转Safari显示具体详情？\n%@".yp_localizedString,router.extend] preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"去 Safari 查看".yp_localizedString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:router.extend?:@""] options:@{} completionHandler:nil];
+        }]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"取消".yp_localizedString style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
+    };
+    
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
@@ -17,6 +29,7 @@
         element.type = YPPageRouterTypeNormal;
         element.extend = @"https://github.com/HansenCCC/YPLaboratory";
         element.content = @"源码".yp_localizedString;
+        element.didSelectedCallback = didSelectedCallback;
         [dataList addObject:element];
     }
     {
@@ -25,6 +38,7 @@
         element.type = YPPageRouterTypeNormal;
         element.content = @"框架";
         element.extend = @"https://github.com/HansenCCC/YPUIKit-ObjC";
+        element.didSelectedCallback = didSelectedCallback;
         [dataList addObject:element];
     }
     NSMutableArray *dataList2 = [[NSMutableArray alloc] init];
@@ -34,6 +48,7 @@
         element.type = YPPageRouterTypeNormal;
         element.extend = @"https://github.com/CoderMJLee/MJRefresh";
         element.content = @"上拉下拉".yp_localizedString;
+        element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
     }
     {
@@ -42,6 +57,7 @@
         element.type = YPPageRouterTypeNormal;
         element.content = @"Json <=> Model";
         element.extend = @"https://github.com/CoderMJLee/MJExtension";
+        element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
     }
     {
@@ -50,6 +66,7 @@
         element.type = YPPageRouterTypeNormal;
         element.content = @"网络请求";
         element.extend = @"https://github.com/AFNetworking/AFNetworking";
+        element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
     }
     {
@@ -58,6 +75,7 @@
         element.type = YPPageRouterTypeNormal;
         element.content = @"加载网络图片";
         element.extend = @"https://github.com/SDWebImage/SDWebImage";
+        element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
     }
     {
@@ -66,6 +84,7 @@
         element.type = YPPageRouterTypeNormal;
         element.content = @"加载动图";
         element.extend = @"https://github.com/Flipboard/FLAnimatedImage";
+        element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
     }
     {
@@ -74,6 +93,7 @@
         element.type = YPPageRouterTypeNormal;
         element.content = @"奔溃日志分析";
         element.extend = @"https://bugly.qq.com/v2/";
+        element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
     }
     {
@@ -82,6 +102,7 @@
         element.type = YPPageRouterTypeNormal;
         element.content = @"布局框架";
         element.extend = @"https://github.com/SnapKit/Masonry";
+        element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
     }
 
