@@ -7,7 +7,6 @@
 
 #import "YPRouterManager.h"
 #import "YPPageRouterModuleCategoryHeader.h"
-#import "YPPageRouterModule+Device.h"
 
 @interface YPRouterManager ()
 
@@ -68,8 +67,8 @@
         dataList = [YPPageRouterModule ComponentRouters_Badge];
     } else if ([model.title isEqualToString:@"获取设备信息".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_Device];
-    } else if ([model.title isEqualToString:@"".yp_localizedString]) {
-        
+    } else if ([model.title isEqualToString:@"项目依赖".yp_localizedString]) {
+        dataList = [YPPageRouterModule ComponentRouters_Project];
     } else if ([model.title isEqualToString:@"".yp_localizedString]) {
         
     } else if ([model.title isEqualToString:@"".yp_localizedString]) {

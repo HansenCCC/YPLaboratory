@@ -119,6 +119,15 @@
         };
         [dataList addObject:element];
     }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"技术交流";
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            
+        };
+        [dataList addObject:element];
+    }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"代码生成工具".yp_localizedString;
@@ -126,7 +135,13 @@
 //        [dataList addObject:element];
 //    }
     YPPageRouterModule *section1 = [[YPPageRouterModule alloc] initWithRouters:dataList];
-    NSMutableArray *dataList2 = [[NSMutableArray alloc] init];
+    NSMutableArray *dataList1 = [[NSMutableArray alloc] init];
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"项目依赖".yp_localizedString;
+        element.type = YPPageRouterTypeModule;
+        [dataList1 addObject:element];
+    }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"检查更新".yp_localizedString;
@@ -134,28 +149,21 @@
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             [[YPAppManager shareInstance] openAppStoreForApp];
         };
-        [dataList2 addObject:element];
+        [dataList1 addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"项目源码".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.extend = @"https://github.com/HansenCCC/YPLaboratory";
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            NSString *urlString = @"https://github.com/HansenCCC/YPLaboratory";
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"应用跳转".yp_localizedString message:[NSString stringWithFormat:@"是否跳转Safari显示具体详情？\n%@".yp_localizedString,router.extend] preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:[UIAlertAction actionWithTitle:@"去 Safari 查看".yp_localizedString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:router.extend?:@""] options:@{} completionHandler:nil];
-            }]];
-            [alert addAction:[UIAlertAction actionWithTitle:@"取消".yp_localizedString style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                
-            }]];
-            [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
-        };
-        [dataList2 addObject:element];
+        element.title = [NSString stringWithFormat:@"version-%@",[YPAppManager shareInstance].version];
+        element.type = YPPageRouterTypeButton;
+        [dataList1 addObject:element];
     }
-    YPPageRouterModule *section2 = [[YPPageRouterModule alloc] initWithRouters:dataList2];
-    
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = [NSString stringWithFormat:@"build-%@",[YPAppManager shareInstance].build];
+        element.type = YPPageRouterTypeButton;
+        [dataList1 addObject:element];
+    }
+    YPPageRouterModule *section2 = [[YPPageRouterModule alloc] initWithRouters:dataList1];
     return @[section1, section2];
 }
 

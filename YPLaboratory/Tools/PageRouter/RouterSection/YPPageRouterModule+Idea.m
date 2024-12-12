@@ -9,6 +9,9 @@
 #import "YPIconBuildManager.h"
 #import "YPModuleImageCell.h"
 #import "YPPageRouterModule+Update.h"
+#import "UIViewController+Router.h"
+#import "YPModuleButtonCell.h"
+#import "YPModuleTableViewController.h"
 
 @implementation YPPageRouterModule (Idea)
 
@@ -148,6 +151,13 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"制作 App 图标".yp_localizedString;
         element.type = YPPageRouterTypeButton;
+        element.cellClass = [YPModuleButtonCell class];
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPModuleTableViewController *vc = [[YPModuleTableViewController alloc] init];
+            vc.model = router;
+            vc.hidesBottomBarWhenPushed = YES;
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
         [dataList addObject:element];
     }
     YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
