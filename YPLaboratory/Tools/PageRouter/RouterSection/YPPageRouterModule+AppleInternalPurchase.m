@@ -17,6 +17,9 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"免费的支持".yp_localizedString;
         element.content = @"感谢评论";
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [[YPAppManager shareInstance] openAppStoreForReview];
+        };
         [dataList addObject:element];
     }
     {
