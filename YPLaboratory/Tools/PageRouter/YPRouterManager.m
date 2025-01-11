@@ -69,8 +69,8 @@
         dataList = [YPPageRouterModule ComponentRouters_Device];
     } else if ([model.title isEqualToString:@"项目依赖".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_Project];
-    } else if ([model.title isEqualToString:@"".yp_localizedString]) {
-        
+    } else if ([model.title isEqualToString:@"用户反馈".yp_localizedString]) {
+        dataList = [YPPageRouterModule ComponentRouters_ShakeFeedback];
     } else if ([model.title isEqualToString:@"".yp_localizedString]) {
         
     } else if ([model.title isEqualToString:@"".yp_localizedString]) {

@@ -44,6 +44,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 角标
 + (NSArray *)ComponentRouters_Badge;
 
+/// 震动反馈
++ (NSArray *)ComponentRouters_ShakeFeedback;
+
 @end
 
 NS_ASSUME_NONNULL_END

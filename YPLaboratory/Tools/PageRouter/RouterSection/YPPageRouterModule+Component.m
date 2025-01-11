@@ -36,6 +36,12 @@
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"用户反馈".yp_localizedString;
+        element.type = YPPageRouterTypeModule;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"颜色选择".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
@@ -907,6 +913,98 @@
     YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
     section.headerTitle = @"角标和红点".yp_localizedString;
     return @[section];
+}
+
+/// 震动反馈
++ (NSArray *)ComponentRouters_ShakeFeedback {
+    NSMutableArray *dataList = [[NSMutableArray alloc] init];
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"轻微震动".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [[YPShakeManager shareInstance] lightShake];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"中等震动".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [[YPShakeManager shareInstance] mediumShake];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"高度震动".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [[YPShakeManager shareInstance] heavyShake];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"连续震动".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [[YPShakeManager shareInstance] longPressShake];
+        };
+        [dataList addObject:element];
+    }
+    YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
+    section.headerTitle = @"常用的交互反馈";
+    
+    NSMutableArray *dataList2 = [[NSMutableArray alloc] init];
+    NSDictionary *systemSounds = @{
+        @"收到新邮件".yp_localizedString: @"1000",
+        @"发送邮件成功".yp_localizedString: @"1001",
+        @"警报音效".yp_localizedString: @"1005",
+        @"短信收到音效1".yp_localizedString: @"1007",
+        @"短信收到音效2".yp_localizedString: @"1008",
+        @"短信收到音效3".yp_localizedString: @"1009",
+        @"短信收到音效4".yp_localizedString: @"1010",
+        @"短信收到音效5".yp_localizedString: @"1011",
+        @"按键点击音效".yp_localizedString: @"1012",
+        @"短信收到音效6".yp_localizedString: @"1015",
+        @"PIN密码键盘点击".yp_localizedString: @"1152",
+        @"锁屏音效".yp_localizedString: @"1200",
+        @"解锁音效".yp_localizedString: @"1201",
+        @"轻震动".yp_localizedString: @"1520",
+        @"强震动".yp_localizedString: @"1521",
+        @"按键音效".yp_localizedString: @"1050",
+        @"系统音效".yp_localizedString: @"1051",
+        @"低电量提示音".yp_localizedString: @"1057",
+        @"发送推文音效".yp_localizedString: @"1102",
+        @"拍照快门声".yp_localizedString: @"1108",
+        @"开始录像音效".yp_localizedString: @"1157",
+        @"夜深了".yp_localizedString: @"1158",
+        @"倒计时音效".yp_localizedString: @"1306",
+        @"胜利音效".yp_localizedString: @"1320",
+        @"失败音效".yp_localizedString: @"1330",
+        @"轻提示音".yp_localizedString: @"4095",
+        @"消息发送音效".yp_localizedString: @"1256",
+        @"消息接收音效".yp_localizedString: @"1257",
+    };
+    NSArray *sortedKeys = [[systemSounds allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    for (NSString *key in sortedKeys) {
+        NSString *value = systemSounds[key];
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = key;
+        element.extend = value;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            NSString *shakeId = [NSString stringWithFormat:@"%@",router.extend];
+            [[YPShakeManager shareInstance] shakeWithId:shakeId.longLongValue];
+        };
+        [dataList2 addObject:element];
+    }
+    YPPageRouterModule *section2 = [[YPPageRouterModule alloc] initWithRouters:dataList2];
+    section2.headerTitle = @"其他的交互反馈";
+    
+    return @[section, section2];
 }
 
 @end
