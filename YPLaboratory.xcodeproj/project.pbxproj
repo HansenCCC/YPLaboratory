@@ -86,6 +86,7 @@
 		60B128DA2CDB3CA700A3E6BE /* YPRunLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B128D92CDB3CA700A3E6BE /* YPRunLabelViewController.m */; };
 		60B128DE2CDB49BA00A3E6BE /* YPSetAshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B128DD2CDB49BA00A3E6BE /* YPSetAshViewController.m */; };
 		60B1E0DF2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1E0DE2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m */; };
+		60B5807D2D3229DC009F0694 /* YPFloatingViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B5807C2D3229DC009F0694 /* YPFloatingViewViewController.m */; };
 		60C1C75F2A4D8306004FC354 /* YPAppH5PopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C75E2A4D8306004FC354 /* YPAppH5PopupController.m */; };
 		60C1C7632A4D8716004FC354 /* YPH5WebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C7622A4D8716004FC354 /* YPH5WebviewController.m */; };
 		60C1C76C2A4E85EC004FC354 /* YPQRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C76B2A4E85EC004FC354 /* YPQRCodeScanViewController.m */; };
@@ -262,6 +263,8 @@
 		60B128DD2CDB49BA00A3E6BE /* YPSetAshViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPSetAshViewController.m; sourceTree = "<group>"; };
 		60B1E0DD2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPSystemFontsTableViewCell.h; sourceTree = "<group>"; };
 		60B1E0DE2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPSystemFontsTableViewCell.m; sourceTree = "<group>"; };
+		60B5807B2D3229DC009F0694 /* YPFloatingViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPFloatingViewViewController.h; sourceTree = "<group>"; };
+		60B5807C2D3229DC009F0694 /* YPFloatingViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPFloatingViewViewController.m; sourceTree = "<group>"; };
 		60C1C75D2A4D8306004FC354 /* YPAppH5PopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPAppH5PopupController.h; sourceTree = "<group>"; };
 		60C1C75E2A4D8306004FC354 /* YPAppH5PopupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPAppH5PopupController.m; sourceTree = "<group>"; };
 		60C1C7612A4D8716004FC354 /* YPH5WebviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPH5WebviewController.h; sourceTree = "<group>"; };
@@ -393,6 +396,7 @@
 		602B3D2A2A4B3D1200A62E1F /* MouldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				60B5807A2D3229C4009F0694 /* FloatingView */,
 				60B128DB2CDB49AB00A3E6BE /* SetAsh */,
 				60B128D72CDB3C9600A3E6BE /* RunLabel */,
 				60B128CB2CDB139A00A3E6BE /* PayInput */,
@@ -722,6 +726,15 @@
 			path = SystemFonts;
 			sourceTree = "<group>";
 		};
+		60B5807A2D3229C4009F0694 /* FloatingView */ = {
+			isa = PBXGroup;
+			children = (
+				60B5807B2D3229DC009F0694 /* YPFloatingViewViewController.h */,
+				60B5807C2D3229DC009F0694 /* YPFloatingViewViewController.m */,
+			);
+			path = FloatingView;
+			sourceTree = "<group>";
+		};
 		60C1C75C2A4D825B004FC354 /* AppH5Popup */ = {
 			isa = PBXGroup;
 			children = (
@@ -787,9 +800,9 @@
 		60C44E7E2A186C970073EA3F /* PageRouter */ = {
 			isa = PBXGroup;
 			children = (
+				60FF4CBB2A1F4C0700A2D04B /* RouterSection */,
 				60257FDA2A1A25BD00091000 /* UIViewController+Router.h */,
 				60257FDB2A1A25BD00091000 /* UIViewController+Router.m */,
-				60FF4CBB2A1F4C0700A2D04B /* RouterSection */,
 				60C44E822A186E2C0073EA3F /* YPPageRouter.h */,
 				60C44E832A186E2C0073EA3F /* YPPageRouter.m */,
 				60C44E7F2A186D6F0073EA3F /* YPRouterManager.h */,
@@ -980,6 +993,7 @@
 				6034B2862A14A64E0024E610 /* YPRootViewController.m in Sources */,
 				60F52A9E2A49374900BB6254 /* YPSwiperCardTableViewCell.m in Sources */,
 				606929FB2A2BA4B20045D2EB /* YPModuleButtonCell.m in Sources */,
+				60B5807D2D3229DC009F0694 /* YPFloatingViewViewController.m in Sources */,
 				607D9DBD2CDA03CB00C3B591 /* YPWaterfallFlowViewController.m in Sources */,
 				60809BEC2CF9B62700C04654 /* YPImagePickerController.m in Sources */,
 				60FF4CBA2A1F4C0100A2D04B /* YPPageRouterModule+Component.m in Sources */,

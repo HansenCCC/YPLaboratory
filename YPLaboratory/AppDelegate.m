@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "YPRootViewController.h"
 #import "AppDelegate+YPThird.h"
+#import "YPModuleTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,8 +26,13 @@
     [self checkInternalPurchasePayment];// 检验是否存在丢包情况
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
-    YPRootViewController *vc = [[YPRootViewController alloc] init];
-    self.window.rootViewController = vc;
+//    YPRootViewController *vc = [[YPRootViewController alloc] init];
+//    self.window.rootViewController = vc;
+//    [self.window makeKeyAndVisible];
+    YPModuleTableViewController *vc = [[YPModuleTableViewController alloc] init];
+    vc.model = [YPRouterManager shareInstance].homeRouter;
+    YPNavigationViewController *nav = [[YPNavigationViewController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
     return YES;

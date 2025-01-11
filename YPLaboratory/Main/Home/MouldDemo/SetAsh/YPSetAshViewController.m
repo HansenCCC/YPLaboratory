@@ -47,7 +47,7 @@
 - (UIImageView *)imageView {
     if (!_imageView) {
         _imageView = [[UIImageView alloc] init];
-        _imageView.image = [UIImage imageNamed:@"yp-icon-1024"];
+        _imageView.image = [UIImage imageNamed:@"yp_icon_1024"];
     }
     return _imageView;
 }

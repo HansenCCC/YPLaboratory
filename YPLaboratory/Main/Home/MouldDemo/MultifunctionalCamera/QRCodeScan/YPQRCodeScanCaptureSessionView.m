@@ -111,7 +111,7 @@
 }
 
 - (void)handleMetadataObjects {
-    [[YPShakeManager shareInstance] tapShake];
+    [[YPShakeManager shareInstance] mediumShake];
     [self stopRunning];
     NSString *qrString = self.metadataObjects.firstObject;
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"当前识别二维码为 \n%@", qrString] preferredStyle:UIAlertControllerStyleAlert];
@@ -126,7 +126,7 @@
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [self.metadataObjects removeAllObjects];
         [self startRunning];
-        [[YPShakeManager shareInstance] tapShake];
+        [[YPShakeManager shareInstance] mediumShake];
     }]];
     [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
 }

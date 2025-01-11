@@ -108,7 +108,7 @@
 - (UIImageView *)logoImageView {
     if (!_logoImageView) {
         _logoImageView = [[UIImageView alloc] init];
-        _logoImageView.image = [UIImage imageNamed:@"icon_80x80"];
+        _logoImageView.image = [UIImage imageNamed:@"yp_icon_80"];
         _logoImageView.clipsToBounds = YES;
     }
     return _logoImageView;

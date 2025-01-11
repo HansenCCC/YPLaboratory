@@ -29,6 +29,7 @@
     if (self.navigationController.viewControllers.count == 1) {
         self.navigationItem.leftBarButtonItem = nil;
     }
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)__setNavBarButtonItem {
@@ -47,7 +48,7 @@
 }
 
 - (void)backItemClick {
-    [[YPShakeManager shareInstance] tapShake];
+    [[YPShakeManager shareInstance] mediumShake];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

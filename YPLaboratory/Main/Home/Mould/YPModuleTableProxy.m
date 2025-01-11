@@ -85,7 +85,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [[YPShakeManager shareInstance] tapShake];
+    [[YPShakeManager shareInstance] mediumShake];
     YPPageRouterModule *module = self.viewModel.dataList[indexPath.section];
     YPPageRouter *cellModel = module.routers[indexPath.row];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];

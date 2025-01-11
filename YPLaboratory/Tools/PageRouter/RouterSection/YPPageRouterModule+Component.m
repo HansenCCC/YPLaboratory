@@ -27,6 +27,7 @@
 #import "YPDisableScreenCaptureViewController.h"
 #import "YPSetAshViewController.h"
 #import "YPRunLabelViewController.h"
+#import "YPFloatingViewViewController.h"
 
 @implementation YPPageRouterModule (Component)
 
@@ -35,12 +36,39 @@
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"打开一个网页".yp_localizedString;
+        element.title = @"悬浮按钮".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPFloatingViewViewController *vc = [[YPFloatingViewViewController alloc] init];
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"打开App内网页".yp_localizedString;
         element.type = YPPageRouterTypeModule;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             YPH5WebviewController *vc = [[YPH5WebviewController alloc] init];
             vc.request = [NSURLRequest requestWithURL:[NSURL URLWithString:[YPSettingManager sharedInstance].personalHomepage]];
             [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"使用 Safari 打开网页".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.extend = @"https://github.com/HansenCCC";
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"应用跳转".yp_localizedString message:[NSString stringWithFormat:@"是否跳转Safari显示具体详情？\n%@".yp_localizedString,router.extend] preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"去 Safari 查看".yp_localizedString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:router.extend?:@""] options:@{} completionHandler:nil];
+            }]];
+            [alert addAction:[UIAlertAction actionWithTitle:@"取消".yp_localizedString style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+            }]];
+            [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
         };
         [dataList addObject:element];
     }

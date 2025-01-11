@@ -77,7 +77,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [[YPShakeManager shareInstance] tapShake];
+    [[YPShakeManager shareInstance] mediumShake];
 }
 
 #pragma mark - getters | setters

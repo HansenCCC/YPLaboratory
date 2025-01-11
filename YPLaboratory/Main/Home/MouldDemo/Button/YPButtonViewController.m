@@ -44,7 +44,7 @@
     button.titleLabel.backgroundColor = [UIColor yp_gray5Color];
     [button setTitleColor:[UIColor yp_blackColor] forState:UIControlStateNormal];
     [button setTitle:@"实验室".yp_localizedString forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"yp-appLogo"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"yp_icon_1024"] forState:UIControlStateNormal];
     button.imageSize = CGSizeMake(44.f, 44.f);
     button.interitemSpacing = 10.f;
     return button;
