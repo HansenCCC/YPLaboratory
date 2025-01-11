@@ -29,7 +29,7 @@
 
 - (YPPageRouter *)homeRouter {
     YPPageRouter *homeRouter = [[YPPageRouter alloc] init];
-    homeRouter.title = @"实验室".yp_localizedString;
+    homeRouter.title = @"开发者实验室".yp_localizedString;
     homeRouter.type = YPPageRouterTypeModule;
 //    homeRouter.useInsetGrouped = YES;
     return homeRouter;
@@ -37,7 +37,7 @@
 
 - (NSArray <YPPageRouterModule *>*)getRoutersByModel:(YPPageRouter *)model {
     NSArray *dataList = @[];
-    if ([model.title isEqualToString:@"实验室".yp_localizedString]) {
+    if ([model.title isEqualToString:@"开发者实验室".yp_localizedString]) {
         dataList = [YPPageRouterModule HomeRouters];
     } else if ([model.title isEqualToString:@"UI 组件".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters];
