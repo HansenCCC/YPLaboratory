@@ -64,7 +64,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"AFNetworking".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"网络请求";
+        element.content = @"网络请求".yp_localizedString;
         element.extend = @"https://github.com/AFNetworking/AFNetworking";
         element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
@@ -73,7 +73,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"SDWebImage".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"加载网络图片";
+        element.content = @"加载网络图片".yp_localizedString;
         element.extend = @"https://github.com/SDWebImage/SDWebImage";
         element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
@@ -82,7 +82,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"FLAnimatedImage".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"加载动图";
+        element.content = @"加载动图".yp_localizedString;
         element.extend = @"https://github.com/Flipboard/FLAnimatedImage";
         element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
@@ -91,7 +91,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"Bugly".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"奔溃日志分析";
+        element.content = @"奔溃日志分析".yp_localizedString;
         element.extend = @"https://bugly.qq.com/v2/";
         element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];
@@ -100,7 +100,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"Masonry".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"布局框架";
+        element.content = @"布局框架".yp_localizedString;
         element.extend = @"https://github.com/SnapKit/Masonry";
         element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];

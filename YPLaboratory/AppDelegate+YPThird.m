@@ -88,7 +88,7 @@
         if ([response.responseData[@"status"] intValue] == 0) {
             // 检验成功，用户已经支付了
             [[YPPurchaseManager sharedInstance] deleteByPaymentVoucher:payDic];
-            [YPAlertView alertText:@"谢谢您的慷慨。\n祝您工作顺利，生活愉快！" duration:4.f];
+            [YPAlertView alertText:@"谢谢您的慷慨。\n祝您工作顺利，生活愉快！".yp_localizedString duration:4.f];
         }
     } failureHandler:^(NSError * _Nonnull error) {
         //

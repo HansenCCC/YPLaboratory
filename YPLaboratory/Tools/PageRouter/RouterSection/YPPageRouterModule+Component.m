@@ -36,6 +36,32 @@
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"颜色选择".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            UIViewController *vc = nil;
+            UIColor *selectedColor = [UIColor yp_blackColor];
+            if (@available(iOS 14.0, *)) {
+                vc = [YPColorPickerViewController popupPickerWithCompletion:^(UIColor *selectedColor) {
+                    NSString *hexString = [UIColor yp_hexStringFromColor:selectedColor];
+                    [YPAlertView alertText:[NSString stringWithFormat:@"您选择的颜色是 %@".yp_localizedString, hexString] duration:3.f];
+                }];
+                ((YPColorPickerViewController *)vc).selectedColor = selectedColor;
+            } else {
+                NSArray *colors = [UIColor yp_allColors];
+                NSInteger index = [colors indexOfObject:[UIColor yp_hexStringFromColor:[UIColor yp_blackColor]]];
+                vc = [YPColorPickerAlert popupWithOptions:colors completeBlock:^(NSInteger index) {
+                    NSString *hexString = colors[index];
+                    [YPAlertView alertText:[NSString stringWithFormat:@"您选择的颜色是 %@".yp_localizedString, hexString] duration:3.f];
+                }];
+                ((YPColorPickerAlert *)vc).currentIndex = index;
+            }
+            [[UIViewController yp_topViewController] presentViewController:vc animated:YES completion:nil];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"悬浮按钮".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
@@ -393,7 +419,7 @@
         element.title = @"性别选择".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.content = @"Gender";
-        NSArray *fonts = @[@"男",@"女",@"沃尔玛购物袋"];
+        NSArray *fonts = @[@"男".yp_localizedString,@"女".yp_localizedString,@"沃尔玛购物袋".yp_localizedString];
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSUInteger currentIndex = [fonts indexOfObject:router.content];
             YPPickerAlert *alert = [YPPickerAlert popupWithOptions:fonts completeBlock:^(NSInteger index) {
@@ -726,8 +752,8 @@
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             YPAppUpdatePopupController *vc = [YPAppUpdatePopupController popupControllerWithStyle:YPPopupControllerStyleMiddle];
-            vc.updateTitle = @"发现新的版本 v10.xxx";
-            vc.updateContent = @"全新界面设计，更加现代化和直观..........";
+            vc.updateTitle = @"发现新的版本 v10.xxx".yp_localizedString;
+            vc.updateContent = @"全新界面设计，更加现代化和直观..........".yp_localizedString;
             [[UIViewController yp_topViewController] presentViewController:vc animated:YES completion:nil];
         };
         [dataList addObject:element];

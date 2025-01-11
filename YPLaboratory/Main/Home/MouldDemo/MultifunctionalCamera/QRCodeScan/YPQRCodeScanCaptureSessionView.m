@@ -114,8 +114,8 @@
     [[YPShakeManager shareInstance] mediumShake];
     [self stopRunning];
     NSString *qrString = self.metadataObjects.firstObject;
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"当前识别二维码为 \n%@", qrString] preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"复制" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示".yp_localizedString message:[NSString stringWithFormat:@"当前识别二维码为 \n%@", qrString] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"复制".yp_localizedString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
         pasteboard.string = qrString;
         [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",qrString?:@"",@"文本已复制".yp_localizedString]];
@@ -123,7 +123,7 @@
         [[YPShakeManager shareInstance] longPressShake];
     }];
     [alert addAction:alertAction];
-    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消".yp_localizedString style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [self.metadataObjects removeAllObjects];
         [self startRunning];
         [[YPShakeManager shareInstance] mediumShake];

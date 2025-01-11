@@ -151,7 +151,7 @@
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     //'UIAlertView' is deprecated: first deprecated in iOS 9.0 - UIAlertView is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead
-    [[[UIAlertView alloc] initWithTitle:@"请求失败" message:@"请检查您的网络" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"请求失败".yp_localizedString message:@"请检查您的网络".yp_localizedString delegate:self cancelButtonTitle:@"取消".yp_localizedString otherButtonTitles:nil, nil] show];
     #pragma clang diagnostic pop
 }
 

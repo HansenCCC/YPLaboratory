@@ -122,7 +122,7 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"技术交流群";
+        element.title = @"技术交流群".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             YPH5WebviewController *vc = [[YPH5WebviewController alloc] init];

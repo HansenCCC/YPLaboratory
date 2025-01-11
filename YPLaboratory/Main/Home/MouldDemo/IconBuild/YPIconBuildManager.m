@@ -21,7 +21,7 @@
 }
 
 - (void)resetIconBuild {
-    self.iconPath = @"请选择图标文件：最佳1024 * 1024像素";
+    self.iconPath = @"请选择图标文件：最佳1024 * 1024像素".yp_localizedString;
     self.betaString = @"BETA";
     self.betaColor = [UIColor whiteColor];
     self.betaBackgroundColor = [UIColor redColor];

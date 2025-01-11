@@ -33,7 +33,7 @@
 - (UIView *)setupRunLabel:(UIFont *)font {
     YPRunLabel *label = [[YPRunLabel alloc] init];
     label.titleLabel.font = font;
-    label.titleLabel.text = @"爱国、民主、为民、进步";
+    label.titleLabel.text = @"爱国、民主、为民、进步".yp_localizedString;
     [self.view addSubview:label];
     return label;
 }

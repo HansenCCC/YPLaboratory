@@ -16,7 +16,7 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"免费的支持".yp_localizedString;
-        element.content = @"感谢评论";
+        element.content = @"感谢评论".yp_localizedString;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             [[YPAppManager shareInstance] openAppStoreForReview];
         };
@@ -29,7 +29,7 @@
         element.extend = @"yp_pay_100";
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             NSString *productId = router.extend?:@"";
-            [YPLoadingView showLoading:@"获取商品中，请稍等"];
+            [YPLoadingView showLoading:@"获取商品中，请稍等".yp_localizedString];
             [[YPPurchaseManager sharedInstance] paymentProductWithProductId:productId extend:@{} completion:^(SKPaymentTransaction * _Nonnull transaction, NSError * _Nonnull error) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [YPLoadingView hideLoading];
@@ -38,15 +38,15 @@
                         // 开始检验支付是否成功
                         YPHTTPVerifyPaymentRequest *request = [[YPHTTPVerifyPaymentRequest alloc] init];
                         request.receiptData = payDic[@"receiptData"];
-                        [YPLoadingView showLoading:@"检验支付状态，请稍等"];
+                        [YPLoadingView showLoading:@"检验支付状态，请稍等".yp_localizedString];
                         [request startWithSuccessHandler:^(YPHTTPResponse * _Nonnull response) {
                             [YPLoadingView hideLoading];
                             if ([response.responseData[@"status"] intValue] == 0) {
                                 // 检验成功，用户已经支付了
                                 [[YPPurchaseManager sharedInstance] deleteByPaymentVoucher:payDic];
-                                [YPAlertView alertText:@"谢谢您的慷慨。\n祝您工作顺利，生活愉快！" duration:4.f];
+                                [YPAlertView alertText:@"谢谢您的慷慨。\n祝您工作顺利，生活愉快！".yp_localizedString duration:4.f];
                             } else {
-                                [YPAlertView alertText:@"校验支付状态失败，请稍后再试！"];
+                                [YPAlertView alertText:@"校验支付状态失败，请稍后再试！".yp_localizedString];
                             }
                         } failureHandler:^(NSError * _Nonnull error) {
                             [YPLoadingView hideLoading];

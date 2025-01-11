@@ -52,8 +52,8 @@
     YPPageRouter *cellModel = [[YPPageRouter alloc] init];
     cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     cell.accessoryType = UITableViewCellAccessoryNone;
-    cellModel.title = @"左边标题";
-    cellModel.content = @"右边数据";
+    cellModel.title = @"左边标题".yp_localizedString;
+    cellModel.content = @"右边数据".yp_localizedString;
     if ([cell isKindOfClass:[YPModuleNormalCell class]]) {
         if (indexPath.row == 1) {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -65,7 +65,7 @@
             cellModel.content = @(NO).stringValue;
         }
     } else if ([cell isKindOfClass:[YPModuleButtonCell class]]) {
-        cellModel.title = @"中间按钮";
+        cellModel.title = @"中间按钮".yp_localizedString;
     } else if ([cell isKindOfClass:[YPModuleImageCell class]]) {
         cellModel.extend = [UIImage imageNamed:@"yp_icon_1024"];
     } else if ([cell isKindOfClass:[YPSwiperNormalTableViewCell class]]) {

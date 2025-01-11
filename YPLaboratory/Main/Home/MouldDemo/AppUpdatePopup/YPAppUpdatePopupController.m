@@ -134,7 +134,7 @@
 - (UIButton *)laterButton {
     if (!_laterButton) {
         _laterButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [_laterButton setTitle:@"稍后更新" forState:UIControlStateNormal];
+        [_laterButton setTitle:@"稍后更新".yp_localizedString forState:UIControlStateNormal];
         _laterButton.titleLabel.font = [UIFont boldSystemFontOfSize:18.f];
         [_laterButton addTarget:self action:@selector(laterActionClick) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -152,7 +152,7 @@
 - (UIButton *)appstoreButton {
     if (!_appstoreButton) {
         _appstoreButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [_appstoreButton setTitle:@"去 AppStore 更新" forState:UIControlStateNormal];
+        [_appstoreButton setTitle:@"去 AppStore 更新".yp_localizedString forState:UIControlStateNormal];
         _appstoreButton.titleLabel.font = [UIFont systemFontOfSize:18.f];
         [_appstoreButton addTarget:self action:@selector(appstoceActionClick) forControlEvents:UIControlEventTouchUpInside];
     }
