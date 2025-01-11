@@ -36,7 +36,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"YPUIKit-ObjC".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"框架";
+        element.content = @"框架".yp_localizedString;
         element.extend = @"https://github.com/HansenCCC/YPUIKit-ObjC";
         element.didSelectedCallback = didSelectedCallback;
         [dataList addObject:element];

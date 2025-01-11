@@ -107,6 +107,7 @@
 		04CFE1650DC88C3573EB43A6 /* Pods_YPLaboratory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YPLaboratory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		147C523EF284DF972559701E /* Pods-YPLaboratory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPLaboratory.debug.xcconfig"; path = "Target Support Files/Pods-YPLaboratory/Pods-YPLaboratory.debug.xcconfig"; sourceTree = "<group>"; };
 		24FAB785EC799017D07AD679 /* Pods-YPLaboratory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPLaboratory.release.xcconfig"; path = "Target Support Files/Pods-YPLaboratory/Pods-YPLaboratory.release.xcconfig"; sourceTree = "<group>"; };
+		6013EF6E2D326D0B0070783D /* language.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = language.strings; sourceTree = "<group>"; };
 		6019B7902A2E376B0083FA7F /* YPPageRouterModule+Update.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPPageRouterModule+Update.h"; sourceTree = "<group>"; };
 		6019B7912A2E376B0083FA7F /* YPPageRouterModule+Update.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+Update.m"; sourceTree = "<group>"; };
 		601FEB922A42F350000B703C /* YPModuleImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPModuleImageCell.h; sourceTree = "<group>"; };
@@ -437,6 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				60FF4C9A2A1B17AD00A2D04B /* YPLaboratory.entitlements */,
+				6013EF6E2D326D0B0070783D /* language.strings */,
 				6034B2542A1485D80024E610 /* AppDelegate.h */,
 				6034B2552A1485D80024E610 /* AppDelegate.m */,
 				60257FFB2A1A5F2400091000 /* AppDelegate+YPThird.h */,
@@ -1234,7 +1236,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPLaboratory/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPLaboratory/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "iOS实验室";
+				INFOPLIST_KEY_CFBundleDisplayName = "Developer Laboratory";
 				INFOPLIST_KEY_NSCameraUsageDescription = "APP需要您的同意，才能访问相机进行拍照，以便您用于发帖中使用图片";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "APP需要您的同意，才能访问到您的地理位置，以便您发帖分享自己的地理位置";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "APP需要您的同意，才能访问麦克风，以便您发帖过程中录制视频";
@@ -1275,7 +1277,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPLaboratory/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YPLaboratory/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "iOS实验室";
+				INFOPLIST_KEY_CFBundleDisplayName = "Developer Laboratory";
 				INFOPLIST_KEY_NSCameraUsageDescription = "APP需要您的同意，才能访问相机进行拍照，以便您用于发帖中使用图片";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "APP需要您的同意，才能访问到您的地理位置，以便您发帖分享自己的地理位置";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "APP需要您的同意，才能访问麦克风，以便您发帖过程中录制视频";

@@ -15,5 +15,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>yp_name</key>
+	<string>Developer Laboratory</string>
 </dict>
 </plist>
