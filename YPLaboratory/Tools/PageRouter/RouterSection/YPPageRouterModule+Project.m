@@ -64,7 +64,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"AFNetworking".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"网络请求".yp_localizedString;
+        element.content = @"网络".yp_localizedString;
         element.extend = @"https://github.com/AFNetworking/AFNetworking";
         element.didSelectedCallback = didSelectedCallback;
         [dataList2 addObject:element];

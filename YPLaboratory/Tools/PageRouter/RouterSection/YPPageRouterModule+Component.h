@@ -47,6 +47,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 震动反馈
 + (NSArray *)ComponentRouters_ShakeFeedback;
 
+/// 二维码生成
++ (NSArray *)ComponentRouters_QRCodeMaker;
+
 @end
 
 NS_ASSUME_NONNULL_END

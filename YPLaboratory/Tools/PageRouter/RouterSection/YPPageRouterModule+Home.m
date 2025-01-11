@@ -18,6 +18,12 @@
         element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"网络".yp_localizedString;
+        element.type = YPPageRouterTypeModule;
+        [dataList addObject:element];
+    }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"常见架构模式".yp_localizedString;
@@ -36,12 +42,6 @@
         element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
-//    {
-//        YPPageRouter *element = [[YPPageRouter alloc] init];
-//        element.title = @"网络请求".yp_localizedString;
-//        element.type = YPPageRouterTypeModule;
-//        [dataList addObject:element];
-//    }
 //    {
 //        YPPageRouter *element = [[YPPageRouter alloc] init];
 //        element.title = @"数据库".yp_localizedString;
@@ -118,6 +118,12 @@
             YPNavigationViewController *nav = [[YPNavigationViewController alloc] initWithRootViewController:browser];
             [[UIViewController yp_topViewController] presentViewController:nav animated:YES completion:nil];
         };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"触觉与音效反馈".yp_localizedString;
+        element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
     {

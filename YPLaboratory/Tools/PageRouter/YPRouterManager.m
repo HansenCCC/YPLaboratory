@@ -69,14 +69,14 @@
         dataList = [YPPageRouterModule ComponentRouters_Device];
     } else if ([model.title isEqualToString:@"项目依赖".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_Project];
-    } else if ([model.title isEqualToString:@"用户反馈".yp_localizedString]) {
+    } else if ([model.title isEqualToString:@"触觉与音效反馈".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_ShakeFeedback];
-    } else if ([model.title isEqualToString:@"".yp_localizedString]) {
-        
-    } else if ([model.title isEqualToString:@"".yp_localizedString]) {
-        
-    } else if ([model.title isEqualToString:@"".yp_localizedString]) {
-        
+    } else if ([model.title isEqualToString:@"二维码生成".yp_localizedString]) {
+        dataList = [YPPageRouterModule ComponentRouters_QRCodeMaker];
+    } else if ([model.title isEqualToString:@"网络".yp_localizedString]) {
+        dataList = [YPPageRouterModule NetworkRouters];
+    } else if ([model.title isEqualToString:@"网络请求".yp_localizedString]) {
+        dataList = [YPPageRouterModule NetworkRouters_Request];
     }
     return [dataList copy];
 }

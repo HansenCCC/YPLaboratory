@@ -15,5 +15,6 @@
 #import "YPPageRouterModule+AppleInternalPurchase.h"
 #import "YPPageRouterModule+Device.h"
 #import "YPPageRouterModule+Project.h"
+#import "YPPageRouterModule+Network.h"
 
 #endif /* Header_h */

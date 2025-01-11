@@ -36,7 +36,7 @@
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"用户反馈".yp_localizedString;
+        element.title = @"二维码生成".yp_localizedString;
         element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
@@ -1003,8 +1003,43 @@
     }
     YPPageRouterModule *section2 = [[YPPageRouterModule alloc] initWithRouters:dataList2];
     section2.headerTitle = @"其他的交互反馈";
-    
     return @[section, section2];
+}
+
+/// 二维码生成
++ (NSArray *)ComponentRouters_QRCodeMaker {
+    NSMutableArray *dataList = [[NSMutableArray alloc] init];
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"文本".yp_localizedString;
+        element.placeholder = @"请输入基本字符（字母、数字、符号）";
+        element.type = YPPageRouterTypeNormal;
+        [dataList addObject:element];
+    }
+    {
+        //L (低)：大约能纠正 7% 的错误。
+        //M (中)：大约能纠正 15% 的错误。
+        //Q (高)：大约能纠正 25% 的错误。
+        //H (最高)：大约能纠正 30% 的错误。
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"容错级别".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"尺寸".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"格式".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        [dataList addObject:element];
+    }
+    YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
+    return @[section];
 }
 
 @end
