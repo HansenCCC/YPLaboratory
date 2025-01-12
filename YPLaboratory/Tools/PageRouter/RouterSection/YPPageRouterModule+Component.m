@@ -1206,7 +1206,9 @@
         element.type = YPPageRouterTypeButton;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             UIImage *image = [YPBarcodeAndQRCodeManager shareInstance].brImage;
-            [UIImage yp_saveImageToAlbum:image completion:^(BOOL success, NSError * _Nonnull error) {
+            NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+            UIImage *finalImage = [UIImage imageWithData:imageData];
+            [UIImage yp_saveImageToAlbum:finalImage completion:^(BOOL success, NSError * _Nonnull error) {
                 [[YPShakeManager shareInstance] longPressShake];
                 if (success) {
                     [YPAlertView alertText:@"保存到相册成功"];
