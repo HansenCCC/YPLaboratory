@@ -63,14 +63,12 @@
     } else {
         // 将UIImage保存到本地相册
         UIImage *image = self.iconImage;
-        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-            [PHAssetChangeRequest creationRequestForAssetFromImage:image];
-            // 可以根据需要设置保存的图片属性，例如调整图片大小、添加元数据等
-        } completionHandler:^(BOOL success, NSError *error) {
+        [UIImage yp_saveImageToAlbum:image completion:^(BOOL success, NSError * _Nonnull error) {
+            [[YPShakeManager shareInstance] longPressShake];
             if (success) {
-                NSLog(@"Image saved to photo library successfully.");
+                [YPAlertView alertText:@"保存到相册成功"];
             } else {
-                NSLog(@"Error saving image to photo library: %@", error);
+                [YPAlertView alertText:@"保存到相册失败"];
             }
         }];
     }

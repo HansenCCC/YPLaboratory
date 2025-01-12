@@ -16,6 +16,7 @@
 @implementation YPPageRouterModule (Idea)
 
 + (NSArray *)IdeaRouters_IconBuild {
+    __weak typeof(self) weakSelf = self;
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
@@ -35,7 +36,7 @@
                 vc.didCompleteCallback = ^(NSString * _Nonnull text) {
                     [YPIconBuildManager shareInstance].iconPath = text;
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                        [self yp_reloadCurrentModuleControl];
+                        [weakSelf yp_reloadCurrentModuleControl];
                     });
                 };
                 [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
@@ -48,7 +49,7 @@
                     NSString *fileName = [UIImage yp_saveImageToDocument:selectedImage];
                     [YPIconBuildManager shareInstance].iconPath = fileName;
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                        [self yp_reloadCurrentModuleControl];
+                        [weakSelf yp_reloadCurrentModuleControl];
                     });
                 };
                 [[UIViewController yp_topViewController] presentViewController:imagePicker animated:YES completion:nil];
@@ -70,7 +71,7 @@
             vc.didCompleteCallback = ^(NSString * _Nonnull text) {
                 [YPIconBuildManager shareInstance].betaString = text;
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [self yp_reloadCurrentModuleControl];
+                    [weakSelf yp_reloadCurrentModuleControl];
                 });
             };
             [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
@@ -89,7 +90,7 @@
                 router.content = colors[index];
                 [YPIconBuildManager shareInstance].betaColor = [UIColor yp_colorWithHexString:router.content];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [self yp_reloadCurrentModuleControl];
+                    [weakSelf yp_reloadCurrentModuleControl];
                 });
             }];
             alert.currentIndex = currentIndex;
@@ -109,7 +110,7 @@
                 router.content = colors[index];
                 [YPIconBuildManager shareInstance].betaBackgroundColor = [UIColor yp_colorWithHexString:router.content];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [self yp_reloadCurrentModuleControl];
+                    [weakSelf yp_reloadCurrentModuleControl];
                 });
             }];
             alert.currentIndex = currentIndex;
@@ -123,7 +124,7 @@
         element.type = YPPageRouterTypeButton;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             [[YPIconBuildManager shareInstance] resetIconBuild];
-            [self yp_reloadCurrentModuleControl];
+            [weakSelf yp_reloadCurrentModuleControl];
         };
         [dataList addObject:element];
     }
@@ -133,7 +134,7 @@
         element.type = YPPageRouterTypeButton;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             [YPIconBuildManager shareInstance].isAddBeta = YES;
-            [self yp_reloadCurrentModuleControl];
+            [weakSelf yp_reloadCurrentModuleControl];
         };
         [dataList addObject:element];
     }
@@ -143,7 +144,7 @@
         element.type = YPPageRouterTypeButton;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             [YPIconBuildManager shareInstance].isAddBeta = NO;
-            [self yp_reloadCurrentModuleControl];
+            [weakSelf yp_reloadCurrentModuleControl];
         };
         [dataList addObject:element];
     }

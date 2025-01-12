@@ -58,7 +58,7 @@
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.font = [UIFont systemFontOfSize:17.f];
-        _titleLabel.textColor = [UIColor blackColor];
+        _titleLabel.textColor = [UIColor yp_blackColor];
     }
     return _titleLabel;
 }
@@ -67,7 +67,7 @@
     if (!_contentLabel) {
         _contentLabel = [[UILabel alloc] init];
         _contentLabel.font = [UIFont systemFontOfSize:15.f];
-        _contentLabel.textColor = [UIColor blackColor];
+        _contentLabel.textColor = [UIColor yp_blackColor];
     }
     return _contentLabel;
 }

@@ -50,6 +50,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 二维码生成
 + (NSArray *)ComponentRouters_QRCodeMaker;
 
+/// 条形码生成
++ (NSArray *)ComponentRouters_BRCodeMaker;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -77,6 +77,8 @@
         dataList = [YPPageRouterModule NetworkRouters];
     } else if ([model.title isEqualToString:@"网络请求".yp_localizedString]) {
         dataList = [YPPageRouterModule NetworkRouters_Request];
+    } else if ([model.title isEqualToString:@"条形码生成".yp_localizedString]) {
+        dataList = [YPPageRouterModule ComponentRouters_BRCodeMaker];
     }
     return [dataList copy];
 }

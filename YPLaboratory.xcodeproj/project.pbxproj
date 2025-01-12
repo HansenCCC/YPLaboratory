@@ -34,22 +34,7 @@
 		6034B2782A14A4800024E610 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6034B27A2A14A4800024E610 /* InfoPlist.strings */; };
 		6034B27C2A14A48A0024E610 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6034B27E2A14A48A0024E610 /* Localizable.strings */; };
 		6034B2862A14A64E0024E610 /* YPRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2852A14A64E0024E610 /* YPRootViewController.m */; };
-		6034B2D92A14A6E40024E610 /* UIView+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2B82A14A6E40024E610 /* UIView+YPLaboratory.m */; };
-		6034B2DA2A14A6E40024E610 /* UIScrollView+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2B92A14A6E40024E610 /* UIScrollView+YPLaboratory.m */; };
-		6034B2DB2A14A6E40024E610 /* UIViewController+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2BA2A14A6E40024E610 /* UIViewController+YPLaboratory.m */; };
-		6034B2DC2A14A6E40024E610 /* UIImage+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2BB2A14A6E40024E610 /* UIImage+YPLaboratory.m */; };
-		6034B2DD2A14A6E40024E610 /* NSString+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2BD2A14A6E40024E610 /* NSString+YPLaboratory.m */; };
-		6034B2DE2A14A6E40024E610 /* NSTimer+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2C62A14A6E40024E610 /* NSTimer+YPLaboratory.m */; };
-		6034B2DF2A14A6E40024E610 /* NSBundle+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2C72A14A6E40024E610 /* NSBundle+YPLaboratory.m */; };
 		6034B2E02A14A6E40024E610 /* UIColor+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2C82A14A6E40024E610 /* UIColor+YPLaboratory.m */; };
-		6034B2E12A14A6E40024E610 /* UITextField+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2C92A14A6E40024E610 /* UITextField+YPLaboratory.m */; };
-		6034B2E22A14A6E40024E610 /* NSDate+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2CE2A14A6E40024E610 /* NSDate+YPLaboratory.m */; };
-		6034B2E32A14A6E40024E610 /* UILabel+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2CF2A14A6E40024E610 /* UILabel+YPLaboratory.m */; };
-		6034B2E42A14A6E40024E610 /* UITextView+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2D02A14A6E40024E610 /* UITextView+YPLaboratory.m */; };
-		6034B2E52A14A6E40024E610 /* UITableViewCell+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2D22A14A6E40024E610 /* UITableViewCell+YPLaboratory.m */; };
-		6034B2E62A14A6E40024E610 /* NSDictionary+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2D32A14A6E40024E610 /* NSDictionary+YPLaboratory.m */; };
-		6034B2E72A14A6E40024E610 /* UIImageView+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2D42A14A6E40024E610 /* UIImageView+YPLaboratory.m */; };
-		6034B2E82A14A6E40024E610 /* NSObject+YPLaboratory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2D52A14A6E40024E610 /* NSObject+YPLaboratory.m */; };
 		6034B2EC2A14A7940024E610 /* YPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2EB2A14A7940024E610 /* YPBaseViewController.m */; };
 		6034B2EF2A14A82A0024E610 /* YPNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2EE2A14A82A0024E610 /* YPNavigationViewController.m */; };
 		6034B30C2A14A99A0024E610 /* YPWorldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B3022A14A99A0024E610 /* YPWorldTableViewCell.m */; };
@@ -67,6 +52,8 @@
 		606929F52A2BA07C0045D2EB /* YPModuleSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606929F42A2BA07C0045D2EB /* YPModuleSwitchCell.m */; };
 		606929F82A2BA0BB0045D2EB /* YPModuleBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606929F72A2BA0BB0045D2EB /* YPModuleBaseCell.m */; };
 		606929FB2A2BA4B20045D2EB /* YPModuleButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606929FA2A2BA4B20045D2EB /* YPModuleButtonCell.m */; };
+		606E7AB52D3385F7008A0160 /* YPBarcodeAndQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E7AB42D3385F7008A0160 /* YPBarcodeAndQRCodeManager.m */; };
+		606E7AB82D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E7AB72D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m */; };
 		6073390F2A2F8E050096EC27 /* YPPageRouterModule+Idea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6073390E2A2F8E050096EC27 /* YPPageRouterModule+Idea.m */; };
 		607D9DA52CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DA42CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m */; };
 		607D9DAF2CD9C26400C3B591 /* YPDiverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DAD2CD9C26400C3B591 /* YPDiverseViewController.m */; };
@@ -161,39 +148,9 @@
 		6034B27F2A14A48D0024E610 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6034B2842A14A64E0024E610 /* YPRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPRootViewController.h; sourceTree = "<group>"; };
 		6034B2852A14A64E0024E610 /* YPRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPRootViewController.m; sourceTree = "<group>"; };
-		6034B2B82A14A6E40024E610 /* UIView+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2B92A14A6E40024E610 /* UIScrollView+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2BA2A14A6E40024E610 /* UIViewController+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2BB2A14A6E40024E610 /* UIImage+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2BC2A14A6E40024E610 /* UITextField+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2BD2A14A6E40024E610 /* NSString+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2BE2A14A6E40024E610 /* UITextView+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2BF2A14A6E40024E610 /* UILabel+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2C02A14A6E40024E610 /* NSDate+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2C12A14A6E40024E610 /* UIImageView+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2C22A14A6E40024E610 /* NSObject+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2C32A14A6E40024E610 /* NSDictionary+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YPLaboratory.h"; sourceTree = "<group>"; };
 		6034B2C42A14A6E40024E610 /* YPLaboratoryCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPLaboratoryCategory.h; sourceTree = "<group>"; };
-		6034B2C52A14A6E40024E610 /* UITableViewCell+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2C62A14A6E40024E610 /* NSTimer+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2C72A14A6E40024E610 /* NSBundle+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+YPLaboratory.m"; sourceTree = "<group>"; };
 		6034B2C82A14A6E40024E610 /* UIColor+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2C92A14A6E40024E610 /* UITextField+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2CA2A14A6E40024E610 /* UIImage+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2CB2A14A6E40024E610 /* UIViewController+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2CC2A14A6E40024E610 /* UIScrollView+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2CD2A14A6E40024E610 /* UIView+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2CE2A14A6E40024E610 /* NSDate+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2CF2A14A6E40024E610 /* UILabel+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2D02A14A6E40024E610 /* UITextView+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2D12A14A6E40024E610 /* NSString+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2D22A14A6E40024E610 /* UITableViewCell+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2D32A14A6E40024E610 /* NSDictionary+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2D42A14A6E40024E610 /* UIImageView+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2D52A14A6E40024E610 /* NSObject+YPLaboratory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YPLaboratory.m"; sourceTree = "<group>"; };
-		6034B2D62A14A6E40024E610 /* NSBundle+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+YPLaboratory.h"; sourceTree = "<group>"; };
 		6034B2D72A14A6E40024E610 /* UIColor+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+YPLaboratory.h"; sourceTree = "<group>"; };
-		6034B2D82A14A6E40024E610 /* NSTimer+YPLaboratory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+YPLaboratory.h"; sourceTree = "<group>"; };
 		6034B2EA2A14A7940024E610 /* YPBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPBaseViewController.h; sourceTree = "<group>"; };
 		6034B2EB2A14A7940024E610 /* YPBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPBaseViewController.m; sourceTree = "<group>"; };
 		6034B2ED2A14A82A0024E610 /* YPNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPNavigationViewController.h; sourceTree = "<group>"; };
@@ -229,6 +186,10 @@
 		606929F72A2BA0BB0045D2EB /* YPModuleBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPModuleBaseCell.m; sourceTree = "<group>"; };
 		606929F92A2BA4B20045D2EB /* YPModuleButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPModuleButtonCell.h; sourceTree = "<group>"; };
 		606929FA2A2BA4B20045D2EB /* YPModuleButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPModuleButtonCell.m; sourceTree = "<group>"; };
+		606E7AB32D3385F7008A0160 /* YPBarcodeAndQRCodeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPBarcodeAndQRCodeManager.h; sourceTree = "<group>"; };
+		606E7AB42D3385F7008A0160 /* YPBarcodeAndQRCodeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPBarcodeAndQRCodeManager.m; sourceTree = "<group>"; };
+		606E7AB62D3396CA008A0160 /* YPBarcodeAndQRCodeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPBarcodeAndQRCodeCell.h; sourceTree = "<group>"; };
+		606E7AB72D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPBarcodeAndQRCodeCell.m; sourceTree = "<group>"; };
 		6073390D2A2F8E050096EC27 /* YPPageRouterModule+Idea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPPageRouterModule+Idea.h"; sourceTree = "<group>"; };
 		6073390E2A2F8E050096EC27 /* YPPageRouterModule+Idea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+Idea.m"; sourceTree = "<group>"; };
 		607D9DA32CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPDisableScreenCaptureViewController.h; sourceTree = "<group>"; };
@@ -355,7 +316,7 @@
 			path = Device;
 			sourceTree = "<group>";
 		};
-		60257FE92A1A452100091000 /* Network */ = {
+		60257FE92A1A452100091000 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				60257FEE2A1A452100091000 /* YPNetworking.h */,
@@ -365,12 +326,13 @@
 				60257FED2A1A452100091000 /* YPHTTPResponse.h */,
 				60257FEB2A1A452100091000 /* YPHTTPResponse.m */,
 			);
-			path = Network;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		60257FF72A1A5B7400091000 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				60257FE92A1A452100091000 /* Base */,
 				60257FF82A1A5B8200091000 /* YPHTTPInitiateRequest.h */,
 				60257FF92A1A5B8200091000 /* YPHTTPInitiateRequest.m */,
 				60257FFE2A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.h */,
@@ -400,6 +362,7 @@
 		602B3D2A2A4B3D1200A62E1F /* MouldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				606E7AB22D338553008A0160 /* QRCodeMaker */,
 				60B5807A2D3229C4009F0694 /* FloatingView */,
 				60B128DB2CDB49AB00A3E6BE /* SetAsh */,
 				60B128D72CDB3C9600A3E6BE /* RunLabel */,
@@ -495,10 +458,9 @@
 				60809BEB2CF9B62700C04654 /* ImagePicker */,
 				602580012A1A5FC400091000 /* Notification */,
 				60257FF72A1A5B7400091000 /* Requests */,
-				60257FE92A1A452100091000 /* Network */,
 				60257FDD2A1A400C00091000 /* Setting */,
 				60C44E7E2A186C970073EA3F /* PageRouter */,
-				6034B2E92A14A77C0024E610 /* Base */,
+				6034B2E92A14A77C0024E610 /* ViewController */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -507,38 +469,8 @@
 			isa = PBXGroup;
 			children = (
 				6034B2C42A14A6E40024E610 /* YPLaboratoryCategory.h */,
-				6034B2D62A14A6E40024E610 /* NSBundle+YPLaboratory.h */,
-				6034B2C72A14A6E40024E610 /* NSBundle+YPLaboratory.m */,
-				6034B2C02A14A6E40024E610 /* NSDate+YPLaboratory.h */,
-				6034B2CE2A14A6E40024E610 /* NSDate+YPLaboratory.m */,
-				6034B2C32A14A6E40024E610 /* NSDictionary+YPLaboratory.h */,
-				6034B2D32A14A6E40024E610 /* NSDictionary+YPLaboratory.m */,
-				6034B2C22A14A6E40024E610 /* NSObject+YPLaboratory.h */,
-				6034B2D52A14A6E40024E610 /* NSObject+YPLaboratory.m */,
-				6034B2D12A14A6E40024E610 /* NSString+YPLaboratory.h */,
-				6034B2BD2A14A6E40024E610 /* NSString+YPLaboratory.m */,
-				6034B2D82A14A6E40024E610 /* NSTimer+YPLaboratory.h */,
-				6034B2C62A14A6E40024E610 /* NSTimer+YPLaboratory.m */,
 				6034B2D72A14A6E40024E610 /* UIColor+YPLaboratory.h */,
 				6034B2C82A14A6E40024E610 /* UIColor+YPLaboratory.m */,
-				6034B2CA2A14A6E40024E610 /* UIImage+YPLaboratory.h */,
-				6034B2BB2A14A6E40024E610 /* UIImage+YPLaboratory.m */,
-				6034B2C12A14A6E40024E610 /* UIImageView+YPLaboratory.h */,
-				6034B2D42A14A6E40024E610 /* UIImageView+YPLaboratory.m */,
-				6034B2BF2A14A6E40024E610 /* UILabel+YPLaboratory.h */,
-				6034B2CF2A14A6E40024E610 /* UILabel+YPLaboratory.m */,
-				6034B2CC2A14A6E40024E610 /* UIScrollView+YPLaboratory.h */,
-				6034B2B92A14A6E40024E610 /* UIScrollView+YPLaboratory.m */,
-				6034B2C52A14A6E40024E610 /* UITableViewCell+YPLaboratory.h */,
-				6034B2D22A14A6E40024E610 /* UITableViewCell+YPLaboratory.m */,
-				6034B2BC2A14A6E40024E610 /* UITextField+YPLaboratory.h */,
-				6034B2C92A14A6E40024E610 /* UITextField+YPLaboratory.m */,
-				6034B2BE2A14A6E40024E610 /* UITextView+YPLaboratory.h */,
-				6034B2D02A14A6E40024E610 /* UITextView+YPLaboratory.m */,
-				6034B2CD2A14A6E40024E610 /* UIView+YPLaboratory.h */,
-				6034B2B82A14A6E40024E610 /* UIView+YPLaboratory.m */,
-				6034B2CB2A14A6E40024E610 /* UIViewController+YPLaboratory.h */,
-				6034B2BA2A14A6E40024E610 /* UIViewController+YPLaboratory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -552,7 +484,7 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		6034B2E92A14A77C0024E610 /* Base */ = {
+		6034B2E92A14A77C0024E610 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				6034B2EA2A14A7940024E610 /* YPBaseViewController.h */,
@@ -560,7 +492,7 @@
 				6034B2ED2A14A82A0024E610 /* YPNavigationViewController.h */,
 				6034B2EE2A14A82A0024E610 /* YPNavigationViewController.m */,
 			);
-			path = Base;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		6034B2F12A14A9050024E610 /* Home */ = {
@@ -621,6 +553,17 @@
 				601FEB932A42F350000B703C /* YPModuleImageCell.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		606E7AB22D338553008A0160 /* QRCodeMaker */ = {
+			isa = PBXGroup;
+			children = (
+				606E7AB32D3385F7008A0160 /* YPBarcodeAndQRCodeManager.h */,
+				606E7AB42D3385F7008A0160 /* YPBarcodeAndQRCodeManager.m */,
+				606E7AB62D3396CA008A0160 /* YPBarcodeAndQRCodeCell.h */,
+				606E7AB72D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m */,
+			);
+			path = QRCodeMaker;
 			sourceTree = "<group>";
 		};
 		607D9DA22CD8C0B000C3B591 /* DisableScreenCapture */ = {
@@ -984,15 +927,10 @@
 				6034B3202A14A9D90024E610 /* YPUserViewModel.m in Sources */,
 				609B83A52D32D16600845337 /* YPPageRouterModule+Network.m in Sources */,
 				6034B30F2A14A99A0024E610 /* YPWorldViewController.m in Sources */,
-				6034B2DF2A14A6E40024E610 /* NSBundle+YPLaboratory.m in Sources */,
-				6034B2DE2A14A6E40024E610 /* NSTimer+YPLaboratory.m in Sources */,
-				6034B2E32A14A6E40024E610 /* UILabel+YPLaboratory.m in Sources */,
-				6034B2DC2A14A6E40024E610 /* UIImage+YPLaboratory.m in Sources */,
 				60257FDC2A1A25BD00091000 /* UIViewController+Router.m in Sources */,
 				6034B2E02A14A6E40024E610 /* UIColor+YPLaboratory.m in Sources */,
 				607D9DA52CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m in Sources */,
 				6034B2EF2A14A82A0024E610 /* YPNavigationViewController.m in Sources */,
-				6034B2D92A14A6E40024E610 /* UIView+YPLaboratory.m in Sources */,
 				60257FF02A1A452100091000 /* YPNetworking.m in Sources */,
 				604E52972A6AE5F8009950AA /* YPFaceTrackCaptureSessionView.m in Sources */,
 				6073390F2A2F8E050096EC27 /* YPPageRouterModule+Idea.m in Sources */,
@@ -1008,16 +946,14 @@
 				60257FE82A1A400C00091000 /* YPLaboratoryDevice.m in Sources */,
 				60257FD82A1A15A100091000 /* YPModuleTableViewController.m in Sources */,
 				60C6B0D52D09815D00194FFA /* YPPageRouterModule+Device.m in Sources */,
+				606E7AB82D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m in Sources */,
 				60257FD72A1A15A100091000 /* YPModuleTableProxy.m in Sources */,
 				60B128D22CDB146C00A3E6BE /* YPPayInputView.m in Sources */,
 				60257FD52A1A15A100091000 /* YPModuleNormalCell.m in Sources */,
 				60257FF12A1A452100091000 /* YPHTTPResponse.m in Sources */,
-				6034B2DA2A14A6E40024E610 /* UIScrollView+YPLaboratory.m in Sources */,
 				60FF4CC22A1F547B00A2D04B /* YPPageRouterModule.m in Sources */,
 				60C1C7632A4D8716004FC354 /* YPH5WebviewController.m in Sources */,
 				602580042A1A5FC400091000 /* YPNoticeHeader.m in Sources */,
-				6034B2E82A14A6E40024E610 /* NSObject+YPLaboratory.m in Sources */,
-				6034B2E72A14A6E40024E610 /* UIImageView+YPLaboratory.m in Sources */,
 				60C44E812A186D6F0073EA3F /* YPRouterManager.m in Sources */,
 				60FF4CBF2A1F4CBF00A2D04B /* YPPageRouterModule+AppleInternalPurchase.m in Sources */,
 				60C1C7742A4E873D004FC354 /* YPCameraViewController.m in Sources */,
@@ -1025,8 +961,6 @@
 				6034B30E2A14A99A0024E610 /* YPWorldProxy.m in Sources */,
 				601FEB942A42F350000B703C /* YPModuleImageCell.m in Sources */,
 				6034B30D2A14A99A0024E610 /* YPWorldModel.m in Sources */,
-				6034B2E42A14A6E40024E610 /* UITextView+YPLaboratory.m in Sources */,
-				6034B2E12A14A6E40024E610 /* UITextField+YPLaboratory.m in Sources */,
 				60C44E842A186E2C0073EA3F /* YPPageRouter.m in Sources */,
 				60C1C77E2A502524004FC354 /* YPQRCodeScanCaptureSessionView.m in Sources */,
 				60C1C7702A4E86F6004FC354 /* YPFaceTrackViewController.m in Sources */,
@@ -1044,23 +978,19 @@
 				607D9DB52CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.m in Sources */,
 				607D9DC02CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m in Sources */,
 				60257FFA2A1A5B8200091000 /* YPHTTPInitiateRequest.m in Sources */,
-				6034B2E62A14A6E40024E610 /* NSDictionary+YPLaboratory.m in Sources */,
 				6034B2562A1485D80024E610 /* AppDelegate.m in Sources */,
-				6034B2E22A14A6E40024E610 /* NSDate+YPLaboratory.m in Sources */,
 				60C1C75F2A4D8306004FC354 /* YPAppH5PopupController.m in Sources */,
-				6034B2DD2A14A6E40024E610 /* NSString+YPLaboratory.m in Sources */,
 				608D8FA32A73730F004E1E6D /* YPCameraCaptureSessionView.m in Sources */,
 				60809BE82CF9B5AE00C04654 /* YPAVCaptureSessionView.m in Sources */,
 				607D9DAF2CD9C26400C3B591 /* YPDiverseViewController.m in Sources */,
 				60257FE72A1A400C00091000 /* YPSettingManager.m in Sources */,
+				606E7AB52D3385F7008A0160 /* YPBarcodeAndQRCodeManager.m in Sources */,
 				6034B31E2A14A9D90024E610 /* YPUserProxy.m in Sources */,
 				6034B31C2A14A9D90024E610 /* YPUserTableViewCell.m in Sources */,
 				60B128DA2CDB3CA700A3E6BE /* YPRunLabelViewController.m in Sources */,
 				6034B31F2A14A9D90024E610 /* YPUserViewController.m in Sources */,
 				6019B7922A2E376B0083FA7F /* YPPageRouterModule+Update.m in Sources */,
 				60257FFD2A1A5F2400091000 /* AppDelegate+YPThird.m in Sources */,
-				6034B2E52A14A6E40024E610 /* UITableViewCell+YPLaboratory.m in Sources */,
-				6034B2DB2A14A6E40024E610 /* UIViewController+YPLaboratory.m in Sources */,
 				606929F12A2B904C0045D2EB /* YPPageRouterModule+Home.m in Sources */,
 				60B1E0DF2A67DE0300DD2CE8 /* YPSystemFontsTableViewCell.m in Sources */,
 				6034B3102A14A99A0024E610 /* YPWorldViewModel.m in Sources */,

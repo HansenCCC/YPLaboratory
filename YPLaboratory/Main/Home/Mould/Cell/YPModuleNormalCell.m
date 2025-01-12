@@ -35,7 +35,13 @@
 - (void)setCellModel:(YPPageRouter *)cellModel {
     [super setCellModel:cellModel];
     self.titleLabel.text = cellModel.title?:@"";
-    self.contentLabel.text = cellModel.content?:@"";
+    if (cellModel.content.length > 0) {
+        self.contentLabel.text = cellModel.content?:@"";
+        self.contentLabel.textColor = [UIColor yp_blackColor];
+    } else {
+        self.contentLabel.text = cellModel.placeholder?:@"";
+        self.contentLabel.textColor = [UIColor yp_grayColor];
+    }
 }
 
 - (void)layoutSubviews {
@@ -62,7 +68,7 @@
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.font = [UIFont systemFontOfSize:17.f];
-        _titleLabel.textColor = [UIColor blackColor];
+        _titleLabel.textColor = [UIColor yp_blackColor];
     }
     return _titleLabel;
 }
@@ -70,7 +76,7 @@
 - (UILabel *)contentLabel {
     if (!_contentLabel) {
         _contentLabel = [[UILabel alloc] init];
-        _contentLabel.font = [UIFont systemFontOfSize:17.f];
+        _contentLabel.font = [UIFont systemFontOfSize:16.f];
         _contentLabel.textColor = [UIColor yp_grayColor];
         _contentLabel.numberOfLines = 1;
         _contentLabel.textAlignment = NSTextAlignmentRight;

@@ -17,6 +17,7 @@
 #import "YPSwiperNormalTableViewCell.h"
 #import "YPSwiperCardTableViewCell.h"
 #import "YPSystemFontsTableViewCell.h"
+#import "YPBarcodeAndQRCodeCell.h"
 
 @interface YPModuleTableViewController () <YPModuleTableViewModelDelegate>
 
@@ -97,6 +98,7 @@
             [YPSwiperNormalTableViewCell class],
             [YPSwiperCardTableViewCell class],
             [YPSystemFontsTableViewCell class],
+            [YPBarcodeAndQRCodeCell class],
         ];
         [classs enumerateObjectsUsingBlock:^(Class  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [tableView registerClass:obj forCellReuseIdentifier:NSStringFromClass(obj)];

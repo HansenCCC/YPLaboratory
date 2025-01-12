@@ -28,6 +28,8 @@
 #import "YPSetAshViewController.h"
 #import "YPRunLabelViewController.h"
 #import "YPFloatingViewViewController.h"
+#import "YPBarcodeAndQRCodeManager.h"
+#import "YPBarcodeAndQRCodeCell.h"
 
 @implementation YPPageRouterModule (Component)
 
@@ -37,6 +39,12 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"二维码生成".yp_localizedString;
+        element.type = YPPageRouterTypeModule;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"条形码生成".yp_localizedString;
         element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
     }
@@ -180,7 +188,6 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"单行输入框".yp_localizedString;
         element.type = YPPageRouterTypeModule;
-        element.placeholder = element.title;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             YPSingleLineInputViewController *vc = [[YPSingleLineInputViewController alloc] init];
             vc.title = router.title;
@@ -193,7 +200,6 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"多行输入框".yp_localizedString;
         element.type = YPPageRouterTypeModule;
-        element.placeholder = element.title;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             YPMultiLineInputViewController *vc = [[YPMultiLineInputViewController alloc] init];
             vc.title = router.title;
@@ -450,6 +456,7 @@
 
 // 导航栏控制
 + (NSArray *)ComponentRouters_NavigationBar {
+    __weak typeof(self) weakSelf = self;
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     UINavigationBar *navigationBar = [UIViewController yp_topViewController].navigationController.navigationBar;
     {
@@ -621,7 +628,7 @@
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             [navigationBar yp_resetConfiguration];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self yp_reloadCurrentModuleControl];
+                [weakSelf yp_reloadCurrentModuleControl];
             });
         };
         [dataList addObject:element];
@@ -1008,12 +1015,49 @@
 
 /// 二维码生成
 + (NSArray *)ComponentRouters_QRCodeMaker {
+    __weak typeof(self) weakSelf = self;
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"文本".yp_localizedString;
-        element.placeholder = @"请输入基本字符（字母、数字、符号）";
+        element.placeholder = @"字母、数字、符号".yp_localizedString;
+        element.content = [YPBarcodeAndQRCodeManager shareInstance].codeText?:@"";
         element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPMultiLineInputViewController *vc = [[YPMultiLineInputViewController alloc] init];
+            vc.text = router.content;
+            vc.title = router.title;
+            vc.placeholder = router.placeholder;
+            vc.maxLength = 1500;
+            vc.didCompleteCallback = ^(NSString * _Nonnull text) {
+                [YPBarcodeAndQRCodeManager shareInstance].qrImage = nil;
+                [YPBarcodeAndQRCodeManager shareInstance].codeText = text;
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakSelf yp_reloadCurrentModuleControl];
+                });
+            };
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"尺寸".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.content = [YPBarcodeAndQRCodeManager shareInstance].size;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            NSArray *items = [YPBarcodeAndQRCodeManager shareInstance].sizes;
+            NSInteger index = [items indexOfObject:[YPBarcodeAndQRCodeManager shareInstance].size];
+            YPPickerAlert *alert = [YPPickerAlert popupWithOptions:items completeBlock:^(NSInteger index) {
+                [YPBarcodeAndQRCodeManager shareInstance].qrImage = nil;
+                [YPBarcodeAndQRCodeManager shareInstance].size = items[index];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakSelf yp_reloadCurrentModuleControl];
+                });
+            }];
+            alert.currentIndex = index;
+            [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
+        };
         [dataList addObject:element];
     }
     {
@@ -1024,18 +1068,164 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"容错级别".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
+        element.placeholder = @"L、M、Q、H";
+        element.content = [YPBarcodeAndQRCodeManager shareInstance].faultTolerant;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            NSArray *items = [YPBarcodeAndQRCodeManager shareInstance].faultTolerants;
+            NSInteger index = [items indexOfObject:[YPBarcodeAndQRCodeManager shareInstance].faultTolerant];
+            YPPickerAlert *alert = [YPPickerAlert popupWithOptions:items completeBlock:^(NSInteger index) {
+                [YPBarcodeAndQRCodeManager shareInstance].qrImage = nil;
+                [YPBarcodeAndQRCodeManager shareInstance].faultTolerant = items[index];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakSelf yp_reloadCurrentModuleControl];
+                });
+            }];
+            alert.currentIndex = index;
+            [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
+        };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"尺寸".yp_localizedString;
+        element.title = @"开始生成".yp_localizedString;
+        element.type = YPPageRouterTypeButton;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            if ([YPBarcodeAndQRCodeManager shareInstance].codeText.length == 0) {
+                [YPAlertView alertText:@"请输入文本"];
+                return;
+            }
+            if ([YPBarcodeAndQRCodeManager shareInstance].size.length == 0) {
+                [YPAlertView alertText:@"请选择尺寸"];
+                return;
+            }
+            if ([YPBarcodeAndQRCodeManager shareInstance].faultTolerant.length == 0) {
+                [YPAlertView alertText:@"请选择容错级别"];
+                return;
+            }
+            NSString *text = [YPBarcodeAndQRCodeManager shareInstance].codeText;
+            NSString *faultTolerant = [YPBarcodeAndQRCodeManager shareInstance].faultTolerant;
+            NSString *size = [YPBarcodeAndQRCodeManager shareInstance].size;
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                UIImage *image = [UIImage yp_imageWithQRCodeString:text
+                                                              size:CGSizeMake(size.integerValue, size.integerValue)
+                                                   correctionLevel:faultTolerant];
+                if (image) {
+                    [YPBarcodeAndQRCodeManager shareInstance].qrImage = image;
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [[YPShakeManager shareInstance] longPressShake];
+                    [weakSelf yp_reloadCurrentModuleControl];
+                });
+            });
+        };
+        [dataList addObject:element];
+    }
+    if ([YPBarcodeAndQRCodeManager shareInstance].qrImage) {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"保存到相册".yp_localizedString;
+        element.type = YPPageRouterTypeButton;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            UIImage *image = [YPBarcodeAndQRCodeManager shareInstance].qrImage;
+            [UIImage yp_saveImageToAlbum:image completion:^(BOOL success, NSError * _Nonnull error) {
+                [[YPShakeManager shareInstance] longPressShake];
+                if (success) {
+                    [YPAlertView alertText:@"保存到相册成功"];
+                } else {
+                    [YPAlertView alertText:@"保存到相册失败"];
+                }
+            }];
+        };
+        [dataList addObject:element];
+    }
+    if ([YPBarcodeAndQRCodeManager shareInstance].qrImage) {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = [YPBarcodeAndQRCodeManager shareInstance].codeText;
+        element.type = YPPageRouterTypeCustom;
+        element.cellClass = [YPBarcodeAndQRCodeCell class];
+        element.cellHeight = MIN([UIScreen mainScreen].bounds.size.width, 500.f);
+        element.extend = [YPBarcodeAndQRCodeManager shareInstance].qrImage;
+        [dataList addObject:element];
+    }
+    YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
+    return @[section];
+}
+
+/// 条形码生成
++ (NSArray *)ComponentRouters_BRCodeMaker {
+    __weak typeof(self) weakSelf = self;
+    NSMutableArray *dataList = [[NSMutableArray alloc] init];
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"文本".yp_localizedString;
+        element.placeholder = @"字母、数字、符号".yp_localizedString;
+        element.content = [YPBarcodeAndQRCodeManager shareInstance].brCodeText?:@"";
         element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPMultiLineInputViewController *vc = [[YPMultiLineInputViewController alloc] init];
+            vc.text = router.content;
+            vc.title = router.title;
+            vc.placeholder = router.placeholder;
+            vc.maxLength = 1500;
+            vc.didCompleteCallback = ^(NSString * _Nonnull text) {
+                [YPBarcodeAndQRCodeManager shareInstance].brImage = nil;
+                [YPBarcodeAndQRCodeManager shareInstance].brCodeText = text;
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakSelf yp_reloadCurrentModuleControl];
+                });
+            };
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"格式".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
+        element.title = @"开始生成".yp_localizedString;
+        element.type = YPPageRouterTypeButton;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            if ([YPBarcodeAndQRCodeManager shareInstance].brCodeText.length == 0) {
+                [YPAlertView alertText:@"请输入文本"];
+                return;
+            }
+            NSString *text = [YPBarcodeAndQRCodeManager shareInstance].brCodeText;
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                UIImage *image = [UIImage yp_imageWithBRCodeString:text];
+                if (image) {
+                    [YPBarcodeAndQRCodeManager shareInstance].brImage = image;
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [[YPShakeManager shareInstance] longPressShake];
+                    [weakSelf yp_reloadCurrentModuleControl];
+                });
+            });
+        };
+        [dataList addObject:element];
+    }
+    if ([YPBarcodeAndQRCodeManager shareInstance].brImage) {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"保存到相册".yp_localizedString;
+        element.type = YPPageRouterTypeButton;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            UIImage *image = [YPBarcodeAndQRCodeManager shareInstance].brImage;
+            [UIImage yp_saveImageToAlbum:image completion:^(BOOL success, NSError * _Nonnull error) {
+                [[YPShakeManager shareInstance] longPressShake];
+                if (success) {
+                    [YPAlertView alertText:@"保存到相册成功"];
+                } else {
+                    [YPAlertView alertText:@"保存到相册失败"];
+                }
+            }];
+        };
+        [dataList addObject:element];
+    }
+    if ([YPBarcodeAndQRCodeManager shareInstance].brImage) {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = [YPBarcodeAndQRCodeManager shareInstance].brCodeText;
+        element.type = YPPageRouterTypeCustom;
+        element.cellClass = [YPBarcodeAndQRCodeCell class];
+        UIImage *image = [YPBarcodeAndQRCodeManager shareInstance].brImage;
+        CGFloat height = [UIScreen mainScreen].bounds.size.width * image.size.height / image.size.width;
+        element.cellHeight = MAX(height, 44.f);
+        element.extend = image;
         [dataList addObject:element];
     }
     YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
