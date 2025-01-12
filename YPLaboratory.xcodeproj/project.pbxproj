@@ -54,6 +54,7 @@
 		606929FB2A2BA4B20045D2EB /* YPModuleButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606929FA2A2BA4B20045D2EB /* YPModuleButtonCell.m */; };
 		606E7AB52D3385F7008A0160 /* YPBarcodeAndQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E7AB42D3385F7008A0160 /* YPBarcodeAndQRCodeManager.m */; };
 		606E7AB82D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E7AB72D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m */; };
+		606E7ABC2D33F23F008A0160 /* YPNetworkRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E7ABB2D33F23F008A0160 /* YPNetworkRequestManager.m */; };
 		6073390F2A2F8E050096EC27 /* YPPageRouterModule+Idea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6073390E2A2F8E050096EC27 /* YPPageRouterModule+Idea.m */; };
 		607D9DA52CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DA42CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m */; };
 		607D9DAF2CD9C26400C3B591 /* YPDiverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DAD2CD9C26400C3B591 /* YPDiverseViewController.m */; };
@@ -190,6 +191,8 @@
 		606E7AB42D3385F7008A0160 /* YPBarcodeAndQRCodeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPBarcodeAndQRCodeManager.m; sourceTree = "<group>"; };
 		606E7AB62D3396CA008A0160 /* YPBarcodeAndQRCodeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPBarcodeAndQRCodeCell.h; sourceTree = "<group>"; };
 		606E7AB72D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPBarcodeAndQRCodeCell.m; sourceTree = "<group>"; };
+		606E7ABA2D33F23F008A0160 /* YPNetworkRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPNetworkRequestManager.h; sourceTree = "<group>"; };
+		606E7ABB2D33F23F008A0160 /* YPNetworkRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPNetworkRequestManager.m; sourceTree = "<group>"; };
 		6073390D2A2F8E050096EC27 /* YPPageRouterModule+Idea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPPageRouterModule+Idea.h"; sourceTree = "<group>"; };
 		6073390E2A2F8E050096EC27 /* YPPageRouterModule+Idea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+Idea.m"; sourceTree = "<group>"; };
 		607D9DA32CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPDisableScreenCaptureViewController.h; sourceTree = "<group>"; };
@@ -362,6 +365,7 @@
 		602B3D2A2A4B3D1200A62E1F /* MouldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				606E7AB92D33F229008A0160 /* NetworkRequest */,
 				606E7AB22D338553008A0160 /* QRCodeMaker */,
 				60B5807A2D3229C4009F0694 /* FloatingView */,
 				60B128DB2CDB49AB00A3E6BE /* SetAsh */,
@@ -564,6 +568,15 @@
 				606E7AB72D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m */,
 			);
 			path = QRCodeMaker;
+			sourceTree = "<group>";
+		};
+		606E7AB92D33F229008A0160 /* NetworkRequest */ = {
+			isa = PBXGroup;
+			children = (
+				606E7ABA2D33F23F008A0160 /* YPNetworkRequestManager.h */,
+				606E7ABB2D33F23F008A0160 /* YPNetworkRequestManager.m */,
+			);
+			path = NetworkRequest;
 			sourceTree = "<group>";
 		};
 		607D9DA22CD8C0B000C3B591 /* DisableScreenCapture */ = {
@@ -935,6 +948,7 @@
 				604E52972A6AE5F8009950AA /* YPFaceTrackCaptureSessionView.m in Sources */,
 				6073390F2A2F8E050096EC27 /* YPPageRouterModule+Idea.m in Sources */,
 				6034B30C2A14A99A0024E610 /* YPWorldTableViewCell.m in Sources */,
+				606E7ABC2D33F23F008A0160 /* YPNetworkRequestManager.m in Sources */,
 				606929F52A2BA07C0045D2EB /* YPModuleSwitchCell.m in Sources */,
 				6034B2862A14A64E0024E610 /* YPRootViewController.m in Sources */,
 				60F52A9E2A49374900BB6254 /* YPSwiperCardTableViewCell.m in Sources */,
