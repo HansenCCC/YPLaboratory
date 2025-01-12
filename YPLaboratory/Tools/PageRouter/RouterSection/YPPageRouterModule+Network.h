@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 // 网络请求
 + (NSArray *)NetworkRouters_Request;
 
+// 请求头
++ (NSArray *)NetworkRouters_Request_Headers;
+
+// 请求体
++ (NSArray *)NetworkRouters_Request_Body;
+
 @end
 
 NS_ASSUME_NONNULL_END

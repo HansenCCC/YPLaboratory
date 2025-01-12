@@ -55,6 +55,8 @@
 		606E7AB52D3385F7008A0160 /* YPBarcodeAndQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E7AB42D3385F7008A0160 /* YPBarcodeAndQRCodeManager.m */; };
 		606E7AB82D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E7AB72D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m */; };
 		606E7ABC2D33F23F008A0160 /* YPNetworkRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E7ABB2D33F23F008A0160 /* YPNetworkRequestManager.m */; };
+		606E7ABF2D34126E008A0160 /* YPCustomHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E7ABE2D34126E008A0160 /* YPCustomHTTPRequest.m */; };
+		606E7AC22D341CF6008A0160 /* YPNetworkRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E7AC12D341CF6008A0160 /* YPNetworkRequestCell.m */; };
 		6073390F2A2F8E050096EC27 /* YPPageRouterModule+Idea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6073390E2A2F8E050096EC27 /* YPPageRouterModule+Idea.m */; };
 		607D9DA52CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DA42CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m */; };
 		607D9DAF2CD9C26400C3B591 /* YPDiverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D9DAD2CD9C26400C3B591 /* YPDiverseViewController.m */; };
@@ -193,6 +195,10 @@
 		606E7AB72D3396CA008A0160 /* YPBarcodeAndQRCodeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPBarcodeAndQRCodeCell.m; sourceTree = "<group>"; };
 		606E7ABA2D33F23F008A0160 /* YPNetworkRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPNetworkRequestManager.h; sourceTree = "<group>"; };
 		606E7ABB2D33F23F008A0160 /* YPNetworkRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPNetworkRequestManager.m; sourceTree = "<group>"; };
+		606E7ABD2D34126E008A0160 /* YPCustomHTTPRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPCustomHTTPRequest.h; sourceTree = "<group>"; };
+		606E7ABE2D34126E008A0160 /* YPCustomHTTPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPCustomHTTPRequest.m; sourceTree = "<group>"; };
+		606E7AC02D341CF6008A0160 /* YPNetworkRequestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPNetworkRequestCell.h; sourceTree = "<group>"; };
+		606E7AC12D341CF6008A0160 /* YPNetworkRequestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPNetworkRequestCell.m; sourceTree = "<group>"; };
 		6073390D2A2F8E050096EC27 /* YPPageRouterModule+Idea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPPageRouterModule+Idea.h"; sourceTree = "<group>"; };
 		6073390E2A2F8E050096EC27 /* YPPageRouterModule+Idea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+Idea.m"; sourceTree = "<group>"; };
 		607D9DA32CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPDisableScreenCaptureViewController.h; sourceTree = "<group>"; };
@@ -340,6 +346,8 @@
 				60257FF92A1A5B8200091000 /* YPHTTPInitiateRequest.m */,
 				60257FFE2A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.h */,
 				60257FFF2A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.m */,
+				606E7ABD2D34126E008A0160 /* YPCustomHTTPRequest.h */,
+				606E7ABE2D34126E008A0160 /* YPCustomHTTPRequest.m */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -575,6 +583,8 @@
 			children = (
 				606E7ABA2D33F23F008A0160 /* YPNetworkRequestManager.h */,
 				606E7ABB2D33F23F008A0160 /* YPNetworkRequestManager.m */,
+				606E7AC02D341CF6008A0160 /* YPNetworkRequestCell.h */,
+				606E7AC12D341CF6008A0160 /* YPNetworkRequestCell.m */,
 			);
 			path = NetworkRequest;
 			sourceTree = "<group>";
@@ -994,6 +1004,7 @@
 				60257FFA2A1A5B8200091000 /* YPHTTPInitiateRequest.m in Sources */,
 				6034B2562A1485D80024E610 /* AppDelegate.m in Sources */,
 				60C1C75F2A4D8306004FC354 /* YPAppH5PopupController.m in Sources */,
+				606E7AC22D341CF6008A0160 /* YPNetworkRequestCell.m in Sources */,
 				608D8FA32A73730F004E1E6D /* YPCameraCaptureSessionView.m in Sources */,
 				60809BE82CF9B5AE00C04654 /* YPAVCaptureSessionView.m in Sources */,
 				607D9DAF2CD9C26400C3B591 /* YPDiverseViewController.m in Sources */,
@@ -1002,6 +1013,7 @@
 				6034B31E2A14A9D90024E610 /* YPUserProxy.m in Sources */,
 				6034B31C2A14A9D90024E610 /* YPUserTableViewCell.m in Sources */,
 				60B128DA2CDB3CA700A3E6BE /* YPRunLabelViewController.m in Sources */,
+				606E7ABF2D34126E008A0160 /* YPCustomHTTPRequest.m in Sources */,
 				6034B31F2A14A9D90024E610 /* YPUserViewController.m in Sources */,
 				6019B7922A2E376B0083FA7F /* YPPageRouterModule+Update.m in Sources */,
 				60257FFD2A1A5F2400091000 /* AppDelegate+YPThird.m in Sources */,

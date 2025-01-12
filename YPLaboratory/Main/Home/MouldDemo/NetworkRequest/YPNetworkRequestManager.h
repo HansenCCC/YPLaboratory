@@ -22,9 +22,11 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, strong) NSString *urlString;
 @property (nonatomic, assign) YPRequestMethod method;
-@property (nonatomic, strong) NSString *methodString;
+@property (nonatomic, readonly) NSString *methodString;
 @property (nonatomic, strong) NSString *headers;
+@property (nonatomic, readonly) NSDictionary *headersDictionary;
 @property (nonatomic, strong) NSString *body;
+@property (nonatomic, readonly) NSDictionary *bodyDictionary;
 
 + (instancetype)shareInstance;
 

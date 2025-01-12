@@ -8,6 +8,8 @@
 #import "YPPageRouterModule+Network.h"
 #import "YPPageRouterModule+Update.h"
 #import "YPNetworkRequestManager.h"
+#import "YPNetworkRequestCell.h"
+#import "YPModuleTableViewController.h"
 
 @implementation YPPageRouterModule (Network)
 
@@ -21,7 +23,7 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"IP 地址获取".yp_localizedString;
+        element.title = @"获取本机 IP".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             
@@ -159,39 +161,15 @@
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"Headers".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.content = [YPNetworkRequestManager shareInstance].headers?:@"";
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            YPMultiLineInputViewController *vc = [[YPMultiLineInputViewController alloc] init];
-            vc.text = router.content;
-            vc.title = router.title;
-            vc.placeholder = router.placeholder;
-            vc.maxLength = 10000;
-            vc.didCompleteCallback = ^(NSString * _Nonnull text) {
-                [YPNetworkRequestManager shareInstance].headers = text;
-                [weakSelf yp_reloadCurrentModuleControl];
-            };
-            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
-        };
+        element.type = YPPageRouterTypeModule;
+        element.content = @([YPNetworkRequestManager shareInstance].headersDictionary.count).stringValue;
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"Body".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.content = [YPNetworkRequestManager shareInstance].body?:@"";
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            YPMultiLineInputViewController *vc = [[YPMultiLineInputViewController alloc] init];
-            vc.text = router.content;
-            vc.title = router.title;
-            vc.placeholder = router.placeholder;
-            vc.maxLength = 10000;
-            vc.didCompleteCallback = ^(NSString * _Nonnull text) {
-                [YPNetworkRequestManager shareInstance].body = text;
-                [weakSelf yp_reloadCurrentModuleControl];
-            };
-            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
-        };
+        element.type = YPPageRouterTypeModule;
+        element.content = @([YPNetworkRequestManager shareInstance].bodyDictionary.count).stringValue;
         [dataList addObject:element];
     }
     {
@@ -204,6 +182,114 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"历史记录".yp_localizedString;
         element.type = YPPageRouterTypeButton;
+        [dataList addObject:element];
+    }
+    YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
+    return @[section];
+}
+
++ (NSArray *)NetworkRouters_Request_Headers {
+    __weak typeof(self) weakSelf = self;
+    NSMutableArray *dataList = [[NSMutableArray alloc] init];
+    NSDictionary *headersDictionary = [YPNetworkRequestManager shareInstance].headersDictionary;
+    for (NSString *key in headersDictionary) {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.type = YPPageRouterTypeCustom;
+        element.cellClass = [YPNetworkRequestCell class];
+        element.title = key;
+        element.content = headersDictionary[key];
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [weakSelf yp_reloadCurrentCell:cell];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.type = YPPageRouterTypeCustom;
+        element.cellClass = [YPNetworkRequestCell class];
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [weakSelf yp_reloadCurrentCell:cell];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"添加字段".yp_localizedString;
+        element.type = YPPageRouterTypeButton;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [[UIViewController yp_topViewController].view endEditing:YES];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                UIViewController *vc = [UIViewController yp_topViewController];
+                if ([vc isKindOfClass:[YPModuleTableViewController class]]) {
+                    YPPageRouterModule *section = [(YPModuleTableViewController *)vc dataList].firstObject;
+                    NSArray *dataList = section.routers;
+                    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+                    for (YPPageRouter *model in dataList) {
+                        if (model.cellClass == [YPNetworkRequestCell class]) {
+                            if (model.title.length > 0) {
+                                dic[model.title] = model.content?:@"";
+                            }
+                        }
+                    }
+                    [YPNetworkRequestManager shareInstance].headers = dic.yp_dictionaryToJsonStringNoSpace;
+                }
+                [self yp_reloadCurrentModuleControl];
+            });
+        };
+        [dataList addObject:element];
+    }
+    YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
+    return @[section];
+}
+
++ (NSArray *)NetworkRouters_Request_Body {
+    __weak typeof(self) weakSelf = self;
+    NSMutableArray *dataList = [[NSMutableArray alloc] init];
+    NSDictionary *headersDictionary = [YPNetworkRequestManager shareInstance].bodyDictionary;
+    for (NSString *key in headersDictionary) {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.type = YPPageRouterTypeCustom;
+        element.cellClass = [YPNetworkRequestCell class];
+        element.title = key;
+        element.content = headersDictionary[key];
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [weakSelf yp_reloadCurrentCell:cell];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.type = YPPageRouterTypeCustom;
+        element.cellClass = [YPNetworkRequestCell class];
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [weakSelf yp_reloadCurrentCell:cell];
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"保存/添加字段".yp_localizedString;
+        element.type = YPPageRouterTypeButton;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [[UIViewController yp_topViewController].view endEditing:YES];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                UIViewController *vc = [UIViewController yp_topViewController];
+                if ([vc isKindOfClass:[YPModuleTableViewController class]]) {
+                    YPPageRouterModule *section = [(YPModuleTableViewController *)vc dataList].firstObject;
+                    NSArray *dataList = section.routers;
+                    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+                    for (YPPageRouter *model in dataList) {
+                        if (model.cellClass == [YPNetworkRequestCell class]) {
+                            if (model.title.length > 0) {
+                                dic[model.title] = model.content?:@"";
+                            }
+                        }
+                    }
+                    [YPNetworkRequestManager shareInstance].body = dic.yp_dictionaryToJsonStringNoSpace;
+                }
+                [self yp_reloadCurrentModuleControl];
+            });
+        };
         [dataList addObject:element];
     }
     YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];

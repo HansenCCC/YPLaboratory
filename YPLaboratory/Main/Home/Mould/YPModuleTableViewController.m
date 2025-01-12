@@ -18,6 +18,7 @@
 #import "YPSwiperCardTableViewCell.h"
 #import "YPSystemFontsTableViewCell.h"
 #import "YPBarcodeAndQRCodeCell.h"
+#import "YPNetworkRequestCell.h"
 
 @interface YPModuleTableViewController () <YPModuleTableViewModelDelegate>
 
@@ -34,7 +35,6 @@
     // Do any additional setup after loading the view.
     
     [self setupSubviews];
-    [self startLoadData];
 }
 
 - (void)startLoadData {
@@ -47,6 +47,11 @@
         make.left.right.bottom.equalTo(self.view);
         make.top.equalTo(self.view);
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self startLoadData];
 }
 
 #pragma mark - YPModuleTableViewModelDelegate
@@ -63,6 +68,10 @@
 }
 
 #pragma mark - getters | setters
+
+- (NSArray <YPPageRouterModule *>*)dataList {
+    return self.viewModel.dataList;
+}
 
 - (UITableView *)tableView {
     if (!_tableView) {
@@ -99,6 +108,7 @@
             [YPSwiperCardTableViewCell class],
             [YPSystemFontsTableViewCell class],
             [YPBarcodeAndQRCodeCell class],
+            [YPNetworkRequestCell class],
         ];
         [classs enumerateObjectsUsingBlock:^(Class  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [tableView registerClass:obj forCellReuseIdentifier:NSStringFromClass(obj)];

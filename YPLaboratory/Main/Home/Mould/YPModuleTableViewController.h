@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)startLoadData;
 
+- (NSArray <YPPageRouterModule *>*)dataList;
+
 @end
 
 NS_ASSUME_NONNULL_END

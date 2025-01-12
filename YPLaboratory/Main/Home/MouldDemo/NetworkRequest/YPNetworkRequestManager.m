@@ -6,6 +6,7 @@
 //
 
 #import "YPNetworkRequestManager.h"
+#import "YPCustomHTTPRequest.h"
 
 @implementation YPNetworkRequestManager
 
@@ -15,8 +16,8 @@
     dispatch_once(&onceToken, ^{
         m = [[YPNetworkRequestManager alloc] init];
         m.method = YPRequestMethodGET;
-        m.body = @"{}";
-        m.headers = @"{}";
+        m.body = @{}.yp_dictionaryToJsonStringNoSpace;
+        m.headers = [YPCustomHTTPRequest defaultHeaders].yp_dictionaryToJsonStringNoSpace;
         m.urlString = @"https://chuizi.shop";
     });
     return m;
@@ -35,6 +36,14 @@
         @"OPTIONS",
         @"HEAD",
     ];
+}
+
+- (NSDictionary *)headersDictionary {
+    return self.headers.yp_jsonStringToDictionary;
+}
+
+- (NSDictionary *)bodyDictionary {
+    return self.body.yp_jsonStringToDictionary;
 }
 
 @end

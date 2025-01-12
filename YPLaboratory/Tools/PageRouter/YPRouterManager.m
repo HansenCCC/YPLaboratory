@@ -79,6 +79,10 @@
         dataList = [YPPageRouterModule NetworkRouters_Request];
     } else if ([model.title isEqualToString:@"条形码生成".yp_localizedString]) {
         dataList = [YPPageRouterModule ComponentRouters_BRCodeMaker];
+    } else if ([model.title isEqualToString:@"Headers".yp_localizedString]) {
+        dataList = [YPPageRouterModule NetworkRouters_Request_Headers];
+    } else if ([model.title isEqualToString:@"Body".yp_localizedString]) {
+        dataList = [YPPageRouterModule NetworkRouters_Request_Body];
     }
     return [dataList copy];
 }

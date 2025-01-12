@@ -329,7 +329,7 @@
         element.title = @"时分".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         NSString *format = @"HH:mm";
-        element.content = format;
+        element.placeholder = format;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSDate *date = [NSDate yp_DateWithString:router.content dateFormat:format];
             YPDatePickerAlert *alert = [YPDatePickerAlert popupWithDate:date?:[NSDate date] completeBlock:^(NSDate * _Nonnull date) {
@@ -346,7 +346,7 @@
         element.title = @"年月日".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         NSString *format = @"yyyy-MM-dd";
-        element.content = format;
+        element.placeholder = format;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSDate *date = [NSDate yp_DateWithString:router.content dateFormat:format];
             YPDatePickerAlert *alert = [YPDatePickerAlert popupWithDate:date?:[NSDate date] completeBlock:^(NSDate * _Nonnull date) {
@@ -363,7 +363,7 @@
         element.title = @"年月日分".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         NSString *format = @"yyyy-MM-dd HH:mm";
-        element.content = format;
+        element.placeholder = format;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSDate *date = [NSDate yp_DateWithString:router.content dateFormat:format];
             YPDatePickerAlert *alert = [YPDatePickerAlert popupWithDate:date?:[NSDate date] completeBlock:^(NSDate * _Nonnull date) {
@@ -380,7 +380,7 @@
         element.title = @"倒计时".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         NSString *format = @"HH:mm";
-        element.content = format;
+        element.placeholder = format;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSDate *date = [NSDate yp_DateWithString:router.content dateFormat:format];
             YPDatePickerAlert *alert = [YPDatePickerAlert popupWithDate:date?:[NSDate date] completeBlock:^(NSDate * _Nonnull date) {
@@ -396,7 +396,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"字体选择".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"Font";
+        element.placeholder = @"Font";
         NSArray *fonts = [UIFont familyNames];
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSUInteger currentIndex = [fonts indexOfObject:router.content];
@@ -413,7 +413,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"颜色选择".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"Color";
+        element.placeholder = @"Color";
         NSArray *colors = [UIColor yp_allColors];
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSUInteger currentIndex = [colors indexOfObject:router.content];
@@ -430,7 +430,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"性别选择".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"Gender";
+        element.placeholder = @"性别".yp_localizedString;
         NSArray *fonts = @[@"男".yp_localizedString,@"女".yp_localizedString,@"沃尔玛购物袋".yp_localizedString];
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSUInteger currentIndex = [fonts indexOfObject:router.content];
@@ -447,7 +447,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"地址选择（省市区）".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"Address";
+        element.placeholder = @"Address";
         [dataList addObject:element];
     }
     YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
@@ -701,7 +701,7 @@
         element.title = @"例如：时间选择弹框".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         NSString *format = @"yyyy-MM-dd HH:mm";
-        element.content = format;
+        element.placeholder = format;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSDate *date = [NSDate yp_DateWithString:router.content dateFormat:format];
             YPDatePickerAlert *alert = [YPDatePickerAlert popupWithDate:date?:[NSDate date] completeBlock:^(NSDate * _Nonnull date) {
@@ -717,7 +717,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"例如：单选弹框".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"Font";
+        element.placeholder = @"Font";
         NSArray *fonts = [UIFont familyNames];
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSUInteger currentIndex = [fonts indexOfObject:router.content];
@@ -734,7 +734,7 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"例如：颜色选择弹框".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
-        element.content = @"Color";
+        element.placeholder = @"Color";
         NSArray *colors = [UIColor yp_allColors];
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView *cell) {
             NSUInteger currentIndex = [colors indexOfObject:router.content];

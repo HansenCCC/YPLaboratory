@@ -20,15 +20,13 @@
                  failureHandler:(void (^)(NSError *error))failureHandler {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    if (self.method == WTHTTPMethodGET) {
+        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    }
     manager.requestSerializer.timeoutInterval = self.timeout;
     NSDictionary *parameters = self.parameters;
     NSDictionary *headers = self.httpHeader;
     NSString *requestStr = [NSString stringWithFormat:@"%@%@",self.host,self.path];
-    if (self.method == WTHTTPMethodGET) {
-        // get 使用表单请求
-        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-        [manager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-Type"];
-    }
     yplog_msg(@"network -> begin -> URL:%@",requestStr);
     [manager POST:requestStr parameters:parameters headers:headers progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         dispatch_async(dispatch_get_main_queue(), ^{
