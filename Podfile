@@ -18,6 +18,7 @@ target 'YPLaboratory' do
   pod 'FLAnimatedImage', '1.0.17'
   pod 'Bugly', '2.5.93'
   pod 'Masonry', '1.1.0'
+  pod 'FMDB'
 end
 
 post_install do |installer|
