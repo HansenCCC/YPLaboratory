@@ -18,6 +18,8 @@ typedef enum : NSUInteger {
     YPRequestMethodHEAD,
 } YPRequestMethod;
 
+@class YpApiRequest;
+
 @interface YPNetworkRequestManager : NSObject
 
 @property (nonatomic, strong) NSString *urlString;
@@ -27,6 +29,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, readonly) NSDictionary *headersDictionary;
 @property (nonatomic, strong) NSString *body;
 @property (nonatomic, readonly) NSDictionary *bodyDictionary;
+
+@property (nonatomic, strong) YpApiRequest *lastRequest;
 
 + (instancetype)shareInstance;
 

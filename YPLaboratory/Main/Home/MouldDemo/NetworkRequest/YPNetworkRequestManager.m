@@ -7,6 +7,7 @@
 
 #import "YPNetworkRequestManager.h"
 #import "YPCustomHTTPRequest.h"
+#import "YpApiRequestDao.h"
 
 @implementation YPNetworkRequestManager
 
@@ -18,7 +19,8 @@
         m.method = YPRequestMethodGET;
         m.body = @{}.yp_dictionaryToJsonStringNoSpace;
         m.headers = [YPCustomHTTPRequest defaultHeaders].yp_dictionaryToJsonStringNoSpace;
-        m.urlString = @"https://chuizi.shop";
+        m.urlString = @"https://my.chuizi.shop/api/v1/helloWorld";
+        [[YpApiRequestDao get] openWithPath:@"api-request"];
     });
     return m;
 }
@@ -33,7 +35,6 @@
         @"POST",
         @"PUT",
         @"DELETE",
-        @"OPTIONS",
         @"HEAD",
     ];
 }

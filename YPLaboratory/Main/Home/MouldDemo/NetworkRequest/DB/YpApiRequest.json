@@ -1,0 +1,25 @@
+{
+    "mode": "DAO",
+    "module": "YpApiRequest",
+    "table": "yp_api_request",
+    "property": {
+        "id": "long",
+        "url": "NSString",
+        "method": "NSString",
+        "headers": "NSString",
+        "body": "NSString",
+        "isLoading": "BOOL",
+        "response": "NSString",
+        "success": "BOOL",
+        "isEnable": "BOOL",
+        "extend": "NSString",
+        "startDate": "NSDate",
+        "endDate": "NSDate",
+        "createdDate": "NSDate",
+        "updatedDate": "NSDate",
+        "deletedDate": "NSDate"
+    },
+    "index": {
+      "primary-autoincrement": "id"
+    }
+}

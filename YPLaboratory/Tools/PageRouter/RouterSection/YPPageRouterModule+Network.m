@@ -10,6 +10,10 @@
 #import "YPNetworkRequestManager.h"
 #import "YPNetworkRequestCell.h"
 #import "YPModuleTableViewController.h"
+#import "YPCustomHTTPRequest.h"
+#import "YpApiRequestDao.h"
+#import "YPRequestInstanceViewController.h"
+#import "YPNetworkInfoCell.h"
 
 @implementation YPPageRouterModule (Network)
 
@@ -176,16 +180,50 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"发送请求".yp_localizedString;
         element.type = YPPageRouterTypeButton;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            [weakSelf yp_reloadCurrentModuleControl];
+            [YPLoadingView showLoading];
+            YPCustomHTTPRequest *request = [[YPCustomHTTPRequest alloc] init];
+            request.urlString = [YPNetworkRequestManager shareInstance].urlString;
+            request.methodString = [YPNetworkRequestManager shareInstance].methodString;
+            request.headers = [YPNetworkRequestManager shareInstance].headersDictionary;
+            request.body = [YPNetworkRequestManager shareInstance].bodyDictionary;
+            [request startWithSuccessHandler:^(YPHTTPResponse * _Nonnull response) {
+                [YPLoadingView hideLoading];
+                [[YPShakeManager shareInstance] mediumShake];
+                [weakSelf yp_reloadCurrentModuleControl];
+            } failureHandler:^(NSError * _Nonnull error) {
+                [YPLoadingView hideLoading];
+                [[YPShakeManager shareInstance] longPressShake];
+                [weakSelf yp_reloadCurrentModuleControl];
+            }];
+        };
         [dataList addObject:element];
     }
     {
+        NSInteger count = [[YpApiRequestDao get] selectYpApiRequestCount:@"isEnable=1"];
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"历史记录".yp_localizedString;
+        element.title = [NSString stringWithFormat:@"历史记录 [%d]".yp_localizedString, count];
         element.type = YPPageRouterTypeButton;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            YPRequestInstanceViewController *vc = [[YPRequestInstanceViewController alloc] init];
+            [[UIViewController yp_topViewController].navigationController pushViewController:vc animated:YES];
+        };
         [dataList addObject:element];
     }
     YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
-    return @[section];
+    
+    NSMutableArray *dataList2 = [[NSMutableArray alloc] init];
+    if ([YPNetworkRequestManager shareInstance].lastRequest) {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.extend = [YPNetworkRequestManager shareInstance].lastRequest;
+        element.type = YPPageRouterTypeCustom;
+        element.cellHeight = 200.f;
+        element.cellClass = [YPNetworkInfoCell class];
+        [dataList2 addObject:element];
+    }
+    YPPageRouterModule *section2 = [[YPPageRouterModule alloc] initWithRouters:dataList2];
+    return @[section, section2];
 }
 
 + (NSArray *)NetworkRouters_Request_Headers {
