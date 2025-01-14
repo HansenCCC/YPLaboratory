@@ -97,6 +97,7 @@
 		60C6B0D52D09815D00194FFA /* YPPageRouterModule+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6B0D42D09815D00194FFA /* YPPageRouterModule+Device.m */; };
 		60F52A9B2A4936A400BB6254 /* YPSwiperNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F52A9A2A4936A400BB6254 /* YPSwiperNormalTableViewCell.m */; };
 		60F52A9E2A49374900BB6254 /* YPSwiperCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F52A9D2A49374900BB6254 /* YPSwiperCardTableViewCell.m */; };
+		60FC845D2D364C660007CC35 /* YPGetIPAddressRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FC845C2D364C660007CC35 /* YPGetIPAddressRequest.m */; };
 		60FF4CBA2A1F4C0100A2D04B /* YPPageRouterModule+Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF4CB92A1F4C0100A2D04B /* YPPageRouterModule+Component.m */; };
 		60FF4CBF2A1F4CBF00A2D04B /* YPPageRouterModule+AppleInternalPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF4CBE2A1F4CBF00A2D04B /* YPPageRouterModule+AppleInternalPurchase.m */; };
 		60FF4CC22A1F547B00A2D04B /* YPPageRouterModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF4CC12A1F547B00A2D04B /* YPPageRouterModule.m */; };
@@ -284,6 +285,8 @@
 		60F52A9A2A4936A400BB6254 /* YPSwiperNormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPSwiperNormalTableViewCell.m; sourceTree = "<group>"; };
 		60F52A9C2A49374900BB6254 /* YPSwiperCardTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPSwiperCardTableViewCell.h; sourceTree = "<group>"; };
 		60F52A9D2A49374900BB6254 /* YPSwiperCardTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPSwiperCardTableViewCell.m; sourceTree = "<group>"; };
+		60FC845B2D364C660007CC35 /* YPGetIPAddressRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPGetIPAddressRequest.h; sourceTree = "<group>"; };
+		60FC845C2D364C660007CC35 /* YPGetIPAddressRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPGetIPAddressRequest.m; sourceTree = "<group>"; };
 		60FF4C9A2A1B17AD00A2D04B /* YPLaboratory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YPLaboratory.entitlements; sourceTree = "<group>"; };
 		60FF4CB82A1F4C0100A2D04B /* YPPageRouterModule+Component.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPPageRouterModule+Component.h"; sourceTree = "<group>"; };
 		60FF4CB92A1F4C0100A2D04B /* YPPageRouterModule+Component.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPPageRouterModule+Component.m"; sourceTree = "<group>"; };
@@ -371,6 +374,8 @@
 				60257FFF2A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.m */,
 				606E7ABD2D34126E008A0160 /* YPCustomHTTPRequest.h */,
 				606E7ABE2D34126E008A0160 /* YPCustomHTTPRequest.m */,
+				60FC845B2D364C660007CC35 /* YPGetIPAddressRequest.h */,
+				60FC845C2D364C660007CC35 /* YPGetIPAddressRequest.m */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -1017,6 +1022,7 @@
 				6034B2E02A14A6E40024E610 /* UIColor+YPLaboratory.m in Sources */,
 				607D9DA52CD8C0E600C3B591 /* YPDisableScreenCaptureViewController.m in Sources */,
 				6034B2EF2A14A82A0024E610 /* YPNavigationViewController.m in Sources */,
+				60FC845D2D364C660007CC35 /* YPGetIPAddressRequest.m in Sources */,
 				60257FF02A1A452100091000 /* YPNetworking.m in Sources */,
 				604E52972A6AE5F8009950AA /* YPFaceTrackCaptureSessionView.m in Sources */,
 				6073390F2A2F8E050096EC27 /* YPPageRouterModule+Idea.m in Sources */,

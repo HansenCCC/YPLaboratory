@@ -21,14 +21,14 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     if (self.method == WTHTTPMethodGET) {
-        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
     }
     manager.requestSerializer.timeoutInterval = self.timeout;
     NSDictionary *parameters = self.parameters;
     NSDictionary *headers = self.httpHeader;
-    NSString *requestStr = [NSString stringWithFormat:@"%@%@",self.host,self.path];
+    NSString *requestStr = [NSString stringWithFormat:@"%@%@",self.host?:@"",self.path?:@""];
     yplog_msg(@"network -> begin -> URL:%@",requestStr);
-    [manager POST:requestStr parameters:parameters headers:headers progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    void (^success)(NSURLSessionDataTask * _Nonnull, id _Nullable) = ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         dispatch_async(dispatch_get_main_queue(), ^{
             YPHTTPResponse *data = [[YPHTTPResponse alloc] init];
             data.responseData = responseObject;
@@ -55,14 +55,25 @@
                 yplog_err(@"network -> failure -> URL:%@ header:%@ Parameters:%@ error:%@",requestStr, headers.yp_dictionaryToJsonStringNoSpace, parameters.yp_dictionaryToJsonStringNoSpace, error.description);
             }
         });
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    };
+    void (^failure)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull) = ^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (failureHandler) {
                 failureHandler(error);
             }
             yplog_err(@"network -> failure -> URL:%@ header:%@ Parameters:%@ error:%@",requestStr, headers.yp_dictionaryToJsonStringNoSpace, parameters.yp_dictionaryToJsonStringNoSpace, error.description);
         });
-    }];
+    };
+    if (self.method == WTHTTPMethodGET) {
+        [manager GET:requestStr parameters:parameters headers:headers progress:nil success:success failure:failure];
+    } else if (self.method == WTHTTPMethodPOST) {
+        [manager POST:requestStr parameters:parameters headers:headers progress:nil success:success failure:failure];
+    } else {
+        if (failureHandler) {
+            NSError *error = [NSError errorWithDomain:@"Not support" code:201 userInfo:nil];
+            failureHandler(error);
+        }
+    }
 }
 
 #pragma mark - YPHTTPRequesting

@@ -14,6 +14,7 @@
 #import "YpApiRequestDao.h"
 #import "YPRequestInstanceViewController.h"
 #import "YPNetworkInfoCell.h"
+#import "YPGetIPAddressRequest.h"
 
 @implementation YPPageRouterModule (Network)
 
@@ -30,7 +31,41 @@
         element.title = @"获取本机 IP".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            
+            [YPLoadingView showLoading];
+            YPGetIPAddressRequest *request = [[YPGetIPAddressRequest alloc] init];
+            [request startWithSuccessHandler:^(YPHTTPResponse * _Nonnull response) {
+                [YPLoadingView hideLoading];
+                NSString *addressIP = @"";
+                NSString *localIP = [YPAppManager shareInstance].ipAddress;
+                NSDictionary *data = response.responseData[@"data"];
+                if ([data isKindOfClass:[NSDictionary class]]) {
+                    addressIP = data[@"ip"];
+                }
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"获取本机 IP".yp_localizedString
+                                                                               message:data.yp_dictionaryToJsonStringNoSpace
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction
+                                  actionWithTitle:[NSString stringWithFormat:@"公网IP: %@".yp_localizedString, addressIP]
+                                  style:UIAlertActionStyleDefault
+                                  handler:^(UIAlertAction * _Nonnull action) {
+                    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+                    pasteboard.string = addressIP?:@"";
+                    [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",addressIP?:@"",@"字体已复制".yp_localizedString]];
+                }]];
+                [alert addAction:[UIAlertAction
+                                  actionWithTitle:[NSString stringWithFormat:@"本地IP: %@".yp_localizedString, localIP]
+                                  style:UIAlertActionStyleDefault
+                                  handler:^(UIAlertAction * _Nonnull action) {
+                    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+                    pasteboard.string = localIP?:@"";
+                    [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",localIP?:@"",@"字体已复制".yp_localizedString]];
+                }]];
+                [alert addAction:[UIAlertAction actionWithTitle:@"关闭".yp_localizedString style:UIAlertActionStyleCancel handler:nil]];
+                [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
+            } failureHandler:^(NSError * _Nonnull error) {
+                [YPLoadingView hideLoading];
+                [YPAlertView alertText:[NSString stringWithFormat:@"%@", error.userInfo[NSLocalizedDescriptionKey]]];
+            }];
         };
         [dataList addObject:element];
     }
