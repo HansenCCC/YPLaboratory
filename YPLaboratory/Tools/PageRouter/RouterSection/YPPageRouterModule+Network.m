@@ -102,34 +102,16 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"即时通讯".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            
-        };
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"域名解析".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            
-        };
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"端口扫描".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            
-        };
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"文件下载[断点续传]".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"即时通讯".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             

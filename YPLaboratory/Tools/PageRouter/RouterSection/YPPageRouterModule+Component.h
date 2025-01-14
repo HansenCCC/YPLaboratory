@@ -53,6 +53,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 条形码生成
 + (NSArray *)ComponentRouters_BRCodeMaker;
 
+// 普通进度条
++ (NSArray *)ComponentRouters_ProgressView;
+
 @end
 
 NS_ASSUME_NONNULL_END

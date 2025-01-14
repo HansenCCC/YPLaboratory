@@ -83,6 +83,8 @@
         dataList = [YPPageRouterModule NetworkRouters_Request_Headers];
     } else if ([model.title isEqualToString:@"Body".yp_localizedString]) {
         dataList = [YPPageRouterModule NetworkRouters_Request_Body];
+    } else if ([model.title isEqualToString:@"普通进度条".yp_localizedString]) {
+        dataList = [YPPageRouterModule ComponentRouters_ProgressView];
     }
     return [dataList copy];
 }

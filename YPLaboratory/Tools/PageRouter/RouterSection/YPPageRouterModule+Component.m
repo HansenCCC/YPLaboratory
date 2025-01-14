@@ -174,6 +174,12 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"普通进度条".yp_localizedString;
+        element.type = YPPageRouterTypeModule;
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"自定义弹框".yp_localizedString;
         element.type = YPPageRouterTypeModule;
         [dataList addObject:element];
@@ -655,6 +661,59 @@
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             [YPAlertView alertText:router.title duration:5.f];
+        };
+        [dataList addObject:element];
+    }
+    YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
+    return @[section];
+}
+
+// 普通进度条
++ (NSArray *)ComponentRouters_ProgressView {
+    // 下面 block 用于模拟下载进度，读不懂逻辑的同学，我觉得这个并不重要。
+    __block float _progress = 0;
+    __block void (^autoIncrement)(void);
+    __weak __block void (^weakAutoIncrement)(void);
+    weakAutoIncrement = autoIncrement = ^{
+        [[YPShakeManager shareInstance] lightShake];
+        _progress += 0.002;
+        NSString *text = [NSString stringWithFormat:@"%.2f%%", _progress * 100];
+        [YPProgressView showProgress:_progress text:text];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (_progress > 1) {
+                [YPProgressView showProgress:1 text:@"下载完成"];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [[YPShakeManager shareInstance] longPressShake];
+                    [YPProgressView hideProgress];
+                    _progress = 0;
+                });
+            } else {
+                if (weakAutoIncrement) {
+                    weakAutoIncrement(); // 使用弱引用调用
+                }
+            }
+        });
+    };
+    NSMutableArray *dataList = [[NSMutableArray alloc] init];
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"普通进度条(圆线)".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            if (autoIncrement) {
+                autoIncrement();
+            }
+        };
+        [dataList addObject:element];
+    }
+    {
+        YPPageRouter *element = [[YPPageRouter alloc] init];
+        element.title = @"普通进度条(直线)".yp_localizedString;
+        element.type = YPPageRouterTypeNormal;
+        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
+            if (autoIncrement) {
+                autoIncrement();
+            }
         };
         [dataList addObject:element];
     }

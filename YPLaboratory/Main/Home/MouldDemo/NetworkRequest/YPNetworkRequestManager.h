@@ -36,16 +36,6 @@ typedef enum : NSUInteger {
 
 - (NSArray <NSString*> *)methods;
 
-/// 域名解析
-/// - Parameter domain: domain
-- (NSArray *)resolveDomainToIPAddresses:(NSString *)domain;
-
-/// 端口扫描
-/// - Parameters:
-///   - host: host
-///   - port: port
-- (BOOL)isPortOpen:(NSString *)host port:(NSInteger)port;
-
 @end
 
 NS_ASSUME_NONNULL_END
