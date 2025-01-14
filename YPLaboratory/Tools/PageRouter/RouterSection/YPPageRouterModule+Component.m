@@ -878,6 +878,7 @@
                 UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
                 pasteboard.string = router.content?:@"";
                 [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",router.content?:@"",@"字体已复制".yp_localizedString]];
+                [[YPShakeManager shareInstance] longPressShake];
             };
             [dataList addObject:element];
         }

@@ -51,6 +51,7 @@
                     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
                     pasteboard.string = addressIP?:@"";
                     [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",addressIP?:@"",@"字体已复制".yp_localizedString]];
+                    [[YPShakeManager shareInstance] longPressShake];
                 }]];
                 [alert addAction:[UIAlertAction
                                   actionWithTitle:[NSString stringWithFormat:@"本地IP: %@".yp_localizedString, localIP]
@@ -59,10 +60,12 @@
                     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
                     pasteboard.string = localIP?:@"";
                     [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",localIP?:@"",@"字体已复制".yp_localizedString]];
+                    [[YPShakeManager shareInstance] longPressShake];
                 }]];
                 [alert addAction:[UIAlertAction actionWithTitle:@"关闭".yp_localizedString style:UIAlertActionStyleCancel handler:nil]];
                 [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
             } failureHandler:^(NSError * _Nonnull error) {
+                [[YPShakeManager shareInstance] mediumShake];
                 [YPLoadingView hideLoading];
                 [YPAlertView alertText:[NSString stringWithFormat:@"%@", error.userInfo[NSLocalizedDescriptionKey]]];
             }];
@@ -87,8 +90,11 @@
                     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
                     pasteboard.string = userAgent?:@"";
                     [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",userAgent?:@"",@"字体已复制".yp_localizedString]];
+                    [[YPShakeManager shareInstance] longPressShake];
                 }]];
-                [alert addAction:[UIAlertAction actionWithTitle:@"关闭".yp_localizedString style:UIAlertActionStyleCancel handler:nil]];
+                [alert addAction:[UIAlertAction actionWithTitle:@"关闭".yp_localizedString style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    [[YPShakeManager shareInstance] mediumShake];
+                }]];
                 [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
             }];
         };
