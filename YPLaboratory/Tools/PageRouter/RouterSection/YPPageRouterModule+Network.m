@@ -71,16 +71,32 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"WebSocket".yp_localizedString;
+        element.title = @"浏览器标识".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            
+            [YPLoadingView showLoading];
+            [[YPAppManager shareInstance] requestUserAgent:^(NSString * _Nonnull userAgent) {
+                [YPLoadingView hideLoading];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"浏览器标识".yp_localizedString
+                                                                               message:userAgent
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction
+                                  actionWithTitle:@"复制".yp_localizedString
+                                  style:UIAlertActionStyleDefault
+                                  handler:^(UIAlertAction * _Nonnull action) {
+                    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+                    pasteboard.string = userAgent?:@"";
+                    [YPAlertView alertText:[NSString stringWithFormat:@"'%@' %@",userAgent?:@"",@"字体已复制".yp_localizedString]];
+                }]];
+                [alert addAction:[UIAlertAction actionWithTitle:@"关闭".yp_localizedString style:UIAlertActionStyleCancel handler:nil]];
+                [[UIViewController yp_topViewController] presentViewController:alert animated:YES completion:nil];
+            }];
         };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"PING".yp_localizedString;
+        element.title = @"即时通讯".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             
@@ -107,43 +123,7 @@
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"网络诊断".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            
-        };
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"网络测速".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            
-        };
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
         element.title = @"文件下载[断点续传]".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            
-        };
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"DNS 缓存".yp_localizedString;
-        element.type = YPPageRouterTypeNormal;
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            
-        };
-        [dataList addObject:element];
-    }
-    {
-        YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"SSL/TLS 验证".yp_localizedString;
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             
