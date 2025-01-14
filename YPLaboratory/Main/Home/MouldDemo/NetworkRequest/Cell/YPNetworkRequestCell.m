@@ -62,6 +62,7 @@
         _keyTextField.layer.cornerRadius = 5.f;
         _keyTextField.returnKeyType = UIReturnKeyDone;
         _keyTextField.delegate = self;
+        _keyTextField.keyboardType = UIKeyboardTypeNamePhonePad;
         _keyTextField.font = [UIFont systemFontOfSize:15.f];
     }
     return _keyTextField;
@@ -76,6 +77,7 @@
         _valieTextField.layer.cornerRadius = 5.f;
         _valieTextField.returnKeyType = UIReturnKeyDone;
         _valieTextField.delegate = self;
+        _valieTextField.keyboardType = UIKeyboardTypeNamePhonePad;
         _valieTextField.font = [UIFont systemFontOfSize:15.f];
     }
     return _valieTextField;

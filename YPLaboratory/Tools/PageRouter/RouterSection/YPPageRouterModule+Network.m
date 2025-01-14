@@ -218,7 +218,10 @@
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.extend = [YPNetworkRequestManager shareInstance].lastRequest;
         element.type = YPPageRouterTypeCustom;
-        element.cellHeight = 200.f;
+        // 计算合适的高度
+        [YPNetworkInfoCell shareInstance].bounds = [UIScreen mainScreen].bounds;
+        [YPNetworkInfoCell shareInstance].cellModel = element;
+        element.cellHeight = [YPNetworkInfoCell shareInstance].cellHeight;
         element.cellClass = [YPNetworkInfoCell class];
         [dataList2 addObject:element];
     }
@@ -227,7 +230,6 @@
 }
 
 + (NSArray *)NetworkRouters_Request_Headers {
-    __weak typeof(self) weakSelf = self;
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     NSDictionary *headersDictionary = [YPNetworkRequestManager shareInstance].headersDictionary;
     for (NSString *key in headersDictionary) {
@@ -236,23 +238,17 @@
         element.cellClass = [YPNetworkRequestCell class];
         element.title = key;
         element.content = headersDictionary[key];
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            [weakSelf yp_reloadCurrentCell:cell];
-        };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.type = YPPageRouterTypeCustom;
         element.cellClass = [YPNetworkRequestCell class];
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            [weakSelf yp_reloadCurrentCell:cell];
-        };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
-        element.title = @"添加字段".yp_localizedString;
+        element.title = @"保存/添加字段".yp_localizedString;
         element.type = YPPageRouterTypeButton;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             [[UIViewController yp_topViewController].view endEditing:YES];
@@ -281,7 +277,6 @@
 }
 
 + (NSArray *)NetworkRouters_Request_Body {
-    __weak typeof(self) weakSelf = self;
     NSMutableArray *dataList = [[NSMutableArray alloc] init];
     NSDictionary *headersDictionary = [YPNetworkRequestManager shareInstance].bodyDictionary;
     for (NSString *key in headersDictionary) {
@@ -290,18 +285,12 @@
         element.cellClass = [YPNetworkRequestCell class];
         element.title = key;
         element.content = headersDictionary[key];
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            [weakSelf yp_reloadCurrentCell:cell];
-        };
         [dataList addObject:element];
     }
     {
         YPPageRouter *element = [[YPPageRouter alloc] init];
         element.type = YPPageRouterTypeCustom;
         element.cellClass = [YPNetworkRequestCell class];
-        element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
-            [weakSelf yp_reloadCurrentCell:cell];
-        };
         [dataList addObject:element];
     }
     {

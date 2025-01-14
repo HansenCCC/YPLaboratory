@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YPRequestInstanceModel : NSObject
 
+@property (nonatomic, assign) BOOL isShow;
 @property (nonatomic, strong) YpApiRequest *model;
 
 @end

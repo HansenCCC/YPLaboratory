@@ -16,6 +16,15 @@
 
 @implementation YPNetworkInfoCell
 
++ (instancetype)shareInstance {
+    static YPNetworkInfoCell *m = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        m = [[YPNetworkInfoCell alloc] init];
+    });
+    return m;
+}
+
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -34,10 +43,28 @@
     [super setCellModel:cellModel];
     if ([cellModel.extend isKindOfClass:[YpApiRequest class]]) {
         YpApiRequest *request = cellModel.extend;
-        self.textView.text = @"iOS Lab,Development,Beginner Development,OC Learning,Software Development,Programming,UIKit,Network Requests,Domain Resolution,Network Diagnostics,File Download,Port Scanning,File Management,QR Code,Barcode,Face Tracking,Color Picker,Waterfall Flow,Learn Development,Software Testing https://www.kdocs.cn/l/cns5XmAPHnAH";
+        // 构造格式化字符串
+        NSMutableString *requestInfo = [NSMutableString string];
+        [requestInfo appendFormat:@"ID: %ld\n", request.id];
+        [requestInfo appendFormat:@"Method: %@\n", request.method];
+        [requestInfo appendFormat:@"Start Date: %@\n", request.startDate];
+        [requestInfo appendFormat:@"End Date: %@\n", request.endDate];
+        if (request.startDate && request.endDate) {
+            NSTimeInterval timeInterval = [request.endDate timeIntervalSinceDate:request.startDate];
+            NSInteger milliseconds = (NSInteger)(timeInterval * 1000);
+            [requestInfo appendFormat:@"Request Duration: %ld ms", (long)milliseconds];
+        } else {
+            [requestInfo appendString:@"Request Duration: N/A"];
+        }
+        [requestInfo appendFormat:@"URL: \n%@\n", request.url];
+        [requestInfo appendFormat:@"Headers: \n%@\n", request.headers];
+        [requestInfo appendFormat:@"Body: \n%@\n", request.body];
+        [requestInfo appendFormat:@"Response: \n%@", request.response];
+        self.textView.text = requestInfo;
     } else {
         self.textView.text = nil;
     }
+    [self layoutSubviews];
 }
 
 - (void)layoutSubviews {
@@ -45,9 +72,14 @@
     CGRect bounds = self.contentView.bounds;
     CGRect f1 = bounds;
     f1.origin.x = 15.f;
-    f1.origin.y = 5.f;
+    f1.origin.y = 15.f;
     f1.size = [self.textView sizeThatFits:CGSizeMake(bounds.size.width - f1.origin.x * 2, 0)];
+    f1.size.width = bounds.size.width - f1.origin.x * 2;
     self.textView.frame = f1;
+}
+
+- (CGFloat)cellHeight {
+    return CGRectGetMaxY(self.textView.frame) + 15.f;
 }
 
 #pragma mark - getters | setters
@@ -61,7 +93,9 @@
         _textView.editable = NO;
         _textView.selectable = YES;
         _textView.dataDetectorTypes = UIDataDetectorTypeAll;
+        _textView.scrollEnabled = NO;
     }
     return _textView;
 }
+
 @end

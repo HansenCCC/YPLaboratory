@@ -40,13 +40,20 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat height = 44.f;
+    YPRequestInstanceModel *cellModel = self.viewModel.dataList[indexPath.row];
+    [YPRequestInstanceTableViewCell shareInstance].bounds = [UIScreen mainScreen].bounds;
+    [YPRequestInstanceTableViewCell shareInstance].cellModel = cellModel;
+    CGFloat height = [YPRequestInstanceTableViewCell shareInstance].cellHeight;
     return height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [[YPShakeManager shareInstance] mediumShake];
+    YPRequestInstanceModel *cellModel = self.viewModel.dataList[indexPath.row];
+    cellModel.isShow = !cellModel.isShow;
+    YPRequestInstanceTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell yp_reloadCurrentTableViewCell];
 }
 
 - (UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {

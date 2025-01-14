@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) YPRequestInstanceModel *cellModel;
 
++ (instancetype)shareInstance;
+
+- (CGFloat)cellHeight;
+
 @end
 
 NS_ASSUME_NONNULL_END
