@@ -672,24 +672,36 @@
 + (NSArray *)ComponentRouters_ProgressView {
     // 下面 block 用于模拟下载进度，读不懂逻辑的同学，我觉得这个并不重要。
     __block float _progress = 0;
-    __block void (^autoIncrement)(void);
-    __weak __block void (^weakAutoIncrement)(void);
-    weakAutoIncrement = autoIncrement = ^{
+    __block void (^autoIncrement)(BOOL isLine);
+    __weak __block void (^weakAutoIncrement)(BOOL isLine);
+    weakAutoIncrement = autoIncrement = ^(BOOL isLine){
         [[YPShakeManager shareInstance] lightShake];
-        _progress += 0.002;
+        _progress += 0.01;
         NSString *text = [NSString stringWithFormat:@"%.2f%%", _progress * 100];
-        [YPProgressView showProgress:_progress text:text];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (isLine) {
+            [YPProgressView showProgress:_progress text:text];
+        } else {
+            [YPRingProgressView showProgress:_progress text:text];
+        }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             if (_progress > 1) {
-                [YPProgressView showProgress:1 text:@"下载完成"];
+                if (isLine) {
+                    [YPProgressView showProgress:1 text:@"下载完成".yp_localizedString];
+                } else {
+                    [YPRingProgressView showProgress:1 text:@"下载完成".yp_localizedString];
+                }
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [[YPShakeManager shareInstance] longPressShake];
-                    [YPProgressView hideProgress];
+                    if (isLine) {
+                        [YPProgressView hideProgress];
+                    } else {
+                        [YPRingProgressView hideProgress];
+                    }
                     _progress = 0;
                 });
             } else {
                 if (weakAutoIncrement) {
-                    weakAutoIncrement(); // 使用弱引用调用
+                    weakAutoIncrement(isLine); // 使用弱引用调用
                 }
             }
         });
@@ -701,7 +713,7 @@
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             if (autoIncrement) {
-                autoIncrement();
+                autoIncrement(NO);
             }
         };
         [dataList addObject:element];
@@ -712,7 +724,7 @@
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             if (autoIncrement) {
-                autoIncrement();
+                autoIncrement(YES);
             }
         };
         [dataList addObject:element];
