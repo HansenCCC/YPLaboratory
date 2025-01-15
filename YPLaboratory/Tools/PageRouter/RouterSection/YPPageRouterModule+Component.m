@@ -1034,7 +1034,7 @@
         [dataList addObject:element];
     }
     YPPageRouterModule *section = [[YPPageRouterModule alloc] initWithRouters:dataList];
-    section.headerTitle = @"常用的交互反馈";
+    section.headerTitle = @"常用的交互反馈".yp_localizedString;
     
     NSMutableArray *dataList2 = [[NSMutableArray alloc] init];
     NSDictionary *systemSounds = @{
@@ -1081,7 +1081,7 @@
         [dataList2 addObject:element];
     }
     YPPageRouterModule *section2 = [[YPPageRouterModule alloc] initWithRouters:dataList2];
-    section2.headerTitle = @"其他的交互反馈";
+    section2.headerTitle = @"其他的交互反馈".yp_localizedString;
     return @[section, section2];
 }
 
@@ -1201,9 +1201,9 @@
             [UIImage yp_saveImageToAlbum:image completion:^(BOOL success, NSError * _Nonnull error) {
                 [[YPShakeManager shareInstance] longPressShake];
                 if (success) {
-                    [YPAlertView alertText:@"保存到相册成功"];
+                    [YPAlertView alertText:@"保存到相册成功".yp_localizedString];
                 } else {
-                    [YPAlertView alertText:@"保存到相册失败"];
+                    [YPAlertView alertText:@"保存到相册失败".yp_localizedString];
                 }
             }];
         };
@@ -1283,9 +1283,9 @@
             [UIImage yp_saveImageToAlbum:finalImage completion:^(BOOL success, NSError * _Nonnull error) {
                 [[YPShakeManager shareInstance] longPressShake];
                 if (success) {
-                    [YPAlertView alertText:@"保存到相册成功"];
+                    [YPAlertView alertText:@"保存到相册成功".yp_localizedString];
                 } else {
-                    [YPAlertView alertText:@"保存到相册失败"];
+                    [YPAlertView alertText:@"保存到相册失败".yp_localizedString];
                 }
             }];
         };
