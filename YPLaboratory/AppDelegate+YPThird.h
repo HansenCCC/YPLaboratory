@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 // notification
 - (void)addObserverNotification;
 
+// tapdb
+- (void)initTrackSDK;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -13,6 +13,7 @@
 #import <Bugly/Bugly.h>
 #import "YPPurchaseManager.h"
 #import "YPHTTPVerifyPaymentRequest.h"
+#import "YPTrackingManager.h"
 
 @interface AppDelegate () <BuglyDelegate>
 
@@ -93,6 +94,12 @@
     } failureHandler:^(NSError * _Nonnull error) {
         //
     }];
+}
+
+#pragma mark - tapdb
+
+- (void)initTrackSDK {
+    [[YPTrackingManager sharedInstance] initTrackSDK];
 }
 
 @end

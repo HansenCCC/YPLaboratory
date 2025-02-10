@@ -24,6 +24,7 @@
     [self setupDatabase];// 初始化数据库
     [self addObserverNotification];
     [self checkInternalPurchasePayment];// 检验是否存在丢包情况
+    [self initTrackSDK];
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
 //    YPRootViewController *vc = [[YPRootViewController alloc] init];

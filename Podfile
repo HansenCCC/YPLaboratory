@@ -19,6 +19,8 @@ target 'YPLaboratory' do
   pod 'Bugly', '2.5.93'
   pod 'Masonry', '1.1.0'
   pod 'FMDB'
+  pod 'TapTapCoreSDK', '~> 4.4.0'
+  
 end
 
 post_install do |installer|

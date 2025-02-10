@@ -26,6 +26,7 @@
 		602580002A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60257FFF2A1A5F8200091000 /* YPHTTPVerifyPaymentRequest.m */; };
 		602580042A1A5FC400091000 /* YPNoticeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 602580022A1A5FC400091000 /* YPNoticeHeader.m */; };
 		602B3D292A4B3C8000A62E1F /* YPAppUpdatePopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B3D282A4B3C8000A62E1F /* YPAppUpdatePopupController.m */; };
+		6034496C2D5A16D200024339 /* YPTrackingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034496A2D5A16D200024339 /* YPTrackingManager.m */; };
 		6034B2562A1485D80024E610 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6034B2552A1485D80024E610 /* AppDelegate.m */; };
 		6034B25F2A1485D80024E610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6034B25D2A1485D80024E610 /* Main.storyboard */; };
 		6034B2612A1485D90024E610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6034B2602A1485D90024E610 /* Assets.xcassets */; };
@@ -143,6 +144,8 @@
 		602580032A1A5FC400091000 /* YPNoticeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPNoticeHeader.h; sourceTree = "<group>"; };
 		602B3D272A4B3C8000A62E1F /* YPAppUpdatePopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPAppUpdatePopupController.h; sourceTree = "<group>"; };
 		602B3D282A4B3C8000A62E1F /* YPAppUpdatePopupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPAppUpdatePopupController.m; sourceTree = "<group>"; };
+		603449692D5A16D200024339 /* YPTrackingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPTrackingManager.h; sourceTree = "<group>"; };
+		6034496A2D5A16D200024339 /* YPTrackingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPTrackingManager.m; sourceTree = "<group>"; };
 		6034B2512A1485D80024E610 /* YPLaboratory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YPLaboratory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6034B2542A1485D80024E610 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6034B2552A1485D80024E610 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -422,6 +425,15 @@
 			path = MouldDemo;
 			sourceTree = "<group>";
 		};
+		6034496B2D5A16D200024339 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				603449692D5A16D200024339 /* YPTrackingManager.h */,
+				6034496A2D5A16D200024339 /* YPTrackingManager.m */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
 		6034B2482A1485D80024E610 = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				6034B2F02A14A8620024E610 /* YPLaboratoryTools.h */,
+				6034496B2D5A16D200024339 /* Tracking */,
 				60809BEB2CF9B62700C04654 /* ImagePicker */,
 				602580012A1A5FC400091000 /* Notification */,
 				60257FF72A1A5B7400091000 /* Requests */,
@@ -1071,6 +1084,7 @@
 				6034B2EC2A14A7940024E610 /* YPBaseViewController.m in Sources */,
 				607D9DB52CD9F8E400C3B591 /* UITableViewCell+YPPreviewDemo.m in Sources */,
 				607D9DC02CDA046F00C3B591 /* YPWaterfallFlowCollectionViewCell.m in Sources */,
+				6034496C2D5A16D200024339 /* YPTrackingManager.m in Sources */,
 				60257FFA2A1A5B8200091000 /* YPHTTPInitiateRequest.m in Sources */,
 				6049DB212D34EF9600ED156F /* YpApiRequestDao.m in Sources */,
 				6034B2562A1485D80024E610 /* AppDelegate.m in Sources */,
@@ -1289,7 +1303,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1330,7 +1344,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lwgzs.qimkkx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
