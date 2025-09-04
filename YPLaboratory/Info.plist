@@ -2,19 +2,28 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
-	<key>yp_author_mail</key>
-	<string>2534550460@qq.com</string>
-	<key>yp_author</key>
-	<string>Hansen</string>
-	<key>yp_appid</key>
-	<string>1568656582</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>yp</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>yp_appid</key>
+	<string>1568656582</string>
+	<key>yp_author</key>
+	<string>Hansen</string>
+	<key>yp_author_mail</key>
+	<string>2534550460@qq.com</string>
 	<key>yp_name</key>
 	<string>Developer Laboratory</string>
 </dict>

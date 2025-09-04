@@ -60,7 +60,7 @@
         element.type = YPPageRouterTypeNormal;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             NSString *path = NSHomeDirectory();
-            YPFileBrowserController *browser = [[YPFileBrowserController alloc] initWithPath:path];
+            YPFileListViewController *browser = [[YPFileListViewController alloc] initWithPath:path];
             YPNavigationViewController *nav = [[YPNavigationViewController alloc] initWithRootViewController:browser];
             [[UIViewController yp_topViewController] presentViewController:nav animated:YES completion:nil];
         };
@@ -114,7 +114,7 @@
         element.type = YPPageRouterTypeModule;
         element.didSelectedCallback = ^(YPPageRouter * _Nonnull router, UIView * _Nonnull cell) {
             NSString *path = [YPLog logPath];
-            YPFileBrowserController *browser = [[YPFileBrowserController alloc] initWithPath:path];
+            YPFileListViewController *browser = [[YPFileListViewController alloc] initWithPath:path];
             YPNavigationViewController *nav = [[YPNavigationViewController alloc] initWithRootViewController:browser];
             [[UIViewController yp_topViewController] presentViewController:nav animated:YES completion:nil];
         };
